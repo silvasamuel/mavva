@@ -2,8 +2,7 @@
 
 > Do grego *mánna* — o alimento diário. Estude a Bíblia todos os dias, como quem recolhe o maná.
 
-Plataforma de estudo bíblico gamificada (estilo Duolingo): quizzes com explicação e
-referência, XP, níveis, streak, metas diárias, conquistas e revisão espaçada (SM-2).
+Plataforma de estudo bíblico gamificada.
 
 ## Stack
 
