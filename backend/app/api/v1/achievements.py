@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from fastapi import APIRouter
 from sqlalchemy import func, select
 
@@ -36,4 +38,14 @@ def list_achievements(user: CurrentUser, db: DbDep) -> list[AchievementOut]:
                 progress_target=target,
             )
         )
+    # Unlocked first (most recent on top), then locked ones closest to completion.
+    result.sort(key=_display_order)
     return result
+
+
+def _display_order(achievement: AchievementOut) -> tuple[int, float]:
+    if achievement.unlocked_at:
+        return (0, -datetime.fromisoformat(achievement.unlocked_at).timestamp())
+    if achievement.progress_target:
+        return (1, -(achievement.progress_current or 0) / achievement.progress_target)
+    return (1, 0.0)

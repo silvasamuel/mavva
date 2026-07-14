@@ -40,6 +40,8 @@ marcado como tal. Divergências entre interpretações cristãs são indicadas n
 - Múltipla escolha: 4 alternativas, 1 correta
 - Resposta aberta: aceita variações de escrita (acentos, caixa, pequenos erros de digitação)
 - Filtros: testamento (AT / NT / Bíblia inteira), categorias (múltipla escolha), dificuldade, tema
+- Timer opcional por pergunta (15s ou 30s, escolhido ao montar o estudo); o tempo corre
+  apenas enquanto se responde — a explicação é lida sem pressa; tempo estourado conta como erro
 - Feedback imediato: correto/errado + explicação + referência bíblica (texto ARC)
 - Resumo ao final: acertos, XP ganho, tempo, conquistas desbloqueadas
 
@@ -118,6 +120,8 @@ Festas Judaicas · Idiomas Bíblicos · Cultura Bíblica
 - **Fila inteligente de perguntas:** perguntas nunca respondidas vêm primeiro (em ordem
   aleatória); depois as respondidas errado; as respondidas corretamente vão para o fim
   da fila — quanto mais acertos consecutivos (repetições do SRS), mais tarde reaparecem.
+- **Abandono de sessão:** sair sem terminar aplica somente as penalidades das erradas e
+  descarta o XP ganho (só quem termina recebe); não estende o streak. A UI alerta antes.
 - **Streak:** incrementa no primeiro quiz completado do dia (data no fuso do usuário);
   quebra se um dia inteiro passar sem atividade. Recorde é registrado.
 - **Meta diária:** padrão 50 XP/dia, configurável (20/50/100/150).

@@ -15,6 +15,11 @@ const TESTAMENT_OPTIONS: { value: Testament | null; label: string; icon: string 
 
 const DIFFICULTY_OPTIONS: (Difficulty | null)[] = [null, 'easy', 'medium', 'hard', 'expert']
 const COUNT_OPTIONS = [5, 10, 15, 20]
+const TIMER_OPTIONS: { value: number | null; label: string }[] = [
+  { value: null, label: 'Sem tempo' },
+  { value: 15, label: '⏱️ 15s' },
+  { value: 30, label: '⏱️ 30s' },
+]
 
 function Chip({
   selected,
@@ -55,6 +60,7 @@ export function QuizConfigPage() {
   const [categoryIds, setCategoryIds] = useState<number[]>([])
   const [difficulty, setDifficulty] = useState<Difficulty | null>(null)
   const [questionCount, setQuestionCount] = useState(10)
+  const [timerSeconds, setTimerSeconds] = useState<number | null>(null)
   const [error, setError] = useState('')
 
   // Apply the recommendation's category once, when categories arrive.
@@ -82,6 +88,7 @@ export function QuizConfigPage() {
         testament,
         category_ids: categoryIds.length > 0 ? categoryIds : null,
         difficulty,
+        timer_seconds: timerSeconds,
       }),
     onSuccess: (session) => navigate(`/quiz/${session.id}`),
     onError: (err) =>
@@ -171,6 +178,25 @@ export function QuizConfigPage() {
                 onClick={() => setQuestionCount(count)}
               >
                 {count}
+              </Chip>
+            ))}
+          </div>
+        </Card>
+
+        <Card className="md:col-span-2">
+          <CardTitle>Tempo por pergunta</CardTitle>
+          <p className="mb-3 -mt-2 text-xs font-semibold text-sand-500">
+            O tempo corre só enquanto você responde — a explicação pode ser lida com calma.
+            Estourou o tempo, conta como erro.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {TIMER_OPTIONS.map((option) => (
+              <Chip
+                key={option.label}
+                selected={timerSeconds === option.value}
+                onClick={() => setTimerSeconds(option.value)}
+              >
+                {option.label}
               </Chip>
             ))}
           </div>

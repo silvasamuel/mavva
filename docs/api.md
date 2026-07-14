@@ -40,11 +40,12 @@ Erros seguem o formato `{"detail": "mensagem"}` (padrão FastAPI) com status HTT
 
 | Método | Rota | Descrição |
 |---|---|---|
-| POST | `/quizzes` | Cria sessão. Body: `{mode, question_count, testament?, category_ids?: int[], difficulty?, theme?}`. Sorteia e congela as perguntas. `mode=review` ignora filtros e puxa da fila SRS. |
-| GET | `/quizzes/{id}` | Estado da sessão + perguntas (**sem** gabarito: opções vêm sem `is_correct`; abertas vêm sem respostas aceitas). |
-| POST | `/quizzes/{id}/answers` | Responde uma pergunta. Body: `{question_id, selected_option_id?, answer_text?, time_spent_seconds}`. Retorna correção + explicação + referência. |
+| POST | `/quizzes` | Cria sessão. Body: `{mode, question_count, testament?, category_ids?: int[], difficulty?, theme?, timer_seconds?: 15\|30}`. Sorteia e congela as perguntas (fila inteligente). `mode=review` ignora filtros e puxa da fila SRS. |
+| GET | `/quizzes/{id}` | Estado da sessão + perguntas (**sem** gabarito: opções vêm sem `is_correct`; abertas vêm sem respostas aceitas). Inclui `timer_seconds`. |
+| POST | `/quizzes/{id}/answers` | Responde uma pergunta. Body: `{question_id, selected_option_id?, answer_text?, timed_out?, time_spent_seconds}`. `timed_out=true` (tempo estourado) conta como erro. Retorna correção + explicação + referência. |
 | POST | `/quizzes/{id}/complete` | Fecha a sessão: consolida XP (+bônus), atualiza stats/streak/atividade diária, agenda SRS, avalia conquistas. Retorna o resumo. |
-| GET | `/quizzes?limit=10` | Histórico de sessões do usuário. |
+| POST | `/quizzes/{id}/abandon` | Abandona a sessão sem terminar: aplica **apenas** as penalidades das respostas erradas e descarta o XP ganho (streak não conta). Retorna `{answered_count, wrong_count, xp_penalty}`. |
+| GET | `/quizzes?limit=5` | Histórico de sessões concluídas — **máximo de 5 itens** (teto da API). |
 
 ```jsonc
 // 200 POST /quizzes/{id}/answers  (feedback imediato)
@@ -111,7 +112,7 @@ ainda não foi respondida (UNIQUE no banco).
 
 | Método | Rota | Descrição |
 |---|---|---|
-| GET | `/achievements` | Catálogo completo com `unlocked_at` (null se bloqueada) e progresso atual (`{current: 4, target: 7}`). |
+| GET | `/achievements` | Catálogo completo com `unlocked_at` (null se bloqueada) e progresso atual. Ordenação: desbloqueadas primeiro (mais recentes no topo), depois bloqueadas por proximidade da conclusão. |
 
 ## Saúde
 

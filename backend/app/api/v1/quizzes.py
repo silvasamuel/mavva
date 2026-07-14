@@ -14,6 +14,7 @@ from app.schemas.quiz import (
     LevelInfo,
     QuestionOptionOut,
     QuestionOut,
+    QuizAbandonResponse,
     QuizCompleteResponse,
     QuizCreateRequest,
     QuizHistoryItem,
@@ -49,6 +50,7 @@ def _session_out(session: QuizSession) -> QuizSessionOut:
         correct_count=session.correct_count,
         answered_count=len(answered_ids),
         completed=session.completed_at is not None,
+        timer_seconds=(session.filters or {}).get("timer_seconds"),
         filters=quiz_service.session_filters(session),
         questions=[
             QuestionOut(
@@ -81,6 +83,7 @@ def create_quiz(body: QuizCreateRequest, user: CurrentUser, db: DbDep) -> QuizSe
             category_ids=body.category_ids,
             difficulty=body.difficulty,
             theme=body.theme,
+            timer_seconds=body.timer_seconds,
         )
     except QuizError as error:
         raise HTTPException(error.status_code, error.message) from error
@@ -88,9 +91,12 @@ def create_quiz(body: QuizCreateRequest, user: CurrentUser, db: DbDep) -> QuizSe
     return _session_out(quiz_service.get_session_for_user(db, user, session.id))
 
 
+HISTORY_LIMIT = 5  # hard cap — the dashboard shows at most 5 recent quizzes
+
+
 @router.get("", response_model=list[QuizHistoryItem])
-def quiz_history(user: CurrentUser, db: DbDep, limit: int = 10) -> list[QuizHistoryItem]:
-    sessions = quiz_service.recent_sessions(db, user, limit=min(limit, 50))
+def quiz_history(user: CurrentUser, db: DbDep, limit: int = HISTORY_LIMIT) -> list[QuizHistoryItem]:
+    sessions = quiz_service.recent_sessions(db, user, limit=min(limit, HISTORY_LIMIT))
     return [
         QuizHistoryItem(
             id=s.id,
@@ -128,6 +134,7 @@ def submit_answer(
             selected_option_id=body.selected_option_id,
             answer_text=body.answer_text,
             time_spent_seconds=body.time_spent_seconds,
+            timed_out=body.timed_out,
         )
     except QuizError as error:
         raise HTTPException(error.status_code, error.message) from error
@@ -140,6 +147,20 @@ def submit_answer(
         divergence_note=result.divergence_note,
         reference=_reference(result.question),
         xp_earned=result.xp_earned,
+    )
+
+
+@router.post("/{session_id}/abandon", response_model=QuizAbandonResponse)
+def abandon_quiz(session_id: uuid.UUID, user: CurrentUser, db: DbDep) -> QuizAbandonResponse:
+    try:
+        result = quiz_service.abandon_session(db, user, session_id)
+    except QuizError as error:
+        raise HTTPException(error.status_code, error.message) from error
+    db.commit()
+    return QuizAbandonResponse(
+        answered_count=result.answered_count,
+        wrong_count=result.wrong_count,
+        xp_penalty=result.xp_penalty,
     )
 
 
