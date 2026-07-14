@@ -1,7 +1,10 @@
 from functools import lru_cache
 from pathlib import Path
 
+from pydantic import model_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+_DEV_SECRET = "dev-secret-change-in-production"
 
 
 class Settings(BaseSettings):
@@ -9,7 +12,7 @@ class Settings(BaseSettings):
 
     app_name: str = "Mavva API"
     environment: str = "development"
-    secret_key: str = "dev-secret-change-in-production"
+    secret_key: str = _DEV_SECRET
 
     database_url: str = "postgresql+psycopg://mavva:mavva@localhost:5433/mavva"
 
@@ -30,6 +33,17 @@ class Settings(BaseSettings):
     @property
     def is_production(self) -> bool:
         return self.environment == "production"
+
+    @model_validator(mode="after")
+    def production_requires_strong_secret(self) -> "Settings":
+        """The default secret is public (open repo) — never allow it to sign
+        production JWTs. Refusing to boot is safer than serving forgeable tokens."""
+        if self.is_production and (self.secret_key == _DEV_SECRET or len(self.secret_key) < 32):
+            raise ValueError(
+                "SECRET_KEY must be set to a random value of at least 32 characters "
+                "when ENVIRONMENT=production"
+            )
+        return self
 
 
 @lru_cache

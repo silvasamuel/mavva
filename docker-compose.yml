@@ -6,8 +6,9 @@ services:
       POSTGRES_PASSWORD: mavva
       POSTGRES_DB: mavva
     ports:
-      # 5433 on the host — 5432 is commonly taken by other local Postgres instances
-      - "5433:5432"
+      # Loopback-only (dev credentials are public in this repo); 5433 because
+      # 5432 is commonly taken by other local Postgres instances.
+      - "127.0.0.1:5433:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
