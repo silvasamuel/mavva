@@ -1,8 +1,9 @@
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { api } from '@/lib/api'
 import type { DashboardData } from '@/types/api'
 import { Logo } from '@/components/Logo'
+import { useAuth } from '@/features/auth/AuthContext'
 
 const NAV_ITEMS = [
   { to: '/', label: 'Início', icon: '🏠' },
@@ -19,11 +20,18 @@ function navClass({ isActive }: { isActive: boolean }) {
 }
 
 export function AppShell() {
+  const { logout } = useAuth()
+  const navigate = useNavigate()
   const { data } = useQuery({
     queryKey: ['dashboard'],
     queryFn: () => api.get<DashboardData>('/dashboard'),
   })
   const streak = data?.stats.current_streak ?? 0
+
+  async function handleLogout() {
+    await logout()
+    navigate('/login', { replace: true })
+  }
 
   return (
     <div className="mx-auto flex min-h-screen max-w-6xl">
@@ -51,6 +59,13 @@ export function AppShell() {
             </p>
           </div>
         </div>
+        <button
+          onClick={handleLogout}
+          className="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-extrabold uppercase tracking-wide text-sand-500 transition-colors hover:bg-red-50 hover:text-red-600"
+        >
+          <span aria-hidden>🚪</span>
+          Sair
+        </button>
       </aside>
 
       {/* Content */}
