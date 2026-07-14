@@ -14,6 +14,7 @@ import { Button } from '@/components/ui/Button'
 import { Spinner } from '@/components/ui/Spinner'
 import { ProgressBar } from '@/components/ui/ProgressBar'
 import { DIFFICULTY_LABELS } from '@/lib/format'
+import { seededShuffle } from '@/lib/shuffle'
 
 interface AnswerPayload {
   question_id: string
@@ -55,6 +56,15 @@ export function QuizPlayPage() {
   const question: QuizQuestion | undefined = session?.questions[currentIndex]
   const isLast = session ? currentIndex >= session.questions.length - 1 : false
   const timerSeconds = session?.timer_seconds ?? null
+
+  // Options come from the API in stored order (correct answer often first) —
+  // shuffle them with a per-session seed: random between sessions, stable
+  // across re-renders and resumes, so the letters never move mid-question.
+  const displayOptions = useMemo(
+    () =>
+      session && question ? seededShuffle(question.options, `${session.id}:${question.id}`) : [],
+    [session, question]
+  )
   const [remaining, setRemaining] = useState<number | null>(null)
 
   const wrongTotal = session
@@ -211,7 +221,7 @@ export function QuizPlayPage() {
 
           {question.type === 'multiple_choice' ? (
             <div className="grid gap-3" role="radiogroup" aria-label="Alternativas">
-              {question.options.map((option, optionIndex) => {
+              {displayOptions.map((option, optionIndex) => {
                 const isSelected = selectedOption === option.id
                 const isCorrectOption = feedback?.correct_option_id === option.id
                 const isWrongPick = feedback && isSelected && !feedback.is_correct
