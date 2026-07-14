@@ -64,8 +64,15 @@ export interface QuizSession {
   correct_count: number
   answered_count: number
   completed: boolean
+  timer_seconds: number | null
   filters: Record<string, unknown>
   questions: QuizQuestion[]
+}
+
+export interface QuizAbandonResult {
+  answered_count: number
+  wrong_count: number
+  xp_penalty: number
 }
 
 export interface AnswerFeedback {

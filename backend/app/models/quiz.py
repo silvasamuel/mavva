@@ -28,6 +28,7 @@ class QuizSession(Base):
     xp_earned: Mapped[int] = mapped_column(default=0)
     started_at: Mapped[datetime] = mapped_column(server_default=func.now())
     completed_at: Mapped[datetime | None] = mapped_column(default=None)
+    abandoned_at: Mapped[datetime | None] = mapped_column(default=None)
     duration_seconds: Mapped[int | None] = mapped_column(default=None)
 
     session_questions: Mapped[list["QuizSessionQuestion"]] = relationship(

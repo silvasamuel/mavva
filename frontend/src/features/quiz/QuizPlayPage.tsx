@@ -1,13 +1,26 @@
-import { useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { AnimatePresence, motion } from 'framer-motion'
 import { api, ApiError } from '@/lib/api'
-import type { AnswerFeedback, QuizComplete, QuizQuestion, QuizSession } from '@/types/api'
+import type {
+  AnswerFeedback,
+  QuizAbandonResult,
+  QuizComplete,
+  QuizQuestion,
+  QuizSession,
+} from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Spinner } from '@/components/ui/Spinner'
 import { ProgressBar } from '@/components/ui/ProgressBar'
 import { DIFFICULTY_LABELS } from '@/lib/format'
+
+interface AnswerPayload {
+  question_id: string
+  selected_option_id?: string
+  answer_text?: string
+  timed_out?: boolean
+}
 
 export function QuizPlayPage() {
   const { sessionId } = useParams<{ sessionId: string }>()
@@ -31,24 +44,38 @@ export function QuizPlayPage() {
   const [selectedOption, setSelectedOption] = useState<string | null>(null)
   const [answerText, setAnswerText] = useState('')
   const [feedback, setFeedback] = useState<AnswerFeedback | null>(null)
+  const [timedOut, setTimedOut] = useState(false)
   const [error, setError] = useState('')
   const [exitConfirm, setExitConfirm] = useState(false)
+  // Wrong/answered beyond what the session snapshot knew at load time.
+  const [extraWrong, setExtraWrong] = useState(0)
+  const [extraAnswered, setExtraAnswered] = useState(0)
   const questionStartedAt = useRef(Date.now())
 
   const question: QuizQuestion | undefined = session?.questions[currentIndex]
   const isLast = session ? currentIndex >= session.questions.length - 1 : false
+  const timerSeconds = session?.timer_seconds ?? null
+  const [remaining, setRemaining] = useState<number | null>(null)
+
+  const wrongTotal = session
+    ? session.answered_count - session.correct_count + extraWrong
+    : extraWrong
+  const answeredTotal = (session?.answered_count ?? 0) + extraAnswered
 
   const submitAnswer = useMutation({
-    mutationFn: (payload: {
-      question_id: string
-      selected_option_id?: string
-      answer_text?: string
-    }) =>
+    mutationFn: (payload: AnswerPayload) =>
       api.post<AnswerFeedback>(`/quizzes/${sessionId}/answers`, {
         ...payload,
-        time_spent_seconds: Math.min(3600, Math.round((Date.now() - questionStartedAt.current) / 1000)),
+        time_spent_seconds: Math.min(
+          3600,
+          Math.round((Date.now() - questionStartedAt.current) / 1000)
+        ),
       }),
-    onSuccess: setFeedback,
+    onSuccess: (result) => {
+      setFeedback(result)
+      setExtraAnswered((count) => count + 1)
+      if (!result.is_correct) setExtraWrong((count) => count + 1)
+    },
     onError: (err) =>
       setError(err instanceof ApiError ? err.message : 'Não foi possível enviar a resposta.'),
   })
@@ -65,6 +92,35 @@ export function QuizPlayPage() {
       setError(err instanceof ApiError ? err.message : 'Não foi possível concluir o quiz.'),
   })
 
+  const abandonQuiz = useMutation({
+    mutationFn: () => api.post<QuizAbandonResult>(`/quizzes/${sessionId}/abandon`),
+    onSettled: () => {
+      queryClient.invalidateQueries({ queryKey: ['dashboard'] })
+      queryClient.removeQueries({ queryKey: ['quiz', sessionId] })
+      navigate('/')
+    },
+  })
+
+  // Countdown: runs only while the player is answering — never during feedback.
+  useEffect(() => {
+    if (!timerSeconds || !question || feedback) return
+    setRemaining(timerSeconds)
+    const interval = setInterval(
+      () => setRemaining((value) => (value === null ? null : Math.max(0, value - 1))),
+      1000
+    )
+    return () => clearInterval(interval)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [timerSeconds, question?.id, feedback])
+
+  // Time's up: auto-submit as a miss.
+  useEffect(() => {
+    if (remaining !== 0 || !question || feedback || submitAnswer.isPending) return
+    setTimedOut(true)
+    submitAnswer.mutate({ question_id: question.id, timed_out: true })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [remaining])
+
   if (isLoading || !session || !question) {
     return (
       <div className="flex min-h-screen items-center justify-center">
@@ -75,7 +131,7 @@ export function QuizPlayPage() {
 
   function handleSubmit() {
     setError('')
-    if (!question) return
+    if (!question || feedback || submitAnswer.isPending) return
     if (question.type === 'multiple_choice') {
       if (!selectedOption) return
       submitAnswer.mutate({ question_id: question.id, selected_option_id: selectedOption })
@@ -87,6 +143,7 @@ export function QuizPlayPage() {
 
   function handleNext() {
     setFeedback(null)
+    setTimedOut(false)
     setSelectedOption(null)
     setAnswerText('')
     questionStartedAt.current = Date.now()
@@ -98,6 +155,7 @@ export function QuizPlayPage() {
   }
 
   const answeredSoFar = currentIndex + (feedback ? 1 : 0)
+  const timerUrgent = remaining !== null && remaining <= 5
 
   return (
     <div className="mx-auto flex min-h-screen max-w-2xl flex-col px-4 py-6">
@@ -110,9 +168,24 @@ export function QuizPlayPage() {
         >
           ✕
         </button>
-        <ProgressBar value={answeredSoFar} max={session.question_count} className="flex-1 h-5" />
+        <ProgressBar value={answeredSoFar} max={session.question_count} className="h-5 flex-1" />
+        {timerSeconds && !feedback && remaining !== null && (
+          <motion.span
+            key={timerUrgent ? 'urgent' : 'calm'}
+            animate={timerUrgent ? { scale: [1, 1.12, 1] } : {}}
+            transition={{ repeat: timerUrgent ? Infinity : 0, duration: 1 }}
+            className={`min-w-[3.25rem] rounded-full px-2.5 py-1 text-center text-sm font-extrabold tabular-nums ${
+              timerUrgent ? 'bg-red-100 text-red-600' : 'bg-sand-100 text-sand-600'
+            }`}
+            role="timer"
+            aria-label={`${remaining} segundos restantes`}
+          >
+            ⏱ {remaining}s
+          </motion.span>
+        )}
         <span className="text-sm font-extrabold text-sand-500">
-          {Math.min(answeredSoFar + (feedback ? 0 : 1), session.question_count)}/{session.question_count}
+          {Math.min(answeredSoFar + (feedback ? 0 : 1), session.question_count)}/
+          {session.question_count}
         </span>
       </div>
 
@@ -144,7 +217,8 @@ export function QuizPlayPage() {
                 const isWrongPick = feedback && isSelected && !feedback.is_correct
 
                 let styles = 'border-sand-200 bg-white hover:bg-sand-50'
-                if (!feedback && isSelected) styles = 'border-leaf-500 bg-leaf-50 ring-1 ring-leaf-300'
+                if (!feedback && isSelected)
+                  styles = 'border-leaf-500 bg-leaf-50 ring-1 ring-leaf-300'
                 if (isCorrectOption) styles = 'border-leaf-600 bg-leaf-100'
                 if (isWrongPick) styles = 'border-red-400 bg-red-50'
 
@@ -169,7 +243,11 @@ export function QuizPlayPage() {
                       }`}
                       aria-hidden
                     >
-                      {isCorrectOption ? '✓' : isWrongPick ? '✗' : String.fromCharCode(65 + optionIndex)}
+                      {isCorrectOption
+                        ? '✓'
+                        : isWrongPick
+                          ? '✗'
+                          : String.fromCharCode(65 + optionIndex)}
                     </span>
                     {option.text}
                   </motion.button>
@@ -220,8 +298,12 @@ export function QuizPlayPage() {
                     feedback.is_correct ? 'text-leaf-700' : 'text-red-600'
                   }`}
                 >
-                  <span aria-hidden>{feedback.is_correct ? '🎉' : '💭'}</span>
-                  {feedback.is_correct ? 'Correto!' : 'Não foi dessa vez'}
+                  <span aria-hidden>{feedback.is_correct ? '🎉' : timedOut ? '⏰' : '💭'}</span>
+                  {feedback.is_correct
+                    ? 'Correto!'
+                    : timedOut
+                      ? 'Tempo esgotado!'
+                      : 'Não foi dessa vez'}
                 </p>
                 {feedback.xp_earned !== 0 && (
                   <motion.span
@@ -259,12 +341,22 @@ export function QuizPlayPage() {
                 </p>
               )}
 
-              <Button full onClick={handleNext} loading={completeQuiz.isPending} variant={feedback.is_correct ? 'primary' : 'secondary'}>
+              <Button
+                full
+                onClick={handleNext}
+                loading={completeQuiz.isPending}
+                variant={feedback.is_correct ? 'primary' : 'secondary'}
+              >
                 {isLast ? 'Ver resultado' : 'Continuar'}
               </Button>
             </motion.div>
           ) : (
-            <motion.div key="submit" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mx-auto max-w-2xl">
+            <motion.div
+              key="submit"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="mx-auto max-w-2xl"
+            >
               <Button
                 full
                 onClick={handleSubmit}
@@ -278,7 +370,7 @@ export function QuizPlayPage() {
         </AnimatePresence>
       </div>
 
-      {/* Exit confirmation */}
+      {/* Exit confirmation with penalty warning */}
       <AnimatePresence>
         {exitConfirm && (
           <motion.div
@@ -296,17 +388,38 @@ export function QuizPlayPage() {
               className="w-full max-w-sm space-y-4 rounded-3xl bg-white p-6 text-center shadow-card"
             >
               <span className="text-4xl" aria-hidden>
-                🥺
+                {wrongTotal > 0 ? '⚠️' : '🥺'}
               </span>
-              <p className="font-extrabold">Sair do quiz?</p>
-              <p className="text-sm font-semibold text-sand-500">
-                Seu progresso nas perguntas respondidas fica salvo — você pode voltar depois.
-              </p>
+              <p className="font-extrabold">Sair sem terminar?</p>
+              {wrongTotal > 0 ? (
+                <p className="text-sm font-semibold text-sand-600">
+                  Você errou{' '}
+                  <strong className="text-red-600">
+                    {wrongTotal} {wrongTotal === 1 ? 'pergunta' : 'perguntas'}
+                  </strong>{' '}
+                  nesta sessão. Ao sair, a penalidade dos erros é aplicada ao seu XP e você{' '}
+                  <strong>abre mão de todo o XP ganho</strong> — só quem termina recebe.
+                </p>
+              ) : answeredTotal > 0 ? (
+                <p className="text-sm font-semibold text-sand-600">
+                  Ao sair, você <strong>abre mão do XP ganho</strong> nesta sessão — só quem
+                  termina recebe.
+                </p>
+              ) : (
+                <p className="text-sm font-semibold text-sand-600">
+                  Você ainda não respondeu nada — pode sair sem penalidade.
+                </p>
+              )}
               <div className="flex gap-3">
                 <Button variant="secondary" full onClick={() => setExitConfirm(false)}>
                   Continuar
                 </Button>
-                <Button variant="danger" full onClick={() => navigate('/')}>
+                <Button
+                  variant="danger"
+                  full
+                  loading={abandonQuiz.isPending}
+                  onClick={() => abandonQuiz.mutate()}
+                >
                   Sair
                 </Button>
               </div>
