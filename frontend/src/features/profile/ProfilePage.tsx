@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { useMutation } from '@tanstack/react-query'
 import { api, ApiError } from '@/lib/api'
 import type { User } from '@/types/api'
@@ -16,6 +17,7 @@ const GOAL_OPTIONS = [
 
 export function ProfilePage() {
   const { user, logout, updateUser } = useAuth()
+  const navigate = useNavigate()
   const [name, setName] = useState(user?.name ?? '')
   const [dailyGoal, setDailyGoal] = useState(user?.daily_goal_xp ?? 50)
   const [message, setMessage] = useState('')
@@ -79,7 +81,14 @@ export function ProfilePage() {
       </Card>
 
       <Card>
-        <Button variant="danger" full onClick={() => logout()}>
+        <Button
+          variant="danger"
+          full
+          onClick={async () => {
+            await logout()
+            navigate('/login', { replace: true })
+          }}
+        >
           Sair da conta
         </Button>
       </Card>

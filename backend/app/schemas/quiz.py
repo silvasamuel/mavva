@@ -1,6 +1,6 @@
 import uuid
 from datetime import datetime
-from typing import Any
+from typing import Any, Literal
 
 from pydantic import BaseModel, Field, model_validator
 
@@ -14,6 +14,7 @@ class QuizCreateRequest(BaseModel):
     category_ids: list[int] | None = Field(default=None, max_length=30)
     difficulty: Difficulty | None = None
     theme: str | None = Field(default=None, max_length=80)
+    timer_seconds: Literal[15, 30] | None = None
 
 
 class BibleReference(BaseModel):
@@ -51,6 +52,7 @@ class QuizSessionOut(BaseModel):
     correct_count: int
     answered_count: int
     completed: bool
+    timer_seconds: int | None
     filters: dict[str, Any]
     questions: list[QuestionOut]
 
@@ -60,12 +62,23 @@ class AnswerRequest(BaseModel):
     selected_option_id: uuid.UUID | None = None
     answer_text: str | None = Field(default=None, max_length=200)
     time_spent_seconds: int | None = Field(default=None, ge=0, le=3600)
+    timed_out: bool = False
 
     @model_validator(mode="after")
     def exactly_one_answer_kind(self) -> "AnswerRequest":
-        if self.selected_option_id is None and not (self.answer_text or "").strip():
-            raise ValueError("Envie selected_option_id ou answer_text")
+        if (
+            not self.timed_out
+            and self.selected_option_id is None
+            and not (self.answer_text or "").strip()
+        ):
+            raise ValueError("Envie selected_option_id, answer_text ou timed_out")
         return self
+
+
+class QuizAbandonResponse(BaseModel):
+    answered_count: int
+    wrong_count: int
+    xp_penalty: int  # zero or negative — only the wrong answers are consolidated
 
 
 class AnswerFeedback(BaseModel):

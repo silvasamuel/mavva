@@ -49,6 +49,7 @@ def create_session(
     category_ids: list[int] | None = None,
     difficulty: Difficulty | None = None,
     theme: str | None = None,
+    timer_seconds: int | None = None,
 ) -> QuizSession:
     if mode == QuizMode.REVIEW:
         today = today_for_user(user)
@@ -91,6 +92,7 @@ def create_session(
             "category_ids": category_ids or None,
             "difficulty": difficulty.value if difficulty else None,
             "theme": theme,
+            "timer_seconds": timer_seconds,
         },
     )
     db.add(session)
@@ -142,10 +144,13 @@ def submit_answer(
     selected_option_id: uuid.UUID | None,
     answer_text: str | None,
     time_spent_seconds: int | None,
+    timed_out: bool = False,
 ) -> AnswerResult:
     session = get_session_for_user(db, user, session_id)
     if session.completed_at is not None:
         raise QuizError("Esta sessão já foi concluída")
+    if session.abandoned_at is not None:
+        raise QuizError("Esta sessão foi abandonada")
 
     question = next(
         (sq.question for sq in session.session_questions if sq.question_id == question_id), None
@@ -157,12 +162,19 @@ def submit_answer(
 
     correct_option: QuestionOption | None = None
     if question.type == QuestionType.MULTIPLE_CHOICE:
+        correct_option = next(o for o in question.options if o.is_correct)
+
+    if timed_out:
+        # Time ran out with no answer — counts as a miss.
+        is_correct = False
+        selected_option_id = None
+        answer_text = None
+    elif question.type == QuestionType.MULTIPLE_CHOICE:
         if selected_option_id is None:
             raise QuizError("Selecione uma alternativa")
         selected = next((o for o in question.options if o.id == selected_option_id), None)
         if selected is None:
             raise QuizError("Alternativa inválida para esta pergunta")
-        correct_option = next(o for o in question.options if o.is_correct)
         is_correct = selected.is_correct
     else:
         if not answer_text or not answer_text.strip():
@@ -224,6 +236,8 @@ def complete_session(db: Session, user: User, session_id: uuid.UUID) -> Complete
     session = get_session_for_user(db, user, session_id)
     if session.completed_at is not None:
         raise QuizError("Esta sessão já foi concluída")
+    if session.abandoned_at is not None:
+        raise QuizError("Esta sessão foi abandonada")
     answered_count = len(session.answers)
     if answered_count == 0:
         raise QuizError("Responda ao menos uma pergunta antes de concluir")
@@ -288,7 +302,62 @@ def complete_session(db: Session, user: User, session_id: uuid.UUID) -> Complete
     )
 
 
-def recent_sessions(db: Session, user: User, limit: int = 10) -> list[QuizSession]:
+@dataclass
+class AbandonResult:
+    answered_count: int
+    wrong_count: int
+    xp_penalty: int
+
+
+def abandon_session(db: Session, user: User, session_id: uuid.UUID) -> AbandonResult:
+    """Quitting mid-session forfeits the XP earned but keeps the error penalties.
+
+    Wrong answers are consolidated into stats and the daily activity; correct
+    answers count for accuracy/SRS but pay nothing — finishing is what pays.
+    The streak is NOT extended (only completed sessions count).
+    """
+    session = get_session_for_user(db, user, session_id)
+    if session.completed_at is not None:
+        raise QuizError("Esta sessão já foi concluída")
+    if session.abandoned_at is not None:
+        raise QuizError("Esta sessão já foi abandonada")
+
+    questions_by_id = {sq.question_id: sq.question for sq in session.session_questions}
+    wrong_answers = [a for a in session.answers if not a.is_correct]
+    penalty = sum(
+        xp_for_answer(questions_by_id[a.question_id].difficulty, False) for a in wrong_answers
+    )
+
+    now = datetime.now(UTC)
+    session.abandoned_at = now
+    session.xp_earned = penalty
+
+    answered_count = len(session.answers)
+    correct_count = session.correct_count
+    stats = db.get(UserStats, user.id)
+    assert stats is not None
+    stats.total_xp = max(0, stats.total_xp + penalty)
+    stats.level, _, _ = level_from_total_xp(stats.total_xp)
+    stats.questions_answered += answered_count
+    stats.correct_answers += correct_count
+
+    if answered_count > 0:
+        upsert_daily_activity(
+            db,
+            user.id,
+            today_for_user(user),
+            xp=penalty,
+            questions=answered_count,
+            correct=correct_count,
+            time_seconds=0,
+        )
+    db.flush()
+    return AbandonResult(
+        answered_count=answered_count, wrong_count=len(wrong_answers), xp_penalty=penalty
+    )
+
+
+def recent_sessions(db: Session, user: User, limit: int = 5) -> list[QuizSession]:
     return list(
         db.scalars(
             select(QuizSession)
