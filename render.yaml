@@ -1,0 +1,21 @@
+# Render blueprint — backend API (free tier).
+# The database lives on Neon (free): create it there and set DATABASE_URL below.
+services:
+  - type: web
+    name: mavva-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false # paste the Neon connection string (postgresql+psycopg://...)
+      - key: FRONTEND_ORIGIN
+        sync: false # e.g. https://mavva.vercel.app
+      - key: RESEND_API_KEY
+        sync: false

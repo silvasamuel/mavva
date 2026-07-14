@@ -1,0 +1,80 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: mavva
+          POSTGRES_PASSWORD: mavva
+          POSTGRES_DB: mavva_test
+        ports:
+          - 5433:5432
+        options: >-
+          --health-cmd "pg_isready -U mavva"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 10
+    env:
+      DATABASE_URL: postgresql+psycopg://mavva:mavva@localhost:5433/mavva_test
+      SECRET_KEY: ci-secret-key-for-tests-only-0000000000
+      RATE_LIMIT_ENABLED: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v4
+      - run: uv sync --frozen
+      - name: Lint
+        run: uv run ruff check app tests && uv run ruff format --check app tests
+      - name: Type check
+        run: uv run mypy app
+      - name: Migrations apply from scratch
+        run: uv run alembic upgrade head
+      - name: Tests
+        run: uv run pytest -q
+
+  content:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v4
+      - run: uv sync --frozen
+      - name: Validate question bank
+        run: uv run python -m app.seeds --validate-only
+
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+          cache-dependency-path: frontend/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - name: Lint
+        run: pnpm lint
+      - name: Type check
+        run: pnpm typecheck
+      - name: Tests
+        run: pnpm test -- --run
+      - name: Build
+        run: pnpm build
