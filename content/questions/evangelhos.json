@@ -1,0 +1,180 @@
+{
+  "category": "evangelhos",
+  "questions": [
+    {
+      "external_id": "evangelhos-0001",
+      "type": "multiple_choice",
+      "text": "Qual foi o primeiro sinal (milagre) de Jesus registrado no Evangelho de João?",
+      "options": [
+        { "text": "Transformar água em vinho", "correct": true },
+        { "text": "A multiplicação dos pães", "correct": false },
+        { "text": "A cura do cego de nascença", "correct": false },
+        { "text": "A pesca maravilhosa", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Nas bodas de Caná da Galileia, Jesus transformou água em vinho. João o chama de \"princípio dos sinais\" pelo qual Jesus \"manifestou a sua glória, e os seus discípulos creram nele\" (Jo 2:11).",
+      "divergence_note": null,
+      "reference": { "book": "joao", "chapter": 2, "verse_start": 1, "verse_end": 11 },
+      "theme": "Glória de Cristo",
+      "difficulty": "easy",
+      "subcategory": "Milagres de Jesus",
+      "tags": ["cana", "milagre", "joao"]
+    },
+    {
+      "external_id": "evangelhos-0002",
+      "type": "open_answer",
+      "text": "Quantos dias Jesus jejuou no deserto antes de ser tentado pelo diabo?",
+      "options": null,
+      "accepted_answers": ["40", "quarenta", "40 dias", "quarenta dias"],
+      "explanation": "Jesus jejuou quarenta dias e quarenta noites (Mt 4:2) e venceu cada tentação citando as Escrituras: \"Está escrito\". O período ecoa os quarenta anos de Israel no deserto — onde Israel falhou, Cristo venceu.",
+      "divergence_note": null,
+      "reference": { "book": "mateus", "chapter": 4, "verse_start": 1, "verse_end": 2 },
+      "theme": "Tentação",
+      "difficulty": "easy",
+      "subcategory": "Vida de Jesus",
+      "tags": ["jejum", "deserto", "tentacao"]
+    },
+    {
+      "external_id": "evangelhos-0003",
+      "type": "multiple_choice",
+      "text": "Quem pediu corajosamente a Pilatos o corpo de Jesus para sepultá-lo?",
+      "options": [
+        { "text": "José de Arimateia", "correct": true },
+        { "text": "Nicodemos", "correct": false },
+        { "text": "Simão de Cirene", "correct": false },
+        { "text": "João, o discípulo amado", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "José de Arimateia, membro honrado do Sinédrio que esperava o Reino de Deus, ousou pedir o corpo de Jesus (Mc 15:43). Nicodemos o ajudou no sepultamento, trazendo mirra e aloés (Jo 19:39).",
+      "divergence_note": null,
+      "reference": { "book": "marcos", "chapter": 15, "verse_start": 43, "verse_end": 46 },
+      "theme": "Sepultamento de Jesus",
+      "difficulty": "medium",
+      "subcategory": "Paixão de Cristo",
+      "tags": ["jose de arimateia", "sepultamento", "pilatos"]
+    },
+    {
+      "external_id": "evangelhos-0004",
+      "type": "multiple_choice",
+      "text": "Na transfiguração de Jesus, quais dois homens do Antigo Testamento apareceram falando com ele?",
+      "options": [
+        { "text": "Moisés e Elias", "correct": true },
+        { "text": "Abraão e Davi", "correct": false },
+        { "text": "Enoque e Elias", "correct": false },
+        { "text": "Moisés e Isaías", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Moisés e Elias apareceram em glória com Jesus no monte (Mt 17:3). Muitos intérpretes veem neles a Lei e os Profetas testemunhando a respeito de Cristo, que é o cumprimento de ambos (Lc 24:27).",
+      "divergence_note": null,
+      "reference": { "book": "mateus", "chapter": 17, "verse_start": 1, "verse_end": 8 },
+      "theme": "Transfiguração",
+      "difficulty": "easy",
+      "subcategory": "Vida de Jesus",
+      "tags": ["transfiguracao", "moises", "elias"]
+    },
+    {
+      "external_id": "evangelhos-0005",
+      "type": "multiple_choice",
+      "text": "Qual dos doze apóstolos era cobrador de impostos antes de ser chamado por Jesus?",
+      "options": [
+        { "text": "Mateus", "correct": true },
+        { "text": "Tomé", "correct": false },
+        { "text": "Simão, o Zelote", "correct": false },
+        { "text": "Bartolomeu", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jesus viu Mateus (também chamado Levi) sentado na coletoria e disse: \"Segue-me\" (Mt 9:9). O chamado de um publicano — classe desprezada em Israel — mostra que Jesus veio chamar pecadores, não justos (Mt 9:13).",
+      "divergence_note": null,
+      "reference": { "book": "mateus", "chapter": 9, "verse_start": 9, "verse_end": 13 },
+      "theme": "Chamado",
+      "difficulty": "easy",
+      "subcategory": "Os Doze",
+      "tags": ["mateus", "levi", "publicano"]
+    },
+    {
+      "external_id": "evangelhos-0006",
+      "type": "open_answer",
+      "text": "Em qual rio João Batista batizou Jesus?",
+      "options": null,
+      "accepted_answers": ["Jordão", "Rio Jordão"],
+      "explanation": "Jesus foi batizado por João no rio Jordão \"para cumprir toda a justiça\" (Mt 3:15). Ali o Espírito desceu como pomba e o Pai declarou: \"Este é o meu Filho amado, em quem me comprazo\" (Mt 3:17).",
+      "divergence_note": null,
+      "reference": { "book": "mateus", "chapter": 3, "verse_start": 13, "verse_end": 17 },
+      "theme": "Batismo",
+      "difficulty": "easy",
+      "subcategory": "Vida de Jesus",
+      "tags": ["batismo", "jordao", "joao batista"]
+    },
+    {
+      "external_id": "evangelhos-0007",
+      "type": "multiple_choice",
+      "text": "Quando Pedro perguntou quantas vezes deveria perdoar seu irmão, qual foi a resposta de Jesus?",
+      "options": [
+        { "text": "Setenta vezes sete", "correct": true },
+        { "text": "Sete vezes", "correct": false },
+        { "text": "Três vezes", "correct": false },
+        { "text": "Doze vezes doze", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Pedro sugeriu sete vezes, mas Jesus respondeu \"até setenta vezes sete\" (Mt 18:22) — não um cálculo, mas perdão sem limites. Em seguida, contou a parábola do credor incompassivo para mostrar o porquê: fomos perdoados de dívida infinitamente maior.",
+      "divergence_note": null,
+      "reference": { "book": "mateus", "chapter": 18, "verse_start": 21, "verse_end": 22 },
+      "theme": "Perdão",
+      "difficulty": "medium",
+      "subcategory": "Ensinos de Jesus",
+      "tags": ["perdao", "pedro", "setenta vezes sete"]
+    },
+    {
+      "external_id": "evangelhos-0008",
+      "type": "multiple_choice",
+      "text": "Em que árvore Zaqueu subiu para conseguir ver Jesus em Jericó?",
+      "options": [
+        { "text": "Sicômoro (figueira brava)", "correct": true },
+        { "text": "Oliveira", "correct": false },
+        { "text": "Cedro", "correct": false },
+        { "text": "Tamareira", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Zaqueu, chefe dos publicanos e de pequena estatura, subiu num sicômoro para ver Jesus (Lc 19:4). Jesus se convidou à sua casa, e a transformação foi radical: restituiu quadruplicado o que havia extorquido.",
+      "divergence_note": null,
+      "reference": { "book": "lucas", "chapter": 19, "verse_start": 1, "verse_end": 10 },
+      "theme": "Salvação",
+      "difficulty": "easy",
+      "subcategory": "Encontros com Jesus",
+      "tags": ["zaqueu", "jerico", "sicomoro"]
+    },
+    {
+      "external_id": "evangelhos-0009",
+      "type": "multiple_choice",
+      "text": "Qual autor de evangelho é chamado por Paulo de \"o médico amado\"?",
+      "options": [
+        { "text": "Lucas", "correct": true },
+        { "text": "Marcos", "correct": false },
+        { "text": "Mateus", "correct": false },
+        { "text": "João", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Paulo se refere a \"Lucas, o médico amado\" em Colossenses 4:14. Lucas foi companheiro de viagens de Paulo e escreveu também o livro de Atos, formando com seu evangelho uma obra em dois volumes dedicada a Teófilo.",
+      "divergence_note": "Os evangelhos são formalmente anônimos; a atribuição a Lucas vem do testemunho unânime da igreja antiga (Irineu, Cânon Muratori). O dado bíblico direto é que Lucas era médico e companheiro de Paulo (Cl 4:14; 2Tm 4:11).",
+      "reference": { "book": "colossenses", "chapter": 4, "verse_start": 14, "verse_end": null },
+      "theme": "Autoria dos Evangelhos",
+      "difficulty": "medium",
+      "subcategory": "Os evangelistas",
+      "tags": ["lucas", "paulo", "medico"]
+    },
+    {
+      "external_id": "evangelhos-0010",
+      "type": "open_answer",
+      "text": "Qual homem foi obrigado a carregar a cruz de Jesus no caminho do Calvário?",
+      "options": null,
+      "accepted_answers": ["Simão", "Simão Cireneu", "Simão de Cirene", "Simao Cireneu"],
+      "explanation": "Os soldados obrigaram Simão de Cirene, que voltava do campo, a carregar a cruz de Jesus (Mt 27:32). Marcos anota que ele era pai de Alexandre e Rufo (Mc 15:21), nomes aparentemente conhecidos da igreja primitiva.",
+      "divergence_note": null,
+      "reference": { "book": "mateus", "chapter": 27, "verse_start": 32, "verse_end": null },
+      "theme": "Paixão de Cristo",
+      "difficulty": "medium",
+      "subcategory": "Paixão de Cristo",
+      "tags": ["simao cireneu", "cruz", "calvario"]
+    }
+  ]
+}

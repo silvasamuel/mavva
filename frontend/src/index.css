@@ -1,0 +1,27 @@
+@import '@fontsource-variable/nunito';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  body {
+    @apply bg-sand-50 font-sans text-ink;
+    /* faint manna-grain texture */
+    background-image: radial-gradient(rgba(50, 154, 64, 0.045) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+  *:focus-visible {
+    @apply outline-none ring-2 ring-leaf-500 ring-offset-2 ring-offset-sand-50;
+  }
+}
+
+@layer components {
+  /* Duolingo-style pressable button base: chunky bottom edge that gives on press */
+  .btn-press {
+    @apply translate-y-0 border-b-4 transition-all duration-100 active:translate-y-[3px] active:border-b-0;
+  }
+}

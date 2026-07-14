@@ -1,0 +1,56 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: mavva
+      POSTGRES_PASSWORD: mavva
+      POSTGRES_DB: mavva
+    ports:
+      # Loopback-only (dev credentials are public in this repo); 5433 because
+      # 5432 is commonly taken by other local Postgres instances.
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mavva"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+      target: dev
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    environment:
+      DATABASE_URL: postgresql+psycopg://mavva:mavva@db:5432/mavva
+      SECRET_KEY: dev-secret-change-in-production
+      ENVIRONMENT: development
+      FRONTEND_ORIGIN: http://localhost:5173
+      CONTENT_DIR: /code/content
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/app:/code/app
+      - ./backend/alembic:/code/alembic
+      - ./content:/code/content:ro
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    image: node:22-alpine
+    working_dir: /code
+    command: sh -c "corepack enable && pnpm install && pnpm dev --host"
+    environment:
+      VITE_API_URL: http://localhost:8000
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/code
+      - frontend_node_modules:/code/node_modules
+
+volumes:
+  pgdata:
+  frontend_node_modules:
