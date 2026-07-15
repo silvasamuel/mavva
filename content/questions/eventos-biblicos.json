@@ -56,21 +56,21 @@
     {
       "external_id": "eventos-biblicos-0004",
       "type": "multiple_choice",
-      "text": "Quem apareceu conversando com Jesus no monte da transfiguração?",
+      "text": "O que o povo fez ao pé do Sinai enquanto Moisés recebia as tábuas da Lei no monte?",
       "options": [
-        { "text": "Moisés e Elias", "correct": true },
-        { "text": "Abraão e Davi", "correct": false },
-        { "text": "Enoque e Noé", "correct": false },
-        { "text": "Isaías e Jeremias", "correct": false }
+        { "text": "Fez um bezerro de ouro e o adorou", "correct": true },
+        { "text": "Construiu o tabernáculo", "correct": false },
+        { "text": "Enviou espias a Canaã", "correct": false },
+        { "text": "Celebrou a primeira Páscoa", "correct": false }
       ],
       "accepted_answers": null,
-      "explanation": "\"Apareceram-lhes Moisés e Elias, falando com ele\" (Mt 17:3) — a Lei e os Profetas testemunhando daquele a quem apontavam. A voz do Pai encerra: \"Este é o meu Filho amado... escutai-o\" (Mt 17:5).",
+      "explanation": "Vendo que Moisés tardava, o povo pediu deuses a Arão, que fez o bezerro de ouro: \"este é o teu deus, ó Israel, que te tirou da terra do Egito\" (Êx 32:4). Moisés desceu, quebrou as tábuas e destruiu o ídolo — apostasia ao pé do próprio monte da aliança.",
       "divergence_note": null,
-      "reference": { "book": "mateus", "chapter": 17, "verse_start": 1, "verse_end": 8 },
-      "theme": "Vida de Cristo",
+      "reference": { "book": "exodo", "chapter": 32, "verse_start": 1, "verse_end": 8 },
+      "theme": "Idolatria",
       "difficulty": "easy",
-      "subcategory": "Novo Testamento",
-      "tags": ["transfiguracao", "moises", "elias"]
+      "subcategory": "Êxodo",
+      "tags": ["bezerro de ouro", "sinai", "arao"]
     },
     {
       "external_id": "eventos-biblicos-0005",

@@ -121,7 +121,7 @@
       "text": "Quantas epístolas do apóstolo João o Novo Testamento contém?",
       "options": null,
       "accepted_answers": ["3", "Três"],
-      "explanation": "1, 2 e 3 João. A primeira combate os que negavam a encarnação (\"Jesus Cristo veio em carne\", 1Jo 4:2); a segunda e a terceira são bilhetes curtos sobre a verdade e a hospitalidade — 3 João é o livro mais curto do NT em número de versículos.",
+      "explanation": "1, 2 e 3 João. A primeira combate os que negavam a encarnação (\"Jesus Cristo veio em carne\", 1Jo 4:2); a segunda e a terceira são bilhetes curtos sobre a verdade e a hospitalidade — os dois livros mais curtos do NT (2 João tem menos versículos; 3 João, menos palavras no original).",
       "divergence_note": null,
       "reference": { "book": "1joao", "chapter": 1, "verse_start": 1, "verse_end": 4 },
       "theme": "Cartas gerais",

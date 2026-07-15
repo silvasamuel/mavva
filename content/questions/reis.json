@@ -94,21 +94,21 @@
     {
       "external_id": "reis-0006",
       "type": "multiple_choice",
-      "text": "A qual rei de Judá Deus acrescentou quinze anos de vida em resposta à sua oração, quando estava doente?",
+      "text": "Qual rei de Judá foi ferido com lepra por entrar no templo para queimar incenso, ofício reservado aos sacerdotes?",
       "options": [
-        { "text": "Ezequias", "correct": true },
+        { "text": "Uzias", "correct": true },
         { "text": "Josafá", "correct": false },
-        { "text": "Uzias", "correct": false },
-        { "text": "Manassés", "correct": false }
+        { "text": "Amazias", "correct": false },
+        { "text": "Joás", "correct": false }
       ],
       "accepted_answers": null,
-      "explanation": "Isaías anunciou a morte de Ezequias, mas o rei orou com lágrimas, e Deus respondeu: \"eis que acrescentarei aos teus dias quinze anos\" (2Rs 20:6), confirmando com o sinal da sombra que retrocedeu dez graus no relógio de Acaz.",
+      "explanation": "Fortalecido, Uzias \"exaltou-se o seu coração\" e usurpou o incenso; a lepra brotou-lhe na testa diante dos sacerdotes, e ele ficou leproso até morrer, morando em casa separada (2Cr 26:16-21). Foi no ano da sua morte que Isaías viu o trono do Senhor (Is 6:1).",
       "divergence_note": null,
-      "reference": { "book": "2reis", "chapter": 20, "verse_start": 1, "verse_end": 11 },
-      "theme": "Oração",
-      "difficulty": "medium",
+      "reference": { "book": "2cronicas", "chapter": 26, "verse_start": 16, "verse_end": 21 },
+      "theme": "Soberba",
+      "difficulty": "hard",
       "subcategory": "Reino do Sul",
-      "tags": ["ezequias", "isaias", "cura"]
+      "tags": ["uzias", "lepra", "incenso"]
     },
     {
       "external_id": "reis-0007",

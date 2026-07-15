@@ -3,17 +3,22 @@
   "questions": [
     {
       "external_id": "geografia-biblica-0001",
-      "type": "open_answer",
-      "text": "Em qual rio João Batista batizou Jesus?",
-      "options": null,
-      "accepted_answers": ["Jordão", "Rio Jordão"],
-      "explanation": "\"E aconteceu naqueles dias que Jesus... foi batizado por João, no Jordão\" (Mc 1:9). O mesmo rio que Israel atravessou para entrar na terra prometida marca o início do ministério público de Jesus.",
+      "type": "multiple_choice",
+      "text": "Por quais outros nomes o mar da Galileia é chamado nas Escrituras?",
+      "options": [
+        { "text": "Lago de Genesaré e mar de Tiberíades", "correct": true },
+        { "text": "Mar Salgado e mar de Arabá", "correct": false },
+        { "text": "Mar Grande e mar de Jope", "correct": false },
+        { "text": "Águas de Merom e mar de Quinerete apenas", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Lucas o chama \"lago de Genesaré\" (Lc 5:1) e João, \"mar de Tiberíades\" (Jo 6:1; 21:1) — no AT, era o \"mar de Quinerete\" (Nm 34:11). O mesmo lago, cenário da pesca, das tempestades acalmadas e de boa parte do ministério de Jesus.",
       "divergence_note": null,
-      "reference": { "book": "marcos", "chapter": 1, "verse_start": 9, "verse_end": 11 },
+      "reference": { "book": "joao", "chapter": 6, "verse_start": 1, "verse_end": 1 },
       "theme": "Rios das Escrituras",
-      "difficulty": "easy",
+      "difficulty": "medium",
       "subcategory": "Rios e mares",
-      "tags": ["jordao", "batismo", "joao batista"]
+      "tags": ["mar da galileia", "genesare", "tiberiades"]
     },
     {
       "external_id": "geografia-biblica-0002",

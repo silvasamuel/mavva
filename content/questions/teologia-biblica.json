@@ -155,17 +155,22 @@
     },
     {
       "external_id": "teologia-biblica-0009",
-      "type": "open_answer",
-      "text": "Qual nome messiânico, citado em Mateus a partir de Isaías, significa \"Deus conosco\"?",
-      "options": null,
-      "accepted_answers": ["Emanuel", "Imanuel"],
-      "explanation": "\"Eis que a virgem conceberá, e dará à luz um filho, e chamá-lo-ão pelo nome de Emanuel, que traduzido é: Deus conosco\" (Mt 1:23, citando Is 7:14). O Evangelho de Mateus fecha com o mesmo tema: \"eu estou convosco todos os dias\" (Mt 28:20).",
+      "type": "multiple_choice",
+      "text": "Qual imagem do Salmo 118, aplicada a Jesus por ele mesmo e pelos apóstolos, descreve o Messias rejeitado que se tornou fundamento?",
+      "options": [
+        { "text": "A pedra que os edificadores rejeitaram, que veio a ser a pedra angular", "correct": true },
+        { "text": "A rocha ferida no deserto", "correct": false },
+        { "text": "O monte que enche toda a terra", "correct": false },
+        { "text": "A coluna de fogo que guia o povo", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"A pedra que os edificadores rejeitaram tornou-se a cabeça da esquina\" (Sl 118:22). Jesus a aplica a si mesmo diante dos líderes (Mt 21:42), e Pedro a repete ao Sinédrio (At 4:11) e na sua carta (1Pe 2:7) — a rejeição estava no plano, e dela Deus fez o alicerce.",
       "divergence_note": null,
-      "reference": { "book": "mateus", "chapter": 1, "verse_start": 22, "verse_end": 23 },
-      "theme": "Deus conosco",
-      "difficulty": "easy",
+      "reference": { "book": "salmos", "chapter": 118, "verse_start": 22, "verse_end": 23 },
+      "theme": "Pedra angular",
+      "difficulty": "medium",
       "subcategory": "Temas messiânicos",
-      "tags": ["emanuel", "isaias", "encarnacao"]
+      "tags": ["pedra angular", "salmo 118", "rejeicao"]
     },
     {
       "external_id": "teologia-biblica-0010",

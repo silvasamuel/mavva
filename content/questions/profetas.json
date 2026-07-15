@@ -4,21 +4,21 @@
     {
       "external_id": "profetas-0001",
       "type": "multiple_choice",
-      "text": "Qual profeta foi levado ao céu num redemoinho, acompanhado por um carro de fogo?",
+      "text": "Como Deus sustentou Elias junto ao ribeiro de Querite durante a seca?",
       "options": [
-        { "text": "Elias", "correct": true },
-        { "text": "Eliseu", "correct": false },
-        { "text": "Enoque", "correct": false },
-        { "text": "Ezequiel", "correct": false }
+        { "text": "Corvos lhe traziam pão e carne, de manhã e à tarde", "correct": true },
+        { "text": "Um anjo lhe assava pão sobre brasas", "correct": false },
+        { "text": "Uma viúva lhe trazia comida diariamente", "correct": false },
+        { "text": "O ribeiro produzia peixes em abundância", "correct": false }
       ],
       "accepted_answers": null,
-      "explanation": "\"Um carro de fogo, com cavalos de fogo, os separou um do outro; e Elias subiu ao céu num redemoinho\" (2Rs 2:11). Eliseu ficou com a capa e a dupla porção do espírito; Enoque também foi levado sem morrer, mas sem carro de fogo (Gn 5:24).",
+      "explanation": "\"Os corvos lhe traziam pão e carne pela manhã, como também pão e carne à noite; e bebia do ribeiro\" (1Rs 17:6). O anjo com pão veio depois, a caminho de Horebe (1Rs 19:5-6), e a viúva foi a fase seguinte, em Sarepta (1Rs 17:9).",
       "divergence_note": null,
-      "reference": { "book": "2reis", "chapter": 2, "verse_start": 9, "verse_end": 12 },
-      "theme": "Vida dos profetas",
-      "difficulty": "easy",
+      "reference": { "book": "1reis", "chapter": 17, "verse_start": 2, "verse_end": 6 },
+      "theme": "Provisão",
+      "difficulty": "medium",
       "subcategory": "Profetas do Norte",
-      "tags": ["elias", "carro de fogo", "eliseu"]
+      "tags": ["elias", "corvos", "querite"]
     },
     {
       "external_id": "profetas-0002",
@@ -61,16 +61,16 @@
     {
       "external_id": "profetas-0004",
       "type": "open_answer",
-      "text": "Qual profeta foi lançado na cova dos leões por orar ao seu Deus três vezes ao dia?",
+      "text": "Qual profeta interpretou a escrita \"MENE, MENE, TEQUEL, UFARSIM\" que apareceu na parede durante o banquete de Belsazar?",
       "options": null,
       "accepted_answers": ["Daniel", "Profeta Daniel"],
-      "explanation": "O decreto de Dario proibia petições a qualquer deus ou homem que não o rei, mas Daniel continuou orando com as janelas abertas para Jerusalém (Dn 6:10). Deus \"enviou o seu anjo, e fechou a boca dos leões\" (Dn 6:22).",
+      "explanation": "Enquanto Belsazar profanava os utensílios do templo, dedos de mão humana escreveram na parede. Daniel interpretou: Deus contou, pesou e dividiu o reino (Dn 5:25-28). \"Naquela mesma noite\" Babilônia caiu diante dos medos e persas (Dn 5:30-31).",
       "divergence_note": null,
-      "reference": { "book": "daniel", "chapter": 6, "verse_start": 10, "verse_end": 23 },
-      "theme": "Fidelidade",
-      "difficulty": "easy",
+      "reference": { "book": "daniel", "chapter": 5, "verse_start": 24, "verse_end": 31 },
+      "theme": "Juízo das nações",
+      "difficulty": "medium",
       "subcategory": "Profetas do exílio",
-      "tags": ["daniel", "cova dos leoes", "dario"]
+      "tags": ["daniel", "belsazar", "escrita na parede"]
     },
     {
       "external_id": "profetas-0005",

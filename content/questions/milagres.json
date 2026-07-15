@@ -4,21 +4,21 @@
     {
       "external_id": "milagres-0001",
       "type": "multiple_choice",
-      "text": "Qual foi o primeiro milagre de Jesus registrado no Evangelho de João?",
+      "text": "Dos dez leprosos que Jesus curou a caminho de Jerusalém, quem voltou para agradecer?",
       "options": [
-        { "text": "Transformar água em vinho", "correct": true },
-        { "text": "Multiplicar pães e peixes", "correct": false },
-        { "text": "Curar o cego de nascença", "correct": false },
-        { "text": "Acalmar a tempestade", "correct": false }
+        { "text": "Apenas um, e era samaritano", "correct": true },
+        { "text": "Todos os dez", "correct": false },
+        { "text": "Nenhum deles", "correct": false },
+        { "text": "Três, que eram galileus", "correct": false }
       ],
       "accepted_answers": null,
-      "explanation": "Nas bodas de Caná da Galileia, Jesus transformou água em vinho. João o chama de \"princípio dos sinais\" (Jo 2:11), pelo qual Jesus \"manifestou a sua glória, e os seus discípulos creram nele\".",
+      "explanation": "\"E um deles, vendo que estava são, voltou glorificando a Deus... e este era samaritano\" (Lc 17:15-16). Jesus pergunta: \"Não foram dez os limpos? E os nove, onde estão?\" — o estrangeiro deu o exemplo de gratidão.",
       "divergence_note": null,
-      "reference": { "book": "joao", "chapter": 2, "verse_start": 1, "verse_end": 11 },
-      "theme": "Glória de Cristo",
+      "reference": { "book": "lucas", "chapter": 17, "verse_start": 11, "verse_end": 19 },
+      "theme": "Gratidão",
       "difficulty": "easy",
       "subcategory": "Milagres de Jesus",
-      "tags": ["cana", "agua em vinho", "sinais"]
+      "tags": ["dez leprosos", "samaritano", "gratidao"]
     },
     {
       "external_id": "milagres-0002",

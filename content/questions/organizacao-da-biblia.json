@@ -83,7 +83,7 @@
         { "text": "Porque profetizaram apenas sobre o Messias", "correct": false }
       ],
       "accepted_answers": null,
-      "explanation": "\"Maiores\" e \"menores\" referem-se apenas ao tamanho dos escritos: Isaías tem 66 capítulos, Obadias tem 21 versículos. Os doze menores formavam um único rolo (\"O Livro dos Doze\") na Bíblia hebraica.",
+      "explanation": "\"Maiores\" e \"menores\" referem-se apenas ao tamanho dos escritos: Isaías tem 66 capítulos, Obadias tem 21 versículos. Lamentações costuma ser contado junto aos maiores por acompanhar Jeremias (daí os \"5 profetas maiores\"), e os doze menores formavam um único rolo (\"O Livro dos Doze\") na Bíblia hebraica.",
       "divergence_note": null,
       "reference": { "book": "isaias", "chapter": 1, "verse_start": 1, "verse_end": 1 },
       "theme": "Estrutura",
