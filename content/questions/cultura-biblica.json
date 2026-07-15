@@ -1,0 +1,190 @@
+{
+  "category": "cultura-biblica",
+  "questions": [
+    {
+      "external_id": "cultura-biblica-0001",
+      "type": "multiple_choice",
+      "text": "Na parábola dos trabalhadores da vinha, qual era o salário combinado por um dia de trabalho?",
+      "options": [
+        { "text": "Um denário", "correct": true },
+        { "text": "Um talento", "correct": false },
+        { "text": "Dez dracmas", "correct": false },
+        { "text": "Um siclo de prata", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Ajustou com os trabalhadores a um dinheiro [denário] por dia\" (Mt 20:2) — o denário era o pagamento típico da diária de um trabalhador rural. Saber isso ilumina outras cenas: os 200 denários para alimentar a multidão (Jo 6:7) eram meses de salário.",
+      "divergence_note": null,
+      "reference": { "book": "mateus", "chapter": 20, "verse_start": 1, "verse_end": 2 },
+      "theme": "Moedas e valores",
+      "difficulty": "medium",
+      "subcategory": "Economia",
+      "tags": ["denario", "salario", "vinha"]
+    },
+    {
+      "external_id": "cultura-biblica-0002",
+      "type": "multiple_choice",
+      "text": "Quais eram os três produtos agrícolas básicos da terra de Israel, resumidos na bênção de \"trigo, mosto e azeite\"?",
+      "options": [
+        { "text": "Cereais, uva e oliva", "correct": true },
+        { "text": "Arroz, tâmara e figo", "correct": false },
+        { "text": "Cevada, mel e leite", "correct": false },
+        { "text": "Milho, romã e amêndoa", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"O teu grão, e o teu mosto, e o teu azeite\" (Dt 7:13) resumem a agricultura de Israel: pão do trigo e da cevada, vinho da uva, azeite da oliveira — daí a força das imagens da videira (Jo 15) e da oliveira (Rm 11) nas Escrituras.",
+      "divergence_note": null,
+      "reference": { "book": "deuteronomio", "chapter": 7, "verse_start": 12, "verse_end": 13 },
+      "theme": "Agricultura",
+      "difficulty": "easy",
+      "subcategory": "Agricultura",
+      "tags": ["trigo", "vinho", "azeite"]
+    },
+    {
+      "external_id": "cultura-biblica-0003",
+      "type": "multiple_choice",
+      "text": "Por que Jesus disse que não se põe vinho novo em odres velhos?",
+      "options": [
+        { "text": "Odres velhos, já ressequidos, rebentariam com a fermentação do vinho novo", "correct": true },
+        { "text": "Odres velhos davam sabor amargo ao vinho", "correct": false },
+        { "text": "A Lei proibia reutilizar odres", "correct": false },
+        { "text": "Os odres velhos eram impuros cerimonialmente", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Odres eram peles de animais; as velhas perdiam a elasticidade e \"rompem-se os odres, e entorna-se o vinho\" (Mt 9:17). A imagem defende a novidade do evangelho, que não cabe nos moldes do judaísmo farisaico.",
+      "divergence_note": null,
+      "reference": { "book": "mateus", "chapter": 9, "verse_start": 14, "verse_end": 17 },
+      "theme": "Vida cotidiana",
+      "difficulty": "medium",
+      "subcategory": "Vida cotidiana",
+      "tags": ["odres", "vinho novo", "parabola"]
+    },
+    {
+      "external_id": "cultura-biblica-0004",
+      "type": "multiple_choice",
+      "text": "O que a Lei mandava deixar no campo durante a colheita, provisão que beneficiou Rute?",
+      "options": [
+        { "text": "Os cantos do campo e as espigas caídas, para o pobre e o estrangeiro", "correct": true },
+        { "text": "Um décimo da colheita queimado como oferta", "correct": false },
+        { "text": "A primeira fileira de cada campo para os sacerdotes", "correct": false },
+        { "text": "Metade da colheita em anos de festa", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Não segarás totalmente os cantos do teu campo... para o pobre e para o estrangeiro as deixarás\" (Lv 19:9-10). A respiga era a previdência social de Israel — e foi respigando no campo de Boaz que Rute sustentou Noemi (Rt 2:2-3).",
+      "divergence_note": null,
+      "reference": { "book": "levitico", "chapter": 19, "verse_start": 9, "verse_end": 10 },
+      "theme": "Justiça social",
+      "difficulty": "medium",
+      "subcategory": "Agricultura",
+      "tags": ["respiga", "rute", "pobres"]
+    },
+    {
+      "external_id": "cultura-biblica-0005",
+      "type": "multiple_choice",
+      "text": "Segundo João 10, como as ovelhas reconheciam o seu pastor?",
+      "options": [
+        { "text": "Pela voz — ele as chamava pelo nome e elas o seguiam", "correct": true },
+        { "text": "Pela marca de ferro no cajado", "correct": false },
+        { "text": "Pela cor das vestes", "correct": false },
+        { "text": "Pelo assobio dos cães de guarda", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"As ovelhas ouvem a sua voz, e chama pelo nome às suas ovelhas... e elas o seguem, porque conhecem a sua voz\" (Jo 10:3-4). Pastores orientais iam à frente do rebanho — imagem que Jesus toma: \"Eu sou o bom Pastor\" (Jo 10:11).",
+      "divergence_note": null,
+      "reference": { "book": "joao", "chapter": 10, "verse_start": 1, "verse_end": 5 },
+      "theme": "Pastoreio",
+      "difficulty": "easy",
+      "subcategory": "Vida cotidiana",
+      "tags": ["pastor", "ovelhas", "voz"]
+    },
+    {
+      "external_id": "cultura-biblica-0006",
+      "type": "multiple_choice",
+      "text": "Que moedas a viúva pobre lançou na arca do templo, no gesto elogiado por Jesus?",
+      "options": [
+        { "text": "Duas pequenas moedas de cobre (leptos), o menor valor em circulação", "correct": true },
+        { "text": "Dois denários de prata", "correct": false },
+        { "text": "Duas dracmas de ouro", "correct": false },
+        { "text": "Dois siclos do santuário", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Uma pobre viúva deitou duas pequenas moedas\" (Mc 12:42) — leptos, a menor moeda de cobre. Jesus a declara a maior ofertante: \"deu tudo o que tinha, todo o seu sustento\" (Mc 12:44). O valor da oferta se mede pelo que resta, não pelo que se dá.",
+      "divergence_note": null,
+      "reference": { "book": "marcos", "chapter": 12, "verse_start": 41, "verse_end": 44 },
+      "theme": "Moedas e valores",
+      "difficulty": "medium",
+      "subcategory": "Economia",
+      "tags": ["viuva", "leptos", "oferta"]
+    },
+    {
+      "external_id": "cultura-biblica-0007",
+      "type": "multiple_choice",
+      "text": "Nos tempos de Rute, como se confirmava publicamente uma transação de resgate em Israel?",
+      "options": [
+        { "text": "O vendedor descalçava a sandália e a entregava à outra parte", "correct": true },
+        { "text": "Cortava-se um animal ao meio", "correct": false },
+        { "text": "Assinava-se um contrato em papiro no templo", "correct": false },
+        { "text": "Trocavam-se punhados de sal", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Havia de antes este costume em Israel... o homem descalçava o sapato e o dava ao seu próximo\" (Rt 4:7). Foi assim, à porta da cidade e diante dos anciãos, que Boaz adquiriu o direito de resgatar Rute (Rt 4:8-10).",
+      "divergence_note": null,
+      "reference": { "book": "rute", "chapter": 4, "verse_start": 7, "verse_end": 10 },
+      "theme": "Contratos e costumes",
+      "difficulty": "hard",
+      "subcategory": "Vida cotidiana",
+      "tags": ["sandalia", "resgate", "boaz"]
+    },
+    {
+      "external_id": "cultura-biblica-0008",
+      "type": "multiple_choice",
+      "text": "O que era um \"talento\" no Novo Testamento?",
+      "options": [
+        { "text": "Uma unidade de peso e valor altíssimo, equivalente a milhares de denários", "correct": true },
+        { "text": "Uma moeda pequena de cobre", "correct": false },
+        { "text": "Uma medida de comprimento", "correct": false },
+        { "text": "Uma habilidade natural da pessoa", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "O talento era medida de peso (cerca de 30 kg) usada como unidade monetária enorme — na parábola, o servo devia \"dez mil talentos\" (Mt 18:24), dívida impagável de propósito. O sentido moderno de \"talento\" como aptidão nasceu justamente da parábola de Mt 25.",
+      "divergence_note": null,
+      "reference": { "book": "mateus", "chapter": 18, "verse_start": 23, "verse_end": 27 },
+      "theme": "Moedas e valores",
+      "difficulty": "medium",
+      "subcategory": "Economia",
+      "tags": ["talento", "peso", "divida"]
+    },
+    {
+      "external_id": "cultura-biblica-0009",
+      "type": "multiple_choice",
+      "text": "Por que os poços eram pontos de encontro tão importantes nas narrativas bíblicas?",
+      "options": [
+        { "text": "Numa terra semiárida, eram fonte vital de água e centro da vida comunitária", "correct": true },
+        { "text": "Eram os únicos locais permitidos para comércio", "correct": false },
+        { "text": "A Lei ordenava orações diárias junto aos poços", "correct": false },
+        { "text": "Serviam de tribunal para os anciãos", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Junto a poços, o servo de Abraão encontrou Rebeca (Gn 24), Jacó encontrou Raquel (Gn 29), Moisés encontrou Zípora (Êx 2) — e Jesus, a samaritana, a quem ofereceu \"água viva\" (Jo 4:10-14). Onde a vida dependia da água, Deus marcava encontros.",
+      "divergence_note": null,
+      "reference": { "book": "joao", "chapter": 4, "verse_start": 5, "verse_end": 14 },
+      "theme": "Vida cotidiana",
+      "difficulty": "easy",
+      "subcategory": "Vida cotidiana",
+      "tags": ["poco", "agua", "encontros"]
+    },
+    {
+      "external_id": "cultura-biblica-0010",
+      "type": "open_answer",
+      "text": "Que tempero Jesus usou como imagem dos seus discípulos: \"vós sois o ___ da terra\"?",
+      "options": null,
+      "accepted_answers": ["Sal", "O sal"],
+      "explanation": "\"Vós sois o sal da terra; e se o sal for insípido, com que se há de salgar?\" (Mt 5:13). O sal conservava alimentos e selava pactos (\"aliança de sal\", Nm 18:19) — os discípulos preservam e temperam o mundo onde estão.",
+      "divergence_note": null,
+      "reference": { "book": "mateus", "chapter": 5, "verse_start": 13, "verse_end": 13 },
+      "theme": "Vida cotidiana",
+      "difficulty": "easy",
+      "subcategory": "Alimentação",
+      "tags": ["sal", "discipulos", "sermao do monte"]
+    }
+  ]
+}

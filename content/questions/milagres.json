@@ -1,0 +1,185 @@
+{
+  "category": "milagres",
+  "questions": [
+    {
+      "external_id": "milagres-0001",
+      "type": "multiple_choice",
+      "text": "Qual foi o primeiro milagre de Jesus registrado no Evangelho de João?",
+      "options": [
+        { "text": "Transformar água em vinho", "correct": true },
+        { "text": "Multiplicar pães e peixes", "correct": false },
+        { "text": "Curar o cego de nascença", "correct": false },
+        { "text": "Acalmar a tempestade", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Nas bodas de Caná da Galileia, Jesus transformou água em vinho. João o chama de \"princípio dos sinais\" (Jo 2:11), pelo qual Jesus \"manifestou a sua glória, e os seus discípulos creram nele\".",
+      "divergence_note": null,
+      "reference": { "book": "joao", "chapter": 2, "verse_start": 1, "verse_end": 11 },
+      "theme": "Glória de Cristo",
+      "difficulty": "easy",
+      "subcategory": "Milagres de Jesus",
+      "tags": ["cana", "agua em vinho", "sinais"]
+    },
+    {
+      "external_id": "milagres-0002",
+      "type": "multiple_choice",
+      "text": "Quantos pães e peixes Jesus usou para alimentar cerca de cinco mil homens?",
+      "options": [
+        { "text": "Cinco pães e dois peixes", "correct": true },
+        { "text": "Sete pães e alguns peixinhos", "correct": false },
+        { "text": "Dois pães e cinco peixes", "correct": false },
+        { "text": "Doze pães e dois peixes", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Um menino tinha cinco pães de cevada e dois peixinhos (Jo 6:9). Jesus deu graças, distribuiu, todos comeram e ainda sobraram doze cestos — o único milagre relatado nos quatro Evangelhos. Os sete pães pertencem à outra multiplicação, a dos quatro mil (Mt 15:34).",
+      "divergence_note": null,
+      "reference": { "book": "joao", "chapter": 6, "verse_start": 5, "verse_end": 13 },
+      "theme": "Provisão",
+      "difficulty": "easy",
+      "subcategory": "Milagres de Jesus",
+      "tags": ["multiplicacao", "paes", "peixes"]
+    },
+    {
+      "external_id": "milagres-0003",
+      "type": "open_answer",
+      "text": "Quantos dias Lázaro estava no sepulcro quando Jesus o ressuscitou?",
+      "options": null,
+      "accepted_answers": ["4", "Quatro", "Quatro dias"],
+      "explanation": "Quando Jesus chegou a Betânia, Lázaro \"já havia quatro dias que estava na sepultura\" (Jo 11:17). Marta ainda adverte: \"já cheira mal\" (Jo 11:39) — o detalhe sublinha que não havia dúvida da morte, engrandecendo o sinal.",
+      "divergence_note": null,
+      "reference": { "book": "joao", "chapter": 11, "verse_start": 17, "verse_end": 44 },
+      "theme": "Ressurreição",
+      "difficulty": "medium",
+      "subcategory": "Milagres de Jesus",
+      "tags": ["lazaro", "betania", "ressurreicao"]
+    },
+    {
+      "external_id": "milagres-0004",
+      "type": "multiple_choice",
+      "text": "Qual profeta orou, e um machado de ferro emprestado flutuou nas águas do Jordão?",
+      "options": [
+        { "text": "Eliseu", "correct": true },
+        { "text": "Elias", "correct": false },
+        { "text": "Samuel", "correct": false },
+        { "text": "Isaías", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Um dos filhos dos profetas deixou cair no Jordão o machado emprestado; Eliseu lançou um pau na água \"e fez flutuar o ferro\" (2Rs 6:6). O milagre mostra o cuidado de Deus até com as pequenas aflições dos seus servos.",
+      "divergence_note": null,
+      "reference": { "book": "2reis", "chapter": 6, "verse_start": 1, "verse_end": 7 },
+      "theme": "Cuidado de Deus",
+      "difficulty": "hard",
+      "subcategory": "Milagres dos profetas",
+      "tags": ["eliseu", "machado", "jordao"]
+    },
+    {
+      "external_id": "milagres-0005",
+      "type": "multiple_choice",
+      "text": "O que aconteceu com as águas do mar Vermelho quando Moisés estendeu a sua mão sobre elas?",
+      "options": [
+        { "text": "Dividiram-se, e Israel passou em seco", "correct": true },
+        { "text": "Tornaram-se em sangue", "correct": false },
+        { "text": "Congelaram-se formando uma ponte", "correct": false },
+        { "text": "Secaram-se por completo e não voltaram mais", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"O Senhor fez retirar o mar por um forte vento oriental toda aquela noite; e o mar tornou-se em seco, e as águas foram partidas\" (Êx 14:21). Israel passou em seco, e as mesmas águas cobriram o exército de Faraó.",
+      "divergence_note": null,
+      "reference": { "book": "exodo", "chapter": 14, "verse_start": 21, "verse_end": 31 },
+      "theme": "Libertação",
+      "difficulty": "easy",
+      "subcategory": "Milagres do Êxodo",
+      "tags": ["mar vermelho", "moises", "exodo"]
+    },
+    {
+      "external_id": "milagres-0006",
+      "type": "multiple_choice",
+      "text": "Na cura do paralítico descido pelo telhado, o que Jesus disse primeiro ao doente?",
+      "options": [
+        { "text": "\"Filho, perdoados estão os teus pecados\"", "correct": true },
+        { "text": "\"Levanta-te, toma o teu leito e anda\"", "correct": false },
+        { "text": "\"A tua fé te salvou; vai em paz\"", "correct": false },
+        { "text": "\"Quem te acusou de pecado?\"", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Antes de curar o corpo, Jesus tratou da necessidade maior: \"Filho, perdoados estão os teus pecados\" (Mc 2:5). A cura física veio em seguida, como prova visível de que \"o Filho do homem tem na terra poder para perdoar pecados\" (Mc 2:10-11).",
+      "divergence_note": null,
+      "reference": { "book": "marcos", "chapter": 2, "verse_start": 1, "verse_end": 12 },
+      "theme": "Perdão",
+      "difficulty": "medium",
+      "subcategory": "Milagres de Jesus",
+      "tags": ["paralitico", "telhado", "perdao"]
+    },
+    {
+      "external_id": "milagres-0007",
+      "type": "open_answer",
+      "text": "Qual apóstolo andou sobre as águas ao encontro de Jesus antes de começar a afundar?",
+      "options": null,
+      "accepted_answers": ["Pedro", "Simão Pedro", "Simão"],
+      "explanation": "Pedro pediu: \"Senhor, se és tu, manda-me ir ter contigo por cima das águas\" (Mt 14:28). Andou, mas ao ver o vento forte temeu e começou a afundar; Jesus o segurou dizendo: \"Homem de pouca fé, por que duvidaste?\" (Mt 14:31).",
+      "divergence_note": null,
+      "reference": { "book": "mateus", "chapter": 14, "verse_start": 22, "verse_end": 33 },
+      "theme": "Fé",
+      "difficulty": "easy",
+      "subcategory": "Milagres de Jesus",
+      "tags": ["pedro", "andar sobre aguas", "fe"]
+    },
+    {
+      "external_id": "milagres-0008",
+      "type": "multiple_choice",
+      "text": "Qual foi a décima e última praga enviada sobre o Egito?",
+      "options": [
+        { "text": "A morte dos primogênitos", "correct": true },
+        { "text": "As trevas de três dias", "correct": false },
+        { "text": "Os gafanhotos", "correct": false },
+        { "text": "A sarna nos homens e animais", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "À meia-noite o Senhor feriu todo primogênito do Egito, de Faraó ao cativo (Êx 12:29). Israel foi poupado pelo sangue do cordeiro nos umbrais — origem da Páscoa e figura que o Novo Testamento aplica a Cristo, \"nosso Cordeiro pascal\" (1Co 5:7).",
+      "divergence_note": null,
+      "reference": { "book": "exodo", "chapter": 12, "verse_start": 29, "verse_end": 30 },
+      "theme": "Juízo e redenção",
+      "difficulty": "easy",
+      "subcategory": "Milagres do Êxodo",
+      "tags": ["pragas", "primogenitos", "pascoa"]
+    },
+    {
+      "external_id": "milagres-0009",
+      "type": "multiple_choice",
+      "text": "No monte Carmelo, o que o fogo do Senhor consumiu além do holocausto de Elias?",
+      "options": [
+        { "text": "A lenha, as pedras, o pó e a água do rego", "correct": true },
+        { "text": "Somente o novilho sobre o altar", "correct": false },
+        { "text": "O altar dos profetas de Baal", "correct": false },
+        { "text": "Os quatrocentos e cinquenta profetas de Baal", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Então caiu fogo do Senhor, e consumiu o holocausto, e a lenha, e as pedras, e o pó, e ainda lambeu a água que estava no rego\" (1Rs 18:38). O excesso deliberado — Elias havia encharcado tudo três vezes — tirou qualquer dúvida de quem é Deus em Israel.",
+      "divergence_note": null,
+      "reference": { "book": "1reis", "chapter": 18, "verse_start": 30, "verse_end": 39 },
+      "theme": "Soberania de Deus",
+      "difficulty": "medium",
+      "subcategory": "Milagres dos profetas",
+      "tags": ["elias", "carmelo", "fogo"]
+    },
+    {
+      "external_id": "milagres-0010",
+      "type": "multiple_choice",
+      "text": "Em Atos, que milagre acompanhou a oração de Paulo e Silas na prisão de Filipos?",
+      "options": [
+        { "text": "Um terremoto abriu as portas e soltou as cadeias", "correct": true },
+        { "text": "Um anjo os conduziu para fora da cidade", "correct": false },
+        { "text": "Uma luz cegou os guardas da prisão", "correct": false },
+        { "text": "As correntes se derreteram como cera", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Enquanto oravam e cantavam hinos à meia-noite, \"sobreveio tão grande terremoto, que os alicerces do cárcere se moveram\" (At 16:26). O episódio termina com a conversão do carcereiro e sua casa. A libertação por um anjo aconteceu com Pedro (At 12), não aqui.",
+      "divergence_note": null,
+      "reference": { "book": "atos", "chapter": 16, "verse_start": 25, "verse_end": 34 },
+      "theme": "Louvor na adversidade",
+      "difficulty": "medium",
+      "subcategory": "Milagres dos apóstolos",
+      "tags": ["paulo", "silas", "filipos", "terremoto"]
+    }
+  ]
+}

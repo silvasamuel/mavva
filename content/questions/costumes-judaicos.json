@@ -1,0 +1,185 @@
+{
+  "category": "costumes-judaicos",
+  "questions": [
+    {
+      "external_id": "costumes-judaicos-0001",
+      "type": "multiple_choice",
+      "text": "Com quantos dias de vida o menino israelita devia ser circuncidado, segundo a Lei?",
+      "options": [
+        { "text": "Oito dias", "correct": true },
+        { "text": "Quarenta dias", "correct": false },
+        { "text": "Trinta dias", "correct": false },
+        { "text": "No primeiro sábado após o nascimento", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"No dia oitavo se circuncidará ao menino a carne do seu prepúcio\" (Lv 12:3) — sinal da aliança dado a Abraão (Gn 17:12). O próprio Jesus foi circuncidado ao oitavo dia (Lc 2:21).",
+      "divergence_note": null,
+      "reference": { "book": "levitico", "chapter": 12, "verse_start": 2, "verse_end": 3 },
+      "theme": "Sinais da aliança",
+      "difficulty": "medium",
+      "subcategory": "Ritos",
+      "tags": ["circuncisao", "oitavo dia", "alianca"]
+    },
+    {
+      "external_id": "costumes-judaicos-0002",
+      "type": "multiple_choice",
+      "text": "O que o mandamento do sábado ordenava a Israel?",
+      "options": [
+        { "text": "Não fazer obra alguma no sétimo dia, santificando-o ao Senhor", "correct": true },
+        { "text": "Jejuar do pôr do sol ao pôr do sol", "correct": false },
+        { "text": "Oferecer sacrifício pessoal no templo", "correct": false },
+        { "text": "Peregrinar a Jerusalém semanalmente", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Lembra-te do dia do sábado, para o santificar... não farás nenhuma obra\" (Êx 20:8-10), fundamentado no descanso da criação e na libertação do Egito (Dt 5:15). Jesus, Senhor do sábado, o devolveu ao propósito original: \"o sábado foi feito por causa do homem\" (Mc 2:27).",
+      "divergence_note": null,
+      "reference": { "book": "exodo", "chapter": 20, "verse_start": 8, "verse_end": 11 },
+      "theme": "Sábado",
+      "difficulty": "easy",
+      "subcategory": "Lei",
+      "tags": ["sabado", "descanso", "mandamento"]
+    },
+    {
+      "external_id": "costumes-judaicos-0003",
+      "type": "multiple_choice",
+      "text": "O que era o \"levirato\", costume presente na história de Rute e na pergunta dos saduceus a Jesus?",
+      "options": [
+        { "text": "O dever de casar com a viúva do irmão para dar-lhe descendência", "correct": true },
+        { "text": "O resgate de terras vendidas por dívida", "correct": false },
+        { "text": "O voto de não cortar o cabelo", "correct": false },
+        { "text": "A adoção de órfãos pela tribo de Levi", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Quando irmãos morarem juntos, e um deles morrer, e não tiver filho... seu cunhado... a tomará por mulher\" (Dt 25:5), para que o nome do morto não se apagasse. Boaz cumpre papel de resgatador com Rute (Rt 4), e os saduceus usam o costume para questionar a ressurreição (Mt 22:24-28).",
+      "divergence_note": null,
+      "reference": { "book": "deuteronomio", "chapter": 25, "verse_start": 5, "verse_end": 6 },
+      "theme": "Família",
+      "difficulty": "hard",
+      "subcategory": "Lei",
+      "tags": ["levirato", "rute", "cunhado"]
+    },
+    {
+      "external_id": "costumes-judaicos-0004",
+      "type": "multiple_choice",
+      "text": "O que eram os filactérios que os fariseus alargavam \"para serem vistos pelos homens\"?",
+      "options": [
+        { "text": "Estojos de couro com passagens da Lei, atados à testa e ao braço", "correct": true },
+        { "text": "Turbantes de linho fino", "correct": false },
+        { "text": "Anéis com o selo da tribo", "correct": false },
+        { "text": "Bolsas de moedas para esmolas públicas", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Levando ao pé da letra \"atá-las-ás por sinal na tua mão... entre os teus olhos\" (Dt 6:8), usavam-se estojos com textos da Lei. Jesus não condena o costume, mas a ostentação: \"alargam os seus filactérios\" (Mt 23:5).",
+      "divergence_note": null,
+      "reference": { "book": "mateus", "chapter": 23, "verse_start": 5, "verse_end": 7 },
+      "theme": "Piedade e ostentação",
+      "difficulty": "hard",
+      "subcategory": "Práticas religiosas",
+      "tags": ["filacterios", "fariseus", "ostentacao"]
+    },
+    {
+      "external_id": "costumes-judaicos-0005",
+      "type": "multiple_choice",
+      "text": "Por que os fariseus criticaram os discípulos de Jesus por comerem \"com as mãos por lavar\" (Marcos 7)?",
+      "options": [
+        { "text": "Violavam a tradição dos anciãos, não a Lei escrita", "correct": true },
+        { "text": "Violavam um mandamento do Decálogo", "correct": false },
+        { "text": "Desrespeitavam uma ordem do Sinédrio", "correct": false },
+        { "text": "Quebravam um voto de nazireado", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "A lavagem cerimonial era \"tradição dos anciãos\" (Mc 7:3-5), regra humana acrescentada à Lei. Jesus responde com Isaías: \"em vão me honram, ensinando doutrinas que são mandamentos de homens\" (Mc 7:7) — e declara que o que contamina vem do coração (Mc 7:20-23).",
+      "divergence_note": null,
+      "reference": { "book": "marcos", "chapter": 7, "verse_start": 1, "verse_end": 13 },
+      "theme": "Tradição e Escritura",
+      "difficulty": "medium",
+      "subcategory": "Práticas religiosas",
+      "tags": ["tradicao", "lavar maos", "fariseus"]
+    },
+    {
+      "external_id": "costumes-judaicos-0006",
+      "type": "open_answer",
+      "text": "Que fração dos seus ganhos o israelita devia entregar como dízimo?",
+      "options": null,
+      "accepted_answers": ["Décima parte", "Um décimo", "10%", "Dez por cento", "A decima parte"],
+      "explanation": "\"Todas as dízimas da terra... são do Senhor\" (Lv 27:30) — a décima parte, destinada aos levitas, que não tinham herança de terra (Nm 18:21). Abraão já dera o dízimo a Melquisedeque antes da Lei (Gn 14:20).",
+      "divergence_note": null,
+      "reference": { "book": "levitico", "chapter": 27, "verse_start": 30, "verse_end": 32 },
+      "theme": "Ofertas",
+      "difficulty": "easy",
+      "subcategory": "Lei",
+      "tags": ["dizimo", "levitas", "decima parte"]
+    },
+    {
+      "external_id": "costumes-judaicos-0007",
+      "type": "open_answer",
+      "text": "De quantos em quantos anos era celebrado o ano do jubileu, quando as terras voltavam aos donos originais?",
+      "options": null,
+      "accepted_answers": ["50", "Cinquenta", "Cinquenta anos", "De cinquenta em cinquenta"],
+      "explanation": "\"Santificareis o ano quinquagésimo... e apregoareis liberdade na terra\" (Lv 25:10): terras devolvidas, dívidas perdoadas, escravos libertos. Jesus abre seu ministério anunciando \"o ano aceitável do Senhor\" (Lc 4:19) — o jubileu definitivo.",
+      "divergence_note": null,
+      "reference": { "book": "levitico", "chapter": 25, "verse_start": 8, "verse_end": 13 },
+      "theme": "Liberdade e restituição",
+      "difficulty": "hard",
+      "subcategory": "Lei",
+      "tags": ["jubileu", "cinquenta anos", "liberdade"]
+    },
+    {
+      "external_id": "costumes-judaicos-0008",
+      "type": "multiple_choice",
+      "text": "Qual oferta Maria e José levaram na apresentação de Jesus no templo, e o que ela revela?",
+      "options": [
+        { "text": "Um par de rolas ou dois pombinhos — a oferta permitida aos pobres", "correct": true },
+        { "text": "Um cordeiro de um ano — a oferta padrão", "correct": false },
+        { "text": "Um novilho — a oferta dos sacerdotes", "correct": false },
+        { "text": "Ouro, incenso e mirra", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Levítico 12:8 permitia aos que não podiam dar um cordeiro oferecer \"duas rolas ou dois pombinhos\" — exatamente a oferta de Maria e José (Lc 2:24). O Rei dos reis nasceu numa família pobre: \"sendo rico, por amor de vós se fez pobre\" (2Co 8:9).",
+      "divergence_note": null,
+      "reference": { "book": "lucas", "chapter": 2, "verse_start": 22, "verse_end": 24 },
+      "theme": "Purificação",
+      "difficulty": "medium",
+      "subcategory": "Ritos",
+      "tags": ["apresentacao", "rolas", "pobreza"]
+    },
+    {
+      "external_id": "costumes-judaicos-0009",
+      "type": "multiple_choice",
+      "text": "O que significava, na cultura judaica, rasgar as próprias vestes?",
+      "options": [
+        { "text": "Expressão de luto, horror ou indignação extrema", "correct": true },
+        { "text": "Voto de pobreza voluntária", "correct": false },
+        { "text": "Preparação para a batalha", "correct": false },
+        { "text": "Celebração de boas notícias", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jacó rasgou as vestes pela suposta morte de José (Gn 37:34); Jó, ao perder tudo (Jó 1:20); o sumo sacerdote, ao julgar blasfema a resposta de Jesus (Mt 26:65). Deus, porém, pede mais: \"rasgai o vosso coração, e não as vossas vestes\" (Jl 2:13).",
+      "divergence_note": null,
+      "reference": { "book": "joel", "chapter": 2, "verse_start": 12, "verse_end": 13 },
+      "theme": "Luto",
+      "difficulty": "medium",
+      "subcategory": "Costumes sociais",
+      "tags": ["vestes rasgadas", "luto", "lamento"]
+    },
+    {
+      "external_id": "costumes-judaicos-0010",
+      "type": "multiple_choice",
+      "text": "Por que se lavavam os pés dos hóspedes ao chegarem a uma casa?",
+      "options": [
+        { "text": "Era gesto básico de hospitalidade nas estradas de poeira e sandálias", "correct": true },
+        { "text": "Era exigência da Lei de Moisés para entrar em qualquer casa", "correct": false },
+        { "text": "Era rito exclusivo dos sacerdotes", "correct": false },
+        { "text": "Era prática apenas de casas romanas", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Caminhava-se de sandálias por estradas de terra; oferecer água para os pés era cortesia elementar — Abraão a oferece aos visitantes (Gn 18:4), e Simão a omite com Jesus (Lc 7:44). Por isso o gesto de Jesus em João 13 chocou: o Mestre fez o serviço do escravo.",
+      "divergence_note": null,
+      "reference": { "book": "joao", "chapter": 13, "verse_start": 3, "verse_end": 15 },
+      "theme": "Hospitalidade",
+      "difficulty": "easy",
+      "subcategory": "Costumes sociais",
+      "tags": ["lavar pes", "hospitalidade", "servico"]
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "category": "escatologia",
+  "questions": [
+    {
+      "external_id": "escatologia-0001",
+      "type": "multiple_choice",
+      "text": "Que promessa Jesus fez aos discípulos em João 14 sobre o seu retorno?",
+      "options": [
+        { "text": "\"Virei outra vez, e vos levarei para mim mesmo\"", "correct": true },
+        { "text": "\"Enviarei um anjo para vos buscar\"", "correct": false },
+        { "text": "\"Vós vireis a mim quando morrerdes\"", "correct": false },
+        { "text": "\"O Reino já está completo na terra\"", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Vou preparar-vos lugar... virei outra vez, e vos levarei para mim mesmo, para que onde eu estiver estejais vós também\" (Jo 14:2-3). A segunda vinda é promessa pessoal de Cristo, esperança central da igreja.",
+      "divergence_note": null,
+      "reference": { "book": "joao", "chapter": 14, "verse_start": 1, "verse_end": 3 },
+      "theme": "Segunda vinda",
+      "difficulty": "easy",
+      "subcategory": "Volta de Cristo",
+      "tags": ["segunda vinda", "promessa", "moradas"]
+    },
+    {
+      "external_id": "escatologia-0002",
+      "type": "multiple_choice",
+      "text": "Na ascensão, o que os dois varões vestidos de branco disseram sobre como Jesus voltaria?",
+      "options": [
+        { "text": "\"Há de vir assim como para o céu o vistes ir\"", "correct": true },
+        { "text": "\"Voltará em segredo, e poucos o verão\"", "correct": false },
+        { "text": "\"Voltará somente em espírito\"", "correct": false },
+        { "text": "\"Já não voltará; esperai o Consolador\"", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Esse Jesus... há de vir assim como para o céu o vistes ir\" (At 1:11) — pessoal, visível e corporalmente. Apocalipse ecoa: \"eis que vem com as nuvens, e todo olho o verá\" (Ap 1:7).",
+      "divergence_note": null,
+      "reference": { "book": "atos", "chapter": 1, "verse_start": 9, "verse_end": 11 },
+      "theme": "Segunda vinda",
+      "difficulty": "easy",
+      "subcategory": "Volta de Cristo",
+      "tags": ["ascensao", "nuvens", "retorno visivel"]
+    },
+    {
+      "external_id": "escatologia-0003",
+      "type": "multiple_choice",
+      "text": "Segundo 1 Tessalonicenses 4:16, quem ressuscitará primeiro na vinda do Senhor?",
+      "options": [
+        { "text": "Os mortos em Cristo", "correct": true },
+        { "text": "Todos os mortos, justos e ímpios juntamente", "correct": false },
+        { "text": "Os vivos serão transformados antes", "correct": false },
+        { "text": "Os patriarcas do Antigo Testamento somente", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Os que morreram em Cristo ressuscitarão primeiro; depois nós, os que ficarmos vivos, seremos arrebatados juntamente com eles nas nuvens, a encontrar o Senhor nos ares\" (1Ts 4:16-17). Paulo escreve para consolar quanto aos irmãos falecidos.",
+      "divergence_note": "Cristãos ortodoxos divergem sobre o momento desse arrebatamento em relação à tribulação (pré, meso ou pós-tribulacionismo). O texto afirma com clareza a ordem: mortos em Cristo primeiro, depois os vivos — o restante é debate interpretativo legítimo.",
+      "reference": { "book": "1tessalonicenses", "chapter": 4, "verse_start": 13, "verse_end": 18 },
+      "theme": "Ressurreição",
+      "difficulty": "medium",
+      "subcategory": "Arrebatamento",
+      "tags": ["arrebatamento", "ressurreicao", "tessalonicenses"]
+    },
+    {
+      "external_id": "escatologia-0004",
+      "type": "open_answer",
+      "text": "Por quantos anos, segundo Apocalipse 20, Satanás ficará preso enquanto Cristo reina com os seus?",
+      "options": null,
+      "accepted_answers": ["1000", "Mil", "Mil anos"],
+      "explanation": "Apocalipse 20:2-6 menciona seis vezes o período de \"mil anos\": Satanás preso, e os que participam da primeira ressurreição reinando com Cristo.",
+      "divergence_note": "O sentido do milênio divide as principais tradições: pré-milenistas esperam reino literal futuro após a volta de Cristo; amilenistas o entendem como o reinado atual de Cristo entre a primeira e a segunda vinda; pós-milenistas, como era de expansão do evangelho antes da volta. Todas são posições cristãs históricas e ortodoxas.",
+      "reference": { "book": "apocalipse", "chapter": 20, "verse_start": 1, "verse_end": 6 },
+      "theme": "Milênio",
+      "difficulty": "medium",
+      "subcategory": "Milênio",
+      "tags": ["milenio", "apocalipse", "mil anos"]
+    },
+    {
+      "external_id": "escatologia-0005",
+      "type": "multiple_choice",
+      "text": "O que João viu descendo do céu em Apocalipse 21, \"adereçada como uma esposa ataviada para o seu marido\"?",
+      "options": [
+        { "text": "A nova Jerusalém", "correct": true },
+        { "text": "O templo restaurado", "correct": false },
+        { "text": "O jardim do Éden", "correct": false },
+        { "text": "A arca da aliança", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Vi a santa cidade, a nova Jerusalém, que de Deus descia do céu\" (Ap 21:2). O ponto alto não é o lugar, mas a presença: \"o tabernáculo de Deus está com os homens... e ele habitará com eles\" (Ap 21:3).",
+      "divergence_note": null,
+      "reference": { "book": "apocalipse", "chapter": 21, "verse_start": 1, "verse_end": 4 },
+      "theme": "Estado eterno",
+      "difficulty": "easy",
+      "subcategory": "Novo céu e nova terra",
+      "tags": ["nova jerusalem", "apocalipse", "eternidade"]
+    },
+    {
+      "external_id": "escatologia-0006",
+      "type": "multiple_choice",
+      "text": "Em Apocalipse 20, diante de que os mortos são julgados no juízo do grande trono branco?",
+      "options": [
+        { "text": "Dos livros, e do livro da vida", "correct": true },
+        { "text": "Das testemunhas que os acusam", "correct": false },
+        { "text": "Da balança de ouro do santuário", "correct": false },
+        { "text": "Dos doze apóstolos assentados em tronos", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Abriram-se os livros... e outro livro se abriu, que é o da vida; e os mortos foram julgados... segundo as suas obras\" (Ap 20:12). O destino final depende do livro da vida: \"aquele que não foi achado escrito no livro da vida foi lançado no lago de fogo\" (Ap 20:15).",
+      "divergence_note": null,
+      "reference": { "book": "apocalipse", "chapter": 20, "verse_start": 11, "verse_end": 15 },
+      "theme": "Juízo final",
+      "difficulty": "medium",
+      "subcategory": "Juízo",
+      "tags": ["trono branco", "livro da vida", "juizo"]
+    },
+    {
+      "external_id": "escatologia-0007",
+      "type": "multiple_choice",
+      "text": "Como Paulo chama, em 2 Tessalonicenses 2, a figura que se opõe a Deus e deve ser revelada antes do dia do Senhor?",
+      "options": [
+        { "text": "O homem do pecado, o filho da perdição", "correct": true },
+        { "text": "O dragão vermelho", "correct": false },
+        { "text": "O príncipe da Pérsia", "correct": false },
+        { "text": "A besta de sete cabeças", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Não chegará sem que antes venha a apostasia, e se manifeste o homem do pecado, o filho da perdição\" (2Ts 2:3), que \"se assenta como Deus no templo de Deus\". O Senhor o desfará \"pelo assopro da sua boca\" (2Ts 2:8).",
+      "divergence_note": "A identificação do \"homem do pecado\" com o Anticristo de 1 João e a besta de Apocalipse 13, e o sentido de \"templo de Deus\", variam entre intérpretes sérios (futurista, historicista, preterista). A pergunta se limita ao título que o próprio texto usa.",
+      "reference": { "book": "2tessalonicenses", "chapter": 2, "verse_start": 1, "verse_end": 8 },
+      "theme": "Anticristo",
+      "difficulty": "hard",
+      "subcategory": "Sinais dos tempos",
+      "tags": ["homem do pecado", "apostasia", "tessalonicenses"]
+    },
+    {
+      "external_id": "escatologia-0008",
+      "type": "multiple_choice",
+      "text": "Segundo 2 Pedro 3:10, como virá o dia do Senhor?",
+      "options": [
+        { "text": "Como ladrão de noite", "correct": true },
+        { "text": "Anunciado com sete dias de antecedência", "correct": false },
+        { "text": "Somente após todos se converterem", "correct": false },
+        { "text": "De forma perceptível apenas aos profetas", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"O dia do Senhor virá como o ladrão de noite\" (2Pe 3:10; cf. 1Ts 5:2; Mt 24:43-44). A demora não é tardança, mas paciência: Deus \"não quer que alguns se percam, senão que todos venham a arrepender-se\" (2Pe 3:9).",
+      "divergence_note": null,
+      "reference": { "book": "2pedro", "chapter": 3, "verse_start": 8, "verse_end": 10 },
+      "theme": "Dia do Senhor",
+      "difficulty": "medium",
+      "subcategory": "Sinais dos tempos",
+      "tags": ["dia do senhor", "ladrao", "vigilancia"]
+    },
+    {
+      "external_id": "escatologia-0009",
+      "type": "multiple_choice",
+      "text": "Sobre o dia e a hora da sua vinda, o que Jesus afirmou em Mateus 24:36?",
+      "options": [
+        { "text": "\"Daquele dia e hora ninguém sabe... senão só o Pai\"", "correct": true },
+        { "text": "\"Os escolhidos saberão a data com exatidão\"", "correct": false },
+        { "text": "\"Será exatamente mil anos após a ressurreição\"", "correct": false },
+        { "text": "\"Os anjos anunciarão a data uma geração antes\"", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Daquele dia e hora ninguém sabe, nem os anjos do céu, mas unicamente meu Pai\" (Mt 24:36). Toda tentativa de marcar datas contraria a palavra do próprio Jesus; a postura ordenada é vigiar (Mt 24:42).",
+      "divergence_note": null,
+      "reference": { "book": "mateus", "chapter": 24, "verse_start": 36, "verse_end": 44 },
+      "theme": "Vigilância",
+      "difficulty": "easy",
+      "subcategory": "Volta de Cristo",
+      "tags": ["dia e hora", "vigiai", "mateus 24"]
+    },
+    {
+      "external_id": "escatologia-0010",
+      "type": "multiple_choice",
+      "text": "Segundo Apocalipse 21:4, o que não existirá mais no estado eterno?",
+      "options": [
+        { "text": "Morte, pranto, clamor e dor", "correct": true },
+        { "text": "Trabalho e descanso", "correct": false },
+        { "text": "Memória da vida presente", "correct": false },
+        { "text": "Adoração e louvor", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Deus limpará de seus olhos toda a lágrima; e não haverá mais morte, nem pranto, nem clamor, nem dor; porque já as primeiras coisas são passadas\" (Ap 21:4). A esperança cristã não é fuga do mundo, mas a renovação de todas as coisas (Ap 21:5).",
+      "divergence_note": null,
+      "reference": { "book": "apocalipse", "chapter": 21, "verse_start": 4, "verse_end": 5 },
+      "theme": "Estado eterno",
+      "difficulty": "easy",
+      "subcategory": "Novo céu e nova terra",
+      "tags": ["eternidade", "sem morte", "consolacao"]
+    }
+  ]
+}

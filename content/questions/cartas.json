@@ -1,0 +1,190 @@
+{
+  "category": "cartas",
+  "questions": [
+    {
+      "external_id": "cartas-0001",
+      "type": "multiple_choice",
+      "text": "Em qual carta está o famoso capítulo sobre o amor: \"ainda que eu falasse as línguas dos homens e dos anjos...\"?",
+      "options": [
+        { "text": "1 Coríntios", "correct": true },
+        { "text": "Romanos", "correct": false },
+        { "text": "1 João", "correct": false },
+        { "text": "Efésios", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "1 Coríntios 13 está no centro da discussão sobre dons espirituais (caps. 12-14): sem amor, o dom mais espetacular \"nada seria\". \"Agora, pois, permanecem a fé, a esperança e o amor... mas o maior destes é o amor\" (1Co 13:13).",
+      "divergence_note": null,
+      "reference": { "book": "1corintios", "chapter": 13, "verse_start": 1, "verse_end": 13 },
+      "theme": "Amor",
+      "difficulty": "easy",
+      "subcategory": "Cartas de Paulo",
+      "tags": ["corintios", "amor", "dons"]
+    },
+    {
+      "external_id": "cartas-0002",
+      "type": "multiple_choice",
+      "text": "Qual carta Paulo escreveu intercedendo por Onésimo, um escravo fugido que se converteu?",
+      "options": [
+        { "text": "Filemom", "correct": true },
+        { "text": "Tito", "correct": false },
+        { "text": "Colossenses", "correct": false },
+        { "text": "2 Timóteo", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Paulo devolve Onésimo a Filemom pedindo que o receba \"não já como servo, antes... como irmão amado\" (Fm 1:16), e se oferece para pagar qualquer dívida — retrato vivo da intercessão de Cristo por nós.",
+      "divergence_note": null,
+      "reference": { "book": "filemom", "chapter": 1, "verse_start": 8, "verse_end": 18 },
+      "theme": "Reconciliação",
+      "difficulty": "medium",
+      "subcategory": "Cartas de Paulo",
+      "tags": ["filemom", "onesimo", "perdao"]
+    },
+    {
+      "external_id": "cartas-0003",
+      "type": "multiple_choice",
+      "text": "Qual carta, escrita da prisão, repete insistentemente o tema da alegria: \"Regozijai-vos sempre no Senhor\"?",
+      "options": [
+        { "text": "Filipenses", "correct": true },
+        { "text": "Gálatas", "correct": false },
+        { "text": "2 Coríntios", "correct": false },
+        { "text": "1 Tessalonicenses", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Preso, Paulo escreve aos filipenses a carta mais alegre do Novo Testamento: \"Regozijai-vos sempre no Senhor; outra vez digo, regozijai-vos\" (Fp 4:4). A alegria cristã não depende das circunstâncias, mas de Cristo: \"para mim o viver é Cristo\" (Fp 1:21).",
+      "divergence_note": null,
+      "reference": { "book": "filipenses", "chapter": 4, "verse_start": 4, "verse_end": 7 },
+      "theme": "Alegria",
+      "difficulty": "medium",
+      "subcategory": "Cartas da prisão",
+      "tags": ["filipenses", "alegria", "prisao"]
+    },
+    {
+      "external_id": "cartas-0004",
+      "type": "multiple_choice",
+      "text": "Em qual carta Paulo lista o fruto do Espírito: amor, gozo, paz, longanimidade...?",
+      "options": [
+        { "text": "Gálatas", "correct": true },
+        { "text": "Romanos", "correct": false },
+        { "text": "Efésios", "correct": false },
+        { "text": "Colossenses", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Mas o fruto do Espírito é: amor, gozo, paz, longanimidade, benignidade, bondade, fé, mansidão, temperança\" (Gl 5:22-23). O fruto (singular) contrasta com as obras da carne listadas antes — caráter que o Espírito produz, não desempenho humano.",
+      "divergence_note": null,
+      "reference": { "book": "galatas", "chapter": 5, "verse_start": 22, "verse_end": 23 },
+      "theme": "Vida no Espírito",
+      "difficulty": "medium",
+      "subcategory": "Cartas de Paulo",
+      "tags": ["galatas", "fruto do espirito", "carater"]
+    },
+    {
+      "external_id": "cartas-0005",
+      "type": "multiple_choice",
+      "text": "Em qual carta Paulo descreve a armadura de Deus, peça por peça?",
+      "options": [
+        { "text": "Efésios", "correct": true },
+        { "text": "Filipenses", "correct": false },
+        { "text": "2 Tessalonicenses", "correct": false },
+        { "text": "1 Timóteo", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Revesti-vos de toda a armadura de Deus\" (Ef 6:11): cinto da verdade, couraça da justiça, calçado do evangelho, escudo da fé, capacete da salvação e espada do Espírito. A luta \"não é contra a carne e o sangue\" (Ef 6:12).",
+      "divergence_note": null,
+      "reference": { "book": "efesios", "chapter": 6, "verse_start": 10, "verse_end": 18 },
+      "theme": "Batalha espiritual",
+      "difficulty": "easy",
+      "subcategory": "Cartas da prisão",
+      "tags": ["efesios", "armadura", "batalha espiritual"]
+    },
+    {
+      "external_id": "cartas-0006",
+      "type": "multiple_choice",
+      "text": "Quais cartas são conhecidas como \"epístolas pastorais\"?",
+      "options": [
+        { "text": "1 Timóteo, 2 Timóteo e Tito", "correct": true },
+        { "text": "Efésios, Filipenses e Colossenses", "correct": false },
+        { "text": "1 Pedro, 2 Pedro e Judas", "correct": false },
+        { "text": "1 João, 2 João e 3 João", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Escritas a dois pastores jovens — Timóteo em Éfeso e Tito em Creta — tratam da organização da igreja: requisitos de presbíteros e diáconos, combate a falsos mestres e conduta \"na casa de Deus\" (1Tm 3:15).",
+      "divergence_note": null,
+      "reference": { "book": "1timoteo", "chapter": 3, "verse_start": 14, "verse_end": 15 },
+      "theme": "Liderança da igreja",
+      "difficulty": "medium",
+      "subcategory": "Cartas de Paulo",
+      "tags": ["pastorais", "timoteo", "tito"]
+    },
+    {
+      "external_id": "cartas-0007",
+      "type": "open_answer",
+      "text": "Quantas epístolas do apóstolo João o Novo Testamento contém?",
+      "options": null,
+      "accepted_answers": ["3", "Três"],
+      "explanation": "1, 2 e 3 João. A primeira combate os que negavam a encarnação (\"Jesus Cristo veio em carne\", 1Jo 4:2); a segunda e a terceira são bilhetes curtos sobre a verdade e a hospitalidade — 3 João é o livro mais curto do NT em número de versículos.",
+      "divergence_note": null,
+      "reference": { "book": "1joao", "chapter": 1, "verse_start": 1, "verse_end": 4 },
+      "theme": "Cartas gerais",
+      "difficulty": "easy",
+      "subcategory": "Cartas gerais",
+      "tags": ["joao", "epistolas", "tres cartas"]
+    },
+    {
+      "external_id": "cartas-0008",
+      "type": "multiple_choice",
+      "text": "Qual carta afirma que \"a fé, se não tiver as obras, é morta em si mesma\"?",
+      "options": [
+        { "text": "Tiago", "correct": true },
+        { "text": "Romanos", "correct": false },
+        { "text": "Hebreus", "correct": false },
+        { "text": "1 Pedro", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Tiago 2:17 confronta a fé que não passa de palavras. Não contradiz Paulo: Paulo trata de como somos justificados diante de Deus (pela fé), Tiago de como a fé verdadeira se mostra diante dos homens (pelas obras) — a fé genuína sempre frutifica.",
+      "divergence_note": null,
+      "reference": { "book": "tiago", "chapter": 2, "verse_start": 14, "verse_end": 26 },
+      "theme": "Fé e obras",
+      "difficulty": "medium",
+      "subcategory": "Cartas gerais",
+      "tags": ["tiago", "fe", "obras"]
+    },
+    {
+      "external_id": "cartas-0009",
+      "type": "multiple_choice",
+      "text": "A quem Pedro dirige sua primeira carta?",
+      "options": [
+        { "text": "Aos estrangeiros dispersos no Ponto, Galácia, Capadócia, Ásia e Bitínia", "correct": true },
+        { "text": "À igreja de Roma", "correct": false },
+        { "text": "Aos hebreus da Palestina", "correct": false },
+        { "text": "Às sete igrejas da Ásia", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Pedro... aos estrangeiros dispersos no Ponto, Galácia, Capadócia, Ásia e Bitínia\" (1Pe 1:1) — cristãos sofrendo perseguição em regiões da atual Turquia. O tema da carta: esperança viva e conduta santa em meio ao sofrimento.",
+      "divergence_note": null,
+      "reference": { "book": "1pedro", "chapter": 1, "verse_start": 1, "verse_end": 2 },
+      "theme": "Cartas gerais",
+      "difficulty": "hard",
+      "subcategory": "Cartas gerais",
+      "tags": ["pedro", "dispersao", "perseguicao"]
+    },
+    {
+      "external_id": "cartas-0010",
+      "type": "multiple_choice",
+      "text": "Em qual carta Paulo, perto do fim da vida, escreve: \"Combati o bom combate, acabei a carreira, guardei a fé\"?",
+      "options": [
+        { "text": "2 Timóteo", "correct": true },
+        { "text": "1 Timóteo", "correct": false },
+        { "text": "Filipenses", "correct": false },
+        { "text": "Colossenses", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "2 Timóteo é considerada a última carta de Paulo, escrita da prisão romana à espera da execução: \"já estou sendo oferecido por aspersão de sacrifício, e o tempo da minha partida está próximo\" (2Tm 4:6-7). Um testamento espiritual ao seu filho na fé.",
+      "divergence_note": null,
+      "reference": { "book": "2timoteo", "chapter": 4, "verse_start": 6, "verse_end": 8 },
+      "theme": "Perseverança",
+      "difficulty": "hard",
+      "subcategory": "Cartas de Paulo",
+      "tags": ["2timoteo", "bom combate", "paulo"]
+    }
+  ]
+}

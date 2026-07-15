@@ -1,0 +1,190 @@
+{
+  "category": "eventos-biblicos",
+  "questions": [
+    {
+      "external_id": "eventos-biblicos-0001",
+      "type": "open_answer",
+      "text": "Durante quantos dias e noites choveu sobre a terra no dilúvio?",
+      "options": null,
+      "accepted_answers": ["40", "Quarenta", "Quarenta dias", "Quarenta dias e quarenta noites"],
+      "explanation": "\"Houve chuva sobre a terra quarenta dias e quarenta noites\" (Gn 7:12). As águas prevaleceram muito mais tempo — Noé passou mais de um ano dentro da arca até a terra secar (Gn 8:13-14).",
+      "divergence_note": null,
+      "reference": { "book": "genesis", "chapter": 7, "verse_start": 11, "verse_end": 12 },
+      "theme": "Primórdios",
+      "difficulty": "easy",
+      "subcategory": "Gênesis",
+      "tags": ["diluvio", "noe", "quarenta dias"]
+    },
+    {
+      "external_id": "eventos-biblicos-0002",
+      "type": "multiple_choice",
+      "text": "O que Deus fez na torre de Babel para deter a construção?",
+      "options": [
+        { "text": "Confundiu a língua dos construtores", "correct": true },
+        { "text": "Derrubou a torre com um terremoto", "correct": false },
+        { "text": "Enviou fogo do céu", "correct": false },
+        { "text": "Cegou os construtores", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Confundamos ali a sua língua, para que não entenda um a língua do outro\" (Gn 11:7). Sem comunicação, a obra parou e os povos se espalharam. No Pentecostes, o sinal das línguas reverte simbolicamente Babel: todos ouvem \"as grandezas de Deus\" na própria língua (At 2:11).",
+      "divergence_note": null,
+      "reference": { "book": "genesis", "chapter": 11, "verse_start": 1, "verse_end": 9 },
+      "theme": "Primórdios",
+      "difficulty": "easy",
+      "subcategory": "Gênesis",
+      "tags": ["babel", "linguas", "dispersao"]
+    },
+    {
+      "external_id": "eventos-biblicos-0003",
+      "type": "multiple_choice",
+      "text": "O que aconteceu no dia de Pentecostes, em Atos 2?",
+      "options": [
+        { "text": "O Espírito Santo desceu sobre os discípulos, que falaram em outras línguas", "correct": true },
+        { "text": "Jesus apareceu ressuscitado aos onze", "correct": false },
+        { "text": "Pedro foi liberto da prisão por um anjo", "correct": false },
+        { "text": "O véu do templo se rasgou", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Todos foram cheios do Espírito Santo, e começaram a falar noutras línguas\" (At 2:4), com o som de vento impetuoso e línguas como que de fogo. A pregação de Pedro converteu cerca de três mil — o nascimento da igreja.",
+      "divergence_note": null,
+      "reference": { "book": "atos", "chapter": 2, "verse_start": 1, "verse_end": 4 },
+      "theme": "Igreja",
+      "difficulty": "easy",
+      "subcategory": "Novo Testamento",
+      "tags": ["pentecostes", "espirito santo", "linguas"]
+    },
+    {
+      "external_id": "eventos-biblicos-0004",
+      "type": "multiple_choice",
+      "text": "Quem apareceu conversando com Jesus no monte da transfiguração?",
+      "options": [
+        { "text": "Moisés e Elias", "correct": true },
+        { "text": "Abraão e Davi", "correct": false },
+        { "text": "Enoque e Noé", "correct": false },
+        { "text": "Isaías e Jeremias", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Apareceram-lhes Moisés e Elias, falando com ele\" (Mt 17:3) — a Lei e os Profetas testemunhando daquele a quem apontavam. A voz do Pai encerra: \"Este é o meu Filho amado... escutai-o\" (Mt 17:5).",
+      "divergence_note": null,
+      "reference": { "book": "mateus", "chapter": 17, "verse_start": 1, "verse_end": 8 },
+      "theme": "Vida de Cristo",
+      "difficulty": "easy",
+      "subcategory": "Novo Testamento",
+      "tags": ["transfiguracao", "moises", "elias"]
+    },
+    {
+      "external_id": "eventos-biblicos-0005",
+      "type": "multiple_choice",
+      "text": "O que aconteceu quando Salomão terminou a oração de dedicação do templo?",
+      "options": [
+        { "text": "Desceu fogo do céu e a glória do Senhor encheu a casa", "correct": true },
+        { "text": "A arca da aliança começou a resplandecer", "correct": false },
+        { "text": "Um terremoto abalou Jerusalém", "correct": false },
+        { "text": "Choveu após três anos de seca", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Desceu o fogo do céu, e consumiu o holocausto e os sacrifícios; e a glória do Senhor encheu a casa\" (2Cr 7:1). Os sacerdotes nem podiam entrar — Deus confirmava habitar no meio do seu povo, como antes no tabernáculo (Êx 40:34-35).",
+      "divergence_note": null,
+      "reference": { "book": "2cronicas", "chapter": 7, "verse_start": 1, "verse_end": 3 },
+      "theme": "Presença de Deus",
+      "difficulty": "medium",
+      "subcategory": "Monarquia",
+      "tags": ["templo", "salomao", "gloria"]
+    },
+    {
+      "external_id": "eventos-biblicos-0006",
+      "type": "multiple_choice",
+      "text": "No batismo de Jesus, o que se ouviu e se viu do céu?",
+      "options": [
+        { "text": "A voz do Pai e o Espírito descendo como pomba", "correct": true },
+        { "text": "Um coro de anjos e uma estrela", "correct": false },
+        { "text": "Trovões e relâmpagos sobre o Jordão", "correct": false },
+        { "text": "Uma nuvem que cobriu a todos", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Viu o Espírito de Deus descendo como pomba... e eis que uma voz dos céus dizia: Este é o meu Filho amado, em quem me comprazo\" (Mt 3:16-17). As três pessoas da Trindade manifestas na abertura do ministério de Jesus.",
+      "divergence_note": null,
+      "reference": { "book": "mateus", "chapter": 3, "verse_start": 16, "verse_end": 17 },
+      "theme": "Vida de Cristo",
+      "difficulty": "easy",
+      "subcategory": "Novo Testamento",
+      "tags": ["batismo", "pomba", "voz do pai"]
+    },
+    {
+      "external_id": "eventos-biblicos-0007",
+      "type": "multiple_choice",
+      "text": "Qual evento marcou a entrada do evangelho na casa dos gentios, com o Espírito descendo sobre não judeus?",
+      "options": [
+        { "text": "A visita de Pedro a Cornélio, o centurião", "correct": true },
+        { "text": "A conversão do eunuco etíope", "correct": false },
+        { "text": "A pregação de Paulo em Atenas", "correct": false },
+        { "text": "O batismo do carcereiro de Filipos", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Em Cesareia, enquanto Pedro ainda falava, \"caiu o Espírito Santo sobre todos os que ouviam a palavra\" (At 10:44) — gentios incircuncisos. O episódio, precedido pela visão do lençol, convenceu a igreja: \"também aos gentios deu Deus o arrependimento para a vida\" (At 11:18).",
+      "divergence_note": null,
+      "reference": { "book": "atos", "chapter": 10, "verse_start": 44, "verse_end": 48 },
+      "theme": "Expansão do evangelho",
+      "difficulty": "hard",
+      "subcategory": "Novo Testamento",
+      "tags": ["cornelio", "gentios", "pedro"]
+    },
+    {
+      "external_id": "eventos-biblicos-0008",
+      "type": "multiple_choice",
+      "text": "Em quantos dias Deus criou os céus e a terra, descansando no seguinte?",
+      "options": [
+        { "text": "Criou em seis dias e descansou no sétimo", "correct": true },
+        { "text": "Criou em sete dias e descansou no oitavo", "correct": false },
+        { "text": "Criou em três dias e descansou no quarto", "correct": false },
+        { "text": "Criou tudo num único dia", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Em seis dias fez o Senhor os céus e a terra... e ao sétimo dia descansou\" (Êx 20:11, resumindo Gn 1-2). O descanso do sétimo dia fundamenta o sábado e aponta para o descanso que resta ao povo de Deus (Hb 4:9-10).",
+      "divergence_note": "Cristãos fiéis à Escritura divergem sobre a natureza dos \"dias\" de Gênesis 1 (dias literais, eras, estrutura literária). Todos confessam o essencial: Deus criou tudo do nada, com propósito e bondade.",
+      "reference": { "book": "exodo", "chapter": 20, "verse_start": 8, "verse_end": 11 },
+      "theme": "Criação",
+      "difficulty": "easy",
+      "subcategory": "Gênesis",
+      "tags": ["criacao", "seis dias", "sabado"]
+    },
+    {
+      "external_id": "eventos-biblicos-0009",
+      "type": "multiple_choice",
+      "text": "Como Sansão causou mais destruição na sua morte do que em vida?",
+      "options": [
+        { "text": "Derrubou as colunas do templo de Dagom sobre os filisteus", "correct": true },
+        { "text": "Incendiou as searas dos filisteus com trezentas raposas", "correct": false },
+        { "text": "Feriu mil homens com uma queixada de jumento", "correct": false },
+        { "text": "Arrancou as portas da cidade de Gaza", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Cego e escarnecido na festa de Dagom, Sansão orou, abraçou as colunas centrais e \"foram mais os que matou na sua morte do que os que matara na sua vida\" (Jz 16:30). As outras alternativas são façanhas suas em vida (Jz 15:4-5,15; 16:3).",
+      "divergence_note": null,
+      "reference": { "book": "juizes", "chapter": 16, "verse_start": 23, "verse_end": 31 },
+      "theme": "Juízes",
+      "difficulty": "medium",
+      "subcategory": "Juízes",
+      "tags": ["sansao", "dagom", "filisteus"]
+    },
+    {
+      "external_id": "eventos-biblicos-0010",
+      "type": "multiple_choice",
+      "text": "O que aconteceu no templo no momento em que Jesus morreu na cruz?",
+      "options": [
+        { "text": "O véu do santuário se rasgou em dois, de alto a baixo", "correct": true },
+        { "text": "O altar de bronze se partiu", "correct": false },
+        { "text": "A arca da aliança foi encontrada", "correct": false },
+        { "text": "As lâmpadas do candelabro se apagaram", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Eis que o véu do templo se rasgou em dois, de alto a baixo\" (Mt 27:51) — o véu que fechava o Santo dos Santos. Hebreus interpreta: pelo sangue de Jesus temos agora \"ousadia para entrar no santuário\", por um \"novo e vivo caminho\" (Hb 10:19-20).",
+      "divergence_note": null,
+      "reference": { "book": "mateus", "chapter": 27, "verse_start": 50, "verse_end": 54 },
+      "theme": "Cruz",
+      "difficulty": "medium",
+      "subcategory": "Novo Testamento",
+      "tags": ["veu", "templo", "crucificacao"]
+    }
+  ]
+}

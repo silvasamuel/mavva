@@ -1,0 +1,185 @@
+{
+  "category": "genealogias",
+  "questions": [
+    {
+      "external_id": "genealogias-0001",
+      "type": "multiple_choice",
+      "text": "Quais eram os três filhos de Noé, dos quais descendem os povos da terra?",
+      "options": [
+        { "text": "Sem, Cam e Jafé", "correct": true },
+        { "text": "Abel, Caim e Sete", "correct": false },
+        { "text": "Ismael, Isaque e Midiã", "correct": false },
+        { "text": "Esaú, Jacó e Labão", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Os filhos de Noé... foram Sem, Cam e Jafé; e destes se povoou toda a terra\" (Gn 9:18-19). A \"tábua das nações\" de Gênesis 10 organiza os povos conhecidos a partir dos três — e a linha de Sem conduz a Abraão (Gn 11:10-26).",
+      "divergence_note": null,
+      "reference": { "book": "genesis", "chapter": 9, "verse_start": 18, "verse_end": 19 },
+      "theme": "Origem dos povos",
+      "difficulty": "easy",
+      "subcategory": "Primórdios",
+      "tags": ["noe", "sem", "cam", "jafe"]
+    },
+    {
+      "external_id": "genealogias-0002",
+      "type": "multiple_choice",
+      "text": "Quantos filhos teve Jacó, que deram origem às tribos de Israel?",
+      "options": [
+        { "text": "Doze", "correct": true },
+        { "text": "Dez", "correct": false },
+        { "text": "Sete", "correct": false },
+        { "text": "Setenta", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Os doze filhos de Jacó — de Rúben a Benjamim — são listados em Gênesis 35:22-26 e abençoados um a um em Gênesis 49. Na divisão da terra, Levi não recebeu território e José foi contado em dobro por Efraim e Manassés (Js 14:3-4).",
+      "divergence_note": null,
+      "reference": { "book": "genesis", "chapter": 35, "verse_start": 22, "verse_end": 26 },
+      "theme": "Tribos de Israel",
+      "difficulty": "easy",
+      "subcategory": "Patriarcas",
+      "tags": ["jaco", "doze filhos", "tribos"]
+    },
+    {
+      "external_id": "genealogias-0003",
+      "type": "multiple_choice",
+      "text": "De qual tribo de Israel descendem Davi e, segundo a carne, o próprio Jesus?",
+      "options": [
+        { "text": "Judá", "correct": true },
+        { "text": "Levi", "correct": false },
+        { "text": "Benjamim", "correct": false },
+        { "text": "Efraim", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jacó profetizou: \"o cetro não se arredará de Judá\" (Gn 49:10). Davi era de Belém de Judá (1Sm 17:12), e Hebreus confirma: \"é evidente que nosso Senhor procedeu de Judá\" (Hb 7:14) — o Leão da tribo de Judá (Ap 5:5).",
+      "divergence_note": null,
+      "reference": { "book": "hebreus", "chapter": 7, "verse_start": 14, "verse_end": 14 },
+      "theme": "Linhagem messiânica",
+      "difficulty": "medium",
+      "subcategory": "Linhagem de Davi",
+      "tags": ["juda", "davi", "messias"]
+    },
+    {
+      "external_id": "genealogias-0004",
+      "type": "open_answer",
+      "text": "Qual moabita, bisavó de Davi, entrou na genealogia de Jesus?",
+      "options": null,
+      "accepted_answers": ["Rute", "Ruth"],
+      "explanation": "Rute casou-se com Boaz e gerou Obede, \"pai de Jessé, pai de Davi\" (Rt 4:17) — bisavó do rei. Estrangeira que declarou \"o teu Deus é o meu Deus\" (Rt 1:16), aparece nomeada na genealogia de Mateus 1:5.",
+      "divergence_note": null,
+      "reference": { "book": "rute", "chapter": 4, "verse_start": 13, "verse_end": 17 },
+      "theme": "Linhagem messiânica",
+      "difficulty": "medium",
+      "subcategory": "Linhagem de Davi",
+      "tags": ["rute", "boaz", "davi"]
+    },
+    {
+      "external_id": "genealogias-0005",
+      "type": "multiple_choice",
+      "text": "Em quem começa a genealogia de Jesus em Mateus, e até quem recua a de Lucas?",
+      "options": [
+        { "text": "Mateus começa em Abraão; Lucas recua até Adão", "correct": true },
+        { "text": "Mateus começa em Adão; Lucas, em Abraão", "correct": false },
+        { "text": "Ambas começam em Davi", "correct": false },
+        { "text": "Mateus começa em Moisés; Lucas, em Noé", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Mateus, escrevendo a judeus, parte de Abraão e destaca Davi (Mt 1:1); Lucas, com horizonte universal, sobe \"filho de Adão, filho de Deus\" (Lc 3:38) — Jesus é o Messias de Israel e o Salvador de toda a humanidade.",
+      "divergence_note": "As diferenças entre as duas listas (especialmente de Davi em diante) recebem explicações distintas: linha de José × linha de Maria, ou linha legal × linha biológica. Ambas as genealogias afirmam o essencial: Jesus é filho de Davi e de Abraão.",
+      "reference": { "book": "lucas", "chapter": 3, "verse_start": 23, "verse_end": 38 },
+      "theme": "Genealogias de Jesus",
+      "difficulty": "hard",
+      "subcategory": "Genealogias de Jesus",
+      "tags": ["mateus", "lucas", "adao", "abraao"]
+    },
+    {
+      "external_id": "genealogias-0006",
+      "type": "open_answer",
+      "text": "Quantos anos viveu Matusalém, o homem mais longevo registrado na Bíblia?",
+      "options": null,
+      "accepted_answers": ["969", "Novecentos e sessenta e nove"],
+      "explanation": "\"Foram todos os dias de Matusalém novecentos e sessenta e nove anos, e morreu\" (Gn 5:27). Filho de Enoque — que \"andou com Deus e não apareceu mais\" (Gn 5:24) — e avô de Noé.",
+      "divergence_note": null,
+      "reference": { "book": "genesis", "chapter": 5, "verse_start": 25, "verse_end": 27 },
+      "theme": "Longevidade",
+      "difficulty": "hard",
+      "subcategory": "Primórdios",
+      "tags": ["matusalem", "969", "genesis 5"]
+    },
+    {
+      "external_id": "genealogias-0007",
+      "type": "multiple_choice",
+      "text": "Quem eram os pais de João Batista?",
+      "options": [
+        { "text": "Zacarias e Isabel", "correct": true },
+        { "text": "José e Maria", "correct": false },
+        { "text": "Elcana e Ana", "correct": false },
+        { "text": "Joaquim e Susana", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Zacarias, sacerdote do turno de Abias, e Isabel, \"das filhas de Arão\", eram idosos e sem filhos quando o anjo anunciou o nascimento de João (Lc 1:5-13). Isabel era parenta de Maria (Lc 1:36), ligando o precursor ao Messias desde o ventre.",
+      "divergence_note": null,
+      "reference": { "book": "lucas", "chapter": 1, "verse_start": 5, "verse_end": 17 },
+      "theme": "Famílias do NT",
+      "difficulty": "easy",
+      "subcategory": "Novo Testamento",
+      "tags": ["zacarias", "isabel", "joao batista"]
+    },
+    {
+      "external_id": "genealogias-0008",
+      "type": "multiple_choice",
+      "text": "De qual tribo vinham os sacerdotes de Israel?",
+      "options": [
+        { "text": "Levi, pela família de Arão", "correct": true },
+        { "text": "Judá, pela família de Davi", "correct": false },
+        { "text": "Benjamim, pela família de Saul", "correct": false },
+        { "text": "Efraim, pela família de Josué", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Faze chegar a ti teu irmão Arão... para me administrar o sacerdócio\" (Êx 28:1). Os levitas serviam no santuário, mas só os descendentes de Arão eram sacerdotes. Por isso Hebreus apresenta o sacerdócio de Jesus \"segundo a ordem de Melquisedeque\" (Hb 7:11-17), não de Arão.",
+      "divergence_note": null,
+      "reference": { "book": "exodo", "chapter": 28, "verse_start": 1, "verse_end": 1 },
+      "theme": "Sacerdócio",
+      "difficulty": "medium",
+      "subcategory": "Tribos",
+      "tags": ["levi", "arao", "sacerdocio"]
+    },
+    {
+      "external_id": "genealogias-0009",
+      "type": "multiple_choice",
+      "text": "Quais quatro mulheres, além de Maria, aparecem na genealogia de Jesus em Mateus 1?",
+      "options": [
+        { "text": "Tamar, Raabe, Rute e a mulher de Urias (Bate-Seba)", "correct": true },
+        { "text": "Sara, Rebeca, Lia e Raquel", "correct": false },
+        { "text": "Débora, Ana, Ester e Rute", "correct": false },
+        { "text": "Eva, Sara, Miriã e Rute", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Mateus nomeia Tamar (Mt 1:3), Raabe (1:5), Rute (1:5) e \"a que foi mulher de Urias\" (1:6) — histórias marcadas por escândalo, estrangeirice e graça. As matriarcas Sara, Rebeca e Raquel ficam de fora: a lista destaca a misericórdia que alcança os improváveis.",
+      "divergence_note": null,
+      "reference": { "book": "mateus", "chapter": 1, "verse_start": 1, "verse_end": 6 },
+      "theme": "Genealogias de Jesus",
+      "difficulty": "expert",
+      "subcategory": "Genealogias de Jesus",
+      "tags": ["tamar", "raabe", "rute", "bate-seba"]
+    },
+    {
+      "external_id": "genealogias-0010",
+      "type": "multiple_choice",
+      "text": "Segundo Mateus 1:5, quem foi a mãe de Boaz, o resgatador de Rute?",
+      "options": [
+        { "text": "Raabe", "correct": true },
+        { "text": "Tamar", "correct": false },
+        { "text": "Noemi", "correct": false },
+        { "text": "Orfa", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Salmom gerou de Raabe a Boaz\" (Mt 1:5) — a mulher de Jericó que escondeu os espias e creu no Deus de Israel (Js 2:11; Hb 11:31). O homem que acolheu a estrangeira Rute era filho de uma estrangeira alcançada pela graça.",
+      "divergence_note": null,
+      "reference": { "book": "mateus", "chapter": 1, "verse_start": 5, "verse_end": 5 },
+      "theme": "Linhagem messiânica",
+      "difficulty": "hard",
+      "subcategory": "Linhagem de Davi",
+      "tags": ["raabe", "boaz", "salmom"]
+    }
+  ]
+}

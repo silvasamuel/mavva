@@ -1,0 +1,185 @@
+{
+  "category": "organizacao-da-biblia",
+  "questions": [
+    {
+      "external_id": "organizacao-da-biblia-0001",
+      "type": "open_answer",
+      "text": "Quantos livros a Bíblia protestante contém ao todo?",
+      "options": null,
+      "accepted_answers": ["66", "Sessenta e seis"],
+      "explanation": "São 39 livros no Antigo Testamento e 27 no Novo, totalizando 66 — escritos ao longo de cerca de 1.500 anos, por dezenas de autores, com uma única história: a redenção em Cristo.",
+      "divergence_note": "Bíblias católicas incluem 7 livros deuterocanônicos no AT (Tobias, Judite, 1-2 Macabeus, Sabedoria, Eclesiástico, Baruque), somando 73. A contagem de 66 segue o cânon hebraico, adotado pelas igrejas protestantes.",
+      "reference": { "book": "2timoteo", "chapter": 3, "verse_start": 16, "verse_end": 17 },
+      "theme": "Cânon",
+      "difficulty": "easy",
+      "subcategory": "Cânon",
+      "tags": ["66 livros", "canon", "biblia"]
+    },
+    {
+      "external_id": "organizacao-da-biblia-0002",
+      "type": "multiple_choice",
+      "text": "Como Jesus se referiu às três divisões da Bíblia hebraica em Lucas 24:44?",
+      "options": [
+        { "text": "A Lei de Moisés, os Profetas e os Salmos", "correct": true },
+        { "text": "A Torá, o Templo e a Tradição", "correct": false },
+        { "text": "Os Evangelhos, as Cartas e o Apocalipse", "correct": false },
+        { "text": "A Aliança, os Reis e os Cânticos", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Convinha que se cumprisse tudo o que de mim estava escrito na lei de Moisés, e nos profetas, e nos salmos\" (Lc 24:44) — as três seções da Bíblia hebraica (Torá, Nevi'im, Ketuvim), sendo Salmos o primeiro e maior livro dos \"Escritos\".",
+      "divergence_note": null,
+      "reference": { "book": "lucas", "chapter": 24, "verse_start": 44, "verse_end": 45 },
+      "theme": "Estrutura",
+      "difficulty": "medium",
+      "subcategory": "Antigo Testamento",
+      "tags": ["lei", "profetas", "salmos", "tanaque"]
+    },
+    {
+      "external_id": "organizacao-da-biblia-0003",
+      "type": "multiple_choice",
+      "text": "Quais evangelhos são chamados de \"sinóticos\"?",
+      "options": [
+        { "text": "Mateus, Marcos e Lucas", "correct": true },
+        { "text": "Mateus, Lucas e João", "correct": false },
+        { "text": "Marcos, Lucas e João", "correct": false },
+        { "text": "Mateus, Marcos e João", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Mateus, Marcos e Lucas compartilham estrutura, episódios e até frases inteiras — por isso \"sinóticos\" (vistos em conjunto). João segue caminho próprio, com longos discursos e sinais selecionados \"para que creiais\" (Jo 20:31).",
+      "divergence_note": null,
+      "reference": { "book": "joao", "chapter": 20, "verse_start": 30, "verse_end": 31 },
+      "theme": "Estrutura",
+      "difficulty": "medium",
+      "subcategory": "Novo Testamento",
+      "tags": ["sinoticos", "evangelhos", "joao"]
+    },
+    {
+      "external_id": "organizacao-da-biblia-0004",
+      "type": "multiple_choice",
+      "text": "Quais são os livros poéticos e de sabedoria do Antigo Testamento?",
+      "options": [
+        { "text": "Jó, Salmos, Provérbios, Eclesiastes e Cantares", "correct": true },
+        { "text": "Salmos, Isaías, Jeremias, Daniel e Oseias", "correct": false },
+        { "text": "Josué, Juízes, Rute, Salmos e Provérbios", "correct": false },
+        { "text": "Jó, Ester, Esdras, Salmos e Cantares", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Os cinco livros poéticos ficam entre os históricos e os proféticos: Jó (sofrimento), Salmos (oração e louvor), Provérbios (sabedoria prática), Eclesiastes (o sentido da vida \"debaixo do sol\") e Cantares (amor conjugal).",
+      "divergence_note": null,
+      "reference": { "book": "proverbios", "chapter": 1, "verse_start": 1, "verse_end": 7 },
+      "theme": "Estrutura",
+      "difficulty": "medium",
+      "subcategory": "Antigo Testamento",
+      "tags": ["poeticos", "sabedoria", "salmos"]
+    },
+    {
+      "external_id": "organizacao-da-biblia-0005",
+      "type": "multiple_choice",
+      "text": "Por que Isaías, Jeremias, Ezequiel e Daniel são chamados \"profetas maiores\"?",
+      "options": [
+        { "text": "Pela extensão dos seus livros, não pela importância", "correct": true },
+        { "text": "Porque eram mais santos que os demais", "correct": false },
+        { "text": "Porque fizeram mais milagres", "correct": false },
+        { "text": "Porque profetizaram apenas sobre o Messias", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Maiores\" e \"menores\" referem-se apenas ao tamanho dos escritos: Isaías tem 66 capítulos, Obadias tem 21 versículos. Os doze menores formavam um único rolo (\"O Livro dos Doze\") na Bíblia hebraica.",
+      "divergence_note": null,
+      "reference": { "book": "isaias", "chapter": 1, "verse_start": 1, "verse_end": 1 },
+      "theme": "Estrutura",
+      "difficulty": "medium",
+      "subcategory": "Antigo Testamento",
+      "tags": ["profetas maiores", "profetas menores", "estrutura"]
+    },
+    {
+      "external_id": "organizacao-da-biblia-0006",
+      "type": "multiple_choice",
+      "text": "Quais são o primeiro e o último livro da Bíblia?",
+      "options": [
+        { "text": "Gênesis e Apocalipse", "correct": true },
+        { "text": "Gênesis e Malaquias", "correct": false },
+        { "text": "Êxodo e Apocalipse", "correct": false },
+        { "text": "Gênesis e Judas", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Gênesis abre com a criação e a queda; Apocalipse fecha com a nova criação, onde a árvore da vida reaparece (Ap 22:2) e a maldição é desfeita (Ap 22:3). O fim responde ao princípio — a Bíblia é uma história completa.",
+      "divergence_note": null,
+      "reference": { "book": "apocalipse", "chapter": 22, "verse_start": 1, "verse_end": 5 },
+      "theme": "Estrutura",
+      "difficulty": "easy",
+      "subcategory": "Cânon",
+      "tags": ["genesis", "apocalipse", "estrutura"]
+    },
+    {
+      "external_id": "organizacao-da-biblia-0007",
+      "type": "multiple_choice",
+      "text": "O que são as \"epístolas gerais\" (ou católicas) do Novo Testamento?",
+      "options": [
+        { "text": "Cartas dirigidas à igreja em geral, não a uma congregação específica: Tiago, 1-2 Pedro, 1-3 João e Judas", "correct": true },
+        { "text": "As cartas escritas por Paulo a várias igrejas", "correct": false },
+        { "text": "Cartas aprovadas pela Igreja Católica Romana", "correct": false },
+        { "text": "As cartas dirigidas às sete igrejas do Apocalipse", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Gerais\" ou \"católicas\" (= universais) porque não se dirigem a uma igreja local nomeada, como as de Paulo. Tiago escreve \"às doze tribos que andam dispersas\" (Tg 1:1); Pedro, \"aos estrangeiros dispersos\" (1Pe 1:1).",
+      "divergence_note": null,
+      "reference": { "book": "tiago", "chapter": 1, "verse_start": 1, "verse_end": 1 },
+      "theme": "Estrutura",
+      "difficulty": "hard",
+      "subcategory": "Novo Testamento",
+      "tags": ["epistolas gerais", "catolicas", "estrutura"]
+    },
+    {
+      "external_id": "organizacao-da-biblia-0008",
+      "type": "open_answer",
+      "text": "Quantos livros compõem o Antigo Testamento na Bíblia protestante?",
+      "options": null,
+      "accepted_answers": ["39", "Trinta e nove"],
+      "explanation": "39 livros: 5 da Lei, 12 históricos, 5 poéticos, 5 profetas maiores e 12 menores. O cânon hebraico contém os mesmos textos agrupados em 24 rolos (Samuel, Reis e Crônicas unidos, os Doze num só livro).",
+      "divergence_note": null,
+      "reference": { "book": "malaquias", "chapter": 4, "verse_start": 4, "verse_end": 6 },
+      "theme": "Cânon",
+      "difficulty": "easy",
+      "subcategory": "Antigo Testamento",
+      "tags": ["39 livros", "antigo testamento", "canon"]
+    },
+    {
+      "external_id": "organizacao-da-biblia-0009",
+      "type": "multiple_choice",
+      "text": "As divisões em capítulos e versículos fazem parte dos textos originais da Bíblia?",
+      "options": [
+        { "text": "Não — foram adicionadas séculos depois para facilitar a consulta", "correct": true },
+        { "text": "Sim — os autores já escreveram com capítulos e versículos", "correct": false },
+        { "text": "Só o Novo Testamento foi escrito com versículos", "correct": false },
+        { "text": "Só os Salmos tinham numeração original", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Os manuscritos originais eram texto corrido. Segundo os historiadores, a divisão em capítulos é atribuída a Estêvão Langton (século XIII) e a versificação impressa a Robert Estienne (século XVI). São ferramentas úteis de referência — mas não inspiradas, e às vezes cortam o texto em pontos infelizes.",
+      "divergence_note": null,
+      "reference": { "book": "neemias", "chapter": 8, "verse_start": 8, "verse_end": 8 },
+      "theme": "Transmissão do texto",
+      "difficulty": "hard",
+      "subcategory": "Cânon",
+      "tags": ["capitulos", "versiculos", "manuscritos"]
+    },
+    {
+      "external_id": "organizacao-da-biblia-0010",
+      "type": "multiple_choice",
+      "text": "Qual livro do Novo Testamento é narrativo e conta a história da igreja primitiva, ligando os Evangelhos às epístolas?",
+      "options": [
+        { "text": "Atos dos Apóstolos", "correct": true },
+        { "text": "Hebreus", "correct": false },
+        { "text": "Apocalipse", "correct": false },
+        { "text": "Romanos", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Atos continua o relato de Lucas \"acerca de tudo que Jesus começou, não só a fazer, mas a ensinar\" (At 1:1), narrando trinta anos de expansão do evangelho de Jerusalém a Roma — o cenário histórico em que as epístolas foram escritas.",
+      "divergence_note": null,
+      "reference": { "book": "atos", "chapter": 1, "verse_start": 1, "verse_end": 8 },
+      "theme": "Estrutura",
+      "difficulty": "easy",
+      "subcategory": "Novo Testamento",
+      "tags": ["atos", "narrativa", "igreja primitiva"]
+    }
+  ]
+}

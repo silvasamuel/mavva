@@ -1,0 +1,195 @@
+{
+  "category": "festas-judaicas",
+  "questions": [
+    {
+      "external_id": "festas-judaicas-0001",
+      "type": "multiple_choice",
+      "text": "O que a Páscoa judaica celebra?",
+      "options": [
+        { "text": "A libertação de Israel da escravidão do Egito", "correct": true },
+        { "text": "A entrada na terra prometida", "correct": false },
+        { "text": "A dedicação do templo", "correct": false },
+        { "text": "A entrega da Lei no Sinai", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"É o sacrifício da páscoa ao Senhor, que passou as casas dos filhos de Israel no Egito, quando feriu aos egípcios\" (Êx 12:27). O cordeiro e o sangue nos umbrais apontavam para Cristo, \"nossa páscoa\" (1Co 5:7).",
+      "divergence_note": null,
+      "reference": { "book": "exodo", "chapter": 12, "verse_start": 21, "verse_end": 27 },
+      "theme": "Redenção",
+      "difficulty": "easy",
+      "subcategory": "Festas da primavera",
+      "tags": ["pascoa", "egito", "cordeiro"]
+    },
+    {
+      "external_id": "festas-judaicas-0002",
+      "type": "multiple_choice",
+      "text": "Quantos dias após a Páscoa se celebrava Pentecostes, a Festa das Semanas?",
+      "options": [
+        { "text": "Cinquenta dias", "correct": true },
+        { "text": "Sete dias", "correct": false },
+        { "text": "Trinta dias", "correct": false },
+        { "text": "Cem dias", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Contavam-se sete semanas completas e mais um dia — cinquenta (Lv 23:15-16), daí o nome grego \"Pentecostes\". Festa das primícias da colheita do trigo, foi o dia escolhido para as primícias da igreja: três mil convertidos (At 2:41).",
+      "divergence_note": null,
+      "reference": { "book": "levitico", "chapter": 23, "verse_start": 15, "verse_end": 17 },
+      "theme": "Festas de peregrinação",
+      "difficulty": "medium",
+      "subcategory": "Festas da primavera",
+      "tags": ["pentecostes", "semanas", "cinquenta"]
+    },
+    {
+      "external_id": "festas-judaicas-0003",
+      "type": "multiple_choice",
+      "text": "O que Israel relembrava habitando em cabanas durante a Festa dos Tabernáculos?",
+      "options": [
+        { "text": "Os anos em que habitou em tendas no deserto", "correct": true },
+        { "text": "A noite da saída do Egito", "correct": false },
+        { "text": "O exílio na Babilônia", "correct": false },
+        { "text": "A construção do tabernáculo por Bezalel", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Sete dias habitareis em tendas... para que saibam as vossas gerações que eu fiz habitar os filhos de Israel em tendas, quando os tirei da terra do Egito\" (Lv 23:42-43). Foi nessa festa que Jesus clamou: \"se alguém tem sede, venha a mim e beba\" (Jo 7:2,37).",
+      "divergence_note": null,
+      "reference": { "book": "levitico", "chapter": 23, "verse_start": 39, "verse_end": 43 },
+      "theme": "Memória do deserto",
+      "difficulty": "medium",
+      "subcategory": "Festas do outono",
+      "tags": ["tabernaculos", "tendas", "deserto"]
+    },
+    {
+      "external_id": "festas-judaicas-0004",
+      "type": "multiple_choice",
+      "text": "O que acontecia no Dia da Expiação (Yom Kipur), único dia do ano em que o sumo sacerdote entrava no Santo dos Santos?",
+      "options": [
+        { "text": "Fazia expiação pelos pecados de todo o povo, com sangue e o bode emissário", "correct": true },
+        { "text": "Acendiam-se as luzes do candelabro pela primeira vez", "correct": false },
+        { "text": "Renovava-se a aliança com leitura pública da Lei", "correct": false },
+        { "text": "Ofereciam-se as primícias da colheita", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Levítico 16 descreve o rito: o sumo sacerdote entrava com sangue no véu adentro, e o bode emissário levava as iniquidades \"para a terra solitária\". Hebreus vê ali a sombra de Cristo, que entrou \"uma vez no santuário, havendo efetuado uma eterna redenção\" (Hb 9:12).",
+      "divergence_note": null,
+      "reference": { "book": "levitico", "chapter": 16, "verse_start": 15, "verse_end": 22 },
+      "theme": "Expiação",
+      "difficulty": "medium",
+      "subcategory": "Festas do outono",
+      "tags": ["yom kipur", "expiacao", "bode emissario"]
+    },
+    {
+      "external_id": "festas-judaicas-0005",
+      "type": "multiple_choice",
+      "text": "Qual festa foi instituída para celebrar o livramento dos judeus nos dias da rainha Ester?",
+      "options": [
+        { "text": "Purim", "correct": true },
+        { "text": "Páscoa", "correct": false },
+        { "text": "Festa da Dedicação", "correct": false },
+        { "text": "Festa das Trombetas", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "O nome vem de \"Pur\", a sorte que Hamã lançara para exterminar os judeus (Et 9:24-26). Revertida a trama, Mardoqueu instituiu dias de \"banquetes e alegria, e de mandarem presentes uns aos outros, e dádivas aos pobres\" (Et 9:22).",
+      "divergence_note": null,
+      "reference": { "book": "ester", "chapter": 9, "verse_start": 20, "verse_end": 28 },
+      "theme": "Livramento",
+      "difficulty": "medium",
+      "subcategory": "Festas pós-exílicas",
+      "tags": ["purim", "ester", "hama"]
+    },
+    {
+      "external_id": "festas-judaicas-0006",
+      "type": "multiple_choice",
+      "text": "Qual festa, celebrada por Jesus em João 10:22, relembrava a purificação do templo na época dos Macabeus?",
+      "options": [
+        { "text": "A Festa da Dedicação (Hanucá)", "correct": true },
+        { "text": "A Festa das Semanas", "correct": false },
+        { "text": "A Festa dos Tabernáculos", "correct": false },
+        { "text": "O Dia da Expiação", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"E em Jerusalém havia a festa da dedicação, e era inverno\" (Jo 10:22). Segundo a história judaica (1 Macabeus 4), a festa celebra a purificação do templo em 164 a.C., após a profanação por Antíoco Epifânio — evento do período entre os testamentos.",
+      "divergence_note": "A origem da festa está nos livros dos Macabeus, que não fazem parte do cânon protestante; a festa em si é mencionada no evangelho de João como pano de fundo histórico.",
+      "reference": { "book": "joao", "chapter": 10, "verse_start": 22, "verse_end": 23 },
+      "theme": "Festas pós-exílicas",
+      "difficulty": "hard",
+      "subcategory": "Festas pós-exílicas",
+      "tags": ["dedicacao", "hanuca", "macabeus"]
+    },
+    {
+      "external_id": "festas-judaicas-0007",
+      "type": "multiple_choice",
+      "text": "Durante a Festa dos Pães Asmos, o que era rigorosamente removido das casas por sete dias?",
+      "options": [
+        { "text": "O fermento", "correct": true },
+        { "text": "O sal", "correct": false },
+        { "text": "O azeite", "correct": false },
+        { "text": "A carne", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Sete dias comereis pães asmos; ao primeiro dia tirareis o fermento das vossas casas\" (Êx 12:15), lembrando a pressa da saída do Egito. Paulo aplica o símbolo: \"alimpai-vos do fermento velho... porque Cristo, nossa páscoa, foi sacrificado por nós\" (1Co 5:7-8).",
+      "divergence_note": null,
+      "reference": { "book": "exodo", "chapter": 12, "verse_start": 14, "verse_end": 20 },
+      "theme": "Pureza",
+      "difficulty": "easy",
+      "subcategory": "Festas da primavera",
+      "tags": ["paes asmos", "fermento", "pascoa"]
+    },
+    {
+      "external_id": "festas-judaicas-0008",
+      "type": "multiple_choice",
+      "text": "Quais eram as três festas anuais em que todo homem israelita devia comparecer perante o Senhor?",
+      "options": [
+        { "text": "Páscoa (Pães Asmos), Pentecostes (Semanas) e Tabernáculos", "correct": true },
+        { "text": "Purim, Hanucá e Trombetas", "correct": false },
+        { "text": "Expiação, Trombetas e Jubileu", "correct": false },
+        { "text": "Sábado, Lua Nova e Ano Novo", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Três vezes no ano todo varão entre ti aparecerá perante o Senhor\" (Êx 23:14-17; Dt 16:16): Pães Asmos, Semanas e Tabernáculos. Por isso Jerusalém se enchia de peregrinos — como no Pentecostes de Atos 2, com \"varões religiosos, de todas as nações\" (At 2:5).",
+      "divergence_note": null,
+      "reference": { "book": "deuteronomio", "chapter": 16, "verse_start": 16, "verse_end": 17 },
+      "theme": "Festas de peregrinação",
+      "difficulty": "hard",
+      "subcategory": "Calendário",
+      "tags": ["peregrinacao", "tres festas", "jerusalem"]
+    },
+    {
+      "external_id": "festas-judaicas-0009",
+      "type": "multiple_choice",
+      "text": "Durante qual festa Jesus foi crucificado?",
+      "options": [
+        { "text": "A Páscoa", "correct": true },
+        { "text": "Pentecostes", "correct": false },
+        { "text": "A Festa dos Tabernáculos", "correct": false },
+        { "text": "O Dia da Expiação", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "A última ceia foi uma refeição pascal (Lc 22:15), e Jesus morreu na festa em que os cordeiros eram sacrificados — a coincidência é o próprio ponto: \"o nosso Cordeiro pascal, Cristo, foi imolado\" (1Co 5:7).",
+      "divergence_note": null,
+      "reference": { "book": "lucas", "chapter": 22, "verse_start": 14, "verse_end": 20 },
+      "theme": "Cristo nas festas",
+      "difficulty": "easy",
+      "subcategory": "Cristo nas festas",
+      "tags": ["pascoa", "crucificacao", "cordeiro"]
+    },
+    {
+      "external_id": "festas-judaicas-0010",
+      "type": "multiple_choice",
+      "text": "O que marcava a Festa das Trombetas, no primeiro dia do sétimo mês?",
+      "options": [
+        { "text": "Santa convocação anunciada ao som de trombetas, com descanso solene", "correct": true },
+        { "text": "A colheita das primeiras uvas", "correct": false },
+        { "text": "O acendimento de velas por oito dias", "correct": false },
+        { "text": "Um jejum de vinte e quatro horas", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"No mês sétimo, ao primeiro do mês, tereis descanso, memorial com sonido de trombetas, santa convocação\" (Lv 23:24). Abria o mês mais solene do calendário, que continha o Dia da Expiação e os Tabernáculos — o judaísmo posterior a celebra como Rosh Hashaná, o ano novo.",
+      "divergence_note": null,
+      "reference": { "book": "levitico", "chapter": 23, "verse_start": 23, "verse_end": 25 },
+      "theme": "Calendário sagrado",
+      "difficulty": "hard",
+      "subcategory": "Festas do outono",
+      "tags": ["trombetas", "setimo mes", "convocacao"]
+    }
+  ]
+}

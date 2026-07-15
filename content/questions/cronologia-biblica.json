@@ -1,0 +1,190 @@
+{
+  "category": "cronologia-biblica",
+  "questions": [
+    {
+      "external_id": "cronologia-biblica-0001",
+      "type": "multiple_choice",
+      "text": "Qual destes eventos aconteceu primeiro?",
+      "options": [
+        { "text": "O dilúvio", "correct": true },
+        { "text": "A torre de Babel", "correct": false },
+        { "text": "O chamado de Abraão", "correct": false },
+        { "text": "O êxodo do Egito", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "A ordem de Gênesis: dilúvio (caps. 6-9), torre de Babel (cap. 11), chamado de Abraão (cap. 12) — e o êxodo só séculos depois (Êxodo). Babel acontece entre os descendentes de Noé, e Abraão descende de Sem (Gn 11:10-26).",
+      "divergence_note": null,
+      "reference": { "book": "genesis", "chapter": 11, "verse_start": 1, "verse_end": 9 },
+      "theme": "Primórdios",
+      "difficulty": "easy",
+      "subcategory": "Gênesis",
+      "tags": ["diluvio", "babel", "ordem"]
+    },
+    {
+      "external_id": "cronologia-biblica-0002",
+      "type": "multiple_choice",
+      "text": "Qual é a ordem correta dos patriarcas?",
+      "options": [
+        { "text": "Abraão → Isaque → Jacó → José", "correct": true },
+        { "text": "Abraão → Jacó → Isaque → José", "correct": false },
+        { "text": "Isaque → Abraão → José → Jacó", "correct": false },
+        { "text": "Jacó → Abraão → Isaque → José", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Abraão gerou Isaque (Gn 21), Isaque gerou Jacó (Gn 25), e Jacó gerou os doze, entre eles José (Gn 30). \"Deus de Abraão, de Isaque e de Jacó\" tornou-se o próprio nome pelo qual Deus se apresenta (Êx 3:6).",
+      "divergence_note": null,
+      "reference": { "book": "exodo", "chapter": 3, "verse_start": 6, "verse_end": 6 },
+      "theme": "Patriarcas",
+      "difficulty": "easy",
+      "subcategory": "Gênesis",
+      "tags": ["patriarcas", "ordem", "abraao"]
+    },
+    {
+      "external_id": "cronologia-biblica-0003",
+      "type": "multiple_choice",
+      "text": "Qual é a ordem correta dos três primeiros reis de Israel?",
+      "options": [
+        { "text": "Saul → Davi → Salomão", "correct": true },
+        { "text": "Davi → Saul → Salomão", "correct": false },
+        { "text": "Samuel → Davi → Saul", "correct": false },
+        { "text": "Saul → Salomão → Davi", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Saul foi o primeiro rei (1Sm 10), sucedido por Davi (2Sm 5) e depois por Salomão, filho de Davi (1Rs 1). Cada um reinou cerca de quarenta anos, cobrindo o século de ouro do reino unido.",
+      "divergence_note": null,
+      "reference": { "book": "1reis", "chapter": 2, "verse_start": 10, "verse_end": 12 },
+      "theme": "Monarquia",
+      "difficulty": "easy",
+      "subcategory": "Monarquia",
+      "tags": ["saul", "davi", "salomao"]
+    },
+    {
+      "external_id": "cronologia-biblica-0004",
+      "type": "multiple_choice",
+      "text": "Qual período vem entre a conquista de Canaã e o primeiro rei de Israel?",
+      "options": [
+        { "text": "O período dos juízes", "correct": true },
+        { "text": "O cativeiro babilônico", "correct": false },
+        { "text": "A peregrinação no deserto", "correct": false },
+        { "text": "O domínio persa", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Depois de Josué, \"levantou o Senhor juízes\" (Jz 2:16) — de Otniel a Sansão e Samuel — até que o povo pediu um rei (1Sm 8:5). O deserto veio antes da conquista; Babilônia e Pérsia, séculos depois da monarquia.",
+      "divergence_note": null,
+      "reference": { "book": "juizes", "chapter": 2, "verse_start": 16, "verse_end": 19 },
+      "theme": "Linha do tempo",
+      "difficulty": "medium",
+      "subcategory": "Juízes",
+      "tags": ["juizes", "conquista", "monarquia"]
+    },
+    {
+      "external_id": "cronologia-biblica-0005",
+      "type": "multiple_choice",
+      "text": "Quais profetas ministraram durante o exílio na Babilônia?",
+      "options": [
+        { "text": "Daniel e Ezequiel", "correct": true },
+        { "text": "Isaías e Amós", "correct": false },
+        { "text": "Ageu e Zacarias", "correct": false },
+        { "text": "Elias e Eliseu", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Daniel foi levado a Babilônia na primeira deportação (Dn 1:1-6) e Ezequiel na segunda, ministrando entre os cativos junto ao rio Quebar (Ez 1:1-3). Isaías e Amós vieram antes do exílio; Ageu e Zacarias, depois do retorno.",
+      "divergence_note": null,
+      "reference": { "book": "ezequiel", "chapter": 1, "verse_start": 1, "verse_end": 3 },
+      "theme": "Profetas na linha do tempo",
+      "difficulty": "medium",
+      "subcategory": "Exílio",
+      "tags": ["daniel", "ezequiel", "exilio"]
+    },
+    {
+      "external_id": "cronologia-biblica-0006",
+      "type": "open_answer",
+      "text": "Aproximadamente quantos anos de silêncio profético separam Malaquias do Novo Testamento?",
+      "options": null,
+      "accepted_answers": ["400", "Quatrocentos", "400 anos", "Quatrocentos anos"],
+      "explanation": "Entre Malaquias (c. 430 a.C.) e João Batista há cerca de quatro séculos sem profeta em Israel — o \"período interbíblico\", em que se sucederam os impérios persa, grego e romano. O silêncio se quebra com o anjo anunciando o precursor prometido pelo próprio Malaquias (Lc 1:13-17; Ml 3:1).",
+      "divergence_note": null,
+      "reference": { "book": "malaquias", "chapter": 3, "verse_start": 1, "verse_end": 1 },
+      "theme": "Período interbíblico",
+      "difficulty": "hard",
+      "subcategory": "Entre os testamentos",
+      "tags": ["silencio", "interbiblico", "malaquias"]
+    },
+    {
+      "external_id": "cronologia-biblica-0007",
+      "type": "multiple_choice",
+      "text": "Quantos dias após a ressurreição Jesus subiu ao céu, segundo Atos 1?",
+      "options": [
+        { "text": "40 dias", "correct": true },
+        { "text": "50 dias", "correct": false },
+        { "text": "7 dias", "correct": false },
+        { "text": "3 dias", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jesus \"apresentou-se vivo... sendo visto por eles por espaço de quarenta dias\" (At 1:3) antes da ascensão. O Espírito desceu no Pentecostes, cinquenta dias após a Páscoa — dez dias depois da subida do Senhor.",
+      "divergence_note": null,
+      "reference": { "book": "atos", "chapter": 1, "verse_start": 1, "verse_end": 11 },
+      "theme": "Vida de Cristo",
+      "difficulty": "medium",
+      "subcategory": "Novo Testamento",
+      "tags": ["ascensao", "quarenta dias", "pentecostes"]
+    },
+    {
+      "external_id": "cronologia-biblica-0008",
+      "type": "multiple_choice",
+      "text": "Qual evento veio primeiro no ministério terreno de Jesus?",
+      "options": [
+        { "text": "O batismo no Jordão", "correct": true },
+        { "text": "A transfiguração", "correct": false },
+        { "text": "A entrada triunfal em Jerusalém", "correct": false },
+        { "text": "A instituição da Ceia", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "O batismo abre o ministério público de Jesus, aos \"quase trinta anos\" (Lc 3:21-23), seguido da tentação no deserto. A transfiguração ocorre no meio do caminho; a entrada triunfal e a Ceia, na semana final.",
+      "divergence_note": null,
+      "reference": { "book": "lucas", "chapter": 3, "verse_start": 21, "verse_end": 23 },
+      "theme": "Vida de Cristo",
+      "difficulty": "easy",
+      "subcategory": "Novo Testamento",
+      "tags": ["batismo", "ministerio", "ordem"]
+    },
+    {
+      "external_id": "cronologia-biblica-0009",
+      "type": "multiple_choice",
+      "text": "Em que ordem os impérios dominaram Israel/Judá, conforme a narrativa bíblica?",
+      "options": [
+        { "text": "Assíria → Babilônia → Pérsia → Grécia → Roma", "correct": true },
+        { "text": "Babilônia → Assíria → Grécia → Pérsia → Roma", "correct": false },
+        { "text": "Pérsia → Babilônia → Assíria → Roma → Grécia", "correct": false },
+        { "text": "Assíria → Pérsia → Babilônia → Roma → Grécia", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "A Assíria levou o reino do Norte (2Rs 17); a Babilônia, Judá (2Rs 25); a Pérsia autorizou o retorno (Ed 1); a Grécia domina o período interbíblico — antevista nas visões de Daniel (Dn 8:21) — e Roma governa nos dias de Jesus (Lc 2:1).",
+      "divergence_note": null,
+      "reference": { "book": "daniel", "chapter": 8, "verse_start": 20, "verse_end": 21 },
+      "theme": "Impérios",
+      "difficulty": "hard",
+      "subcategory": "Linha do tempo geral",
+      "tags": ["imperios", "ordem", "daniel"]
+    },
+    {
+      "external_id": "cronologia-biblica-0010",
+      "type": "multiple_choice",
+      "text": "João Batista começou a pregar antes ou durante o ministério público de Jesus?",
+      "options": [
+        { "text": "Antes — ele foi o precursor que preparou o caminho", "correct": true },
+        { "text": "Depois da ressurreição de Jesus", "correct": false },
+        { "text": "Somente após a prisão de Jesus", "correct": false },
+        { "text": "Ao mesmo tempo, sem relação entre os dois", "correct": false }
+      ],
+      "accepted_answers": null,
+      "explanation": "João veio \"preparar o caminho do Senhor\" (Mt 3:3, citando Isaías 40:3), pregando e batizando antes de Jesus se manifestar. O próprio João resume a transição: \"é necessário que ele cresça e que eu diminua\" (Jo 3:30).",
+      "divergence_note": null,
+      "reference": { "book": "mateus", "chapter": 3, "verse_start": 1, "verse_end": 12 },
+      "theme": "Vida de Cristo",
+      "difficulty": "easy",
+      "subcategory": "Novo Testamento",
+      "tags": ["joao batista", "precursor", "ordem"]
+    }
+  ]
+}
