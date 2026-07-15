@@ -1,7 +1,7 @@
 from functools import lru_cache
 from pathlib import Path
 
-from pydantic import model_validator
+from pydantic import field_validator, model_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 _DEV_SECRET = "dev-secret-change-in-production"
@@ -33,6 +33,15 @@ class Settings(BaseSettings):
     @property
     def is_production(self) -> bool:
         return self.environment == "production"
+
+    @field_validator("database_url", mode="before")
+    @classmethod
+    def force_psycopg_driver(cls, v: str) -> str:
+        """Hosts like Neon/Vercel hand out plain postgresql:// URLs, which
+        SQLAlchemy resolves to psycopg2 — not installed here. Pin psycopg (v3)."""
+        if isinstance(v, str) and v.startswith("postgresql://"):
+            return v.replace("postgresql://", "postgresql+psycopg://", 1)
+        return v
 
     @model_validator(mode="after")
     def production_requires_strong_secret(self) -> "Settings":
