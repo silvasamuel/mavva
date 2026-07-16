@@ -1,4 +1,5 @@
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
+from zoneinfo import ZoneInfo
 
 from fastapi.testclient import TestClient
 from sqlalchemy import select
@@ -6,6 +7,15 @@ from sqlalchemy.orm import Session
 
 from app.models import ReviewItem
 from tests.factories import make_category, make_mc_question, make_open_question
+
+
+def _user_today() -> date:
+    """Today as the app computes it: in the user's timezone (America/Sao_Paulo).
+
+    date.today() would be the runner's local date — on UTC CI machines that is
+    one day ahead of São Paulo between 00:00 and 03:00 UTC, making tests flaky.
+    """
+    return datetime.now(ZoneInfo("America/Sao_Paulo")).date()
 
 
 def _start_quiz(client: TestClient, question_count: int = 3) -> dict:
@@ -80,7 +90,7 @@ class TestQuizFlow:
 
         review_items = db.scalars(select(ReviewItem)).all()
         assert len(review_items) == 3
-        assert all(item.due_date == date.today() + timedelta(days=1) for item in review_items)
+        assert all(item.due_date == _user_today() + timedelta(days=1) for item in review_items)
 
     def test_wrong_answer_gives_no_xp_and_reveals_correction(
         self, auth_client: TestClient, db: Session
@@ -138,9 +148,10 @@ class TestQuizFlow:
             json={"question_id": quiz["questions"][0]["id"], "selected_option_id": wrong_option},
         )
 
-        # Wrong answer scheduled the item for tomorrow — force it due today.
+        # Wrong answer scheduled the item for tomorrow — force it due today
+        # (today in the user's timezone, which is how the SRS queue filters).
         item = db.scalars(select(ReviewItem)).one()
-        item.due_date = date.today()
+        item.due_date = _user_today()
         db.flush()
 
         response = auth_client.post("/api/v1/quizzes", json={"mode": "review", "question_count": 5})
