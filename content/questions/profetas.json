@@ -6,180 +6,733 @@
       "type": "multiple_choice",
       "text": "Como Deus sustentou Elias junto ao ribeiro de Querite durante a seca?",
       "options": [
-        { "text": "Corvos lhe traziam pão e carne, de manhã e à tarde", "correct": true },
-        { "text": "Um anjo lhe assava pão sobre brasas", "correct": false },
-        { "text": "Uma viúva lhe trazia comida diariamente", "correct": false },
-        { "text": "O ribeiro produzia peixes em abundância", "correct": false }
+        {
+          "text": "Corvos lhe traziam pão e carne, de manhã e à tarde",
+          "correct": true
+        },
+        {
+          "text": "Um anjo lhe assava pão sobre brasas",
+          "correct": false
+        },
+        {
+          "text": "Uma viúva lhe trazia comida diariamente",
+          "correct": false
+        },
+        {
+          "text": "O ribeiro produzia peixes em abundância",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Os corvos lhe traziam pão e carne pela manhã, como também pão e carne à noite; e bebia do ribeiro\" (1Rs 17:6). O anjo com pão veio depois, a caminho de Horebe (1Rs 19:5-6), e a viúva foi a fase seguinte, em Sarepta (1Rs 17:9).",
       "divergence_note": null,
-      "reference": { "book": "1reis", "chapter": 17, "verse_start": 2, "verse_end": 6 },
+      "reference": {
+        "book": "1reis",
+        "chapter": 17,
+        "verse_start": 2,
+        "verse_end": 6
+      },
       "theme": "Provisão",
       "difficulty": "medium",
       "subcategory": "Profetas do Norte",
-      "tags": ["elias", "corvos", "querite"]
+      "tags": [
+        "elias",
+        "corvos",
+        "querite"
+      ]
     },
     {
       "external_id": "profetas-0002",
       "type": "multiple_choice",
       "text": "No ano da morte de qual rei Isaías viu o Senhor assentado sobre um alto e sublime trono?",
       "options": [
-        { "text": "Uzias", "correct": true },
-        { "text": "Ezequias", "correct": false },
-        { "text": "Acaz", "correct": false },
-        { "text": "Jotão", "correct": false }
+        {
+          "text": "Uzias",
+          "correct": true
+        },
+        {
+          "text": "Ezequias",
+          "correct": false
+        },
+        {
+          "text": "Acaz",
+          "correct": false
+        },
+        {
+          "text": "Jotão",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"No ano em que morreu o rei Uzias, eu vi ao Senhor assentado sobre um alto e sublime trono\" (Is 6:1). A visão dos serafins clamando \"Santo, Santo, Santo\" marcou a comissão do profeta: \"Eis-me aqui, envia-me a mim\" (Is 6:8).",
       "divergence_note": null,
-      "reference": { "book": "isaias", "chapter": 6, "verse_start": 1, "verse_end": 8 },
+      "reference": {
+        "book": "isaias",
+        "chapter": 6,
+        "verse_start": 1,
+        "verse_end": 8
+      },
       "theme": "Chamado profético",
       "difficulty": "medium",
       "subcategory": "Profetas de Judá",
-      "tags": ["isaias", "uzias", "visao do trono"]
+      "tags": [
+        "isaias",
+        "uzias",
+        "visao do trono"
+      ]
     },
     {
       "external_id": "profetas-0003",
       "type": "multiple_choice",
       "text": "Qual profeta é conhecido como o \"profeta chorão\" e testemunhou a destruição de Jerusalém?",
       "options": [
-        { "text": "Jeremias", "correct": true },
-        { "text": "Ezequiel", "correct": false },
-        { "text": "Habacuque", "correct": false },
-        { "text": "Joel", "correct": false }
+        {
+          "text": "Jeremias",
+          "correct": true
+        },
+        {
+          "text": "Ezequiel",
+          "correct": false
+        },
+        {
+          "text": "Habacuque",
+          "correct": false
+        },
+        {
+          "text": "Joel",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Jeremias profetizou por décadas o juízo sobre Judá, foi perseguido e preso, e viu a cidade cair em 586 a.C. \"Quem dera... os meus olhos uma fonte de lágrimas\" (Jr 9:1) — e Lamentações registra seu pranto sobre as ruínas.",
       "divergence_note": null,
-      "reference": { "book": "jeremias", "chapter": 9, "verse_start": 1, "verse_end": 1 },
+      "reference": {
+        "book": "jeremias",
+        "chapter": 9,
+        "verse_start": 1,
+        "verse_end": 1
+      },
       "theme": "Vida dos profetas",
       "difficulty": "easy",
       "subcategory": "Profetas de Judá",
-      "tags": ["jeremias", "lamentacoes", "jerusalem"]
+      "tags": [
+        "jeremias",
+        "lamentacoes",
+        "jerusalem"
+      ]
     },
     {
       "external_id": "profetas-0004",
       "type": "open_answer",
       "text": "Qual profeta interpretou a escrita \"MENE, MENE, TEQUEL, UFARSIM\" que apareceu na parede durante o banquete de Belsazar?",
       "options": null,
-      "accepted_answers": ["Daniel", "Profeta Daniel"],
+      "accepted_answers": [
+        "Daniel",
+        "Profeta Daniel"
+      ],
       "explanation": "Enquanto Belsazar profanava os utensílios do templo, dedos de mão humana escreveram na parede. Daniel interpretou: Deus contou, pesou e dividiu o reino (Dn 5:25-28). \"Naquela mesma noite\" Babilônia caiu diante dos medos e persas (Dn 5:30-31).",
       "divergence_note": null,
-      "reference": { "book": "daniel", "chapter": 5, "verse_start": 24, "verse_end": 31 },
+      "reference": {
+        "book": "daniel",
+        "chapter": 5,
+        "verse_start": 24,
+        "verse_end": 31
+      },
       "theme": "Juízo das nações",
       "difficulty": "medium",
       "subcategory": "Profetas do exílio",
-      "tags": ["daniel", "belsazar", "escrita na parede"]
+      "tags": [
+        "daniel",
+        "belsazar",
+        "escrita na parede"
+      ]
     },
     {
       "external_id": "profetas-0005",
       "type": "multiple_choice",
       "text": "Qual profeta recebeu de Deus a ordem de casar-se com uma mulher que lhe seria infiel, como retrato de Israel?",
       "options": [
-        { "text": "Oseias", "correct": true },
-        { "text": "Amós", "correct": false },
-        { "text": "Miqueias", "correct": false },
-        { "text": "Malaquias", "correct": false }
+        {
+          "text": "Oseias",
+          "correct": true
+        },
+        {
+          "text": "Amós",
+          "correct": false
+        },
+        {
+          "text": "Miqueias",
+          "correct": false
+        },
+        {
+          "text": "Malaquias",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Deus ordenou a Oseias tomar Gômer por mulher (Os 1:2-3) e depois amá-la de novo apesar do adultério (Os 3:1) — encenação viva do amor de Deus por Israel idólatra: \"eu os farei amar de boa vontade\" (Os 14:4).",
       "divergence_note": null,
-      "reference": { "book": "oseias", "chapter": 1, "verse_start": 2, "verse_end": 3 },
+      "reference": {
+        "book": "oseias",
+        "chapter": 1,
+        "verse_start": 2,
+        "verse_end": 3
+      },
       "theme": "Amor de Deus",
       "difficulty": "medium",
       "subcategory": "Profetas menores",
-      "tags": ["oseias", "gomer", "fidelidade de deus"]
+      "tags": [
+        "oseias",
+        "gomer",
+        "fidelidade de deus"
+      ]
     },
     {
       "external_id": "profetas-0006",
       "type": "multiple_choice",
       "text": "Qual profeta teve a visão do vale de ossos secos que tornaram a viver?",
       "options": [
-        { "text": "Ezequiel", "correct": true },
-        { "text": "Isaías", "correct": false },
-        { "text": "Zacarias", "correct": false },
-        { "text": "Daniel", "correct": false }
+        {
+          "text": "Ezequiel",
+          "correct": true
+        },
+        {
+          "text": "Isaías",
+          "correct": false
+        },
+        {
+          "text": "Zacarias",
+          "correct": false
+        },
+        {
+          "text": "Daniel",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "No exílio, Ezequiel profetizou aos ossos e \"entrou neles o espírito, e viveram\" (Ez 37:10). Deus mesmo interpreta: \"estes ossos são toda a casa de Israel\" (Ez 37:11) — promessa de restauração ao povo que se via morto e sem esperança.",
       "divergence_note": null,
-      "reference": { "book": "ezequiel", "chapter": 37, "verse_start": 1, "verse_end": 14 },
+      "reference": {
+        "book": "ezequiel",
+        "chapter": 37,
+        "verse_start": 1,
+        "verse_end": 14
+      },
       "theme": "Restauração",
       "difficulty": "medium",
       "subcategory": "Profetas do exílio",
-      "tags": ["ezequiel", "ossos secos", "restauracao"]
+      "tags": [
+        "ezequiel",
+        "ossos secos",
+        "restauracao"
+      ]
     },
     {
       "external_id": "profetas-0007",
       "type": "multiple_choice",
       "text": "Qual profeta era boiadeiro e colhedor de sicômoros em Tecoa antes de ser chamado?",
       "options": [
-        { "text": "Amós", "correct": true },
-        { "text": "Obadias", "correct": false },
-        { "text": "Naum", "correct": false },
-        { "text": "Ageu", "correct": false }
+        {
+          "text": "Amós",
+          "correct": true
+        },
+        {
+          "text": "Obadias",
+          "correct": false
+        },
+        {
+          "text": "Naum",
+          "correct": false
+        },
+        {
+          "text": "Ageu",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Não sou profeta, nem filho de profeta, mas boiadeiro e cultivador de sicômoros\" (Am 7:14). Do interior de Judá, Amós foi enviado ao próspero reino do Norte para denunciar a injustiça social: \"corra o juízo como as águas\" (Am 5:24).",
       "divergence_note": null,
-      "reference": { "book": "amos", "chapter": 7, "verse_start": 14, "verse_end": 15 },
+      "reference": {
+        "book": "amos",
+        "chapter": 7,
+        "verse_start": 14,
+        "verse_end": 15
+      },
       "theme": "Chamado profético",
       "difficulty": "hard",
       "subcategory": "Profetas menores",
-      "tags": ["amos", "tecoa", "justica"]
+      "tags": [
+        "amos",
+        "tecoa",
+        "justica"
+      ]
     },
     {
       "external_id": "profetas-0008",
       "type": "multiple_choice",
       "text": "Segundo Malaquias, quem Deus prometeu enviar antes do grande e terrível dia do Senhor?",
       "options": [
-        { "text": "O profeta Elias", "correct": true },
-        { "text": "O profeta Moisés", "correct": false },
-        { "text": "Um novo Davi", "correct": false },
-        { "text": "O profeta Jonas", "correct": false }
+        {
+          "text": "O profeta Elias",
+          "correct": true
+        },
+        {
+          "text": "O profeta Moisés",
+          "correct": false
+        },
+        {
+          "text": "Um novo Davi",
+          "correct": false
+        },
+        {
+          "text": "O profeta Jonas",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Eis que eu vos enviarei o profeta Elias\" (Ml 4:5) — última promessa do Antigo Testamento. Jesus a aplica a João Batista, que veio \"no espírito e virtude de Elias\" (Mt 11:14; Lc 1:17).",
       "divergence_note": "Alguns intérpretes entendem que a promessa se cumpriu integralmente em João Batista; outros esperam um cumprimento adicional antes da segunda vinda. O texto de Mt 11:14 é o dado bíblico central.",
-      "reference": { "book": "malaquias", "chapter": 4, "verse_start": 5, "verse_end": 6 },
+      "reference": {
+        "book": "malaquias",
+        "chapter": 4,
+        "verse_start": 5,
+        "verse_end": 6
+      },
       "theme": "Promessas messiânicas",
       "difficulty": "hard",
       "subcategory": "Profetas menores",
-      "tags": ["malaquias", "elias", "joao batista"]
+      "tags": [
+        "malaquias",
+        "elias",
+        "joao batista"
+      ]
     },
     {
       "external_id": "profetas-0009",
       "type": "open_answer",
       "text": "Qual profeta ungiu tanto Saul quanto Davi como reis de Israel?",
       "options": null,
-      "accepted_answers": ["Samuel", "Profeta Samuel"],
+      "accepted_answers": [
+        "Samuel",
+        "Profeta Samuel"
+      ],
       "explanation": "Samuel, último juiz e profeta, ungiu Saul (1Sm 10:1) e, após a rejeição deste, ungiu Davi em Belém (1Sm 16:13). Foi consagrado a Deus desde criança, quando respondeu: \"Fala, porque o teu servo ouve\" (1Sm 3:10).",
       "divergence_note": null,
-      "reference": { "book": "1samuel", "chapter": 16, "verse_start": 1, "verse_end": 13 },
+      "reference": {
+        "book": "1samuel",
+        "chapter": 16,
+        "verse_start": 1,
+        "verse_end": 13
+      },
       "theme": "Vida dos profetas",
       "difficulty": "easy",
       "subcategory": "Profetas de Israel unido",
-      "tags": ["samuel", "uncao", "saul", "davi"]
+      "tags": [
+        "samuel",
+        "uncao",
+        "saul",
+        "davi"
+      ]
     },
     {
       "external_id": "profetas-0010",
       "type": "multiple_choice",
       "text": "Qual profeta questionou a Deus por usar os caldeus, mais ímpios que Judá, como instrumento de juízo?",
       "options": [
-        { "text": "Habacuque", "correct": true },
-        { "text": "Sofonias", "correct": false },
-        { "text": "Joel", "correct": false },
-        { "text": "Miqueias", "correct": false }
+        {
+          "text": "Habacuque",
+          "correct": true
+        },
+        {
+          "text": "Sofonias",
+          "correct": false
+        },
+        {
+          "text": "Joel",
+          "correct": false
+        },
+        {
+          "text": "Miqueias",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Habacuque pergunta como um Deus santo pode calar \"quando o ímpio devora aquele que é mais justo do que ele\" (Hc 1:13). A resposta atravessa a Escritura: \"o justo pela sua fé viverá\" (Hc 2:4), citada em Romanos, Gálatas e Hebreus.",
       "divergence_note": null,
-      "reference": { "book": "habacuque", "chapter": 1, "verse_start": 12, "verse_end": 13 },
+      "reference": {
+        "book": "habacuque",
+        "chapter": 1,
+        "verse_start": 12,
+        "verse_end": 13
+      },
       "theme": "Justiça de Deus",
       "difficulty": "expert",
       "subcategory": "Profetas menores",
-      "tags": ["habacuque", "caldeus", "fe"]
+      "tags": [
+        "habacuque",
+        "caldeus",
+        "fe"
+      ]
+    },
+    {
+      "external_id": "profetas-0011",
+      "type": "multiple_choice",
+      "text": "Qual profeta foi engolido por um grande peixe após fugir de Deus?",
+      "options": [
+        {
+          "text": "Jonas",
+          "correct": true
+        },
+        {
+          "text": "Naum",
+          "correct": false
+        },
+        {
+          "text": "Amós",
+          "correct": false
+        },
+        {
+          "text": "Obadias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jonas fugiu de Nínive rumo a Társis; lançado ao mar, foi tragado por um grande peixe e ali orou por três dias (Jn 1:17-2:10).",
+      "divergence_note": null,
+      "reference": {
+        "book": "jonas",
+        "chapter": 1,
+        "verse_start": 17,
+        "verse_end": null
+      },
+      "theme": "Obediência",
+      "difficulty": "easy",
+      "subcategory": "Profetas menores",
+      "tags": [
+        "jonas",
+        "peixe"
+      ]
+    },
+    {
+      "external_id": "profetas-0012",
+      "type": "multiple_choice",
+      "text": "Qual profeta viu o Senhor no templo e disse 'Eis-me aqui, envia-me'?",
+      "options": [
+        {
+          "text": "Isaías",
+          "correct": true
+        },
+        {
+          "text": "Ezequiel",
+          "correct": false
+        },
+        {
+          "text": "Jeremias",
+          "correct": false
+        },
+        {
+          "text": "Daniel",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Na visão do trono, Isaías teve os lábios purificados por uma brasa e respondeu ao chamado: 'Eis-me aqui, envia-me' (Is 6:8).",
+      "divergence_note": null,
+      "reference": {
+        "book": "isaias",
+        "chapter": 6,
+        "verse_start": 8,
+        "verse_end": null
+      },
+      "theme": "Chamado",
+      "difficulty": "medium",
+      "subcategory": "Profetas maiores",
+      "tags": [
+        "isaias",
+        "chamado"
+      ]
+    },
+    {
+      "external_id": "profetas-0013",
+      "type": "multiple_choice",
+      "text": "Qual profeta profetizou sobre o vale de ossos secos que ganharam vida?",
+      "options": [
+        {
+          "text": "Ezequiel",
+          "correct": true
+        },
+        {
+          "text": "Daniel",
+          "correct": false
+        },
+        {
+          "text": "Joel",
+          "correct": false
+        },
+        {
+          "text": "Zacarias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Ezequiel profetizou aos ossos secos e eles se cobriram de carne e receberam fôlego — figura da restauração de Israel (Ez 37:1-10).",
+      "divergence_note": null,
+      "reference": {
+        "book": "ezequiel",
+        "chapter": 37,
+        "verse_start": 1,
+        "verse_end": 10
+      },
+      "theme": "Restauração",
+      "difficulty": "hard",
+      "subcategory": "Profetas maiores",
+      "tags": [
+        "ezequiel",
+        "ossos secos"
+      ]
+    },
+    {
+      "external_id": "profetas-0014",
+      "type": "open_answer",
+      "text": "Qual profeta é chamado 'o profeta chorão' por lamentar a queda de Jerusalém?",
+      "options": null,
+      "accepted_answers": [
+        "Jeremias"
+      ],
+      "explanation": "Jeremias profetizou o juízo sobre Judá e lamentou a destruição de Jerusalém, tradicionalmente associado ao livro de Lamentações (Jr 9:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "jeremias",
+        "chapter": 9,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "theme": "Lamento",
+      "difficulty": "medium",
+      "subcategory": "Profetas maiores",
+      "tags": [
+        "jeremias",
+        "lamentacoes"
+      ]
+    },
+    {
+      "external_id": "profetas-0015",
+      "type": "multiple_choice",
+      "text": "Qual profeta desafiou os profetas de Baal no monte Carmelo?",
+      "options": [
+        {
+          "text": "Elias",
+          "correct": true
+        },
+        {
+          "text": "Eliseu",
+          "correct": false
+        },
+        {
+          "text": "Miqueias",
+          "correct": false
+        },
+        {
+          "text": "Oseias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Elias desafiou 450 profetas de Baal; o fogo do SENHOR caiu e consumiu o holocausto, e o povo confessou 'O SENHOR é Deus' (1Rs 18:38-39).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 18,
+        "verse_start": 36,
+        "verse_end": 39
+      },
+      "theme": "Soberania de Deus",
+      "difficulty": "easy",
+      "subcategory": "Profetas do Norte",
+      "tags": [
+        "elias",
+        "carmelo"
+      ]
+    },
+    {
+      "external_id": "profetas-0016",
+      "type": "multiple_choice",
+      "text": "Qual profeta anunciou que o Messias nasceria em Belém?",
+      "options": [
+        {
+          "text": "Miqueias",
+          "correct": true
+        },
+        {
+          "text": "Ageu",
+          "correct": false
+        },
+        {
+          "text": "Sofonias",
+          "correct": false
+        },
+        {
+          "text": "Malaquias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'E tu, Belém Efrata... de ti me sairá o que será Senhor em Israel' (Mq 5:2), citado pelos sábios em Mateus 2:6.",
+      "divergence_note": null,
+      "reference": {
+        "book": "miqueias",
+        "chapter": 5,
+        "verse_start": 2,
+        "verse_end": null
+      },
+      "theme": "Messias",
+      "difficulty": "hard",
+      "subcategory": "Profetas menores",
+      "tags": [
+        "miqueias",
+        "belem"
+      ]
+    },
+    {
+      "external_id": "profetas-0017",
+      "type": "multiple_choice",
+      "text": "A quem Deus ordenou que profetizasse contra Nínive, capital da Assíria?",
+      "options": [
+        {
+          "text": "Jonas",
+          "correct": true
+        },
+        {
+          "text": "Naum",
+          "correct": false
+        },
+        {
+          "text": "Habacuque",
+          "correct": false
+        },
+        {
+          "text": "Sofonias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jonas foi enviado a pregar contra Nínive; após a pregação, a cidade se arrependeu e Deus a poupou (Jn 3:1-10). Naum profetizaria sua queda depois.",
+      "divergence_note": null,
+      "reference": {
+        "book": "jonas",
+        "chapter": 3,
+        "verse_start": 1,
+        "verse_end": 10
+      },
+      "theme": "Arrependimento",
+      "difficulty": "medium",
+      "subcategory": "Profetas menores",
+      "tags": [
+        "jonas",
+        "ninive"
+      ]
+    },
+    {
+      "external_id": "profetas-0018",
+      "type": "open_answer",
+      "text": "Qual profeta previu o derramamento do Espírito 'sobre toda a carne', citado por Pedro em Pentecostes?",
+      "options": null,
+      "accepted_answers": [
+        "Joel"
+      ],
+      "explanation": "Joel profetizou: 'derramarei o meu Espírito sobre toda a carne' (Jl 2:28), cumprido em Pentecostes e citado por Pedro (At 2:16-17).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joel",
+        "chapter": 2,
+        "verse_start": 28,
+        "verse_end": 29
+      },
+      "theme": "Espírito Santo",
+      "difficulty": "hard",
+      "subcategory": "Profetas menores",
+      "tags": [
+        "joel",
+        "pentecostes"
+      ]
+    },
+    {
+      "external_id": "profetas-0019",
+      "type": "multiple_choice",
+      "text": "Qual foi o último profeta do Antigo Testamento, que anunciou a vinda de Elias?",
+      "options": [
+        {
+          "text": "Malaquias",
+          "correct": true
+        },
+        {
+          "text": "Ageu",
+          "correct": false
+        },
+        {
+          "text": "Zacarias",
+          "correct": false
+        },
+        {
+          "text": "Joel",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Malaquias encerra o Antigo Testamento anunciando o mensageiro e a vinda de 'Elias' antes do grande dia do SENHOR (Ml 4:5), cumprido em João Batista.",
+      "divergence_note": null,
+      "reference": {
+        "book": "malaquias",
+        "chapter": 4,
+        "verse_start": 5,
+        "verse_end": 6
+      },
+      "theme": "Preparação",
+      "difficulty": "medium",
+      "subcategory": "Profetas menores",
+      "tags": [
+        "malaquias",
+        "elias"
+      ]
+    },
+    {
+      "external_id": "profetas-0020",
+      "type": "multiple_choice",
+      "text": "Qual profeta comprou um campo como sinal de esperança mesmo durante o cerco de Jerusalém?",
+      "options": [
+        {
+          "text": "Jeremias",
+          "correct": true
+        },
+        {
+          "text": "Ezequiel",
+          "correct": false
+        },
+        {
+          "text": "Isaías",
+          "correct": false
+        },
+        {
+          "text": "Daniel",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jeremias comprou o campo de Anatote como sinal de que 'ainda se comprarão casas, campos e vinhas nesta terra' após o exílio (Jr 32:15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "jeremias",
+        "chapter": 32,
+        "verse_start": 6,
+        "verse_end": 15
+      },
+      "theme": "Esperança",
+      "difficulty": "expert",
+      "subcategory": "Profetas maiores",
+      "tags": [
+        "jeremias",
+        "campo"
+      ]
     }
   ]
 }

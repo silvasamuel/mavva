@@ -6,175 +6,720 @@
       "type": "multiple_choice",
       "text": "Quem foi lançado na cova dos leões por continuar orando ao seu Deus, desobedecendo ao decreto do rei?",
       "options": [
-        { "text": "Daniel", "correct": true },
-        { "text": "Sadraque", "correct": false },
-        { "text": "Jeremias", "correct": false },
-        { "text": "José", "correct": false }
+        {
+          "text": "Daniel",
+          "correct": true
+        },
+        {
+          "text": "Sadraque",
+          "correct": false
+        },
+        {
+          "text": "Jeremias",
+          "correct": false
+        },
+        {
+          "text": "José",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Daniel orava três vezes ao dia voltado para Jerusalém, mesmo sabendo do decreto de Dario. Deus enviou o seu anjo e fechou a boca dos leões (Dn 6:22), e o próprio rei reconheceu: \"o Deus de Daniel é o Deus vivo\".",
       "divergence_note": null,
-      "reference": { "book": "daniel", "chapter": 6, "verse_start": 16, "verse_end": 23 },
+      "reference": {
+        "book": "daniel",
+        "chapter": 6,
+        "verse_start": 16,
+        "verse_end": 23
+      },
       "theme": "Fidelidade",
       "difficulty": "easy",
       "subcategory": "Profetas e exilados",
-      "tags": ["daniel", "perseguicao", "oracao"]
+      "tags": [
+        "daniel",
+        "perseguicao",
+        "oracao"
+      ]
     },
     {
       "external_id": "personagens-0002",
       "type": "multiple_choice",
       "text": "Quem vendeu o seu direito de primogenitura por um prato de lentilhas?",
       "options": [
-        { "text": "Esaú", "correct": true },
-        { "text": "Jacó", "correct": false },
-        { "text": "Rúben", "correct": false },
-        { "text": "Ismael", "correct": false }
+        {
+          "text": "Esaú",
+          "correct": true
+        },
+        {
+          "text": "Jacó",
+          "correct": false
+        },
+        {
+          "text": "Rúben",
+          "correct": false
+        },
+        {
+          "text": "Ismael",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Esaú, faminto ao voltar do campo, desprezou a primogenitura e a vendeu a Jacó por um cozinhado de lentilhas (Gn 25:34). Hebreus 12:16 o cita como advertência contra tratar as coisas sagradas como profanas.",
       "divergence_note": null,
-      "reference": { "book": "genesis", "chapter": 25, "verse_start": 29, "verse_end": 34 },
+      "reference": {
+        "book": "genesis",
+        "chapter": 25,
+        "verse_start": 29,
+        "verse_end": 34
+      },
       "theme": "Primogenitura",
       "difficulty": "easy",
       "subcategory": "Patriarcas",
-      "tags": ["esau", "jaco", "primogenitura"]
+      "tags": [
+        "esau",
+        "jaco",
+        "primogenitura"
+      ]
     },
     {
       "external_id": "personagens-0003",
       "type": "open_answer",
       "text": "Qual era o nome da esposa de Abraão, mãe de Isaque?",
       "options": null,
-      "accepted_answers": ["Sara", "Sarai"],
+      "accepted_answers": [
+        "Sara",
+        "Sarai"
+      ],
       "explanation": "Sara (antes chamada Sarai) deu à luz Isaque na velhice, conforme a promessa de Deus (Gn 21:2-3). Ela é lembrada em Hebreus 11:11 como exemplo de fé no Deus que cumpre o que promete.",
       "divergence_note": null,
-      "reference": { "book": "genesis", "chapter": 21, "verse_start": 2, "verse_end": 3 },
+      "reference": {
+        "book": "genesis",
+        "chapter": 21,
+        "verse_start": 2,
+        "verse_end": 3
+      },
       "theme": "Promessa",
       "difficulty": "easy",
       "subcategory": "Mulheres da Bíblia",
-      "tags": ["sara", "abraao", "isaque"]
+      "tags": [
+        "sara",
+        "abraao",
+        "isaque"
+      ]
     },
     {
       "external_id": "personagens-0004",
       "type": "multiple_choice",
       "text": "Quem interpretou os sonhos de Faraó sobre as sete vacas gordas e as sete vacas magras?",
       "options": [
-        { "text": "José", "correct": true },
-        { "text": "Daniel", "correct": false },
-        { "text": "Moisés", "correct": false },
-        { "text": "Arão", "correct": false }
+        {
+          "text": "José",
+          "correct": true
+        },
+        {
+          "text": "Daniel",
+          "correct": false
+        },
+        {
+          "text": "Moisés",
+          "correct": false
+        },
+        {
+          "text": "Arão",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "José declarou que a interpretação pertence a Deus (Gn 41:16) e anunciou sete anos de fartura seguidos de sete anos de fome. Por isso foi elevado a governador do Egito, preservando muitas vidas (Gn 50:20).",
       "divergence_note": null,
-      "reference": { "book": "genesis", "chapter": 41, "verse_start": 25, "verse_end": 32 },
+      "reference": {
+        "book": "genesis",
+        "chapter": 41,
+        "verse_start": 25,
+        "verse_end": 32
+      },
       "theme": "Providência",
       "difficulty": "easy",
       "subcategory": "Patriarcas",
-      "tags": ["jose", "farao", "egito", "sonhos"]
+      "tags": [
+        "jose",
+        "farao",
+        "egito",
+        "sonhos"
+      ]
     },
     {
       "external_id": "personagens-0005",
       "type": "multiple_choice",
       "text": "Qual profeta confrontou o rei Davi após o seu pecado com Bate-Seba, dizendo \"Tu és este homem\"?",
       "options": [
-        { "text": "Natã", "correct": true },
-        { "text": "Samuel", "correct": false },
-        { "text": "Gade", "correct": false },
-        { "text": "Elias", "correct": false }
+        {
+          "text": "Natã",
+          "correct": true
+        },
+        {
+          "text": "Samuel",
+          "correct": false
+        },
+        {
+          "text": "Gade",
+          "correct": false
+        },
+        {
+          "text": "Elias",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Natã contou a Davi a parábola da cordeirinha do pobre e aplicou o juízo: \"Tu és este homem\" (2Sm 12:7). Davi se arrependeu, e o Salmo 51 registra sua confissão.",
       "divergence_note": null,
-      "reference": { "book": "2samuel", "chapter": 12, "verse_start": 1, "verse_end": 7 },
+      "reference": {
+        "book": "2samuel",
+        "chapter": 12,
+        "verse_start": 1,
+        "verse_end": 7
+      },
       "theme": "Arrependimento",
       "difficulty": "medium",
       "subcategory": "Profetas",
-      "tags": ["nata", "davi", "bate-seba"]
+      "tags": [
+        "nata",
+        "davi",
+        "bate-seba"
+      ]
     },
     {
       "external_id": "personagens-0006",
       "type": "open_answer",
       "text": "Quem era a sogra de Rute, a quem ela declarou: \"o teu povo é o meu povo, o teu Deus é o meu Deus\"?",
       "options": null,
-      "accepted_answers": ["Noemi", "Naomi"],
+      "accepted_answers": [
+        "Noemi",
+        "Naomi"
+      ],
       "explanation": "Noemi voltou de Moabe para Belém acompanhada de Rute, que se recusou a abandoná-la (Rt 1:16). Deus honrou essa lealdade: Rute casou-se com Boaz e entrou na genealogia de Davi e de Cristo (Mt 1:5).",
       "divergence_note": null,
-      "reference": { "book": "rute", "chapter": 1, "verse_start": 16, "verse_end": 17 },
+      "reference": {
+        "book": "rute",
+        "chapter": 1,
+        "verse_start": 16,
+        "verse_end": 17
+      },
       "theme": "Lealdade",
       "difficulty": "easy",
       "subcategory": "Mulheres da Bíblia",
-      "tags": ["rute", "noemi", "moabe"]
+      "tags": [
+        "rute",
+        "noemi",
+        "moabe"
+      ]
     },
     {
       "external_id": "personagens-0007",
       "type": "multiple_choice",
       "text": "Quem foi arrebatado ao céu num redemoinho, acompanhado de um carro de fogo com cavalos de fogo?",
       "options": [
-        { "text": "Elias", "correct": true },
-        { "text": "Eliseu", "correct": false },
-        { "text": "Enoque", "correct": false },
-        { "text": "Moisés", "correct": false }
+        {
+          "text": "Elias",
+          "correct": true
+        },
+        {
+          "text": "Eliseu",
+          "correct": false
+        },
+        {
+          "text": "Enoque",
+          "correct": false
+        },
+        {
+          "text": "Moisés",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Elias subiu ao céu num redemoinho diante de Eliseu, que recebeu porção dobrada do seu espírito (2Rs 2:9-11). Junto com Enoque (Gn 5:24), é um dos dois homens que a Escritura registra não terem passado pela morte.",
       "divergence_note": null,
-      "reference": { "book": "2reis", "chapter": 2, "verse_start": 11, "verse_end": null },
+      "reference": {
+        "book": "2reis",
+        "chapter": 2,
+        "verse_start": 11,
+        "verse_end": null
+      },
       "theme": "Arrebatamento",
       "difficulty": "easy",
       "subcategory": "Profetas",
-      "tags": ["elias", "eliseu", "carro de fogo"]
+      "tags": [
+        "elias",
+        "eliseu",
+        "carro de fogo"
+      ]
     },
     {
       "external_id": "personagens-0008",
       "type": "multiple_choice",
       "text": "Qual juiz de Israel derrotou o exército midianita com apenas 300 homens?",
       "options": [
-        { "text": "Gideão", "correct": true },
-        { "text": "Sansão", "correct": false },
-        { "text": "Jefté", "correct": false },
-        { "text": "Baraque", "correct": false }
+        {
+          "text": "Gideão",
+          "correct": true
+        },
+        {
+          "text": "Sansão",
+          "correct": false
+        },
+        {
+          "text": "Jefté",
+          "correct": false
+        },
+        {
+          "text": "Baraque",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Deus reduziu o exército de Gideão de 32 mil para 300 homens, \"para que Israel não se glorie contra mim, dizendo: A minha mão me livrou\" (Jz 7:2). A vitória veio com trombetas, cântaros e tochas — e pertenceu ao SENHOR.",
       "divergence_note": null,
-      "reference": { "book": "juizes", "chapter": 7, "verse_start": 7, "verse_end": null },
+      "reference": {
+        "book": "juizes",
+        "chapter": 7,
+        "verse_start": 7,
+        "verse_end": null
+      },
       "theme": "Dependência de Deus",
       "difficulty": "easy",
       "subcategory": "Juízes",
-      "tags": ["gideao", "midianitas", "juizes"]
+      "tags": [
+        "gideao",
+        "midianitas",
+        "juizes"
+      ]
     },
     {
       "external_id": "personagens-0009",
       "type": "multiple_choice",
       "text": "Quem era o sacerdote em Siló quando o menino Samuel ouviu a voz de Deus pela primeira vez?",
       "options": [
-        { "text": "Eli", "correct": true },
-        { "text": "Abiatar", "correct": false },
-        { "text": "Zadoque", "correct": false },
-        { "text": "Fineias", "correct": false }
+        {
+          "text": "Eli",
+          "correct": true
+        },
+        {
+          "text": "Abiatar",
+          "correct": false
+        },
+        {
+          "text": "Zadoque",
+          "correct": false
+        },
+        {
+          "text": "Fineias",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "O menino Samuel servia ao SENHOR perante Eli (1Sm 3:1). Foi Eli quem percebeu que era Deus quem chamava o menino e o ensinou a responder: \"Fala, SENHOR, porque o teu servo ouve\" (1Sm 3:9).",
       "divergence_note": null,
-      "reference": { "book": "1samuel", "chapter": 3, "verse_start": 1, "verse_end": 10 },
+      "reference": {
+        "book": "1samuel",
+        "chapter": 3,
+        "verse_start": 1,
+        "verse_end": 10
+      },
       "theme": "Chamado",
       "difficulty": "medium",
       "subcategory": "Sacerdotes",
-      "tags": ["eli", "samuel", "silo"]
+      "tags": [
+        "eli",
+        "samuel",
+        "silo"
+      ]
     },
     {
       "external_id": "personagens-0010",
       "type": "open_answer",
       "text": "Qual rei de Judá, estando doente à morte, orou ao SENHOR e teve sua vida prolongada em quinze anos?",
       "options": null,
-      "accepted_answers": ["Ezequias"],
+      "accepted_answers": [
+        "Ezequias"
+      ],
       "explanation": "Ezequias chorou e orou, e Deus respondeu pelo profeta Isaías: \"eis que acrescentarei aos teus dias quinze anos\" (2Rs 20:5-6). Como sinal, a sombra do relógio de Acaz voltou dez graus atrás.",
       "divergence_note": null,
-      "reference": { "book": "2reis", "chapter": 20, "verse_start": 1, "verse_end": 6 },
+      "reference": {
+        "book": "2reis",
+        "chapter": 20,
+        "verse_start": 1,
+        "verse_end": 6
+      },
       "theme": "Oração",
       "difficulty": "hard",
       "subcategory": "Reis de Judá",
-      "tags": ["ezequias", "isaias", "cura"]
+      "tags": [
+        "ezequias",
+        "isaias",
+        "cura"
+      ]
+    },
+    {
+      "external_id": "personagens-0011",
+      "type": "multiple_choice",
+      "text": "Quem foi vendido pelos irmãos por vinte moedas de prata a mercadores ismaelitas?",
+      "options": [
+        {
+          "text": "José",
+          "correct": true
+        },
+        {
+          "text": "Benjamim",
+          "correct": false
+        },
+        {
+          "text": "Rúben",
+          "correct": false
+        },
+        {
+          "text": "Judá",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Os irmãos, movidos por inveja, venderam José por vinte moedas de prata (Gn 37:28). O que planejaram para o mal, Deus tornou em bem para preservar muitos (Gn 50:20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 37,
+        "verse_start": 28,
+        "verse_end": null
+      },
+      "theme": "Providência",
+      "difficulty": "easy",
+      "subcategory": "Patriarcas",
+      "tags": [
+        "jose",
+        "egito"
+      ]
+    },
+    {
+      "external_id": "personagens-0012",
+      "type": "multiple_choice",
+      "text": "Qual mulher escondeu os dois espias israelitas em Jericó e foi poupada na conquista?",
+      "options": [
+        {
+          "text": "Raabe",
+          "correct": true
+        },
+        {
+          "text": "Débora",
+          "correct": false
+        },
+        {
+          "text": "Jael",
+          "correct": false
+        },
+        {
+          "text": "Micã",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Raabe escondeu os espias e confessou a fé no Deus de Israel (Js 2). Foi poupada, entrou na genealogia de Cristo (Mt 1:5) e é exemplo de fé em Hebreus 11:31.",
+      "divergence_note": null,
+      "reference": {
+        "book": "josue",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": 21
+      },
+      "theme": "Fé",
+      "difficulty": "medium",
+      "subcategory": "Mulheres da Bíblia",
+      "tags": [
+        "raabe",
+        "jerico"
+      ]
+    },
+    {
+      "external_id": "personagens-0013",
+      "type": "multiple_choice",
+      "text": "Quem sucedeu Moisés na liderança e conduziu Israel à travessia do Jordão?",
+      "options": [
+        {
+          "text": "Josué",
+          "correct": true
+        },
+        {
+          "text": "Calebe",
+          "correct": false
+        },
+        {
+          "text": "Arão",
+          "correct": false
+        },
+        {
+          "text": "Eleazar",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Josué, filho de Num, foi comissionado por Deus para introduzir Israel na terra prometida (Js 1:2-6). Sob sua liderança o Jordão se abriu como fizera o Mar Vermelho.",
+      "divergence_note": null,
+      "reference": {
+        "book": "josue",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 9
+      },
+      "theme": "Liderança",
+      "difficulty": "easy",
+      "subcategory": "Líderes",
+      "tags": [
+        "josue",
+        "jordao"
+      ]
+    },
+    {
+      "external_id": "personagens-0014",
+      "type": "multiple_choice",
+      "text": "Qual profeta ungiu tanto Saul quanto Davi como reis de Israel?",
+      "options": [
+        {
+          "text": "Samuel",
+          "correct": true
+        },
+        {
+          "text": "Natã",
+          "correct": false
+        },
+        {
+          "text": "Elias",
+          "correct": false
+        },
+        {
+          "text": "Gade",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Samuel ungiu Saul (1Sm 10:1) e depois Davi (1Sm 16:13), sendo o elo entre o período dos juízes e a monarquia. Foi profeta, juiz e sacerdote.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 16,
+        "verse_start": 13,
+        "verse_end": null
+      },
+      "theme": "Unção",
+      "difficulty": "medium",
+      "subcategory": "Profetas",
+      "tags": [
+        "samuel",
+        "saul",
+        "davi"
+      ]
+    },
+    {
+      "external_id": "personagens-0015",
+      "type": "multiple_choice",
+      "text": "Quem, sendo eunuco etíope, foi batizado por Filipe após entender Isaías?",
+      "options": [
+        {
+          "text": "O tesoureiro de Candace",
+          "correct": true
+        },
+        {
+          "text": "Cornélio",
+          "correct": false
+        },
+        {
+          "text": "Lídia",
+          "correct": false
+        },
+        {
+          "text": "O carcereiro de Filipos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O eunuco, alto oficial da rainha Candace, lia Isaías 53 quando Filipe lhe explicou o evangelho de Jesus e o batizou (At 8:27-38).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 8,
+        "verse_start": 27,
+        "verse_end": 38
+      },
+      "theme": "Evangelização",
+      "difficulty": "hard",
+      "subcategory": "Igreja primitiva",
+      "tags": [
+        "eunuco",
+        "filipe"
+      ]
+    },
+    {
+      "external_id": "personagens-0016",
+      "type": "open_answer",
+      "text": "Qual era o nome do irmão de Moisés que foi seu porta-voz e primeiro sumo sacerdote?",
+      "options": null,
+      "accepted_answers": [
+        "Arão",
+        "Aarão"
+      ],
+      "explanation": "Arão falou por Moisés diante de Faraó (Êx 4:14-16) e foi consagrado o primeiro sumo sacerdote de Israel (Êx 28:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 4,
+        "verse_start": 14,
+        "verse_end": 16
+      },
+      "theme": "Sacerdócio",
+      "difficulty": "easy",
+      "subcategory": "Sacerdotes",
+      "tags": [
+        "arao",
+        "moises"
+      ]
+    },
+    {
+      "external_id": "personagens-0017",
+      "type": "multiple_choice",
+      "text": "Quem era o rei de Salém, sacerdote do Deus Altíssimo, que abençoou Abraão?",
+      "options": [
+        {
+          "text": "Melquisedeque",
+          "correct": true
+        },
+        {
+          "text": "Abimeleque",
+          "correct": false
+        },
+        {
+          "text": "Quedorlaomer",
+          "correct": false
+        },
+        {
+          "text": "Efrom",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Melquisedeque abençoou Abraão e recebeu o dízimo (Gn 14:18-20). Hebreus 7 o apresenta como tipo de Cristo, sacerdote eterno.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 14,
+        "verse_start": 18,
+        "verse_end": 20
+      },
+      "theme": "Sacerdócio",
+      "difficulty": "hard",
+      "subcategory": "Patriarcas",
+      "tags": [
+        "melquisedeque",
+        "abraao"
+      ]
+    },
+    {
+      "external_id": "personagens-0018",
+      "type": "multiple_choice",
+      "text": "Qual discípulo duvidou da ressurreição até ver as marcas nas mãos de Jesus?",
+      "options": [
+        {
+          "text": "Tomé",
+          "correct": true
+        },
+        {
+          "text": "Filipe",
+          "correct": false
+        },
+        {
+          "text": "André",
+          "correct": false
+        },
+        {
+          "text": "Tiago",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Tomé disse que só creria ao ver as chagas; ao encontrar o Cristo ressurreto, exclamou: 'Senhor meu, e Deus meu!' (Jo 20:28).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 20,
+        "verse_start": 24,
+        "verse_end": 29
+      },
+      "theme": "Fé e dúvida",
+      "difficulty": "easy",
+      "subcategory": "Os Doze",
+      "tags": [
+        "tome",
+        "ressurreicao"
+      ]
+    },
+    {
+      "external_id": "personagens-0019",
+      "type": "open_answer",
+      "text": "Qual profeta se casou com Gômer, uma mulher infiel, como sinal do amor de Deus por Israel?",
+      "options": null,
+      "accepted_answers": [
+        "Oseias"
+      ],
+      "explanation": "O casamento de Oseias com Gômer retratou a fidelidade de Deus diante da infidelidade de Israel (Os 1:2; 3:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "oseias",
+        "chapter": 1,
+        "verse_start": 2,
+        "verse_end": 3
+      },
+      "theme": "Fidelidade de Deus",
+      "difficulty": "hard",
+      "subcategory": "Profetas",
+      "tags": [
+        "oseias",
+        "gomer"
+      ]
+    },
+    {
+      "external_id": "personagens-0020",
+      "type": "multiple_choice",
+      "text": "Quem foi a primeira pessoa a quem Jesus apareceu após ressuscitar?",
+      "options": [
+        {
+          "text": "Maria Madalena",
+          "correct": true
+        },
+        {
+          "text": "Pedro",
+          "correct": false
+        },
+        {
+          "text": "A mãe de Jesus",
+          "correct": false
+        },
+        {
+          "text": "João",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jesus apareceu primeiro a Maria Madalena junto ao sepulcro, e ela anunciou aos discípulos: 'Vi o Senhor' (Jo 20:14-18).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 20,
+        "verse_start": 14,
+        "verse_end": 18
+      },
+      "theme": "Ressurreição",
+      "difficulty": "medium",
+      "subcategory": "Mulheres da Bíblia",
+      "tags": [
+        "maria madalena",
+        "ressurreicao"
+      ]
     }
   ]
 }

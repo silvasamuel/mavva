@@ -6,175 +6,725 @@
       "type": "multiple_choice",
       "text": "Qual foi o primeiro sinal (milagre) de Jesus registrado no Evangelho de João?",
       "options": [
-        { "text": "Transformar água em vinho", "correct": true },
-        { "text": "A multiplicação dos pães", "correct": false },
-        { "text": "A cura do cego de nascença", "correct": false },
-        { "text": "A pesca maravilhosa", "correct": false }
+        {
+          "text": "Transformar água em vinho",
+          "correct": true
+        },
+        {
+          "text": "A multiplicação dos pães",
+          "correct": false
+        },
+        {
+          "text": "A cura do cego de nascença",
+          "correct": false
+        },
+        {
+          "text": "A pesca maravilhosa",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Nas bodas de Caná da Galileia, Jesus transformou água em vinho. João o chama de \"princípio dos sinais\" pelo qual Jesus \"manifestou a sua glória, e os seus discípulos creram nele\" (Jo 2:11).",
       "divergence_note": null,
-      "reference": { "book": "joao", "chapter": 2, "verse_start": 1, "verse_end": 11 },
+      "reference": {
+        "book": "joao",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": 11
+      },
       "theme": "Glória de Cristo",
       "difficulty": "easy",
       "subcategory": "Milagres de Jesus",
-      "tags": ["cana", "milagre", "joao"]
+      "tags": [
+        "cana",
+        "milagre",
+        "joao"
+      ]
     },
     {
       "external_id": "evangelhos-0002",
       "type": "open_answer",
       "text": "Quantos dias Jesus jejuou no deserto antes de ser tentado pelo diabo?",
       "options": null,
-      "accepted_answers": ["40", "quarenta", "40 dias", "quarenta dias"],
+      "accepted_answers": [
+        "40",
+        "quarenta",
+        "40 dias",
+        "quarenta dias"
+      ],
       "explanation": "Jesus jejuou quarenta dias e quarenta noites (Mt 4:2) e venceu cada tentação citando as Escrituras: \"Está escrito\". O período ecoa os quarenta anos de Israel no deserto — onde Israel falhou, Cristo venceu.",
       "divergence_note": null,
-      "reference": { "book": "mateus", "chapter": 4, "verse_start": 1, "verse_end": 2 },
+      "reference": {
+        "book": "mateus",
+        "chapter": 4,
+        "verse_start": 1,
+        "verse_end": 2
+      },
       "theme": "Tentação",
       "difficulty": "easy",
       "subcategory": "Vida de Jesus",
-      "tags": ["jejum", "deserto", "tentacao"]
+      "tags": [
+        "jejum",
+        "deserto",
+        "tentacao"
+      ]
     },
     {
       "external_id": "evangelhos-0003",
       "type": "multiple_choice",
       "text": "Quem pediu corajosamente a Pilatos o corpo de Jesus para sepultá-lo?",
       "options": [
-        { "text": "José de Arimateia", "correct": true },
-        { "text": "Nicodemos", "correct": false },
-        { "text": "Simão de Cirene", "correct": false },
-        { "text": "João, o discípulo amado", "correct": false }
+        {
+          "text": "José de Arimateia",
+          "correct": true
+        },
+        {
+          "text": "Nicodemos",
+          "correct": false
+        },
+        {
+          "text": "Simão de Cirene",
+          "correct": false
+        },
+        {
+          "text": "João, o discípulo amado",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "José de Arimateia, membro honrado do Sinédrio que esperava o Reino de Deus, ousou pedir o corpo de Jesus (Mc 15:43). Nicodemos o ajudou no sepultamento, trazendo mirra e aloés (Jo 19:39).",
       "divergence_note": null,
-      "reference": { "book": "marcos", "chapter": 15, "verse_start": 43, "verse_end": 46 },
+      "reference": {
+        "book": "marcos",
+        "chapter": 15,
+        "verse_start": 43,
+        "verse_end": 46
+      },
       "theme": "Sepultamento de Jesus",
       "difficulty": "medium",
       "subcategory": "Paixão de Cristo",
-      "tags": ["jose de arimateia", "sepultamento", "pilatos"]
+      "tags": [
+        "jose de arimateia",
+        "sepultamento",
+        "pilatos"
+      ]
     },
     {
       "external_id": "evangelhos-0004",
       "type": "multiple_choice",
       "text": "Na transfiguração de Jesus, quais dois homens do Antigo Testamento apareceram falando com ele?",
       "options": [
-        { "text": "Moisés e Elias", "correct": true },
-        { "text": "Abraão e Davi", "correct": false },
-        { "text": "Enoque e Elias", "correct": false },
-        { "text": "Moisés e Isaías", "correct": false }
+        {
+          "text": "Moisés e Elias",
+          "correct": true
+        },
+        {
+          "text": "Abraão e Davi",
+          "correct": false
+        },
+        {
+          "text": "Enoque e Elias",
+          "correct": false
+        },
+        {
+          "text": "Moisés e Isaías",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Moisés e Elias apareceram em glória com Jesus no monte (Mt 17:3). Muitos intérpretes veem neles a Lei e os Profetas testemunhando a respeito de Cristo, que é o cumprimento de ambos (Lc 24:27).",
       "divergence_note": null,
-      "reference": { "book": "mateus", "chapter": 17, "verse_start": 1, "verse_end": 8 },
+      "reference": {
+        "book": "mateus",
+        "chapter": 17,
+        "verse_start": 1,
+        "verse_end": 8
+      },
       "theme": "Transfiguração",
       "difficulty": "easy",
       "subcategory": "Vida de Jesus",
-      "tags": ["transfiguracao", "moises", "elias"]
+      "tags": [
+        "transfiguracao",
+        "moises",
+        "elias"
+      ]
     },
     {
       "external_id": "evangelhos-0005",
       "type": "multiple_choice",
       "text": "Qual dos doze apóstolos era cobrador de impostos antes de ser chamado por Jesus?",
       "options": [
-        { "text": "Mateus", "correct": true },
-        { "text": "Tomé", "correct": false },
-        { "text": "Simão, o Zelote", "correct": false },
-        { "text": "Bartolomeu", "correct": false }
+        {
+          "text": "Mateus",
+          "correct": true
+        },
+        {
+          "text": "Tomé",
+          "correct": false
+        },
+        {
+          "text": "Simão, o Zelote",
+          "correct": false
+        },
+        {
+          "text": "Bartolomeu",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Jesus viu Mateus (também chamado Levi) sentado na coletoria e disse: \"Segue-me\" (Mt 9:9). O chamado de um publicano — classe desprezada em Israel — mostra que Jesus veio chamar pecadores, não justos (Mt 9:13).",
       "divergence_note": null,
-      "reference": { "book": "mateus", "chapter": 9, "verse_start": 9, "verse_end": 13 },
+      "reference": {
+        "book": "mateus",
+        "chapter": 9,
+        "verse_start": 9,
+        "verse_end": 13
+      },
       "theme": "Chamado",
       "difficulty": "easy",
       "subcategory": "Os Doze",
-      "tags": ["mateus", "levi", "publicano"]
+      "tags": [
+        "mateus",
+        "levi",
+        "publicano"
+      ]
     },
     {
       "external_id": "evangelhos-0006",
       "type": "open_answer",
       "text": "Em qual rio João Batista batizou Jesus?",
       "options": null,
-      "accepted_answers": ["Jordão", "Rio Jordão"],
+      "accepted_answers": [
+        "Jordão",
+        "Rio Jordão"
+      ],
       "explanation": "Jesus foi batizado por João no rio Jordão \"para cumprir toda a justiça\" (Mt 3:15). Ali o Espírito desceu como pomba e o Pai declarou: \"Este é o meu Filho amado, em quem me comprazo\" (Mt 3:17).",
       "divergence_note": null,
-      "reference": { "book": "mateus", "chapter": 3, "verse_start": 13, "verse_end": 17 },
+      "reference": {
+        "book": "mateus",
+        "chapter": 3,
+        "verse_start": 13,
+        "verse_end": 17
+      },
       "theme": "Batismo",
       "difficulty": "easy",
       "subcategory": "Vida de Jesus",
-      "tags": ["batismo", "jordao", "joao batista"]
+      "tags": [
+        "batismo",
+        "jordao",
+        "joao batista"
+      ]
     },
     {
       "external_id": "evangelhos-0007",
       "type": "multiple_choice",
       "text": "Quando Pedro perguntou quantas vezes deveria perdoar seu irmão, qual foi a resposta de Jesus?",
       "options": [
-        { "text": "Setenta vezes sete", "correct": true },
-        { "text": "Sete vezes", "correct": false },
-        { "text": "Três vezes", "correct": false },
-        { "text": "Doze vezes doze", "correct": false }
+        {
+          "text": "Setenta vezes sete",
+          "correct": true
+        },
+        {
+          "text": "Sete vezes",
+          "correct": false
+        },
+        {
+          "text": "Três vezes",
+          "correct": false
+        },
+        {
+          "text": "Doze vezes doze",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Pedro sugeriu sete vezes, mas Jesus respondeu \"até setenta vezes sete\" (Mt 18:22) — não um cálculo, mas perdão sem limites. Em seguida, contou a parábola do credor incompassivo para mostrar o porquê: fomos perdoados de dívida infinitamente maior.",
       "divergence_note": null,
-      "reference": { "book": "mateus", "chapter": 18, "verse_start": 21, "verse_end": 22 },
+      "reference": {
+        "book": "mateus",
+        "chapter": 18,
+        "verse_start": 21,
+        "verse_end": 22
+      },
       "theme": "Perdão",
       "difficulty": "medium",
       "subcategory": "Ensinos de Jesus",
-      "tags": ["perdao", "pedro", "setenta vezes sete"]
+      "tags": [
+        "perdao",
+        "pedro",
+        "setenta vezes sete"
+      ]
     },
     {
       "external_id": "evangelhos-0008",
       "type": "multiple_choice",
       "text": "Em que árvore Zaqueu subiu para conseguir ver Jesus em Jericó?",
       "options": [
-        { "text": "Sicômoro (figueira brava)", "correct": true },
-        { "text": "Oliveira", "correct": false },
-        { "text": "Cedro", "correct": false },
-        { "text": "Tamareira", "correct": false }
+        {
+          "text": "Sicômoro (figueira brava)",
+          "correct": true
+        },
+        {
+          "text": "Oliveira",
+          "correct": false
+        },
+        {
+          "text": "Cedro",
+          "correct": false
+        },
+        {
+          "text": "Tamareira",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Zaqueu, chefe dos publicanos e de pequena estatura, subiu num sicômoro para ver Jesus (Lc 19:4). Jesus se convidou à sua casa, e a transformação foi radical: restituiu quadruplicado o que havia extorquido.",
       "divergence_note": null,
-      "reference": { "book": "lucas", "chapter": 19, "verse_start": 1, "verse_end": 10 },
+      "reference": {
+        "book": "lucas",
+        "chapter": 19,
+        "verse_start": 1,
+        "verse_end": 10
+      },
       "theme": "Salvação",
       "difficulty": "easy",
       "subcategory": "Encontros com Jesus",
-      "tags": ["zaqueu", "jerico", "sicomoro"]
+      "tags": [
+        "zaqueu",
+        "jerico",
+        "sicomoro"
+      ]
     },
     {
       "external_id": "evangelhos-0009",
       "type": "multiple_choice",
       "text": "Qual autor de evangelho é chamado por Paulo de \"o médico amado\"?",
       "options": [
-        { "text": "Lucas", "correct": true },
-        { "text": "Marcos", "correct": false },
-        { "text": "Mateus", "correct": false },
-        { "text": "João", "correct": false }
+        {
+          "text": "Lucas",
+          "correct": true
+        },
+        {
+          "text": "Marcos",
+          "correct": false
+        },
+        {
+          "text": "Mateus",
+          "correct": false
+        },
+        {
+          "text": "João",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Paulo se refere a \"Lucas, o médico amado\" em Colossenses 4:14. Lucas foi companheiro de viagens de Paulo e escreveu também o livro de Atos, formando com seu evangelho uma obra em dois volumes dedicada a Teófilo.",
       "divergence_note": "Os evangelhos são formalmente anônimos; a atribuição a Lucas vem do testemunho unânime da igreja antiga (Irineu, Cânon Muratori). O dado bíblico direto é que Lucas era médico e companheiro de Paulo (Cl 4:14; 2Tm 4:11).",
-      "reference": { "book": "colossenses", "chapter": 4, "verse_start": 14, "verse_end": null },
+      "reference": {
+        "book": "colossenses",
+        "chapter": 4,
+        "verse_start": 14,
+        "verse_end": null
+      },
       "theme": "Autoria dos Evangelhos",
       "difficulty": "medium",
       "subcategory": "Os evangelistas",
-      "tags": ["lucas", "paulo", "medico"]
+      "tags": [
+        "lucas",
+        "paulo",
+        "medico"
+      ]
     },
     {
       "external_id": "evangelhos-0010",
       "type": "open_answer",
       "text": "Qual homem foi obrigado a carregar a cruz de Jesus no caminho do Calvário?",
       "options": null,
-      "accepted_answers": ["Simão", "Simão Cireneu", "Simão de Cirene", "Simao Cireneu"],
+      "accepted_answers": [
+        "Simão",
+        "Simão Cireneu",
+        "Simão de Cirene",
+        "Simao Cireneu"
+      ],
       "explanation": "Os soldados obrigaram Simão de Cirene, que voltava do campo, a carregar a cruz de Jesus (Mt 27:32). Marcos anota que ele era pai de Alexandre e Rufo (Mc 15:21), nomes aparentemente conhecidos da igreja primitiva.",
       "divergence_note": null,
-      "reference": { "book": "mateus", "chapter": 27, "verse_start": 32, "verse_end": null },
+      "reference": {
+        "book": "mateus",
+        "chapter": 27,
+        "verse_start": 32,
+        "verse_end": null
+      },
       "theme": "Paixão de Cristo",
       "difficulty": "medium",
       "subcategory": "Paixão de Cristo",
-      "tags": ["simao cireneu", "cruz", "calvario"]
+      "tags": [
+        "simao cireneu",
+        "cruz",
+        "calvario"
+      ]
+    },
+    {
+      "external_id": "evangelhos-0011",
+      "type": "multiple_choice",
+      "text": "Quantos cestos sobraram após Jesus alimentar os cinco mil?",
+      "options": [
+        {
+          "text": "Doze",
+          "correct": true
+        },
+        {
+          "text": "Sete",
+          "correct": false
+        },
+        {
+          "text": "Cinco",
+          "correct": false
+        },
+        {
+          "text": "Três",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Depois de todos se fartarem, recolheram doze cestos cheios dos pedaços (Mt 14:20), sinal da provisão abundante de Deus.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 14,
+        "verse_start": 20,
+        "verse_end": null
+      },
+      "theme": "Provisão",
+      "difficulty": "easy",
+      "subcategory": "Milagres de Jesus",
+      "tags": [
+        "multiplicacao",
+        "paes"
+      ]
+    },
+    {
+      "external_id": "evangelhos-0012",
+      "type": "multiple_choice",
+      "text": "Qual foi o mandamento que Jesus chamou de o maior de todos?",
+      "options": [
+        {
+          "text": "Amar a Deus de todo o coração",
+          "correct": true
+        },
+        {
+          "text": "Não matarás",
+          "correct": false
+        },
+        {
+          "text": "Guardar o sábado",
+          "correct": false
+        },
+        {
+          "text": "Honrar pai e mãe",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jesus citou Deuteronômio 6:5: amar a Deus de todo o coração, alma e entendimento é o grande mandamento; o segundo é amar o próximo (Mt 22:37-39).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 22,
+        "verse_start": 37,
+        "verse_end": 39
+      },
+      "theme": "Amor",
+      "difficulty": "easy",
+      "subcategory": "Ensinos de Jesus",
+      "tags": [
+        "mandamento",
+        "amor"
+      ]
+    },
+    {
+      "external_id": "evangelhos-0013",
+      "type": "multiple_choice",
+      "text": "No Sermão do Monte, como Jesus chama os que promovem a paz?",
+      "options": [
+        {
+          "text": "Filhos de Deus",
+          "correct": true
+        },
+        {
+          "text": "Sal da terra",
+          "correct": false
+        },
+        {
+          "text": "Herdeiros da terra",
+          "correct": false
+        },
+        {
+          "text": "Luz do mundo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Bem-aventurados os pacificadores, porque serão chamados filhos de Deus' (Mt 5:9), uma das Bem-aventuranças.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 5,
+        "verse_start": 9,
+        "verse_end": null
+      },
+      "theme": "Bem-aventuranças",
+      "difficulty": "medium",
+      "subcategory": "Sermão do Monte",
+      "tags": [
+        "pacificadores",
+        "bem-aventurancas"
+      ]
+    },
+    {
+      "external_id": "evangelhos-0014",
+      "type": "open_answer",
+      "text": "Em qual monte Jesus foi crucificado, também chamado 'Lugar da Caveira'?",
+      "options": null,
+      "accepted_answers": [
+        "Gólgota",
+        "Golgota",
+        "Calvário",
+        "Calvario"
+      ],
+      "explanation": "Jesus foi crucificado no Gólgota, que significa 'Lugar da Caveira' (Jo 19:17), fora dos muros de Jerusalém.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 19,
+        "verse_start": 17,
+        "verse_end": null
+      },
+      "theme": "Crucificação",
+      "difficulty": "medium",
+      "subcategory": "Paixão de Cristo",
+      "tags": [
+        "golgota",
+        "cruz"
+      ]
+    },
+    {
+      "external_id": "evangelhos-0015",
+      "type": "multiple_choice",
+      "text": "Que sinal Judas combinou para identificar Jesus aos que vieram prendê-lo?",
+      "options": [
+        {
+          "text": "Um beijo",
+          "correct": true
+        },
+        {
+          "text": "Um aceno",
+          "correct": false
+        },
+        {
+          "text": "Uma palavra",
+          "correct": false
+        },
+        {
+          "text": "Um abraço",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Aquele que eu beijar, é esse; prendei-o' (Mt 26:48). O beijo de Judas tornou-se símbolo de traição.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 26,
+        "verse_start": 48,
+        "verse_end": 49
+      },
+      "theme": "Traição",
+      "difficulty": "easy",
+      "subcategory": "Paixão de Cristo",
+      "tags": [
+        "judas",
+        "traicao"
+      ]
+    },
+    {
+      "external_id": "evangelhos-0016",
+      "type": "multiple_choice",
+      "text": "Quem batizou Jesus e depois foi preso e decapitado por Herodes?",
+      "options": [
+        {
+          "text": "João Batista",
+          "correct": true
+        },
+        {
+          "text": "Zacarias",
+          "correct": false
+        },
+        {
+          "text": "Simeão",
+          "correct": false
+        },
+        {
+          "text": "André",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "João Batista, precursor do Messias, foi preso e decapitado por Herodes Antipas a pedido de Herodias (Mc 6:17-28).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 6,
+        "verse_start": 17,
+        "verse_end": 28
+      },
+      "theme": "Martírio",
+      "difficulty": "medium",
+      "subcategory": "João Batista",
+      "tags": [
+        "joao batista",
+        "herodes"
+      ]
+    },
+    {
+      "external_id": "evangelhos-0017",
+      "type": "multiple_choice",
+      "text": "O que Jesus disse ao ladrão arrependido crucificado ao seu lado?",
+      "options": [
+        {
+          "text": "Hoje estarás comigo no Paraíso",
+          "correct": true
+        },
+        {
+          "text": "Teus pecados estão perdoados",
+          "correct": false
+        },
+        {
+          "text": "Vai e não peques mais",
+          "correct": false
+        },
+        {
+          "text": "Crê e serás salvo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Ao malfeitor que se voltou a ele, Jesus prometeu: 'Hoje estarás comigo no Paraíso' (Lc 23:43) — salvação pela graça, no último instante.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 23,
+        "verse_start": 43,
+        "verse_end": null
+      },
+      "theme": "Graça",
+      "difficulty": "medium",
+      "subcategory": "Paixão de Cristo",
+      "tags": [
+        "ladrao",
+        "paraiso"
+      ]
+    },
+    {
+      "external_id": "evangelhos-0018",
+      "type": "open_answer",
+      "text": "Qual apóstolo pescador era irmão de Simão Pedro?",
+      "options": null,
+      "accepted_answers": [
+        "André"
+      ],
+      "explanation": "André, irmão de Simão Pedro, foi um dos primeiros chamados e levou o irmão a Jesus (Jo 1:40-42).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 1,
+        "verse_start": 40,
+        "verse_end": 42
+      },
+      "theme": "Chamado",
+      "difficulty": "easy",
+      "subcategory": "Os Doze",
+      "tags": [
+        "andre",
+        "pedro"
+      ]
+    },
+    {
+      "external_id": "evangelhos-0019",
+      "type": "multiple_choice",
+      "text": "Segundo João, o que 'se fez carne e habitou entre nós'?",
+      "options": [
+        {
+          "text": "O Verbo",
+          "correct": true
+        },
+        {
+          "text": "A Lei",
+          "correct": false
+        },
+        {
+          "text": "O Espírito",
+          "correct": false
+        },
+        {
+          "text": "A Sabedoria",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'E o Verbo se fez carne e habitou entre nós' (Jo 1:14) — a encarnação do Filho eterno de Deus.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 1,
+        "verse_start": 14,
+        "verse_end": null
+      },
+      "theme": "Encarnação",
+      "difficulty": "hard",
+      "subcategory": "Prólogo de João",
+      "tags": [
+        "verbo",
+        "encarnacao"
+      ]
+    },
+    {
+      "external_id": "evangelhos-0020",
+      "type": "multiple_choice",
+      "text": "Que animal Jesus montou ao entrar triunfalmente em Jerusalém?",
+      "options": [
+        {
+          "text": "Um jumentinho",
+          "correct": true
+        },
+        {
+          "text": "Um cavalo branco",
+          "correct": false
+        },
+        {
+          "text": "Um camelo",
+          "correct": false
+        },
+        {
+          "text": "Uma mula",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jesus entrou em Jerusalém sobre um jumentinho, cumprindo Zacarias 9:9 (Mt 21:5-7); a multidão o aclamou com 'Hosana'.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 21,
+        "verse_start": 5,
+        "verse_end": 7
+      },
+      "theme": "Entrada triunfal",
+      "difficulty": "easy",
+      "subcategory": "Semana da Paixão",
+      "tags": [
+        "jumentinho",
+        "hosana"
+      ]
     }
   ]
 }
