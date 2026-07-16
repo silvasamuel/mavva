@@ -86,6 +86,20 @@ HTTP (api/v1/*)  →  Services (regra de negócio)  →  Models/DB (SQLAlchemy)
 3. Tolerância a erro de digitação: distância de Levenshtein via `rapidfuzz`
    (≤1 para respostas curtas, proporcional para longas — `ratio ≥ 90`).
 
+### Painel admin (segurança)
+
+- **Barreira real = backend.** Todo endpoint `/api/v1/admin/*` exige `role = admin`
+  (dependência `AdminUser` → 403). O papel é lido do banco pelo id do JWT assinado,
+  então nenhuma alteração no front-end escala privilégio.
+- **Front-end isolado.** O admin é um **bundle Vite separado** (`admin.html` →
+  `src/admin/`). O app do usuário (`index.html`) nunca importa nada de `src/admin/`,
+  então o bundle do usuário não contém código nem assets do admin (verificável:
+  `grep admin dist/assets/main-*.js` = 0). Servido em `/admin` via `vercel.json`
+  (prod) e middleware de dev do Vite (local).
+- Edições do admin gravam **no banco** (dado vivo). O seed em `content/questions/`
+  continua sendo a fonte de bootstrap; um re-seed sobrescreve por `external_id`.
+  Escrever de volta para os arquivos é trabalho da Fase 2.
+
 ### Migrations
 
 - Alembic com `autogenerate` + revisão manual obrigatória de cada migration.

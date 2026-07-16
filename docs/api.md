@@ -114,6 +114,20 @@ ainda não foi respondida (UNIQUE no banco).
 |---|---|---|
 | GET | `/achievements` | Catálogo completo com `unlocked_at` (null se bloqueada) e progresso atual. Ordenação: desbloqueadas primeiro (mais recentes no topo), depois bloqueadas por proximidade da conclusão. |
 
+## Admin (requer `role = admin`)
+
+Toda rota abaixo passa pela dependência `AdminUser` no backend: **403** para
+usuários comuns, **401** sem autenticação. Esta é a única barreira de segurança
+real — o front-end separado (bundle `/admin`) é conveniência, não proteção.
+
+| Método | Rota | Descrição |
+|---|---|---|
+| GET | `/admin/users?search&limit&offset` | Lista usuários com stats (XP, nível, streak, precisão). |
+| GET | `/admin/categories` | Categorias (id, slug, nome, ícone) para os filtros/edição. |
+| GET | `/admin/questions?search&category_id&difficulty&limit&offset` | Lista paginada de perguntas. |
+| GET | `/admin/questions/{id}` | Detalhe completo (enunciado, explicação, referência, opções, respostas). |
+| PATCH | `/admin/questions/{id}` | Edita campos enviados (`exclude_unset`). Valida MC (4 opções, 1 correta) e aberta (≥1 resposta). |
+
 ## Saúde
 
 | Método | Rota | Descrição |
