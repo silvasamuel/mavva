@@ -84,7 +84,12 @@ class AdminQuestionDetail(BaseModel):
 
 
 class AdminQuestionUpdate(BaseModel):
-    """Every field optional — only what is sent gets updated. `type` is immutable."""
+    """Every field optional — only what is sent gets updated.
+
+    `type` and `category_id` are immutable: external_id is prefixed by the
+    category slug, so moving a question across categories would break the
+    content-file invariants (revisit if the need ever arises).
+    """
 
     text: str | None = Field(default=None, min_length=10)
     explanation: str | None = Field(default=None, min_length=10)
@@ -95,7 +100,6 @@ class AdminQuestionUpdate(BaseModel):
     verse_end: int | None = Field(default=None, ge=1)
     theme: str | None = Field(default=None, min_length=2, max_length=80)
     difficulty: Difficulty | None = None
-    category_id: int | None = None
     subcategory: str | None = Field(default=None, max_length=80)
     tags: list[str] | None = Field(default=None, max_length=6)
     is_active: bool | None = None
@@ -118,3 +122,17 @@ class AdminCategoryOut(BaseModel):
     slug: str
     name: str
     icon: str
+
+
+# --- Content write-back ---
+
+
+class ContentStatusOut(BaseModel):
+    mode: str  # "github" | "local"
+    dirty_files: list[str]
+
+
+class ContentPublishOut(BaseModel):
+    mode: str
+    published: list[str]
+    commit_url: str | None

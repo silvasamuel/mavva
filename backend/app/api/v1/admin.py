@@ -27,7 +27,11 @@ from app.schemas.admin import (
     AdminQuestionUpdate,
     AdminUserList,
     AdminUserOut,
+    ContentPublishOut,
+    ContentStatusOut,
 )
+from app.services import content_sync
+from app.services.content_sync import ContentSyncError
 
 # The AdminUser dependency on every path parameter is what enforces access.
 router = APIRouter(prefix="/admin", tags=["admin"])
@@ -160,6 +164,40 @@ def _detail(question: Question) -> AdminQuestionDetail:
     )
 
 
+@router.get("/content/status", response_model=ContentStatusOut)
+def content_status(_admin: AdminUser, db: DbDep) -> ContentStatusOut:
+    """Which content files differ from the DB (pending 'Publicar')."""
+    files = content_sync.rendered_files(db)
+    try:
+        dirty = content_sync.dirty_files(db, files)
+    except ContentSyncError as error:
+        raise HTTPException(status.HTTP_502_BAD_GATEWAY, error.message) from error
+    return ContentStatusOut(mode=content_sync.write_mode(), dirty_files=sorted(dirty))
+
+
+@router.post("/content/publish", response_model=ContentPublishOut)
+def content_publish(_admin: AdminUser, db: DbDep) -> ContentPublishOut:
+    """Writes the DB question bank back to content/questions/*.json.
+
+    Local mode writes to disk (review via git); github mode lands every dirty
+    file in one commit on the configured branch, whose deploy re-seeds the DB.
+    """
+    files = content_sync.rendered_files(db)
+    try:
+        dirty = content_sync.dirty_files(db, files)
+        if not dirty:
+            return ContentPublishOut(mode=content_sync.write_mode(), published=[], commit_url=None)
+        commit_url = content_sync.publish(
+            {path: files[path] for path in dirty},
+            "content: update questions from admin panel",
+        )
+    except ContentSyncError as error:
+        raise HTTPException(status.HTTP_502_BAD_GATEWAY, error.message) from error
+    return ContentPublishOut(
+        mode=content_sync.write_mode(), published=sorted(dirty), commit_url=commit_url
+    )
+
+
 @router.get("/questions/{question_id}", response_model=AdminQuestionDetail)
 def get_question(question_id: uuid.UUID, _admin: AdminUser, db: DbDep) -> AdminQuestionDetail:
     return _detail(_load_question(db, question_id))
@@ -176,8 +214,6 @@ def update_question(
         if data["book"] not in BOOKS:
             raise HTTPException(status.HTTP_400_BAD_REQUEST, f"Livro inválido: {data['book']}")
         question.testament = BOOKS[data["book"]].testament
-    if "category_id" in data and db.get(Category, data["category_id"]) is None:
-        raise HTTPException(status.HTTP_400_BAD_REQUEST, "Categoria inválida")
 
     # Answer key: enforce the same invariants the seed does.
     if "options" in data:

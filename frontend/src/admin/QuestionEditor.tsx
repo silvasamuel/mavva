@@ -37,6 +37,7 @@ export function QuestionEditor({
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['admin', 'questions'] })
       queryClient.invalidateQueries({ queryKey: ['admin', 'question', questionId] })
+      queryClient.invalidateQueries({ queryKey: ['admin', 'content'] })
       onClose()
     },
     onError: (err) =>
@@ -56,7 +57,6 @@ export function QuestionEditor({
       verse_end: form.verse_end,
       theme: form.theme,
       difficulty: form.difficulty,
-      category_id: form.category_id,
       subcategory: form.subcategory?.trim() ? form.subcategory : null,
       tags: form.tags,
       is_active: form.is_active,
@@ -232,12 +232,10 @@ export function QuestionEditor({
 
             <div className="grid grid-cols-2 gap-3">
               <div className="space-y-1.5">
-                <label className="block text-sm font-bold text-sand-700">Categoria</label>
-                <select
-                  value={form.category_id}
-                  onChange={(e) => setForm({ ...form, category_id: Number(e.target.value) })}
-                  className={FIELD}
-                >
+                <label className="block text-sm font-bold text-sand-700">
+                  Categoria (fixa — o id da pergunta pertence a ela)
+                </label>
+                <select value={form.category_id} disabled className={`${FIELD} opacity-60`}>
                   {categories.map((c) => (
                     <option key={c.id} value={c.id}>
                       {c.icon} {c.name}

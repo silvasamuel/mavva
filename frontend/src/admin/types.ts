@@ -88,10 +88,20 @@ export interface AdminQuestionUpdate {
   verse_end?: number | null
   theme?: string
   difficulty?: Difficulty
-  category_id?: number
   subcategory?: string | null
   tags?: string[]
   is_active?: boolean
   options?: AdminOption[]
   accepted_answers?: AdminAnswer[]
+}
+
+export interface ContentStatus {
+  mode: 'github' | 'local'
+  dirty_files: string[]
+}
+
+export interface ContentPublish {
+  mode: 'github' | 'local'
+  published: string[]
+  commit_url: string | null
 }

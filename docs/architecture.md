@@ -96,9 +96,13 @@ HTTP (api/v1/*)  →  Services (regra de negócio)  →  Models/DB (SQLAlchemy)
   então o bundle do usuário não contém código nem assets do admin (verificável:
   `grep admin dist/assets/main-*.js` = 0). Servido em `/admin` via `vercel.json`
   (prod) e middleware de dev do Vite (local).
-- Edições do admin gravam **no banco** (dado vivo). O seed em `content/questions/`
-  continua sendo a fonte de bootstrap; um re-seed sobrescreve por `external_id`.
-  Escrever de volta para os arquivos é trabalho da Fase 2.
+- Edições do admin gravam **no banco** (dado vivo) e são **publicadas de volta**
+  para `content/questions/*.json` pelo botão "Publicar" (`POST /admin/content/publish`):
+  em dev escreve nos arquivos (revisão via git); em produção cria **um commit** na
+  `main` via API do GitHub (`GITHUB_TOKEN`, PAT fine-grained só com `contents:write`) —
+  o deploy disparado pelo commit roda o seed e realinha o banco, fechando o ciclo.
+  O serializador regenera os arquivos no formato canônico do seed (diffs mínimos)
+  e `is_active` faz parte do schema, então desativações sobrevivem ao re-seed.
 
 ### Migrations
 

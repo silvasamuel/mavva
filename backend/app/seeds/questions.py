@@ -53,6 +53,7 @@ class QuestionIn(BaseModel):
     difficulty: Difficulty
     subcategory: str | None = Field(default=None, max_length=80)
     tags: list[str] = Field(default_factory=list, max_length=6)
+    is_active: bool = True
 
     @model_validator(mode="after")
     def type_specific_fields(self) -> "QuestionIn":
@@ -143,7 +144,7 @@ def seed_questions(db: Session, content_dir: Path, category_ids: dict[str, int])
             question.category_id = category_ids[file_in.category]
             question.subcategory = q_in.subcategory
             question.tags = [t.strip().lower() for t in q_in.tags]
-            question.is_active = True
+            question.is_active = q_in.is_active
 
             # Replace answer key wholesale — content files are the source of truth.
             question.options.clear()

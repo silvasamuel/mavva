@@ -4,6 +4,7 @@ import { useAdminAuth } from './useAdminAuth'
 import { AdminLogin } from './AdminLogin'
 import { UsersPanel } from './UsersPanel'
 import { QuestionsPanel } from './QuestionsPanel'
+import { PublishBar } from './PublishBar'
 
 type Tab = 'questions' | 'users'
 
@@ -44,6 +45,7 @@ export function AdminApp() {
       </header>
 
       <div className="mx-auto max-w-6xl px-4 py-6 md:px-8">
+        <PublishBar />
         <nav className="mb-6 flex gap-2">
           {(
             [
