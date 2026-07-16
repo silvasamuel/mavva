@@ -749,6 +749,84 @@
         "samaria",
         "onri"
       ]
+    },
+    {
+      "external_id": "historia-de-israel-0021",
+      "type": "multiple_choice",
+      "text": "Após a divisão do reino, quantas tribos permaneceram com a casa de Davi (reino de Judá)?",
+      "options": [
+        {
+          "text": "Duas (Judá e Benjamim)",
+          "correct": true
+        },
+        {
+          "text": "Três",
+          "correct": false
+        },
+        {
+          "text": "Cinco",
+          "correct": false
+        },
+        {
+          "text": "Dez",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Ajuntou toda a casa de Judá e a tribo de Benjamim' (1Rs 12:21); as outras dez formaram o reino do Norte.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 12,
+        "verse_start": 21,
+        "verse_end": null
+      },
+      "theme": "Reino dividido",
+      "difficulty": "expert",
+      "subcategory": "Monarquia",
+      "tags": [
+        "juda",
+        "benjamim"
+      ]
+    },
+    {
+      "external_id": "historia-de-israel-0022",
+      "type": "multiple_choice",
+      "text": "Qual rei do Norte casou-se com Jezabel e promoveu o culto a Baal em Israel?",
+      "options": [
+        {
+          "text": "Acabe",
+          "correct": true
+        },
+        {
+          "text": "Jeorão",
+          "correct": false
+        },
+        {
+          "text": "Jeú",
+          "correct": false
+        },
+        {
+          "text": "Onri",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Tomou por mulher a Jezabel... e serviu a Baal' (1Rs 16:31), levando Israel a grande apostasia.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 16,
+        "verse_start": 30,
+        "verse_end": 31
+      },
+      "theme": "Apostasia",
+      "difficulty": "expert",
+      "subcategory": "Reis do Norte",
+      "tags": [
+        "acabe",
+        "jezabel"
+      ]
     }
   ]
 }

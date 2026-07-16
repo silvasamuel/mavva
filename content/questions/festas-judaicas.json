@@ -762,6 +762,72 @@
         "pascoa",
         "exodo"
       ]
+    },
+    {
+      "external_id": "festas-judaicas-0021",
+      "type": "multiple_choice",
+      "text": "Quantos dias durava a Festa dos Tabernáculos, seguida de uma assembleia solene no oitavo dia?",
+      "options": [
+        {
+          "text": "Sete dias",
+          "correct": true
+        },
+        {
+          "text": "Três dias",
+          "correct": false
+        },
+        {
+          "text": "Um dia",
+          "correct": false
+        },
+        {
+          "text": "Quarenta dias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Sete dias oferecereis... e ao oitavo dia... assembleia solene' (Lv 23:34-36).",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 23,
+        "verse_start": 34,
+        "verse_end": 36
+      },
+      "theme": "Duração",
+      "difficulty": "expert",
+      "subcategory": "Festas de peregrinação",
+      "tags": [
+        "tabernaculos",
+        "sete dias"
+      ]
+    },
+    {
+      "external_id": "festas-judaicas-0022",
+      "type": "open_answer",
+      "text": "Em que mês do calendário hebraico, chamado Abibe, era celebrada a Páscoa?",
+      "options": null,
+      "accepted_answers": [
+        "Abibe",
+        "Nisã",
+        "Nisa",
+        "Abibe (Nisã)"
+      ],
+      "explanation": "'Hoje, no mês de Abibe, vós saís' (Êx 13:4); o mês (mais tarde Nisã) marca a libertação do Egito.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 13,
+        "verse_start": 4,
+        "verse_end": null
+      },
+      "theme": "Calendário",
+      "difficulty": "expert",
+      "subcategory": "Festas de peregrinação",
+      "tags": [
+        "abibe",
+        "nisa"
+      ]
     }
   ]
 }

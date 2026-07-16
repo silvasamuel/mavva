@@ -763,6 +763,71 @@
         "alianca",
         "davi"
       ]
+    },
+    {
+      "external_id": "doutrinas-0021",
+      "type": "open_answer",
+      "text": "Que termo grego descreve Cristo 'esvaziando-se' ao assumir a forma de servo (Filipenses 2)?",
+      "options": null,
+      "accepted_answers": [
+        "Kenosis",
+        "Quenose",
+        "Esvaziamento"
+      ],
+      "explanation": "De 'ekénosen' — 'a si mesmo se esvaziou, tomando a forma de servo' (Fp 2:7); a kenosis descreve a humilhação do Filho.",
+      "divergence_note": null,
+      "reference": {
+        "book": "filipenses",
+        "chapter": 2,
+        "verse_start": 6,
+        "verse_end": 8
+      },
+      "theme": "Cristologia",
+      "difficulty": "expert",
+      "subcategory": "Teologia própria",
+      "tags": [
+        "kenosis",
+        "humilhacao"
+      ]
+    },
+    {
+      "external_id": "doutrinas-0022",
+      "type": "multiple_choice",
+      "text": "Que expressão teológica descreve as duas naturezas, divina e humana, em uma só pessoa de Cristo?",
+      "options": [
+        {
+          "text": "União hipostática",
+          "correct": true
+        },
+        {
+          "text": "Modalismo",
+          "correct": false
+        },
+        {
+          "text": "Panteísmo",
+          "correct": false
+        },
+        {
+          "text": "Adocionismo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Cristo é plenamente Deus e plenamente homem numa só pessoa; 'nele habita toda a plenitude da divindade' (Cl 2:9; Jo 1:14).",
+      "divergence_note": null,
+      "reference": {
+        "book": "colossenses",
+        "chapter": 2,
+        "verse_start": 9,
+        "verse_end": null
+      },
+      "theme": "Cristologia",
+      "difficulty": "expert",
+      "subcategory": "Teologia própria",
+      "tags": [
+        "uniao hipostatica",
+        "cristo"
+      ]
     }
   ]
 }

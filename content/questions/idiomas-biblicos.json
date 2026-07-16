@@ -724,6 +724,57 @@
         "hosana",
         "entrada triunfal"
       ]
+    },
+    {
+      "external_id": "idiomas-biblicos-0021",
+      "type": "open_answer",
+      "text": "O que significa 'Rabôni', palavra que Maria Madalena dirigiu a Jesus ressurreto?",
+      "options": null,
+      "accepted_answers": [
+        "Mestre",
+        "Meu mestre"
+      ],
+      "explanation": "'Ela, voltando-se, disse-lhe: Rabôni (que quer dizer Mestre)' (Jo 20:16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 20,
+        "verse_start": 16,
+        "verse_end": null
+      },
+      "theme": "Títulos",
+      "difficulty": "expert",
+      "subcategory": "Aramaico",
+      "tags": [
+        "raboni",
+        "mestre"
+      ]
+    },
+    {
+      "external_id": "idiomas-biblicos-0022",
+      "type": "open_answer",
+      "text": "O que significa o termo aramaico 'Gólgota'?",
+      "options": null,
+      "accepted_answers": [
+        "Lugar da caveira",
+        "Caveira",
+        "Lugar da caveira (calvário)"
+      ],
+      "explanation": "'Levaram-no ao lugar do Gólgota, que se traduz por lugar da Caveira' (Mc 15:22).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 15,
+        "verse_start": 22,
+        "verse_end": null
+      },
+      "theme": "Toponímia",
+      "difficulty": "expert",
+      "subcategory": "Aramaico",
+      "tags": [
+        "golgota",
+        "caveira"
+      ]
     }
   ]
 }

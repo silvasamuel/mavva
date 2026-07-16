@@ -755,6 +755,71 @@
         "sabado",
         "descanso"
       ]
+    },
+    {
+      "external_id": "costumes-judaicos-0021",
+      "type": "open_answer",
+      "text": "Qual voto de consagração incluía não cortar o cabelo nem beber vinho (feito por Sansão e Samuel)?",
+      "options": null,
+      "accepted_answers": [
+        "Voto de nazireu",
+        "Nazireu",
+        "Nazireado"
+      ],
+      "explanation": "O nazireu abstinha-se de vinho, não cortava o cabelo e evitava contato com mortos (Nm 6:2-5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 6,
+        "verse_start": 2,
+        "verse_end": 5
+      },
+      "theme": "Votos",
+      "difficulty": "expert",
+      "subcategory": "Consagração",
+      "tags": [
+        "nazireu",
+        "voto"
+      ]
+    },
+    {
+      "external_id": "costumes-judaicos-0022",
+      "type": "multiple_choice",
+      "text": "Que prática deixava as espigas caídas e os cantos do campo para os pobres e estrangeiros?",
+      "options": [
+        {
+          "text": "A respiga",
+          "correct": true
+        },
+        {
+          "text": "O dízimo",
+          "correct": false
+        },
+        {
+          "text": "O jubileu",
+          "correct": false
+        },
+        {
+          "text": "As primícias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Não segarás totalmente os cantos do teu campo... para o pobre e para o estrangeiro os deixarás' (Lv 19:9-10) — pano de fundo de Rute.",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 19,
+        "verse_start": 9,
+        "verse_end": 10
+      },
+      "theme": "Justiça social",
+      "difficulty": "expert",
+      "subcategory": "Leis da colheita",
+      "tags": [
+        "respiga",
+        "pobres"
+      ]
     }
   ]
 }

@@ -764,6 +764,71 @@
         "joao batista",
         "judeia"
       ]
+    },
+    {
+      "external_id": "geografia-biblica-0021",
+      "type": "open_answer",
+      "text": "Em que vale Davi enfrentou e matou Golias?",
+      "options": null,
+      "accepted_answers": [
+        "Vale de Elá",
+        "Elá",
+        "Vale do Carvalho"
+      ],
+      "explanation": "Os filisteus e Israel acamparam no vale de Elá quando Davi derrotou Golias (1Sm 17:2,19).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 17,
+        "verse_start": 2,
+        "verse_end": 3
+      },
+      "theme": "Vales",
+      "difficulty": "expert",
+      "subcategory": "Geografia da monarquia",
+      "tags": [
+        "ela",
+        "golias"
+      ]
+    },
+    {
+      "external_id": "geografia-biblica-0022",
+      "type": "multiple_choice",
+      "text": "Qual cidade é chamada nas Escrituras de 'cidade das palmeiras'?",
+      "options": [
+        {
+          "text": "Jericó",
+          "correct": true
+        },
+        {
+          "text": "Jerusalém",
+          "correct": false
+        },
+        {
+          "text": "Jope",
+          "correct": false
+        },
+        {
+          "text": "Betel",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jericó é assim descrita (Dt 34:3; 2Cr 28:15), oásis fértil no vale do Jordão.",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 34,
+        "verse_start": 3,
+        "verse_end": null
+      },
+      "theme": "Cidades",
+      "difficulty": "expert",
+      "subcategory": "Geografia da conquista",
+      "tags": [
+        "jerico",
+        "palmeiras"
+      ]
     }
   ]
 }

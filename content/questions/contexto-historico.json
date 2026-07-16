@@ -778,6 +778,84 @@
         "felix",
         "cesareia"
       ]
+    },
+    {
+      "external_id": "contexto-historico-0021",
+      "type": "multiple_choice",
+      "text": "Qual tetrarca da Galileia, a quem Pilatos enviou Jesus, desejava ver um sinal?",
+      "options": [
+        {
+          "text": "Herodes Antipas",
+          "correct": true
+        },
+        {
+          "text": "Herodes, o Grande",
+          "correct": false
+        },
+        {
+          "text": "Herodes Agripa",
+          "correct": false
+        },
+        {
+          "text": "Arquelau",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Pilatos remeteu Jesus a Herodes Antipas, tetrarca da Galileia, que o interrogou sem resposta (Lc 23:7-9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 23,
+        "verse_start": 7,
+        "verse_end": 9
+      },
+      "theme": "Autoridades",
+      "difficulty": "expert",
+      "subcategory": "Mundo do NT",
+      "tags": [
+        "herodes antipas",
+        "paixao"
+      ]
+    },
+    {
+      "external_id": "contexto-historico-0022",
+      "type": "multiple_choice",
+      "text": "Como se chamava o supremo tribunal religioso judaico que julgou Jesus e os apóstolos?",
+      "options": [
+        {
+          "text": "O Sinédrio",
+          "correct": true
+        },
+        {
+          "text": "O Areópago",
+          "correct": false
+        },
+        {
+          "text": "O Senado",
+          "correct": false
+        },
+        {
+          "text": "A Sinagoga",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O Sinédrio, presidido pelo sumo sacerdote, reuniu-se para condenar Jesus (Mt 26:59) e depois julgar os apóstolos (At 5:27).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 26,
+        "verse_start": 59,
+        "verse_end": null
+      },
+      "theme": "Instituições",
+      "difficulty": "expert",
+      "subcategory": "Mundo do NT",
+      "tags": [
+        "sinedrio",
+        "tribunal"
+      ]
     }
   ]
 }

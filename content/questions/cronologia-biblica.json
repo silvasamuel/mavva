@@ -766,6 +766,84 @@
         "salomao",
         "reinado"
       ]
+    },
+    {
+      "external_id": "cronologia-biblica-0021",
+      "type": "multiple_choice",
+      "text": "Segundo Êxodo 12:40, quantos anos os israelitas habitaram no Egito?",
+      "options": [
+        {
+          "text": "Quatrocentos e trinta anos",
+          "correct": true
+        },
+        {
+          "text": "Quatrocentos anos",
+          "correct": false
+        },
+        {
+          "text": "Duzentos e quinze anos",
+          "correct": false
+        },
+        {
+          "text": "Setenta anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'A habitação dos filhos de Israel... foi de quatrocentos e trinta anos' (Êx 12:40).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 12,
+        "verse_start": 40,
+        "verse_end": 41
+      },
+      "theme": "Egito",
+      "difficulty": "expert",
+      "subcategory": "Êxodo",
+      "tags": [
+        "430 anos",
+        "egito"
+      ]
+    },
+    {
+      "external_id": "cronologia-biblica-0022",
+      "type": "multiple_choice",
+      "text": "Com cerca de quantos anos Jesus começou o seu ministério, segundo Lucas?",
+      "options": [
+        {
+          "text": "Trinta anos",
+          "correct": true
+        },
+        {
+          "text": "Vinte e cinco",
+          "correct": false
+        },
+        {
+          "text": "Trinta e três",
+          "correct": false
+        },
+        {
+          "text": "Quarenta",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Jesus... começava a ser de quase trinta anos' (Lc 3:23) ao iniciar o ministério.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 3,
+        "verse_start": 23,
+        "verse_end": null
+      },
+      "theme": "Vida de Jesus",
+      "difficulty": "expert",
+      "subcategory": "Novo Testamento",
+      "tags": [
+        "jesus",
+        "ministerio"
+      ]
     }
   ]
 }

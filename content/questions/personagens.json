@@ -720,6 +720,70 @@
         "maria madalena",
         "ressurreicao"
       ]
+    },
+    {
+      "external_id": "personagens-0021",
+      "type": "multiple_choice",
+      "text": "Qual foi o pai de Noé, que ao dá-lo à luz profetizou alívio do trabalho da terra amaldiçoada?",
+      "options": [
+        {
+          "text": "Lameque",
+          "correct": true
+        },
+        {
+          "text": "Matusalém",
+          "correct": false
+        },
+        {
+          "text": "Jarede",
+          "correct": false
+        },
+        {
+          "text": "Enoque",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Chamou-lhe Noé, dizendo: Este nos consolará' (Gn 5:28-29). Lameque, filho de Matusalém, foi pai de Noé.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 5,
+        "verse_start": 28,
+        "verse_end": 29
+      },
+      "theme": "Genealogia",
+      "difficulty": "expert",
+      "subcategory": "Antediluvianos",
+      "tags": [
+        "lameque",
+        "noe"
+      ]
+    },
+    {
+      "external_id": "personagens-0022",
+      "type": "open_answer",
+      "text": "Que juiz de Israel fez um voto precipitado que envolveu a sua própria filha?",
+      "options": null,
+      "accepted_answers": [
+        "Jefté",
+        "Jefte"
+      ],
+      "explanation": "Jefté prometeu oferecer o que primeiro saísse de casa se vencesse; foi sua filha quem o recebeu (Jz 11:30-39).",
+      "divergence_note": null,
+      "reference": {
+        "book": "juizes",
+        "chapter": 11,
+        "verse_start": 30,
+        "verse_end": 39
+      },
+      "theme": "Votos",
+      "difficulty": "expert",
+      "subcategory": "Juízes",
+      "tags": [
+        "jefte",
+        "voto"
+      ]
     }
   ]
 }

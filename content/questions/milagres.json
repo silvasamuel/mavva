@@ -736,6 +736,70 @@
         "pragas",
         "nilo"
       ]
+    },
+    {
+      "external_id": "milagres-0021",
+      "type": "multiple_choice",
+      "text": "Qual profeta multiplicou vinte pães de cevada para alimentar cem homens, com sobras?",
+      "options": [
+        {
+          "text": "Eliseu",
+          "correct": true
+        },
+        {
+          "text": "Elias",
+          "correct": false
+        },
+        {
+          "text": "Isaías",
+          "correct": false
+        },
+        {
+          "text": "Samuel",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Dá ao povo, para que coma... e ainda sobejará' (2Rs 4:42-44); Eliseu antecipa a multiplicação feita por Jesus.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 4,
+        "verse_start": 42,
+        "verse_end": 44
+      },
+      "theme": "Provisão",
+      "difficulty": "expert",
+      "subcategory": "Milagres dos profetas",
+      "tags": [
+        "eliseu",
+        "paes"
+      ]
+    },
+    {
+      "external_id": "milagres-0022",
+      "type": "open_answer",
+      "text": "Qual discípula Pedro ressuscitou em Jope, também chamada Dorcas?",
+      "options": null,
+      "accepted_answers": [
+        "Tabita",
+        "Dorcas"
+      ],
+      "explanation": "'Tabita, levanta-te. Ela abriu os olhos' (At 9:40); conhecida pelas boas obras, também chamada Dorcas.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 9,
+        "verse_start": 36,
+        "verse_end": 40
+      },
+      "theme": "Ressurreições",
+      "difficulty": "expert",
+      "subcategory": "Igreja primitiva",
+      "tags": [
+        "tabita",
+        "dorcas"
+      ]
     }
   ]
 }

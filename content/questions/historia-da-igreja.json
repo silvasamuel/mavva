@@ -780,6 +780,70 @@
         "nero",
         "perseguicao"
       ]
+    },
+    {
+      "external_id": "historia-da-igreja-0021",
+      "type": "open_answer",
+      "text": "Qual casal caiu morto após mentir ao Espírito Santo sobre o valor de uma venda?",
+      "options": null,
+      "accepted_answers": [
+        "Ananias e Safira",
+        "Ananias e Safira "
+      ],
+      "explanation": "Ananias e sua mulher Safira retiveram parte do preço e mentiram; caíram mortos, e grande temor veio sobre a igreja (At 5:1-11).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 5,
+        "verse_start": 1,
+        "verse_end": 11
+      },
+      "theme": "Disciplina",
+      "difficulty": "expert",
+      "subcategory": "Igreja primitiva",
+      "tags": [
+        "ananias",
+        "safira"
+      ]
+    },
+    {
+      "external_id": "historia-da-igreja-0022",
+      "type": "multiple_choice",
+      "text": "Quantos homens de boa reputação foram escolhidos para servir às mesas, os primeiros diáconos?",
+      "options": [
+        {
+          "text": "Sete",
+          "correct": true
+        },
+        {
+          "text": "Doze",
+          "correct": false
+        },
+        {
+          "text": "Três",
+          "correct": false
+        },
+        {
+          "text": "Setenta",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Os apóstolos mandaram escolher 'sete varões de boa reputação, cheios do Espírito Santo' (At 6:3-5), entre eles Estêvão e Filipe.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 6,
+        "verse_start": 3,
+        "verse_end": 5
+      },
+      "theme": "Ministérios",
+      "difficulty": "expert",
+      "subcategory": "Igreja primitiva",
+      "tags": [
+        "diaconos",
+        "sete"
+      ]
     }
   ]
 }

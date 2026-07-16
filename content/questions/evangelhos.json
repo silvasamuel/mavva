@@ -725,6 +725,70 @@
         "jumentinho",
         "hosana"
       ]
+    },
+    {
+      "external_id": "evangelhos-0021",
+      "type": "open_answer",
+      "text": "Qual profetisa idosa reconheceu o menino Jesus no templo, junto com Simeão?",
+      "options": null,
+      "accepted_answers": [
+        "Ana",
+        "A profetisa Ana"
+      ],
+      "explanation": "Ana, filha de Fanuel, da tribo de Aser, servia no templo e falou do menino aos que esperavam a redenção (Lc 2:36-38).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 2,
+        "verse_start": 36,
+        "verse_end": 38
+      },
+      "theme": "Infância de Jesus",
+      "difficulty": "expert",
+      "subcategory": "Personagens",
+      "tags": [
+        "ana",
+        "templo"
+      ]
+    },
+    {
+      "external_id": "evangelhos-0022",
+      "type": "multiple_choice",
+      "text": "Segundo João, qual discípulo apontou o menino com cinco pães e dois peixinhos?",
+      "options": [
+        {
+          "text": "André",
+          "correct": true
+        },
+        {
+          "text": "Filipe",
+          "correct": false
+        },
+        {
+          "text": "Pedro",
+          "correct": false
+        },
+        {
+          "text": "Tomé",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Está aqui um rapaz que tem cinco pães de cevada e dois peixinhos' (Jo 6:8-9), disse André antes da multiplicação.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 6,
+        "verse_start": 8,
+        "verse_end": 9
+      },
+      "theme": "Milagres",
+      "difficulty": "expert",
+      "subcategory": "Os Doze",
+      "tags": [
+        "andre",
+        "paes"
+      ]
     }
   ]
 }

@@ -764,6 +764,84 @@
         "eternidade",
         "consolacao"
       ]
+    },
+    {
+      "external_id": "escatologia-0021",
+      "type": "multiple_choice",
+      "text": "Quantos anciãos João viu assentados em tronos ao redor do trono de Deus?",
+      "options": [
+        {
+          "text": "Vinte e quatro",
+          "correct": true
+        },
+        {
+          "text": "Doze",
+          "correct": false
+        },
+        {
+          "text": "Setenta",
+          "correct": false
+        },
+        {
+          "text": "Sete",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Ao redor do trono havia vinte e quatro tronos, e... vinte e quatro anciãos assentados' (Ap 4:4).",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 4,
+        "verse_start": 4,
+        "verse_end": null
+      },
+      "theme": "Visão celestial",
+      "difficulty": "expert",
+      "subcategory": "Últimas coisas",
+      "tags": [
+        "ancioes",
+        "trono"
+      ]
+    },
+    {
+      "external_id": "escatologia-0022",
+      "type": "multiple_choice",
+      "text": "Qual é o número da besta mencionado em Apocalipse 13?",
+      "options": [
+        {
+          "text": "666",
+          "correct": true
+        },
+        {
+          "text": "777",
+          "correct": false
+        },
+        {
+          "text": "616",
+          "correct": false
+        },
+        {
+          "text": "144",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'É o número de um homem, e o seu número é seiscentos e sessenta e seis' (Ap 13:18).",
+      "divergence_note": "As tradições cristãs divergem quanto ao significado do número (identificação histórica, como Nero via gematria, ou símbolo da imperfeição/idolatria humana). A pergunta trata do dado do texto.",
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 13,
+        "verse_start": 18,
+        "verse_end": null
+      },
+      "theme": "Besta",
+      "difficulty": "expert",
+      "subcategory": "Últimas coisas",
+      "tags": [
+        "666",
+        "besta"
+      ]
     }
   ]
 }

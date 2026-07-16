@@ -736,6 +736,84 @@
         "sete",
         "abel"
       ]
+    },
+    {
+      "external_id": "genealogias-0021",
+      "type": "multiple_choice",
+      "text": "Qual primogênito de Jacó perdeu a primazia por profanar o leito de seu pai?",
+      "options": [
+        {
+          "text": "Rúben",
+          "correct": true
+        },
+        {
+          "text": "Simeão",
+          "correct": false
+        },
+        {
+          "text": "Levi",
+          "correct": false
+        },
+        {
+          "text": "Judá",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Rúben, tu és meu primogênito... não serás o mais excelente, porque subiste ao leito de teu pai' (Gn 49:3-4).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 49,
+        "verse_start": 3,
+        "verse_end": 4
+      },
+      "theme": "Primogenitura",
+      "difficulty": "expert",
+      "subcategory": "Filhos de Jacó",
+      "tags": [
+        "ruben",
+        "primogenitura"
+      ]
+    },
+    {
+      "external_id": "genealogias-0022",
+      "type": "multiple_choice",
+      "text": "Qual descendente de Cã é chamado 'poderoso caçador' e ligado a Babel e Nínive?",
+      "options": [
+        {
+          "text": "Ninrode",
+          "correct": true
+        },
+        {
+          "text": "Cuxe",
+          "correct": false
+        },
+        {
+          "text": "Mizraim",
+          "correct": false
+        },
+        {
+          "text": "Canaã",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Ninrode... foi poderoso caçador diante do SENHOR... o princípio do seu reino foi Babel' (Gn 10:8-11).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 10,
+        "verse_start": 8,
+        "verse_end": 11
+      },
+      "theme": "Nações",
+      "difficulty": "expert",
+      "subcategory": "Descendentes de Noé",
+      "tags": [
+        "ninrode",
+        "babel"
+      ]
     }
   ]
 }

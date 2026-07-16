@@ -748,6 +748,84 @@
         "saul",
         "benjamim"
       ]
+    },
+    {
+      "external_id": "reis-0021",
+      "type": "multiple_choice",
+      "text": "Qual rei de Judá foi escondido por seis anos e coroado aos sete pelo sacerdote Joiada?",
+      "options": [
+        {
+          "text": "Joás",
+          "correct": true
+        },
+        {
+          "text": "Uzias",
+          "correct": false
+        },
+        {
+          "text": "Amazias",
+          "correct": false
+        },
+        {
+          "text": "Josias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Protegido de Atalia, Joás foi ocultado no templo e proclamado rei aos sete anos por Joiada (2Rs 11:3-4,21).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 11,
+        "verse_start": 3,
+        "verse_end": 4
+      },
+      "theme": "Sucessão",
+      "difficulty": "expert",
+      "subcategory": "Reis de Judá",
+      "tags": [
+        "joas",
+        "joiada"
+      ]
+    },
+    {
+      "external_id": "reis-0022",
+      "type": "multiple_choice",
+      "text": "Qual rei de Israel comprou o monte de Samaria de Semer e ali edificou a capital?",
+      "options": [
+        {
+          "text": "Onri",
+          "correct": true
+        },
+        {
+          "text": "Acabe",
+          "correct": false
+        },
+        {
+          "text": "Jeú",
+          "correct": false
+        },
+        {
+          "text": "Baasa",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Comprou o monte de Samaria de Semer... e edificou no monte' (1Rs 16:24), tornando Samaria capital do Norte.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 16,
+        "verse_start": 23,
+        "verse_end": 24
+      },
+      "theme": "Capitais",
+      "difficulty": "expert",
+      "subcategory": "Reis do Norte",
+      "tags": [
+        "onri",
+        "samaria"
+      ]
     }
   ]
 }

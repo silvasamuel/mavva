@@ -746,6 +746,69 @@
         "filemom",
         "onesimo"
       ]
+    },
+    {
+      "external_id": "cartas-0021",
+      "type": "open_answer",
+      "text": "Qual diaconisa da igreja de Cencreia Paulo recomenda, tida como portadora da carta aos Romanos?",
+      "options": null,
+      "accepted_answers": [
+        "Febe"
+      ],
+      "explanation": "'Recomendo-vos Febe, nossa irmã, que serve na igreja de Cencreia' (Rm 16:1) — provável portadora da epístola.",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 16,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "theme": "Colaboradores",
+      "difficulty": "expert",
+      "subcategory": "Cartas paulinas",
+      "tags": [
+        "febe",
+        "cencreia"
+      ]
+    },
+    {
+      "external_id": "cartas-0022",
+      "type": "multiple_choice",
+      "text": "A qual igreja Paulo escreveu afirmando que muitos ali nunca tinham visto o seu rosto?",
+      "options": [
+        {
+          "text": "Colossos",
+          "correct": true
+        },
+        {
+          "text": "Corinto",
+          "correct": false
+        },
+        {
+          "text": "Éfeso",
+          "correct": false
+        },
+        {
+          "text": "Filipos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Quão grande combate tenho por vós... e por quantos não viram o meu rosto' (Cl 2:1); Paulo não fundou aquela igreja.",
+      "divergence_note": null,
+      "reference": {
+        "book": "colossenses",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "theme": "Destinatários",
+      "difficulty": "expert",
+      "subcategory": "Cartas paulinas",
+      "tags": [
+        "colossenses",
+        "paulo"
+      ]
     }
   ]
 }

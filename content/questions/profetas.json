@@ -733,6 +733,84 @@
         "jeremias",
         "campo"
       ]
+    },
+    {
+      "external_id": "profetas-0021",
+      "type": "multiple_choice",
+      "text": "Qual profeta teve visões de um prumo e de um cesto de frutos de verão contra Israel?",
+      "options": [
+        {
+          "text": "Amós",
+          "correct": true
+        },
+        {
+          "text": "Oseias",
+          "correct": false
+        },
+        {
+          "text": "Joel",
+          "correct": false
+        },
+        {
+          "text": "Miqueias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Amós viu o prumo (Am 7:7-8) e o cesto de frutos de verão (Am 8:1-2), sinais do juízo iminente sobre Israel.",
+      "divergence_note": null,
+      "reference": {
+        "book": "amos",
+        "chapter": 8,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "theme": "Visões",
+      "difficulty": "expert",
+      "subcategory": "Profetas menores",
+      "tags": [
+        "amos",
+        "visoes"
+      ]
+    },
+    {
+      "external_id": "profetas-0022",
+      "type": "multiple_choice",
+      "text": "Qual profeta usou um jugo de madeira, depois quebrado pelo falso profeta Hananias?",
+      "options": [
+        {
+          "text": "Jeremias",
+          "correct": true
+        },
+        {
+          "text": "Ezequiel",
+          "correct": false
+        },
+        {
+          "text": "Isaías",
+          "correct": false
+        },
+        {
+          "text": "Habacuque",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jeremias andava com um jugo simbolizando a servidão à Babilônia; Hananias o quebrou, mas a palavra de Deus prevaleceu (Jr 28:10-11).",
+      "divergence_note": null,
+      "reference": {
+        "book": "jeremias",
+        "chapter": 28,
+        "verse_start": 10,
+        "verse_end": 11
+      },
+      "theme": "Atos proféticos",
+      "difficulty": "expert",
+      "subcategory": "Profetas maiores",
+      "tags": [
+        "jeremias",
+        "jugo"
+      ]
     }
   ]
 }
