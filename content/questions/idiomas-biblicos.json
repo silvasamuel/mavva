@@ -6,180 +6,724 @@
       "type": "multiple_choice",
       "text": "Em qual idioma foi escrita a maior parte do Antigo Testamento?",
       "options": [
-        { "text": "Hebraico", "correct": true },
-        { "text": "Aramaico", "correct": false },
-        { "text": "Grego", "correct": false },
-        { "text": "Latim", "correct": false }
+        {
+          "text": "Hebraico",
+          "correct": true
+        },
+        {
+          "text": "Aramaico",
+          "correct": false
+        },
+        {
+          "text": "Grego",
+          "correct": false
+        },
+        {
+          "text": "Latim",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "O Antigo Testamento foi escrito em hebraico, a \"língua de Canaã\" (Is 19:18), com algumas seções em aramaico. A ele Paulo se refere: \"aos judeus foram confiados os oráculos de Deus\" (Rm 3:2).",
       "divergence_note": null,
-      "reference": { "book": "romanos", "chapter": 3, "verse_start": 1, "verse_end": 2 },
+      "reference": {
+        "book": "romanos",
+        "chapter": 3,
+        "verse_start": 1,
+        "verse_end": 2
+      },
       "theme": "Línguas originais",
       "difficulty": "easy",
       "subcategory": "Hebraico",
-      "tags": ["hebraico", "antigo testamento", "linguas"]
+      "tags": [
+        "hebraico",
+        "antigo testamento",
+        "linguas"
+      ]
     },
     {
       "external_id": "idiomas-biblicos-0002",
       "type": "open_answer",
       "text": "O que significa o nome \"Emanuel\"?",
       "options": null,
-      "accepted_answers": ["Deus conosco", "Deus é conosco"],
+      "accepted_answers": [
+        "Deus conosco",
+        "Deus é conosco"
+      ],
       "explanation": "\"E chamá-lo-ão pelo nome de Emanuel, que traduzido é: Deus conosco\" (Mt 1:23, citando Is 7:14). O hebraico immanu (conosco) + El (Deus) resume a encarnação numa palavra.",
       "divergence_note": null,
-      "reference": { "book": "mateus", "chapter": 1, "verse_start": 23, "verse_end": 23 },
+      "reference": {
+        "book": "mateus",
+        "chapter": 1,
+        "verse_start": 23,
+        "verse_end": 23
+      },
       "theme": "Nomes e significados",
       "difficulty": "easy",
       "subcategory": "Hebraico",
-      "tags": ["emanuel", "deus conosco", "nomes"]
+      "tags": [
+        "emanuel",
+        "deus conosco",
+        "nomes"
+      ]
     },
     {
       "external_id": "idiomas-biblicos-0003",
       "type": "multiple_choice",
       "text": "O que significa \"Abba\", palavra aramaica que Jesus usou ao orar no Getsêmani?",
       "options": [
-        { "text": "Pai", "correct": true },
-        { "text": "Senhor", "correct": false },
-        { "text": "Mestre", "correct": false },
-        { "text": "Santo", "correct": false }
+        {
+          "text": "Pai",
+          "correct": true
+        },
+        {
+          "text": "Senhor",
+          "correct": false
+        },
+        {
+          "text": "Mestre",
+          "correct": false
+        },
+        {
+          "text": "Santo",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Aba, Pai, todas as coisas te são possíveis\" (Mc 14:36) — termo aramaico de intimidade filial. Paulo o estende a todo crente: \"recebestes o espírito de adoção de filhos, pelo qual clamamos: Aba, Pai\" (Rm 8:15).",
       "divergence_note": null,
-      "reference": { "book": "marcos", "chapter": 14, "verse_start": 36, "verse_end": 36 },
+      "reference": {
+        "book": "marcos",
+        "chapter": 14,
+        "verse_start": 36,
+        "verse_end": 36
+      },
       "theme": "Palavras de Jesus",
       "difficulty": "medium",
       "subcategory": "Aramaico",
-      "tags": ["abba", "pai", "aramaico"]
+      "tags": [
+        "abba",
+        "pai",
+        "aramaico"
+      ]
     },
     {
       "external_id": "idiomas-biblicos-0004",
       "type": "multiple_choice",
       "text": "O que significa \"Talita cumi\", dito por Jesus à filha de Jairo?",
       "options": [
-        { "text": "\"Menina, levanta-te\"", "correct": true },
-        { "text": "\"Sê curada, filha\"", "correct": false },
-        { "text": "\"A paz seja contigo\"", "correct": false },
-        { "text": "\"Abre os teus olhos\"", "correct": false }
+        {
+          "text": "\"Menina, levanta-te\"",
+          "correct": true
+        },
+        {
+          "text": "\"Sê curada, filha\"",
+          "correct": false
+        },
+        {
+          "text": "\"A paz seja contigo\"",
+          "correct": false
+        },
+        {
+          "text": "\"Abre os teus olhos\"",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Talita cumi, que, traduzido, é: Menina, a ti te digo, levanta-te\" (Mc 5:41). Marcos preserva o aramaico original de Jesus em vários momentos — Efatá (\"abre-te\", Mc 7:34) é outro exemplo.",
       "divergence_note": null,
-      "reference": { "book": "marcos", "chapter": 5, "verse_start": 41, "verse_end": 42 },
+      "reference": {
+        "book": "marcos",
+        "chapter": 5,
+        "verse_start": 41,
+        "verse_end": 42
+      },
       "theme": "Palavras de Jesus",
       "difficulty": "medium",
       "subcategory": "Aramaico",
-      "tags": ["talita cumi", "jairo", "aramaico"]
+      "tags": [
+        "talita cumi",
+        "jairo",
+        "aramaico"
+      ]
     },
     {
       "external_id": "idiomas-biblicos-0005",
       "type": "multiple_choice",
       "text": "Qual o significado do clamor de Jesus na cruz: \"Eli, Eli, lamá sabactâni\"?",
       "options": [
-        { "text": "\"Deus meu, Deus meu, por que me desamparaste?\"", "correct": true },
-        { "text": "\"Pai, perdoa-lhes, porque não sabem o que fazem\"", "correct": false },
-        { "text": "\"Nas tuas mãos entrego o meu espírito\"", "correct": false },
-        { "text": "\"Elias, Elias, vem me socorrer\"", "correct": false }
+        {
+          "text": "\"Deus meu, Deus meu, por que me desamparaste?\"",
+          "correct": true
+        },
+        {
+          "text": "\"Pai, perdoa-lhes, porque não sabem o que fazem\"",
+          "correct": false
+        },
+        {
+          "text": "\"Nas tuas mãos entrego o meu espírito\"",
+          "correct": false
+        },
+        {
+          "text": "\"Elias, Elias, vem me socorrer\"",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Mateus 27:46 traduz o clamor, que cita o Salmo 22:1. Os presentes confundiram \"Eli\" com um chamado a Elias (Mt 27:47) — mas Jesus orava o salmo do justo sofredor, que termina em vindicação.",
       "divergence_note": null,
-      "reference": { "book": "mateus", "chapter": 27, "verse_start": 45, "verse_end": 47 },
+      "reference": {
+        "book": "mateus",
+        "chapter": 27,
+        "verse_start": 45,
+        "verse_end": 47
+      },
       "theme": "Palavras de Jesus",
       "difficulty": "medium",
       "subcategory": "Aramaico",
-      "tags": ["eli eli", "cruz", "salmo 22"]
+      "tags": [
+        "eli eli",
+        "cruz",
+        "salmo 22"
+      ]
     },
     {
       "external_id": "idiomas-biblicos-0006",
       "type": "multiple_choice",
       "text": "Quais livros do Antigo Testamento contêm longas seções em aramaico?",
       "options": [
-        { "text": "Daniel e Esdras", "correct": true },
-        { "text": "Gênesis e Êxodo", "correct": false },
-        { "text": "Salmos e Provérbios", "correct": false },
-        { "text": "Isaías e Jeremias", "correct": false }
+        {
+          "text": "Daniel e Esdras",
+          "correct": true
+        },
+        {
+          "text": "Gênesis e Êxodo",
+          "correct": false
+        },
+        {
+          "text": "Salmos e Provérbios",
+          "correct": false
+        },
+        {
+          "text": "Isaías e Jeremias",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Daniel 2:4-7:28 e Esdras 4:8-6:18; 7:12-26 estão em aramaico — a língua diplomática dos impérios babilônico e persa, cenário desses livros. O aramaico era a língua franca do Oriente até ser substituído pelo grego.",
       "divergence_note": null,
-      "reference": { "book": "daniel", "chapter": 2, "verse_start": 4, "verse_end": 4 },
+      "reference": {
+        "book": "daniel",
+        "chapter": 2,
+        "verse_start": 4,
+        "verse_end": 4
+      },
       "theme": "Línguas originais",
       "difficulty": "hard",
       "subcategory": "Aramaico",
-      "tags": ["daniel", "esdras", "aramaico"]
+      "tags": [
+        "daniel",
+        "esdras",
+        "aramaico"
+      ]
     },
     {
       "external_id": "idiomas-biblicos-0007",
       "type": "multiple_choice",
       "text": "O que foi a Septuaginta (LXX)?",
       "options": [
-        { "text": "A tradução grega do Antigo Testamento, feita antes de Cristo", "correct": true },
-        { "text": "A primeira tradução latina da Bíblia", "correct": false },
-        { "text": "Uma coleção de setenta salmos", "correct": false },
-        { "text": "O conjunto dos setenta discípulos enviados por Jesus", "correct": false }
+        {
+          "text": "A tradução grega do Antigo Testamento, feita antes de Cristo",
+          "correct": true
+        },
+        {
+          "text": "A primeira tradução latina da Bíblia",
+          "correct": false
+        },
+        {
+          "text": "Uma coleção de setenta salmos",
+          "correct": false
+        },
+        {
+          "text": "O conjunto dos setenta discípulos enviados por Jesus",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Feita em Alexandria a partir do século III a.C., a Septuaginta levou as Escrituras aos judeus de fala grega. Os apóstolos frequentemente citam o AT por ela — a Bíblia da igreja primitiva em expansão.",
       "divergence_note": "O nome (\"Setenta\") vem da tradição da Carta de Aristeias, segundo a qual setenta e dois anciãos teriam feito a tradução — relato lendário em seus detalhes, segundo os historiadores, embora a tradução em si seja fato bem estabelecido.",
-      "reference": { "book": "atos", "chapter": 8, "verse_start": 30, "verse_end": 35 },
+      "reference": {
+        "book": "atos",
+        "chapter": 8,
+        "verse_start": 30,
+        "verse_end": 35
+      },
       "theme": "Traduções antigas",
       "difficulty": "hard",
       "subcategory": "Grego",
-      "tags": ["septuaginta", "traducao", "grego"]
+      "tags": [
+        "septuaginta",
+        "traducao",
+        "grego"
+      ]
     },
     {
       "external_id": "idiomas-biblicos-0008",
       "type": "multiple_choice",
       "text": "O que significa \"Maranata\", expressão aramaica preservada por Paulo em 1 Coríntios 16:22?",
       "options": [
-        { "text": "\"O Senhor vem\" (ou \"Vem, Senhor\")", "correct": true },
-        { "text": "\"Deus é amor\"", "correct": false },
-        { "text": "\"Paz e graça\"", "correct": false },
-        { "text": "\"Assim seja\"", "correct": false }
+        {
+          "text": "\"O Senhor vem\" (ou \"Vem, Senhor\")",
+          "correct": true
+        },
+        {
+          "text": "\"Deus é amor\"",
+          "correct": false
+        },
+        {
+          "text": "\"Paz e graça\"",
+          "correct": false
+        },
+        {
+          "text": "\"Assim seja\"",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Marana tha — \"Vem, Senhor nosso!\" — era oração da igreja primitiva de fala aramaica, preservada até em cartas gregas. Apocalipse a ecoa em grego: \"Vem, Senhor Jesus\" (Ap 22:20).",
       "divergence_note": null,
-      "reference": { "book": "1corintios", "chapter": 16, "verse_start": 22, "verse_end": 22 },
+      "reference": {
+        "book": "1corintios",
+        "chapter": 16,
+        "verse_start": 22,
+        "verse_end": 22
+      },
       "theme": "Orações da igreja",
       "difficulty": "hard",
       "subcategory": "Aramaico",
-      "tags": ["maranata", "vinda", "oracao"]
+      "tags": [
+        "maranata",
+        "vinda",
+        "oracao"
+      ]
     },
     {
       "external_id": "idiomas-biblicos-0009",
       "type": "multiple_choice",
       "text": "Qual nome Deus revelou a Moisés na sarça ardente, ligado ao verbo \"ser\" em hebraico?",
       "options": [
-        { "text": "\"EU SOU O QUE SOU\" (YHWH)", "correct": true },
-        { "text": "\"El Shaddai\"", "correct": false },
-        { "text": "\"Adonai Tsevaot\"", "correct": false },
-        { "text": "\"Elohim Elyon\"", "correct": false }
+        {
+          "text": "\"EU SOU O QUE SOU\" (YHWH)",
+          "correct": true
+        },
+        {
+          "text": "\"El Shaddai\"",
+          "correct": false
+        },
+        {
+          "text": "\"Adonai Tsevaot\"",
+          "correct": false
+        },
+        {
+          "text": "\"Elohim Elyon\"",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"EU SOU O QUE SOU... assim dirás: EU SOU me enviou a vós\" (Êx 3:14). O tetragrama YHWH, relacionado ao verbo ser, é o nome próprio de Deus no AT — que Jesus evoca nos seus \"EU SOU\" (Jo 8:58).",
       "divergence_note": null,
-      "reference": { "book": "exodo", "chapter": 3, "verse_start": 13, "verse_end": 15 },
+      "reference": {
+        "book": "exodo",
+        "chapter": 3,
+        "verse_start": 13,
+        "verse_end": 15
+      },
       "theme": "Nomes de Deus",
       "difficulty": "medium",
       "subcategory": "Hebraico",
-      "tags": ["yhwh", "eu sou", "sarca"]
+      "tags": [
+        "yhwh",
+        "eu sou",
+        "sarca"
+      ]
     },
     {
       "external_id": "idiomas-biblicos-0010",
       "type": "open_answer",
       "text": "Que palavra hebraica, usada nos Salmos e adotada pela igreja, significa \"louvai ao Senhor\"?",
       "options": null,
-      "accepted_answers": ["Aleluia", "Hallelujah", "Halleluia", "Aleluya"],
+      "accepted_answers": [
+        "Aleluia",
+        "Hallelujah",
+        "Halleluia",
+        "Aleluya"
+      ],
       "explanation": "Hallelu-Yah — \"louvai a Yah(weh)\" — abre e fecha vários salmos (Sl 146-150) e ressoa no céu em Apocalipse 19:1-6: \"Aleluia! Pois já o Senhor Deus Todo-Poderoso reina\".",
       "divergence_note": null,
-      "reference": { "book": "salmos", "chapter": 150, "verse_start": 1, "verse_end": 6 },
+      "reference": {
+        "book": "salmos",
+        "chapter": 150,
+        "verse_start": 1,
+        "verse_end": 6
+      },
       "theme": "Louvor",
       "difficulty": "easy",
       "subcategory": "Hebraico",
-      "tags": ["aleluia", "louvor", "salmos"]
+      "tags": [
+        "aleluia",
+        "louvor",
+        "salmos"
+      ]
+    },
+    {
+      "external_id": "idiomas-biblicos-0011",
+      "type": "multiple_choice",
+      "text": "Em que idioma foi escrita a maior parte do Antigo Testamento?",
+      "options": [
+        {
+          "text": "Hebraico",
+          "correct": true
+        },
+        {
+          "text": "Grego",
+          "correct": false
+        },
+        {
+          "text": "Latim",
+          "correct": false
+        },
+        {
+          "text": "Aramaico",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O AT foi escrito majoritariamente em hebraico (com trechos em aramaico), a exemplo de 'Bereshit' em Gênesis 1:1.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "theme": "Línguas originais",
+      "difficulty": "medium",
+      "subcategory": "Antigo Testamento",
+      "tags": [
+        "hebraico",
+        "at"
+      ]
+    },
+    {
+      "external_id": "idiomas-biblicos-0012",
+      "type": "multiple_choice",
+      "text": "Em que idioma foi escrito o Novo Testamento?",
+      "options": [
+        {
+          "text": "Grego (koiné)",
+          "correct": true
+        },
+        {
+          "text": "Hebraico",
+          "correct": false
+        },
+        {
+          "text": "Latim",
+          "correct": false
+        },
+        {
+          "text": "Siríaco",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O NT foi escrito em grego koiné, língua franca do Império; a inscrição na cruz foi em hebraico, grego e latim (Jo 19:20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 19,
+        "verse_start": 20,
+        "verse_end": null
+      },
+      "theme": "Línguas originais",
+      "difficulty": "medium",
+      "subcategory": "Novo Testamento",
+      "tags": [
+        "grego",
+        "nt"
+      ]
+    },
+    {
+      "external_id": "idiomas-biblicos-0013",
+      "type": "open_answer",
+      "text": "O que significa a palavra 'Emanuel', dada como nome ao Messias?",
+      "options": null,
+      "accepted_answers": [
+        "Deus conosco",
+        "Deus está conosco"
+      ],
+      "explanation": "'Chamá-lo-ão Emanuel, que traduzido é: Deus conosco' (Mt 1:23; Is 7:14).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 1,
+        "verse_start": 23,
+        "verse_end": null
+      },
+      "theme": "Nomes",
+      "difficulty": "hard",
+      "subcategory": "Significados",
+      "tags": [
+        "emanuel",
+        "messias"
+      ]
+    },
+    {
+      "external_id": "idiomas-biblicos-0014",
+      "type": "multiple_choice",
+      "text": "O que significa a exclamação 'Aleluia'?",
+      "options": [
+        {
+          "text": "Louvai ao SENHOR",
+          "correct": true
+        },
+        {
+          "text": "Assim seja",
+          "correct": false
+        },
+        {
+          "text": "Deus é grande",
+          "correct": false
+        },
+        {
+          "text": "Salva-nos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Aleluia' (hallelu-Yah) significa 'louvai ao SENHOR', comum nos Salmos e em Apocalipse 19:1.",
+      "divergence_note": null,
+      "reference": {
+        "book": "salmos",
+        "chapter": 150,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "theme": "Louvor",
+      "difficulty": "medium",
+      "subcategory": "Significados",
+      "tags": [
+        "aleluia",
+        "louvor"
+      ]
+    },
+    {
+      "external_id": "idiomas-biblicos-0015",
+      "type": "multiple_choice",
+      "text": "Qual palavra Jesus clamou na cruz — 'Eloí, Eloí, lamá sabactâni'?",
+      "options": [
+        {
+          "text": "'Deus meu, Deus meu, por que me desamparaste?'",
+          "correct": true
+        },
+        {
+          "text": "'Está consumado'",
+          "correct": false
+        },
+        {
+          "text": "'Pai, em tuas mãos'",
+          "correct": false
+        },
+        {
+          "text": "'Tenho sede'",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Em aramaico, Jesus citou o Salmo 22:1 na cruz (Mc 15:34).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 15,
+        "verse_start": 34,
+        "verse_end": null
+      },
+      "theme": "Palavras da cruz",
+      "difficulty": "expert",
+      "subcategory": "Aramaico",
+      "tags": [
+        "sabactani",
+        "cruz"
+      ]
+    },
+    {
+      "external_id": "idiomas-biblicos-0016",
+      "type": "open_answer",
+      "text": "O que significa o nome 'Jesus' (Yeshua)?",
+      "options": null,
+      "accepted_answers": [
+        "O Senhor salva",
+        "O SENHOR salva",
+        "Salvador",
+        "Javé salva"
+      ],
+      "explanation": "'Chamarás o seu nome Jesus, porque ele salvará o seu povo dos pecados' (Mt 1:21).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 1,
+        "verse_start": 21,
+        "verse_end": null
+      },
+      "theme": "Nomes",
+      "difficulty": "medium",
+      "subcategory": "Significados",
+      "tags": [
+        "jesus",
+        "salvacao"
+      ]
+    },
+    {
+      "external_id": "idiomas-biblicos-0017",
+      "type": "multiple_choice",
+      "text": "O que significam 'Messias' (hebraico) e 'Cristo' (grego)?",
+      "options": [
+        {
+          "text": "Ungido",
+          "correct": true
+        },
+        {
+          "text": "Salvador",
+          "correct": false
+        },
+        {
+          "text": "Rei",
+          "correct": false
+        },
+        {
+          "text": "Profeta",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Achamos o Messias (que, traduzido, é o Cristo)' (Jo 1:41) — ambos significam 'ungido'.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 1,
+        "verse_start": 41,
+        "verse_end": null
+      },
+      "theme": "Títulos",
+      "difficulty": "hard",
+      "subcategory": "Significados",
+      "tags": [
+        "messias",
+        "cristo"
+      ]
+    },
+    {
+      "external_id": "idiomas-biblicos-0018",
+      "type": "open_answer",
+      "text": "Que palavra aramaica que significa 'Pai' Jesus usou no Getsêmani, também empregada por Paulo?",
+      "options": null,
+      "accepted_answers": [
+        "Aba",
+        "Abba"
+      ],
+      "explanation": "'Aba, Pai, tudo te é possível' (Mc 14:36); Paulo a retoma para a adoção dos filhos (Rm 8:15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 14,
+        "verse_start": 36,
+        "verse_end": null
+      },
+      "theme": "Intimidade",
+      "difficulty": "expert",
+      "subcategory": "Aramaico",
+      "tags": [
+        "aba",
+        "pai"
+      ]
+    },
+    {
+      "external_id": "idiomas-biblicos-0019",
+      "type": "multiple_choice",
+      "text": "O que significa 'Amém', dito ao fim das orações?",
+      "options": [
+        {
+          "text": "Assim seja / é firme, verdadeiro",
+          "correct": true
+        },
+        {
+          "text": "Louvado seja",
+          "correct": false
+        },
+        {
+          "text": "Para sempre",
+          "correct": false
+        },
+        {
+          "text": "Ouve-nos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Amém' vem de uma raiz hebraica de firmeza e verdade; era a resposta do povo às bênçãos e maldições (Dt 27:15-26).",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 27,
+        "verse_start": 15,
+        "verse_end": 26
+      },
+      "theme": "Confirmação",
+      "difficulty": "hard",
+      "subcategory": "Significados",
+      "tags": [
+        "amem",
+        "verdade"
+      ]
+    },
+    {
+      "external_id": "idiomas-biblicos-0020",
+      "type": "multiple_choice",
+      "text": "O que a multidão gritava com 'Hosana' na entrada triunfal?",
+      "options": [
+        {
+          "text": "'Salva-nos agora!' (súplica e louvor)",
+          "correct": true
+        },
+        {
+          "text": "'Adeus!'",
+          "correct": false
+        },
+        {
+          "text": "'Vitória!'",
+          "correct": false
+        },
+        {
+          "text": "'Silêncio!'",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Hosana' (do Sl 118:25, 'salva-nos agora') tornou-se aclamação messiânica ao Filho de Davi (Mt 21:9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 21,
+        "verse_start": 9,
+        "verse_end": null
+      },
+      "theme": "Aclamação",
+      "difficulty": "medium",
+      "subcategory": "Significados",
+      "tags": [
+        "hosana",
+        "entrada triunfal"
+      ]
     }
   ]
 }

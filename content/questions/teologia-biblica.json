@@ -6,190 +6,777 @@
       "type": "multiple_choice",
       "text": "Qual sinal Deus deu da sua aliança com Noé, prometendo nunca mais destruir a terra com dilúvio?",
       "options": [
-        { "text": "O arco nas nuvens", "correct": true },
-        { "text": "Uma coluna de fogo", "correct": false },
-        { "text": "A circuncisão", "correct": false },
-        { "text": "O sábado", "correct": false }
+        {
+          "text": "O arco nas nuvens",
+          "correct": true
+        },
+        {
+          "text": "Uma coluna de fogo",
+          "correct": false
+        },
+        {
+          "text": "A circuncisão",
+          "correct": false
+        },
+        {
+          "text": "O sábado",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"O meu arco tenho posto nas nuvens; este será por sinal da aliança entre mim e a terra\" (Gn 9:13). Cada aliança bíblica traz um sinal: o arco (Noé), a circuncisão (Abraão), o sábado (Sinai), o cálice (nova aliança).",
       "divergence_note": null,
-      "reference": { "book": "genesis", "chapter": 9, "verse_start": 8, "verse_end": 17 },
+      "reference": {
+        "book": "genesis",
+        "chapter": 9,
+        "verse_start": 8,
+        "verse_end": 17
+      },
       "theme": "Aliança",
       "difficulty": "easy",
       "subcategory": "Alianças",
-      "tags": ["arco iris", "noe", "alianca"]
+      "tags": [
+        "arco iris",
+        "noe",
+        "alianca"
+      ]
     },
     {
       "external_id": "teologia-biblica-0002",
       "type": "multiple_choice",
       "text": "Como João Batista apresentou Jesus, ligando-o a todo o sistema de sacrifícios do Antigo Testamento?",
       "options": [
-        { "text": "\"Eis o Cordeiro de Deus, que tira o pecado do mundo\"", "correct": true },
-        { "text": "\"Eis o Leão da tribo de Judá\"", "correct": false },
-        { "text": "\"Eis o Sumo Sacerdote eterno\"", "correct": false },
-        { "text": "\"Eis a Estrela da manhã\"", "correct": false }
+        {
+          "text": "\"Eis o Cordeiro de Deus, que tira o pecado do mundo\"",
+          "correct": true
+        },
+        {
+          "text": "\"Eis o Leão da tribo de Judá\"",
+          "correct": false
+        },
+        {
+          "text": "\"Eis o Sumo Sacerdote eterno\"",
+          "correct": false
+        },
+        {
+          "text": "\"Eis a Estrela da manhã\"",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Eis o Cordeiro de Deus\" (Jo 1:29) reúne o cordeiro pascal (Êx 12), o cordeiro do sacrifício diário e o cordeiro de Isaías 53:7. O fio corre até o Apocalipse, onde o Cordeiro está no centro do trono (Ap 5:6).",
       "divergence_note": null,
-      "reference": { "book": "joao", "chapter": 1, "verse_start": 29, "verse_end": 29 },
+      "reference": {
+        "book": "joao",
+        "chapter": 1,
+        "verse_start": 29,
+        "verse_end": 29
+      },
       "theme": "Cordeiro de Deus",
       "difficulty": "medium",
       "subcategory": "Temas messiânicos",
-      "tags": ["cordeiro", "sacrificio", "joao batista"]
+      "tags": [
+        "cordeiro",
+        "sacrificio",
+        "joao batista"
+      ]
     },
     {
       "external_id": "teologia-biblica-0003",
       "type": "multiple_choice",
       "text": "Segundo Gênesis 1:27, o que distingue o ser humano de toda a criação?",
       "options": [
-        { "text": "Foi criado à imagem e semelhança de Deus", "correct": true },
-        { "text": "Foi criado no primeiro dia", "correct": false },
-        { "text": "Foi criado a partir dos anjos", "correct": false },
-        { "text": "Recebeu vida eterna incondicional", "correct": false }
+        {
+          "text": "Foi criado à imagem e semelhança de Deus",
+          "correct": true
+        },
+        {
+          "text": "Foi criado no primeiro dia",
+          "correct": false
+        },
+        {
+          "text": "Foi criado a partir dos anjos",
+          "correct": false
+        },
+        {
+          "text": "Recebeu vida eterna incondicional",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Criou Deus o homem à sua imagem; à imagem de Deus o criou; homem e mulher os criou\" (Gn 1:27). Daí decorrem a dignidade de toda vida humana (Gn 9:6) e a vocação de representar Deus governando a criação (Gn 1:28).",
       "divergence_note": null,
-      "reference": { "book": "genesis", "chapter": 1, "verse_start": 26, "verse_end": 28 },
+      "reference": {
+        "book": "genesis",
+        "chapter": 1,
+        "verse_start": 26,
+        "verse_end": 28
+      },
       "theme": "Imagem de Deus",
       "difficulty": "easy",
       "subcategory": "Criação",
-      "tags": ["imagem de deus", "criacao", "dignidade"]
+      "tags": [
+        "imagem de deus",
+        "criacao",
+        "dignidade"
+      ]
     },
     {
       "external_id": "teologia-biblica-0004",
       "type": "multiple_choice",
       "text": "Qual versículo de Gênesis é chamado de \"protoevangelho\", a primeira promessa do Redentor?",
       "options": [
-        { "text": "Gênesis 3:15 — a semente da mulher ferirá a cabeça da serpente", "correct": true },
-        { "text": "Gênesis 1:1 — no princípio criou Deus os céus e a terra", "correct": false },
-        { "text": "Gênesis 6:8 — Noé achou graça aos olhos do Senhor", "correct": false },
-        { "text": "Gênesis 22:8 — Deus proverá para si o cordeiro", "correct": false }
+        {
+          "text": "Gênesis 3:15 — a semente da mulher ferirá a cabeça da serpente",
+          "correct": true
+        },
+        {
+          "text": "Gênesis 1:1 — no princípio criou Deus os céus e a terra",
+          "correct": false
+        },
+        {
+          "text": "Gênesis 6:8 — Noé achou graça aos olhos do Senhor",
+          "correct": false
+        },
+        {
+          "text": "Gênesis 22:8 — Deus proverá para si o cordeiro",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Ainda no Éden, Deus anuncia à serpente: \"porei inimizade entre ti e a mulher... esta te ferirá a cabeça, e tu lhe ferirás o calcanhar\" (Gn 3:15) — o evangelho em semente: o Descendente esmagaria a serpente sendo ferido no processo (cf. Rm 16:20).",
       "divergence_note": null,
-      "reference": { "book": "genesis", "chapter": 3, "verse_start": 14, "verse_end": 15 },
+      "reference": {
+        "book": "genesis",
+        "chapter": 3,
+        "verse_start": 14,
+        "verse_end": 15
+      },
       "theme": "Promessa messiânica",
       "difficulty": "hard",
       "subcategory": "Temas messiânicos",
-      "tags": ["protoevangelho", "semente", "serpente"]
+      "tags": [
+        "protoevangelho",
+        "semente",
+        "serpente"
+      ]
     },
     {
       "external_id": "teologia-biblica-0005",
       "type": "multiple_choice",
       "text": "Qual era o tema central da pregação de Jesus, segundo Marcos 1:15?",
       "options": [
-        { "text": "\"Está próximo o Reino de Deus; arrependei-vos e crede no evangelho\"", "correct": true },
-        { "text": "\"Guardai a Lei de Moisés\"", "correct": false },
-        { "text": "\"O templo será reconstruído\"", "correct": false },
-        { "text": "\"Libertai-vos de Roma\"", "correct": false }
+        {
+          "text": "\"Está próximo o Reino de Deus; arrependei-vos e crede no evangelho\"",
+          "correct": true
+        },
+        {
+          "text": "\"Guardai a Lei de Moisés\"",
+          "correct": false
+        },
+        {
+          "text": "\"O templo será reconstruído\"",
+          "correct": false
+        },
+        {
+          "text": "\"Libertai-vos de Roma\"",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"O tempo está cumprido, e o Reino de Deus está próximo. Arrependei-vos, e crede no evangelho\" (Mc 1:15). O Reino — o governo de Deus irrompendo em Cristo — atravessa as parábolas, o Sermão do Monte e a oração \"venha o teu Reino\".",
       "divergence_note": null,
-      "reference": { "book": "marcos", "chapter": 1, "verse_start": 14, "verse_end": 15 },
+      "reference": {
+        "book": "marcos",
+        "chapter": 1,
+        "verse_start": 14,
+        "verse_end": 15
+      },
       "theme": "Reino de Deus",
       "difficulty": "medium",
       "subcategory": "Reino de Deus",
-      "tags": ["reino de deus", "pregacao", "arrependimento"]
+      "tags": [
+        "reino de deus",
+        "pregacao",
+        "arrependimento"
+      ]
     },
     {
       "external_id": "teologia-biblica-0006",
       "type": "multiple_choice",
       "text": "Qual profeta anunciou a nova aliança, em que Deus escreveria a sua lei no coração do povo?",
       "options": [
-        { "text": "Jeremias", "correct": true },
-        { "text": "Isaías", "correct": false },
-        { "text": "Daniel", "correct": false },
-        { "text": "Zacarias", "correct": false }
+        {
+          "text": "Jeremias",
+          "correct": true
+        },
+        {
+          "text": "Isaías",
+          "correct": false
+        },
+        {
+          "text": "Daniel",
+          "correct": false
+        },
+        {
+          "text": "Zacarias",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Eis que dias vêm... em que farei uma aliança nova... porei a minha lei no seu interior, e a escreverei no seu coração\" (Jr 31:31-33). Jesus a inaugura na Ceia: \"este cálice é a nova aliança no meu sangue\" (Lc 22:20; cf. Hb 8).",
       "divergence_note": null,
-      "reference": { "book": "jeremias", "chapter": 31, "verse_start": 31, "verse_end": 34 },
+      "reference": {
+        "book": "jeremias",
+        "chapter": 31,
+        "verse_start": 31,
+        "verse_end": 34
+      },
       "theme": "Nova aliança",
       "difficulty": "medium",
       "subcategory": "Alianças",
-      "tags": ["nova alianca", "jeremias", "coracao"]
+      "tags": [
+        "nova alianca",
+        "jeremias",
+        "coracao"
+      ]
     },
     {
       "external_id": "teologia-biblica-0007",
       "type": "multiple_choice",
       "text": "Como o tema da habitação de Deus com os homens progride ao longo da Escritura?",
       "options": [
-        { "text": "Éden → tabernáculo → templo → Cristo → igreja → nova Jerusalém", "correct": true },
-        { "text": "Templo → tabernáculo → Éden → sinagoga → céu", "correct": false },
-        { "text": "Sinai → Jordão → Jerusalém → Roma", "correct": false },
-        { "text": "Arca de Noé → arca da aliança → barco de Pedro", "correct": false }
+        {
+          "text": "Éden → tabernáculo → templo → Cristo → igreja → nova Jerusalém",
+          "correct": true
+        },
+        {
+          "text": "Templo → tabernáculo → Éden → sinagoga → céu",
+          "correct": false
+        },
+        {
+          "text": "Sinai → Jordão → Jerusalém → Roma",
+          "correct": false
+        },
+        {
+          "text": "Arca de Noé → arca da aliança → barco de Pedro",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Deus andava no Éden (Gn 3:8), habitou no tabernáculo (Êx 40) e no templo (2Cr 7), \"tabernaculou\" entre nós em Cristo (Jo 1:14), habita a igreja pelo Espírito (1Co 3:16) e consumará tudo na nova Jerusalém: \"o tabernáculo de Deus está com os homens\" (Ap 21:3).",
       "divergence_note": null,
-      "reference": { "book": "apocalipse", "chapter": 21, "verse_start": 3, "verse_end": 3 },
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 21,
+        "verse_start": 3,
+        "verse_end": 3
+      },
       "theme": "Presença de Deus",
       "difficulty": "hard",
       "subcategory": "Templo e presença",
-      "tags": ["tabernaculo", "templo", "presenca"]
+      "tags": [
+        "tabernaculo",
+        "templo",
+        "presenca"
+      ]
     },
     {
       "external_id": "teologia-biblica-0008",
       "type": "multiple_choice",
       "text": "Como Pedro descreve a igreja, aplicando-lhe títulos dados a Israel no Sinai?",
       "options": [
-        { "text": "\"Geração eleita, sacerdócio real, nação santa, povo adquirido\"", "correct": true },
-        { "text": "\"Exército do Senhor, tribo escolhida\"", "correct": false },
-        { "text": "\"Videira verdadeira e ovelhas sem pastor\"", "correct": false },
-        { "text": "\"Filhos de Abraão segundo a carne\"", "correct": false }
+        {
+          "text": "\"Geração eleita, sacerdócio real, nação santa, povo adquirido\"",
+          "correct": true
+        },
+        {
+          "text": "\"Exército do Senhor, tribo escolhida\"",
+          "correct": false
+        },
+        {
+          "text": "\"Videira verdadeira e ovelhas sem pastor\"",
+          "correct": false
+        },
+        {
+          "text": "\"Filhos de Abraão segundo a carne\"",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "1 Pedro 2:9 retoma Êxodo 19:5-6 (\"reino sacerdotal e povo santo\") e o aplica à igreja de judeus e gentios — todo crente tem acesso sacerdotal a Deus e a vocação de \"anunciar as virtudes daquele que vos chamou das trevas\".",
       "divergence_note": null,
-      "reference": { "book": "1pedro", "chapter": 2, "verse_start": 9, "verse_end": 10 },
+      "reference": {
+        "book": "1pedro",
+        "chapter": 2,
+        "verse_start": 9,
+        "verse_end": 10
+      },
       "theme": "Povo de Deus",
       "difficulty": "medium",
       "subcategory": "Povo de Deus",
-      "tags": ["sacerdocio", "povo de deus", "pedro"]
+      "tags": [
+        "sacerdocio",
+        "povo de deus",
+        "pedro"
+      ]
     },
     {
       "external_id": "teologia-biblica-0009",
       "type": "multiple_choice",
       "text": "Qual imagem do Salmo 118, aplicada a Jesus por ele mesmo e pelos apóstolos, descreve o Messias rejeitado que se tornou fundamento?",
       "options": [
-        { "text": "A pedra que os edificadores rejeitaram, que veio a ser a pedra angular", "correct": true },
-        { "text": "A rocha ferida no deserto", "correct": false },
-        { "text": "O monte que enche toda a terra", "correct": false },
-        { "text": "A coluna de fogo que guia o povo", "correct": false }
+        {
+          "text": "A pedra que os edificadores rejeitaram, que veio a ser a pedra angular",
+          "correct": true
+        },
+        {
+          "text": "A rocha ferida no deserto",
+          "correct": false
+        },
+        {
+          "text": "O monte que enche toda a terra",
+          "correct": false
+        },
+        {
+          "text": "A coluna de fogo que guia o povo",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"A pedra que os edificadores rejeitaram tornou-se a cabeça da esquina\" (Sl 118:22). Jesus a aplica a si mesmo diante dos líderes (Mt 21:42), e Pedro a repete ao Sinédrio (At 4:11) e na sua carta (1Pe 2:7) — a rejeição estava no plano, e dela Deus fez o alicerce.",
       "divergence_note": null,
-      "reference": { "book": "salmos", "chapter": 118, "verse_start": 22, "verse_end": 23 },
+      "reference": {
+        "book": "salmos",
+        "chapter": 118,
+        "verse_start": 22,
+        "verse_end": 23
+      },
       "theme": "Pedra angular",
       "difficulty": "medium",
       "subcategory": "Temas messiânicos",
-      "tags": ["pedra angular", "salmo 118", "rejeicao"]
+      "tags": [
+        "pedra angular",
+        "salmo 118",
+        "rejeicao"
+      ]
     },
     {
       "external_id": "teologia-biblica-0010",
       "type": "multiple_choice",
       "text": "Segundo Hebreus 4, o que o descanso do sábado e a entrada em Canaã prefiguravam?",
       "options": [
-        { "text": "O descanso definitivo que resta para o povo de Deus", "correct": true },
-        { "text": "O fim do trabalho humano na terra", "correct": false },
-        { "text": "A obrigação perpétua de guardar o sétimo dia", "correct": false },
-        { "text": "A paz política de Israel", "correct": false }
+        {
+          "text": "O descanso definitivo que resta para o povo de Deus",
+          "correct": true
+        },
+        {
+          "text": "O fim do trabalho humano na terra",
+          "correct": false
+        },
+        {
+          "text": "A obrigação perpétua de guardar o sétimo dia",
+          "correct": false
+        },
+        {
+          "text": "A paz política de Israel",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Resta ainda um repouso para o povo de Deus\" (Hb 4:9): nem o sétimo dia nem Josué deram o descanso final — ambos apontavam para o descanso da fé em Cristo, que convida: \"vinde a mim... e eu vos aliviarei\" (Mt 11:28).",
       "divergence_note": "Cristãos divergem sobre a aplicação atual do mandamento do sábado (guarda do sábado, domingo como dia do Senhor, ou cumprimento pleno em Cristo). A pergunta se limita ao argumento explícito de Hebreus 4.",
-      "reference": { "book": "hebreus", "chapter": 4, "verse_start": 1, "verse_end": 11 },
+      "reference": {
+        "book": "hebreus",
+        "chapter": 4,
+        "verse_start": 1,
+        "verse_end": 11
+      },
       "theme": "Descanso",
       "difficulty": "expert",
       "subcategory": "Tipologia",
-      "tags": ["descanso", "sabado", "hebreus"]
+      "tags": [
+        "descanso",
+        "sabado",
+        "hebreus"
+      ]
+    },
+    {
+      "external_id": "teologia-biblica-0011",
+      "type": "multiple_choice",
+      "text": "Qual foi o sinal da aliança de Deus com Noé de nunca mais destruir a terra por dilúvio?",
+      "options": [
+        {
+          "text": "O arco-íris",
+          "correct": true
+        },
+        {
+          "text": "O sábado",
+          "correct": false
+        },
+        {
+          "text": "A circuncisão",
+          "correct": false
+        },
+        {
+          "text": "O cordeiro",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'O meu arco tenho posto nas nuvens... por sinal do concerto' (Gn 9:13-15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 9,
+        "verse_start": 12,
+        "verse_end": 15
+      },
+      "theme": "Aliança noética",
+      "difficulty": "medium",
+      "subcategory": "Alianças",
+      "tags": [
+        "arco-iris",
+        "noe"
+      ]
+    },
+    {
+      "external_id": "teologia-biblica-0012",
+      "type": "open_answer",
+      "text": "Qual promessa Deus fez a Abraão sobre 'todas as famílias da terra'?",
+      "options": null,
+      "accepted_answers": [
+        "Serão abençoadas",
+        "Seriam abençoadas",
+        "Bencao"
+      ],
+      "explanation": "'Em ti serão benditas todas as famílias da terra' (Gn 12:3) — promessa cumprida em Cristo (Gl 3:8).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 12,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "theme": "Aliança abraâmica",
+      "difficulty": "hard",
+      "subcategory": "Alianças",
+      "tags": [
+        "abraao",
+        "bencao"
+      ]
+    },
+    {
+      "external_id": "teologia-biblica-0013",
+      "type": "multiple_choice",
+      "text": "O que o cordeiro pascal prefigura, segundo Paulo em 1 Coríntios?",
+      "options": [
+        {
+          "text": "Cristo, nossa Páscoa",
+          "correct": true
+        },
+        {
+          "text": "O maná",
+          "correct": false
+        },
+        {
+          "text": "A lei",
+          "correct": false
+        },
+        {
+          "text": "O templo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Cristo, nossa páscoa, foi sacrificado por nós' (1Co 5:7) — o cordeiro do Êxodo aponta para a cruz.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1corintios",
+        "chapter": 5,
+        "verse_start": 7,
+        "verse_end": null
+      },
+      "theme": "Tipologia",
+      "difficulty": "medium",
+      "subcategory": "Cristo no AT",
+      "tags": [
+        "pascoa",
+        "cordeiro"
+      ]
+    },
+    {
+      "external_id": "teologia-biblica-0014",
+      "type": "multiple_choice",
+      "text": "O que a serpente de bronze levantada por Moisés prefigura, segundo Jesus?",
+      "options": [
+        {
+          "text": "A elevação do Filho do homem na cruz",
+          "correct": true
+        },
+        {
+          "text": "O batismo",
+          "correct": false
+        },
+        {
+          "text": "O maná do céu",
+          "correct": false
+        },
+        {
+          "text": "A ressurreição",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Como Moisés levantou a serpente... assim importa que o Filho do homem seja levantado' (Jo 3:14-15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 3,
+        "verse_start": 14,
+        "verse_end": 15
+      },
+      "theme": "Tipologia",
+      "difficulty": "hard",
+      "subcategory": "Cristo no AT",
+      "tags": [
+        "serpente",
+        "cruz"
+      ]
+    },
+    {
+      "external_id": "teologia-biblica-0015",
+      "type": "multiple_choice",
+      "text": "Que conceito descreve Cristo como aquele por quem 'muitos serão feitos justos', em contraste com Adão?",
+      "options": [
+        {
+          "text": "O segundo Adão",
+          "correct": true
+        },
+        {
+          "text": "O sumo sacerdote",
+          "correct": false
+        },
+        {
+          "text": "O bom pastor",
+          "correct": false
+        },
+        {
+          "text": "O cordeiro",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Romanos 5:18-19 contrasta a desobediência de Adão (condenação) com a obediência de Cristo (justificação).",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 5,
+        "verse_start": 18,
+        "verse_end": 19
+      },
+      "theme": "Cristologia",
+      "difficulty": "expert",
+      "subcategory": "Cristo no AT",
+      "tags": [
+        "segundo adao",
+        "justificacao"
+      ]
+    },
+    {
+      "external_id": "teologia-biblica-0016",
+      "type": "multiple_choice",
+      "text": "Qual 'nova aliança' Jeremias anunciou, com a lei escrita no coração?",
+      "options": [
+        {
+          "text": "A nova aliança",
+          "correct": true
+        },
+        {
+          "text": "A aliança do Sinai",
+          "correct": false
+        },
+        {
+          "text": "A aliança da circuncisão",
+          "correct": false
+        },
+        {
+          "text": "A aliança do sábado",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Porei a minha lei no seu interior e a escreverei no seu coração' (Jr 31:33), cumprida em Cristo (Hb 8).",
+      "divergence_note": null,
+      "reference": {
+        "book": "jeremias",
+        "chapter": 31,
+        "verse_start": 31,
+        "verse_end": 34
+      },
+      "theme": "Nova aliança",
+      "difficulty": "hard",
+      "subcategory": "Alianças",
+      "tags": [
+        "nova alianca",
+        "coracao"
+      ]
+    },
+    {
+      "external_id": "teologia-biblica-0017",
+      "type": "multiple_choice",
+      "text": "Que tema percorre a Escritura como a habitação de Deus com o homem?",
+      "options": [
+        {
+          "text": "A presença de Deus (tabernáculo, templo, Cristo)",
+          "correct": true
+        },
+        {
+          "text": "A guerra santa",
+          "correct": false
+        },
+        {
+          "text": "O dízimo",
+          "correct": false
+        },
+        {
+          "text": "As genealogias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "De 'habitarei no meio deles' (Êx 25:8) ao Verbo que 'habitou entre nós' (Jo 1:14) até Ap 21:3, Deus busca habitar com seu povo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 25,
+        "verse_start": 8,
+        "verse_end": null
+      },
+      "theme": "Presença de Deus",
+      "difficulty": "medium",
+      "subcategory": "Temas bíblicos",
+      "tags": [
+        "presenca",
+        "tabernaculo"
+      ]
+    },
+    {
+      "external_id": "teologia-biblica-0018",
+      "type": "multiple_choice",
+      "text": "Segundo Hebreus, que 'repouso' resta ao povo de Deus, ligando o sábado e Canaã?",
+      "options": [
+        {
+          "text": "O repouso sabático em Cristo",
+          "correct": true
+        },
+        {
+          "text": "A terra de Canaã apenas",
+          "correct": false
+        },
+        {
+          "text": "O descanso semanal apenas",
+          "correct": false
+        },
+        {
+          "text": "O ano do Jubileu",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Resta ainda um repouso para o povo de Deus' (Hb 4:9) — descanso pleno alcançado em Cristo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "hebreus",
+        "chapter": 4,
+        "verse_start": 9,
+        "verse_end": 11
+      },
+      "theme": "Repouso",
+      "difficulty": "expert",
+      "subcategory": "Temas bíblicos",
+      "tags": [
+        "repouso",
+        "sabado"
+      ]
+    },
+    {
+      "external_id": "teologia-biblica-0019",
+      "type": "multiple_choice",
+      "text": "Qual aliança teve a circuncisão como sinal no corpo?",
+      "options": [
+        {
+          "text": "A aliança com Abraão",
+          "correct": true
+        },
+        {
+          "text": "A aliança com Noé",
+          "correct": false
+        },
+        {
+          "text": "A aliança com Davi",
+          "correct": false
+        },
+        {
+          "text": "A aliança do Sinai",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Circuncidareis a carne do vosso prepúcio; e isto será por sinal do concerto' (Gn 17:11).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 17,
+        "verse_start": 10,
+        "verse_end": 11
+      },
+      "theme": "Aliança abraâmica",
+      "difficulty": "medium",
+      "subcategory": "Alianças",
+      "tags": [
+        "circuncisao",
+        "abraao"
+      ]
+    },
+    {
+      "external_id": "teologia-biblica-0020",
+      "type": "multiple_choice",
+      "text": "Quem é apresentado como o 'Cordeiro de Deus que tira o pecado do mundo'?",
+      "options": [
+        {
+          "text": "Jesus",
+          "correct": true
+        },
+        {
+          "text": "Moisés",
+          "correct": false
+        },
+        {
+          "text": "Isaque",
+          "correct": false
+        },
+        {
+          "text": "João Batista",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "João Batista aponta para Jesus: 'Eis o Cordeiro de Deus, que tira o pecado do mundo' (Jo 1:29), unindo Êxodo e Isaías 53.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 1,
+        "verse_start": 29,
+        "verse_end": null
+      },
+      "theme": "Cristologia",
+      "difficulty": "medium",
+      "subcategory": "Cristo no AT",
+      "tags": [
+        "cordeiro de deus",
+        "jesus"
+      ]
     }
   ]
 }

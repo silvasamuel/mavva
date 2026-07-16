@@ -6,185 +6,780 @@
       "type": "multiple_choice",
       "text": "Quem foi o primeiro mártir da igreja, apedrejado enquanto orava pelos seus algozes?",
       "options": [
-        { "text": "Estêvão", "correct": true },
-        { "text": "Tiago, irmão de João", "correct": false },
-        { "text": "Pedro", "correct": false },
-        { "text": "Barnabé", "correct": false }
+        {
+          "text": "Estêvão",
+          "correct": true
+        },
+        {
+          "text": "Tiago, irmão de João",
+          "correct": false
+        },
+        {
+          "text": "Pedro",
+          "correct": false
+        },
+        {
+          "text": "Barnabé",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Estêvão, um dos sete escolhidos para servir às mesas, foi apedrejado após seu discurso ao Sinédrio: \"Senhor, não lhes imputes este pecado\" (At 7:60). Saulo, futuro apóstolo Paulo, consentia na sua morte (At 8:1).",
       "divergence_note": null,
-      "reference": { "book": "atos", "chapter": 7, "verse_start": 54, "verse_end": 60 },
+      "reference": {
+        "book": "atos",
+        "chapter": 7,
+        "verse_start": 54,
+        "verse_end": 60
+      },
       "theme": "Martírio",
       "difficulty": "easy",
       "subcategory": "Igreja apostólica",
-      "tags": ["estevao", "martir", "apedrejamento"]
+      "tags": [
+        "estevao",
+        "martir",
+        "apedrejamento"
+      ]
     },
     {
       "external_id": "historia-da-igreja-0002",
       "type": "open_answer",
       "text": "Em qual cidade os discípulos foram chamados cristãos pela primeira vez?",
       "options": null,
-      "accepted_answers": ["Antioquia", "Antioquia da Síria"],
+      "accepted_answers": [
+        "Antioquia",
+        "Antioquia da Síria"
+      ],
       "explanation": "\"Em Antioquia foram os discípulos, pela primeira vez, chamados cristãos\" (At 11:26). A igreja de Antioquia, formada por judeus e gentios, tornou-se a base missionária de Paulo e Barnabé (At 13:1-3).",
       "divergence_note": null,
-      "reference": { "book": "atos", "chapter": 11, "verse_start": 19, "verse_end": 26 },
+      "reference": {
+        "book": "atos",
+        "chapter": 11,
+        "verse_start": 19,
+        "verse_end": 26
+      },
       "theme": "Igreja primitiva",
       "difficulty": "medium",
       "subcategory": "Igreja apostólica",
-      "tags": ["antioquia", "cristaos", "nome"]
+      "tags": [
+        "antioquia",
+        "cristaos",
+        "nome"
+      ]
     },
     {
       "external_id": "historia-da-igreja-0003",
       "type": "multiple_choice",
       "text": "Qual questão o concílio de Jerusalém (Atos 15) resolveu?",
       "options": [
-        { "text": "Se os gentios convertidos precisavam ser circuncidados e guardar a Lei", "correct": true },
-        { "text": "Quem substituiria Judas entre os doze", "correct": false },
-        { "text": "Qual evangelho seria lido nas igrejas", "correct": false },
-        { "text": "Se Paulo podia pregar aos judeus", "correct": false }
+        {
+          "text": "Se os gentios convertidos precisavam ser circuncidados e guardar a Lei",
+          "correct": true
+        },
+        {
+          "text": "Quem substituiria Judas entre os doze",
+          "correct": false
+        },
+        {
+          "text": "Qual evangelho seria lido nas igrejas",
+          "correct": false
+        },
+        {
+          "text": "Se Paulo podia pregar aos judeus",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Alguns ensinavam: \"se não vos circuncidardes... não podeis salvar-vos\" (At 15:1). O concílio decidiu não pôr sobre os gentios esse jugo: \"cremos que seremos salvos pela graça do Senhor Jesus Cristo, como eles também\" (At 15:11).",
       "divergence_note": null,
-      "reference": { "book": "atos", "chapter": 15, "verse_start": 1, "verse_end": 21 },
+      "reference": {
+        "book": "atos",
+        "chapter": 15,
+        "verse_start": 1,
+        "verse_end": 21
+      },
       "theme": "Concílios",
       "difficulty": "medium",
       "subcategory": "Igreja apostólica",
-      "tags": ["concilio", "jerusalem", "gentios", "circuncisao"]
+      "tags": [
+        "concilio",
+        "jerusalem",
+        "gentios",
+        "circuncisao"
+      ]
     },
     {
       "external_id": "historia-da-igreja-0004",
       "type": "multiple_choice",
       "text": "Segundo a tradição da igreja antiga, como o apóstolo Pedro morreu?",
       "options": [
-        { "text": "Crucificado de cabeça para baixo, em Roma", "correct": true },
-        { "text": "Decapitado em Jerusalém", "correct": false },
-        { "text": "Exilado até a morte em Patmos", "correct": false },
-        { "text": "Apedrejado em Antioquia", "correct": false }
+        {
+          "text": "Crucificado de cabeça para baixo, em Roma",
+          "correct": true
+        },
+        {
+          "text": "Decapitado em Jerusalém",
+          "correct": false
+        },
+        {
+          "text": "Exilado até a morte em Patmos",
+          "correct": false
+        },
+        {
+          "text": "Apedrejado em Antioquia",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Jesus predisse a Pedro uma morte que glorificaria a Deus: \"quando fores velho... outro te cingirá, e te levará para onde tu não queiras\" (Jo 21:18-19). Segundo a tradição registrada pelos pais da igreja, Pedro foi crucificado em Roma sob Nero, pedindo a cruz invertida por não se julgar digno de morrer como o Senhor.",
       "divergence_note": "A crucificação invertida vem da tradição extrabíblica (Orígenes, Eusébio); o Novo Testamento registra apenas a predição de Jo 21:18-19. O núcleo histórico do martírio de Pedro em Roma é amplamente aceito pelos historiadores.",
-      "reference": { "book": "joao", "chapter": 21, "verse_start": 18, "verse_end": 19 },
+      "reference": {
+        "book": "joao",
+        "chapter": 21,
+        "verse_start": 18,
+        "verse_end": 19
+      },
       "theme": "Martírio",
       "difficulty": "medium",
       "subcategory": "Tradição apostólica",
-      "tags": ["pedro", "roma", "martirio", "tradicao"]
+      "tags": [
+        "pedro",
+        "roma",
+        "martirio",
+        "tradicao"
+      ]
     },
     {
       "external_id": "historia-da-igreja-0005",
       "type": "multiple_choice",
       "text": "O que provocou a primeira grande dispersão da igreja de Jerusalém, levando o evangelho a Samaria?",
       "options": [
-        { "text": "A perseguição após a morte de Estêvão", "correct": true },
-        { "text": "Uma grande fome na Judeia", "correct": false },
-        { "text": "O decreto de expulsão de Cláudio", "correct": false },
-        { "text": "A destruição do templo", "correct": false }
+        {
+          "text": "A perseguição após a morte de Estêvão",
+          "correct": true
+        },
+        {
+          "text": "Uma grande fome na Judeia",
+          "correct": false
+        },
+        {
+          "text": "O decreto de expulsão de Cláudio",
+          "correct": false
+        },
+        {
+          "text": "A destruição do templo",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Naquele dia fez-se uma grande perseguição contra a igreja... e todos foram dispersos... Os que andavam dispersos iam por toda a parte, anunciando a palavra\" (At 8:1,4). A perseguição, paradoxalmente, cumpriu Atos 1:8 — o evangelho chegou a Samaria por Filipe.",
       "divergence_note": null,
-      "reference": { "book": "atos", "chapter": 8, "verse_start": 1, "verse_end": 8 },
+      "reference": {
+        "book": "atos",
+        "chapter": 8,
+        "verse_start": 1,
+        "verse_end": 8
+      },
       "theme": "Expansão do evangelho",
       "difficulty": "medium",
       "subcategory": "Igreja apostólica",
-      "tags": ["perseguicao", "dispersao", "samaria"]
+      "tags": [
+        "perseguicao",
+        "dispersao",
+        "samaria"
+      ]
     },
     {
       "external_id": "historia-da-igreja-0006",
       "type": "multiple_choice",
       "text": "Quem a igreja de Antioquia enviou na primeira viagem missionária, por ordem do Espírito Santo?",
       "options": [
-        { "text": "Barnabé e Saulo", "correct": true },
-        { "text": "Pedro e João", "correct": false },
-        { "text": "Paulo e Silas", "correct": false },
-        { "text": "Timóteo e Tito", "correct": false }
+        {
+          "text": "Barnabé e Saulo",
+          "correct": true
+        },
+        {
+          "text": "Pedro e João",
+          "correct": false
+        },
+        {
+          "text": "Paulo e Silas",
+          "correct": false
+        },
+        {
+          "text": "Timóteo e Tito",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Disse o Espírito Santo: Apartai-me a Barnabé e a Saulo para a obra a que os tenho chamado\" (At 13:2). Paulo e Silas formaram dupla apenas na segunda viagem, após o desentendimento sobre João Marcos (At 15:36-41).",
       "divergence_note": null,
-      "reference": { "book": "atos", "chapter": 13, "verse_start": 1, "verse_end": 3 },
+      "reference": {
+        "book": "atos",
+        "chapter": 13,
+        "verse_start": 1,
+        "verse_end": 3
+      },
       "theme": "Missões",
       "difficulty": "medium",
       "subcategory": "Igreja apostólica",
-      "tags": ["barnabe", "saulo", "missoes", "antioquia"]
+      "tags": [
+        "barnabe",
+        "saulo",
+        "missoes",
+        "antioquia"
+      ]
     },
     {
       "external_id": "historia-da-igreja-0007",
       "type": "multiple_choice",
       "text": "Segundo a tradição da igreja antiga, qual apóstolo morreu de velhice em Éfeso, sendo o único a não morrer como mártir?",
       "options": [
-        { "text": "João", "correct": true },
-        { "text": "André", "correct": false },
-        { "text": "Tomé", "correct": false },
-        { "text": "Mateus", "correct": false }
+        {
+          "text": "João",
+          "correct": true
+        },
+        {
+          "text": "André",
+          "correct": false
+        },
+        {
+          "text": "Tomé",
+          "correct": false
+        },
+        {
+          "text": "Mateus",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "João 21:22-23 registra o dito de Jesus que gerou o rumor de que João não morreria: \"se eu quero que ele fique até que eu venha, que te importa a ti?\". Segundo os pais da igreja (Ireneu, Eusébio), João pastoreou em Éfeso, foi exilado em Patmos (Ap 1:9) e morreu idoso no reinado de Trajano.",
       "divergence_note": "Os detalhes finais da vida de João vêm da tradição patrística, não do texto bíblico — que registra apenas o exílio em Patmos e o mal-entendido sobre sua morte.",
-      "reference": { "book": "joao", "chapter": 21, "verse_start": 20, "verse_end": 23 },
+      "reference": {
+        "book": "joao",
+        "chapter": 21,
+        "verse_start": 20,
+        "verse_end": 23
+      },
       "theme": "Vida dos apóstolos",
       "difficulty": "hard",
       "subcategory": "Tradição apostólica",
-      "tags": ["joao", "efeso", "patmos", "tradicao"]
+      "tags": [
+        "joao",
+        "efeso",
+        "patmos",
+        "tradicao"
+      ]
     },
     {
       "external_id": "historia-da-igreja-0008",
       "type": "multiple_choice",
       "text": "Qual casal, fazedores de tendas como Paulo, instruiu o eloquente Apolo \"no caminho de Deus mais precisamente\"?",
       "options": [
-        { "text": "Áquila e Priscila", "correct": true },
-        { "text": "Ananias e Safira", "correct": false },
-        { "text": "Zacarias e Isabel", "correct": false },
-        { "text": "Filemom e Ápia", "correct": false }
+        {
+          "text": "Áquila e Priscila",
+          "correct": true
+        },
+        {
+          "text": "Ananias e Safira",
+          "correct": false
+        },
+        {
+          "text": "Zacarias e Isabel",
+          "correct": false
+        },
+        {
+          "text": "Filemom e Ápia",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Apolo, \"varão eloquente e poderoso nas Escrituras\", conhecia apenas o batismo de João; Áquila e Priscila \"o receberam consigo e lhe declararam mais precisamente o caminho de Deus\" (At 18:24-26). O casal aparece com Paulo em Corinto, Éfeso e Roma.",
       "divergence_note": null,
-      "reference": { "book": "atos", "chapter": 18, "verse_start": 24, "verse_end": 28 },
+      "reference": {
+        "book": "atos",
+        "chapter": 18,
+        "verse_start": 24,
+        "verse_end": 28
+      },
       "theme": "Discipulado",
       "difficulty": "hard",
       "subcategory": "Igreja apostólica",
-      "tags": ["aquila", "priscila", "apolo"]
+      "tags": [
+        "aquila",
+        "priscila",
+        "apolo"
+      ]
     },
     {
       "external_id": "historia-da-igreja-0009",
       "type": "multiple_choice",
       "text": "Qual verdade bíblica o concílio de Niceia (325 d.C.) defendeu contra o arianismo, segundo a história da igreja?",
       "options": [
-        { "text": "Que o Filho é plenamente Deus, da mesma substância do Pai", "correct": true },
-        { "text": "Que a Bíblia deveria ser traduzida para o latim", "correct": false },
-        { "text": "Que o batismo deveria ser por imersão", "correct": false },
-        { "text": "Que o sábado seria substituído pelo domingo", "correct": false }
+        {
+          "text": "Que o Filho é plenamente Deus, da mesma substância do Pai",
+          "correct": true
+        },
+        {
+          "text": "Que a Bíblia deveria ser traduzida para o latim",
+          "correct": false
+        },
+        {
+          "text": "Que o batismo deveria ser por imersão",
+          "correct": false
+        },
+        {
+          "text": "Que o sábado seria substituído pelo domingo",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Ário ensinava que o Filho era criatura; Niceia confessou que ele é \"gerado, não criado, consubstancial ao Pai\" — afirmando o que a Escritura já dizia: \"o Verbo era Deus\" (Jo 1:1) e \"eu e o Pai somos um\" (Jo 10:30).",
       "divergence_note": "O concílio de Niceia é história pós-bíblica (fonte: registros da igreja antiga); a divindade de Cristo que ele confessou é doutrina bíblica comum a todas as tradições cristãs ortodoxas.",
-      "reference": { "book": "joao", "chapter": 1, "verse_start": 1, "verse_end": 3 },
+      "reference": {
+        "book": "joao",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 3
+      },
       "theme": "Concílios",
       "difficulty": "expert",
       "subcategory": "Igreja antiga",
-      "tags": ["niceia", "arianismo", "divindade de cristo"]
+      "tags": [
+        "niceia",
+        "arianismo",
+        "divindade de cristo"
+      ]
     },
     {
       "external_id": "historia-da-igreja-0010",
       "type": "multiple_choice",
       "text": "Qual versículo, redescoberto por Martinho Lutero, tornou-se o estandarte da Reforma Protestante, segundo os historiadores?",
       "options": [
-        { "text": "\"O justo viverá da fé\" (Romanos 1:17)", "correct": true },
-        { "text": "\"Amarás o teu próximo como a ti mesmo\"", "correct": false },
-        { "text": "\"Tu és Pedro, e sobre esta pedra edificarei a minha igreja\"", "correct": false },
-        { "text": "\"Ide por todo o mundo, pregai o evangelho\"", "correct": false }
+        {
+          "text": "\"O justo viverá da fé\" (Romanos 1:17)",
+          "correct": true
+        },
+        {
+          "text": "\"Amarás o teu próximo como a ti mesmo\"",
+          "correct": false
+        },
+        {
+          "text": "\"Tu és Pedro, e sobre esta pedra edificarei a minha igreja\"",
+          "correct": false
+        },
+        {
+          "text": "\"Ide por todo o mundo, pregai o evangelho\"",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Segundo seus próprios relatos, Lutero atormentava-se com a justiça de Deus até compreender Romanos 1:17: a justiça que Deus dá ao que crê. Dali nasceram as ênfases da Reforma: somente a graça, somente a fé, somente a Escritura.",
       "divergence_note": "A Reforma (1517) é história pós-bíblica; a pergunta trata do fato histórico, não de arbitrar entre as tradições que dela resultaram.",
-      "reference": { "book": "romanos", "chapter": 1, "verse_start": 16, "verse_end": 17 },
+      "reference": {
+        "book": "romanos",
+        "chapter": 1,
+        "verse_start": 16,
+        "verse_end": 17
+      },
       "theme": "Reforma",
       "difficulty": "hard",
       "subcategory": "Reforma",
-      "tags": ["lutero", "reforma", "justificacao"]
+      "tags": [
+        "lutero",
+        "reforma",
+        "justificacao"
+      ]
+    },
+    {
+      "external_id": "historia-da-igreja-0011",
+      "type": "multiple_choice",
+      "text": "Quem foi o primeiro mártir cristão, apedrejado após seu discurso ao Sinédrio?",
+      "options": [
+        {
+          "text": "Estêvão",
+          "correct": true
+        },
+        {
+          "text": "Tiago",
+          "correct": false
+        },
+        {
+          "text": "Pedro",
+          "correct": false
+        },
+        {
+          "text": "Paulo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Estêvão, cheio do Espírito, foi apedrejado orando pelos que o matavam (At 7:59-60).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 7,
+        "verse_start": 59,
+        "verse_end": 60
+      },
+      "theme": "Mártires",
+      "difficulty": "medium",
+      "subcategory": "Igreja primitiva",
+      "tags": [
+        "estevao",
+        "martir"
+      ]
+    },
+    {
+      "external_id": "historia-da-igreja-0012",
+      "type": "multiple_choice",
+      "text": "Qual perseguidor da igreja se converteu a caminho de Damasco?",
+      "options": [
+        {
+          "text": "Saulo (Paulo)",
+          "correct": true
+        },
+        {
+          "text": "Barnabé",
+          "correct": false
+        },
+        {
+          "text": "Cornélio",
+          "correct": false
+        },
+        {
+          "text": "Apolo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Uma luz do céu cercou Saulo, e o Senhor lhe falou; ele se tornou o apóstolo Paulo (At 9:3-6).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 9,
+        "verse_start": 3,
+        "verse_end": 6
+      },
+      "theme": "Conversões",
+      "difficulty": "medium",
+      "subcategory": "Igreja primitiva",
+      "tags": [
+        "paulo",
+        "damasco"
+      ]
+    },
+    {
+      "external_id": "historia-da-igreja-0013",
+      "type": "multiple_choice",
+      "text": "Quem foi escolhido por sorte para substituir Judas entre os doze apóstolos?",
+      "options": [
+        {
+          "text": "Matias",
+          "correct": true
+        },
+        {
+          "text": "Barnabé",
+          "correct": false
+        },
+        {
+          "text": "Estêvão",
+          "correct": false
+        },
+        {
+          "text": "Silas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Lançaram sortes... e a sorte caiu sobre Matias' (At 1:26), completando os doze.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 1,
+        "verse_start": 23,
+        "verse_end": 26
+      },
+      "theme": "Apóstolos",
+      "difficulty": "hard",
+      "subcategory": "Igreja primitiva",
+      "tags": [
+        "matias",
+        "judas"
+      ]
+    },
+    {
+      "external_id": "historia-da-igreja-0014",
+      "type": "multiple_choice",
+      "text": "Qual dupla missionária a igreja de Antioquia enviou na primeira viagem?",
+      "options": [
+        {
+          "text": "Paulo e Barnabé",
+          "correct": true
+        },
+        {
+          "text": "Pedro e João",
+          "correct": false
+        },
+        {
+          "text": "Paulo e Silas",
+          "correct": false
+        },
+        {
+          "text": "Barnabé e Marcos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Apartai-me a Barnabé e a Saulo para a obra a que os tenho chamado' (At 13:2-3).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 13,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "theme": "Missões",
+      "difficulty": "expert",
+      "subcategory": "Igreja primitiva",
+      "tags": [
+        "paulo",
+        "barnabe"
+      ]
+    },
+    {
+      "external_id": "historia-da-igreja-0015",
+      "type": "multiple_choice",
+      "text": "Quem, um dos sete diáconos, pregou em Samaria e batizou o eunuco etíope?",
+      "options": [
+        {
+          "text": "Filipe",
+          "correct": true
+        },
+        {
+          "text": "Estêvão",
+          "correct": false
+        },
+        {
+          "text": "Timóteo",
+          "correct": false
+        },
+        {
+          "text": "Ananias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Filipe evangelizou Samaria e, guiado pelo Espírito, batizou o eunuco (At 8:5,26-38).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 8,
+        "verse_start": 5,
+        "verse_end": 6
+      },
+      "theme": "Evangelistas",
+      "difficulty": "medium",
+      "subcategory": "Igreja primitiva",
+      "tags": [
+        "filipe",
+        "samaria"
+      ]
+    },
+    {
+      "external_id": "historia-da-igreja-0016",
+      "type": "multiple_choice",
+      "text": "Segundo a tradição cristã, qual apóstolo foi crucificado em Roma, de cabeça para baixo?",
+      "options": [
+        {
+          "text": "Pedro",
+          "correct": true
+        },
+        {
+          "text": "Paulo",
+          "correct": false
+        },
+        {
+          "text": "André",
+          "correct": false
+        },
+        {
+          "text": "João",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jesus predisse o tipo de morte de Pedro (Jo 21:18-19); a tradição da igreja antiga situa seu martírio em Roma.",
+      "divergence_note": "O modo do martírio de Pedro (crucificação de cabeça para baixo em Roma) vem da tradição cristã antiga, não do texto bíblico; a Escritura registra apenas a predição de Jesus sobre sua morte.",
+      "reference": {
+        "book": "joao",
+        "chapter": 21,
+        "verse_start": 18,
+        "verse_end": 19
+      },
+      "theme": "Mártires",
+      "difficulty": "hard",
+      "subcategory": "Tradição",
+      "tags": [
+        "pedro",
+        "martirio"
+      ]
+    },
+    {
+      "external_id": "historia-da-igreja-0017",
+      "type": "multiple_choice",
+      "text": "Segundo Apocalipse, em qual ilha o apóstolo João estava exilado ao receber a revelação?",
+      "options": [
+        {
+          "text": "Patmos",
+          "correct": true
+        },
+        {
+          "text": "Chipre",
+          "correct": false
+        },
+        {
+          "text": "Creta",
+          "correct": false
+        },
+        {
+          "text": "Malta",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Eu, João... estava na ilha chamada Patmos, por causa da palavra de Deus' (Ap 1:9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 1,
+        "verse_start": 9,
+        "verse_end": null
+      },
+      "theme": "Apóstolos",
+      "difficulty": "medium",
+      "subcategory": "Igreja primitiva",
+      "tags": [
+        "joao",
+        "patmos"
+      ]
+    },
+    {
+      "external_id": "historia-da-igreja-0018",
+      "type": "multiple_choice",
+      "text": "Quem foi o primeiro gentio (centurião romano) convertido e batizado por Pedro?",
+      "options": [
+        {
+          "text": "Cornélio",
+          "correct": true
+        },
+        {
+          "text": "Sérgio Paulo",
+          "correct": false
+        },
+        {
+          "text": "O carcereiro de Filipos",
+          "correct": false
+        },
+        {
+          "text": "Lísias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Deus mostrou a Pedro que o evangelho é para os gentios; Cornélio e sua casa creram e foram batizados (At 10:44-48).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 10,
+        "verse_start": 44,
+        "verse_end": 48
+      },
+      "theme": "Conversões",
+      "difficulty": "hard",
+      "subcategory": "Igreja primitiva",
+      "tags": [
+        "cornelio",
+        "gentios"
+      ]
+    },
+    {
+      "external_id": "historia-da-igreja-0019",
+      "type": "multiple_choice",
+      "text": "Quem foi a vendedora de púrpura, primeira convertida na Europa (Filipos)?",
+      "options": [
+        {
+          "text": "Lídia",
+          "correct": true
+        },
+        {
+          "text": "Priscila",
+          "correct": false
+        },
+        {
+          "text": "Dorcas",
+          "correct": false
+        },
+        {
+          "text": "Febe",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Certa mulher chamada Lídia... o Senhor lhe abriu o coração' (At 16:14), e sua casa foi batizada.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 16,
+        "verse_start": 14,
+        "verse_end": 15
+      },
+      "theme": "Conversões",
+      "difficulty": "expert",
+      "subcategory": "Igreja primitiva",
+      "tags": [
+        "lidia",
+        "filipos"
+      ]
+    },
+    {
+      "external_id": "historia-da-igreja-0020",
+      "type": "multiple_choice",
+      "text": "Segundo os historiadores, qual imperador romano promoveu grande perseguição culpando os cristãos pelo incêndio de Roma?",
+      "options": [
+        {
+          "text": "Nero",
+          "correct": true
+        },
+        {
+          "text": "Augusto",
+          "correct": false
+        },
+        {
+          "text": "Cláudio",
+          "correct": false
+        },
+        {
+          "text": "Trajano",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "A tradição histórica atribui a Nero a perseguição em que Pedro e Paulo teriam sido mortos; a Escritura fala do sofrer 'como cristão' (1Pe 4:16).",
+      "divergence_note": "A identificação de Nero e o incêndio de Roma vêm de fontes históricas (como Tácito), não do texto bíblico; o Novo Testamento trata do sofrimento dos cristãos em termos gerais.",
+      "reference": {
+        "book": "1pedro",
+        "chapter": 4,
+        "verse_start": 16,
+        "verse_end": null
+      },
+      "theme": "Perseguição",
+      "difficulty": "hard",
+      "subcategory": "Tradição",
+      "tags": [
+        "nero",
+        "perseguicao"
+      ]
     }
   ]
 }

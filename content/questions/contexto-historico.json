@@ -6,185 +6,778 @@
       "type": "multiple_choice",
       "text": "Qual império dominava a Judeia na época do nascimento e ministério de Jesus?",
       "options": [
-        { "text": "O Império Romano", "correct": true },
-        { "text": "O Império Grego", "correct": false },
-        { "text": "O Império Persa", "correct": false },
-        { "text": "O Império Babilônico", "correct": false }
+        {
+          "text": "O Império Romano",
+          "correct": true
+        },
+        {
+          "text": "O Império Grego",
+          "correct": false
+        },
+        {
+          "text": "O Império Persa",
+          "correct": false
+        },
+        {
+          "text": "O Império Babilônico",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Naqueles dias saiu um decreto da parte de César Augusto\" (Lc 2:1) — Roma governava a Judeia por meio de reis vassalos (Herodes) e governadores (Pilatos). As estradas e a paz romana serviriam depois à expansão do evangelho.",
       "divergence_note": null,
-      "reference": { "book": "lucas", "chapter": 2, "verse_start": 1, "verse_end": 5 },
+      "reference": {
+        "book": "lucas",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": 5
+      },
       "theme": "Mundo romano",
       "difficulty": "easy",
       "subcategory": "Período do NT",
-      "tags": ["roma", "cesar augusto", "judeia"]
+      "tags": [
+        "roma",
+        "cesar augusto",
+        "judeia"
+      ]
     },
     {
       "external_id": "contexto-historico-0002",
       "type": "multiple_choice",
       "text": "Qual rei governava a Judeia quando Jesus nasceu e ordenou a matança dos meninos de Belém?",
       "options": [
-        { "text": "Herodes, o Grande", "correct": true },
-        { "text": "Herodes Antipas", "correct": false },
-        { "text": "Herodes Agripa", "correct": false },
-        { "text": "Arquelau", "correct": false }
+        {
+          "text": "Herodes, o Grande",
+          "correct": true
+        },
+        {
+          "text": "Herodes Antipas",
+          "correct": false
+        },
+        {
+          "text": "Herodes Agripa",
+          "correct": false
+        },
+        {
+          "text": "Arquelau",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Tendo nascido Jesus em Belém... no tempo do rei Herodes\" (Mt 2:1). Enganado pelos magos, Herodes, o Grande, mandou matar os meninos de Belém (Mt 2:16). Antipas, seu filho, foi quem prendeu João Batista décadas depois.",
       "divergence_note": null,
-      "reference": { "book": "mateus", "chapter": 2, "verse_start": 1, "verse_end": 16 },
+      "reference": {
+        "book": "mateus",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": 16
+      },
       "theme": "Dinastia herodiana",
       "difficulty": "easy",
       "subcategory": "Período do NT",
-      "tags": ["herodes", "belem", "magos"]
+      "tags": [
+        "herodes",
+        "belem",
+        "magos"
+      ]
     },
     {
       "external_id": "contexto-historico-0003",
       "type": "open_answer",
       "text": "Qual governador romano sentenciou Jesus à crucificação?",
       "options": null,
-      "accepted_answers": ["Pilatos", "Pôncio Pilatos", "Poncio Pilatos"],
+      "accepted_answers": [
+        "Pilatos",
+        "Pôncio Pilatos",
+        "Poncio Pilatos"
+      ],
       "explanation": "Pôncio Pilatos, governador da Judeia de 26 a 36 d.C., declarou três vezes não achar crime em Jesus, mas cedeu à pressão e \"entregou-o para ser crucificado\" (Jo 19:16). Seu nome ficou registrado até no Credo Apostólico.",
       "divergence_note": null,
-      "reference": { "book": "joao", "chapter": 19, "verse_start": 12, "verse_end": 16 },
+      "reference": {
+        "book": "joao",
+        "chapter": 19,
+        "verse_start": 12,
+        "verse_end": 16
+      },
       "theme": "Julgamento de Jesus",
       "difficulty": "easy",
       "subcategory": "Período do NT",
-      "tags": ["pilatos", "julgamento", "crucificacao"]
+      "tags": [
+        "pilatos",
+        "julgamento",
+        "crucificacao"
+      ]
     },
     {
       "external_id": "contexto-historico-0004",
       "type": "multiple_choice",
       "text": "Segundo Atos 23:8, qual era a principal diferença doutrinária entre fariseus e saduceus?",
       "options": [
-        { "text": "Os saduceus negavam a ressurreição, os anjos e os espíritos", "correct": true },
-        { "text": "Os fariseus rejeitavam a Lei de Moisés", "correct": false },
-        { "text": "Os saduceus não frequentavam o templo", "correct": false },
-        { "text": "Os fariseus eram todos sacerdotes", "correct": false }
+        {
+          "text": "Os saduceus negavam a ressurreição, os anjos e os espíritos",
+          "correct": true
+        },
+        {
+          "text": "Os fariseus rejeitavam a Lei de Moisés",
+          "correct": false
+        },
+        {
+          "text": "Os saduceus não frequentavam o templo",
+          "correct": false
+        },
+        {
+          "text": "Os fariseus eram todos sacerdotes",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Os saduceus dizem que não há ressurreição, nem anjo, nem espírito; mas os fariseus reconhecem uma e outra coisa\" (At 23:8). Paulo usou essa divisão a seu favor no Sinédrio. Os saduceus dominavam o sacerdócio; os fariseus, as sinagogas.",
       "divergence_note": null,
-      "reference": { "book": "atos", "chapter": 23, "verse_start": 6, "verse_end": 10 },
+      "reference": {
+        "book": "atos",
+        "chapter": 23,
+        "verse_start": 6,
+        "verse_end": 10
+      },
       "theme": "Grupos judaicos",
       "difficulty": "medium",
       "subcategory": "Grupos religiosos",
-      "tags": ["fariseus", "saduceus", "ressurreicao"]
+      "tags": [
+        "fariseus",
+        "saduceus",
+        "ressurreicao"
+      ]
     },
     {
       "external_id": "contexto-historico-0005",
       "type": "multiple_choice",
       "text": "O que era o Sinédrio?",
       "options": [
-        { "text": "O supremo conselho judaico, com setenta membros e o sumo sacerdote", "correct": true },
-        { "text": "A guarda do templo de Jerusalém", "correct": false },
-        { "text": "Uma escola de rabinos da Galileia", "correct": false },
-        { "text": "O tribunal romano da Judeia", "correct": false }
+        {
+          "text": "O supremo conselho judaico, com setenta membros e o sumo sacerdote",
+          "correct": true
+        },
+        {
+          "text": "A guarda do templo de Jerusalém",
+          "correct": false
+        },
+        {
+          "text": "Uma escola de rabinos da Galileia",
+          "correct": false
+        },
+        {
+          "text": "O tribunal romano da Judeia",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "O Sinédrio julgou Jesus (Mt 26:59), Pedro e João (At 4), Estêvão (At 6:12) e Paulo (At 23). Presidido pelo sumo sacerdote, reunia principais sacerdotes, anciãos e escribas; sob Roma, não podia executar sentenças de morte (Jo 18:31).",
       "divergence_note": null,
-      "reference": { "book": "mateus", "chapter": 26, "verse_start": 57, "verse_end": 59 },
+      "reference": {
+        "book": "mateus",
+        "chapter": 26,
+        "verse_start": 57,
+        "verse_end": 59
+      },
       "theme": "Instituições judaicas",
       "difficulty": "medium",
       "subcategory": "Instituições",
-      "tags": ["sinedrio", "conselho", "julgamento"]
+      "tags": [
+        "sinedrio",
+        "conselho",
+        "julgamento"
+      ]
     },
     {
       "external_id": "contexto-historico-0006",
       "type": "multiple_choice",
       "text": "Quando questionado sobre o tributo a César, que moeda Jesus pediu para ver?",
       "options": [
-        { "text": "Um denário", "correct": true },
-        { "text": "Um siclo do templo", "correct": false },
-        { "text": "Uma dracma", "correct": false },
-        { "text": "Um talento", "correct": false }
+        {
+          "text": "Um denário",
+          "correct": true
+        },
+        {
+          "text": "Um siclo do templo",
+          "correct": false
+        },
+        {
+          "text": "Uma dracma",
+          "correct": false
+        },
+        {
+          "text": "Um talento",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Mostrai-me a moeda do tributo. E eles lhe apresentaram um denário\" (Mt 22:19) — moeda romana com a imagem de César. Daí a resposta: \"dai pois a César o que é de César, e a Deus o que é de Deus\" (Mt 22:21).",
       "divergence_note": null,
-      "reference": { "book": "mateus", "chapter": 22, "verse_start": 15, "verse_end": 22 },
+      "reference": {
+        "book": "mateus",
+        "chapter": 22,
+        "verse_start": 15,
+        "verse_end": 22
+      },
       "theme": "Economia romana",
       "difficulty": "medium",
       "subcategory": "Período do NT",
-      "tags": ["denario", "tributo", "cesar"]
+      "tags": [
+        "denario",
+        "tributo",
+        "cesar"
+      ]
     },
     {
       "external_id": "contexto-historico-0007",
       "type": "multiple_choice",
       "text": "Em que língua o Novo Testamento foi escrito, refletindo a cultura dominante do Mediterrâneo?",
       "options": [
-        { "text": "Grego (koiné)", "correct": true },
-        { "text": "Latim", "correct": false },
-        { "text": "Hebraico", "correct": false },
-        { "text": "Aramaico", "correct": false }
+        {
+          "text": "Grego (koiné)",
+          "correct": true
+        },
+        {
+          "text": "Latim",
+          "correct": false
+        },
+        {
+          "text": "Hebraico",
+          "correct": false
+        },
+        {
+          "text": "Aramaico",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Desde as conquistas de Alexandre, o grego koiné era a língua comum do mundo mediterrâneo — por isso os apóstolos escreveram nela, alcançando judeus da dispersão e gentios. Jesus, no cotidiano, falava aramaico (cf. Mc 5:41).",
       "divergence_note": null,
-      "reference": { "book": "atos", "chapter": 21, "verse_start": 37, "verse_end": 40 },
+      "reference": {
+        "book": "atos",
+        "chapter": 21,
+        "verse_start": 37,
+        "verse_end": 40
+      },
       "theme": "Mundo helenista",
       "difficulty": "medium",
       "subcategory": "Período do NT",
-      "tags": ["grego", "koine", "helenismo"]
+      "tags": [
+        "grego",
+        "koine",
+        "helenismo"
+      ]
     },
     {
       "external_id": "contexto-historico-0008",
       "type": "multiple_choice",
       "text": "Qual a origem da hostilidade entre judeus e samaritanos, pressuposta em João 4:9?",
       "options": [
-        { "text": "Os samaritanos descendiam da mistura de israelitas com povos trazidos pela Assíria e adoravam no monte Gerizim", "correct": true },
-        { "text": "Os samaritanos haviam crucificado profetas de Judá", "correct": false },
-        { "text": "Os samaritanos falavam grego e rejeitavam o hebraico", "correct": false },
-        { "text": "Uma guerra pelo controle do mar da Galileia", "correct": false }
+        {
+          "text": "Os samaritanos descendiam da mistura de israelitas com povos trazidos pela Assíria e adoravam no monte Gerizim",
+          "correct": true
+        },
+        {
+          "text": "Os samaritanos haviam crucificado profetas de Judá",
+          "correct": false
+        },
+        {
+          "text": "Os samaritanos falavam grego e rejeitavam o hebraico",
+          "correct": false
+        },
+        {
+          "text": "Uma guerra pelo controle do mar da Galileia",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Após a queda de Samaria, a Assíria repovoou a região com gentios que se misturaram aos israelitas remanescentes (2Rs 17:24-33), gerando um povo de culto misto que adorava no Gerizim — \"nossos pais adoraram neste monte\" (Jo 4:20). Por isso \"os judeus não se comunicam com os samaritanos\" (Jo 4:9). Jesus atravessou exatamente essa barreira.",
       "divergence_note": null,
-      "reference": { "book": "joao", "chapter": 4, "verse_start": 9, "verse_end": 26 },
+      "reference": {
+        "book": "joao",
+        "chapter": 4,
+        "verse_start": 9,
+        "verse_end": 26
+      },
       "theme": "Povos e tensões",
       "difficulty": "hard",
       "subcategory": "Povos",
-      "tags": ["samaritanos", "gerizim", "assiria"]
+      "tags": [
+        "samaritanos",
+        "gerizim",
+        "assiria"
+      ]
     },
     {
       "external_id": "contexto-historico-0009",
       "type": "multiple_choice",
       "text": "O que eram as sinagogas, onde Jesus e Paulo costumavam ensinar?",
       "options": [
-        { "text": "Casas locais de leitura das Escrituras e oração, surgidas após o exílio", "correct": true },
-        { "text": "Pequenos templos onde se ofereciam sacrifícios", "correct": false },
-        { "text": "Tribunais romanos para assuntos judaicos", "correct": false },
-        { "text": "Escolas exclusivas para sacerdotes", "correct": false }
+        {
+          "text": "Casas locais de leitura das Escrituras e oração, surgidas após o exílio",
+          "correct": true
+        },
+        {
+          "text": "Pequenos templos onde se ofereciam sacrifícios",
+          "correct": false
+        },
+        {
+          "text": "Tribunais romanos para assuntos judaicos",
+          "correct": false
+        },
+        {
+          "text": "Escolas exclusivas para sacerdotes",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Sem templo durante o exílio, os judeus se reuniam para ler a Lei e orar — prática que se consolidou nas sinagogas espalhadas por toda cidade. Jesus lia e ensinava nelas \"como era seu costume\" (Lc 4:16); sacrifícios, só no templo de Jerusalém.",
       "divergence_note": "O desenvolvimento histórico das sinagogas é reconstruído pelos historiadores a partir de evidências pós-exílicas; o Novo Testamento as mostra já plenamente estabelecidas.",
-      "reference": { "book": "lucas", "chapter": 4, "verse_start": 16, "verse_end": 21 },
+      "reference": {
+        "book": "lucas",
+        "chapter": 4,
+        "verse_start": 16,
+        "verse_end": 21
+      },
       "theme": "Instituições judaicas",
       "difficulty": "medium",
       "subcategory": "Instituições",
-      "tags": ["sinagoga", "leitura", "exilio"]
+      "tags": [
+        "sinagoga",
+        "leitura",
+        "exilio"
+      ]
     },
     {
       "external_id": "contexto-historico-0010",
       "type": "multiple_choice",
       "text": "Segundo os historiadores, o que aconteceu com o templo de Jerusalém no ano 70 d.C.?",
       "options": [
-        { "text": "Foi destruído pelos romanos sob o general Tito", "correct": true },
-        { "text": "Foi convertido em templo de Júpiter sem destruição", "correct": false },
-        { "text": "Foi ampliado por Herodes Agripa", "correct": false },
-        { "text": "Foi tomado pelos partos", "correct": false }
+        {
+          "text": "Foi destruído pelos romanos sob o general Tito",
+          "correct": true
+        },
+        {
+          "text": "Foi convertido em templo de Júpiter sem destruição",
+          "correct": false
+        },
+        {
+          "text": "Foi ampliado por Herodes Agripa",
+          "correct": false
+        },
+        {
+          "text": "Foi tomado pelos partos",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Segundo Josefo, historiador judeu e testemunha ocular, as legiões de Tito incendiaram e demoliram o templo ao sufocar a revolta judaica. Jesus havia anunciado quarenta anos antes: \"não ficará aqui pedra sobre pedra que não seja derrubada\" (Mt 24:2).",
       "divergence_note": "A destruição em 70 d.C. é fato histórico extrabíblico (fonte principal: Josefo); a profecia de Jesus está registrada em Mt 24:1-2, Mc 13:1-2 e Lc 21:5-6.",
-      "reference": { "book": "mateus", "chapter": 24, "verse_start": 1, "verse_end": 2 },
+      "reference": {
+        "book": "mateus",
+        "chapter": 24,
+        "verse_start": 1,
+        "verse_end": 2
+      },
       "theme": "Destruição do templo",
       "difficulty": "hard",
       "subcategory": "Período do NT",
-      "tags": ["templo", "tito", "70 dc", "josefo"]
+      "tags": [
+        "templo",
+        "tito",
+        "70 dc",
+        "josefo"
+      ]
+    },
+    {
+      "external_id": "contexto-historico-0011",
+      "type": "multiple_choice",
+      "text": "Qual império dominava a Judeia no tempo do nascimento de Jesus?",
+      "options": [
+        {
+          "text": "O Império Romano",
+          "correct": true
+        },
+        {
+          "text": "O Império Grego",
+          "correct": false
+        },
+        {
+          "text": "O Império Persa",
+          "correct": false
+        },
+        {
+          "text": "O Império Babilônico",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Roma dominava a região; o recenseamento de César Augusto levou José a Belém (Lc 2:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "theme": "Poder romano",
+      "difficulty": "medium",
+      "subcategory": "Mundo do NT",
+      "tags": [
+        "roma",
+        "augusto"
+      ]
+    },
+    {
+      "external_id": "contexto-historico-0012",
+      "type": "multiple_choice",
+      "text": "Qual governador romano condenou Jesus à crucificação?",
+      "options": [
+        {
+          "text": "Pôncio Pilatos",
+          "correct": true
+        },
+        {
+          "text": "Herodes Antipas",
+          "correct": false
+        },
+        {
+          "text": "Félix",
+          "correct": false
+        },
+        {
+          "text": "Festo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Pilatos, prefeito da Judeia, entregou Jesus para ser crucificado, lavando as mãos (Mt 27:24-26; Lc 23:24).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 23,
+        "verse_start": 24,
+        "verse_end": null
+      },
+      "theme": "Autoridades",
+      "difficulty": "medium",
+      "subcategory": "Mundo do NT",
+      "tags": [
+        "pilatos",
+        "crucificacao"
+      ]
+    },
+    {
+      "external_id": "contexto-historico-0013",
+      "type": "multiple_choice",
+      "text": "Qual rei, nomeado por Roma, ordenou a matança dos meninos de Belém?",
+      "options": [
+        {
+          "text": "Herodes, o Grande",
+          "correct": true
+        },
+        {
+          "text": "Herodes Antipas",
+          "correct": false
+        },
+        {
+          "text": "Arquelau",
+          "correct": false
+        },
+        {
+          "text": "Herodes Agripa",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Temendo o 'rei dos judeus', Herodes mandou matar os meninos de Belém (Mt 2:16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 2,
+        "verse_start": 16,
+        "verse_end": null
+      },
+      "theme": "Autoridades",
+      "difficulty": "hard",
+      "subcategory": "Mundo do NT",
+      "tags": [
+        "herodes",
+        "belem"
+      ]
+    },
+    {
+      "external_id": "contexto-historico-0014",
+      "type": "multiple_choice",
+      "text": "Qual grupo religioso judaico negava a ressurreição dos mortos?",
+      "options": [
+        {
+          "text": "Os saduceus",
+          "correct": true
+        },
+        {
+          "text": "Os fariseus",
+          "correct": false
+        },
+        {
+          "text": "Os essênios",
+          "correct": false
+        },
+        {
+          "text": "Os zelotes",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Os saduceus dizem que não há ressurreição, nem anjo, nem espírito' (At 23:8), ao contrário dos fariseus.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 23,
+        "verse_start": 8,
+        "verse_end": null
+      },
+      "theme": "Grupos judaicos",
+      "difficulty": "hard",
+      "subcategory": "Mundo do NT",
+      "tags": [
+        "saduceus",
+        "ressurreicao"
+      ]
+    },
+    {
+      "external_id": "contexto-historico-0015",
+      "type": "multiple_choice",
+      "text": "Em que cidade os discípulos foram chamados 'cristãos' pela primeira vez?",
+      "options": [
+        {
+          "text": "Antioquia",
+          "correct": true
+        },
+        {
+          "text": "Jerusalém",
+          "correct": false
+        },
+        {
+          "text": "Roma",
+          "correct": false
+        },
+        {
+          "text": "Éfeso",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Em Antioquia foram os discípulos, pela primeira vez, chamados cristãos' (At 11:26).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 11,
+        "verse_start": 26,
+        "verse_end": null
+      },
+      "theme": "Igreja primitiva",
+      "difficulty": "medium",
+      "subcategory": "Mundo do NT",
+      "tags": [
+        "antioquia",
+        "cristaos"
+      ]
+    },
+    {
+      "external_id": "contexto-historico-0016",
+      "type": "multiple_choice",
+      "text": "Qual concílio, em Atos 15, decidiu que os gentios não precisavam se circuncidar?",
+      "options": [
+        {
+          "text": "O Concílio de Jerusalém",
+          "correct": true
+        },
+        {
+          "text": "O Concílio de Niceia",
+          "correct": false
+        },
+        {
+          "text": "O Sinédrio",
+          "correct": false
+        },
+        {
+          "text": "O Concílio de Éfeso",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Os apóstolos e presbíteros reuniram-se em Jerusalém e não impuseram a circuncisão aos gentios (At 15:6,19-20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 15,
+        "verse_start": 6,
+        "verse_end": 20
+      },
+      "theme": "Igreja primitiva",
+      "difficulty": "hard",
+      "subcategory": "Mundo do NT",
+      "tags": [
+        "concilio",
+        "gentios"
+      ]
+    },
+    {
+      "external_id": "contexto-historico-0017",
+      "type": "multiple_choice",
+      "text": "Perante qual procurador romano Paulo apelou a César?",
+      "options": [
+        {
+          "text": "Festo",
+          "correct": true
+        },
+        {
+          "text": "Félix",
+          "correct": false
+        },
+        {
+          "text": "Pilatos",
+          "correct": false
+        },
+        {
+          "text": "Galião",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Para o tribunal de César apelo... Apelaste para César, para César irás' (At 25:11-12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 25,
+        "verse_start": 11,
+        "verse_end": 12
+      },
+      "theme": "Autoridades",
+      "difficulty": "expert",
+      "subcategory": "Mundo do NT",
+      "tags": [
+        "festo",
+        "cesar"
+      ]
+    },
+    {
+      "external_id": "contexto-historico-0018",
+      "type": "multiple_choice",
+      "text": "Qual grupo era conhecido pelo rigor com a lei e as tradições, frequentemente confrontado por Jesus?",
+      "options": [
+        {
+          "text": "Os fariseus",
+          "correct": true
+        },
+        {
+          "text": "Os saduceus",
+          "correct": false
+        },
+        {
+          "text": "Os herodianos",
+          "correct": false
+        },
+        {
+          "text": "Os samaritanos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Os fariseus 'assentam-se na cadeira de Moisés' (Mt 23:2); Jesus repreendeu sua hipocrisia.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 23,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "theme": "Grupos judaicos",
+      "difficulty": "medium",
+      "subcategory": "Mundo do NT",
+      "tags": [
+        "fariseus",
+        "lei"
+      ]
+    },
+    {
+      "external_id": "contexto-historico-0019",
+      "type": "multiple_choice",
+      "text": "Segundo os historiadores, qual língua franca facilitou a difusão do evangelho no Império?",
+      "options": [
+        {
+          "text": "O grego koiné",
+          "correct": true
+        },
+        {
+          "text": "O latim",
+          "correct": false
+        },
+        {
+          "text": "O aramaico",
+          "correct": false
+        },
+        {
+          "text": "O egípcio",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O grego comum era falado em todo o Império; a inscrição na cruz incluía hebraico, grego e latim (Jo 19:20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 19,
+        "verse_start": 20,
+        "verse_end": null
+      },
+      "theme": "Cultura",
+      "difficulty": "hard",
+      "subcategory": "Mundo do NT",
+      "tags": [
+        "grego",
+        "imperio"
+      ]
+    },
+    {
+      "external_id": "contexto-historico-0020",
+      "type": "multiple_choice",
+      "text": "Perante qual procurador, que o deixou preso esperando suborno, Paulo se defendeu em Cesareia?",
+      "options": [
+        {
+          "text": "Félix",
+          "correct": true
+        },
+        {
+          "text": "Festo",
+          "correct": false
+        },
+        {
+          "text": "Pilatos",
+          "correct": false
+        },
+        {
+          "text": "Sérgio Paulo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Félix ouviu Paulo, mas o deixou preso dois anos esperando dinheiro (At 24:26-27).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 24,
+        "verse_start": 26,
+        "verse_end": 27
+      },
+      "theme": "Autoridades",
+      "difficulty": "expert",
+      "subcategory": "Mundo do NT",
+      "tags": [
+        "felix",
+        "cesareia"
+      ]
     }
   ]
 }

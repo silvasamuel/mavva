@@ -6,180 +6,749 @@
       "type": "multiple_choice",
       "text": "Com quem Deus fez a aliança prometendo: \"far-te-ei uma grande nação... e em ti serão benditas todas as famílias da terra\"?",
       "options": [
-        { "text": "Abraão", "correct": true },
-        { "text": "Noé", "correct": false },
-        { "text": "Moisés", "correct": false },
-        { "text": "Jacó", "correct": false }
+        {
+          "text": "Abraão",
+          "correct": true
+        },
+        {
+          "text": "Noé",
+          "correct": false
+        },
+        {
+          "text": "Moisés",
+          "correct": false
+        },
+        {
+          "text": "Jacó",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "O chamado de Abrão em Gênesis 12:1-3 é o ponto de partida da história de Israel e do plano da redenção. Paulo vê nessa promessa o evangelho antecipado: \"em ti serão benditas todas as nações\" (Gl 3:8).",
       "divergence_note": null,
-      "reference": { "book": "genesis", "chapter": 12, "verse_start": 1, "verse_end": 3 },
+      "reference": {
+        "book": "genesis",
+        "chapter": 12,
+        "verse_start": 1,
+        "verse_end": 3
+      },
       "theme": "Aliança",
       "difficulty": "easy",
       "subcategory": "Patriarcas",
-      "tags": ["abraao", "alianca", "promessa"]
+      "tags": [
+        "abraao",
+        "alianca",
+        "promessa"
+      ]
     },
     {
       "external_id": "historia-de-israel-0002",
       "type": "multiple_choice",
       "text": "Como a família de Jacó foi parar no Egito, onde Israel se tornaria uma nação numerosa?",
       "options": [
-        { "text": "José, vendido como escravo, tornou-se governador e os acolheu na fome", "correct": true },
-        { "text": "Fugiram de uma guerra contra os filisteus", "correct": false },
-        { "text": "Foram levados cativos por Faraó", "correct": false },
-        { "text": "Abraão comprou terras no delta do Nilo", "correct": false }
+        {
+          "text": "José, vendido como escravo, tornou-se governador e os acolheu na fome",
+          "correct": true
+        },
+        {
+          "text": "Fugiram de uma guerra contra os filisteus",
+          "correct": false
+        },
+        {
+          "text": "Foram levados cativos por Faraó",
+          "correct": false
+        },
+        {
+          "text": "Abraão comprou terras no delta do Nilo",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Vendido pelos irmãos, José subiu de escravo a governador do Egito e, na grande fome, instalou a família em Gósen (Gn 47:11). Ele mesmo interpreta a história: \"vós bem intentastes mal contra mim, porém Deus o intentou para bem\" (Gn 50:20).",
       "divergence_note": null,
-      "reference": { "book": "genesis", "chapter": 50, "verse_start": 15, "verse_end": 21 },
+      "reference": {
+        "book": "genesis",
+        "chapter": 50,
+        "verse_start": 15,
+        "verse_end": 21
+      },
       "theme": "Providência",
       "difficulty": "easy",
       "subcategory": "Patriarcas",
-      "tags": ["jose", "egito", "providencia"]
+      "tags": [
+        "jose",
+        "egito",
+        "providencia"
+      ]
     },
     {
       "external_id": "historia-de-israel-0003",
       "type": "open_answer",
       "text": "Quantos anos Israel peregrinou no deserto entre o Egito e a terra prometida?",
       "options": null,
-      "accepted_answers": ["40", "Quarenta", "Quarenta anos"],
+      "accepted_answers": [
+        "40",
+        "Quarenta",
+        "Quarenta anos"
+      ],
       "explanation": "Pela incredulidade diante do relatório dos espias, aquela geração vagou \"quarenta anos\" no deserto, \"um ano por cada dia\" dos quarenta dias de espionagem (Nm 14:33-34). Só Josué e Calebe entraram na terra.",
       "divergence_note": null,
-      "reference": { "book": "numeros", "chapter": 14, "verse_start": 26, "verse_end": 35 },
+      "reference": {
+        "book": "numeros",
+        "chapter": 14,
+        "verse_start": 26,
+        "verse_end": 35
+      },
       "theme": "Peregrinação",
       "difficulty": "easy",
       "subcategory": "Êxodo e deserto",
-      "tags": ["deserto", "quarenta anos", "incredulidade"]
+      "tags": [
+        "deserto",
+        "quarenta anos",
+        "incredulidade"
+      ]
     },
     {
       "external_id": "historia-de-israel-0004",
       "type": "multiple_choice",
       "text": "Quem sucedeu Moisés na liderança de Israel e conduziu a conquista de Canaã?",
       "options": [
-        { "text": "Josué", "correct": true },
-        { "text": "Calebe", "correct": false },
-        { "text": "Arão", "correct": false },
-        { "text": "Eleazar", "correct": false }
+        {
+          "text": "Josué",
+          "correct": true
+        },
+        {
+          "text": "Calebe",
+          "correct": false
+        },
+        {
+          "text": "Arão",
+          "correct": false
+        },
+        {
+          "text": "Eleazar",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Moisés, meu servo, é morto; levanta-te, pois, agora, passa este Jordão\" (Js 1:2). A Josué, ajudador de Moisés desde a juventude, Deus prometeu: \"como fui com Moisés, assim serei contigo\" (Js 1:5).",
       "divergence_note": null,
-      "reference": { "book": "josue", "chapter": 1, "verse_start": 1, "verse_end": 9 },
+      "reference": {
+        "book": "josue",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 9
+      },
       "theme": "Liderança",
       "difficulty": "easy",
       "subcategory": "Conquista",
-      "tags": ["josue", "moises", "canaa"]
+      "tags": [
+        "josue",
+        "moises",
+        "canaa"
+      ]
     },
     {
       "external_id": "historia-de-israel-0005",
       "type": "multiple_choice",
       "text": "Qual ciclo se repete continuamente no livro dos Juízes?",
       "options": [
-        { "text": "Pecado, opressão, clamor a Deus e libertação", "correct": true },
-        { "text": "Guerra, vitória, censo e festa", "correct": false },
-        { "text": "Profecia, rejeição, exílio e retorno", "correct": false },
-        { "text": "Aliança, sacrifício, peregrinação e jubileu", "correct": false }
+        {
+          "text": "Pecado, opressão, clamor a Deus e libertação",
+          "correct": true
+        },
+        {
+          "text": "Guerra, vitória, censo e festa",
+          "correct": false
+        },
+        {
+          "text": "Profecia, rejeição, exílio e retorno",
+          "correct": false
+        },
+        {
+          "text": "Aliança, sacrifício, peregrinação e jubileu",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Israel \"fazia o que parecia reto aos seus olhos\" (Jz 21:25), caía nas mãos dos opressores, clamava, e Deus levantava um juiz libertador — e o ciclo recomeçava, cada vez mais fundo. O livro prepara a pergunta pelo rei segundo o coração de Deus.",
       "divergence_note": null,
-      "reference": { "book": "juizes", "chapter": 2, "verse_start": 11, "verse_end": 19 },
+      "reference": {
+        "book": "juizes",
+        "chapter": 2,
+        "verse_start": 11,
+        "verse_end": 19
+      },
       "theme": "Ciclo dos juízes",
       "difficulty": "medium",
       "subcategory": "Juízes",
-      "tags": ["juizes", "ciclo", "apostasia"]
+      "tags": [
+        "juizes",
+        "ciclo",
+        "apostasia"
+      ]
     },
     {
       "external_id": "historia-de-israel-0006",
       "type": "multiple_choice",
       "text": "Qual império conquistou Samaria e pôs fim ao reino do Norte em 722 a.C.?",
       "options": [
-        { "text": "Assíria", "correct": true },
-        { "text": "Babilônia", "correct": false },
-        { "text": "Pérsia", "correct": false },
-        { "text": "Egito", "correct": false }
+        {
+          "text": "Assíria",
+          "correct": true
+        },
+        {
+          "text": "Babilônia",
+          "correct": false
+        },
+        {
+          "text": "Pérsia",
+          "correct": false
+        },
+        {
+          "text": "Egito",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Subiu o rei da Assíria por toda a terra... e tomou a Samaria, e transportou a Israel para a Assíria\" (2Rs 17:5-6). O texto bíblico explica a causa: a idolatria persistente apesar dos avisos de \"todos os profetas\" (2Rs 17:13-18).",
       "divergence_note": null,
-      "reference": { "book": "2reis", "chapter": 17, "verse_start": 5, "verse_end": 18 },
+      "reference": {
+        "book": "2reis",
+        "chapter": 17,
+        "verse_start": 5,
+        "verse_end": 18
+      },
       "theme": "Queda dos reinos",
       "difficulty": "medium",
       "subcategory": "Reino dividido",
-      "tags": ["assiria", "samaria", "queda"]
+      "tags": [
+        "assiria",
+        "samaria",
+        "queda"
+      ]
     },
     {
       "external_id": "historia-de-israel-0007",
       "type": "open_answer",
       "text": "Quantos anos duraria o cativeiro babilônico, segundo a profecia de Jeremias?",
       "options": null,
-      "accepted_answers": ["70", "Setenta", "Setenta anos"],
+      "accepted_answers": [
+        "70",
+        "Setenta",
+        "Setenta anos"
+      ],
       "explanation": "\"Estas nações servirão ao rei de Babilônia setenta anos\" (Jr 25:11). Foi lendo essa profecia que Daniel se pôs a orar pelo fim do exílio (Dn 9:2), e Ciro decretou o retorno \"para que se cumprisse a palavra do Senhor, pela boca de Jeremias\" (2Cr 36:22).",
       "divergence_note": null,
-      "reference": { "book": "jeremias", "chapter": 25, "verse_start": 11, "verse_end": 12 },
+      "reference": {
+        "book": "jeremias",
+        "chapter": 25,
+        "verse_start": 11,
+        "verse_end": 12
+      },
       "theme": "Exílio",
       "difficulty": "medium",
       "subcategory": "Exílio e retorno",
-      "tags": ["setenta anos", "babilonia", "jeremias"]
+      "tags": [
+        "setenta anos",
+        "babilonia",
+        "jeremias"
+      ]
     },
     {
       "external_id": "historia-de-israel-0008",
       "type": "multiple_choice",
       "text": "Quem liderou a reconstrução dos muros de Jerusalém após o exílio, concluída em 52 dias?",
       "options": [
-        { "text": "Neemias", "correct": true },
-        { "text": "Esdras", "correct": false },
-        { "text": "Zorobabel", "correct": false },
-        { "text": "Josué, o sacerdote", "correct": false }
+        {
+          "text": "Neemias",
+          "correct": true
+        },
+        {
+          "text": "Esdras",
+          "correct": false
+        },
+        {
+          "text": "Zorobabel",
+          "correct": false
+        },
+        {
+          "text": "Josué, o sacerdote",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Copeiro do rei Artaxerxes, Neemias obteve licença para reconstruir os muros e resistiu ao escárnio e às ciladas dos inimigos: \"os muros se acabaram... em cinquenta e dois dias\" (Ne 6:15). Zorobabel liderara antes a reconstrução do templo; Esdras, a reforma espiritual.",
       "divergence_note": null,
-      "reference": { "book": "neemias", "chapter": 6, "verse_start": 15, "verse_end": 16 },
+      "reference": {
+        "book": "neemias",
+        "chapter": 6,
+        "verse_start": 15,
+        "verse_end": 16
+      },
       "theme": "Restauração",
       "difficulty": "easy",
       "subcategory": "Exílio e retorno",
-      "tags": ["neemias", "muros", "jerusalem"]
+      "tags": [
+        "neemias",
+        "muros",
+        "jerusalem"
+      ]
     },
     {
       "external_id": "historia-de-israel-0009",
       "type": "multiple_choice",
       "text": "Qual foi a primeira cidade conquistada por Israel em Canaã?",
       "options": [
-        { "text": "Jericó", "correct": true },
-        { "text": "Ai", "correct": false },
-        { "text": "Hebrom", "correct": false },
-        { "text": "Jerusalém", "correct": false }
+        {
+          "text": "Jericó",
+          "correct": true
+        },
+        {
+          "text": "Ai",
+          "correct": false
+        },
+        {
+          "text": "Hebrom",
+          "correct": false
+        },
+        {
+          "text": "Jerusalém",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Depois de atravessar o Jordão, Israel rodeou Jericó por sete dias, e ao toque das buzinas \"o muro caiu abaixo\" (Js 6:20). Ai veio em seguida — com a derrota inicial por causa do pecado de Acã (Js 7).",
       "divergence_note": null,
-      "reference": { "book": "josue", "chapter": 6, "verse_start": 12, "verse_end": 20 },
+      "reference": {
+        "book": "josue",
+        "chapter": 6,
+        "verse_start": 12,
+        "verse_end": 20
+      },
       "theme": "Conquista",
       "difficulty": "easy",
       "subcategory": "Conquista",
-      "tags": ["jerico", "muros", "conquista"]
+      "tags": [
+        "jerico",
+        "muros",
+        "conquista"
+      ]
     },
     {
       "external_id": "historia-de-israel-0010",
       "type": "multiple_choice",
       "text": "Segundo Êxodo 12:40, quanto tempo os filhos de Israel habitaram no Egito?",
       "options": [
-        { "text": "430 anos", "correct": true },
-        { "text": "400 anos", "correct": false },
-        { "text": "215 anos", "correct": false },
-        { "text": "70 anos", "correct": false }
+        {
+          "text": "430 anos",
+          "correct": true
+        },
+        {
+          "text": "400 anos",
+          "correct": false
+        },
+        {
+          "text": "215 anos",
+          "correct": false
+        },
+        {
+          "text": "70 anos",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"O tempo que os filhos de Israel habitaram no Egito foi de quatrocentos e trinta anos\" (Êx 12:40; cf. Gl 3:17). Gênesis 15:13 arredonda para 400 anos ao anunciar a aflição — os dois números convivem no próprio texto.",
       "divergence_note": null,
-      "reference": { "book": "exodo", "chapter": 12, "verse_start": 40, "verse_end": 41 },
+      "reference": {
+        "book": "exodo",
+        "chapter": 12,
+        "verse_start": 40,
+        "verse_end": 41
+      },
       "theme": "Cronologia de Israel",
       "difficulty": "expert",
       "subcategory": "Êxodo e deserto",
-      "tags": ["egito", "430 anos", "cronologia"]
+      "tags": [
+        "egito",
+        "430 anos",
+        "cronologia"
+      ]
+    },
+    {
+      "external_id": "historia-de-israel-0011",
+      "type": "multiple_choice",
+      "text": "Após a morte de Salomão, em quantos reinos Israel se dividiu?",
+      "options": [
+        {
+          "text": "Dois (Israel ao norte, Judá ao sul)",
+          "correct": true
+        },
+        {
+          "text": "Três",
+          "correct": false
+        },
+        {
+          "text": "Quatro",
+          "correct": false
+        },
+        {
+          "text": "Permaneceu unido",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "A dureza de Roboão dividiu o reino: dez tribos seguiram Jeroboão (Israel) e duas ficaram com Judá (1Rs 12:16-20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 12,
+        "verse_start": 16,
+        "verse_end": 20
+      },
+      "theme": "Reino dividido",
+      "difficulty": "hard",
+      "subcategory": "Monarquia",
+      "tags": [
+        "divisao",
+        "roboao"
+      ]
+    },
+    {
+      "external_id": "historia-de-israel-0012",
+      "type": "multiple_choice",
+      "text": "Qual império levou o reino do Norte (Israel) ao cativeiro?",
+      "options": [
+        {
+          "text": "A Assíria",
+          "correct": true
+        },
+        {
+          "text": "A Babilônia",
+          "correct": false
+        },
+        {
+          "text": "A Pérsia",
+          "correct": false
+        },
+        {
+          "text": "O Egito",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Samaria caiu diante da Assíria, que deportou Israel (2Rs 17:6) por causa da idolatria.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 17,
+        "verse_start": 6,
+        "verse_end": null
+      },
+      "theme": "Cativeiro",
+      "difficulty": "medium",
+      "subcategory": "Reino dividido",
+      "tags": [
+        "assiria",
+        "samaria"
+      ]
+    },
+    {
+      "external_id": "historia-de-israel-0013",
+      "type": "multiple_choice",
+      "text": "Qual rei persa decretou o retorno dos judeus e a reconstrução do templo?",
+      "options": [
+        {
+          "text": "Ciro",
+          "correct": true
+        },
+        {
+          "text": "Dario",
+          "correct": false
+        },
+        {
+          "text": "Assuero",
+          "correct": false
+        },
+        {
+          "text": "Artaxerxes",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Assim diz Ciro, rei da Pérsia... ele me encarregou de lhe edificar uma casa em Jerusalém' (Ed 1:2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "esdras",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "theme": "Retorno",
+      "difficulty": "medium",
+      "subcategory": "Pós-exílio",
+      "tags": [
+        "ciro",
+        "retorno"
+      ]
+    },
+    {
+      "external_id": "historia-de-israel-0014",
+      "type": "open_answer",
+      "text": "Quem liderou a reconstrução dos muros de Jerusalém em 52 dias?",
+      "options": null,
+      "accepted_answers": [
+        "Neemias"
+      ],
+      "explanation": "Neemias, copeiro do rei persa, reconstruiu os muros apesar da oposição, terminando em 52 dias (Ne 6:15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "neemias",
+        "chapter": 6,
+        "verse_start": 15,
+        "verse_end": null
+      },
+      "theme": "Reconstrução",
+      "difficulty": "hard",
+      "subcategory": "Pós-exílio",
+      "tags": [
+        "neemias",
+        "muros"
+      ]
+    },
+    {
+      "external_id": "historia-de-israel-0015",
+      "type": "multiple_choice",
+      "text": "Qual juíza liderou Israel junto com Baraque contra Sísera?",
+      "options": [
+        {
+          "text": "Débora",
+          "correct": true
+        },
+        {
+          "text": "Jael",
+          "correct": false
+        },
+        {
+          "text": "Miriã",
+          "correct": false
+        },
+        {
+          "text": "Ana",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Débora, profetisa e juíza, encorajou Baraque; a vitória sobre Sísera é celebrada em seu cântico (Jz 4-5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "juizes",
+        "chapter": 4,
+        "verse_start": 4,
+        "verse_end": 9
+      },
+      "theme": "Juízes",
+      "difficulty": "hard",
+      "subcategory": "Período dos juízes",
+      "tags": [
+        "debora",
+        "baraque"
+      ]
+    },
+    {
+      "external_id": "historia-de-israel-0016",
+      "type": "multiple_choice",
+      "text": "Quem reconstruiu o altar e lançou os fundamentos do segundo templo após o exílio?",
+      "options": [
+        {
+          "text": "Zorobabel",
+          "correct": true
+        },
+        {
+          "text": "Esdras",
+          "correct": false
+        },
+        {
+          "text": "Neemias",
+          "correct": false
+        },
+        {
+          "text": "Josué o sacerdote",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Zorobabel, com o sacerdote Josué, restaurou o culto e reergueu o templo (Ed 3:8-10).",
+      "divergence_note": null,
+      "reference": {
+        "book": "esdras",
+        "chapter": 3,
+        "verse_start": 8,
+        "verse_end": 10
+      },
+      "theme": "Reconstrução",
+      "difficulty": "medium",
+      "subcategory": "Pós-exílio",
+      "tags": [
+        "zorobabel",
+        "templo"
+      ]
+    },
+    {
+      "external_id": "historia-de-israel-0017",
+      "type": "multiple_choice",
+      "text": "Qual rei babilônico destruiu o templo de Jerusalém?",
+      "options": [
+        {
+          "text": "Nabucodonosor",
+          "correct": true
+        },
+        {
+          "text": "Belsazar",
+          "correct": false
+        },
+        {
+          "text": "Senaqueribe",
+          "correct": false
+        },
+        {
+          "text": "Tiglate-Pileser",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Nabucodonosor tomou Jerusalém e queimou a casa do SENHOR (2Rs 25:9), iniciando os 70 anos de exílio.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 25,
+        "verse_start": 8,
+        "verse_end": 9
+      },
+      "theme": "Exílio",
+      "difficulty": "medium",
+      "subcategory": "Reino dividido",
+      "tags": [
+        "nabucodonosor",
+        "templo"
+      ]
+    },
+    {
+      "external_id": "historia-de-israel-0018",
+      "type": "multiple_choice",
+      "text": "Quem conduziu Israel na travessia do Jordão e na conquista de Canaã?",
+      "options": [
+        {
+          "text": "Josué",
+          "correct": true
+        },
+        {
+          "text": "Calebe",
+          "correct": false
+        },
+        {
+          "text": "Otniel",
+          "correct": false
+        },
+        {
+          "text": "Gideão",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Após Moisés, Josué liderou a entrada na terra prometida, começando pela queda de Jericó (Js 1:2; 6).",
+      "divergence_note": null,
+      "reference": {
+        "book": "josue",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "theme": "Conquista",
+      "difficulty": "medium",
+      "subcategory": "Conquista de Canaã",
+      "tags": [
+        "josue",
+        "canaa"
+      ]
+    },
+    {
+      "external_id": "historia-de-israel-0019",
+      "type": "multiple_choice",
+      "text": "Quem foi o sumo sacerdote e escriba que ensinou a Lei ao povo após o retorno?",
+      "options": [
+        {
+          "text": "Esdras",
+          "correct": true
+        },
+        {
+          "text": "Zorobabel",
+          "correct": false
+        },
+        {
+          "text": "Neemias",
+          "correct": false
+        },
+        {
+          "text": "Ageu",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Esdras leu e explicou a Lei diante do povo, promovendo avivamento espiritual (Ne 8:1-8).",
+      "divergence_note": null,
+      "reference": {
+        "book": "neemias",
+        "chapter": 8,
+        "verse_start": 1,
+        "verse_end": 8
+      },
+      "theme": "Restauração",
+      "difficulty": "hard",
+      "subcategory": "Pós-exílio",
+      "tags": [
+        "esdras",
+        "lei"
+      ]
+    },
+    {
+      "external_id": "historia-de-israel-0020",
+      "type": "multiple_choice",
+      "text": "Qual foi a capital do reino do Norte (Israel) após a divisão?",
+      "options": [
+        {
+          "text": "Samaria",
+          "correct": true
+        },
+        {
+          "text": "Jerusalém",
+          "correct": false
+        },
+        {
+          "text": "Betel",
+          "correct": false
+        },
+        {
+          "text": "Siquém",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Onri comprou o monte e edificou Samaria como capital de Israel (1Rs 16:24).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 16,
+        "verse_start": 23,
+        "verse_end": 24
+      },
+      "theme": "Reino dividido",
+      "difficulty": "expert",
+      "subcategory": "Monarquia",
+      "tags": [
+        "samaria",
+        "onri"
+      ]
     }
   ]
 }

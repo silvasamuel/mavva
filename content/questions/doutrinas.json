@@ -6,185 +6,763 @@
       "type": "multiple_choice",
       "text": "Segundo Efésios 2:8-9, somos salvos pela graça, por meio de quê?",
       "options": [
-        { "text": "Da fé", "correct": true },
-        { "text": "Das boas obras", "correct": false },
-        { "text": "Do batismo", "correct": false },
-        { "text": "Da observância da Lei", "correct": false }
+        {
+          "text": "Da fé",
+          "correct": true
+        },
+        {
+          "text": "Das boas obras",
+          "correct": false
+        },
+        {
+          "text": "Do batismo",
+          "correct": false
+        },
+        {
+          "text": "Da observância da Lei",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Porque pela graça sois salvos, por meio da fé; e isto não vem de vós, é dom de Deus. Não vem das obras, para que ninguém se glorie\" (Ef 2:8-9). As boas obras são fruto da salvação, não sua causa (Ef 2:10).",
       "divergence_note": null,
-      "reference": { "book": "efesios", "chapter": 2, "verse_start": 8, "verse_end": 10 },
+      "reference": {
+        "book": "efesios",
+        "chapter": 2,
+        "verse_start": 8,
+        "verse_end": 10
+      },
       "theme": "Salvação",
       "difficulty": "easy",
       "subcategory": "Soteriologia",
-      "tags": ["graca", "fe", "salvacao"]
+      "tags": [
+        "graca",
+        "fe",
+        "salvacao"
+      ]
     },
     {
       "external_id": "doutrinas-0002",
       "type": "multiple_choice",
       "text": "Na ordem do batismo em Mateus 28:19, em nome de quem os discípulos deviam batizar?",
       "options": [
-        { "text": "Do Pai, do Filho e do Espírito Santo", "correct": true },
-        { "text": "De Jesus Cristo somente", "correct": false },
-        { "text": "Do Deus de Abraão, Isaque e Jacó", "correct": false },
-        { "text": "Do Senhor dos Exércitos", "correct": false }
+        {
+          "text": "Do Pai, do Filho e do Espírito Santo",
+          "correct": true
+        },
+        {
+          "text": "De Jesus Cristo somente",
+          "correct": false
+        },
+        {
+          "text": "Do Deus de Abraão, Isaque e Jacó",
+          "correct": false
+        },
+        {
+          "text": "Do Senhor dos Exércitos",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Batizando-as em nome do Pai, e do Filho, e do Espírito Santo\" (Mt 28:19) — \"nome\" no singular, três pessoas. É um dos textos clássicos da doutrina da Trindade: um só Deus em três pessoas.",
       "divergence_note": null,
-      "reference": { "book": "mateus", "chapter": 28, "verse_start": 18, "verse_end": 20 },
+      "reference": {
+        "book": "mateus",
+        "chapter": 28,
+        "verse_start": 18,
+        "verse_end": 20
+      },
       "theme": "Trindade",
       "difficulty": "easy",
       "subcategory": "Teologia própria",
-      "tags": ["trindade", "batismo", "grande comissao"]
+      "tags": [
+        "trindade",
+        "batismo",
+        "grande comissao"
+      ]
     },
     {
       "external_id": "doutrinas-0003",
       "type": "multiple_choice",
       "text": "O que Jesus disse a Nicodemos ser necessário para ver o Reino de Deus?",
       "options": [
-        { "text": "Nascer de novo", "correct": true },
-        { "text": "Guardar todos os mandamentos", "correct": false },
-        { "text": "Ser filho de Abraão", "correct": false },
-        { "text": "Vender tudo e dar aos pobres", "correct": false }
+        {
+          "text": "Nascer de novo",
+          "correct": true
+        },
+        {
+          "text": "Guardar todos os mandamentos",
+          "correct": false
+        },
+        {
+          "text": "Ser filho de Abraão",
+          "correct": false
+        },
+        {
+          "text": "Vender tudo e dar aos pobres",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Na verdade, na verdade te digo que aquele que não nascer de novo não pode ver o Reino de Deus\" (Jo 3:3). O novo nascimento é obra do Espírito (Jo 3:5-8) — regeneração, não reforma moral.",
       "divergence_note": null,
-      "reference": { "book": "joao", "chapter": 3, "verse_start": 1, "verse_end": 8 },
+      "reference": {
+        "book": "joao",
+        "chapter": 3,
+        "verse_start": 1,
+        "verse_end": 8
+      },
       "theme": "Regeneração",
       "difficulty": "easy",
       "subcategory": "Soteriologia",
-      "tags": ["novo nascimento", "nicodemos", "regeneracao"]
+      "tags": [
+        "novo nascimento",
+        "nicodemos",
+        "regeneracao"
+      ]
     },
     {
       "external_id": "doutrinas-0004",
       "type": "multiple_choice",
       "text": "Como João 1:14 expressa a doutrina da encarnação?",
       "options": [
-        { "text": "\"O Verbo se fez carne e habitou entre nós\"", "correct": true },
-        { "text": "\"Deus é Espírito e não tem corpo\"", "correct": false },
-        { "text": "\"O Verbo apareceu em forma de anjo\"", "correct": false },
-        { "text": "\"A carne para nada aproveita\"", "correct": false }
+        {
+          "text": "\"O Verbo se fez carne e habitou entre nós\"",
+          "correct": true
+        },
+        {
+          "text": "\"Deus é Espírito e não tem corpo\"",
+          "correct": false
+        },
+        {
+          "text": "\"O Verbo apareceu em forma de anjo\"",
+          "correct": false
+        },
+        {
+          "text": "\"A carne para nada aproveita\"",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"E o Verbo se fez carne, e habitou entre nós, e vimos a sua glória\" (Jo 1:14). O mesmo Verbo que \"era Deus\" (Jo 1:1) assumiu verdadeira humanidade — Jesus é plenamente Deus e plenamente homem.",
       "divergence_note": null,
-      "reference": { "book": "joao", "chapter": 1, "verse_start": 1, "verse_end": 14 },
+      "reference": {
+        "book": "joao",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 14
+      },
       "theme": "Cristologia",
       "difficulty": "medium",
       "subcategory": "Cristologia",
-      "tags": ["encarnacao", "verbo", "joao"]
+      "tags": [
+        "encarnacao",
+        "verbo",
+        "joao"
+      ]
     },
     {
       "external_id": "doutrinas-0005",
       "type": "multiple_choice",
       "text": "Segundo Romanos 3:23, qual é o alcance do pecado entre os homens?",
       "options": [
-        { "text": "\"Todos pecaram e destituídos estão da glória de Deus\"", "correct": true },
-        { "text": "Somente os gentios pecaram", "correct": false },
-        { "text": "Apenas os que transgridem conscientemente pecam", "correct": false },
-        { "text": "As crianças e os justos estão isentos", "correct": false }
+        {
+          "text": "\"Todos pecaram e destituídos estão da glória de Deus\"",
+          "correct": true
+        },
+        {
+          "text": "Somente os gentios pecaram",
+          "correct": false
+        },
+        {
+          "text": "Apenas os que transgridem conscientemente pecam",
+          "correct": false
+        },
+        {
+          "text": "As crianças e os justos estão isentos",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Após demonstrar que judeus e gentios estão debaixo do pecado, Paulo conclui: \"todos pecaram e destituídos estão da glória de Deus\" (Rm 3:23). A universalidade do pecado é o pano de fundo da universalidade da oferta da graça (Rm 3:24).",
       "divergence_note": null,
-      "reference": { "book": "romanos", "chapter": 3, "verse_start": 21, "verse_end": 26 },
+      "reference": {
+        "book": "romanos",
+        "chapter": 3,
+        "verse_start": 21,
+        "verse_end": 26
+      },
       "theme": "Pecado",
       "difficulty": "easy",
       "subcategory": "Hamartiologia",
-      "tags": ["pecado", "universalidade", "romanos"]
+      "tags": [
+        "pecado",
+        "universalidade",
+        "romanos"
+      ]
     },
     {
       "external_id": "doutrinas-0006",
       "type": "multiple_choice",
       "text": "O que significa a doutrina da justificação?",
       "options": [
-        { "text": "Deus declara justo o pecador que crê, por causa de Cristo", "correct": true },
-        { "text": "Deus torna o crente incapaz de pecar", "correct": false },
-        { "text": "O crente compensa seus pecados com boas obras", "correct": false },
-        { "text": "Deus ignora o pecado sem julgá-lo", "correct": false }
+        {
+          "text": "Deus declara justo o pecador que crê, por causa de Cristo",
+          "correct": true
+        },
+        {
+          "text": "Deus torna o crente incapaz de pecar",
+          "correct": false
+        },
+        {
+          "text": "O crente compensa seus pecados com boas obras",
+          "correct": false
+        },
+        {
+          "text": "Deus ignora o pecado sem julgá-lo",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Justificação é ato judicial: \"sendo justificados gratuitamente pela sua graça, pela redenção que há em Cristo Jesus\" (Rm 3:24). Deus não ignora o pecado — ele foi punido em Cristo, \"para que ele seja justo e justificador daquele que tem fé em Jesus\" (Rm 3:26).",
       "divergence_note": null,
-      "reference": { "book": "romanos", "chapter": 3, "verse_start": 24, "verse_end": 26 },
+      "reference": {
+        "book": "romanos",
+        "chapter": 3,
+        "verse_start": 24,
+        "verse_end": 26
+      },
       "theme": "Justificação",
       "difficulty": "medium",
       "subcategory": "Soteriologia",
-      "tags": ["justificacao", "graca", "redencao"]
+      "tags": [
+        "justificacao",
+        "graca",
+        "redencao"
+      ]
     },
     {
       "external_id": "doutrinas-0007",
       "type": "open_answer",
       "text": "Complete a afirmação de Paulo sobre a origem das Escrituras: \"Toda a Escritura é divinamente...\"",
       "options": null,
-      "accepted_answers": ["Inspirada", "Soprada", "Inspirada por Deus"],
+      "accepted_answers": [
+        "Inspirada",
+        "Soprada",
+        "Inspirada por Deus"
+      ],
       "explanation": "\"Toda a Escritura é divinamente inspirada, e proveitosa para ensinar, para redarguir, para corrigir, para instruir em justiça\" (2Tm 3:16). O termo grego significa literalmente \"soprada por Deus\" — a Escritura é a própria palavra de Deus em palavras humanas.",
       "divergence_note": null,
-      "reference": { "book": "2timoteo", "chapter": 3, "verse_start": 16, "verse_end": 17 },
+      "reference": {
+        "book": "2timoteo",
+        "chapter": 3,
+        "verse_start": 16,
+        "verse_end": 17
+      },
       "theme": "Escrituras",
       "difficulty": "medium",
       "subcategory": "Bibliologia",
-      "tags": ["inspiracao", "escritura", "timoteo"]
+      "tags": [
+        "inspiracao",
+        "escritura",
+        "timoteo"
+      ]
     },
     {
       "external_id": "doutrinas-0008",
       "type": "multiple_choice",
       "text": "Em 1 Coríntios 15, o que Paulo aponta como consequência se Cristo não tivesse ressuscitado?",
       "options": [
-        { "text": "\"É vã a nossa pregação, e também é vã a vossa fé\"", "correct": true },
-        { "text": "Restaria ainda a esperança da Lei", "correct": false },
-        { "text": "A salvação viria pelas obras", "correct": false },
-        { "text": "Nada mudaria para os que creem", "correct": false }
+        {
+          "text": "\"É vã a nossa pregação, e também é vã a vossa fé\"",
+          "correct": true
+        },
+        {
+          "text": "Restaria ainda a esperança da Lei",
+          "correct": false
+        },
+        {
+          "text": "A salvação viria pelas obras",
+          "correct": false
+        },
+        {
+          "text": "Nada mudaria para os que creem",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Se Cristo não ressuscitou, logo é vã a nossa pregação, e também é vã a vossa fé\" (1Co 15:14). A ressurreição corporal de Cristo é o alicerce do evangelho e a garantia da nossa: ele é \"as primícias dos que dormem\" (1Co 15:20).",
       "divergence_note": null,
-      "reference": { "book": "1corintios", "chapter": 15, "verse_start": 12, "verse_end": 20 },
+      "reference": {
+        "book": "1corintios",
+        "chapter": 15,
+        "verse_start": 12,
+        "verse_end": 20
+      },
       "theme": "Ressurreição",
       "difficulty": "medium",
       "subcategory": "Cristologia",
-      "tags": ["ressurreicao", "primicias", "evangelho"]
+      "tags": [
+        "ressurreicao",
+        "primicias",
+        "evangelho"
+      ]
     },
     {
       "external_id": "doutrinas-0009",
       "type": "multiple_choice",
       "text": "Qual pessoa da Trindade Jesus prometeu enviar como \"outro Consolador\" para estar conosco para sempre?",
       "options": [
-        { "text": "O Espírito Santo", "correct": true },
-        { "text": "O arcanjo Miguel", "correct": false },
-        { "text": "Elias redivivo", "correct": false },
-        { "text": "Um anjo guardião", "correct": false }
+        {
+          "text": "O Espírito Santo",
+          "correct": true
+        },
+        {
+          "text": "O arcanjo Miguel",
+          "correct": false
+        },
+        {
+          "text": "Elias redivivo",
+          "correct": false
+        },
+        {
+          "text": "Um anjo guardião",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Eu rogarei ao Pai, e ele vos dará outro Consolador, para que fique convosco para sempre: o Espírito de verdade\" (Jo 14:16-17). O Espírito ensina, lembra as palavras de Cristo (Jo 14:26) e convence o mundo do pecado (Jo 16:8).",
       "divergence_note": null,
-      "reference": { "book": "joao", "chapter": 14, "verse_start": 16, "verse_end": 17 },
+      "reference": {
+        "book": "joao",
+        "chapter": 14,
+        "verse_start": 16,
+        "verse_end": 17
+      },
       "theme": "Espírito Santo",
       "difficulty": "easy",
       "subcategory": "Pneumatologia",
-      "tags": ["espirito santo", "consolador", "promessa"]
+      "tags": [
+        "espirito santo",
+        "consolador",
+        "promessa"
+      ]
     },
     {
       "external_id": "doutrinas-0010",
       "type": "multiple_choice",
       "text": "Quais são as duas ordenanças que Cristo instituiu para a igreja praticar?",
       "options": [
-        { "text": "Batismo e Ceia do Senhor", "correct": true },
-        { "text": "Dízimo e jejum", "correct": false },
-        { "text": "Circuncisão e Páscoa", "correct": false },
-        { "text": "Sábado e sacrifícios", "correct": false }
+        {
+          "text": "Batismo e Ceia do Senhor",
+          "correct": true
+        },
+        {
+          "text": "Dízimo e jejum",
+          "correct": false
+        },
+        {
+          "text": "Circuncisão e Páscoa",
+          "correct": false
+        },
+        {
+          "text": "Sábado e sacrifícios",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Jesus ordenou batizar os discípulos (Mt 28:19) e instituiu a Ceia: \"fazei isto em memória de mim\" (Lc 22:19; 1Co 11:24-25). Ambas proclamam visivelmente o evangelho — união com Cristo na morte e ressurreição, e comunhão no seu sacrifício.",
       "divergence_note": "As tradições cristãs divergem sobre o número e a natureza desses ritos: evangélicos falam de duas ordenanças (símbolos); católicos e ortodoxos, de sete sacramentos (meios de graça); e há divergência sobre o modo do batismo (imersão × aspersão) e sobre a presença de Cristo na Ceia. O dado bíblico comum: Cristo instituiu o batismo e a Ceia.",
-      "reference": { "book": "1corintios", "chapter": 11, "verse_start": 23, "verse_end": 26 },
+      "reference": {
+        "book": "1corintios",
+        "chapter": 11,
+        "verse_start": 23,
+        "verse_end": 26
+      },
       "theme": "Igreja",
       "difficulty": "hard",
       "subcategory": "Eclesiologia",
-      "tags": ["batismo", "ceia", "ordenancas"]
+      "tags": [
+        "batismo",
+        "ceia",
+        "ordenancas"
+      ]
+    },
+    {
+      "external_id": "doutrinas-0011",
+      "type": "multiple_choice",
+      "text": "Segundo Romanos, o que é 'o salário do pecado'?",
+      "options": [
+        {
+          "text": "A morte",
+          "correct": true
+        },
+        {
+          "text": "A doença",
+          "correct": false
+        },
+        {
+          "text": "A pobreza",
+          "correct": false
+        },
+        {
+          "text": "O exílio",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'O salário do pecado é a morte, mas o dom gratuito de Deus é a vida eterna' (Rm 6:23).",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 6,
+        "verse_start": 23,
+        "verse_end": null
+      },
+      "theme": "Pecado e graça",
+      "difficulty": "medium",
+      "subcategory": "Soteriologia",
+      "tags": [
+        "pecado",
+        "morte"
+      ]
+    },
+    {
+      "external_id": "doutrinas-0012",
+      "type": "multiple_choice",
+      "text": "Por meio de que somos justificados, segundo Paulo, e não pelas obras da lei?",
+      "options": [
+        {
+          "text": "Pela fé",
+          "correct": true
+        },
+        {
+          "text": "Pelo batismo",
+          "correct": false
+        },
+        {
+          "text": "Pelas ofertas",
+          "correct": false
+        },
+        {
+          "text": "Pela circuncisão",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Concluímos que o homem é justificado pela fé, sem as obras da lei' (Rm 3:28; Gl 2:16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 3,
+        "verse_start": 28,
+        "verse_end": null
+      },
+      "theme": "Justificação",
+      "difficulty": "medium",
+      "subcategory": "Soteriologia",
+      "tags": [
+        "justificacao",
+        "fe"
+      ]
+    },
+    {
+      "external_id": "doutrinas-0013",
+      "type": "multiple_choice",
+      "text": "Que ordenança Jesus deu em Mateus 28, batizando 'em nome do Pai, do Filho e do Espírito Santo'?",
+      "options": [
+        {
+          "text": "A Grande Comissão",
+          "correct": true
+        },
+        {
+          "text": "A Ceia",
+          "correct": false
+        },
+        {
+          "text": "O lava-pés",
+          "correct": false
+        },
+        {
+          "text": "O jejum",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "A fórmula batismal única com três pessoas e um só nome fundamenta a doutrina da Trindade (Mt 28:19).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 28,
+        "verse_start": 19,
+        "verse_end": 20
+      },
+      "theme": "Trindade",
+      "difficulty": "hard",
+      "subcategory": "Teologia própria",
+      "tags": [
+        "trindade",
+        "batismo"
+      ]
+    },
+    {
+      "external_id": "doutrinas-0014",
+      "type": "multiple_choice",
+      "text": "O que Jesus disse ser necessário para 'ver o reino de Deus'?",
+      "options": [
+        {
+          "text": "Nascer de novo",
+          "correct": true
+        },
+        {
+          "text": "Guardar a lei",
+          "correct": false
+        },
+        {
+          "text": "Ser circuncidado",
+          "correct": false
+        },
+        {
+          "text": "Jejuar",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "A Nicodemos, Jesus declarou: 'quem não nascer de novo não pode ver o reino de Deus' (Jo 3:3) — regeneração pelo Espírito.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 3,
+        "verse_start": 3,
+        "verse_end": 5
+      },
+      "theme": "Regeneração",
+      "difficulty": "medium",
+      "subcategory": "Soteriologia",
+      "tags": [
+        "novo nascimento",
+        "nicodemos"
+      ]
+    },
+    {
+      "external_id": "doutrinas-0015",
+      "type": "multiple_choice",
+      "text": "Em 1 Coríntios 15, o que Paulo chama de 'primícias dos que dormem'?",
+      "options": [
+        {
+          "text": "A ressurreição de Cristo",
+          "correct": true
+        },
+        {
+          "text": "O batismo",
+          "correct": false
+        },
+        {
+          "text": "A cruz",
+          "correct": false
+        },
+        {
+          "text": "A ascensão",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Cristo ressuscitou como primícias, garantia da ressurreição dos crentes (1Co 15:20-22).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1corintios",
+        "chapter": 15,
+        "verse_start": 20,
+        "verse_end": 22
+      },
+      "theme": "Ressurreição",
+      "difficulty": "hard",
+      "subcategory": "Escatologia",
+      "tags": [
+        "ressurreicao",
+        "primicias"
+      ]
+    },
+    {
+      "external_id": "doutrinas-0016",
+      "type": "open_answer",
+      "text": "Que termo teológico descreve o Verbo que 'se fez carne e habitou entre nós'?",
+      "options": null,
+      "accepted_answers": [
+        "Encarnação",
+        "Encarnacao"
+      ],
+      "explanation": "A encarnação é o Filho eterno assumindo a natureza humana sem deixar de ser Deus (Jo 1:14).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 1,
+        "verse_start": 14,
+        "verse_end": null
+      },
+      "theme": "Cristologia",
+      "difficulty": "expert",
+      "subcategory": "Teologia própria",
+      "tags": [
+        "encarnacao",
+        "verbo"
+      ]
+    },
+    {
+      "external_id": "doutrinas-0017",
+      "type": "multiple_choice",
+      "text": "Segundo 1 João, quem é 'a propiciação pelos nossos pecados'?",
+      "options": [
+        {
+          "text": "Jesus Cristo",
+          "correct": true
+        },
+        {
+          "text": "A lei",
+          "correct": false
+        },
+        {
+          "text": "O templo",
+          "correct": false
+        },
+        {
+          "text": "O sacerdote",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Ele é a propiciação pelos nossos pecados, e não somente pelos nossos, mas também pelos de todo o mundo' (1Jo 2:2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1joao",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "theme": "Expiação",
+      "difficulty": "hard",
+      "subcategory": "Soteriologia",
+      "tags": [
+        "propiciacao",
+        "expiacao"
+      ]
+    },
+    {
+      "external_id": "doutrinas-0018",
+      "type": "multiple_choice",
+      "text": "O que Jesus prometeu que o Consolador (Espírito Santo) faria aos discípulos?",
+      "options": [
+        {
+          "text": "Ensinar todas as coisas e lembrar suas palavras",
+          "correct": true
+        },
+        {
+          "text": "Dar riquezas",
+          "correct": false
+        },
+        {
+          "text": "Livrar de toda dor",
+          "correct": false
+        },
+        {
+          "text": "Revelar a data do fim",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'O Consolador, o Espírito Santo... vos ensinará todas as coisas e vos fará lembrar de tudo' (Jo 14:26).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 14,
+        "verse_start": 26,
+        "verse_end": null
+      },
+      "theme": "Pneumatologia",
+      "difficulty": "medium",
+      "subcategory": "Teologia própria",
+      "tags": [
+        "espirito santo",
+        "consolador"
+      ]
+    },
+    {
+      "external_id": "doutrinas-0019",
+      "type": "multiple_choice",
+      "text": "Em João 10:28, o que Jesus diz dar às suas ovelhas, das quais 'ninguém as arrebatará'?",
+      "options": [
+        {
+          "text": "A vida eterna",
+          "correct": true
+        },
+        {
+          "text": "Riquezas",
+          "correct": false
+        },
+        {
+          "text": "Curas",
+          "correct": false
+        },
+        {
+          "text": "Sabedoria terrena",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jesus afirma a segurança das ovelhas na sua mão e na do Pai (Jo 10:28-29).",
+      "divergence_note": "A interpretação divide as tradições cristãs: o calvinismo lê como perseverança/preservação incondicional dos eleitos; o arminianismo entende que a segurança permanece enquanto se permanece em Cristo, admitindo apostasia. A pergunta trata do que o texto afirma (Cristo dá a vida eterna e guarda os seus).",
+      "reference": {
+        "book": "joao",
+        "chapter": 10,
+        "verse_start": 28,
+        "verse_end": 29
+      },
+      "theme": "Segurança da salvação",
+      "difficulty": "expert",
+      "subcategory": "Soteriologia",
+      "tags": [
+        "vida eterna",
+        "seguranca"
+      ]
+    },
+    {
+      "external_id": "doutrinas-0020",
+      "type": "multiple_choice",
+      "text": "Que aliança Deus estabeleceu com Davi quanto ao seu trono?",
+      "options": [
+        {
+          "text": "Um reino/trono estabelecido para sempre",
+          "correct": true
+        },
+        {
+          "text": "A posse do Egito",
+          "correct": false
+        },
+        {
+          "text": "Sacerdócio eterno",
+          "correct": false
+        },
+        {
+          "text": "Riqueza sem fim",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'O teu trono será estabelecido para sempre' (2Sm 7:16) — promessa cumprida em Cristo, filho de Davi.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 7,
+        "verse_start": 12,
+        "verse_end": 16
+      },
+      "theme": "Aliança davídica",
+      "difficulty": "hard",
+      "subcategory": "Teologia bíblica",
+      "tags": [
+        "alianca",
+        "davi"
+      ]
     }
   ]
 }

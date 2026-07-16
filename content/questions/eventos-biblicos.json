@@ -6,185 +6,764 @@
       "type": "open_answer",
       "text": "Durante quantos dias e noites choveu sobre a terra no dilúvio?",
       "options": null,
-      "accepted_answers": ["40", "Quarenta", "Quarenta dias", "Quarenta dias e quarenta noites"],
+      "accepted_answers": [
+        "40",
+        "Quarenta",
+        "Quarenta dias",
+        "Quarenta dias e quarenta noites"
+      ],
       "explanation": "\"Houve chuva sobre a terra quarenta dias e quarenta noites\" (Gn 7:12). As águas prevaleceram muito mais tempo — Noé passou mais de um ano dentro da arca até a terra secar (Gn 8:13-14).",
       "divergence_note": null,
-      "reference": { "book": "genesis", "chapter": 7, "verse_start": 11, "verse_end": 12 },
+      "reference": {
+        "book": "genesis",
+        "chapter": 7,
+        "verse_start": 11,
+        "verse_end": 12
+      },
       "theme": "Primórdios",
       "difficulty": "easy",
       "subcategory": "Gênesis",
-      "tags": ["diluvio", "noe", "quarenta dias"]
+      "tags": [
+        "diluvio",
+        "noe",
+        "quarenta dias"
+      ]
     },
     {
       "external_id": "eventos-biblicos-0002",
       "type": "multiple_choice",
       "text": "O que Deus fez na torre de Babel para deter a construção?",
       "options": [
-        { "text": "Confundiu a língua dos construtores", "correct": true },
-        { "text": "Derrubou a torre com um terremoto", "correct": false },
-        { "text": "Enviou fogo do céu", "correct": false },
-        { "text": "Cegou os construtores", "correct": false }
+        {
+          "text": "Confundiu a língua dos construtores",
+          "correct": true
+        },
+        {
+          "text": "Derrubou a torre com um terremoto",
+          "correct": false
+        },
+        {
+          "text": "Enviou fogo do céu",
+          "correct": false
+        },
+        {
+          "text": "Cegou os construtores",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Confundamos ali a sua língua, para que não entenda um a língua do outro\" (Gn 11:7). Sem comunicação, a obra parou e os povos se espalharam. No Pentecostes, o sinal das línguas reverte simbolicamente Babel: todos ouvem \"as grandezas de Deus\" na própria língua (At 2:11).",
       "divergence_note": null,
-      "reference": { "book": "genesis", "chapter": 11, "verse_start": 1, "verse_end": 9 },
+      "reference": {
+        "book": "genesis",
+        "chapter": 11,
+        "verse_start": 1,
+        "verse_end": 9
+      },
       "theme": "Primórdios",
       "difficulty": "easy",
       "subcategory": "Gênesis",
-      "tags": ["babel", "linguas", "dispersao"]
+      "tags": [
+        "babel",
+        "linguas",
+        "dispersao"
+      ]
     },
     {
       "external_id": "eventos-biblicos-0003",
       "type": "multiple_choice",
       "text": "O que aconteceu no dia de Pentecostes, em Atos 2?",
       "options": [
-        { "text": "O Espírito Santo desceu sobre os discípulos, que falaram em outras línguas", "correct": true },
-        { "text": "Jesus apareceu ressuscitado aos onze", "correct": false },
-        { "text": "Pedro foi liberto da prisão por um anjo", "correct": false },
-        { "text": "O véu do templo se rasgou", "correct": false }
+        {
+          "text": "O Espírito Santo desceu sobre os discípulos, que falaram em outras línguas",
+          "correct": true
+        },
+        {
+          "text": "Jesus apareceu ressuscitado aos onze",
+          "correct": false
+        },
+        {
+          "text": "Pedro foi liberto da prisão por um anjo",
+          "correct": false
+        },
+        {
+          "text": "O véu do templo se rasgou",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Todos foram cheios do Espírito Santo, e começaram a falar noutras línguas\" (At 2:4), com o som de vento impetuoso e línguas como que de fogo. A pregação de Pedro converteu cerca de três mil — o nascimento da igreja.",
       "divergence_note": null,
-      "reference": { "book": "atos", "chapter": 2, "verse_start": 1, "verse_end": 4 },
+      "reference": {
+        "book": "atos",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": 4
+      },
       "theme": "Igreja",
       "difficulty": "easy",
       "subcategory": "Novo Testamento",
-      "tags": ["pentecostes", "espirito santo", "linguas"]
+      "tags": [
+        "pentecostes",
+        "espirito santo",
+        "linguas"
+      ]
     },
     {
       "external_id": "eventos-biblicos-0004",
       "type": "multiple_choice",
       "text": "O que o povo fez ao pé do Sinai enquanto Moisés recebia as tábuas da Lei no monte?",
       "options": [
-        { "text": "Fez um bezerro de ouro e o adorou", "correct": true },
-        { "text": "Construiu o tabernáculo", "correct": false },
-        { "text": "Enviou espias a Canaã", "correct": false },
-        { "text": "Celebrou a primeira Páscoa", "correct": false }
+        {
+          "text": "Fez um bezerro de ouro e o adorou",
+          "correct": true
+        },
+        {
+          "text": "Construiu o tabernáculo",
+          "correct": false
+        },
+        {
+          "text": "Enviou espias a Canaã",
+          "correct": false
+        },
+        {
+          "text": "Celebrou a primeira Páscoa",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Vendo que Moisés tardava, o povo pediu deuses a Arão, que fez o bezerro de ouro: \"este é o teu deus, ó Israel, que te tirou da terra do Egito\" (Êx 32:4). Moisés desceu, quebrou as tábuas e destruiu o ídolo — apostasia ao pé do próprio monte da aliança.",
       "divergence_note": null,
-      "reference": { "book": "exodo", "chapter": 32, "verse_start": 1, "verse_end": 8 },
+      "reference": {
+        "book": "exodo",
+        "chapter": 32,
+        "verse_start": 1,
+        "verse_end": 8
+      },
       "theme": "Idolatria",
       "difficulty": "easy",
       "subcategory": "Êxodo",
-      "tags": ["bezerro de ouro", "sinai", "arao"]
+      "tags": [
+        "bezerro de ouro",
+        "sinai",
+        "arao"
+      ]
     },
     {
       "external_id": "eventos-biblicos-0005",
       "type": "multiple_choice",
       "text": "O que aconteceu quando Salomão terminou a oração de dedicação do templo?",
       "options": [
-        { "text": "Desceu fogo do céu e a glória do Senhor encheu a casa", "correct": true },
-        { "text": "A arca da aliança começou a resplandecer", "correct": false },
-        { "text": "Um terremoto abalou Jerusalém", "correct": false },
-        { "text": "Choveu após três anos de seca", "correct": false }
+        {
+          "text": "Desceu fogo do céu e a glória do Senhor encheu a casa",
+          "correct": true
+        },
+        {
+          "text": "A arca da aliança começou a resplandecer",
+          "correct": false
+        },
+        {
+          "text": "Um terremoto abalou Jerusalém",
+          "correct": false
+        },
+        {
+          "text": "Choveu após três anos de seca",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Desceu o fogo do céu, e consumiu o holocausto e os sacrifícios; e a glória do Senhor encheu a casa\" (2Cr 7:1). Os sacerdotes nem podiam entrar — Deus confirmava habitar no meio do seu povo, como antes no tabernáculo (Êx 40:34-35).",
       "divergence_note": null,
-      "reference": { "book": "2cronicas", "chapter": 7, "verse_start": 1, "verse_end": 3 },
+      "reference": {
+        "book": "2cronicas",
+        "chapter": 7,
+        "verse_start": 1,
+        "verse_end": 3
+      },
       "theme": "Presença de Deus",
       "difficulty": "medium",
       "subcategory": "Monarquia",
-      "tags": ["templo", "salomao", "gloria"]
+      "tags": [
+        "templo",
+        "salomao",
+        "gloria"
+      ]
     },
     {
       "external_id": "eventos-biblicos-0006",
       "type": "multiple_choice",
       "text": "No batismo de Jesus, o que se ouviu e se viu do céu?",
       "options": [
-        { "text": "A voz do Pai e o Espírito descendo como pomba", "correct": true },
-        { "text": "Um coro de anjos e uma estrela", "correct": false },
-        { "text": "Trovões e relâmpagos sobre o Jordão", "correct": false },
-        { "text": "Uma nuvem que cobriu a todos", "correct": false }
+        {
+          "text": "A voz do Pai e o Espírito descendo como pomba",
+          "correct": true
+        },
+        {
+          "text": "Um coro de anjos e uma estrela",
+          "correct": false
+        },
+        {
+          "text": "Trovões e relâmpagos sobre o Jordão",
+          "correct": false
+        },
+        {
+          "text": "Uma nuvem que cobriu a todos",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Viu o Espírito de Deus descendo como pomba... e eis que uma voz dos céus dizia: Este é o meu Filho amado, em quem me comprazo\" (Mt 3:16-17). As três pessoas da Trindade manifestas na abertura do ministério de Jesus.",
       "divergence_note": null,
-      "reference": { "book": "mateus", "chapter": 3, "verse_start": 16, "verse_end": 17 },
+      "reference": {
+        "book": "mateus",
+        "chapter": 3,
+        "verse_start": 16,
+        "verse_end": 17
+      },
       "theme": "Vida de Cristo",
       "difficulty": "easy",
       "subcategory": "Novo Testamento",
-      "tags": ["batismo", "pomba", "voz do pai"]
+      "tags": [
+        "batismo",
+        "pomba",
+        "voz do pai"
+      ]
     },
     {
       "external_id": "eventos-biblicos-0007",
       "type": "multiple_choice",
       "text": "Qual evento marcou a entrada do evangelho na casa dos gentios, com o Espírito descendo sobre não judeus?",
       "options": [
-        { "text": "A visita de Pedro a Cornélio, o centurião", "correct": true },
-        { "text": "A conversão do eunuco etíope", "correct": false },
-        { "text": "A pregação de Paulo em Atenas", "correct": false },
-        { "text": "O batismo do carcereiro de Filipos", "correct": false }
+        {
+          "text": "A visita de Pedro a Cornélio, o centurião",
+          "correct": true
+        },
+        {
+          "text": "A conversão do eunuco etíope",
+          "correct": false
+        },
+        {
+          "text": "A pregação de Paulo em Atenas",
+          "correct": false
+        },
+        {
+          "text": "O batismo do carcereiro de Filipos",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Em Cesareia, enquanto Pedro ainda falava, \"caiu o Espírito Santo sobre todos os que ouviam a palavra\" (At 10:44) — gentios incircuncisos. O episódio, precedido pela visão do lençol, convenceu a igreja: \"também aos gentios deu Deus o arrependimento para a vida\" (At 11:18).",
       "divergence_note": null,
-      "reference": { "book": "atos", "chapter": 10, "verse_start": 44, "verse_end": 48 },
+      "reference": {
+        "book": "atos",
+        "chapter": 10,
+        "verse_start": 44,
+        "verse_end": 48
+      },
       "theme": "Expansão do evangelho",
       "difficulty": "hard",
       "subcategory": "Novo Testamento",
-      "tags": ["cornelio", "gentios", "pedro"]
+      "tags": [
+        "cornelio",
+        "gentios",
+        "pedro"
+      ]
     },
     {
       "external_id": "eventos-biblicos-0008",
       "type": "multiple_choice",
       "text": "Em quantos dias Deus criou os céus e a terra, descansando no seguinte?",
       "options": [
-        { "text": "Criou em seis dias e descansou no sétimo", "correct": true },
-        { "text": "Criou em sete dias e descansou no oitavo", "correct": false },
-        { "text": "Criou em três dias e descansou no quarto", "correct": false },
-        { "text": "Criou tudo num único dia", "correct": false }
+        {
+          "text": "Criou em seis dias e descansou no sétimo",
+          "correct": true
+        },
+        {
+          "text": "Criou em sete dias e descansou no oitavo",
+          "correct": false
+        },
+        {
+          "text": "Criou em três dias e descansou no quarto",
+          "correct": false
+        },
+        {
+          "text": "Criou tudo num único dia",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Em seis dias fez o Senhor os céus e a terra... e ao sétimo dia descansou\" (Êx 20:11, resumindo Gn 1-2). O descanso do sétimo dia fundamenta o sábado e aponta para o descanso que resta ao povo de Deus (Hb 4:9-10).",
       "divergence_note": "Cristãos fiéis à Escritura divergem sobre a natureza dos \"dias\" de Gênesis 1 (dias literais, eras, estrutura literária). Todos confessam o essencial: Deus criou tudo do nada, com propósito e bondade.",
-      "reference": { "book": "exodo", "chapter": 20, "verse_start": 8, "verse_end": 11 },
+      "reference": {
+        "book": "exodo",
+        "chapter": 20,
+        "verse_start": 8,
+        "verse_end": 11
+      },
       "theme": "Criação",
       "difficulty": "easy",
       "subcategory": "Gênesis",
-      "tags": ["criacao", "seis dias", "sabado"]
+      "tags": [
+        "criacao",
+        "seis dias",
+        "sabado"
+      ]
     },
     {
       "external_id": "eventos-biblicos-0009",
       "type": "multiple_choice",
       "text": "Como Sansão causou mais destruição na sua morte do que em vida?",
       "options": [
-        { "text": "Derrubou as colunas do templo de Dagom sobre os filisteus", "correct": true },
-        { "text": "Incendiou as searas dos filisteus com trezentas raposas", "correct": false },
-        { "text": "Feriu mil homens com uma queixada de jumento", "correct": false },
-        { "text": "Arrancou as portas da cidade de Gaza", "correct": false }
+        {
+          "text": "Derrubou as colunas do templo de Dagom sobre os filisteus",
+          "correct": true
+        },
+        {
+          "text": "Incendiou as searas dos filisteus com trezentas raposas",
+          "correct": false
+        },
+        {
+          "text": "Feriu mil homens com uma queixada de jumento",
+          "correct": false
+        },
+        {
+          "text": "Arrancou as portas da cidade de Gaza",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Cego e escarnecido na festa de Dagom, Sansão orou, abraçou as colunas centrais e \"foram mais os que matou na sua morte do que os que matara na sua vida\" (Jz 16:30). As outras alternativas são façanhas suas em vida (Jz 15:4-5,15; 16:3).",
       "divergence_note": null,
-      "reference": { "book": "juizes", "chapter": 16, "verse_start": 23, "verse_end": 31 },
+      "reference": {
+        "book": "juizes",
+        "chapter": 16,
+        "verse_start": 23,
+        "verse_end": 31
+      },
       "theme": "Juízes",
       "difficulty": "medium",
       "subcategory": "Juízes",
-      "tags": ["sansao", "dagom", "filisteus"]
+      "tags": [
+        "sansao",
+        "dagom",
+        "filisteus"
+      ]
     },
     {
       "external_id": "eventos-biblicos-0010",
       "type": "multiple_choice",
       "text": "O que aconteceu no templo no momento em que Jesus morreu na cruz?",
       "options": [
-        { "text": "O véu do santuário se rasgou em dois, de alto a baixo", "correct": true },
-        { "text": "O altar de bronze se partiu", "correct": false },
-        { "text": "A arca da aliança foi encontrada", "correct": false },
-        { "text": "As lâmpadas do candelabro se apagaram", "correct": false }
+        {
+          "text": "O véu do santuário se rasgou em dois, de alto a baixo",
+          "correct": true
+        },
+        {
+          "text": "O altar de bronze se partiu",
+          "correct": false
+        },
+        {
+          "text": "A arca da aliança foi encontrada",
+          "correct": false
+        },
+        {
+          "text": "As lâmpadas do candelabro se apagaram",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Eis que o véu do templo se rasgou em dois, de alto a baixo\" (Mt 27:51) — o véu que fechava o Santo dos Santos. Hebreus interpreta: pelo sangue de Jesus temos agora \"ousadia para entrar no santuário\", por um \"novo e vivo caminho\" (Hb 10:19-20).",
       "divergence_note": null,
-      "reference": { "book": "mateus", "chapter": 27, "verse_start": 50, "verse_end": 54 },
+      "reference": {
+        "book": "mateus",
+        "chapter": 27,
+        "verse_start": 50,
+        "verse_end": 54
+      },
       "theme": "Cruz",
       "difficulty": "medium",
       "subcategory": "Novo Testamento",
-      "tags": ["veu", "templo", "crucificacao"]
+      "tags": [
+        "veu",
+        "templo",
+        "crucificacao"
+      ]
+    },
+    {
+      "external_id": "eventos-biblicos-0011",
+      "type": "multiple_choice",
+      "text": "Que evento em Babel resultou na confusão das línguas?",
+      "options": [
+        {
+          "text": "A construção da torre de Babel",
+          "correct": true
+        },
+        {
+          "text": "O dilúvio",
+          "correct": false
+        },
+        {
+          "text": "A queda de Adão",
+          "correct": false
+        },
+        {
+          "text": "O êxodo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Deus confundiu a língua dos que erguiam a torre e os espalhou pela terra (Gn 11:7-9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 11,
+        "verse_start": 7,
+        "verse_end": 9
+      },
+      "theme": "Juízo",
+      "difficulty": "medium",
+      "subcategory": "Primórdios",
+      "tags": [
+        "babel",
+        "linguas"
+      ]
+    },
+    {
+      "external_id": "eventos-biblicos-0012",
+      "type": "multiple_choice",
+      "text": "Que evento estabeleceu a aliança no Sinai com a entrega da Lei?",
+      "options": [
+        {
+          "text": "A entrega dos Dez Mandamentos",
+          "correct": true
+        },
+        {
+          "text": "A travessia do Jordão",
+          "correct": false
+        },
+        {
+          "text": "A tomada de Jericó",
+          "correct": false
+        },
+        {
+          "text": "A unção de Davi",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "No Sinai, entre trovões e fumaça, Deus desceu e deu a Lei a Moisés (Êx 19:18-20; 20:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 19,
+        "verse_start": 18,
+        "verse_end": 20
+      },
+      "theme": "Aliança",
+      "difficulty": "hard",
+      "subcategory": "Êxodo",
+      "tags": [
+        "sinai",
+        "lei"
+      ]
+    },
+    {
+      "external_id": "eventos-biblicos-0013",
+      "type": "multiple_choice",
+      "text": "Qual evento abriu caminho pelas águas para Israel fugir do Egito?",
+      "options": [
+        {
+          "text": "A abertura do Mar Vermelho",
+          "correct": true
+        },
+        {
+          "text": "A travessia do Jordão",
+          "correct": false
+        },
+        {
+          "text": "A queda de Jericó",
+          "correct": false
+        },
+        {
+          "text": "A abertura do Jaboque",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Moisés estendeu a mão e o SENHOR fez o mar recuar, e Israel passou em seco (Êx 14:21-22).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 14,
+        "verse_start": 21,
+        "verse_end": 22
+      },
+      "theme": "Livramento",
+      "difficulty": "medium",
+      "subcategory": "Êxodo",
+      "tags": [
+        "mar vermelho",
+        "exodo"
+      ]
+    },
+    {
+      "external_id": "eventos-biblicos-0014",
+      "type": "multiple_choice",
+      "text": "Qual evento levou Judá ao cativeiro e destruiu o templo de Salomão?",
+      "options": [
+        {
+          "text": "A queda de Jerusalém diante da Babilônia",
+          "correct": true
+        },
+        {
+          "text": "A invasão assíria",
+          "correct": false
+        },
+        {
+          "text": "A guerra dos macabeus",
+          "correct": false
+        },
+        {
+          "text": "A queda de Samaria",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Nabucodonosor tomou Jerusalém, queimou o templo e levou o povo cativo (2Rs 25:8-11).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 25,
+        "verse_start": 8,
+        "verse_end": 11
+      },
+      "theme": "Exílio",
+      "difficulty": "hard",
+      "subcategory": "Reino dividido",
+      "tags": [
+        "exilio",
+        "jerusalem"
+      ]
+    },
+    {
+      "external_id": "eventos-biblicos-0015",
+      "type": "open_answer",
+      "text": "Que evento restaurou os judeus à terra após o decreto de um rei persa?",
+      "options": null,
+      "accepted_answers": [
+        "Retorno do exílio",
+        "O retorno do exilio",
+        "Retorno do cativeiro"
+      ],
+      "explanation": "Ciro, rei da Pérsia, decretou o retorno e a reconstrução do templo, cumprindo a profecia (Ed 1:1-3).",
+      "divergence_note": null,
+      "reference": {
+        "book": "esdras",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "theme": "Restauração",
+      "difficulty": "medium",
+      "subcategory": "Pós-exílio",
+      "tags": [
+        "retorno",
+        "ciro"
+      ]
+    },
+    {
+      "external_id": "eventos-biblicos-0016",
+      "type": "multiple_choice",
+      "text": "Qual evento revelou Jesus resplandecente ao lado de Moisés e Elias?",
+      "options": [
+        {
+          "text": "A Transfiguração",
+          "correct": true
+        },
+        {
+          "text": "O batismo",
+          "correct": false
+        },
+        {
+          "text": "A tentação",
+          "correct": false
+        },
+        {
+          "text": "A ascensão",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "No monte, o rosto de Jesus resplandeceu como o sol e a voz do Pai o confirmou (Mt 17:2-5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 17,
+        "verse_start": 1,
+        "verse_end": 5
+      },
+      "theme": "Glória de Cristo",
+      "difficulty": "hard",
+      "subcategory": "Ministério de Jesus",
+      "tags": [
+        "transfiguracao"
+      ]
+    },
+    {
+      "external_id": "eventos-biblicos-0017",
+      "type": "multiple_choice",
+      "text": "Qual evento derrubou os muros de Jericó?",
+      "options": [
+        {
+          "text": "A marcha e o toque das trombetas",
+          "correct": true
+        },
+        {
+          "text": "Um terremoto natural",
+          "correct": false
+        },
+        {
+          "text": "Aríetes de guerra",
+          "correct": false
+        },
+        {
+          "text": "Um incêndio",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Ao sétimo dia, após rodearem a cidade e ao som das trombetas e do brado, os muros caíram (Js 6:20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "josue",
+        "chapter": 6,
+        "verse_start": 15,
+        "verse_end": 20
+      },
+      "theme": "Conquista",
+      "difficulty": "medium",
+      "subcategory": "Conquista de Canaã",
+      "tags": [
+        "jerico",
+        "muros"
+      ]
+    },
+    {
+      "external_id": "eventos-biblicos-0018",
+      "type": "multiple_choice",
+      "text": "Qual evento inaugurou a igreja com línguas de fogo e muitos idiomas?",
+      "options": [
+        {
+          "text": "Pentecostes",
+          "correct": true
+        },
+        {
+          "text": "A ascensão",
+          "correct": false
+        },
+        {
+          "text": "A conversão de Paulo",
+          "correct": false
+        },
+        {
+          "text": "O concílio de Jerusalém",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "No Pentecostes, o Espírito desceu e os discípulos falaram em outras línguas; três mil se converteram (At 2:3-4,41).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": 4
+      },
+      "theme": "Espírito Santo",
+      "difficulty": "medium",
+      "subcategory": "Igreja primitiva",
+      "tags": [
+        "pentecostes",
+        "espirito"
+      ]
+    },
+    {
+      "external_id": "eventos-biblicos-0019",
+      "type": "multiple_choice",
+      "text": "Qual evento marcou o primeiro dia da criação em Gênesis?",
+      "options": [
+        {
+          "text": "A criação da luz",
+          "correct": true
+        },
+        {
+          "text": "A separação das águas",
+          "correct": false
+        },
+        {
+          "text": "A criação do homem",
+          "correct": false
+        },
+        {
+          "text": "O descanso",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Disse Deus: Haja luz; e houve luz' (Gn 1:3) — o primeiro ato criador nomeado.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 1,
+        "verse_start": 3,
+        "verse_end": 5
+      },
+      "theme": "Criação",
+      "difficulty": "hard",
+      "subcategory": "Primórdios",
+      "tags": [
+        "criacao",
+        "luz"
+      ]
+    },
+    {
+      "external_id": "eventos-biblicos-0020",
+      "type": "multiple_choice",
+      "text": "Qual evento pôs fim à vida no mundo antigo, salvando apenas oito pessoas?",
+      "options": [
+        {
+          "text": "O dilúvio",
+          "correct": true
+        },
+        {
+          "text": "A torre de Babel",
+          "correct": false
+        },
+        {
+          "text": "Sodoma e Gomorra",
+          "correct": false
+        },
+        {
+          "text": "As pragas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O dilúvio cobriu a terra; só Noé e sua família (oito pessoas) se salvaram na arca (Gn 7:23; 1Pe 3:20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 7,
+        "verse_start": 21,
+        "verse_end": 23
+      },
+      "theme": "Juízo",
+      "difficulty": "medium",
+      "subcategory": "Primórdios",
+      "tags": [
+        "diluvio",
+        "noe"
+      ]
     }
   ]
 }

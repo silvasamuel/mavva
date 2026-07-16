@@ -6,185 +6,766 @@
       "type": "multiple_choice",
       "text": "Qual destes eventos aconteceu primeiro?",
       "options": [
-        { "text": "O dilúvio", "correct": true },
-        { "text": "A torre de Babel", "correct": false },
-        { "text": "O chamado de Abraão", "correct": false },
-        { "text": "O êxodo do Egito", "correct": false }
+        {
+          "text": "O dilúvio",
+          "correct": true
+        },
+        {
+          "text": "A torre de Babel",
+          "correct": false
+        },
+        {
+          "text": "O chamado de Abraão",
+          "correct": false
+        },
+        {
+          "text": "O êxodo do Egito",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "A ordem de Gênesis: dilúvio (caps. 6-9), torre de Babel (cap. 11), chamado de Abraão (cap. 12) — e o êxodo só séculos depois (Êxodo). Babel acontece entre os descendentes de Noé, e Abraão descende de Sem (Gn 11:10-26).",
       "divergence_note": null,
-      "reference": { "book": "genesis", "chapter": 11, "verse_start": 1, "verse_end": 9 },
+      "reference": {
+        "book": "genesis",
+        "chapter": 11,
+        "verse_start": 1,
+        "verse_end": 9
+      },
       "theme": "Primórdios",
       "difficulty": "easy",
       "subcategory": "Gênesis",
-      "tags": ["diluvio", "babel", "ordem"]
+      "tags": [
+        "diluvio",
+        "babel",
+        "ordem"
+      ]
     },
     {
       "external_id": "cronologia-biblica-0002",
       "type": "multiple_choice",
       "text": "Qual é a ordem correta dos patriarcas?",
       "options": [
-        { "text": "Abraão → Isaque → Jacó → José", "correct": true },
-        { "text": "Abraão → Jacó → Isaque → José", "correct": false },
-        { "text": "Isaque → Abraão → José → Jacó", "correct": false },
-        { "text": "Jacó → Abraão → Isaque → José", "correct": false }
+        {
+          "text": "Abraão → Isaque → Jacó → José",
+          "correct": true
+        },
+        {
+          "text": "Abraão → Jacó → Isaque → José",
+          "correct": false
+        },
+        {
+          "text": "Isaque → Abraão → José → Jacó",
+          "correct": false
+        },
+        {
+          "text": "Jacó → Abraão → Isaque → José",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Abraão gerou Isaque (Gn 21), Isaque gerou Jacó (Gn 25), e Jacó gerou os doze, entre eles José (Gn 30). \"Deus de Abraão, de Isaque e de Jacó\" tornou-se o próprio nome pelo qual Deus se apresenta (Êx 3:6).",
       "divergence_note": null,
-      "reference": { "book": "exodo", "chapter": 3, "verse_start": 6, "verse_end": 6 },
+      "reference": {
+        "book": "exodo",
+        "chapter": 3,
+        "verse_start": 6,
+        "verse_end": 6
+      },
       "theme": "Patriarcas",
       "difficulty": "easy",
       "subcategory": "Gênesis",
-      "tags": ["patriarcas", "ordem", "abraao"]
+      "tags": [
+        "patriarcas",
+        "ordem",
+        "abraao"
+      ]
     },
     {
       "external_id": "cronologia-biblica-0003",
       "type": "multiple_choice",
       "text": "Qual é a ordem correta dos três primeiros reis de Israel?",
       "options": [
-        { "text": "Saul → Davi → Salomão", "correct": true },
-        { "text": "Davi → Saul → Salomão", "correct": false },
-        { "text": "Samuel → Davi → Saul", "correct": false },
-        { "text": "Saul → Salomão → Davi", "correct": false }
+        {
+          "text": "Saul → Davi → Salomão",
+          "correct": true
+        },
+        {
+          "text": "Davi → Saul → Salomão",
+          "correct": false
+        },
+        {
+          "text": "Samuel → Davi → Saul",
+          "correct": false
+        },
+        {
+          "text": "Saul → Salomão → Davi",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Saul foi o primeiro rei (1Sm 10), sucedido por Davi (2Sm 5) e depois por Salomão, filho de Davi (1Rs 1). Cada um reinou cerca de quarenta anos, cobrindo o século de ouro do reino unido.",
       "divergence_note": null,
-      "reference": { "book": "1reis", "chapter": 2, "verse_start": 10, "verse_end": 12 },
+      "reference": {
+        "book": "1reis",
+        "chapter": 2,
+        "verse_start": 10,
+        "verse_end": 12
+      },
       "theme": "Monarquia",
       "difficulty": "easy",
       "subcategory": "Monarquia",
-      "tags": ["saul", "davi", "salomao"]
+      "tags": [
+        "saul",
+        "davi",
+        "salomao"
+      ]
     },
     {
       "external_id": "cronologia-biblica-0004",
       "type": "multiple_choice",
       "text": "Qual período vem entre a conquista de Canaã e o primeiro rei de Israel?",
       "options": [
-        { "text": "O período dos juízes", "correct": true },
-        { "text": "O cativeiro babilônico", "correct": false },
-        { "text": "A peregrinação no deserto", "correct": false },
-        { "text": "O domínio persa", "correct": false }
+        {
+          "text": "O período dos juízes",
+          "correct": true
+        },
+        {
+          "text": "O cativeiro babilônico",
+          "correct": false
+        },
+        {
+          "text": "A peregrinação no deserto",
+          "correct": false
+        },
+        {
+          "text": "O domínio persa",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Depois de Josué, \"levantou o Senhor juízes\" (Jz 2:16) — de Otniel a Sansão e Samuel — até que o povo pediu um rei (1Sm 8:5). O deserto veio antes da conquista; Babilônia e Pérsia, séculos depois da monarquia.",
       "divergence_note": null,
-      "reference": { "book": "juizes", "chapter": 2, "verse_start": 16, "verse_end": 19 },
+      "reference": {
+        "book": "juizes",
+        "chapter": 2,
+        "verse_start": 16,
+        "verse_end": 19
+      },
       "theme": "Linha do tempo",
       "difficulty": "medium",
       "subcategory": "Juízes",
-      "tags": ["juizes", "conquista", "monarquia"]
+      "tags": [
+        "juizes",
+        "conquista",
+        "monarquia"
+      ]
     },
     {
       "external_id": "cronologia-biblica-0005",
       "type": "multiple_choice",
       "text": "Quais profetas ministraram durante o exílio na Babilônia?",
       "options": [
-        { "text": "Daniel e Ezequiel", "correct": true },
-        { "text": "Isaías e Amós", "correct": false },
-        { "text": "Ageu e Zacarias", "correct": false },
-        { "text": "Elias e Eliseu", "correct": false }
+        {
+          "text": "Daniel e Ezequiel",
+          "correct": true
+        },
+        {
+          "text": "Isaías e Amós",
+          "correct": false
+        },
+        {
+          "text": "Ageu e Zacarias",
+          "correct": false
+        },
+        {
+          "text": "Elias e Eliseu",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Daniel foi levado a Babilônia na primeira deportação (Dn 1:1-6) e Ezequiel na segunda, ministrando entre os cativos junto ao rio Quebar (Ez 1:1-3). Isaías e Amós vieram antes do exílio; Ageu e Zacarias, depois do retorno.",
       "divergence_note": null,
-      "reference": { "book": "ezequiel", "chapter": 1, "verse_start": 1, "verse_end": 3 },
+      "reference": {
+        "book": "ezequiel",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 3
+      },
       "theme": "Profetas na linha do tempo",
       "difficulty": "medium",
       "subcategory": "Exílio",
-      "tags": ["daniel", "ezequiel", "exilio"]
+      "tags": [
+        "daniel",
+        "ezequiel",
+        "exilio"
+      ]
     },
     {
       "external_id": "cronologia-biblica-0006",
       "type": "open_answer",
       "text": "Aproximadamente quantos anos de silêncio profético separam Malaquias do Novo Testamento?",
       "options": null,
-      "accepted_answers": ["400", "Quatrocentos", "400 anos", "Quatrocentos anos"],
+      "accepted_answers": [
+        "400",
+        "Quatrocentos",
+        "400 anos",
+        "Quatrocentos anos"
+      ],
       "explanation": "Entre Malaquias (c. 430 a.C.) e João Batista há cerca de quatro séculos sem profeta em Israel — o \"período interbíblico\", em que se sucederam os impérios persa, grego e romano. O silêncio se quebra com o anjo anunciando o precursor prometido pelo próprio Malaquias (Lc 1:13-17; Ml 3:1).",
       "divergence_note": null,
-      "reference": { "book": "malaquias", "chapter": 3, "verse_start": 1, "verse_end": 1 },
+      "reference": {
+        "book": "malaquias",
+        "chapter": 3,
+        "verse_start": 1,
+        "verse_end": 1
+      },
       "theme": "Período interbíblico",
       "difficulty": "hard",
       "subcategory": "Entre os testamentos",
-      "tags": ["silencio", "interbiblico", "malaquias"]
+      "tags": [
+        "silencio",
+        "interbiblico",
+        "malaquias"
+      ]
     },
     {
       "external_id": "cronologia-biblica-0007",
       "type": "multiple_choice",
       "text": "Quantos dias após a ressurreição Jesus subiu ao céu, segundo Atos 1?",
       "options": [
-        { "text": "40 dias", "correct": true },
-        { "text": "50 dias", "correct": false },
-        { "text": "7 dias", "correct": false },
-        { "text": "3 dias", "correct": false }
+        {
+          "text": "40 dias",
+          "correct": true
+        },
+        {
+          "text": "50 dias",
+          "correct": false
+        },
+        {
+          "text": "7 dias",
+          "correct": false
+        },
+        {
+          "text": "3 dias",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Jesus \"apresentou-se vivo... sendo visto por eles por espaço de quarenta dias\" (At 1:3) antes da ascensão. O Espírito desceu no Pentecostes, cinquenta dias após a Páscoa — dez dias depois da subida do Senhor.",
       "divergence_note": null,
-      "reference": { "book": "atos", "chapter": 1, "verse_start": 1, "verse_end": 11 },
+      "reference": {
+        "book": "atos",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 11
+      },
       "theme": "Vida de Cristo",
       "difficulty": "medium",
       "subcategory": "Novo Testamento",
-      "tags": ["ascensao", "quarenta dias", "pentecostes"]
+      "tags": [
+        "ascensao",
+        "quarenta dias",
+        "pentecostes"
+      ]
     },
     {
       "external_id": "cronologia-biblica-0008",
       "type": "multiple_choice",
       "text": "Qual evento veio primeiro no ministério terreno de Jesus?",
       "options": [
-        { "text": "O batismo no Jordão", "correct": true },
-        { "text": "A transfiguração", "correct": false },
-        { "text": "A entrada triunfal em Jerusalém", "correct": false },
-        { "text": "A instituição da Ceia", "correct": false }
+        {
+          "text": "O batismo no Jordão",
+          "correct": true
+        },
+        {
+          "text": "A transfiguração",
+          "correct": false
+        },
+        {
+          "text": "A entrada triunfal em Jerusalém",
+          "correct": false
+        },
+        {
+          "text": "A instituição da Ceia",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "O batismo abre o ministério público de Jesus, aos \"quase trinta anos\" (Lc 3:21-23), seguido da tentação no deserto. A transfiguração ocorre no meio do caminho; a entrada triunfal e a Ceia, na semana final.",
       "divergence_note": null,
-      "reference": { "book": "lucas", "chapter": 3, "verse_start": 21, "verse_end": 23 },
+      "reference": {
+        "book": "lucas",
+        "chapter": 3,
+        "verse_start": 21,
+        "verse_end": 23
+      },
       "theme": "Vida de Cristo",
       "difficulty": "easy",
       "subcategory": "Novo Testamento",
-      "tags": ["batismo", "ministerio", "ordem"]
+      "tags": [
+        "batismo",
+        "ministerio",
+        "ordem"
+      ]
     },
     {
       "external_id": "cronologia-biblica-0009",
       "type": "multiple_choice",
       "text": "Em que ordem os impérios dominaram Israel/Judá, conforme a narrativa bíblica?",
       "options": [
-        { "text": "Assíria → Babilônia → Pérsia → Grécia → Roma", "correct": true },
-        { "text": "Babilônia → Assíria → Grécia → Pérsia → Roma", "correct": false },
-        { "text": "Pérsia → Babilônia → Assíria → Roma → Grécia", "correct": false },
-        { "text": "Assíria → Pérsia → Babilônia → Roma → Grécia", "correct": false }
+        {
+          "text": "Assíria → Babilônia → Pérsia → Grécia → Roma",
+          "correct": true
+        },
+        {
+          "text": "Babilônia → Assíria → Grécia → Pérsia → Roma",
+          "correct": false
+        },
+        {
+          "text": "Pérsia → Babilônia → Assíria → Roma → Grécia",
+          "correct": false
+        },
+        {
+          "text": "Assíria → Pérsia → Babilônia → Roma → Grécia",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "A Assíria levou o reino do Norte (2Rs 17); a Babilônia, Judá (2Rs 25); a Pérsia autorizou o retorno (Ed 1); a Grécia domina o período interbíblico — antevista nas visões de Daniel (Dn 8:21) — e Roma governa nos dias de Jesus (Lc 2:1).",
       "divergence_note": null,
-      "reference": { "book": "daniel", "chapter": 8, "verse_start": 20, "verse_end": 21 },
+      "reference": {
+        "book": "daniel",
+        "chapter": 8,
+        "verse_start": 20,
+        "verse_end": 21
+      },
       "theme": "Impérios",
       "difficulty": "hard",
       "subcategory": "Linha do tempo geral",
-      "tags": ["imperios", "ordem", "daniel"]
+      "tags": [
+        "imperios",
+        "ordem",
+        "daniel"
+      ]
     },
     {
       "external_id": "cronologia-biblica-0010",
       "type": "multiple_choice",
       "text": "João Batista começou a pregar antes ou durante o ministério público de Jesus?",
       "options": [
-        { "text": "Antes — ele foi o precursor que preparou o caminho", "correct": true },
-        { "text": "Depois da ressurreição de Jesus", "correct": false },
-        { "text": "Somente após a prisão de Jesus", "correct": false },
-        { "text": "Ao mesmo tempo, sem relação entre os dois", "correct": false }
+        {
+          "text": "Antes — ele foi o precursor que preparou o caminho",
+          "correct": true
+        },
+        {
+          "text": "Depois da ressurreição de Jesus",
+          "correct": false
+        },
+        {
+          "text": "Somente após a prisão de Jesus",
+          "correct": false
+        },
+        {
+          "text": "Ao mesmo tempo, sem relação entre os dois",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "João veio \"preparar o caminho do Senhor\" (Mt 3:3, citando Isaías 40:3), pregando e batizando antes de Jesus se manifestar. O próprio João resume a transição: \"é necessário que ele cresça e que eu diminua\" (Jo 3:30).",
       "divergence_note": null,
-      "reference": { "book": "mateus", "chapter": 3, "verse_start": 1, "verse_end": 12 },
+      "reference": {
+        "book": "mateus",
+        "chapter": 3,
+        "verse_start": 1,
+        "verse_end": 12
+      },
       "theme": "Vida de Cristo",
       "difficulty": "easy",
       "subcategory": "Novo Testamento",
-      "tags": ["joao batista", "precursor", "ordem"]
+      "tags": [
+        "joao batista",
+        "precursor",
+        "ordem"
+      ]
+    },
+    {
+      "external_id": "cronologia-biblica-0011",
+      "type": "multiple_choice",
+      "text": "Quantos anos Israel peregrinou no deserto antes de entrar em Canaã?",
+      "options": [
+        {
+          "text": "Quarenta anos",
+          "correct": true
+        },
+        {
+          "text": "Setenta anos",
+          "correct": false
+        },
+        {
+          "text": "Doze anos",
+          "correct": false
+        },
+        {
+          "text": "Quatrocentos anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Por causa da incredulidade, a geração do êxodo peregrinou 40 anos até morrer no deserto (Nm 14:33-34).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 14,
+        "verse_start": 33,
+        "verse_end": 34
+      },
+      "theme": "Deserto",
+      "difficulty": "medium",
+      "subcategory": "Êxodo",
+      "tags": [
+        "deserto",
+        "40 anos"
+      ]
+    },
+    {
+      "external_id": "cronologia-biblica-0012",
+      "type": "multiple_choice",
+      "text": "Quantos anos durou o cativeiro babilônico profetizado por Jeremias?",
+      "options": [
+        {
+          "text": "Setenta anos",
+          "correct": true
+        },
+        {
+          "text": "Quarenta anos",
+          "correct": false
+        },
+        {
+          "text": "Cem anos",
+          "correct": false
+        },
+        {
+          "text": "Sete anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Estas nações servirão ao rei de Babilônia setenta anos' (Jr 25:11), cumprido no decreto de Ciro.",
+      "divergence_note": null,
+      "reference": {
+        "book": "jeremias",
+        "chapter": 25,
+        "verse_start": 11,
+        "verse_end": 12
+      },
+      "theme": "Exílio",
+      "difficulty": "medium",
+      "subcategory": "Pós-exílio",
+      "tags": [
+        "70 anos",
+        "exilio"
+      ]
+    },
+    {
+      "external_id": "cronologia-biblica-0013",
+      "type": "multiple_choice",
+      "text": "Por quantos dias Jesus apareceu aos discípulos entre a ressurreição e a ascensão?",
+      "options": [
+        {
+          "text": "Quarenta dias",
+          "correct": true
+        },
+        {
+          "text": "Três dias",
+          "correct": false
+        },
+        {
+          "text": "Sete dias",
+          "correct": false
+        },
+        {
+          "text": "Cinquenta dias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Aos quais também, depois de ter padecido, se apresentou vivo... aparecendo-lhes por espaço de quarenta dias' (At 1:3).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 1,
+        "verse_start": 3,
+        "verse_end": null
+      },
+      "theme": "Ressurreição",
+      "difficulty": "medium",
+      "subcategory": "Igreja primitiva",
+      "tags": [
+        "40 dias",
+        "ascensao"
+      ]
+    },
+    {
+      "external_id": "cronologia-biblica-0014",
+      "type": "multiple_choice",
+      "text": "Quantos anos tinha Abraão quando Isaque nasceu?",
+      "options": [
+        {
+          "text": "Cem anos",
+          "correct": true
+        },
+        {
+          "text": "Setenta e cinco",
+          "correct": false
+        },
+        {
+          "text": "Noventa",
+          "correct": false
+        },
+        {
+          "text": "Cento e vinte",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Abraão tinha cem anos quando lhe nasceu Isaque' (Gn 21:5) — o filho da promessa na velhice.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 21,
+        "verse_start": 5,
+        "verse_end": null
+      },
+      "theme": "Patriarcas",
+      "difficulty": "hard",
+      "subcategory": "Gênesis",
+      "tags": [
+        "abraao",
+        "isaque"
+      ]
+    },
+    {
+      "external_id": "cronologia-biblica-0015",
+      "type": "multiple_choice",
+      "text": "Quantos anos, ao todo, Jacó serviu a Labão pelas filhas e pelo gado?",
+      "options": [
+        {
+          "text": "Vinte anos",
+          "correct": true
+        },
+        {
+          "text": "Sete anos",
+          "correct": false
+        },
+        {
+          "text": "Catorze anos",
+          "correct": false
+        },
+        {
+          "text": "Quarenta anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Vinte anos estive em tua casa: catorze anos te servi por tuas duas filhas e seis anos por teu gado' (Gn 31:41).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 31,
+        "verse_start": 41,
+        "verse_end": null
+      },
+      "theme": "Patriarcas",
+      "difficulty": "hard",
+      "subcategory": "Gênesis",
+      "tags": [
+        "jaco",
+        "labao"
+      ]
+    },
+    {
+      "external_id": "cronologia-biblica-0016",
+      "type": "multiple_choice",
+      "text": "Quantos anos reinou o rei Davi ao todo?",
+      "options": [
+        {
+          "text": "Quarenta anos",
+          "correct": true
+        },
+        {
+          "text": "Trinta anos",
+          "correct": false
+        },
+        {
+          "text": "Vinte anos",
+          "correct": false
+        },
+        {
+          "text": "Cinquenta anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Trinta anos tinha Davi... e reinou quarenta anos' (2Sm 5:4) — sete em Hebrom e trinta e três em Jerusalém.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 5,
+        "verse_start": 4,
+        "verse_end": 5
+      },
+      "theme": "Monarquia",
+      "difficulty": "medium",
+      "subcategory": "Reis",
+      "tags": [
+        "davi",
+        "reinado"
+      ]
+    },
+    {
+      "external_id": "cronologia-biblica-0017",
+      "type": "open_answer",
+      "text": "Em quantos dias Deus criou os céus e a terra, descansando no sétimo?",
+      "options": null,
+      "accepted_answers": [
+        "6",
+        "seis",
+        "6 dias",
+        "seis dias"
+      ],
+      "explanation": "'Em seis dias fez o SENHOR os céus e a terra... e ao sétimo dia descansou' (Êx 20:11; Gn 2:2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "theme": "Criação",
+      "difficulty": "medium",
+      "subcategory": "Primórdios",
+      "tags": [
+        "criacao",
+        "6 dias"
+      ]
+    },
+    {
+      "external_id": "cronologia-biblica-0018",
+      "type": "multiple_choice",
+      "text": "Quantos dias caiu chuva sobre a terra no dilúvio?",
+      "options": [
+        {
+          "text": "Quarenta dias e quarenta noites",
+          "correct": true
+        },
+        {
+          "text": "Sete dias",
+          "correct": false
+        },
+        {
+          "text": "Cento e cinquenta dias",
+          "correct": false
+        },
+        {
+          "text": "Trezentos dias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'E houve chuva sobre a terra quarenta dias e quarenta noites' (Gn 7:12); as águas prevaleceram 150 dias.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 7,
+        "verse_start": 12,
+        "verse_end": null
+      },
+      "theme": "Dilúvio",
+      "difficulty": "hard",
+      "subcategory": "Primórdios",
+      "tags": [
+        "diluvio",
+        "40 dias"
+      ]
+    },
+    {
+      "external_id": "cronologia-biblica-0019",
+      "type": "multiple_choice",
+      "text": "Quantas 'semanas' foram determinadas na profecia de Daniel 9?",
+      "options": [
+        {
+          "text": "Setenta semanas",
+          "correct": true
+        },
+        {
+          "text": "Sete semanas",
+          "correct": false
+        },
+        {
+          "text": "Doze semanas",
+          "correct": false
+        },
+        {
+          "text": "Quarenta semanas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Setenta semanas estão determinadas sobre o teu povo' (Dn 9:24), profecia messiânica.",
+      "divergence_note": "As tradições cristãs divergem sobre a interpretação das setenta semanas (contagem, se apontam ao primeiro advento e/ou a eventos futuros). A pergunta trata do número dado no texto.",
+      "reference": {
+        "book": "daniel",
+        "chapter": 9,
+        "verse_start": 24,
+        "verse_end": null
+      },
+      "theme": "Profecia",
+      "difficulty": "expert",
+      "subcategory": "Daniel",
+      "tags": [
+        "70 semanas",
+        "daniel"
+      ]
+    },
+    {
+      "external_id": "cronologia-biblica-0020",
+      "type": "multiple_choice",
+      "text": "Quantos anos reinou Salomão sobre Israel?",
+      "options": [
+        {
+          "text": "Quarenta anos",
+          "correct": true
+        },
+        {
+          "text": "Vinte anos",
+          "correct": false
+        },
+        {
+          "text": "Trinta e três anos",
+          "correct": false
+        },
+        {
+          "text": "Sessenta anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'O tempo que Salomão reinou em Jerusalém sobre todo o Israel foram quarenta anos' (1Rs 11:42).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 11,
+        "verse_start": 42,
+        "verse_end": null
+      },
+      "theme": "Monarquia",
+      "difficulty": "medium",
+      "subcategory": "Reis",
+      "tags": [
+        "salomao",
+        "reinado"
+      ]
     }
   ]
 }

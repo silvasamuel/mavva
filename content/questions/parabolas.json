@@ -6,180 +6,750 @@
       "type": "multiple_choice",
       "text": "Na parábola do semeador, segundo a explicação do próprio Jesus, o que representa a semente?",
       "options": [
-        { "text": "A palavra de Deus", "correct": true },
-        { "text": "A fé do cristão", "correct": false },
-        { "text": "O Reino dos céus", "correct": false },
-        { "text": "As boas obras", "correct": false }
+        {
+          "text": "A palavra de Deus",
+          "correct": true
+        },
+        {
+          "text": "A fé do cristão",
+          "correct": false
+        },
+        {
+          "text": "O Reino dos céus",
+          "correct": false
+        },
+        {
+          "text": "As boas obras",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Jesus mesmo interpreta: \"a semente é a palavra de Deus\" (Lc 8:11). Os quatro solos são os corações que a recebem — a diferença nunca está na semente, mas no terreno.",
       "divergence_note": null,
-      "reference": { "book": "lucas", "chapter": 8, "verse_start": 11, "verse_end": 15 },
+      "reference": {
+        "book": "lucas",
+        "chapter": 8,
+        "verse_start": 11,
+        "verse_end": 15
+      },
       "theme": "Palavra de Deus",
       "difficulty": "easy",
       "subcategory": "Parábolas do Reino",
-      "tags": ["semeador", "solos", "palavra"]
+      "tags": [
+        "semeador",
+        "solos",
+        "palavra"
+      ]
     },
     {
       "external_id": "parabolas-0002",
       "type": "multiple_choice",
       "text": "Na parábola do filho pródigo, o que o pai fez quando viu o filho voltando ainda longe?",
       "options": [
-        { "text": "Correu, o abraçou e o beijou", "correct": true },
-        { "text": "Esperou que ele se ajoelhasse e pedisse perdão", "correct": false },
-        { "text": "Mandou os servos buscá-lo", "correct": false },
-        { "text": "Exigiu que trabalhasse como servo", "correct": false }
+        {
+          "text": "Correu, o abraçou e o beijou",
+          "correct": true
+        },
+        {
+          "text": "Esperou que ele se ajoelhasse e pedisse perdão",
+          "correct": false
+        },
+        {
+          "text": "Mandou os servos buscá-lo",
+          "correct": false
+        },
+        {
+          "text": "Exigiu que trabalhasse como servo",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Vendo-o ainda de longe, seu pai se compadeceu e, correndo, lançou-se-lhe ao pescoço e o beijou\" (Lc 15:20). O pai correndo — algo indigno para um patriarca oriental — é o retrato do coração de Deus para com o pecador que retorna.",
       "divergence_note": null,
-      "reference": { "book": "lucas", "chapter": 15, "verse_start": 20, "verse_end": 24 },
+      "reference": {
+        "book": "lucas",
+        "chapter": 15,
+        "verse_start": 20,
+        "verse_end": 24
+      },
       "theme": "Graça",
       "difficulty": "easy",
       "subcategory": "Parábolas da graça",
-      "tags": ["filho prodigo", "pai", "arrependimento"]
+      "tags": [
+        "filho prodigo",
+        "pai",
+        "arrependimento"
+      ]
     },
     {
       "external_id": "parabolas-0003",
       "type": "multiple_choice",
       "text": "Na parábola contada por Jesus, quem socorreu o homem ferido na estrada de Jerusalém a Jericó?",
       "options": [
-        { "text": "Um samaritano", "correct": true },
-        { "text": "Um sacerdote", "correct": false },
-        { "text": "Um levita", "correct": false },
-        { "text": "Um fariseu", "correct": false }
+        {
+          "text": "Um samaritano",
+          "correct": true
+        },
+        {
+          "text": "Um sacerdote",
+          "correct": false
+        },
+        {
+          "text": "Um levita",
+          "correct": false
+        },
+        {
+          "text": "Um fariseu",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "O sacerdote e o levita passaram de largo; foi um samaritano — desprezado pelos judeus — quem se compadeceu e cuidou do ferido (Lc 10:33-34). Jesus inverte a pergunta \"quem é o meu próximo?\" para \"de quem eu me faço próximo?\".",
       "divergence_note": null,
-      "reference": { "book": "lucas", "chapter": 10, "verse_start": 30, "verse_end": 37 },
+      "reference": {
+        "book": "lucas",
+        "chapter": 10,
+        "verse_start": 30,
+        "verse_end": 37
+      },
       "theme": "Amor ao próximo",
       "difficulty": "easy",
       "subcategory": "Parábolas do amor",
-      "tags": ["bom samaritano", "proximo", "misericordia"]
+      "tags": [
+        "bom samaritano",
+        "proximo",
+        "misericordia"
+      ]
     },
     {
       "external_id": "parabolas-0004",
       "type": "open_answer",
       "text": "Na parábola da ovelha perdida, quantas ovelhas o pastor deixou para ir atrás da que se perdeu?",
       "options": null,
-      "accepted_answers": ["99", "noventa e nove"],
+      "accepted_answers": [
+        "99",
+        "noventa e nove"
+      ],
       "explanation": "O pastor deixa as noventa e nove no deserto e vai atrás da perdida até encontrá-la (Lc 15:4). Jesus conclui: \"haverá alegria no céu por um pecador que se arrepende\" (Lc 15:7).",
       "divergence_note": null,
-      "reference": { "book": "lucas", "chapter": 15, "verse_start": 4, "verse_end": 7 },
+      "reference": {
+        "book": "lucas",
+        "chapter": 15,
+        "verse_start": 4,
+        "verse_end": 7
+      },
       "theme": "Busca de Deus",
       "difficulty": "easy",
       "subcategory": "Parábolas da graça",
-      "tags": ["ovelha perdida", "pastor", "alegria"]
+      "tags": [
+        "ovelha perdida",
+        "pastor",
+        "alegria"
+      ]
     },
     {
       "external_id": "parabolas-0005",
       "type": "multiple_choice",
       "text": "Na parábola dos talentos, o que fez o servo que recebeu um talento?",
       "options": [
-        { "text": "Enterrou o talento na terra", "correct": true },
-        { "text": "Investiu e ganhou mais um", "correct": false },
-        { "text": "Devolveu-o imediatamente", "correct": false },
-        { "text": "Entregou-o aos banqueiros", "correct": false }
+        {
+          "text": "Enterrou o talento na terra",
+          "correct": true
+        },
+        {
+          "text": "Investiu e ganhou mais um",
+          "correct": false
+        },
+        {
+          "text": "Devolveu-o imediatamente",
+          "correct": false
+        },
+        {
+          "text": "Entregou-o aos banqueiros",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Com medo, o servo escondeu o talento na terra (Mt 25:18,25) e foi chamado de \"mau e negligente\". A parábola ensina que os dons do Senhor existem para ser investidos no Reino até que ele volte.",
       "divergence_note": null,
-      "reference": { "book": "mateus", "chapter": 25, "verse_start": 14, "verse_end": 30 },
+      "reference": {
+        "book": "mateus",
+        "chapter": 25,
+        "verse_start": 14,
+        "verse_end": 30
+      },
       "theme": "Mordomia",
       "difficulty": "medium",
       "subcategory": "Parábolas do juízo",
-      "tags": ["talentos", "mordomia", "fidelidade"]
+      "tags": [
+        "talentos",
+        "mordomia",
+        "fidelidade"
+      ]
     },
     {
       "external_id": "parabolas-0006",
       "type": "multiple_choice",
       "text": "Segundo Jesus, quem é comparado ao homem prudente que edificou a sua casa sobre a rocha?",
       "options": [
-        { "text": "Quem ouve as suas palavras e as pratica", "correct": true },
-        { "text": "Quem conhece as Escrituras de cor", "correct": false },
-        { "text": "Quem constrói com bons materiais", "correct": false },
-        { "text": "Quem evita as tempestades da vida", "correct": false }
+        {
+          "text": "Quem ouve as suas palavras e as pratica",
+          "correct": true
+        },
+        {
+          "text": "Quem conhece as Escrituras de cor",
+          "correct": false
+        },
+        {
+          "text": "Quem constrói com bons materiais",
+          "correct": false
+        },
+        {
+          "text": "Quem evita as tempestades da vida",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Todo aquele, pois, que escuta estas minhas palavras, e as pratica, assemelhá-lo-ei ao homem prudente, que edificou a sua casa sobre a rocha\" (Mt 7:24). A diferença entre as duas casas não era a tempestade — ambas a enfrentaram — mas o fundamento.",
       "divergence_note": null,
-      "reference": { "book": "mateus", "chapter": 7, "verse_start": 24, "verse_end": 27 },
+      "reference": {
+        "book": "mateus",
+        "chapter": 7,
+        "verse_start": 24,
+        "verse_end": 27
+      },
       "theme": "Obediência",
       "difficulty": "easy",
       "subcategory": "Sermão do Monte",
-      "tags": ["casa na rocha", "obediencia", "fundamento"]
+      "tags": [
+        "casa na rocha",
+        "obediencia",
+        "fundamento"
+      ]
     },
     {
       "external_id": "parabolas-0007",
       "type": "multiple_choice",
       "text": "Na parábola das dez virgens, o que faltou às cinco insensatas?",
       "options": [
-        { "text": "Azeite para as suas lâmpadas", "correct": true },
-        { "text": "Vestes de festa", "correct": false },
-        { "text": "Convite para as bodas", "correct": false },
-        { "text": "Lâmpadas", "correct": false }
+        {
+          "text": "Azeite para as suas lâmpadas",
+          "correct": true
+        },
+        {
+          "text": "Vestes de festa",
+          "correct": false
+        },
+        {
+          "text": "Convite para as bodas",
+          "correct": false
+        },
+        {
+          "text": "Lâmpadas",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "As insensatas levaram lâmpadas mas não levaram azeite, e quando o noivo chegou estavam despreparadas (Mt 25:3,10). A conclusão de Jesus: \"Vigiai, pois, porque não sabeis o dia nem a hora\" (Mt 25:13).",
       "divergence_note": null,
-      "reference": { "book": "mateus", "chapter": 25, "verse_start": 1, "verse_end": 13 },
+      "reference": {
+        "book": "mateus",
+        "chapter": 25,
+        "verse_start": 1,
+        "verse_end": 13
+      },
       "theme": "Vigilância",
       "difficulty": "easy",
       "subcategory": "Parábolas do juízo",
-      "tags": ["dez virgens", "azeite", "vigilancia"]
+      "tags": [
+        "dez virgens",
+        "azeite",
+        "vigilancia"
+      ]
     },
     {
       "external_id": "parabolas-0008",
       "type": "multiple_choice",
       "text": "Na explicação da parábola do joio, o que representa a ceifa?",
       "options": [
-        { "text": "O fim do mundo", "correct": true },
-        { "text": "A destruição de Jerusalém", "correct": false },
-        { "text": "O dia de Pentecostes", "correct": false },
-        { "text": "A morte de cada pessoa", "correct": false }
+        {
+          "text": "O fim do mundo",
+          "correct": true
+        },
+        {
+          "text": "A destruição de Jerusalém",
+          "correct": false
+        },
+        {
+          "text": "O dia de Pentecostes",
+          "correct": false
+        },
+        {
+          "text": "A morte de cada pessoa",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "Jesus interpreta: \"a ceifa é o fim do mundo, e os ceifeiros são os anjos\" (Mt 13:39). Trigo e joio crescem juntos até lá — o juízo definitivo pertence a Deus, não a nós, e acontecerá no tempo dele.",
       "divergence_note": null,
-      "reference": { "book": "mateus", "chapter": 13, "verse_start": 36, "verse_end": 43 },
+      "reference": {
+        "book": "mateus",
+        "chapter": 13,
+        "verse_start": 36,
+        "verse_end": 43
+      },
       "theme": "Juízo final",
       "difficulty": "medium",
       "subcategory": "Parábolas do Reino",
-      "tags": ["joio", "trigo", "ceifa"]
+      "tags": [
+        "joio",
+        "trigo",
+        "ceifa"
+      ]
     },
     {
       "external_id": "parabolas-0009",
       "type": "open_answer",
       "text": "Qual grão Jesus usou para ilustrar o Reino dos céus que começa pequeno e se torna grande?",
       "options": null,
-      "accepted_answers": ["Mostarda", "Grão de mostarda", "Semente de mostarda"],
+      "accepted_answers": [
+        "Mostarda",
+        "Grão de mostarda",
+        "Semente de mostarda"
+      ],
       "explanation": "O grão de mostarda é \"a menor de todas as sementes\", mas cresce até virar árvore onde as aves se aninham (Mt 13:31-32). Assim é o Reino: começa desprezível aos olhos humanos e cresce irresistivelmente.",
       "divergence_note": null,
-      "reference": { "book": "mateus", "chapter": 13, "verse_start": 31, "verse_end": 32 },
+      "reference": {
+        "book": "mateus",
+        "chapter": 13,
+        "verse_start": 31,
+        "verse_end": 32
+      },
       "theme": "Reino de Deus",
       "difficulty": "easy",
       "subcategory": "Parábolas do Reino",
-      "tags": ["mostarda", "reino", "crescimento"]
+      "tags": [
+        "mostarda",
+        "reino",
+        "crescimento"
+      ]
     },
     {
       "external_id": "parabolas-0010",
       "type": "multiple_choice",
       "text": "Na história do rico e Lázaro, para onde Lázaro foi levado pelos anjos ao morrer?",
       "options": [
-        { "text": "Para o seio de Abraão", "correct": true },
-        { "text": "Para o terceiro céu", "correct": false },
-        { "text": "Para o jardim do Éden", "correct": false },
-        { "text": "Para a Nova Jerusalém", "correct": false }
+        {
+          "text": "Para o seio de Abraão",
+          "correct": true
+        },
+        {
+          "text": "Para o terceiro céu",
+          "correct": false
+        },
+        {
+          "text": "Para o jardim do Éden",
+          "correct": false
+        },
+        {
+          "text": "Para a Nova Jerusalém",
+          "correct": false
+        }
       ],
       "accepted_answers": null,
       "explanation": "\"Morreu o mendigo e foi levado pelos anjos para o seio de Abraão\" (Lc 16:22) — expressão judaica para a comunhão com os justos após a morte. O contraste com o rico atormentado adverte sobre a irreversibilidade do destino eterno.",
       "divergence_note": "Intérpretes cristãos divergem se o relato é parábola ou caso real (Lázaro é o único personagem nomeado numa narrativa desse tipo), e sobre quanto da imagem descreve literalmente o estado intermediário. Todos concordam no ponto central: há destinos distintos e definitivos após a morte.",
-      "reference": { "book": "lucas", "chapter": 16, "verse_start": 19, "verse_end": 31 },
+      "reference": {
+        "book": "lucas",
+        "chapter": 16,
+        "verse_start": 19,
+        "verse_end": 31
+      },
       "theme": "Eternidade",
       "difficulty": "hard",
       "subcategory": "Parábolas do juízo",
-      "tags": ["rico e lazaro", "seio de abraao", "eternidade"]
+      "tags": [
+        "rico e lazaro",
+        "seio de abraao",
+        "eternidade"
+      ]
+    },
+    {
+      "external_id": "parabolas-0011",
+      "type": "multiple_choice",
+      "text": "Na parábola dos dois filhos, qual fez a vontade do pai?",
+      "options": [
+        {
+          "text": "O que disse 'não' mas depois foi",
+          "correct": true
+        },
+        {
+          "text": "O que disse 'sim' e não foi",
+          "correct": false
+        },
+        {
+          "text": "Nenhum dos dois",
+          "correct": false
+        },
+        {
+          "text": "Ambos igualmente",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jesus ensina que obedecer vale mais que prometer: o filho que se arrependeu e foi fez a vontade do pai (Mt 21:28-31).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 21,
+        "verse_start": 28,
+        "verse_end": 31
+      },
+      "theme": "Obediência",
+      "difficulty": "medium",
+      "subcategory": "Parábolas do Reino",
+      "tags": [
+        "dois filhos",
+        "obediencia"
+      ]
+    },
+    {
+      "external_id": "parabolas-0012",
+      "type": "multiple_choice",
+      "text": "Na parábola do rico insensato, o que Deus lhe disse ao planejar celeiros maiores?",
+      "options": [
+        {
+          "text": "'Esta noite te pedirão a tua alma'",
+          "correct": true
+        },
+        {
+          "text": "'Vende tudo e segue-me'",
+          "correct": false
+        },
+        {
+          "text": "'Bem está, servo bom'",
+          "correct": false
+        },
+        {
+          "text": "'Guarda para o futuro'",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O rico acumulou para si e não para com Deus; naquela noite morreria (Lc 12:20), advertência contra a cobiça.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 12,
+        "verse_start": 16,
+        "verse_end": 21
+      },
+      "theme": "Cobiça",
+      "difficulty": "hard",
+      "subcategory": "Parábolas de advertência",
+      "tags": [
+        "rico insensato",
+        "cobica"
+      ]
+    },
+    {
+      "external_id": "parabolas-0013",
+      "type": "multiple_choice",
+      "text": "Na parábola do fariseu e do publicano, quem voltou justificado?",
+      "options": [
+        {
+          "text": "O publicano",
+          "correct": true
+        },
+        {
+          "text": "O fariseu",
+          "correct": false
+        },
+        {
+          "text": "Ambos",
+          "correct": false
+        },
+        {
+          "text": "Nenhum",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O publicano que clamou por misericórdia desceu justificado, e não o fariseu que confiava na própria justiça (Lc 18:14).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 18,
+        "verse_start": 10,
+        "verse_end": 14
+      },
+      "theme": "Humildade",
+      "difficulty": "medium",
+      "subcategory": "Parábolas de advertência",
+      "tags": [
+        "publicano",
+        "humildade"
+      ]
+    },
+    {
+      "external_id": "parabolas-0014",
+      "type": "multiple_choice",
+      "text": "Na parábola dos trabalhadores da vinha, quanto receberam os da última hora?",
+      "options": [
+        {
+          "text": "O mesmo denário dos primeiros",
+          "correct": true
+        },
+        {
+          "text": "Metade",
+          "correct": false
+        },
+        {
+          "text": "Nada",
+          "correct": false
+        },
+        {
+          "text": "O dobro",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Todos receberam um denário, mostrando a graça soberana do dono: 'não posso fazer o que quiser?' (Mt 20:9-15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 20,
+        "verse_start": 9,
+        "verse_end": 15
+      },
+      "theme": "Graça",
+      "difficulty": "hard",
+      "subcategory": "Parábolas do Reino",
+      "tags": [
+        "vinha",
+        "graca"
+      ]
+    },
+    {
+      "external_id": "parabolas-0015",
+      "type": "multiple_choice",
+      "text": "Na parábola da rede, o que os pescadores fazem ao puxá-la cheia?",
+      "options": [
+        {
+          "text": "Separam os peixes bons dos maus",
+          "correct": true
+        },
+        {
+          "text": "Devolvem tudo ao mar",
+          "correct": false
+        },
+        {
+          "text": "Vendem no mercado",
+          "correct": false
+        },
+        {
+          "text": "Guardam todos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "A rede recolhe de toda espécie; no fim, os anjos separarão os maus dos justos (Mt 13:47-49).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 13,
+        "verse_start": 47,
+        "verse_end": 49
+      },
+      "theme": "Juízo final",
+      "difficulty": "hard",
+      "subcategory": "Parábolas do Reino",
+      "tags": [
+        "rede",
+        "juizo"
+      ]
+    },
+    {
+      "external_id": "parabolas-0016",
+      "type": "multiple_choice",
+      "text": "Na parábola da figueira estéril, por quantos anos o dono buscou fruto?",
+      "options": [
+        {
+          "text": "Três anos",
+          "correct": true
+        },
+        {
+          "text": "Um ano",
+          "correct": false
+        },
+        {
+          "text": "Sete anos",
+          "correct": false
+        },
+        {
+          "text": "Dez anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O dono buscou fruto por três anos e concedeu mais um de paciência antes de cortá-la (Lc 13:6-9) — chamada ao arrependimento.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 13,
+        "verse_start": 6,
+        "verse_end": 9
+      },
+      "theme": "Arrependimento",
+      "difficulty": "medium",
+      "subcategory": "Parábolas de advertência",
+      "tags": [
+        "figueira",
+        "arrependimento"
+      ]
+    },
+    {
+      "external_id": "parabolas-0017",
+      "type": "multiple_choice",
+      "text": "Na parábola do tesouro escondido, o que o homem faz ao encontrá-lo?",
+      "options": [
+        {
+          "text": "Vende tudo e compra o campo",
+          "correct": true
+        },
+        {
+          "text": "Divide com amigos",
+          "correct": false
+        },
+        {
+          "text": "Esconde de novo",
+          "correct": false
+        },
+        {
+          "text": "Denuncia ao dono",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Pela alegria, vende tudo para adquirir o campo (Mt 13:44) — o Reino vale todo sacrifício.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 13,
+        "verse_start": 44,
+        "verse_end": null
+      },
+      "theme": "Valor do Reino",
+      "difficulty": "medium",
+      "subcategory": "Parábolas do Reino",
+      "tags": [
+        "tesouro",
+        "reino"
+      ]
+    },
+    {
+      "external_id": "parabolas-0018",
+      "type": "open_answer",
+      "text": "Na parábola do bom samaritano, qual foi o primeiro que passou sem ajudar o ferido?",
+      "options": null,
+      "accepted_answers": [
+        "Sacerdote",
+        "O sacerdote",
+        "Um sacerdote"
+      ],
+      "explanation": "O sacerdote passou de largo, seguido do levita; só o samaritano se compadeceu (Lc 10:31-33).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 10,
+        "verse_start": 31,
+        "verse_end": 33
+      },
+      "theme": "Misericórdia",
+      "difficulty": "medium",
+      "subcategory": "Parábolas do amor",
+      "tags": [
+        "samaritano",
+        "sacerdote"
+      ]
+    },
+    {
+      "external_id": "parabolas-0019",
+      "type": "multiple_choice",
+      "text": "Na parábola do administrador infiel, por que o senhor o elogiou?",
+      "options": [
+        {
+          "text": "Por ter agido com prudência",
+          "correct": true
+        },
+        {
+          "text": "Por devolver o dinheiro",
+          "correct": false
+        },
+        {
+          "text": "Por trabalhar mais",
+          "correct": false
+        },
+        {
+          "text": "Por confessar tudo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O senhor louvou a astúcia prudente do mordomo, e Jesus conclui sobre o uso sábio das riquezas (Lc 16:8-9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 16,
+        "verse_start": 1,
+        "verse_end": 9
+      },
+      "theme": "Prudência",
+      "difficulty": "expert",
+      "subcategory": "Parábolas de advertência",
+      "tags": [
+        "administrador",
+        "riquezas"
+      ]
+    },
+    {
+      "external_id": "parabolas-0020",
+      "type": "multiple_choice",
+      "text": "Na parábola do credor incompassivo, o que o rei perdoou ao servo?",
+      "options": [
+        {
+          "text": "Uma dívida enorme (dez mil talentos)",
+          "correct": true
+        },
+        {
+          "text": "Uma pequena multa",
+          "correct": false
+        },
+        {
+          "text": "Cem denários",
+          "correct": false
+        },
+        {
+          "text": "Uma casa",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Perdoado de dívida impagável, o servo não perdoou uma pequena a seu conservo — quadro do perdão que recebemos e devemos dar (Mt 18:24-33).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 18,
+        "verse_start": 23,
+        "verse_end": 33
+      },
+      "theme": "Perdão",
+      "difficulty": "hard",
+      "subcategory": "Parábolas do Reino",
+      "tags": [
+        "credor",
+        "perdao"
+      ]
     }
   ]
 }
