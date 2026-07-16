@@ -3,7 +3,22 @@
     "services": {
         "frontend": {
             "root": "frontend",
-            "framework": "vite"
+            "framework": "vite",
+            "rewrites": [
+                { "source": "/admin", "destination": "/admin.html" },
+                { "source": "/admin/(.*)", "destination": "/admin.html" },
+                { "source": "/(.*)", "destination": "/index.html" }
+            ],
+            "headers": [
+                {
+                    "source": "/(.*)",
+                    "headers": [
+                        { "key": "X-Frame-Options", "value": "DENY" },
+                        { "key": "X-Content-Type-Options", "value": "nosniff" },
+                        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+                    ]
+                }
+            ]
         },
         "backend": {
             "root": "backend",
