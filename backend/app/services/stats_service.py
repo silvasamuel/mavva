@@ -10,13 +10,14 @@ from app.models import (
     Category,
     DailyActivity,
     Duel,
+    Friendship,
     Question,
     QuizAnswer,
     QuizSession,
     User,
     UserStats,
 )
-from app.models.enums import DuelStatus
+from app.models.enums import DuelStatus, FriendshipStatus
 from app.services import srs
 from app.services.gamification import effective_streak, level_from_total_xp, today_for_user
 from app.services.quiz_service import recent_sessions, session_filters
@@ -130,6 +131,20 @@ def _duels_awaiting(db: Session, user: User) -> int:
     return pending
 
 
+def _pending_friend_requests(db: Session, user: User) -> int:
+    return (
+        db.scalar(
+            select(func.count())
+            .select_from(Friendship)
+            .where(
+                Friendship.addressee_id == user.id,
+                Friendship.status == FriendshipStatus.PENDING,
+            )
+        )
+        or 0
+    )
+
+
 def get_dashboard(db: Session, user: User) -> dict[str, Any]:
     stats = db.get(UserStats, user.id)
     assert stats is not None
@@ -195,6 +210,7 @@ def get_dashboard(db: Session, user: User) -> dict[str, Any]:
             for s in sessions
         ],
         "reviews_due": reviews_due,
+        "friend_requests": _pending_friend_requests(db, user),
         "duels": {
             "wins": stats.duel_wins,
             "losses": stats.duel_losses,

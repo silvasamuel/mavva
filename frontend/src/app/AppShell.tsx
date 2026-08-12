@@ -48,11 +48,14 @@ export function AppShell() {
     queryFn: () => api.get<DashboardData>('/dashboard'),
   })
   const streak = data?.stats.current_streak ?? 0
-  const duelsAwaiting = data?.duels?.awaiting_me ?? 0
+  const friendRequests = data?.friend_requests ?? 0
 
-  function badgeFor(to: string) {
-    if (to === '/duels') return duelsAwaiting
+  function badgeFor(to: string, context: 'sidebar' | 'mobile') {
+    if (to === '/duels') return data?.duels?.awaiting_me ?? 0
     if (to === '/review') return data?.reviews_due ?? 0
+    if (to === '/friends') return friendRequests
+    // Friends has no mobile tab — carry its badge on Perfil, the way in.
+    if (to === '/profile' && context === 'mobile') return friendRequests
     return 0
   }
 
@@ -73,7 +76,7 @@ export function AppShell() {
             <NavLink key={item.to} to={item.to} end={item.to === '/'} className={navClass}>
               <span aria-hidden>{item.icon}</span>
               {item.label}
-              <Badge count={badgeFor(item.to)} />
+              <Badge count={badgeFor(item.to, 'sidebar')} />
             </NavLink>
           ))}
         </nav>
@@ -108,7 +111,7 @@ export function AppShell() {
         aria-label="Principal"
       >
         {NAV_ITEMS.filter((item) => item.primary).map((item) => {
-          const count = badgeFor(item.to)
+          const count = badgeFor(item.to, 'mobile')
           return (
             <NavLink
               key={item.to}

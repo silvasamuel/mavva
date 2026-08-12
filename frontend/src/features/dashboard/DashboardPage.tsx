@@ -123,6 +123,31 @@ export function DashboardPage() {
         </Card>
       </div>
 
+      {/* Pending friend requests */}
+      {data.friend_requests > 0 && (
+        <button
+          onClick={() => navigate('/friends')}
+          className="flex w-full items-center gap-3 rounded-3xl bg-grain-50 p-4 text-left ring-1 ring-grain-300 transition-transform hover:scale-[1.01]"
+        >
+          <span className="text-2xl" aria-hidden>
+            🤝
+          </span>
+          <div className="flex-1">
+            <p className="text-xs font-extrabold uppercase tracking-wide text-grain-700">
+              Pedidos de amizade
+            </p>
+            <p className="text-sm font-bold text-ink">
+              {data.friend_requests === 1
+                ? '1 pessoa quer ser sua amiga'
+                : `${data.friend_requests} pessoas querem ser suas amigas`}
+            </p>
+          </div>
+          <span className="rounded-full bg-grain-400 px-3 py-1 text-sm font-extrabold text-grain-900">
+            {data.friend_requests}
+          </span>
+        </button>
+      )}
+
       {/* Duels */}
       <Card className="flex flex-wrap items-center justify-between gap-4">
         <div className="flex items-center gap-4">

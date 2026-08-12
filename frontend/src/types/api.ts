@@ -218,6 +218,7 @@ export interface DashboardData {
     filters: Record<string, unknown>
   }[]
   reviews_due: number
+  friend_requests: number
   duels: {
     wins: number
     losses: number

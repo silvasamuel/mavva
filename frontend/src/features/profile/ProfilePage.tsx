@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useMutation } from '@tanstack/react-query'
+import { useMutation, useQuery } from '@tanstack/react-query'
 import { api, ApiError } from '@/lib/api'
-import type { User } from '@/types/api'
+import type { DashboardData, User } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Card, CardTitle } from '@/components/ui/Card'
 import { Input } from '@/components/ui/Input'
@@ -18,6 +18,12 @@ const GOAL_OPTIONS = [
 export function ProfilePage() {
   const { user, logout, updateUser } = useAuth()
   const navigate = useNavigate()
+  // Friends has no mobile tab, so the pending count surfaces on its shortcut here.
+  const { data: dashboard } = useQuery({
+    queryKey: ['dashboard'],
+    queryFn: () => api.get<DashboardData>('/dashboard'),
+  })
+  const pendingRequests = dashboard?.friend_requests ?? 0
   const [name, setName] = useState(user?.name ?? '')
   const [username, setUsername] = useState(user?.username ?? '')
   const [dailyGoal, setDailyGoal] = useState(user?.daily_goal_xp ?? 50)
@@ -90,8 +96,12 @@ export function ProfilePage() {
 
       {/* Reachable here because the mobile bar only holds five tabs. */}
       <Card className="grid gap-2 sm:grid-cols-2 md:hidden">
-        <Button variant="secondary" full onClick={() => navigate('/friends')}>
-          🤝 Amigos
+        <Button
+          variant={pendingRequests > 0 ? 'gold' : 'secondary'}
+          full
+          onClick={() => navigate('/friends')}
+        >
+          🤝 Amigos {pendingRequests > 0 && `(${pendingRequests})`}
         </Button>
         <Button variant="secondary" full onClick={() => navigate('/achievements')}>
           🏅 Conquistas

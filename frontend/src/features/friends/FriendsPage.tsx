@@ -58,6 +58,8 @@ export function FriendsPage() {
 
   function refresh() {
     queryClient.invalidateQueries({ queryKey: ['friends'] })
+    // The pending-request badge lives in the dashboard payload.
+    queryClient.invalidateQueries({ queryKey: ['dashboard'] })
   }
 
   const sendRequest = useMutation({

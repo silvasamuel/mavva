@@ -366,6 +366,32 @@ class TestDuelList:
         assert duel_service.DUEL_XP == {"win": 50, "draw": 10, "loss": -25}
 
 
+class TestPendingRequestBadge:
+    def test_dashboard_counts_incoming_requests_only(
+        self, auth_client: TestClient, client: TestClient
+    ):
+        assert auth_client.get("/api/v1/dashboard").json()["friend_requests"] == 0
+
+        # Someone invites me → counts for me, not for them.
+        other = _register(client, "convidador@teste.com")
+        other_headers = _auth(other["access_token"])
+        client.post("/api/v1/friends/requests", json={"username": "samuel"}, headers=other_headers)
+
+        assert auth_client.get("/api/v1/dashboard").json()["friend_requests"] == 1
+        assert client.get("/api/v1/dashboard", headers=other_headers).json()["friend_requests"] == 0
+
+    def test_badge_clears_after_responding(self, auth_client: TestClient, client: TestClient):
+        other = _register(client, "outro.pedido@teste.com")
+        client.post(
+            "/api/v1/friends/requests",
+            json={"username": "samuel"},
+            headers=_auth(other["access_token"]),
+        )
+        request_id = auth_client.get("/api/v1/friends").json()["incoming"][0]["id"]
+        auth_client.post(f"/api/v1/friends/requests/{request_id}/accept")
+        assert auth_client.get("/api/v1/dashboard").json()["friend_requests"] == 0
+
+
 class TestDuelQuestionTypes:
     def test_duels_only_draw_multiple_choice(self, auth_client: TestClient, db: Session):
         category = make_category(db)
