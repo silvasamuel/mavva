@@ -49,58 +49,55 @@ export function DashboardPage() {
         <Button onClick={() => navigate('/quiz/new')}>Estudar agora</Button>
       </header>
 
-      {/* Stat tiles */}
-      <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
-        <Card className="flex items-center gap-3">
-          <RankBadge code={stats.rank.code} size="md" />
-          <div className="min-w-0">
+      {/* Stat tiles: rank is identity (full width on mobile); the rest stay compact. */}
+      <div className="flex flex-col gap-3 lg:grid lg:grid-cols-4">
+        <Card className="flex items-center gap-4">
+          <RankBadge code={stats.rank.code} size="lg" />
+          <div className="min-w-0 flex-1">
             <p className="text-xl font-extrabold">{stats.rank.name}</p>
             <p className="text-xs font-bold text-sand-500">
-              Nível {stats.level} · {stats.total_xp} XP
-              {stats.rank.next_name && stats.rank.next_level
-                ? ` · ${stats.rank.next_name} no nível ${stats.rank.next_level}`
-                : ''}
+              Nível {stats.level} · {stats.total_xp.toLocaleString('pt-BR')} XP
             </p>
+            {stats.rank.next_name && stats.rank.next_level && (
+              <p className="text-xs font-bold text-sand-400">
+                {stats.rank.next_name} no nível {stats.rank.next_level}
+              </p>
+            )}
             <ProgressBar
               value={stats.xp_into_level}
               max={stats.xp_for_next_level}
-              className="mt-1 h-2 w-24"
+              className="mt-2 h-2 w-full max-w-xs"
               color="bg-grain-400"
             />
           </div>
         </Card>
-        <Card className="flex items-center gap-3">
-          <span className="text-3xl" aria-hidden>
-            {stats.current_streak > 0 ? '🔥' : '🪵'}
-          </span>
-          <div>
+        <div className="grid grid-cols-3 gap-3 lg:col-span-3 lg:contents">
+          <Card className="flex flex-col items-center gap-1 px-2 py-4 text-center">
+            <span className="text-2xl" aria-hidden>
+              {stats.current_streak > 0 ? '🔥' : '🪵'}
+            </span>
             <p className="text-xl font-extrabold">{stats.current_streak}</p>
-            <p className="text-xs font-bold text-sand-500">
-              {stats.current_streak === 1 ? 'dia seguido' : 'dias seguidos'} · recorde{' '}
-              {stats.longest_streak}
+            <p className="text-[10px] font-bold leading-tight text-sand-500">
+              {stats.current_streak === 1 ? 'dia' : 'dias'} · recorde {stats.longest_streak}
             </p>
-          </div>
-        </Card>
-        <Card className="flex items-center gap-3">
-          <span className="text-3xl" aria-hidden>
-            🎯
-          </span>
-          <div>
+          </Card>
+          <Card className="flex flex-col items-center gap-1 px-2 py-4 text-center">
+            <span className="text-2xl" aria-hidden>
+              🎯
+            </span>
             <p className="text-xl font-extrabold">{formatPercent(stats.accuracy)}</p>
-            <p className="text-xs font-bold text-sand-500">
+            <p className="text-[10px] font-bold leading-tight text-sand-500">
               {stats.questions_answered} respondidas
             </p>
-          </div>
-        </Card>
-        <Card className="flex items-center gap-3">
-          <span className="text-3xl" aria-hidden>
-            ⏱️
-          </span>
-          <div>
+          </Card>
+          <Card className="flex flex-col items-center gap-1 px-2 py-4 text-center">
+            <span className="text-2xl" aria-hidden>
+              ⏱️
+            </span>
             <p className="text-xl font-extrabold">{formatStudyTime(stats.total_time_seconds)}</p>
-            <p className="text-xs font-bold text-sand-500">tempo de estudo</p>
-          </div>
-        </Card>
+            <p className="text-[10px] font-bold leading-tight text-sand-500">estudo</p>
+          </Card>
+        </div>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-3">
