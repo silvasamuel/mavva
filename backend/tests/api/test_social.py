@@ -374,6 +374,77 @@ class TestDuelList:
         assert quiz["timer_seconds"] == 20
 
 
+class TestDuelXpComesFromTheResult:
+    def test_answers_pay_nothing_during_a_duel(self, auth_client: TestClient, db: Session):
+        _seed_questions(db)
+        duel = auth_client.post("/api/v1/duels", json={}).json()
+        quiz = auth_client.get(f"/api/v1/quizzes/{duel['my_session_id']}").json()
+        question = quiz["questions"][0]
+        correct_id = str(
+            db.scalars(
+                select(QuestionOption).where(
+                    QuestionOption.id.in_([o["id"] for o in question["options"]]),
+                    QuestionOption.is_correct,
+                )
+            )
+            .one()
+            .id
+        )
+        feedback = auth_client.post(
+            f"/api/v1/quizzes/{duel['my_session_id']}/answers",
+            json={"question_id": question["id"], "selected_option_id": correct_id},
+        ).json()
+        assert feedback["is_correct"] is True
+        assert feedback["xp_earned"] == 0
+
+    def test_finishing_a_duel_round_grants_no_bonus(self, auth_client: TestClient, db: Session):
+        helper = TestDuelResolution()
+        _seed_questions(db)
+        duel = auth_client.post("/api/v1/duels", json={}).json()
+        helper._answer_all(auth_client, None, duel["my_session_id"], db, correct=True)
+        # Perfect round, but the rival has not played: nothing is settled yet.
+        assert auth_client.get("/api/v1/dashboard").json()["stats"]["total_xp"] == 0
+
+    def test_only_the_outcome_moves_xp(
+        self, auth_client: TestClient, client: TestClient, db: Session
+    ):
+        helper = TestDuelResolution()
+        duel, other = helper._friends_duel(auth_client, client, db)
+        other_headers = _auth(other["access_token"])
+        rival_duel = client.get(f"/api/v1/duels/{duel['id']}", headers=other_headers).json()
+
+        helper._answer_all(auth_client, None, duel["my_session_id"], db, correct=True)
+        helper._answer_all(client, other_headers, rival_duel["my_session_id"], db, correct=False)
+
+        # Winner: exactly the stake, not 10 correct answers' worth of XP.
+        assert auth_client.get("/api/v1/dashboard").json()["stats"]["total_xp"] == 50
+        # Loser answered everything wrong but only pays the duel stake (floored at 0).
+        assert (
+            client.get("/api/v1/dashboard", headers=other_headers).json()["stats"]["total_xp"] == 0
+        )
+
+    def test_stake_counts_toward_the_daily_goal(
+        self, auth_client: TestClient, client: TestClient, db: Session
+    ):
+        helper = TestDuelResolution()
+        duel, other = helper._friends_duel(auth_client, client, db)
+        other_headers = _auth(other["access_token"])
+        rival_duel = client.get(f"/api/v1/duels/{duel['id']}", headers=other_headers).json()
+
+        helper._answer_all(auth_client, None, duel["my_session_id"], db, correct=True)
+        helper._answer_all(client, other_headers, rival_duel["my_session_id"], db, correct=False)
+
+        assert auth_client.get("/api/v1/dashboard").json()["daily_goal"]["earned_today"] == 50
+
+    def test_practice_sessions_still_pay_per_answer(self, auth_client: TestClient, db: Session):
+        helper = TestDuelResolution()
+        _seed_questions(db)
+        quiz = auth_client.post("/api/v1/quizzes", json={"question_count": 3}).json()
+        helper._answer_all(auth_client, None, quiz["id"], db, correct=True)
+        # 3 medium answers (20) + completion (5) + perfect (10)
+        assert auth_client.get("/api/v1/dashboard").json()["stats"]["total_xp"] == 75
+
+
 class TestDuelAchievements:
     def test_first_win_unlocks_on_the_same_duel(
         self, auth_client: TestClient, client: TestClient, db: Session

@@ -15,7 +15,11 @@ from sqlalchemy.orm import Session, selectinload
 from app.models import Duel, Question, QuizAnswer, QuizSession, QuizSessionQuestion, User, UserStats
 from app.models.enums import DuelMode, DuelStatus, QuestionType, QuizMode
 from app.services import achievement_service, friendship_service
-from app.services.gamification import level_from_total_xp
+from app.services.gamification import (
+    level_from_total_xp,
+    today_for_user,
+    upsert_daily_activity,
+)
 
 QUESTION_COUNT = 10
 TIMER_SECONDS = 20
@@ -253,6 +257,16 @@ def _apply_result(db: Session, user_id: uuid.UUID, outcome: str) -> None:
     # Lifetime XP never drops below zero (same floor as practice sessions).
     stats.total_xp = max(0, stats.total_xp + DUEL_XP[outcome])
     stats.level, _, _ = level_from_total_xp(stats.total_xp)
+    # Duel rounds pay no per-answer XP, so the stake is what reaches the daily goal.
+    upsert_daily_activity(
+        db,
+        user_id,
+        today_for_user(user),
+        xp=DUEL_XP[outcome],
+        questions=0,
+        correct=0,
+        time_seconds=0,
+    )
     db.flush()
     # Duel results land after complete_session already evaluated achievements,
     # so re-check here or duel badges would only unlock on the next session.

@@ -22,7 +22,10 @@ from app.services import srs
 from app.services.gamification import effective_streak, level_from_total_xp, today_for_user
 from app.services.quiz_service import recent_sessions, session_filters
 
-WEAK_CATEGORY_MIN_ANSWERED = 10
+# Every category the user has actually answered counts as a candidate — with a
+# 494-question bank across 23 categories, a higher bar left the recommendation
+# silent for most people.
+WEAK_CATEGORY_MIN_ANSWERED = 1
 WEAK_CATEGORY_MAX_ACCURACY = 0.80
 
 
@@ -87,7 +90,8 @@ def _recommendations(
         if c["answered"] >= WEAK_CATEGORY_MIN_ANSWERED and c["accuracy"] is not None
     ]
     if practiced:
-        weakest = min(practiced, key=lambda c: c["accuracy"])
+        # Lowest accuracy wins; ties go to the category with the most evidence.
+        weakest = min(practiced, key=lambda c: (c["accuracy"], -c["answered"]))
         if weakest["accuracy"] < WEAK_CATEGORY_MAX_ACCURACY:
             recommendations.append(
                 {

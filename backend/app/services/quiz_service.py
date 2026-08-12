@@ -182,7 +182,9 @@ def submit_answer(
         accepted = [a.text for a in question.accepted_answers]
         is_correct = answer_checker.is_answer_correct(answer_text, accepted)
 
-    xp = xp_for_answer(question.difficulty, is_correct)
+    # In duels the whole XP swing is the result (win/draw/loss), so individual
+    # answers pay nothing — otherwise a good loser would still out-earn a winner.
+    xp = 0 if session.mode == QuizMode.DUEL else xp_for_answer(question.difficulty, is_correct)
     db.add(
         QuizAnswer(
             session_id=session.id,
@@ -249,11 +251,16 @@ def complete_session(db: Session, user: User, session_id: uuid.UUID) -> Complete
     elapsed = int((now - started_at).total_seconds())
     session.duration_seconds = max(0, min(elapsed, MAX_SESSION_DURATION_SECONDS))
 
-    bonus = SESSION_COMPLETE_BONUS if answered_count == session.question_count else 0
+    is_duel = session.mode == QuizMode.DUEL
+    bonus = (
+        0
+        if is_duel
+        else (SESSION_COMPLETE_BONUS if answered_count == session.question_count else 0)
+    )
     is_perfect = (
         answered_count == session.question_count and session.correct_count == session.question_count
     )
-    if is_perfect:
+    if is_perfect and not is_duel:
         bonus += PERFECT_SESSION_BONUS
     session.xp_earned += bonus
     session.completed_at = now

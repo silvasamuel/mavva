@@ -138,8 +138,8 @@ export function DashboardPage() {
             </p>
             <p className="text-sm font-bold text-ink">
               {data.friend_requests === 1
-                ? '1 pessoa quer ser sua amiga'
-                : `${data.friend_requests} pessoas querem ser suas amigas`}
+                ? 'Alguém quer ser seu amigo'
+                : `${data.friend_requests} pessoas querem ser seus amigos`}
             </p>
           </div>
           <span className="rounded-full bg-grain-400 px-3 py-1 text-sm font-extrabold text-grain-900">

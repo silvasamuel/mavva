@@ -138,8 +138,9 @@ por categoria, revisão espaçada e streak como qualquer estudo.
 total; igual nos dois → empate. Prazo de 48h: quem jogou vence por W.O.; se
 ninguém jogou, expira sem mover XP.
 
-**Aposta:** +50 (vitória) · +10 (empate) · −25 (derrota), somada ao XP normal das
-respostas. O XP total do usuário nunca fica negativo.
+**Aposta:** +50 (vitória) · +10 (empate) · −25 (derrota). Em duelos as respostas
+**não pagam XP individual** — só o resultado move a pontuação (e conta para a meta
+diária). O XP total do usuário nunca fica negativo.
 
 ## Conquistas
 

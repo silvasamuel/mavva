@@ -81,7 +81,9 @@ marcado como tal. Divergências entre interpretações cristãs são indicadas n
   joga quando puder, prazo de 48h
 - Vence quem acertar mais (desempate por tempo total); W.O. para quem jogou
   quando o prazo estoura
-- Aposta: +50 XP (vitória) · +10 (empate) · −25 (derrota), além do XP das respostas
+- XP do duelo vem **somente do resultado**: +50 (vitória) · +10 (empate) · −25
+  (derrota). As respostas não pagam XP individual — senão quem perde respondendo
+  bem ganharia mais que quem vence. A aposta conta para a meta diária.
 - Cartel de vitórias/derrotas/empates com sequência de vitórias
 - As respostas contam normalmente para acurácia, categorias, revisão e streak
 
