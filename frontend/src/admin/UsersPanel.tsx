@@ -1,10 +1,11 @@
 import { useState } from 'react'
-import { useQuery } from '@tanstack/react-query'
+import { keepPreviousData, useQuery } from '@tanstack/react-query'
 import { api } from '@/lib/api'
 import { Card } from '@/components/ui/Card'
 import { Input } from '@/components/ui/Input'
 import { Spinner } from '@/components/ui/Spinner'
 import { formatPercent } from '@/lib/format'
+import { useDebouncedValue } from '@/lib/useDebouncedValue'
 import type { AdminUserList } from './types'
 
 const PAGE = 25
@@ -12,14 +13,17 @@ const PAGE = 25
 export function UsersPanel() {
   const [search, setSearch] = useState('')
   const [offset, setOffset] = useState(0)
+  // The input updates on every keystroke; the request only fires once typing pauses.
+  const debouncedSearch = useDebouncedValue(search)
 
   const { data, isLoading } = useQuery({
-    queryKey: ['admin', 'users', search, offset],
+    queryKey: ['admin', 'users', debouncedSearch, offset],
     queryFn: () =>
       api.get<AdminUserList>(
         `/admin/users?limit=${PAGE}&offset=${offset}` +
-          (search ? `&search=${encodeURIComponent(search)}` : '')
+          (debouncedSearch ? `&search=${encodeURIComponent(debouncedSearch)}` : '')
       ),
+    placeholderData: keepPreviousData,
   })
 
   return (

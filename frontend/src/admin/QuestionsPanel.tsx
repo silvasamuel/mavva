@@ -1,10 +1,11 @@
 import { useState } from 'react'
-import { useQuery } from '@tanstack/react-query'
+import { keepPreviousData, useQuery } from '@tanstack/react-query'
 import { api } from '@/lib/api'
 import { Card } from '@/components/ui/Card'
 import { Input } from '@/components/ui/Input'
 import { Spinner } from '@/components/ui/Spinner'
 import { DIFFICULTY_LABELS } from '@/lib/format'
+import { useDebouncedValue } from '@/lib/useDebouncedValue'
 import type { AdminCategory, AdminQuestionList } from './types'
 import { Pagination } from './UsersPanel'
 import { QuestionEditor } from './QuestionEditor'
@@ -17,6 +18,8 @@ export function QuestionsPanel() {
   const [difficulty, setDifficulty] = useState('')
   const [offset, setOffset] = useState(0)
   const [editingId, setEditingId] = useState<string | null>(null)
+  // The input updates on every keystroke; the request only fires once typing pauses.
+  const debouncedSearch = useDebouncedValue(search)
 
   const { data: categories } = useQuery({
     queryKey: ['admin', 'categories'],
@@ -24,13 +27,14 @@ export function QuestionsPanel() {
   })
 
   const params = new URLSearchParams({ limit: String(PAGE), offset: String(offset) })
-  if (search) params.set('search', search)
+  if (debouncedSearch) params.set('search', debouncedSearch)
   if (categoryId !== '') params.set('category_id', String(categoryId))
   if (difficulty) params.set('difficulty', difficulty)
 
   const { data, isLoading } = useQuery({
     queryKey: ['admin', 'questions', params.toString()],
     queryFn: () => api.get<AdminQuestionList>(`/admin/questions?${params.toString()}`),
+    placeholderData: keepPreviousData,
   })
 
   function resetPaging() {
