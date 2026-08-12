@@ -22,7 +22,7 @@ from app.schemas.quiz import (
     StreakInfo,
     UnlockedAchievement,
 )
-from app.services import quiz_service
+from app.services import duel_service, quiz_service
 from app.services.quiz_service import QuizError
 
 router = APIRouter(prefix="/quizzes", tags=["quizzes"])
@@ -170,6 +170,8 @@ def complete_quiz(session_id: uuid.UUID, user: CurrentUser, db: DbDep) -> QuizCo
         result = quiz_service.complete_session(db, user, session_id)
     except QuizError as error:
         raise HTTPException(error.status_code, error.message) from error
+    # If this round belonged to a duel, settle it once both sides are done.
+    duel_service.resolve_for_session(db, session_id)
     db.commit()
     session = result.session
     return QuizCompleteResponse(

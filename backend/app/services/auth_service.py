@@ -1,3 +1,4 @@
+import re
 import uuid
 from datetime import UTC, datetime, timedelta
 
@@ -14,11 +15,29 @@ class AuthError(Exception):
         self.message = message
 
 
+USERNAME_PATTERN = re.compile(r"[^a-z0-9_]")
+
+
+def generate_username(db: Session, email: str) -> str:
+    """Derives a free handle from the e-mail local-part (same rule as the backfill)."""
+    base = USERNAME_PATTERN.sub("", email.split("@")[0].lower())[:16] or "mavva"
+    candidate, suffix = base, 1
+    while db.scalar(select(User).where(User.username == candidate)):
+        suffix += 1
+        candidate = f"{base}{suffix}"
+    return candidate
+
+
 def register_user(db: Session, name: str, email: str, password: str) -> User:
     email = email.strip().lower()
     if db.scalar(select(User).where(User.email == email)):
         raise AuthError("Este e-mail já está cadastrado")
-    user = User(name=name.strip(), email=email, hashed_password=hash_password(password))
+    user = User(
+        name=name.strip(),
+        email=email,
+        username=generate_username(db, email),
+        hashed_password=hash_password(password),
+    )
     user.stats = UserStats()
     db.add(user)
     db.flush()

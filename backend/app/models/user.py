@@ -13,6 +13,8 @@ class User(TimestampMixin, Base):
 
     id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
     email: Mapped[str] = mapped_column(String(255), unique=True, index=True)
+    # Public handle used to find people for duels — searchable, unlike the email.
+    username: Mapped[str] = mapped_column(String(20), unique=True, index=True)
     name: Mapped[str] = mapped_column(String(120))
     hashed_password: Mapped[str] = mapped_column(String(255))
     role: Mapped[UserRole] = mapped_column(
@@ -40,6 +42,11 @@ class UserStats(Base):
     correct_answers: Mapped[int] = mapped_column(default=0)
     perfect_sessions: Mapped[int] = mapped_column(default=0)
     total_time_seconds: Mapped[int] = mapped_column(default=0)
+    duel_wins: Mapped[int] = mapped_column(default=0)
+    duel_losses: Mapped[int] = mapped_column(default=0)
+    duel_draws: Mapped[int] = mapped_column(default=0)
+    current_duel_streak: Mapped[int] = mapped_column(default=0)
+    best_duel_streak: Mapped[int] = mapped_column(default=0)
     updated_at: Mapped[datetime] = mapped_column(server_default=func.now(), onupdate=func.now())
 
     user: Mapped[User] = relationship(back_populates="stats")
