@@ -43,6 +43,7 @@ class QuestionOut(BaseModel):
     category_icon: str
     options: list[QuestionOptionOut] = []
     answered: bool = False
+    timer_remaining: int | None = None
 
 
 class QuizSessionOut(BaseModel):
@@ -56,6 +57,14 @@ class QuizSessionOut(BaseModel):
     duel_id: uuid.UUID | None = None  # set when this round belongs to a duel
     filters: dict[str, Any]
     questions: list[QuestionOut]
+
+
+class PresentQuestionRequest(BaseModel):
+    question_id: uuid.UUID
+
+
+class PresentQuestionResponse(BaseModel):
+    timer_remaining: int | None
 
 
 class AnswerRequest(BaseModel):

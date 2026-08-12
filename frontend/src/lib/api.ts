@@ -1,7 +1,13 @@
-// Fetch wrapper: injects the in-memory access token and, on a 401, tries a single
+// Fetch wrapper: injects the in-memory access token and, on a 401, tries a
 // cookie-based refresh (queueing concurrent requests) before giving up.
+// Transient 502/503/504 (typical of a Render restart) are retried and never
+// treated as a logged-out session.
 
 const API_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:8000'
+
+const TRANSIENT_STATUS = new Set([502, 503, 504])
+const MAX_ATTEMPTS = 10
+const BACKOFF_CAP_MS = 4000
 
 let accessToken: string | null = null
 let onSessionExpired: (() => void) | null = null
@@ -22,47 +28,93 @@ export class ApiError extends Error {
   }
 }
 
-let refreshPromise: Promise<boolean> | null = null
+export type RefreshResult = 'ok' | 'expired' | 'unavailable'
 
-async function tryRefresh(): Promise<boolean> {
+let refreshPromise: Promise<RefreshResult> | null = null
+
+function delay(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
+
+function backoff(attempt: number) {
+  return Math.min(BACKOFF_CAP_MS, 400 * 2 ** attempt)
+}
+
+async function tryRefresh(): Promise<RefreshResult> {
   refreshPromise ??= (async () => {
-    try {
-      const response = await fetch(`${API_URL}/api/v1/auth/refresh`, {
-        method: 'POST',
-        credentials: 'include',
-      })
-      if (!response.ok) return false
-      const data = await response.json()
-      accessToken = data.access_token
-      return true
-    } catch {
-      return false
-    } finally {
-      refreshPromise = null
+    let sawUnavailable = false
+    for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
+      try {
+        const response = await fetch(`${API_URL}/api/v1/auth/refresh`, {
+          method: 'POST',
+          credentials: 'include',
+        })
+        if (TRANSIENT_STATUS.has(response.status)) {
+          sawUnavailable = true
+          await delay(backoff(attempt))
+          continue
+        }
+        if (response.status === 401 || response.status === 403) return 'expired'
+        if (!response.ok) {
+          sawUnavailable = true
+          await delay(backoff(attempt))
+          continue
+        }
+        const data = await response.json()
+        accessToken = data.access_token
+        return 'ok'
+      } catch {
+        sawUnavailable = true
+        await delay(backoff(attempt))
+      }
     }
-  })()
+    return sawUnavailable ? 'unavailable' : 'expired'
+  })().finally(() => {
+    refreshPromise = null
+  })
   return refreshPromise
 }
 
-async function request<T>(path: string, options: RequestInit = {}, retried = false): Promise<T> {
+async function request<T>(path: string, options: RequestInit = {}, attempt = 0): Promise<T> {
   const headers = new Headers(options.headers)
   if (options.body != null) headers.set('Content-Type', 'application/json')
   if (accessToken) headers.set('Authorization', `Bearer ${accessToken}`)
 
-  const response = await fetch(`${API_URL}/api/v1${path}`, {
-    ...options,
-    headers,
-    credentials: 'include',
-  })
+  let response: Response
+  try {
+    response = await fetch(`${API_URL}/api/v1${path}`, {
+      ...options,
+      headers,
+      credentials: 'include',
+    })
+  } catch {
+    if (attempt < MAX_ATTEMPTS - 1) {
+      await delay(backoff(attempt))
+      return request<T>(path, options, attempt + 1)
+    }
+    throw new ApiError(0, 'Sem conexão. Tente novamente.')
+  }
 
-  if (response.status === 401 && !retried && !path.startsWith('/auth/')) {
-    if (await tryRefresh()) return request<T>(path, options, true)
+  if (response.status === 401 && attempt === 0 && !path.startsWith('/auth/')) {
+    const refresh = await tryRefresh()
+    if (refresh === 'ok') return request<T>(path, options, 1)
+    if (refresh === 'unavailable') {
+      throw new ApiError(503, 'Servidor reiniciando. Tente de novo em alguns segundos.')
+    }
     onSessionExpired?.()
     throw new ApiError(401, 'Sessão expirada. Entre novamente.')
   }
 
+  if (TRANSIENT_STATUS.has(response.status) && attempt < MAX_ATTEMPTS - 1) {
+    await delay(backoff(attempt))
+    return request<T>(path, options, attempt + 1)
+  }
+
   if (!response.ok) {
     let message = 'Algo deu errado. Tente novamente.'
+    if (TRANSIENT_STATUS.has(response.status)) {
+      message = 'Servidor reiniciando. Tente de novo em alguns segundos.'
+    }
     try {
       const body = await response.json()
       if (typeof body.detail === 'string') message = body.detail

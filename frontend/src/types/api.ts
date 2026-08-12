@@ -145,6 +145,7 @@ export interface QuizQuestion {
   category_icon: string
   options: QuestionOption[]
   answered: boolean
+  timer_remaining: number | null
 }
 
 export interface QuizSession {

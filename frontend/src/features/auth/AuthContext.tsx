@@ -23,8 +23,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     let cancelled = false
     ;(async () => {
-      const ok = await tryRefresh()
-      if (ok) {
+      const refresh = await tryRefresh()
+      if (refresh === 'ok') {
         try {
           const me = await api.get<User>('/users/me')
           if (!cancelled) setUser(me)

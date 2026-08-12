@@ -71,7 +71,9 @@ export function QuizPlayPage() {
         ...payload,
         time_spent_seconds: Math.min(
           3600,
-          Math.round((Date.now() - questionStartedAt.current) / 1000)
+          timerSeconds != null && remaining != null
+            ? Math.max(0, timerSeconds - remaining)
+            : Math.round((Date.now() - questionStartedAt.current) / 1000)
         ),
       }),
     onSuccess: (result) => {
@@ -79,8 +81,16 @@ export function QuizPlayPage() {
       setExtraAnswered((count) => count + 1)
       if (!result.is_correct) setExtraWrong((count) => count + 1)
     },
-    onError: (err) =>
-      setError(err instanceof ApiError ? err.message : 'Não foi possível enviar a resposta.'),
+    onError: async (err) => {
+      if (err instanceof ApiError && err.message.includes('já foi respondida')) {
+        await queryClient.invalidateQueries({ queryKey: ['quiz', sessionId] })
+        setIndex(null)
+        setFeedback(null)
+        setError('')
+        return
+      }
+      setError(err instanceof ApiError ? err.message : 'Não foi possível enviar a resposta.')
+    },
   })
 
   const completeQuiz = useMutation({
@@ -115,17 +125,37 @@ export function QuizPlayPage() {
     },
   })
 
-  // Countdown: runs only while the player is answering — never during feedback.
+  // Countdown is anchored on the server (presented_at). Reload keeps elapsed time.
   useEffect(() => {
-    if (!timerSeconds || !question || feedback) return
-    setRemaining(timerSeconds)
-    const interval = setInterval(
-      () => setRemaining((value) => (value === null ? null : Math.max(0, value - 1))),
-      1000
-    )
-    return () => clearInterval(interval)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [timerSeconds, question?.id, feedback])
+    if (!timerSeconds || !question || feedback || question.answered || !sessionId) return
+    let cancelled = false
+    let interval: ReturnType<typeof setInterval> | undefined
+
+    ;(async () => {
+      let start = question.timer_remaining ?? timerSeconds
+      setRemaining(start)
+      try {
+        const data = await api.post<{ timer_remaining: number | null }>(
+          `/quizzes/${sessionId}/present`,
+          { question_id: question.id }
+        )
+        if (data.timer_remaining != null) start = data.timer_remaining
+      } catch {
+        /* keep the snapshot from GET */
+      }
+      if (cancelled) return
+      const deadline = Date.now() + start * 1000
+      const tick = () =>
+        setRemaining(Math.max(0, Math.ceil((deadline - Date.now()) / 1000)))
+      tick()
+      interval = setInterval(tick, 250)
+    })()
+
+    return () => {
+      cancelled = true
+      if (interval) clearInterval(interval)
+    }
+  }, [timerSeconds, question?.id, question?.answered, question?.timer_remaining, feedback, sessionId])
 
   // Time's up: auto-submit as a miss.
   useEffect(() => {
@@ -160,6 +190,7 @@ export function QuizPlayPage() {
     setTimedOut(false)
     setSelectedOption(null)
     setAnswerText('')
+    setRemaining(null)
     questionStartedAt.current = Date.now()
     if (isLast) {
       completeQuiz.mutate()

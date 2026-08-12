@@ -22,8 +22,8 @@ export function useAdminAuth() {
   useEffect(() => {
     let cancelled = false
     ;(async () => {
-      const ok = await tryRefresh()
-      if (!ok) return !cancelled && setStatus('anonymous')
+      const refresh = await tryRefresh()
+      if (refresh !== 'ok') return !cancelled && setStatus('anonymous')
       try {
         const me = await api.get<User>('/users/me')
         if (!cancelled) resolve(me)

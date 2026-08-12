@@ -12,6 +12,8 @@ from app.schemas.quiz import (
     BibleReference,
     DailyGoalInfo,
     LevelInfo,
+    PresentQuestionRequest,
+    PresentQuestionResponse,
     QuestionOptionOut,
     QuestionOut,
     QuizAbandonResponse,
@@ -72,6 +74,11 @@ def _session_out(session: QuizSession, duel_id: uuid.UUID | None = None) -> Quiz
                 if sq.question.type == QuestionType.MULTIPLE_CHOICE
                 else [],
                 answered=sq.question.id in answered_ids,
+                timer_remaining=(
+                    None
+                    if sq.question.id in answered_ids
+                    else quiz_service.remaining_seconds(session, sq.question.id)
+                ),
             )
             for sq in session.session_questions
         ],
@@ -125,8 +132,23 @@ def get_quiz(session_id: uuid.UUID, user: CurrentUser, db: DbDep) -> QuizSession
         session = quiz_service.get_session_for_user(db, user, session_id)
     except QuizError as error:
         raise HTTPException(error.status_code, error.message) from error
+    quiz_service.ensure_current_timer(db, session)
+    db.commit()
     duel = duel_service.duel_for_session(db, session_id)
     return _session_out(session, duel_id=duel.id if duel else None)
+
+
+@router.post("/{session_id}/present", response_model=PresentQuestionResponse)
+def present_question(
+    session_id: uuid.UUID, body: PresentQuestionRequest, user: CurrentUser, db: DbDep
+) -> PresentQuestionResponse:
+    try:
+        session = quiz_service.get_session_for_user(db, user, session_id)
+        remaining = quiz_service.present_question(db, session, body.question_id)
+    except QuizError as error:
+        raise HTTPException(error.status_code, error.message) from error
+    db.commit()
+    return PresentQuestionResponse(timer_remaining=remaining)
 
 
 @router.post("/{session_id}/answers", response_model=AnswerFeedback)
