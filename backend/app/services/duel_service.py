@@ -13,7 +13,7 @@ from sqlalchemy import func, select
 from sqlalchemy.orm import Session, selectinload
 
 from app.models import Duel, Question, QuizAnswer, QuizSession, QuizSessionQuestion, User, UserStats
-from app.models.enums import DuelMode, DuelStatus, QuizMode
+from app.models.enums import DuelMode, DuelStatus, QuestionType, QuizMode
 from app.services import friendship_service
 from app.services.gamification import level_from_total_xp
 
@@ -34,11 +34,15 @@ class DuelError(Exception):
 
 
 def _draw_question_ids(db: Session) -> list[uuid.UUID]:
-    """Neutral draw: all categories, all difficulties, equal for both players."""
+    """Neutral draw: all categories, all difficulties, equal for both players.
+
+    Multiple choice only — with a 30s clock, typing speed would decide open
+    answers as much as knowledge does.
+    """
     ids = list(
         db.scalars(
             select(Question.id)
-            .where(Question.is_active)
+            .where(Question.is_active, Question.type == QuestionType.MULTIPLE_CHOICE)
             .order_by(func.random())
             .limit(QUESTION_COUNT)
         )

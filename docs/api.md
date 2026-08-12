@@ -121,7 +121,8 @@ ainda não foi respondida (UNIQUE no banco).
 ## Duelos
 
 Assíncronos: os dois jogadores respondem **as mesmas 10 perguntas congeladas**
-(30s cada, todas as categorias e dificuldades). Cada lado joga uma `QuizSession`
+(30s cada, **somente múltipla escolha**, todas as categorias e dificuldades).
+Cada lado joga uma `QuizSession`
 normal em modo `duel` — por isso as respostas contam para acurácia, desempenho
 por categoria, revisão espaçada e streak como qualquer estudo.
 
