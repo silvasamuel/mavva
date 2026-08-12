@@ -19,12 +19,14 @@ export function ProfilePage() {
   const { user, logout, updateUser } = useAuth()
   const navigate = useNavigate()
   const [name, setName] = useState(user?.name ?? '')
+  const [username, setUsername] = useState(user?.username ?? '')
   const [dailyGoal, setDailyGoal] = useState(user?.daily_goal_xp ?? 50)
   const [message, setMessage] = useState('')
   const [error, setError] = useState('')
 
   const save = useMutation({
-    mutationFn: () => api.patch<User>('/users/me', { name, daily_goal_xp: dailyGoal }),
+    mutationFn: () =>
+      api.patch<User>('/users/me', { name, username, daily_goal_xp: dailyGoal }),
     onSuccess: (updated) => {
       updateUser(updated)
       setMessage('Alterações salvas!')
@@ -46,6 +48,12 @@ export function ProfilePage() {
       <Card className="space-y-4">
         <CardTitle>Seus dados</CardTitle>
         <Input label="Nome" value={name} onChange={(e) => setName(e.target.value)} />
+        <Input
+          label="Nome de usuário (para amigos e duelos)"
+          value={username}
+          onChange={(e) => setUsername(e.target.value.toLowerCase().replace(/[^a-z0-9_]/g, ''))}
+          placeholder="ex: samuel"
+        />
 
         <div className="space-y-1.5">
           <p className="text-sm font-bold text-sand-700">Meta diária</p>
@@ -77,6 +85,16 @@ export function ProfilePage() {
 
         <Button full loading={save.isPending} onClick={() => save.mutate()}>
           Salvar
+        </Button>
+      </Card>
+
+      {/* Reachable here because the mobile bar only holds five tabs. */}
+      <Card className="grid gap-2 sm:grid-cols-2 md:hidden">
+        <Button variant="secondary" full onClick={() => navigate('/friends')}>
+          🤝 Amigos
+        </Button>
+        <Button variant="secondary" full onClick={() => navigate('/achievements')}>
+          🏅 Conquistas
         </Button>
       </Card>
 

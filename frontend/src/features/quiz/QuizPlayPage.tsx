@@ -96,6 +96,12 @@ export function QuizPlayPage() {
       queryClient.invalidateQueries({ queryKey: ['dashboard'] })
       queryClient.invalidateQueries({ queryKey: ['reviews'] })
       queryClient.invalidateQueries({ queryKey: ['achievements'] })
+      if (session?.duel_id) {
+        // Duel rounds end on the head-to-head scoreboard, not the solo summary.
+        queryClient.invalidateQueries({ queryKey: ['duels'] })
+        navigate(`/duels/${session.duel_id}`, { replace: true })
+        return
+      }
       navigate(`/quiz/${sessionId}/summary`, { state: summary, replace: true })
     },
     onError: (err) =>

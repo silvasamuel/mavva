@@ -53,6 +53,7 @@ class QuizSessionOut(BaseModel):
     answered_count: int
     completed: bool
     timer_seconds: int | None
+    duel_id: uuid.UUID | None = None  # set when this round belongs to a duel
     filters: dict[str, Any]
     questions: list[QuestionOut]
 

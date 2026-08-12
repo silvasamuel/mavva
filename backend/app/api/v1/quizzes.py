@@ -41,10 +41,11 @@ def _reference(question: Question) -> BibleReference:
     )
 
 
-def _session_out(session: QuizSession) -> QuizSessionOut:
+def _session_out(session: QuizSession, duel_id: uuid.UUID | None = None) -> QuizSessionOut:
     answered_ids = {a.question_id for a in session.answers}
     return QuizSessionOut(
         id=session.id,
+        duel_id=duel_id,
         mode=session.mode,
         question_count=session.question_count,
         correct_count=session.correct_count,
@@ -118,7 +119,8 @@ def get_quiz(session_id: uuid.UUID, user: CurrentUser, db: DbDep) -> QuizSession
         session = quiz_service.get_session_for_user(db, user, session_id)
     except QuizError as error:
         raise HTTPException(error.status_code, error.message) from error
-    return _session_out(session)
+    duel = duel_service.duel_for_session(db, session_id)
+    return _session_out(session, duel_id=duel.id if duel else None)
 
 
 @router.post("/{session_id}/answers", response_model=AnswerFeedback)

@@ -6,7 +6,17 @@ from typing import Any
 from sqlalchemy import case, func, select
 from sqlalchemy.orm import Session
 
-from app.models import Category, DailyActivity, Question, QuizAnswer, QuizSession, User, UserStats
+from app.models import (
+    Category,
+    DailyActivity,
+    Duel,
+    Question,
+    QuizAnswer,
+    QuizSession,
+    User,
+    UserStats,
+)
+from app.models.enums import DuelStatus
 from app.services import srs
 from app.services.gamification import effective_streak, level_from_total_xp, today_for_user
 from app.services.quiz_service import recent_sessions, session_filters
@@ -99,6 +109,27 @@ def _recommendations(
     return recommendations[:3]
 
 
+def _duels_awaiting(db: Session, user: User) -> int:
+    """Unfinished duel rounds where it is this user's turn to play."""
+    mine = db.scalars(
+        select(Duel).where(
+            Duel.status.in_([DuelStatus.OPEN, DuelStatus.ACTIVE]),
+            (Duel.challenger_id == user.id) | (Duel.opponent_id == user.id),
+        )
+    ).all()
+    pending = 0
+    for duel in mine:
+        session_id = (
+            duel.challenger_session_id
+            if duel.challenger_id == user.id
+            else duel.opponent_session_id
+        )
+        session = db.get(QuizSession, session_id) if session_id else None
+        if session is not None and session.completed_at is None and session.abandoned_at is None:
+            pending += 1
+    return pending
+
+
 def get_dashboard(db: Session, user: User) -> dict[str, Any]:
     stats = db.get(UserStats, user.id)
     assert stats is not None
@@ -116,6 +147,7 @@ def get_dashboard(db: Session, user: User) -> dict[str, Any]:
     categories = category_performance(db, user)
     reviews_due = srs.review_summary(db, user.id, today)["due_today"]
     sessions = recent_sessions(db, user, limit=5)
+    duels_awaiting = _duels_awaiting(db, user)
 
     accuracy = (
         stats.correct_answers / stats.questions_answered if stats.questions_answered else None
@@ -163,5 +195,18 @@ def get_dashboard(db: Session, user: User) -> dict[str, Any]:
             for s in sessions
         ],
         "reviews_due": reviews_due,
+        "duels": {
+            "wins": stats.duel_wins,
+            "losses": stats.duel_losses,
+            "draws": stats.duel_draws,
+            "current_streak": stats.current_duel_streak,
+            "best_streak": stats.best_duel_streak,
+            "win_rate": (
+                stats.duel_wins / (stats.duel_wins + stats.duel_losses + stats.duel_draws)
+                if (stats.duel_wins + stats.duel_losses + stats.duel_draws)
+                else None
+            ),
+            "awaiting_me": duels_awaiting,
+        },
         "recommendations": _recommendations(db, user, categories, reviews_due),
     }

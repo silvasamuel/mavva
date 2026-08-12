@@ -12,6 +12,9 @@ import { QuizSummaryPage } from '@/features/quiz/QuizSummaryPage'
 import { ReviewPage } from '@/features/review/ReviewPage'
 import { AchievementsPage } from '@/features/achievements/AchievementsPage'
 import { ProfilePage } from '@/features/profile/ProfilePage'
+import { DuelsPage } from '@/features/duels/DuelsPage'
+import { DuelResultPage } from '@/features/duels/DuelResultPage'
+import { FriendsPage } from '@/features/friends/FriendsPage'
 import { AppShell } from './AppShell'
 import { RequireAuth } from './RequireAuth'
 
@@ -41,6 +44,9 @@ export default function App() {
                 <Route path="/" element={<DashboardPage />} />
                 <Route path="/quiz/new" element={<QuizConfigPage />} />
                 <Route path="/review" element={<ReviewPage />} />
+                <Route path="/duels" element={<DuelsPage />} />
+                <Route path="/duels/:duelId" element={<DuelResultPage />} />
+                <Route path="/friends" element={<FriendsPage />} />
                 <Route path="/achievements" element={<AchievementsPage />} />
                 <Route path="/profile" element={<ProfilePage />} />
               </Route>

@@ -73,8 +73,26 @@ marcado como tal. Divergências entre interpretações cristãs são indicadas n
 - Campos obrigatórios: pergunta, resposta correta, explicação, referência (livro/cap/vers),
   tema, dificuldade, categoria, subcategoria, tags, nota de divergência (quando aplicável)
 
+**Duelos 1×1 (assíncrono)**
+- Desafio a um amigo ou adversário aleatório (fila de matchmaking)
+- Mesmas 10 perguntas congeladas para ambos, 30s por pergunta, todas as
+  categorias e dificuldades; cada um joga quando puder, prazo de 48h
+- Vence quem acertar mais (desempate por tempo total); W.O. para quem jogou
+  quando o prazo estoura
+- Aposta: +50 XP (vitória) · +10 (empate) · −25 (derrota), além do XP das respostas
+- Cartel de vitórias/derrotas/empates com sequência de vitórias
+- As respostas contam normalmente para acurácia, categorias, revisão e streak
+
+**Amizades**
+- Cada usuário tem um `@username` único (gerado no cadastro, editável)
+- Busca apenas por prefixo de username — e-mails nunca são expostos
+- Pedido → aceite/recusa; convites mútuos viram amizade automaticamente
+
 ### 3.2 Fase 2 (pós-MVP)
 
+- **Ban/pick de categorias no duelo** (estilo escolha de mapas em CS): cada
+  jogador veta categorias antes da partida
+- Duelo em tempo real (exige serviço WebSocket fora da Vercel)
 - Ranking global e entre amigos
 - Perfil público e compartilhamento de progresso
 - Painel admin para curadoria de perguntas

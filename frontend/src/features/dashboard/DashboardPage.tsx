@@ -123,6 +123,40 @@ export function DashboardPage() {
         </Card>
       </div>
 
+      {/* Duels */}
+      <Card className="flex flex-wrap items-center justify-between gap-4">
+        <div className="flex items-center gap-4">
+          <span className="text-3xl" aria-hidden>
+            ⚔️
+          </span>
+          <div>
+            <p className="text-xs font-extrabold uppercase tracking-wide text-sand-500">Duelos</p>
+            <p className="text-lg font-extrabold">
+              {data.duels.wins}V <span className="text-sand-300">·</span> {data.duels.losses}D{' '}
+              <span className="text-sand-300">·</span> {data.duels.draws}E
+              {data.duels.win_rate != null && (
+                <span className="ml-2 text-sm font-bold text-sand-500">
+                  {formatPercent(data.duels.win_rate)} de aproveitamento
+                </span>
+              )}
+            </p>
+            {data.duels.current_streak > 1 && (
+              <p className="text-xs font-bold text-grain-700">
+                🔥 {data.duels.current_streak} vitórias seguidas
+              </p>
+            )}
+          </div>
+        </div>
+        <Button
+          variant={data.duels.awaiting_me > 0 ? 'gold' : 'secondary'}
+          onClick={() => navigate('/duels')}
+        >
+          {data.duels.awaiting_me > 0
+            ? `Jogar (${data.duels.awaiting_me})`
+            : 'Desafiar alguém'}
+        </Button>
+      </Card>
+
       {/* Recommendations */}
       {(recommendations.length > 0 || reviews_due > 0) && (
         <div className="grid gap-3 md:grid-cols-3">

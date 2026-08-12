@@ -108,6 +108,36 @@ ainda não foi respondida (UNIQUE no banco).
 
 *(A sessão de revisão é criada via `POST /quizzes` com `mode=review`.)*
 
+## Amigos
+
+| Método | Rota | Descrição |
+|---|---|---|
+| GET | `/friends` | `{friends, incoming, sent}` — amigos e pedidos pendentes (nunca expõe e-mail). |
+| GET | `/friends/search?q=` | Busca por **prefixo de username** (mín. 2 caracteres), com a relação atual (`none`, `pending_sent`, `pending_received`, `friends`). |
+| POST | `/friends/requests` | Body: `{username}`. Se a outra pessoa já havia convidado, a amizade é aceita direto. |
+| POST | `/friends/requests/{id}/accept` · `/decline` | Responde um pedido recebido. |
+| DELETE | `/friends/{user_id}` | Desfaz a amizade. |
+
+## Duelos
+
+Assíncronos: os dois jogadores respondem **as mesmas 10 perguntas congeladas**
+(30s cada, todas as categorias e dificuldades). Cada lado joga uma `QuizSession`
+normal em modo `duel` — por isso as respostas contam para acurácia, desempenho
+por categoria, revisão espaçada e streak como qualquer estudo.
+
+| Método | Rota | Descrição |
+|---|---|---|
+| POST | `/duels` | Body: `{opponent_username?}`. Com username → desafia um amigo. Sem → entra na fila aleatória (assume o duelo `open` mais antigo, ou abre um). |
+| GET | `/duels` | Meus duelos + `record` (V/D/E, sequência, aproveitamento) + `awaiting_me`. |
+| GET | `/duels/{id}` | Placar do duelo (404 para quem não joga nele). Resolve preguiçosamente vencidos. |
+
+**Resolução:** vence quem acertar mais; empate em acertos desempata pelo tempo
+total; igual nos dois → empate. Prazo de 48h: quem jogou vence por W.O.; se
+ninguém jogou, expira sem mover XP.
+
+**Aposta:** +50 (vitória) · +10 (empate) · −25 (derrota), somada ao XP normal das
+respostas. O XP total do usuário nunca fica negativo.
+
 ## Conquistas
 
 | Método | Rota | Descrição |

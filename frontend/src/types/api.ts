@@ -3,15 +3,87 @@
 export type Difficulty = 'easy' | 'medium' | 'hard' | 'expert'
 export type QuestionType = 'multiple_choice' | 'open_answer'
 export type Testament = 'old' | 'new'
-export type QuizMode = 'practice' | 'review'
+export type QuizMode = 'practice' | 'review' | 'duel'
 
 export interface User {
   id: string
   name: string
+  username: string
   email: string
   role: 'user' | 'admin'
   timezone: string
   daily_goal_xp: number
+}
+
+// --- Social: friends and duels ---
+
+export interface PublicUser {
+  id: string
+  username: string
+  name: string
+  level: number
+  duel_wins: number
+  duel_losses: number
+  duel_draws: number
+}
+
+export type RelationStatus = 'none' | 'pending_sent' | 'pending_received' | 'friends'
+
+export interface UserSearchResult {
+  user: PublicUser
+  relation: RelationStatus
+}
+
+export interface FriendRequest {
+  id: string
+  user: PublicUser
+  created_at: string
+}
+
+export interface FriendsOverview {
+  friends: PublicUser[]
+  incoming: FriendRequest[]
+  sent: FriendRequest[]
+}
+
+export type DuelStatus = 'open' | 'active' | 'finished' | 'expired'
+
+export interface DuelSide {
+  user: PublicUser | null
+  correct: number
+  answered: number
+  finished: boolean
+  time_seconds: number
+}
+
+export interface Duel {
+  id: string
+  mode: 'random' | 'friend'
+  status: DuelStatus
+  created_at: string
+  expires_at: string
+  me: DuelSide
+  rival: DuelSide
+  my_session_id: string | null
+  my_result: 'win' | 'loss' | 'draw' | null
+  xp_change: number | null
+  question_count: number
+  timer_seconds: number
+}
+
+export interface DuelRecord {
+  wins: number
+  losses: number
+  draws: number
+  current_streak: number
+  best_streak: number
+  win_rate: number | null
+}
+
+export interface DuelListResponse {
+  items: Duel[]
+  record: DuelRecord
+  awaiting_me: number
 }
 
 export interface TokenResponse {
@@ -65,6 +137,7 @@ export interface QuizSession {
   answered_count: number
   completed: boolean
   timer_seconds: number | null
+  duel_id: string | null
   filters: Record<string, unknown>
   questions: QuizQuestion[]
 }
@@ -145,6 +218,15 @@ export interface DashboardData {
     filters: Record<string, unknown>
   }[]
   reviews_due: number
+  duels: {
+    wins: number
+    losses: number
+    draws: number
+    current_streak: number
+    best_streak: number
+    win_rate: number | null
+    awaiting_me: number
+  }
   recommendations: { type: 'review' | 'category'; category_slug: string | null; reason: string }[]
 }
 
