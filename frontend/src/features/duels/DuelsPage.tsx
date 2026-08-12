@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { api, ApiError } from '@/lib/api'
 import type { Duel, DuelListResponse, FriendsOverview, PublicUser } from '@/types/api'
 import { Button } from '@/components/ui/Button'
@@ -9,6 +9,7 @@ import { Card, CardTitle } from '@/components/ui/Card'
 import { Spinner } from '@/components/ui/Spinner'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { RankBadge } from '@/components/RankBadge'
+import { Modal } from '@/components/ui/Modal'
 import { formatPercent, formatRelativeDate } from '@/lib/format'
 
 const CLOSED: Duel['status'][] = ['finished', 'expired', 'cancelled']
@@ -126,7 +127,7 @@ export function DuelsPage() {
         <div>
           <h1 className="text-2xl font-extrabold">Duelos ⚔️</h1>
           <p className="text-sm font-semibold text-sand-500">
-            10 perguntas, 30 segundos cada. Quem acertar mais leva +50 XP.
+            10 perguntas, 20 segundos cada. Quem acertar mais leva +50 XP.
           </p>
         </div>
       </header>
@@ -174,17 +175,25 @@ export function DuelsPage() {
               {friends.friends.map((friend) => (
                 <li
                   key={friend.id}
-                  className="flex items-center gap-3 rounded-2xl bg-sand-25 p-3 ring-1 ring-sand-100"
+                  className="flex flex-col gap-3 rounded-2xl bg-sand-25 p-3 ring-1 ring-sand-100 sm:flex-row sm:items-center"
                 >
-                  <RankBadge code={friend.rank.code} size="sm" />
-                  <div className="min-w-0 flex-1">
-                    <p className="truncate font-extrabold text-ink">{friend.name}</p>
-                    <p className="truncate text-xs font-semibold text-sand-500">
-                      @{friend.username} · {friend.rank.name} · {friend.duel_wins}V{' '}
-                      {friend.duel_losses}D
-                    </p>
+                  <div className="flex min-w-0 flex-1 items-start gap-3">
+                    <RankBadge code={friend.rank.code} size="sm" />
+                    <div className="min-w-0">
+                      <p className="truncate font-extrabold text-ink">{friend.name}</p>
+                      <p className="truncate text-xs font-semibold text-sand-500">
+                        @{friend.username}
+                      </p>
+                      <p className="text-xs font-semibold text-sand-400">
+                        {friend.rank.name} · {friend.duel_wins}V {friend.duel_losses}D
+                      </p>
+                    </div>
                   </div>
-                  <Button variant="secondary" onClick={() => setChallenging(friend)}>
+                  <Button
+                    variant="secondary"
+                    className="max-sm:w-full shrink-0"
+                    onClick={() => setChallenging(friend)}
+                  >
                     Desafiar
                   </Button>
                 </li>
@@ -233,58 +242,45 @@ export function DuelsPage() {
         )}
       </div>
 
-      {/* Challenge confirmation */}
-      <AnimatePresence>
+      <Modal
+        open={challenging != null}
+        onClose={() => setChallenging(null)}
+        label="Confirmar desafio"
+      >
         {challenging && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-30 flex items-center justify-center bg-ink/40 px-4"
-            role="dialog"
-            aria-modal="true"
-            aria-label="Confirmar desafio"
-            onClick={() => setChallenging(null)}
-          >
-            <motion.div
-              initial={{ scale: 0.92, y: 8 }}
-              animate={{ scale: 1, y: 0 }}
-              onClick={(e) => e.stopPropagation()}
-              className="w-full max-w-sm space-y-4 rounded-3xl bg-white p-6 text-center shadow-card"
-            >
-              <span className="text-4xl" aria-hidden>
-                ⚔️
-              </span>
-              <div>
-                <p className="text-lg font-extrabold">Desafiar {challenging.name}?</p>
-                <p className="text-sm font-semibold text-sand-500">@{challenging.username}</p>
-              </div>
-              <ul className="space-y-1 rounded-2xl bg-sand-25 p-3 text-left text-xs font-semibold text-sand-600">
-                <li>• 10 perguntas de múltipla escolha, 20s cada</li>
-                <li>• Os dois respondem as mesmas perguntas</li>
-                <li>
-                  • Vitória <strong className="text-leaf-700">+50 XP</strong> · empate{' '}
-                  <strong className="text-grain-700">+10</strong> · derrota{' '}
-                  <strong className="text-red-600">−25</strong>
-                </li>
-                <li>• Sair no meio cancela o duelo e conta como derrota</li>
-              </ul>
-              <div className="flex gap-3">
-                <Button variant="secondary" full onClick={() => setChallenging(null)}>
-                  Cancelar
-                </Button>
-                <Button
-                  full
-                  loading={createDuel.isPending}
-                  onClick={() => createDuel.mutate(challenging.username)}
-                >
-                  Desafiar
-                </Button>
-              </div>
-            </motion.div>
-          </motion.div>
+          <>
+            <span className="text-4xl" aria-hidden>
+              ⚔️
+            </span>
+            <div>
+              <p className="text-lg font-extrabold">Desafiar {challenging.name}?</p>
+              <p className="text-sm font-semibold text-sand-500">@{challenging.username}</p>
+            </div>
+            <ul className="space-y-1 rounded-2xl bg-sand-25 p-3 text-left text-xs font-semibold text-sand-600">
+              <li>• 10 perguntas de múltipla escolha, 20s cada</li>
+              <li>• Os dois respondem as mesmas perguntas</li>
+              <li>
+                • Vitória <strong className="text-leaf-700">+50 XP</strong> · empate{' '}
+                <strong className="text-grain-700">+10</strong> · derrota{' '}
+                <strong className="text-red-600">−25</strong>
+              </li>
+              <li>• Sair no meio cancela o duelo e conta como derrota</li>
+            </ul>
+            <div className="flex gap-3">
+              <Button variant="secondary" full onClick={() => setChallenging(null)}>
+                Cancelar
+              </Button>
+              <Button
+                full
+                loading={createDuel.isPending}
+                onClick={() => createDuel.mutate(challenging.username)}
+              >
+                Desafiar
+              </Button>
+            </div>
+          </>
         )}
-      </AnimatePresence>
+      </Modal>
     </div>
   )
 }

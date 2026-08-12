@@ -556,6 +556,10 @@ class TestDuelXpComesFromTheResult:
         assert auth_client.get("/api/v1/dashboard").json()["stats"]["total_xp"] == (
             50 + _badge_xp(auth_client)
         )
+        recent = auth_client.get("/api/v1/dashboard").json()["recent_sessions"]
+        duel_rows = [row for row in recent if row["mode"] == "duel"]
+        assert duel_rows
+        assert duel_rows[0]["xp_earned"] == 50
         # Loser pays the stake on top of any badges from the round (floored at zero).
         assert client.get("/api/v1/dashboard", headers=other_headers).json()["stats"][
             "total_xp"

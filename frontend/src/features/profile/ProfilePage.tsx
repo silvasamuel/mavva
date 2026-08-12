@@ -19,12 +19,10 @@ const GOAL_OPTIONS = [
 export function ProfilePage() {
   const { user, logout, updateUser } = useAuth()
   const navigate = useNavigate()
-  // Friends has no mobile tab, so the pending count surfaces on its shortcut here.
   const { data: dashboard } = useQuery({
     queryKey: ['dashboard'],
     queryFn: () => api.get<DashboardData>('/dashboard'),
   })
-  const pendingRequests = dashboard?.friend_requests ?? 0
   const [name, setName] = useState(user?.name ?? '')
   const [username, setUsername] = useState(user?.username ?? '')
   const [dailyGoal, setDailyGoal] = useState(user?.daily_goal_xp ?? 50)
@@ -104,23 +102,6 @@ export function ProfilePage() {
 
         <Button full loading={save.isPending} onClick={() => save.mutate()}>
           Salvar
-        </Button>
-      </Card>
-
-      {/* Reachable here because the mobile bar only holds five tabs. */}
-      <Card className="grid gap-2 sm:grid-cols-2 md:hidden">
-        <Button
-          variant={pendingRequests > 0 ? 'gold' : 'secondary'}
-          full
-          onClick={() => navigate('/friends')}
-        >
-          🤝 Amigos {pendingRequests > 0 && `(${pendingRequests})`}
-        </Button>
-        <Button variant="secondary" full onClick={() => navigate('/ranking')}>
-          🏆 Ranking
-        </Button>
-        <Button variant="secondary" full onClick={() => navigate('/achievements')}>
-          🏅 Conquistas
         </Button>
       </Card>
 

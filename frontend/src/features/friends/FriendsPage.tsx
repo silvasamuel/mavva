@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/Input'
 import { Spinner } from '@/components/ui/Spinner'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { RankBadge } from '@/components/RankBadge'
+import { Modal } from '@/components/ui/Modal'
 import { useAuth } from '@/features/auth/AuthContext'
 
 function PlayerRow({ user, children }: { user: PublicUser; children?: React.ReactNode }) {
@@ -16,8 +17,9 @@ function PlayerRow({ user, children }: { user: PublicUser; children?: React.Reac
     <li className="flex items-center gap-3 py-3">
       <RankBadge code={user.rank.code} size="sm" />
       <div className="min-w-0 flex-1">
-        <p className="truncate font-extrabold text-ink">@{user.username}</p>
-        <p className="text-xs font-semibold text-sand-500">
+        <p className="truncate font-extrabold text-ink">{user.name}</p>
+        <p className="truncate text-xs font-semibold text-sand-500">@{user.username}</p>
+        <p className="text-xs font-semibold text-sand-400">
           {user.rank.name} · {user.duel_wins}V {user.duel_losses}D {user.duel_draws}E
         </p>
       </div>
@@ -32,6 +34,7 @@ export function FriendsPage() {
   const [search, setSearch] = useState('')
   const [feedback, setFeedback] = useState('')
   const [error, setError] = useState('')
+  const [removing, setRemoving] = useState<PublicUser | null>(null)
   const debouncedSearch = useDebouncedValue(search)
 
   const { data, isLoading } = useQuery({
@@ -73,7 +76,10 @@ export function FriendsPage() {
 
   const removeFriend = useMutation({
     mutationFn: (friendId: string) => api.delete(`/friends/${friendId}`),
-    onSuccess: refresh,
+    onSuccess: () => {
+      setRemoving(null)
+      refresh()
+    },
   })
 
   if (isLoading || !data) {
@@ -191,7 +197,7 @@ export function FriendsPage() {
             {data.friends.map((friend) => (
               <PlayerRow key={friend.id} user={friend}>
                 <button
-                  onClick={() => removeFriend.mutate(friend.id)}
+                  onClick={() => setRemoving(friend)}
                   className="text-xs font-extrabold uppercase text-sand-400 hover:text-red-600"
                 >
                   Remover
@@ -214,6 +220,35 @@ export function FriendsPage() {
           </ul>
         </Card>
       )}
+
+      <Modal
+        open={removing != null}
+        onClose={() => setRemoving(null)}
+        label="Remover amigo"
+      >
+        {removing && (
+          <>
+            <p className="text-lg font-extrabold">Remover {removing.name}?</p>
+            <p className="text-sm font-semibold text-sand-500">
+              @{removing.username} sai da sua lista de amigos. Vocês poderão se adicionar de novo
+              depois.
+            </p>
+            <div className="flex gap-3">
+              <Button variant="secondary" full onClick={() => setRemoving(null)}>
+                Cancelar
+              </Button>
+              <Button
+                variant="danger"
+                full
+                loading={removeFriend.isPending}
+                onClick={() => removeFriend.mutate(removing.id)}
+              >
+                Remover
+              </Button>
+            </div>
+          </>
+        )}
+      </Modal>
     </div>
   )
 }
