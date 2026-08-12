@@ -46,6 +46,51 @@ def level_from_total_xp(total_xp: int) -> tuple[int, int, int]:
     return level, remaining, xp_to_advance(level)
 
 
+LEVELS_PER_RANK = 5
+# Identity layer on top of the numeric level. Each band lasts 5 levels;
+# Celeiro is open-ended so the ladder never invents an eighth name.
+RANKS: tuple[tuple[str, str], ...] = (
+    ("semente", "Semente"),
+    ("broto", "Broto"),
+    ("espiga", "Espiga"),
+    ("videira", "Videira"),
+    ("oliveira", "Oliveira"),
+    ("cedro", "Cedro"),
+    ("celeiro", "Celeiro"),
+)
+
+
+@dataclass(frozen=True)
+class Rank:
+    code: str
+    name: str
+    min_level: int
+    max_level: int | None  # None = the last, open-ended band
+
+
+def rank_from_level(level: int) -> Rank:
+    level = max(1, level)
+    index = min((level - 1) // LEVELS_PER_RANK, len(RANKS) - 1)
+    code, name = RANKS[index]
+    min_level = index * LEVELS_PER_RANK + 1
+    max_level = None if index == len(RANKS) - 1 else min_level + LEVELS_PER_RANK - 1
+    return Rank(code=code, name=name, min_level=min_level, max_level=max_level)
+
+
+def rank_payload(level: int) -> dict[str, str | int | None]:
+    rank = rank_from_level(level)
+    nxt = rank_from_level(rank.max_level + 1) if rank.max_level is not None else None
+    return {
+        "code": rank.code,
+        "name": rank.name,
+        "min_level": rank.min_level,
+        "max_level": rank.max_level,
+        "next_code": nxt.code if nxt else None,
+        "next_name": nxt.name if nxt else None,
+        "next_level": nxt.min_level if nxt else None,
+    }
+
+
 def today_for_user(user: User, now: datetime | None = None) -> date:
     now = now or datetime.now(UTC)
     try:

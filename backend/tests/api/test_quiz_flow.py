@@ -85,6 +85,8 @@ class TestQuizFlow:
         assert summary["accuracy"] == 1.0
         # 3 medium answers (20 XP) + completion (5) + perfect (10)
         assert summary["xp_earned"] == 75
+        assert summary["rank"]["code"] == "semente"
+        assert summary["rank"]["rank_up"] is False
         assert summary["streak"]["current"] == 1
         assert summary["streak"]["extended_today"] is True
         codes = {a["code"] for a in summary["unlocked_achievements"]}
@@ -94,6 +96,8 @@ class TestQuizFlow:
 
         dashboard = auth_client.get("/api/v1/dashboard").json()
         assert dashboard["stats"]["total_xp"] == 75 + _badge_xp(auth_client)
+        assert dashboard["stats"]["rank"]["code"] == "semente"
+        assert dashboard["stats"]["rank"]["next_code"] == "broto"
         assert dashboard["stats"]["current_streak"] == 1
         assert dashboard["stats"]["questions_answered"] == 3
 

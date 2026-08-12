@@ -1,9 +1,11 @@
 import { Link, Navigate, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import type { QuizComplete } from '@/types/api'
+import { RankBadge } from '@/components/RankBadge'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
 import { formatStudyTime } from '@/lib/format'
+import { RANK_FLAVOR, isRankCode } from '@/lib/ranks'
 
 const stagger = {
   hidden: { opacity: 0, y: 16 },
@@ -95,15 +97,32 @@ export function QuizSummaryPage() {
           )}
         </Card>
 
-        {summary.level.leveled_up && (
-          <Card className="flex items-center gap-3 bg-leaf-50 ring-1 ring-leaf-200">
-            <span className="text-2xl" aria-hidden>
-              ⬆️
-            </span>
-            <p className="font-extrabold text-leaf-800">
-              Você subiu para o nível {summary.level.current}!
-            </p>
+        {summary.rank?.rank_up ? (
+          <Card className="flex items-center gap-3 bg-grain-50 ring-2 ring-grain-300">
+            <RankBadge code={summary.rank.code} size="md" />
+            <div>
+              <p className="text-xs font-extrabold uppercase tracking-wide text-grain-700">
+                Novo grau
+              </p>
+              <p className="font-extrabold text-grain-800">Você alcançou {summary.rank.name}!</p>
+              {isRankCode(summary.rank.code) && (
+                <p className="text-xs font-semibold text-sand-600">
+                  {RANK_FLAVOR[summary.rank.code]}
+                </p>
+              )}
+            </div>
           </Card>
+        ) : (
+          summary.level.leveled_up && (
+            <Card className="flex items-center gap-3 bg-leaf-50 ring-1 ring-leaf-200">
+              <span className="text-2xl" aria-hidden>
+                ⬆️
+              </span>
+              <p className="font-extrabold text-leaf-800">
+                Você subiu para o nível {summary.level.current}!
+              </p>
+            </Card>
+          )
         )}
 
         {summary.daily_goal.achieved && (

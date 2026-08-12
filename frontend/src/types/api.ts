@@ -22,6 +22,7 @@ export interface PublicUser {
   username: string
   name: string
   level: number
+  rank: { code: string; name: string }
   duel_wins: number
   duel_losses: number
   duel_draws: number
@@ -167,6 +168,7 @@ export interface QuizComplete {
   bonus_xp: number
   duration_seconds: number
   level: { current: number; leveled_up: boolean; xp_into_level: number; xp_for_next: number }
+  rank: { code: string; name: string; rank_up: boolean }
   streak: { current: number; extended_today: boolean }
   daily_goal: { target: number; earned_today: number; achieved: boolean }
   unlocked_achievements: Achievement[]
@@ -187,6 +189,15 @@ export interface DashboardData {
   stats: {
     total_xp: number
     level: number
+    rank: {
+      code: string
+      name: string
+      min_level: number
+      max_level: number | null
+      next_code: string | null
+      next_name: string | null
+      next_level: number | null
+    }
     xp_into_level: number
     xp_for_next_level: number
     current_streak: number

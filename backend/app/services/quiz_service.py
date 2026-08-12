@@ -24,6 +24,7 @@ from app.services.gamification import (
     SESSION_COMPLETE_BONUS,
     StreakUpdate,
     level_from_total_xp,
+    rank_from_level,
     register_streak_activity,
     today_for_user,
     upsert_daily_activity,
@@ -228,6 +229,9 @@ class CompleteResult:
     leveled_up: bool
     xp_into_level: int
     xp_for_next_level: int
+    rank_code: str
+    rank_name: str
+    rank_up: bool
     streak: StreakUpdate
     daily_goal_target: int
     daily_goal_earned: int
@@ -293,6 +297,8 @@ def complete_session(db: Session, user: User, session_id: uuid.UUID) -> Complete
     unlocked = achievement_service.evaluate_achievements(db, user, stats)
     level, xp_into_level, xp_for_next = level_from_total_xp(stats.total_xp)
     stats.level = level
+    rank = rank_from_level(level)
+    previous_rank = rank_from_level(previous_level)
     db.flush()
 
     return CompleteResult(
@@ -303,6 +309,9 @@ def complete_session(db: Session, user: User, session_id: uuid.UUID) -> Complete
         leveled_up=level > previous_level,
         xp_into_level=xp_into_level,
         xp_for_next_level=xp_for_next,
+        rank_code=rank.code,
+        rank_name=rank.name,
+        rank_up=rank.code != previous_rank.code,
         streak=streak,
         daily_goal_target=user.daily_goal_xp,
         daily_goal_earned=max(0, activity.xp),

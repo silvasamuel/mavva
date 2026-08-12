@@ -5,6 +5,7 @@ from typing import Annotated, Literal
 from pydantic import BaseModel, Field, StringConstraints
 
 from app.models.enums import DuelMode, DuelStatus
+from app.schemas.user import RankOut
 
 Username = Annotated[
     str,
@@ -21,6 +22,7 @@ class PublicUser(BaseModel):
     username: str
     name: str
     level: int
+    rank: RankOut
     duel_wins: int
     duel_losses: int
     duel_draws: int

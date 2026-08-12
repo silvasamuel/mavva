@@ -17,9 +17,11 @@ from app.schemas.social import (
     PublicUser,
     UserSearchResult,
 )
+from app.schemas.user import RankOut
 from app.services import duel_service, friendship_service
 from app.services.duel_service import DUEL_XP, DuelError
 from app.services.friendship_service import FriendshipError
+from app.services.gamification import rank_from_level
 
 friends_router = APIRouter(prefix="/friends", tags=["friends"])
 duels_router = APIRouter(prefix="/duels", tags=["duels"])
@@ -29,11 +31,14 @@ def _public(user: User | None) -> PublicUser | None:
     if user is None:
         return None
     stats = user.stats
+    level = stats.level if stats else 1
+    rank = rank_from_level(level)
     return PublicUser(
         id=user.id,
         username=user.username,
         name=user.name,
-        level=stats.level if stats else 1,
+        level=level,
+        rank=RankOut(code=rank.code, name=rank.name),
         duel_wins=stats.duel_wins if stats else 0,
         duel_losses=stats.duel_losses if stats else 0,
         duel_draws=stats.duel_draws if stats else 0,

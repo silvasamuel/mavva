@@ -10,6 +10,7 @@ import { Spinner } from '@/components/ui/Spinner'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { formatPercent, formatRelativeDate, formatStudyTime } from '@/lib/format'
 import { useAuth } from '@/features/auth/AuthContext'
+import { RankBadge } from '@/components/RankBadge'
 import { EvolutionChart } from './EvolutionChart'
 
 export function DashboardPage() {
@@ -51,12 +52,15 @@ export function DashboardPage() {
       {/* Stat tiles */}
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
         <Card className="flex items-center gap-3">
-          <span className="text-3xl" aria-hidden>
-            ⚡
-          </span>
-          <div>
-            <p className="text-xl font-extrabold">{stats.total_xp} XP</p>
-            <p className="text-xs font-bold text-sand-500">Nível {stats.level}</p>
+          <RankBadge code={stats.rank.code} size="md" />
+          <div className="min-w-0">
+            <p className="text-xl font-extrabold">{stats.rank.name}</p>
+            <p className="text-xs font-bold text-sand-500">
+              Nível {stats.level} · {stats.total_xp} XP
+              {stats.rank.next_name && stats.rank.next_level
+                ? ` · ${stats.rank.next_name} no nível ${stats.rank.next_level}`
+                : ''}
+            </p>
             <ProgressBar
               value={stats.xp_into_level}
               max={stats.xp_for_next_level}
