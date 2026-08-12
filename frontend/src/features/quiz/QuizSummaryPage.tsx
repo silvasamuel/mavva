@@ -26,6 +26,11 @@ export function QuizSummaryPage() {
     : summary.accuracy >= 0.7
       ? 'Muito bem! 🙌'
       : 'Semente plantada 🌱'
+  const achievementXp = summary.unlocked_achievements.reduce(
+    (total, achievement) => total + (achievement.xp_reward ?? 0),
+    0,
+  )
+  const totalXp = summary.xp_earned + achievementXp
 
   return (
     <div className="mx-auto flex min-h-screen max-w-xl flex-col items-center justify-center gap-6 px-4 py-10">
@@ -53,10 +58,10 @@ export function QuizSummaryPage() {
               animate={{ scale: 1 }}
               transition={{ type: 'spring', stiffness: 260, damping: 14, delay: 0.3 }}
               className={`text-2xl font-extrabold ${
-                summary.xp_earned >= 0 ? 'text-grain-600' : 'text-red-600'
+                totalXp >= 0 ? 'text-grain-600' : 'text-red-600'
               }`}
             >
-              {summary.xp_earned >= 0 ? `+${summary.xp_earned}` : summary.xp_earned}
+              {totalXp >= 0 ? `+${totalXp}` : totalXp}
             </motion.p>
             <p className="text-xs font-bold uppercase text-sand-500">XP</p>
           </Card>
