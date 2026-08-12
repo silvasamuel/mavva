@@ -90,7 +90,7 @@ export function DuelsPage() {
     refetchInterval: 30_000,
   })
 
-  const { data: friends } = useQuery({
+  const { data: friends, isLoading: friendsLoading } = useQuery({
     queryKey: ['friends'],
     queryFn: () => api.get<FriendsOverview>('/friends'),
   })
@@ -170,7 +170,11 @@ export function DuelsPage() {
 
         <div className="border-t border-sand-100 pt-4">
           <CardTitle>Desafiar um amigo</CardTitle>
-          {friends && friends.friends.length > 0 ? (
+          {friendsLoading ? (
+            <div className="flex justify-center py-8">
+              <Spinner className="h-6 w-6 text-leaf-500" />
+            </div>
+          ) : friends && friends.friends.length > 0 ? (
             <ul className="grid gap-2 sm:grid-cols-2">
               {friends.friends.map((friend) => (
                 <li
