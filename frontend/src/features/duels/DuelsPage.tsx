@@ -50,7 +50,7 @@ function DuelCard({ duel, onPlay }: { duel: Duel; onPlay: (duel: Duel) => void }
             </span>
           </div>
           <p className="mt-1 truncate font-extrabold text-ink">
-            {rival ? `vs @${rival.username}` : 'Aguardando um adversário…'}
+            {rival ? `@${rival.username}` : 'Aguardando um adversário…'}
           </p>
           {(duel.me.finished || duel.rival.finished) && (
             <p className="text-sm font-bold text-sand-600">
