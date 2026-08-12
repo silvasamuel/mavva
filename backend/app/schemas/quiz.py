@@ -115,6 +115,7 @@ class UnlockedAchievement(BaseModel):
     name: str
     description: str
     icon: str
+    xp_reward: int
 
 
 class QuizCompleteResponse(BaseModel):

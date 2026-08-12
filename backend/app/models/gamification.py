@@ -58,6 +58,7 @@ class Achievement(Base):
     description: Mapped[str] = mapped_column(Text)
     icon: Mapped[str] = mapped_column(String(16))
     criteria: Mapped[dict[str, Any]] = mapped_column(JSONB)
+    xp_reward: Mapped[int] = mapped_column(default=0)
 
 
 class UserAchievement(Base):

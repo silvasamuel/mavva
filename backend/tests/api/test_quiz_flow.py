@@ -6,7 +6,14 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.models import ReviewItem
+from app.seeds.achievements import xp_reward_for
 from tests.factories import make_category, make_mc_question, make_open_question
+
+
+def _badge_xp(client: TestClient) -> int:
+    return sum(
+        a["xp_reward"] for a in client.get("/api/v1/achievements").json() if a["unlocked_at"]
+    )
 
 
 def _user_today() -> date:
@@ -82,9 +89,11 @@ class TestQuizFlow:
         assert summary["streak"]["extended_today"] is True
         codes = {a["code"] for a in summary["unlocked_achievements"]}
         assert "perfect_1" in codes
+        perfect = next(a for a in summary["unlocked_achievements"] if a["code"] == "perfect_1")
+        assert perfect["xp_reward"] == xp_reward_for("perfect_1")
 
         dashboard = auth_client.get("/api/v1/dashboard").json()
-        assert dashboard["stats"]["total_xp"] == 75
+        assert dashboard["stats"]["total_xp"] == 75 + _badge_xp(auth_client)
         assert dashboard["stats"]["current_streak"] == 1
         assert dashboard["stats"]["questions_answered"] == 3
 
@@ -198,9 +207,9 @@ class TestXpPenalty:
         summary = auth_client.post(f"/api/v1/quizzes/{quiz['id']}/complete").json()
         # -10 (wrong medium) + 5 (completion) = -5 for the session...
         assert summary["xp_earned"] == -5
-        # ...but the lifetime total never goes below zero.
+        # ...but the lifetime total never goes below zero (badge XP can still land on top).
         dashboard = auth_client.get("/api/v1/dashboard").json()
-        assert dashboard["stats"]["total_xp"] == 0
+        assert dashboard["stats"]["total_xp"] == _badge_xp(auth_client)
 
 
 class TestAbandon:
@@ -345,6 +354,8 @@ class TestAchievementsOrder:
         assert unlocked_flags[0] is True
         # No unlocked achievement appears after a locked one.
         assert unlocked_flags == sorted(unlocked_flags, reverse=True)
+        perfect = next(a for a in achievements if a["code"] == "perfect_1")
+        assert perfect["xp_reward"] == xp_reward_for("perfect_1")
 
 
 class TestSmartQueue:

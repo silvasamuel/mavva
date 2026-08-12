@@ -9,6 +9,11 @@ from app.services import duel_service
 from tests.factories import make_category, make_mc_question, make_open_question
 
 
+def _badge_xp(client: TestClient, headers: dict[str, str] | None = None) -> int:
+    response = client.get("/api/v1/achievements", headers=headers or {})
+    return sum(a["xp_reward"] for a in response.json() if a["unlocked_at"])
+
+
 def _register(client: TestClient, email: str, name: str = "Jogador") -> dict:
     response = client.post(
         "/api/v1/auth/register",
@@ -530,8 +535,11 @@ class TestDuelXpComesFromTheResult:
         _seed_questions(db)
         duel = auth_client.post("/api/v1/duels", json={}).json()
         helper._answer_all(auth_client, None, duel["my_session_id"], db, correct=True)
-        # Perfect round, but the rival has not played: nothing is settled yet.
-        assert auth_client.get("/api/v1/dashboard").json()["stats"]["total_xp"] == 0
+        # Perfect round, but the rival has not played: the duel stake is not settled yet.
+        # Session bonuses still do not apply; only badges earned by the round itself.
+        assert auth_client.get("/api/v1/dashboard").json()["stats"]["total_xp"] == _badge_xp(
+            auth_client
+        )
 
     def test_only_the_outcome_moves_xp(
         self, auth_client: TestClient, client: TestClient, db: Session
@@ -544,12 +552,14 @@ class TestDuelXpComesFromTheResult:
         helper._answer_all(auth_client, None, duel["my_session_id"], db, correct=True)
         helper._answer_all(client, other_headers, rival_duel["my_session_id"], db, correct=False)
 
-        # Winner: exactly the stake, not 10 correct answers' worth of XP.
-        assert auth_client.get("/api/v1/dashboard").json()["stats"]["total_xp"] == 50
-        # Loser answered everything wrong but only pays the duel stake (floored at 0).
-        assert (
-            client.get("/api/v1/dashboard", headers=other_headers).json()["stats"]["total_xp"] == 0
+        # Winner: the stake, plus badges this duel unlocked — not 10 answers' worth of XP.
+        assert auth_client.get("/api/v1/dashboard").json()["stats"]["total_xp"] == (
+            50 + _badge_xp(auth_client)
         )
+        # Loser pays the stake on top of any badges from the round (floored at zero).
+        assert client.get("/api/v1/dashboard", headers=other_headers).json()["stats"][
+            "total_xp"
+        ] == max(0, _badge_xp(client, other_headers) + duel_service.DUEL_XP["loss"])
 
     def test_stake_counts_toward_the_daily_goal(
         self, auth_client: TestClient, client: TestClient, db: Session
@@ -562,15 +572,19 @@ class TestDuelXpComesFromTheResult:
         helper._answer_all(auth_client, None, duel["my_session_id"], db, correct=True)
         helper._answer_all(client, other_headers, rival_duel["my_session_id"], db, correct=False)
 
-        assert auth_client.get("/api/v1/dashboard").json()["daily_goal"]["earned_today"] == 50
+        assert auth_client.get("/api/v1/dashboard").json()["daily_goal"]["earned_today"] == (
+            50 + _badge_xp(auth_client)
+        )
 
     def test_practice_sessions_still_pay_per_answer(self, auth_client: TestClient, db: Session):
         helper = TestDuelResolution()
         _seed_questions(db)
         quiz = auth_client.post("/api/v1/quizzes", json={"question_count": 3}).json()
         helper._answer_all(auth_client, None, quiz["id"], db, correct=True)
-        # 3 medium answers (20) + completion (5) + perfect (10)
-        assert auth_client.get("/api/v1/dashboard").json()["stats"]["total_xp"] == 75
+        # 3 medium answers (20) + completion (5) + perfect (10) + badges
+        assert auth_client.get("/api/v1/dashboard").json()["stats"]["total_xp"] == (
+            75 + _badge_xp(auth_client)
+        )
 
 
 class TestDuelAchievements:

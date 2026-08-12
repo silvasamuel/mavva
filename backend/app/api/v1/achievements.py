@@ -33,6 +33,7 @@ def list_achievements(user: CurrentUser, db: DbDep) -> list[AchievementOut]:
                 name=achievement.name,
                 description=achievement.description,
                 icon=achievement.icon,
+                xp_reward=achievement.xp_reward,
                 unlocked_at=unlocked_at.isoformat() if unlocked_at else None,
                 progress_current=min(current_value(db, user, stats, achievement.criteria), target),
                 progress_target=target,

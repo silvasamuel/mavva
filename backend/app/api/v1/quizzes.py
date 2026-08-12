@@ -206,7 +206,13 @@ def complete_quiz(session_id: uuid.UUID, user: CurrentUser, db: DbDep) -> QuizCo
             achieved=result.daily_goal_earned >= result.daily_goal_target,
         ),
         unlocked_achievements=[
-            UnlockedAchievement(code=a.code, name=a.name, description=a.description, icon=a.icon)
+            UnlockedAchievement(
+                code=a.code,
+                name=a.name,
+                description=a.description,
+                icon=a.icon,
+                xp_reward=a.xp_reward,
+            )
             for a in result.unlocked_achievements
         ],
     )

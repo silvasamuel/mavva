@@ -1,4 +1,5 @@
 import uuid
+from datetime import date
 from typing import Any
 
 from sqlalchemy import case, distinct, func, select
@@ -15,6 +16,7 @@ from app.models import (
     UserAchievement,
     UserStats,
 )
+from app.services.gamification import level_from_total_xp, today_for_user, upsert_daily_activity
 
 
 def _distinct_categories_answered(db: Session, user_id: uuid.UUID) -> int:
@@ -79,8 +81,22 @@ def current_value(db: Session, user: User, stats: UserStats, criteria: dict[str,
             return 0
 
 
+def _grant_unlock_xp(db: Session, user: User, stats: UserStats, xp: int, today: date) -> None:
+    if xp <= 0:
+        return
+    stats.total_xp = max(0, stats.total_xp + xp)
+    stats.level, _, _ = level_from_total_xp(stats.total_xp)
+    upsert_daily_activity(
+        db, user.id, today, xp=xp, questions=0, correct=0, time_seconds=0
+    )
+
+
 def evaluate_achievements(db: Session, user: User, stats: UserStats) -> list[Achievement]:
-    """Unlocks anything newly earned; returns the fresh unlocks."""
+    """Unlocks anything newly earned, pays its XP, and returns the fresh unlocks.
+
+    XP from a badge can itself cross a total_xp / level threshold, so we loop
+    until a pass unlocks nothing new.
+    """
     unlocked_ids = set(
         db.scalars(select(UserAchievement.achievement_id).where(UserAchievement.user_id == user.id))
     )
@@ -88,14 +104,24 @@ def evaluate_achievements(db: Session, user: User, stats: UserStats) -> list[Ach
 
     total_categories = db.scalar(select(func.count()).select_from(Category)) or 0
     fresh: list[Achievement] = []
-    for achievement in all_achievements:
-        if achievement.id in unlocked_ids:
-            continue
-        criteria = achievement.criteria
-        target = criteria.get("value", 0)
-        if criteria.get("type") == "categories_covered":
-            target = total_categories
-        if current_value(db, user, stats, criteria) >= target:
-            db.add(UserAchievement(user_id=user.id, achievement_id=achievement.id))
-            fresh.append(achievement)
+    today = today_for_user(user)
+
+    pending = True
+    safety = len(all_achievements) + 1
+    while pending and safety > 0:
+        pending = False
+        safety -= 1
+        for achievement in all_achievements:
+            if achievement.id in unlocked_ids:
+                continue
+            criteria = achievement.criteria
+            target = criteria.get("value", 0)
+            if criteria.get("type") == "categories_covered":
+                target = total_categories
+            if target > 0 and current_value(db, user, stats, criteria) >= target:
+                db.add(UserAchievement(user_id=user.id, achievement_id=achievement.id))
+                unlocked_ids.add(achievement.id)
+                fresh.append(achievement)
+                _grant_unlock_xp(db, user, stats, achievement.xp_reward, today)
+                pending = True
     return fresh

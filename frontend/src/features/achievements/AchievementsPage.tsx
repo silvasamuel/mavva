@@ -45,7 +45,12 @@ export function AchievementsPage() {
                   {achievement.icon}
                 </span>
                 <div className="min-w-0 flex-1">
-                  <p className="font-extrabold">{achievement.name}</p>
+                  <div className="flex items-start justify-between gap-2">
+                    <p className="font-extrabold">{achievement.name}</p>
+                    <span className="shrink-0 rounded-full bg-grain-100 px-2 py-0.5 text-[10px] font-extrabold text-grain-700">
+                      +{achievement.xp_reward} XP
+                    </span>
+                  </div>
                   <p className="text-xs font-semibold text-sand-500">{achievement.description}</p>
                   {!unlocked && achievement.progress_target != null && (
                     <div className="mt-2 flex items-center gap-2">

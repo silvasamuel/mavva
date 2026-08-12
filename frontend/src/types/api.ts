@@ -177,6 +177,7 @@ export interface Achievement {
   name: string
   description: string
   icon: string
+  xp_reward: number
   unlocked_at?: string | null
   progress_current?: number
   progress_target?: number

@@ -276,8 +276,6 @@ def complete_session(db: Session, user: User, session_id: uuid.UUID) -> Complete
     stats.total_time_seconds += session.duration_seconds
     if is_perfect:
         stats.perfect_sessions += 1
-    level, xp_into_level, xp_for_next = level_from_total_xp(stats.total_xp)
-    stats.level = level
 
     today = today_for_user(user)
     streak = register_streak_activity(stats, today)
@@ -291,7 +289,10 @@ def complete_session(db: Session, user: User, session_id: uuid.UUID) -> Complete
         time_seconds=session.duration_seconds,
     )
 
+    # Badge XP is applied here and can itself cause a level-up.
     unlocked = achievement_service.evaluate_achievements(db, user, stats)
+    level, xp_into_level, xp_for_next = level_from_total_xp(stats.total_xp)
+    stats.level = level
     db.flush()
 
     return CompleteResult(

@@ -17,6 +17,7 @@ class AchievementOut(BaseModel):
     name: str
     description: str
     icon: str
+    xp_reward: int
     unlocked_at: str | None
     progress_current: int
     progress_target: int

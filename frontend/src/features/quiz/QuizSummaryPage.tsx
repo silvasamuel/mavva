@@ -127,6 +127,11 @@ export function QuizSummaryPage() {
                 </p>
                 <p className="font-extrabold">{achievement.name}</p>
                 <p className="text-xs font-semibold text-sand-600">{achievement.description}</p>
+                {achievement.xp_reward > 0 && (
+                  <p className="mt-1 text-xs font-extrabold text-grain-700">
+                    +{achievement.xp_reward} XP
+                  </p>
+                )}
               </div>
             </Card>
           </motion.div>
