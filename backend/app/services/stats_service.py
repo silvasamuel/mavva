@@ -1,9 +1,10 @@
 """Dashboard aggregation — one endpoint, one round trip for the whole home screen."""
 
+import uuid
 from datetime import timedelta
 from typing import Any
 
-from sqlalchemy import case, func, select
+from sqlalchemy import case, func, or_, select
 from sqlalchemy.orm import Session
 
 from app.models import (
@@ -17,15 +18,16 @@ from app.models import (
     User,
     UserStats,
 )
-from app.models.enums import DuelStatus, FriendshipStatus
+from app.models.enums import DuelStatus, FriendshipStatus, QuizMode
 from app.services import srs
+from app.services.duel_service import DUEL_XP
 from app.services.gamification import (
     effective_streak,
     level_from_total_xp,
     rank_payload,
     today_for_user,
 )
-from app.services.quiz_service import recent_sessions, session_filters
+from app.services.quiz_service import list_xp, recent_sessions, session_filters
 
 # Every category the user has actually answered counts as a candidate — with a
 # 494-question bank across 23 categories, a higher bar left the recommendation
@@ -154,6 +156,37 @@ def _pending_friend_requests(db: Session, user: User) -> int:
     )
 
 
+def _duel_stakes_for(db: Session, user: User, sessions: list[QuizSession]) -> dict[uuid.UUID, int]:
+    """Map this user's duel sessions to the settled stake (win/draw/loss)."""
+    ids = [session.id for session in sessions if session.mode == QuizMode.DUEL]
+    if not ids:
+        return {}
+    duels = db.scalars(
+        select(Duel).where(
+            or_(Duel.challenger_session_id.in_(ids), Duel.opponent_session_id.in_(ids))
+        )
+    ).all()
+    settled = {DuelStatus.FINISHED, DuelStatus.CANCELLED}
+    stakes: dict[uuid.UUID, int] = {}
+    for duel in duels:
+        if duel.status not in settled:
+            continue
+        if duel.is_draw:
+            xp = DUEL_XP["draw"]
+        elif duel.winner_id == user.id:
+            xp = DUEL_XP["win"]
+        else:
+            xp = DUEL_XP["loss"]
+        mine = (
+            duel.challenger_session_id
+            if duel.challenger_id == user.id
+            else duel.opponent_session_id
+        )
+        if mine is not None:
+            stakes[mine] = xp
+    return stakes
+
+
 def get_dashboard(db: Session, user: User) -> dict[str, Any]:
     stats = db.get(UserStats, user.id)
     assert stats is not None
@@ -171,6 +204,7 @@ def get_dashboard(db: Session, user: User) -> dict[str, Any]:
     categories = category_performance(db, user)
     reviews_due = srs.review_summary(db, user.id, today)["due_today"]
     sessions = recent_sessions(db, user, limit=5)
+    duel_stakes = _duel_stakes_for(db, user, sessions)
     duels_awaiting = _duels_awaiting(db, user)
 
     accuracy = (
@@ -213,7 +247,7 @@ def get_dashboard(db: Session, user: User) -> dict[str, Any]:
                 "completed_at": s.completed_at.isoformat() if s.completed_at else None,
                 "correct_count": s.correct_count,
                 "question_count": s.question_count,
-                "xp_earned": s.xp_earned,
+                "xp_earned": duel_stakes.get(s.id, list_xp(s)),
                 "duration_seconds": s.duration_seconds,
                 "filters": session_filters(s),
             }

@@ -385,10 +385,34 @@ def recent_sessions(db: Session, user: User, limit: int = 5) -> list[QuizSession
         db.scalars(
             select(QuizSession)
             .where(QuizSession.user_id == user.id, QuizSession.completed_at.is_not(None))
+            .options(selectinload(QuizSession.answers).selectinload(QuizAnswer.question))
             .order_by(QuizSession.completed_at.desc())
             .limit(limit)
         )
     )
+
+
+def list_xp(session: QuizSession) -> int:
+    """XP for the recents list: show gains unless losses outweigh them.
+
+    Net zero (gains == losses) still shows the gained amount, so the pill never
+    reads as a plus glued onto a minus.
+    """
+    if session.mode == QuizMode.DUEL:
+        return session.xp_earned
+    gains = 0
+    losses = 0
+    for answer in session.answers:
+        delta = xp_for_answer(answer.question.difficulty, answer.is_correct)
+        if delta >= 0:
+            gains += delta
+        else:
+            losses += -delta
+    if len(session.answers) == session.question_count:
+        gains += SESSION_COMPLETE_BONUS
+        if session.correct_count == session.question_count:
+            gains += PERFECT_SESSION_BONUS
+    return gains if gains >= losses else gains - losses
 
 
 def session_filters(session: QuizSession) -> dict[str, Any]:

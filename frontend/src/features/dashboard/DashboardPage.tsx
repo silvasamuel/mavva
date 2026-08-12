@@ -30,7 +30,11 @@ export function DashboardPage() {
   }
 
   const { stats, daily_goal, categories, recent_sessions, recommendations, reviews_due } = data
-  const practicedCategories = categories.filter((c) => c.answered > 0)
+  const practicedCategories = categories
+    .filter((c) => c.answered > 0)
+    .sort(
+      (a, b) => (b.accuracy ?? 0) - (a.accuracy ?? 0) || b.answered - a.answered
+    )
   const hour = new Date().getHours()
   const greeting = hour < 12 ? 'Bom dia' : hour < 18 ? 'Boa tarde' : 'Boa noite'
 
@@ -257,26 +261,41 @@ export function DashboardPage() {
             />
           ) : (
             <ul className="divide-y divide-sand-100">
-              {recent_sessions.map((session) => (
+              {recent_sessions.map((session) => {
+                const pendingDuel = session.mode === 'duel' && session.xp_earned === 0
+                const xpClass = pendingDuel
+                  ? 'bg-sand-100 text-sand-600'
+                  : session.xp_earned < 0
+                    ? 'bg-red-50 text-red-600'
+                    : 'bg-grain-100 text-grain-700'
+                return (
                 <li key={session.id} className="flex items-center justify-between py-3 text-sm">
                   <div className="flex items-center gap-3">
                     <span className="text-lg" aria-hidden>
-                      {session.mode === 'review' ? '🔁' : '📖'}
+                      {session.mode === 'duel' ? '⚔️' : session.mode === 'review' ? '🔁' : '📖'}
                     </span>
                     <div>
                       <p className="font-extrabold">
                         {session.correct_count}/{session.question_count} corretas
                       </p>
                       <p className="text-xs font-semibold text-sand-500">
+                        {session.mode === 'duel' ? 'Duelo · ' : ''}
                         {session.completed_at ? formatRelativeDate(session.completed_at) : ''}
                       </p>
                     </div>
                   </div>
-                  <span className="rounded-full bg-grain-100 px-3 py-1 text-xs font-extrabold text-grain-700">
-                    +{session.xp_earned} XP
+                  <span className={`rounded-full px-3 py-1 text-xs font-extrabold ${xpClass}`}>
+                    {pendingDuel
+                      ? 'aguardando'
+                      : session.xp_earned > 0
+                        ? `+${session.xp_earned} XP`
+                        : session.xp_earned < 0
+                          ? `${session.xp_earned} XP`
+                          : '0 XP'}
                   </span>
                 </li>
-              ))}
+                )
+              })}
             </ul>
           )}
         </Card>
