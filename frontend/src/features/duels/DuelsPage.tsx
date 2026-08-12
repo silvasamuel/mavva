@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/Button'
 import { Card, CardTitle } from '@/components/ui/Card'
 import { Spinner } from '@/components/ui/Spinner'
 import { EmptyState } from '@/components/ui/EmptyState'
+import { RankBadge } from '@/components/RankBadge'
 import { formatPercent, formatRelativeDate } from '@/lib/format'
 
 const CLOSED: Duel['status'][] = ['finished', 'expired', 'cancelled']
@@ -175,16 +176,11 @@ export function DuelsPage() {
                   key={friend.id}
                   className="flex items-center gap-3 rounded-2xl bg-sand-25 p-3 ring-1 ring-sand-100"
                 >
-                  <span
-                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-leaf-100 text-sm font-extrabold uppercase text-leaf-700"
-                    aria-hidden
-                  >
-                    {friend.username.slice(0, 2)}
-                  </span>
+                  <RankBadge code={friend.rank.code} size="sm" />
                   <div className="min-w-0 flex-1">
                     <p className="truncate font-extrabold text-ink">{friend.name}</p>
                     <p className="truncate text-xs font-semibold text-sand-500">
-                      @{friend.username} · nível {friend.level} · {friend.duel_wins}V{' '}
+                      @{friend.username} · {friend.rank.name} · {friend.duel_wins}V{' '}
                       {friend.duel_losses}D
                     </p>
                   </div>
