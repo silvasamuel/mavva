@@ -75,7 +75,7 @@ marcado como tal. Divergências entre interpretações cristãs são indicadas n
 
 **Duelos 1×1 (assíncrono)**
 - Desafio a um amigo ou adversário aleatório (fila de matchmaking)
-- Mesmas 10 perguntas congeladas para ambos, 30s por pergunta, **somente de
+- Mesmas 10 perguntas congeladas para ambos, 20s por pergunta, **somente de
   múltipla escolha** (com o relógio correndo, digitar penalizaria quem sabe a
   resposta mas digita devagar), todas as categorias e dificuldades; cada um
   joga quando puder, prazo de 48h

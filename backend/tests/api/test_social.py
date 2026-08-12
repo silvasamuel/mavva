@@ -167,7 +167,7 @@ class TestDuelCreation:
         duel = created.json()
         assert duel["status"] == "active"
         assert duel["rival"]["user"]["username"] == "amigo"
-        assert duel["timer_seconds"] == 30
+        assert duel["timer_seconds"] == 20
         assert duel["question_count"] == 10
 
         mine = auth_client.get(f"/api/v1/quizzes/{duel['my_session_id']}").json()
@@ -362,8 +362,61 @@ class TestDuelList:
 
     def test_constants_match_the_mvp_spec(self):
         assert duel_service.QUESTION_COUNT == 10
-        assert duel_service.TIMER_SECONDS == 30
+        assert duel_service.TIMER_SECONDS == 20
         assert duel_service.DUEL_XP == {"win": 50, "draw": 10, "loss": -25}
+
+    def test_timer_reaches_the_play_screen(self, auth_client: TestClient, db: Session):
+        category = make_category(db)
+        for _ in range(10):
+            make_mc_question(db, category)
+        duel = auth_client.post("/api/v1/duels", json={}).json()
+        quiz = auth_client.get(f"/api/v1/quizzes/{duel['my_session_id']}").json()
+        assert quiz["timer_seconds"] == 20
+
+
+class TestDuelAchievements:
+    def test_first_win_unlocks_on_the_same_duel(
+        self, auth_client: TestClient, client: TestClient, db: Session
+    ):
+        helper = TestDuelResolution()
+        duel, other = helper._friends_duel(auth_client, client, db)
+        other_headers = _auth(other["access_token"])
+        rival_duel = client.get(f"/api/v1/duels/{duel['id']}", headers=other_headers).json()
+
+        helper._answer_all(auth_client, None, duel["my_session_id"], db, correct=True)
+        helper._answer_all(client, other_headers, rival_duel["my_session_id"], db, correct=False)
+
+        unlocked = {
+            a["code"] for a in auth_client.get("/api/v1/achievements").json() if a["unlocked_at"]
+        }
+        # Duel results are applied after complete_session — these must not wait
+        # for the next study session to unlock.
+        assert "duel_win_1" in unlocked
+        assert "duel_flawless_1" in unlocked  # won 10/10
+
+    def test_loser_gets_no_duel_badges(
+        self, auth_client: TestClient, client: TestClient, db: Session
+    ):
+        helper = TestDuelResolution()
+        duel, other = helper._friends_duel(auth_client, client, db)
+        other_headers = _auth(other["access_token"])
+        rival_duel = client.get(f"/api/v1/duels/{duel['id']}", headers=other_headers).json()
+
+        helper._answer_all(auth_client, None, duel["my_session_id"], db, correct=False)
+        helper._answer_all(client, other_headers, rival_duel["my_session_id"], db, correct=True)
+
+        unlocked = {
+            a["code"] for a in auth_client.get("/api/v1/achievements").json() if a["unlocked_at"]
+        }
+        assert "duel_win_1" not in unlocked
+        assert "duel_flawless_1" not in unlocked
+
+    def test_duel_achievements_report_progress(self, auth_client: TestClient):
+        by_code = {a["code"]: a for a in auth_client.get("/api/v1/achievements").json()}
+        assert by_code["duel_win_10"]["progress_target"] == 10
+        assert by_code["duel_win_10"]["progress_current"] == 0
+        assert by_code["duel_streak_3"]["progress_target"] == 3
+        assert by_code["duel_played_25"]["progress_target"] == 25
 
 
 class TestPendingRequestBadge:

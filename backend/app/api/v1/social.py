@@ -161,8 +161,11 @@ def _duel_out(db: DbDep, duel: Duel, user: User) -> DuelOut:
         my_session_id=duel_service.session_id_for(duel, user),
         my_result=my_result,  # type: ignore[arg-type]
         xp_change=xp_change,
-        question_count=duel_service.QUESTION_COUNT,
-        timer_seconds=duel_service.TIMER_SECONDS,
+        question_count=duel.challenger_session.question_count,
+        # Read from the session: duels created before a rule change keep their own.
+        timer_seconds=(duel.challenger_session.filters or {}).get(
+            "timer_seconds", duel_service.TIMER_SECONDS
+        ),
     )
 
 

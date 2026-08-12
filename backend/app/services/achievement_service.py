@@ -1,12 +1,13 @@
 import uuid
 from typing import Any
 
-from sqlalchemy import distinct, func, select
+from sqlalchemy import case, distinct, func, select
 from sqlalchemy.orm import Session
 
 from app.models import (
     Achievement,
     Category,
+    Duel,
     Question,
     QuizAnswer,
     QuizSession,
@@ -29,11 +30,39 @@ def _distinct_categories_answered(db: Session, user_id: uuid.UUID) -> int:
     )
 
 
+def _flawless_duel_wins(db: Session, user_id: uuid.UUID) -> int:
+    """Duels won with a perfect round (every question right)."""
+    my_session = case(
+        (Duel.challenger_id == user_id, Duel.challenger_session_id),
+        else_=Duel.opponent_session_id,
+    )
+    return (
+        db.scalar(
+            select(func.count())
+            .select_from(Duel)
+            .join(QuizSession, QuizSession.id == my_session)
+            .where(
+                Duel.winner_id == user_id,
+                QuizSession.correct_count == QuizSession.question_count,
+            )
+        )
+        or 0
+    )
+
+
 def current_value(db: Session, user: User, stats: UserStats, criteria: dict[str, Any]) -> int:
     kind = criteria.get("type")
     match kind:
         case "streak":
             return stats.current_streak
+        case "duel_wins":
+            return stats.duel_wins
+        case "duel_streak":
+            return stats.best_duel_streak
+        case "duels_played":
+            return stats.duel_wins + stats.duel_losses + stats.duel_draws
+        case "duel_flawless_wins":
+            return _flawless_duel_wins(db, user.id)
         case "total_correct":
             return stats.correct_answers
         case "questions_answered":

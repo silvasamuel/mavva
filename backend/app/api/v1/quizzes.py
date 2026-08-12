@@ -22,7 +22,7 @@ from app.schemas.quiz import (
     StreakInfo,
     UnlockedAchievement,
 )
-from app.services import duel_service, quiz_service
+from app.services import duel_service, option_shuffle, quiz_service
 from app.services.quiz_service import QuizError
 
 router = APIRouter(prefix="/quizzes", tags=["quizzes"])
@@ -62,7 +62,12 @@ def _session_out(session: QuizSession, duel_id: uuid.UUID | None = None) -> Quiz
                 difficulty=sq.question.difficulty,
                 category_name=sq.question.category.name,
                 category_icon=sq.question.category.icon,
-                options=[QuestionOptionOut(id=o.id, text=o.text) for o in sq.question.options]
+                options=[
+                    QuestionOptionOut(id=o.id, text=o.text)
+                    for o in option_shuffle.shuffled_for(
+                        sq.question.options, session.id, sq.question.id
+                    )
+                ]
                 if sq.question.type == QuestionType.MULTIPLE_CHOICE
                 else [],
                 answered=sq.question.id in answered_ids,

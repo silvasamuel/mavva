@@ -72,7 +72,9 @@ Erros seguem o formato `{"detail": "mensagem"}` (padrão FastAPI) com status HTT
 
 **Regra anti-fraude:** o gabarito nunca trafega antes da resposta; a correção acontece
 exclusivamente no backend, que também valida que `question_id` pertence à sessão e
-ainda não foi respondida (UNIQUE no banco).
+ainda não foi respondida (UNIQUE no banco). As alternativas são **embaralhadas no
+servidor** por sessão (ordem estável entre recarregamentos), então a posição da
+resposta correta não pode ser inferida chamando a API diretamente.
 
 ## Dashboard
 
@@ -121,7 +123,7 @@ ainda não foi respondida (UNIQUE no banco).
 ## Duelos
 
 Assíncronos: os dois jogadores respondem **as mesmas 10 perguntas congeladas**
-(30s cada, **somente múltipla escolha**, todas as categorias e dificuldades).
+(20s cada, **somente múltipla escolha**, todas as categorias e dificuldades).
 Cada lado joga uma `QuizSession`
 normal em modo `duel` — por isso as respostas contam para acurácia, desempenho
 por categoria, revisão espaçada e streak como qualquer estudo.

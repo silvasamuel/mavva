@@ -14,11 +14,11 @@ from sqlalchemy.orm import Session, selectinload
 
 from app.models import Duel, Question, QuizAnswer, QuizSession, QuizSessionQuestion, User, UserStats
 from app.models.enums import DuelMode, DuelStatus, QuestionType, QuizMode
-from app.services import friendship_service
+from app.services import achievement_service, friendship_service
 from app.services.gamification import level_from_total_xp
 
 QUESTION_COUNT = 10
-TIMER_SECONDS = 30
+TIMER_SECONDS = 20
 EXPIRES_IN_HOURS = 48
 
 DUEL_XP = {"win": 50, "draw": 10, "loss": -25}
@@ -238,7 +238,8 @@ def side_scores(db: Session, duel: Duel) -> tuple[SideScore, SideScore]:
 
 def _apply_result(db: Session, user_id: uuid.UUID, outcome: str) -> None:
     stats = db.get(UserStats, user_id)
-    if stats is None:
+    user = db.get(User, user_id)
+    if stats is None or user is None:
         return
     if outcome == "win":
         stats.duel_wins += 1
@@ -252,6 +253,10 @@ def _apply_result(db: Session, user_id: uuid.UUID, outcome: str) -> None:
     # Lifetime XP never drops below zero (same floor as practice sessions).
     stats.total_xp = max(0, stats.total_xp + DUEL_XP[outcome])
     stats.level, _, _ = level_from_total_xp(stats.total_xp)
+    db.flush()
+    # Duel results land after complete_session already evaluated achievements,
+    # so re-check here or duel badges would only unlock on the next session.
+    achievement_service.evaluate_achievements(db, user, stats)
 
 
 def resolve_if_due(db: Session, duel: Duel) -> Duel:

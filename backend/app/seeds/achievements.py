@@ -102,6 +102,63 @@ ACHIEVEMENTS: list[tuple[str, str, str, str, dict[str, Any]]] = [
         "Responda perguntas de todas as categorias",
         {"type": "categories_covered"},
     ),
+    # --- Duels ---
+    (
+        "duel_win_1",
+        "Pedra e funda",
+        "🪨",
+        "Vença o seu primeiro duelo",
+        {"type": "duel_wins", "value": 1},
+    ),
+    (
+        "duel_win_10",
+        "Valente de Davi",
+        "⚔️",
+        "Vença 10 duelos",
+        {"type": "duel_wins", "value": 10},
+    ),
+    (
+        "duel_win_50",
+        "Campeão de Israel",
+        "🛡️",
+        "Vença 50 duelos",
+        {"type": "duel_wins", "value": 50},
+    ),
+    (
+        "duel_streak_3",
+        "Cordão de três dobras",
+        "🧵",
+        "Vença 3 duelos seguidos",
+        {"type": "duel_streak", "value": 3},
+    ),
+    (
+        "duel_streak_10",
+        "Invicto",
+        "👑",
+        "Vença 10 duelos seguidos",
+        {"type": "duel_streak", "value": 10},
+    ),
+    (
+        "duel_played_25",
+        "Veterano da arena",
+        "🏟️",
+        "Dispute 25 duelos",
+        {"type": "duels_played", "value": 25},
+    ),
+    (
+        "duel_flawless_1",
+        "Vitória impecável",
+        "💯",
+        "Vença um duelo acertando todas as perguntas",
+        {"type": "duel_flawless_wins", "value": 1},
+    ),
+    (
+        "duel_flawless_5",
+        "Domínio absoluto",
+        "🌟",
+        "Vença 5 duelos sem errar nenhuma",
+        {"type": "duel_flawless_wins", "value": 5},
+    ),
 ]
 
 
