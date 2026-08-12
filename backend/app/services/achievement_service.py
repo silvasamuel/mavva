@@ -86,9 +86,7 @@ def _grant_unlock_xp(db: Session, user: User, stats: UserStats, xp: int, today: 
         return
     stats.total_xp = max(0, stats.total_xp + xp)
     stats.level, _, _ = level_from_total_xp(stats.total_xp)
-    upsert_daily_activity(
-        db, user.id, today, xp=xp, questions=0, correct=0, time_seconds=0
-    )
+    upsert_daily_activity(db, user.id, today, xp=xp, questions=0, correct=0, time_seconds=0)
 
 
 def evaluate_achievements(db: Session, user: User, stats: UserStats) -> list[Achievement]:
