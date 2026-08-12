@@ -275,7 +275,7 @@ def _apply_result(db: Session, user_id: uuid.UUID, outcome: str) -> None:
 
 def resolve_if_due(db: Session, duel: Duel) -> Duel:
     """Finishes the duel when both rounds are done, or when the deadline passes."""
-    if duel.status in (DuelStatus.FINISHED, DuelStatus.EXPIRED):
+    if duel.status in (DuelStatus.FINISHED, DuelStatus.EXPIRED, DuelStatus.CANCELLED):
         return duel
 
     challenger, opponent = side_scores(db, duel)
@@ -331,6 +331,32 @@ def resolve_if_due(db: Session, duel: Duel) -> Duel:
         loser_id = duel.opponent_id if winner_id == duel.challenger_id else duel.challenger_id
         _apply_result(db, winner_id, "win")  # type: ignore[arg-type]
         _apply_result(db, loser_id, "loss")
+    db.flush()
+    return duel
+
+
+def cancel_for_session(db: Session, session_id: uuid.UUID, quitter_id: uuid.UUID) -> Duel | None:
+    """Walking out of a duel round ends the duel: forfeit for whoever left.
+
+    An open queue entry stops looking for a rival, and the quitter still pays
+    the loss stake — leaving is never cheaper than playing it out.
+    """
+    duel = duel_for_session(db, session_id)
+    if duel is None:
+        return None
+    duel = get_duel(db, duel.id) or duel
+    if duel.status in (DuelStatus.FINISHED, DuelStatus.EXPIRED, DuelStatus.CANCELLED):
+        return duel
+
+    duel.status = DuelStatus.CANCELLED
+    duel.resolved_at = datetime.now(UTC)
+    duel.is_draw = False
+
+    rival_id = duel.opponent_id if quitter_id == duel.challenger_id else duel.challenger_id
+    duel.winner_id = rival_id  # None when nobody had joined yet
+    _apply_result(db, quitter_id, "loss")
+    if rival_id is not None:
+        _apply_result(db, rival_id, "win")
     db.flush()
     return duel
 

@@ -1,17 +1,24 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { api, ApiError } from '@/lib/api'
-import type { Duel, DuelListResponse, FriendsOverview } from '@/types/api'
+import type { Duel, DuelListResponse, FriendsOverview, PublicUser } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Card, CardTitle } from '@/components/ui/Card'
 import { Spinner } from '@/components/ui/Spinner'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { formatPercent, formatRelativeDate } from '@/lib/format'
 
+const CLOSED: Duel['status'][] = ['finished', 'expired', 'cancelled']
+
 function statusLabel(duel: Duel): { text: string; tone: string } {
   if (duel.status === 'expired') return { text: 'Expirado', tone: 'bg-sand-100 text-sand-500' }
+  if (duel.status === 'cancelled') {
+    return duel.my_result === 'win'
+      ? { text: 'Vitória (desistência)', tone: 'bg-leaf-100 text-leaf-700' }
+      : { text: 'Você desistiu', tone: 'bg-red-50 text-red-600' }
+  }
   if (duel.status === 'finished') {
     if (duel.my_result === 'win') return { text: 'Vitória', tone: 'bg-leaf-100 text-leaf-700' }
     if (duel.my_result === 'loss') return { text: 'Derrota', tone: 'bg-red-50 text-red-600' }
@@ -25,7 +32,7 @@ function statusLabel(duel: Duel): { text: string; tone: string } {
 function DuelCard({ duel, onPlay }: { duel: Duel; onPlay: (duel: Duel) => void }) {
   const badge = statusLabel(duel)
   const rival = duel.rival.user
-  const myTurn = duel.status !== 'finished' && duel.status !== 'expired' && !duel.me.finished
+  const myTurn = !CLOSED.includes(duel.status) && !duel.me.finished
 
   return (
     <motion.li initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}>
@@ -71,6 +78,8 @@ export function DuelsPage() {
   const navigate = useNavigate()
   const queryClient = useQueryClient()
   const [error, setError] = useState('')
+  // Challenging costs XP if you walk out, so it never fires on a single click.
+  const [challenging, setChallenging] = useState<PublicUser | null>(null)
 
   const { data, isLoading } = useQuery({
     queryKey: ['duels'],
@@ -89,6 +98,7 @@ export function DuelsPage() {
       api.post<Duel>('/duels', { opponent_username: opponentUsername ?? null }),
     onSuccess: (duel) => {
       queryClient.invalidateQueries({ queryKey: ['duels'] })
+      setChallenging(null)
       if (duel.my_session_id) navigate(`/quiz/${duel.my_session_id}`)
     },
     onError: (err) =>
@@ -145,43 +155,58 @@ export function DuelsPage() {
       </div>
 
       {/* New duel */}
-      <Card className="space-y-3">
-        <CardTitle>Novo duelo</CardTitle>
-        <div className="flex flex-wrap gap-3">
+      <Card className="space-y-4">
+        <div>
+          <CardTitle>Adversário aleatório</CardTitle>
+          <p className="mb-3 -mt-2 text-xs font-semibold text-sand-500">
+            Entra na fila e enfrenta quem estiver procurando partida.
+          </p>
           <Button loading={createDuel.isPending} onClick={() => createDuel.mutate(undefined)}>
-            🎲 Adversário aleatório
+            🎲 Procurar partida
           </Button>
         </div>
 
-        {friends && friends.friends.length > 0 ? (
-          <div>
-            <p className="mb-2 text-xs font-extrabold uppercase tracking-wide text-sand-500">
-              Desafiar um amigo
-            </p>
-            <div className="flex flex-wrap gap-2">
+        <div className="border-t border-sand-100 pt-4">
+          <CardTitle>Desafiar um amigo</CardTitle>
+          {friends && friends.friends.length > 0 ? (
+            <ul className="grid gap-2 sm:grid-cols-2">
               {friends.friends.map((friend) => (
-                <button
+                <li
                   key={friend.id}
-                  onClick={() => createDuel.mutate(friend.username)}
-                  className="rounded-2xl bg-white px-4 py-2.5 text-sm font-extrabold text-sand-600 shadow-card transition-colors hover:bg-leaf-50 hover:text-leaf-700"
+                  className="flex items-center gap-3 rounded-2xl bg-sand-25 p-3 ring-1 ring-sand-100"
                 >
-                  @{friend.username}
-                </button>
+                  <span
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-leaf-100 text-sm font-extrabold uppercase text-leaf-700"
+                    aria-hidden
+                  >
+                    {friend.username.slice(0, 2)}
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <p className="truncate font-extrabold text-ink">{friend.name}</p>
+                    <p className="truncate text-xs font-semibold text-sand-500">
+                      @{friend.username} · nível {friend.level} · {friend.duel_wins}V{' '}
+                      {friend.duel_losses}D
+                    </p>
+                  </div>
+                  <Button variant="secondary" onClick={() => setChallenging(friend)}>
+                    Desafiar
+                  </Button>
+                </li>
               ))}
-            </div>
-          </div>
-        ) : (
-          <p className="text-sm font-semibold text-sand-500">
-            Adicione amigos na aba{' '}
-            <button
-              onClick={() => navigate('/friends')}
-              className="font-bold text-leaf-600 hover:underline"
-            >
-              Amigos
-            </button>{' '}
-            para desafiá-los diretamente.
-          </p>
-        )}
+            </ul>
+          ) : (
+            <p className="text-sm font-semibold text-sand-500">
+              Adicione amigos na aba{' '}
+              <button
+                onClick={() => navigate('/friends')}
+                className="font-bold text-leaf-600 hover:underline"
+              >
+                Amigos
+              </button>{' '}
+              para desafiá-los diretamente.
+            </p>
+          )}
+        </div>
 
         {error && (
           <p role="alert" className="rounded-2xl bg-red-50 px-4 py-3 text-sm font-bold text-red-700">
@@ -211,6 +236,59 @@ export function DuelsPage() {
           </ul>
         )}
       </div>
+
+      {/* Challenge confirmation */}
+      <AnimatePresence>
+        {challenging && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-30 flex items-center justify-center bg-ink/40 px-4"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Confirmar desafio"
+            onClick={() => setChallenging(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.92, y: 8 }}
+              animate={{ scale: 1, y: 0 }}
+              onClick={(e) => e.stopPropagation()}
+              className="w-full max-w-sm space-y-4 rounded-3xl bg-white p-6 text-center shadow-card"
+            >
+              <span className="text-4xl" aria-hidden>
+                ⚔️
+              </span>
+              <div>
+                <p className="text-lg font-extrabold">Desafiar {challenging.name}?</p>
+                <p className="text-sm font-semibold text-sand-500">@{challenging.username}</p>
+              </div>
+              <ul className="space-y-1 rounded-2xl bg-sand-25 p-3 text-left text-xs font-semibold text-sand-600">
+                <li>• 10 perguntas de múltipla escolha, 20s cada</li>
+                <li>• Os dois respondem as mesmas perguntas</li>
+                <li>
+                  • Vitória <strong className="text-leaf-700">+50 XP</strong> · empate{' '}
+                  <strong className="text-grain-700">+10</strong> · derrota{' '}
+                  <strong className="text-red-600">−25</strong>
+                </li>
+                <li>• Sair no meio cancela o duelo e conta como derrota</li>
+              </ul>
+              <div className="flex gap-3">
+                <Button variant="secondary" full onClick={() => setChallenging(null)}>
+                  Cancelar
+                </Button>
+                <Button
+                  full
+                  loading={createDuel.isPending}
+                  onClick={() => createDuel.mutate(challenging.username)}
+                >
+                  Desafiar
+                </Button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }

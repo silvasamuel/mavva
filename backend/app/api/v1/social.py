@@ -133,7 +133,8 @@ def _duel_out(db: DbDep, duel: Duel, user: User) -> DuelOut:
 
     my_result = None
     xp_change = None
-    if duel.status == DuelStatus.FINISHED:
+    # Cancelled duels are settled too: the quitter forfeits to the rival.
+    if duel.status in (DuelStatus.FINISHED, DuelStatus.CANCELLED):
         if duel.is_draw:
             my_result, xp_change = "draw", DUEL_XP["draw"]
         elif duel.winner_id == user.id:

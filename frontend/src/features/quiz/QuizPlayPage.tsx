@@ -106,6 +106,11 @@ export function QuizPlayPage() {
     onSettled: () => {
       queryClient.invalidateQueries({ queryKey: ['dashboard'] })
       queryClient.removeQueries({ queryKey: ['quiz', sessionId] })
+      if (session?.duel_id) {
+        queryClient.invalidateQueries({ queryKey: ['duels'] })
+        navigate(`/duels/${session.duel_id}`, { replace: true })
+        return
+      }
       navigate('/')
     },
   })
@@ -397,10 +402,18 @@ export function QuizPlayPage() {
               className="w-full max-w-sm space-y-4 rounded-3xl bg-white p-6 text-center shadow-card"
             >
               <span className="text-4xl" aria-hidden>
-                {wrongTotal > 0 ? '⚠️' : '🥺'}
+                {session?.duel_id ? '🏳️' : wrongTotal > 0 ? '⚠️' : '🥺'}
               </span>
-              <p className="font-extrabold">Sair sem terminar?</p>
-              {wrongTotal > 0 ? (
+              <p className="font-extrabold">
+                {session?.duel_id ? 'Desistir do duelo?' : 'Sair sem terminar?'}
+              </p>
+              {session?.duel_id ? (
+                <p className="text-sm font-semibold text-sand-600">
+                  Sair agora <strong>cancela o duelo</strong>: conta como{' '}
+                  <strong className="text-red-600">derrota (−25 XP)</strong> e a vitória vai para o
+                  seu adversário.
+                </p>
+              ) : wrongTotal > 0 ? (
                 <p className="text-sm font-semibold text-sand-600">
                   Você errou{' '}
                   <strong className="text-red-600">
@@ -429,7 +442,7 @@ export function QuizPlayPage() {
                   loading={abandonQuiz.isPending}
                   onClick={() => abandonQuiz.mutate()}
                 >
-                  Sair
+                  {session?.duel_id ? 'Desistir' : 'Sair'}
                 </Button>
               </div>
             </motion.div>

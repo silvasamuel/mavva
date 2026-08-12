@@ -14,6 +14,12 @@ const HEADLINE = {
   draw: { title: 'Empate! 🤝', tone: 'text-grain-700' },
 } as const
 
+const CANCELLED_HEADLINE = {
+  win: { title: 'Seu rival desistiu 🏳️', tone: 'text-leaf-700' },
+  loss: { title: 'Duelo cancelado 🏳️', tone: 'text-red-600' },
+  draw: { title: 'Duelo cancelado', tone: 'text-sand-600' },
+} as const
+
 export function DuelResultPage() {
   const { duelId } = useParams<{ duelId: string }>()
 
@@ -22,7 +28,7 @@ export function DuelResultPage() {
     queryFn: () => api.get<Duel>(`/duels/${duelId}`),
     // While the rival hasn't finished, keep checking for the outcome.
     refetchInterval: (query) =>
-      query.state.data?.status === 'finished' || query.state.data?.status === 'expired'
+      ['finished', 'expired', 'cancelled'].includes(query.state.data?.status ?? '')
         ? false
         : 15_000,
   })
@@ -35,8 +41,11 @@ export function DuelResultPage() {
     )
   }
 
-  const resolved = duel.status === 'finished'
-  const headline = resolved && duel.my_result ? HEADLINE[duel.my_result] : null
+  const cancelled = duel.status === 'cancelled'
+  const resolved = duel.status === 'finished' || cancelled
+  const headline = duel.my_result
+    ? (cancelled ? CANCELLED_HEADLINE : HEADLINE)[duel.my_result]
+    : null
   const rival = duel.rival.user
 
   return (

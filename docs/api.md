@@ -138,6 +138,10 @@ por categoria, revisão espaçada e streak como qualquer estudo.
 total; igual nos dois → empate. Prazo de 48h: quem jogou vence por W.O.; se
 ninguém jogou, expira sem mover XP.
 
+**Desistência:** `POST /quizzes/{id}/abandon` numa rodada de duelo muda o duelo
+para `cancelled`, conta derrota para quem saiu e vitória para o rival (se já
+houver um). Um duelo `open` cancelado sai da fila e não pareia mais.
+
 **Aposta:** +50 (vitória) · +10 (empate) · −25 (derrota). Em duelos as respostas
 **não pagam XP individual** — só o resultado move a pontuação (e conta para a meta
 diária). O XP total do usuário nunca fica negativo.

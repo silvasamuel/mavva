@@ -163,6 +163,8 @@ def abandon_quiz(session_id: uuid.UUID, user: CurrentUser, db: DbDep) -> QuizAba
         result = quiz_service.abandon_session(db, user, session_id)
     except QuizError as error:
         raise HTTPException(error.status_code, error.message) from error
+    # Walking out of a duel round forfeits the duel.
+    duel_service.cancel_for_session(db, session_id, user.id)
     db.commit()
     return QuizAbandonResponse(
         answered_count=result.answered_count,

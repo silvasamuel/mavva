@@ -81,6 +81,8 @@ marcado como tal. Divergências entre interpretações cristãs são indicadas n
   joga quando puder, prazo de 48h
 - Vence quem acertar mais (desempate por tempo total); W.O. para quem jogou
   quando o prazo estoura
+- **Desistir cancela o duelo**: conta como derrota para quem saiu (−25 XP), dá a
+  vitória ao rival e tira o duelo da fila — sair nunca sai mais barato que jogar
 - XP do duelo vem **somente do resultado**: +50 (vitória) · +10 (empate) · −25
   (derrota). As respostas não pagam XP individual — senão quem perde respondendo
   bem ganharia mais que quem vence. A aposta conta para a meta diária.

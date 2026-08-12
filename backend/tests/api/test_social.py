@@ -374,6 +374,134 @@ class TestDuelList:
         assert quiz["timer_seconds"] == 20
 
 
+class TestLeavingADuel:
+    def test_quitting_forfeits_even_when_ahead(
+        self, auth_client: TestClient, client: TestClient, db: Session
+    ):
+        """Walking out must never be a way to bank a lead."""
+        helper = TestDuelResolution()
+        duel, other = helper._friends_duel(auth_client, client, db)
+        other_headers = _auth(other["access_token"])
+        rival_duel = client.get(f"/api/v1/duels/{duel['id']}", headers=other_headers).json()
+
+        # I answer one question right, then leave; the rival never played.
+        quiz = auth_client.get(f"/api/v1/quizzes/{duel['my_session_id']}").json()
+        question = quiz["questions"][0]
+        correct_id = str(
+            db.scalars(
+                select(QuestionOption).where(
+                    QuestionOption.id.in_([o["id"] for o in question["options"]]),
+                    QuestionOption.is_correct,
+                )
+            )
+            .one()
+            .id
+        )
+        auth_client.post(
+            f"/api/v1/quizzes/{duel['my_session_id']}/answers",
+            json={"question_id": question["id"], "selected_option_id": correct_id},
+        )
+        assert (
+            auth_client.post(f"/api/v1/quizzes/{duel['my_session_id']}/abandon").status_code == 200
+        )
+
+        mine = auth_client.get(f"/api/v1/duels/{duel['id']}").json()
+        assert mine["status"] == "cancelled"
+        assert mine["my_result"] == "loss"
+        assert mine["xp_change"] == -25
+
+        theirs = client.get(f"/api/v1/duels/{duel['id']}", headers=other_headers).json()
+        assert theirs["my_result"] == "win"
+        assert client.get("/api/v1/duels", headers=other_headers).json()["record"]["wins"] == 1
+        assert auth_client.get("/api/v1/duels").json()["record"]["losses"] == 1
+        # The rival's unplayed round must not be playable anymore.
+        assert (
+            client.post(
+                f"/api/v1/quizzes/{rival_duel['my_session_id']}/complete", headers=other_headers
+            ).status_code
+            == 400
+        )
+
+    def test_quitting_an_open_duel_leaves_the_queue(self, auth_client: TestClient, db: Session):
+        _seed_questions(db)
+        duel = auth_client.post("/api/v1/duels", json={}).json()
+        assert duel["status"] == "open"
+        auth_client.post(f"/api/v1/quizzes/{duel['my_session_id']}/abandon")
+
+        cancelled = auth_client.get(f"/api/v1/duels/{duel['id']}").json()
+        assert cancelled["status"] == "cancelled"
+        assert cancelled["my_result"] == "loss"
+        assert auth_client.get("/api/v1/duels").json()["record"]["losses"] == 1
+
+    def test_a_rival_no_longer_matches_a_cancelled_queue_entry(
+        self, auth_client: TestClient, client: TestClient, db: Session
+    ):
+        _seed_questions(db)
+        mine = auth_client.post("/api/v1/duels", json={}).json()
+        auth_client.post(f"/api/v1/quizzes/{mine['my_session_id']}/abandon")
+
+        other = _register(client, "buscador@teste.com")
+        joined = client.post("/api/v1/duels", json={}, headers=_auth(other["access_token"])).json()
+        assert joined["id"] != mine["id"]  # opened a fresh one instead
+        assert joined["status"] == "open"
+
+    def test_quitting_costs_the_stake_only_not_per_answer_penalties(
+        self, auth_client: TestClient, db: Session
+    ):
+        _seed_questions(db)
+        # Bank XP first so the floor at zero does not hide the size of the bill.
+        practice = auth_client.post("/api/v1/quizzes", json={"question_count": 5}).json()
+        for question in practice["questions"]:
+            right = str(
+                db.scalars(
+                    select(QuestionOption).where(
+                        QuestionOption.id.in_([o["id"] for o in question["options"]]),
+                        QuestionOption.is_correct,
+                    )
+                )
+                .one()
+                .id
+            )
+            auth_client.post(
+                f"/api/v1/quizzes/{practice['id']}/answers",
+                json={"question_id": question["id"], "selected_option_id": right},
+            )
+        auth_client.post(f"/api/v1/quizzes/{practice['id']}/complete")
+        before = auth_client.get("/api/v1/dashboard").json()["stats"]["total_xp"]
+
+        duel = auth_client.post("/api/v1/duels", json={}).json()
+        quiz = auth_client.get(f"/api/v1/quizzes/{duel['my_session_id']}").json()
+        # Three wrong answers then quit — in practice these would cost XP each.
+        for question in quiz["questions"][:3]:
+            right = str(
+                db.scalars(
+                    select(QuestionOption).where(
+                        QuestionOption.id.in_([o["id"] for o in question["options"]]),
+                        QuestionOption.is_correct,
+                    )
+                )
+                .one()
+                .id
+            )
+            wrong = next(o["id"] for o in question["options"] if o["id"] != right)
+            auth_client.post(
+                f"/api/v1/quizzes/{duel['my_session_id']}/answers",
+                json={"question_id": question["id"], "selected_option_id": wrong},
+            )
+        auth_client.post(f"/api/v1/quizzes/{duel['my_session_id']}/abandon")
+
+        after = auth_client.get("/api/v1/dashboard").json()["stats"]["total_xp"]
+        assert after - before == -25  # the stake alone
+
+    def test_abandoning_a_practice_session_does_not_touch_duels(
+        self, auth_client: TestClient, db: Session
+    ):
+        _seed_questions(db)
+        quiz = auth_client.post("/api/v1/quizzes", json={"question_count": 3}).json()
+        assert auth_client.post(f"/api/v1/quizzes/{quiz['id']}/abandon").status_code == 200
+        assert auth_client.get("/api/v1/duels").json()["record"]["losses"] == 0
+
+
 class TestDuelXpComesFromTheResult:
     def test_answers_pay_nothing_during_a_duel(self, auth_client: TestClient, db: Session):
         _seed_questions(db)

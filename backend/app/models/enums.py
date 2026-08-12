@@ -45,3 +45,4 @@ class DuelStatus(StrEnum):
     ACTIVE = "active"  # both players in; at least one round unfinished
     FINISHED = "finished"  # resolved (winner or draw)
     EXPIRED = "expired"  # nobody joined before the deadline
+    CANCELLED = "cancelled"  # someone walked out mid-duel (forfeit)

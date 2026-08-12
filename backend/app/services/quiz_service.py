@@ -331,8 +331,14 @@ def abandon_session(db: Session, user: User, session_id: uuid.UUID) -> AbandonRe
 
     questions_by_id = {sq.question_id: sq.question for sq in session.session_questions}
     wrong_answers = [a for a in session.answers if not a.is_correct]
-    penalty = sum(
-        xp_for_answer(questions_by_id[a.question_id].difficulty, False) for a in wrong_answers
+    # Duels never pay per answer — quitting one costs the duel stake instead,
+    # applied when the duel itself is cancelled.
+    penalty = (
+        0
+        if session.mode == QuizMode.DUEL
+        else sum(
+            xp_for_answer(questions_by_id[a.question_id].difficulty, False) for a in wrong_answers
+        )
     )
 
     now = datetime.now(UTC)

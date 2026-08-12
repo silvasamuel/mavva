@@ -46,7 +46,7 @@ export interface FriendsOverview {
   sent: FriendRequest[]
 }
 
-export type DuelStatus = 'open' | 'active' | 'finished' | 'expired'
+export type DuelStatus = 'open' | 'active' | 'finished' | 'expired' | 'cancelled'
 
 export interface DuelSide {
   user: PublicUser | null
