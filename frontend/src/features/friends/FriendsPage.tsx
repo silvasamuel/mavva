@@ -8,27 +8,17 @@ import { Card, CardTitle } from '@/components/ui/Card'
 import { Input } from '@/components/ui/Input'
 import { Spinner } from '@/components/ui/Spinner'
 import { EmptyState } from '@/components/ui/EmptyState'
+import { RankBadge } from '@/components/RankBadge'
 import { useAuth } from '@/features/auth/AuthContext'
-
-function Avatar({ user }: { user: PublicUser }) {
-  return (
-    <span
-      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-leaf-100 text-sm font-extrabold uppercase text-leaf-700"
-      aria-hidden
-    >
-      {user.username.slice(0, 2)}
-    </span>
-  )
-}
 
 function PlayerRow({ user, children }: { user: PublicUser; children?: React.ReactNode }) {
   return (
     <li className="flex items-center gap-3 py-3">
-      <Avatar user={user} />
+      <RankBadge code={user.rank.code} size="sm" />
       <div className="min-w-0 flex-1">
         <p className="truncate font-extrabold text-ink">@{user.username}</p>
         <p className="text-xs font-semibold text-sand-500">
-          Nível {user.level} · {user.duel_wins}V {user.duel_losses}D {user.duel_draws}E
+          {user.rank.name} · {user.duel_wins}V {user.duel_losses}D {user.duel_draws}E
         </p>
       </div>
       {children}

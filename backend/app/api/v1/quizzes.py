@@ -19,6 +19,7 @@ from app.schemas.quiz import (
     QuizCreateRequest,
     QuizHistoryItem,
     QuizSessionOut,
+    RankInfo,
     StreakInfo,
     UnlockedAchievement,
 )
@@ -196,6 +197,11 @@ def complete_quiz(session_id: uuid.UUID, user: CurrentUser, db: DbDep) -> QuizCo
             leveled_up=result.leveled_up,
             xp_into_level=result.xp_into_level,
             xp_for_next=result.xp_for_next_level,
+        ),
+        rank=RankInfo(
+            code=result.rank_code,
+            name=result.rank_name,
+            rank_up=result.rank_up,
         ),
         streak=StreakInfo(
             current=result.streak.current, extended_today=result.streak.extended_today

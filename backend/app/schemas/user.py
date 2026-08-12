@@ -26,6 +26,11 @@ class UserOut(BaseModel):
     daily_goal_xp: int
 
 
+class RankOut(BaseModel):
+    code: str
+    name: str
+
+
 class UserUpdate(BaseModel):
     name: Name | None = None
     username: Username | None = None

@@ -5,6 +5,7 @@ from app.models.enums import Difficulty
 from app.services.gamification import (
     effective_streak,
     level_from_total_xp,
+    rank_from_level,
     register_streak_activity,
     xp_for_answer,
     xp_to_advance,
@@ -45,6 +46,34 @@ class TestLevelCurve:
         assert level_from_total_xp(100) == (2, 0, 150)
         assert level_from_total_xp(250) == (3, 0, 200)
         assert level_from_total_xp(260) == (3, 10, 200)
+
+
+class TestRank:
+    def test_five_levels_per_band(self):
+        assert rank_from_level(1).code == "semente"
+        assert rank_from_level(5).code == "semente"
+        assert rank_from_level(6).code == "broto"
+        assert rank_from_level(10).code == "broto"
+        assert rank_from_level(11).code == "espiga"
+        assert rank_from_level(16).code == "videira"
+        assert rank_from_level(21).code == "oliveira"
+        assert rank_from_level(26).code == "cedro"
+        assert rank_from_level(30).code == "cedro"
+
+    def test_celeiro_is_open_ended(self):
+        celeiro = rank_from_level(31)
+        assert celeiro.code == "celeiro"
+        assert celeiro.max_level is None
+        assert rank_from_level(99).code == "celeiro"
+
+    def test_band_bounds(self):
+        broto = rank_from_level(7)
+        assert broto.min_level == 6
+        assert broto.max_level == 10
+        assert broto.name == "Broto"
+
+    def test_level_below_one_still_semente(self):
+        assert rank_from_level(0).code == "semente"
 
 
 class TestStreak:

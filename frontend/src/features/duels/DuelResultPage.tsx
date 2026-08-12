@@ -6,6 +6,7 @@ import type { Duel } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
 import { Spinner } from '@/components/ui/Spinner'
+import { RankBadge } from '@/components/RankBadge'
 import { formatStudyTime } from '@/lib/format'
 
 const HEADLINE = {
@@ -67,6 +68,11 @@ export function DuelResultPage() {
         <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-4">
           <div className="text-center">
             <p className="text-xs font-extrabold uppercase tracking-wide text-sand-500">Você</p>
+            {duel.me.user && (
+              <div className="mt-1 flex justify-center">
+                <RankBadge code={duel.me.user.rank.code} size="sm" />
+              </div>
+            )}
             <motion.p
               initial={{ scale: 0.6 }}
               animate={{ scale: 1 }}
@@ -86,6 +92,11 @@ export function DuelResultPage() {
             <p className="truncate text-xs font-extrabold uppercase tracking-wide text-sand-500">
               {rival ? `@${rival.username}` : 'Rival'}
             </p>
+            {rival && (
+              <div className="mt-1 flex justify-center">
+                <RankBadge code={rival.rank.code} size="sm" />
+              </div>
+            )}
             <p className="text-4xl font-extrabold text-sand-500">
               {duel.rival.finished ? duel.rival.correct : '—'}
             </p>

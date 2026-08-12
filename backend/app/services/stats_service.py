@@ -19,7 +19,12 @@ from app.models import (
 )
 from app.models.enums import DuelStatus, FriendshipStatus
 from app.services import srs
-from app.services.gamification import effective_streak, level_from_total_xp, today_for_user
+from app.services.gamification import (
+    effective_streak,
+    level_from_total_xp,
+    rank_payload,
+    today_for_user,
+)
 from app.services.quiz_service import recent_sessions, session_filters
 
 # Every category the user has actually answered counts as a candidate — with a
@@ -175,6 +180,7 @@ def get_dashboard(db: Session, user: User) -> dict[str, Any]:
         "stats": {
             "total_xp": stats.total_xp,
             "level": level,
+            "rank": rank_payload(level),
             "xp_into_level": xp_into_level,
             "xp_for_next_level": xp_for_next,
             "current_streak": effective_streak(stats, today),

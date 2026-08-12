@@ -99,6 +99,12 @@ class LevelInfo(BaseModel):
     xp_for_next: int
 
 
+class RankInfo(BaseModel):
+    code: str
+    name: str
+    rank_up: bool
+
+
 class StreakInfo(BaseModel):
     current: int
     extended_today: bool
@@ -127,6 +133,7 @@ class QuizCompleteResponse(BaseModel):
     bonus_xp: int
     duration_seconds: int
     level: LevelInfo
+    rank: RankInfo
     streak: StreakInfo
     daily_goal: DailyGoalInfo
     unlocked_achievements: list[UnlockedAchievement]

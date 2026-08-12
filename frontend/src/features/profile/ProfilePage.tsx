@@ -6,6 +6,7 @@ import type { DashboardData, User } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Card, CardTitle } from '@/components/ui/Card'
 import { Input } from '@/components/ui/Input'
+import { RankBadge } from '@/components/RankBadge'
 import { useAuth } from '@/features/auth/AuthContext'
 
 const GOAL_OPTIONS = [
@@ -46,9 +47,21 @@ export function ProfilePage() {
 
   return (
     <div className="animate-float-up mx-auto max-w-xl space-y-6">
-      <header>
-        <h1 className="text-2xl font-extrabold">Perfil</h1>
-        <p className="text-sm font-semibold text-sand-500">{user?.email}</p>
+      <header className="flex items-center gap-4">
+        {dashboard && (
+          <RankBadge code={dashboard.stats.rank.code} size="lg" />
+        )}
+        <div>
+          <h1 className="text-2xl font-extrabold">Perfil</h1>
+          <p className="text-sm font-semibold text-sand-500">
+            {dashboard
+              ? `${dashboard.stats.rank.name} · nível ${dashboard.stats.level}`
+              : user?.email}
+          </p>
+          {dashboard && (
+            <p className="text-xs font-semibold text-sand-400">{user?.email}</p>
+          )}
+        </div>
       </header>
 
       <Card className="space-y-4">
