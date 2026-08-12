@@ -294,9 +294,7 @@ class TestTimer:
         assert session is not None
         session.filters = {
             **session.filters,
-            "presented_at": {
-                question_id: (datetime.now(UTC) - timedelta(seconds=8)).isoformat()
-            },
+            "presented_at": {question_id: (datetime.now(UTC) - timedelta(seconds=8)).isoformat()},
         }
         db.flush()
 
@@ -318,9 +316,7 @@ class TestTimer:
         assert session is not None
         session.filters = {
             **session.filters,
-            "presented_at": {
-                question_id: (datetime.now(UTC) - timedelta(seconds=5)).isoformat()
-            },
+            "presented_at": {question_id: (datetime.now(UTC) - timedelta(seconds=5)).isoformat()},
         }
         db.flush()
         second = auth_client.post(

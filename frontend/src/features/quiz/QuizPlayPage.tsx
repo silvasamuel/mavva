@@ -155,7 +155,7 @@ export function QuizPlayPage() {
       cancelled = true
       if (interval) clearInterval(interval)
     }
-  }, [timerSeconds, question?.id, question?.answered, question?.timer_remaining, feedback, sessionId])
+  }, [timerSeconds, question, feedback, sessionId])
 
   // Time's up: auto-submit as a miss.
   useEffect(() => {
