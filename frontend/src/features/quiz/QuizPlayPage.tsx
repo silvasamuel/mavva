@@ -89,6 +89,12 @@ export function QuizPlayPage() {
         setError('')
         return
       }
+      if (err instanceof ApiError && err.message.includes('Alternativa inválida')) {
+        await queryClient.invalidateQueries({ queryKey: ['quiz', sessionId] })
+        setSelectedOption(null)
+        setError('As alternativas foram atualizadas. Escolha de novo.')
+        return
+      }
       setError(err instanceof ApiError ? err.message : 'Não foi possível enviar a resposta.')
     },
   })

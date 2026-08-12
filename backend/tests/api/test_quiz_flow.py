@@ -1,4 +1,5 @@
 from datetime import UTC, date, datetime, timedelta
+from pathlib import Path
 from uuid import UUID
 from zoneinfo import ZoneInfo
 
@@ -448,3 +449,31 @@ class TestSmartQueue:
         # Only one question exists — it must come back rather than blocking play.
         again = _start_quiz(auth_client, question_count=1)
         assert again["questions"][0]["id"] == question["id"]
+
+
+class TestReseedPreservesInFlightAnswers:
+    def test_option_id_from_before_reseed_still_counts(
+        self, auth_client: TestClient, db: Session, tmp_path: Path
+    ):
+        from app.seeds.questions import seed_questions
+        from app.services import content_sync
+
+        category = make_category(db)
+        make_mc_question(db, category)
+        quiz = _start_quiz(auth_client, question_count=1)
+        question = quiz["questions"][0]
+        selected = question["options"][0]["id"]
+
+        data = content_sync.serialize_category(db, category)
+        assert data is not None
+        questions_dir = tmp_path / "questions"
+        questions_dir.mkdir()
+        (questions_dir / f"{category.slug}.json").write_text(content_sync.render_file(data))
+        seed_questions(db, tmp_path, {category.slug: category.id})
+        db.flush()
+
+        response = auth_client.post(
+            f"/api/v1/quizzes/{quiz['id']}/answers",
+            json={"question_id": question["id"], "selected_option_id": selected},
+        )
+        assert response.status_code == 200, response.text

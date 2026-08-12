@@ -107,6 +107,35 @@ def load_content_files(content_dir: Path) -> list[QuestionFileIn]:
     return parsed
 
 
+def _sync_options(question: Question, incoming: list[OptionIn] | None) -> None:
+    wanted = incoming or []
+    by_position = {option.position: option for option in question.options}
+    for index, option_in in enumerate(wanted):
+        current = by_position.pop(index, None)
+        if current is None:
+            question.options.append(
+                QuestionOption(text=option_in.text, is_correct=option_in.correct, position=index)
+            )
+        else:
+            current.text = option_in.text
+            current.is_correct = option_in.correct
+    for leftover in by_position.values():
+        question.options.remove(leftover)
+
+
+def _sync_accepted_answers(question: Question, incoming: list[str] | None) -> None:
+    wanted = [text.strip() for text in incoming or [] if text.strip()]
+    by_position = {answer.position: answer for answer in question.accepted_answers}
+    for index, text in enumerate(wanted):
+        current = by_position.pop(index, None)
+        if current is None:
+            question.accepted_answers.append(QuestionAnswer(text=text, position=index))
+        else:
+            current.text = text
+    for leftover in by_position.values():
+        question.accepted_answers.remove(leftover)
+
+
 def seed_questions(db: Session, content_dir: Path, category_ids: dict[str, int]) -> tuple[int, int]:
     """Upserts by external_id. Returns (created, updated)."""
     files = load_content_files(content_dir)
@@ -146,18 +175,14 @@ def seed_questions(db: Session, content_dir: Path, category_ids: dict[str, int])
             question.tags = [t.strip().lower() for t in q_in.tags]
             question.is_active = q_in.is_active
 
-            # Replace answer key wholesale — content files are the source of truth.
-            question.options.clear()
-            question.accepted_answers.clear()
-            if q_in.type == QuestionType.MULTIPLE_CHOICE and q_in.options:
-                question.options.extend(
-                    QuestionOption(text=o.text, is_correct=o.correct, position=i)
-                    for i, o in enumerate(q_in.options)
-                )
-            elif q_in.accepted_answers:
-                question.accepted_answers.extend(
-                    QuestionAnswer(text=a.strip(), position=i)
-                    for i, a in enumerate(q_in.accepted_answers)
-                )
+            # Upsert in place so option UUIDs survive a no-op reseed (every
+            # Render boot runs this). Deleting and recreating them would 400
+            # in-flight quizzes that still hold the old alternative ids.
+            if q_in.type == QuestionType.MULTIPLE_CHOICE:
+                _sync_options(question, q_in.options)
+                question.accepted_answers.clear()
+            else:
+                question.options.clear()
+                _sync_accepted_answers(question, q_in.accepted_answers)
     db.flush()
     return created, updated
