@@ -189,7 +189,8 @@ export function DuelsPage() {
                         @{friend.username}
                       </p>
                       <p className="text-xs font-semibold text-sand-400">
-                        {friend.rank.name} · {friend.duel_wins}V {friend.duel_losses}D
+                        {friend.rank.name} · {friend.duel_wins}V {friend.duel_losses}D{' '}
+                        {friend.duel_draws}E
                       </p>
                     </div>
                   </div>
