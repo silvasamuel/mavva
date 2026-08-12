@@ -19,6 +19,7 @@ const NAV_ITEMS: NavItem[] = [
   { to: '/duels', label: 'Duelos', icon: '⚔️', primary: true },
   { to: '/review', label: 'Revisar', icon: '🔁', primary: true },
   { to: '/friends', label: 'Amigos', icon: '🤝' },
+  { to: '/ranking', label: 'Ranking', icon: '🏆' },
   { to: '/achievements', label: 'Conquistas', icon: '🏅' },
   { to: '/profile', label: 'Perfil', icon: '👤', primary: true },
 ]

@@ -116,6 +116,9 @@ export function ProfilePage() {
         >
           🤝 Amigos {pendingRequests > 0 && `(${pendingRequests})`}
         </Button>
+        <Button variant="secondary" full onClick={() => navigate('/ranking')}>
+          🏆 Ranking
+        </Button>
         <Button variant="secondary" full onClick={() => navigate('/achievements')}>
           🏅 Conquistas
         </Button>

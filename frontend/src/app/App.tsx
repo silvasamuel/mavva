@@ -17,6 +17,7 @@ import { ProfilePage } from '@/features/profile/ProfilePage'
 import { DuelsPage } from '@/features/duels/DuelsPage'
 import { DuelResultPage } from '@/features/duels/DuelResultPage'
 import { FriendsPage } from '@/features/friends/FriendsPage'
+import { RankingPage } from '@/features/ranking/RankingPage'
 import { AppShell } from './AppShell'
 import { RequireAuth } from './RequireAuth'
 
@@ -51,6 +52,7 @@ export default function App() {
                 <Route path="/duels" element={<DuelsPage />} />
                 <Route path="/duels/:duelId" element={<DuelResultPage />} />
                 <Route path="/friends" element={<FriendsPage />} />
+                <Route path="/ranking" element={<RankingPage />} />
                 <Route path="/achievements" element={<AchievementsPage />} />
                 <Route path="/profile" element={<ProfilePage />} />
               </Route>
