@@ -451,10 +451,11 @@ def recent_sessions(db: Session, user: User, limit: int = 5) -> list[QuizSession
 
 
 def list_xp(session: QuizSession) -> int:
-    """XP for the recents list: show gains unless losses outweigh them.
+    """XP on Últimos quizzes.
 
-    Net zero (gains == losses) still shows the gained amount, so the pill never
-    reads as a plus glued onto a minus.
+    Study/review: hits minus misses, plus completion/perfect bonuses.
+    Duels: session.xp_earned is 0 until settled; the dashboard overlays the
+    win/draw/loss stake so the pill never shows per-answer XP.
     """
     if session.mode == QuizMode.DUEL:
         return session.xp_earned
@@ -470,7 +471,7 @@ def list_xp(session: QuizSession) -> int:
         gains += SESSION_COMPLETE_BONUS
         if session.correct_count == session.question_count:
             gains += PERFECT_SESSION_BONUS
-    return gains if gains >= losses else gains - losses
+    return gains - losses
 
 
 _INTERNAL_FILTER_KEYS = frozenset({"presented_at"})
