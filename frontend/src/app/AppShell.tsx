@@ -1,5 +1,7 @@
-import { NavLink, Outlet, useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
+import { AnimatePresence, motion } from 'framer-motion'
 import { api } from '@/lib/api'
 import type { DashboardData } from '@/types/api'
 import { Logo } from '@/components/Logo'
@@ -9,19 +11,31 @@ interface NavItem {
   to: string
   label: string
   icon: string
-  /** Shown in the mobile bottom bar (space for 5). */
-  primary?: boolean
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { to: '/', label: 'Início', icon: '🏠', primary: true },
-  { to: '/quiz/new', label: 'Estudar', icon: '📖', primary: true },
-  { to: '/duels', label: 'Duelos', icon: '⚔️', primary: true },
-  { to: '/review', label: 'Revisar', icon: '🔁', primary: true },
+  { to: '/', label: 'Início', icon: '🏠' },
+  { to: '/quiz/new', label: 'Estudar', icon: '📖' },
+  { to: '/duels', label: 'Duelos', icon: '⚔️' },
+  { to: '/review', label: 'Revisar', icon: '🔁' },
   { to: '/friends', label: 'Amigos', icon: '🤝' },
   { to: '/ranking', label: 'Ranking', icon: '🏆' },
   { to: '/achievements', label: 'Conquistas', icon: '🏅' },
-  { to: '/profile', label: 'Perfil', icon: '👤', primary: true },
+  { to: '/profile', label: 'Perfil', icon: '👤' },
+]
+
+const MOBILE_TABS: NavItem[] = [
+  { to: '/', label: 'Início', icon: '🏠' },
+  { to: '/quiz/new', label: 'Estudar', icon: '📖' },
+  { to: '/duels', label: 'Duelos', icon: '⚔️' },
+]
+
+const MORE_ITEMS: NavItem[] = [
+  { to: '/review', label: 'Revisar', icon: '🔁' },
+  { to: '/friends', label: 'Amigos', icon: '🤝' },
+  { to: '/ranking', label: 'Ranking', icon: '🏆' },
+  { to: '/achievements', label: 'Conquistas', icon: '🏅' },
+  { to: '/profile', label: 'Perfil', icon: '👤' },
 ]
 
 function navClass({ isActive }: { isActive: boolean }) {
@@ -44,19 +58,32 @@ function Badge({ count }: { count: number }) {
 export function AppShell() {
   const { logout } = useAuth()
   const navigate = useNavigate()
+  const location = useLocation()
+  const [moreOpen, setMoreOpen] = useState(false)
   const { data } = useQuery({
     queryKey: ['dashboard'],
     queryFn: () => api.get<DashboardData>('/dashboard'),
   })
   const streak = data?.stats.current_streak ?? 0
   const friendRequests = data?.friend_requests ?? 0
+  const moreActive = MORE_ITEMS.some(
+    (item) => location.pathname === item.to || location.pathname.startsWith(`${item.to}/`)
+  )
+  const moreCount = (data?.reviews_due ?? 0) + friendRequests
 
-  function badgeFor(to: string, context: 'sidebar' | 'mobile') {
+  useEffect(() => {
+    if (!moreOpen) return
+    function onKey(event: KeyboardEvent) {
+      if (event.key === 'Escape') setMoreOpen(false)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [moreOpen])
+
+  function badgeFor(to: string) {
     if (to === '/duels') return data?.duels?.awaiting_me ?? 0
     if (to === '/review') return data?.reviews_due ?? 0
     if (to === '/friends') return friendRequests
-    // Friends has no mobile tab — carry its badge on Perfil, the way in.
-    if (to === '/profile' && context === 'mobile') return friendRequests
     return 0
   }
 
@@ -77,7 +104,7 @@ export function AppShell() {
             <NavLink key={item.to} to={item.to} end={item.to === '/'} className={navClass}>
               <span aria-hidden>{item.icon}</span>
               {item.label}
-              <Badge count={badgeFor(item.to, 'sidebar')} />
+              <Badge count={badgeFor(item.to)} />
             </NavLink>
           ))}
         </nav>
@@ -108,11 +135,11 @@ export function AppShell() {
 
       {/* Mobile bottom tabs */}
       <nav
-        className="fixed inset-x-0 bottom-0 z-20 flex justify-around border-t border-sand-200 bg-white/95 py-2 backdrop-blur md:hidden"
+        className="fixed inset-x-0 bottom-0 z-20 flex justify-around border-t border-sand-200 bg-white/95 py-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] backdrop-blur md:hidden"
         aria-label="Principal"
       >
-        {NAV_ITEMS.filter((item) => item.primary).map((item) => {
-          const count = badgeFor(item.to, 'mobile')
+        {MOBILE_TABS.map((item) => {
+          const count = badgeFor(item.to)
           return (
             <NavLink
               key={item.to}
@@ -136,7 +163,68 @@ export function AppShell() {
             </NavLink>
           )
         })}
+        <button
+          type="button"
+          onClick={() => setMoreOpen(true)}
+          aria-expanded={moreOpen}
+          aria-haspopup="dialog"
+          className={`relative flex flex-col items-center gap-0.5 rounded-xl px-3 py-1 text-[10px] font-extrabold uppercase ${
+            moreActive ? 'text-leaf-600' : 'text-sand-500'
+          }`}
+        >
+          <span className="text-xl" aria-hidden>
+            ☰
+          </span>
+          {moreCount > 0 && (
+            <span className="absolute right-1 top-0 flex h-4 min-w-4 items-center justify-center rounded-full bg-grain-400 px-1 text-[9px] font-extrabold text-grain-900">
+              {moreCount}
+            </span>
+          )}
+          Mais
+        </button>
       </nav>
+
+      <AnimatePresence>
+        {moreOpen && (
+          <>
+            <motion.button
+              type="button"
+              aria-label="Fechar menu"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-30 bg-ink/40 md:hidden"
+              onClick={() => setMoreOpen(false)}
+            />
+            <motion.div
+              role="dialog"
+              aria-modal="true"
+              aria-label="Mais"
+              initial={{ y: '100%' }}
+              animate={{ y: 0 }}
+              exit={{ y: '100%' }}
+              transition={{ type: 'spring', stiffness: 380, damping: 32 }}
+              className="fixed inset-x-0 bottom-0 z-40 rounded-t-3xl bg-white px-4 pt-3 pb-[max(1.25rem,env(safe-area-inset-bottom))] shadow-card md:hidden"
+            >
+              <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-sand-200" />
+              <nav className="flex flex-col gap-1" aria-label="Mais">
+                {MORE_ITEMS.map((item) => (
+                  <NavLink
+                    key={item.to}
+                    to={item.to}
+                    onClick={() => setMoreOpen(false)}
+                    className={navClass}
+                  >
+                    <span aria-hidden>{item.icon}</span>
+                    {item.label}
+                    <Badge count={badgeFor(item.to)} />
+                  </NavLink>
+                ))}
+              </nav>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </div>
   )
 }
