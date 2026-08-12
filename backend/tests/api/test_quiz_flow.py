@@ -1,11 +1,12 @@
-from datetime import date, datetime, timedelta
+from datetime import UTC, date, datetime, timedelta
+from uuid import UUID
 from zoneinfo import ZoneInfo
 
 from fastapi.testclient import TestClient
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.models import ReviewItem
+from app.models import QuizSession, ReviewItem
 from app.seeds.achievements import xp_reward_for
 from tests.factories import make_category, make_mc_question, make_open_question
 
@@ -275,6 +276,53 @@ class TestTimer:
         # Reloading the session keeps the timer (resume works).
         again = auth_client.get(f"/api/v1/quizzes/{session['id']}").json()
         assert again["timer_seconds"] == 15
+        assert again["questions"][0]["timer_remaining"] == 15
+
+    def test_reload_does_not_reset_elapsed_question_timer(
+        self, auth_client: TestClient, db: Session
+    ):
+        category = make_category(db)
+        make_mc_question(db, category)
+        quiz = auth_client.post(
+            "/api/v1/quizzes", json={"question_count": 1, "timer_seconds": 15}
+        ).json()
+        first = auth_client.get(f"/api/v1/quizzes/{quiz['id']}").json()
+        question_id = first["questions"][0]["id"]
+        assert first["questions"][0]["timer_remaining"] == 15
+
+        session = db.get(QuizSession, UUID(quiz["id"]))
+        assert session is not None
+        session.filters = {
+            **session.filters,
+            "presented_at": {question_id: (datetime.now(UTC) - timedelta(seconds=8)).isoformat()},
+        }
+        db.flush()
+
+        again = auth_client.get(f"/api/v1/quizzes/{quiz['id']}").json()
+        remaining = again["questions"][0]["timer_remaining"]
+        assert 5 <= remaining <= 7
+
+    def test_present_is_idempotent(self, auth_client: TestClient, db: Session):
+        category = make_category(db)
+        make_mc_question(db, category)
+        quiz = auth_client.post(
+            "/api/v1/quizzes", json={"question_count": 1, "timer_seconds": 15}
+        ).json()
+        question_id = quiz["questions"][0]["id"]
+        first = auth_client.post(
+            f"/api/v1/quizzes/{quiz['id']}/present", json={"question_id": question_id}
+        ).json()
+        session = db.get(QuizSession, UUID(quiz["id"]))
+        assert session is not None
+        session.filters = {
+            **session.filters,
+            "presented_at": {question_id: (datetime.now(UTC) - timedelta(seconds=5)).isoformat()},
+        }
+        db.flush()
+        second = auth_client.post(
+            f"/api/v1/quizzes/{quiz['id']}/present", json={"question_id": question_id}
+        ).json()
+        assert second["timer_remaining"] < first["timer_remaining"]
 
     def test_invalid_timer_rejected(self, auth_client: TestClient, db: Session):
         response = auth_client.post(

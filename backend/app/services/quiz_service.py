@@ -1,10 +1,12 @@
 import uuid
 from dataclasses import dataclass, field
 from datetime import UTC, datetime
+from math import floor
 from typing import Any
 
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session, selectinload
+from sqlalchemy.orm.attributes import flag_modified
 
 from app.models import (
     Achievement,
@@ -123,6 +125,62 @@ def get_session_for_user(db: Session, user: User, session_id: uuid.UUID) -> Quiz
     if session is None:
         raise QuizError("Sessão não encontrada", status_code=404)
     return session
+
+
+def _timer_seconds(session: QuizSession) -> int | None:
+    value = (session.filters or {}).get("timer_seconds")
+    return int(value) if value else None
+
+
+def _presented_map(session: QuizSession) -> dict[str, str]:
+    raw = (session.filters or {}).get("presented_at") or {}
+    return {str(key): str(value) for key, value in raw.items()}
+
+
+def remaining_seconds(session: QuizSession, question_id: uuid.UUID) -> int | None:
+    timer = _timer_seconds(session)
+    if not timer:
+        return None
+    started = _presented_map(session).get(str(question_id))
+    if started is None:
+        return timer
+    started_at = datetime.fromisoformat(started)
+    if started_at.tzinfo is None:
+        started_at = started_at.replace(tzinfo=UTC)
+    elapsed = (datetime.now(UTC) - started_at).total_seconds()
+    return max(0, timer - floor(elapsed))
+
+
+def present_question(db: Session, session: QuizSession, question_id: uuid.UUID) -> int | None:
+    """Start (or resume) the per-question clock. Reloading does not reset it."""
+    timer = _timer_seconds(session)
+    if not timer:
+        return None
+    answered = {answer.question_id for answer in session.answers}
+    if question_id in answered:
+        return None
+    if not any(sq.question_id == question_id for sq in session.session_questions):
+        raise QuizError("Esta pergunta não pertence à sessão")
+    presented = _presented_map(session)
+    key = str(question_id)
+    if key not in presented:
+        presented[key] = datetime.now(UTC).isoformat()
+        session.filters = {**(session.filters or {}), "presented_at": presented}
+        flag_modified(session, "filters")
+        db.flush()
+    return remaining_seconds(session, question_id)
+
+
+def ensure_current_timer(db: Session, session: QuizSession) -> None:
+    if session.completed_at is not None or session.abandoned_at is not None:
+        return
+    answered = {answer.question_id for answer in session.answers}
+    current = next(
+        (sq for sq in session.session_questions if sq.question_id not in answered),
+        None,
+    )
+    if current is not None:
+        present_question(db, session, current.question_id)
 
 
 @dataclass
@@ -415,5 +473,12 @@ def list_xp(session: QuizSession) -> int:
     return gains if gains >= losses else gains - losses
 
 
+_INTERNAL_FILTER_KEYS = frozenset({"presented_at"})
+
+
 def session_filters(session: QuizSession) -> dict[str, Any]:
-    return {k: v for k, v in (session.filters or {}).items() if v is not None}
+    return {
+        k: v
+        for k, v in (session.filters or {}).items()
+        if v is not None and k not in _INTERNAL_FILTER_KEYS
+    }
