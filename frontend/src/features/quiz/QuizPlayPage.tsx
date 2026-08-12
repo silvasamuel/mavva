@@ -205,8 +205,9 @@ export function QuizPlayPage() {
     }
   }
 
-  const answeredSoFar = currentIndex + (feedback ? 1 : 0)
+  const answeredSoFar = session.answered_count + extraAnswered
   const timerUrgent = remaining !== null && remaining <= 5
+  const questionNumber = Math.min(currentIndex + 1, session.question_count)
 
   return (
     <div className="mx-auto flex min-h-screen max-w-2xl flex-col px-4 py-6">
@@ -220,23 +221,27 @@ export function QuizPlayPage() {
           ✕
         </button>
         <ProgressBar value={answeredSoFar} max={session.question_count} className="h-5 flex-1" />
-        {timerSeconds && !feedback && remaining !== null && (
+        {timerSeconds != null && (
           <motion.span
             key={timerUrgent ? 'urgent' : 'calm'}
-            animate={timerUrgent ? { scale: [1, 1.12, 1] } : {}}
-            transition={{ repeat: timerUrgent ? Infinity : 0, duration: 1 }}
+            animate={timerUrgent && !feedback ? { scale: [1, 1.12, 1] } : {}}
+            transition={{ repeat: timerUrgent && !feedback ? Infinity : 0, duration: 1 }}
             className={`min-w-[3.25rem] rounded-full px-2.5 py-1 text-center text-sm font-extrabold tabular-nums ${
-              timerUrgent ? 'bg-red-100 text-red-600' : 'bg-sand-100 text-sand-600'
+              feedback || remaining === null
+                ? 'invisible'
+                : timerUrgent
+                  ? 'bg-red-100 text-red-600'
+                  : 'bg-sand-100 text-sand-600'
             }`}
             role="timer"
-            aria-label={`${remaining} segundos restantes`}
+            aria-hidden={Boolean(feedback) || remaining === null}
+            aria-label={remaining != null ? `${remaining} segundos restantes` : undefined}
           >
-            ⏱ {remaining}s
+            ⏱ {remaining ?? timerSeconds}s
           </motion.span>
         )}
         <span className="text-sm font-extrabold text-sand-500">
-          {Math.min(answeredSoFar + (feedback ? 0 : 1), session.question_count)}/
-          {session.question_count}
+          {questionNumber}/{session.question_count}
         </span>
       </div>
 
