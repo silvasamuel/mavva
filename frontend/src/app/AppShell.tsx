@@ -30,6 +30,8 @@ const MOBILE_TABS: NavItem[] = [
   { to: '/duels', label: 'Duelos', icon: '⚔️' },
 ]
 
+const BADGE_PATHS = ['/duels', '/review', '/friends']
+
 const MORE_ITEMS: NavItem[] = [
   { to: '/review', label: 'Revisar', icon: '🔁' },
   { to: '/friends', label: 'Amigos', icon: '🤝' },
@@ -46,7 +48,15 @@ function navClass({ isActive }: { isActive: boolean }) {
   }`
 }
 
-function Badge({ count }: { count: number }) {
+function Badge({ count, loading }: { count: number; loading?: boolean }) {
+  if (loading) {
+    return (
+      <span
+        className="ml-auto h-5 w-5 animate-pulse rounded-full bg-sand-200"
+        aria-label="Carregando"
+      />
+    )
+  }
   if (count <= 0) return null
   return (
     <span className="ml-auto flex h-5 min-w-5 items-center justify-center rounded-full bg-grain-400 px-1.5 text-[10px] font-extrabold text-grain-900">
@@ -60,7 +70,7 @@ export function AppShell() {
   const navigate = useNavigate()
   const location = useLocation()
   const [moreOpen, setMoreOpen] = useState(false)
-  const { data } = useQuery({
+  const { data, isPending } = useQuery({
     queryKey: ['dashboard'],
     queryFn: () => api.get<DashboardData>('/dashboard'),
   })
@@ -104,7 +114,10 @@ export function AppShell() {
             <NavLink key={item.to} to={item.to} end={item.to === '/'} className={navClass}>
               <span aria-hidden>{item.icon}</span>
               {item.label}
-              <Badge count={badgeFor(item.to)} />
+              <Badge
+                count={badgeFor(item.to)}
+                loading={isPending && BADGE_PATHS.includes(item.to)}
+              />
             </NavLink>
           ))}
         </nav>
@@ -154,10 +167,17 @@ export function AppShell() {
               <span className="text-xl" aria-hidden>
                 {item.icon}
               </span>
-              {count > 0 && (
-                <span className="absolute right-1 top-0 flex h-4 min-w-4 items-center justify-center rounded-full bg-grain-400 px-1 text-[9px] font-extrabold text-grain-900">
-                  {count}
-                </span>
+              {isPending && item.to === '/duels' ? (
+                <span
+                  className="absolute right-1 top-0 h-4 w-4 animate-pulse rounded-full bg-sand-200"
+                  aria-label="Carregando"
+                />
+              ) : (
+                count > 0 && (
+                  <span className="absolute right-1 top-0 flex h-4 min-w-4 items-center justify-center rounded-full bg-grain-400 px-1 text-[9px] font-extrabold text-grain-900">
+                    {count}
+                  </span>
+                )
               )}
               {item.label}
             </NavLink>
@@ -175,10 +195,17 @@ export function AppShell() {
           <span className="text-xl" aria-hidden>
             ☰
           </span>
-          {moreCount > 0 && (
-            <span className="absolute right-1 top-0 flex h-4 min-w-4 items-center justify-center rounded-full bg-grain-400 px-1 text-[9px] font-extrabold text-grain-900">
-              {moreCount}
-            </span>
+          {isPending ? (
+            <span
+              className="absolute right-1 top-0 h-4 w-4 animate-pulse rounded-full bg-sand-200"
+              aria-label="Carregando"
+            />
+          ) : (
+            moreCount > 0 && (
+              <span className="absolute right-1 top-0 flex h-4 min-w-4 items-center justify-center rounded-full bg-grain-400 px-1 text-[9px] font-extrabold text-grain-900">
+                {moreCount}
+              </span>
+            )
           )}
           Mais
         </button>
@@ -217,7 +244,10 @@ export function AppShell() {
                   >
                     <span aria-hidden>{item.icon}</span>
                     {item.label}
-                    <Badge count={badgeFor(item.to)} />
+                    <Badge
+                      count={badgeFor(item.to)}
+                      loading={isPending && BADGE_PATHS.includes(item.to)}
+                    />
                   </NavLink>
                 ))}
               </nav>

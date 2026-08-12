@@ -107,7 +107,7 @@ def load_content_files(content_dir: Path) -> list[QuestionFileIn]:
     return parsed
 
 
-def _sync_options(question: Question, incoming: list[OptionIn] | None) -> None:
+def sync_options(question: Question, incoming: list[OptionIn] | None) -> None:
     wanted = incoming or []
     by_position = {option.position: option for option in question.options}
     for index, option_in in enumerate(wanted):
@@ -123,7 +123,7 @@ def _sync_options(question: Question, incoming: list[OptionIn] | None) -> None:
         question.options.remove(leftover)
 
 
-def _sync_accepted_answers(question: Question, incoming: list[str] | None) -> None:
+def sync_accepted_answers(question: Question, incoming: list[str] | None) -> None:
     wanted = [text.strip() for text in incoming or [] if text.strip()]
     by_position = {answer.position: answer for answer in question.accepted_answers}
     for index, text in enumerate(wanted):
@@ -179,10 +179,10 @@ def seed_questions(db: Session, content_dir: Path, category_ids: dict[str, int])
             # Render boot runs this). Deleting and recreating them would 400
             # in-flight quizzes that still hold the old alternative ids.
             if q_in.type == QuestionType.MULTIPLE_CHOICE:
-                _sync_options(question, q_in.options)
+                sync_options(question, q_in.options)
                 question.accepted_answers.clear()
             else:
                 question.options.clear()
-                _sync_accepted_answers(question, q_in.accepted_answers)
+                sync_accepted_answers(question, q_in.accepted_answers)
     db.flush()
     return created, updated

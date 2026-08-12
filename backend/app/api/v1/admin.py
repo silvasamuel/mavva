@@ -11,8 +11,6 @@ from app.data.books import BOOKS
 from app.models import (
     Category,
     Question,
-    QuestionAnswer,
-    QuestionOption,
     User,
     UserStats,
 )
@@ -30,6 +28,7 @@ from app.schemas.admin import (
     ContentPublishOut,
     ContentStatusOut,
 )
+from app.seeds.questions import OptionIn, sync_accepted_answers, sync_options
 from app.services import content_sync
 from app.services.content_sync import ContentSyncError
 
@@ -227,10 +226,9 @@ def update_question(
                 status.HTTP_400_BAD_REQUEST,
                 "Múltipla escolha exige 4 alternativas e exatamente 1 correta",
             )
-        question.options.clear()
-        question.options.extend(
-            QuestionOption(text=o["text"], is_correct=o["is_correct"], position=i)
-            for i, o in enumerate(options)
+        sync_options(
+            question,
+            [OptionIn(text=o["text"], correct=o["is_correct"]) for o in options],
         )
     if "accepted_answers" in data:
         if question.type != QuestionType.OPEN_ANSWER:
@@ -240,10 +238,7 @@ def update_question(
         answers = data.pop("accepted_answers")
         if not answers:
             raise HTTPException(status.HTTP_400_BAD_REQUEST, "Informe ao menos uma resposta aceita")
-        question.accepted_answers.clear()
-        question.accepted_answers.extend(
-            QuestionAnswer(text=a["text"].strip(), position=i) for i, a in enumerate(answers)
-        )
+        sync_accepted_answers(question, [a["text"] for a in answers])
 
     if "tags" in data:
         question.tags = [t.strip().lower() for t in data.pop("tags")]

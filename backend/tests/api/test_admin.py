@@ -58,6 +58,7 @@ class TestAdminQuestionEditing:
         client = self._admin_client(auth_client, db)
         category = make_category(db)
         question = make_mc_question(db, category)
+        original_ids = [option.id for option in question.options]
 
         response = client.patch(
             f"/api/v1/admin/questions/{question.id}",
@@ -77,6 +78,8 @@ class TestAdminQuestionEditing:
         assert body["text"] == "Pergunta editada pelo admin?"
         assert body["options"][0]["text"] == "Nova correta"
         assert sum(1 for o in body["options"] if o["is_correct"]) == 1
+        db.refresh(question)
+        assert [o.id for o in question.options] == original_ids
 
     def test_multiple_choice_must_have_exactly_one_correct(
         self, auth_client: TestClient, db: Session
@@ -101,6 +104,7 @@ class TestAdminQuestionEditing:
         client = self._admin_client(auth_client, db)
         category = make_category(db)
         question = make_open_question(db, category)
+        original_answer_ids = [answer.id for answer in question.accepted_answers]
         response = client.patch(
             f"/api/v1/admin/questions/{question.id}",
             json={"accepted_answers": [{"text": "Resposta A"}, {"text": "Resposta B"}]},
@@ -110,6 +114,8 @@ class TestAdminQuestionEditing:
             "Resposta A",
             "Resposta B",
         ]
+        db.refresh(question)
+        assert [a.id for a in question.accepted_answers] == original_answer_ids
 
     def test_cannot_put_options_on_open_answer(self, auth_client: TestClient, db: Session):
         client = self._admin_client(auth_client, db)

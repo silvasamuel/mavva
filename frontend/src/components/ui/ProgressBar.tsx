@@ -24,7 +24,7 @@ export function ProgressBar({
         className={`h-full rounded-full ${color}`}
         initial={false}
         animate={{ width: `${percent}%` }}
-        transition={{ type: 'spring', stiffness: 160, damping: 22 }}
+        transition={{ duration: 0.2, ease: 'easeOut' }}
       />
     </div>
   )
