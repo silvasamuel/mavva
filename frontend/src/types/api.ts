@@ -47,6 +47,23 @@ export interface FriendsOverview {
   sent: FriendRequest[]
 }
 
+export interface LeaderboardEntry {
+  position: number
+  total_xp: number
+  is_me: boolean
+  user: PublicUser
+}
+
+export interface GlobalLeaderboard {
+  top: LeaderboardEntry[]
+  me: LeaderboardEntry
+  total_players: number
+}
+
+export interface FriendsLeaderboard {
+  entries: LeaderboardEntry[]
+}
+
 export type DuelStatus = 'open' | 'active' | 'finished' | 'expired' | 'cancelled'
 
 export interface DuelSide {
