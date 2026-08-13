@@ -17,6 +17,7 @@ class User(TimestampMixin, Base):
     username: Mapped[str] = mapped_column(String(20), unique=True, index=True)
     name: Mapped[str] = mapped_column(String(120))
     hashed_password: Mapped[str] = mapped_column(String(255))
+    email_verified_at: Mapped[datetime | None] = mapped_column(default=None)
     role: Mapped[UserRole] = mapped_column(
         Enum(UserRole, name="user_role", values_callable=lambda e: [m.value for m in e]),
         default=UserRole.USER,
@@ -67,6 +68,19 @@ class RefreshToken(Base):
 
 class PasswordResetToken(Base):
     __tablename__ = "password_reset_tokens"
+
+    id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
+    user_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("users.id", ondelete="CASCADE"), index=True
+    )
+    token_hash: Mapped[str] = mapped_column(String(64), unique=True)
+    expires_at: Mapped[datetime]
+    used_at: Mapped[datetime | None] = mapped_column(default=None)
+    created_at: Mapped[datetime] = mapped_column(server_default=func.now())
+
+
+class EmailVerificationToken(Base):
+    __tablename__ = "email_verification_tokens"
 
     id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
     user_id: Mapped[uuid.UUID] = mapped_column(

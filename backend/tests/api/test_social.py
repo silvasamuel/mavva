@@ -7,6 +7,7 @@ from sqlalchemy.orm import Session
 from app.models import Duel, QuestionOption
 from app.services import duel_service
 from tests.factories import make_category, make_mc_question, make_open_question
+from tests.helpers import register_and_login
 
 
 def _badge_xp(client: TestClient, headers: dict[str, str] | None = None) -> int:
@@ -15,12 +16,7 @@ def _badge_xp(client: TestClient, headers: dict[str, str] | None = None) -> int:
 
 
 def _register(client: TestClient, email: str, name: str = "Jogador") -> dict:
-    response = client.post(
-        "/api/v1/auth/register",
-        json={"name": name, "email": email, "password": "senha-forte-123"},
-    )
-    assert response.status_code == 201, response.text
-    return response.json()
+    return register_and_login(client, name=name, email=email)
 
 
 def _auth(token: str) -> dict[str, str]:

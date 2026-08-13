@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
-import { ApiError } from '@/lib/api'
+import { ApiError, api } from '@/lib/api'
 import { AuthLayout } from './AuthLayout'
 import { useAuth } from './AuthContext'
 
@@ -13,6 +13,9 @@ export function LoginPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
+  const [unverified, setUnverified] = useState(false)
+  const [resending, setResending] = useState(false)
+  const [resent, setResent] = useState(false)
   const [submitting, setSubmitting] = useState(false)
 
   if (user) return <Navigate to="/" replace />
@@ -20,14 +23,27 @@ export function LoginPage() {
   async function handleSubmit(event: React.FormEvent) {
     event.preventDefault()
     setError('')
+    setUnverified(false)
+    setResent(false)
     setSubmitting(true)
     try {
       await login(email, password)
       navigate((location.state as { from?: string } | null)?.from ?? '/', { replace: true })
     } catch (err) {
+      setUnverified(err instanceof ApiError && err.status === 403)
       setError(err instanceof ApiError ? err.message : 'Não foi possível entrar. Tente novamente.')
     } finally {
       setSubmitting(false)
+    }
+  }
+
+  async function handleResend() {
+    setResending(true)
+    try {
+      await api.post('/auth/resend-verification', { email })
+    } finally {
+      setResent(true)
+      setResending(false)
     }
   }
 
@@ -56,6 +72,18 @@ export function LoginPage() {
           <p role="alert" className="rounded-xl bg-red-50 px-3 py-2 text-sm font-semibold text-red-700">
             {error}
           </p>
+        )}
+        {unverified && (
+          <div className="space-y-2">
+            {resent && (
+              <p className="text-sm font-semibold text-leaf-700">
+                Se a conta ainda não estiver confirmada, um novo link foi enviado.
+              </p>
+            )}
+            <Button type="button" full loading={resending} onClick={() => void handleResend()}>
+              Reenviar e-mail de confirmação
+            </Button>
+          </div>
         )}
         <Button type="submit" full loading={submitting}>
           Entrar

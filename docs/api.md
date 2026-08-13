@@ -7,12 +7,14 @@ Erros seguem o formato `{"detail": "mensagem"}` (padrão FastAPI) com status HTT
 
 | Método | Rota | Descrição |
 |---|---|---|
-| POST | `/auth/register` | Cria conta. Body: `{name, email, password}`. Retorna tokens + user. |
-| POST | `/auth/login` | Body: `{email, password}`. Retorna `{access_token, user}` + cookie httpOnly `refresh_token`. |
+| POST | `/auth/register` | Cria conta **não verificada**. Body: `{name, email, password}`. Envia e-mail de confirmação. **Não** emite tokens. 409 se o e-mail já existe. |
+| POST | `/auth/verify-email` | Body: `{token}`. Confirma a conta, emite `{access_token, user}` + cookie `refresh_token`. |
+| POST | `/auth/resend-verification` | Body: `{email}`. Sempre 202 (não revela existência). Invalida links anteriores. |
+| POST | `/auth/login` | Body: `{email, password}`. 401 se senha errada; **403** se a conta ainda não confirmou o e-mail. Retorna `{access_token, user}` + cookie httpOnly `refresh_token`. |
 | POST | `/auth/refresh` | Usa o cookie; rotaciona o refresh e retorna novo `access_token`. Reuso de token revogado ⇒ 401 + revogação da cadeia. |
 | POST | `/auth/logout` | Revoga o refresh atual e limpa o cookie. |
 | POST | `/auth/forgot-password` | Body: `{email}`. Sempre 202 (não revela existência). Envia e-mail com token. |
-| POST | `/auth/reset-password` | Body: `{token, new_password}`. Invalida todos os refresh tokens do usuário. |
+| POST | `/auth/reset-password` | Body: `{token, new_password}`. Invalida todos os refresh tokens do usuário. Também confirma o e-mail, se ainda não estiver. |
 
 ```jsonc
 // 200 POST /auth/login

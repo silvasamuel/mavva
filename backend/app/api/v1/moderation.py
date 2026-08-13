@@ -1,6 +1,7 @@
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, HTTPException, Request, status
 
 from app.core.deps import CurrentUser, DbDep
+from app.core.ratelimit import limiter
 from app.schemas.moderation import (
     FlagCreateRequest,
     FlagCreateResponse,
@@ -14,7 +15,10 @@ router = APIRouter(tags=["moderation"])
 
 
 @router.post("/flags", status_code=status.HTTP_201_CREATED, response_model=FlagCreateResponse)
-def report_question(body: FlagCreateRequest, user: CurrentUser, db: DbDep) -> FlagCreateResponse:
+@limiter.limit("20/hour")
+def report_question(
+    request: Request, body: FlagCreateRequest, user: CurrentUser, db: DbDep
+) -> FlagCreateResponse:
     try:
         flag = moderation_service.create_flag(
             db,
@@ -33,7 +37,10 @@ def report_question(body: FlagCreateRequest, user: CurrentUser, db: DbDep) -> Fl
 @router.post(
     "/proposals", status_code=status.HTTP_201_CREATED, response_model=ProposalCreateResponse
 )
-def submit_question(body: QuestionDraft, user: CurrentUser, db: DbDep) -> ProposalCreateResponse:
+@limiter.limit("10/hour")
+def submit_question(
+    request: Request, body: QuestionDraft, user: CurrentUser, db: DbDep
+) -> ProposalCreateResponse:
     try:
         proposal = moderation_service.create_proposal(db, user, body)
     except ModerationError as error:

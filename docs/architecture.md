@@ -120,7 +120,7 @@ HTTP (api/v1/*)  →  Services (regra de negócio)  →  Models/DB (SQLAlchemy)
 
 - **Vite + React 18 + TypeScript strict.**
 - **Rotas** (React Router): públicas (`/login`, `/register`, `/forgot-password`,
-  `/reset-password`) e protegidas via `<RequireAuth>` (`/`, `/quiz/*`, `/review`,
+  `/reset-password`, `/verify-email`) e protegidas via `<RequireAuth>` (`/`, `/quiz/*`, `/review`,
   `/achievements`, `/profile`).
 - **apiClient:** wrapper de `fetch` que injeta o access token, e num `401` tenta
   `/auth/refresh` uma vez (fila de requests pendentes) antes de deslogar.
@@ -181,8 +181,12 @@ Deploy contínuo: Vercel e Render observam a `main` (deploy automático após CI
 ## 9. Segurança
 
 - Senhas: bcrypt (via passlib), custo 12.
-- Rate limiting nos endpoints de auth (slowapi) — mitiga brute force.
+- Rate limiting (slowapi) por IP real (`X-Forwarded-For` em produção): auth
+  (login/register 10/min, reset/resend 5/min), denúncias (20/h), sugestões (10/h),
+  criação de quiz (30/min) e busca de amigos (60/min).
 - CORS restrito às origens conhecidas (localhost em dev, domínio Vercel em prod).
-- Nunca revelar se um e-mail existe (`/forgot-password` responde 200 sempre).
+- Nunca revelar se um e-mail existe (`/forgot-password` e
+  `/resend-verification` respondem 202 sempre).
+- Cadastro exige confirmação de e-mail antes de login e de qualquer rota autenticada.
 - Refresh token: httpOnly + Secure + rotação + detecção de reuso.
 - Headers de segurança no frontend via `vercel.json` (CSP básica, X-Frame-Options).

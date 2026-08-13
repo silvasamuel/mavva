@@ -18,6 +18,7 @@ from app.db.base import Base
 from app.db.session import get_db
 from app.main import app
 from app.seeds.achievements import seed_achievements
+from tests.helpers import register_and_login, verification_tokens
 
 
 def _ensure_database_exists(database_url: str) -> None:
@@ -59,6 +60,15 @@ def db(engine: Engine) -> Generator[Session, None, None]:
     connection.close()
 
 
+@pytest.fixture(autouse=True)
+def stub_verification_email(monkeypatch: pytest.MonkeyPatch) -> None:
+    verification_tokens.clear()
+    monkeypatch.setattr(
+        "app.api.v1.auth.email_service.send_email_verification",
+        lambda email, _name, token: verification_tokens.update({email.strip().lower(): token}),
+    )
+
+
 @pytest.fixture
 def client(db: Session) -> Generator[TestClient, None, None]:
     app.dependency_overrides[get_db] = lambda: db
@@ -69,12 +79,7 @@ def client(db: Session) -> Generator[TestClient, None, None]:
 
 @pytest.fixture
 def auth_client(client: TestClient) -> TestClient:
-    """Client already registered and authenticated as a fresh user."""
-    response = client.post(
-        "/api/v1/auth/register",
-        json={"name": "Samuel Teste", "email": "samuel@teste.com", "password": "senha-forte-123"},
-    )
-    assert response.status_code == 201, response.text
-    token = response.json()["access_token"]
-    client.headers["Authorization"] = f"Bearer {token}"
+    """Client already registered, verified, and authenticated as a fresh user."""
+    body = register_and_login(client)
+    client.headers["Authorization"] = f"Bearer {body['access_token']}"
     return client
