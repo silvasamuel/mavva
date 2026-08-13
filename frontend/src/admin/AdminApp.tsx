@@ -1,16 +1,26 @@
 import { useState } from 'react'
+import { useQuery } from '@tanstack/react-query'
+import { api } from '@/lib/api'
 import { Spinner } from '@/components/ui/Spinner'
 import { useAdminAuth } from './useAdminAuth'
 import { AdminLogin } from './AdminLogin'
 import { UsersPanel } from './UsersPanel'
 import { QuestionsPanel } from './QuestionsPanel'
+import { ReviewPanel } from './ReviewPanel'
 import { PublishBar } from './PublishBar'
+import type { AdminReviewInbox } from './types'
 
-type Tab = 'questions' | 'users'
+type Tab = 'review' | 'questions' | 'users'
 
 export function AdminApp() {
   const { status, user, login, logout } = useAdminAuth()
   const [tab, setTab] = useState<Tab>('questions')
+  const { data: inbox } = useQuery({
+    queryKey: ['admin', 'review'],
+    queryFn: () => api.get<AdminReviewInbox>('/admin/review'),
+    enabled: status === 'admin',
+  })
+  const reviewCount = (inbox?.open_flags ?? 0) + (inbox?.pending_proposals ?? 0)
 
   if (status === 'loading') {
     return (
@@ -46,9 +56,10 @@ export function AdminApp() {
 
       <div className="mx-auto max-w-6xl px-4 py-6 md:px-8">
         <PublishBar />
-        <nav className="mb-6 flex gap-2">
+        <nav className="mb-6 flex flex-wrap gap-2">
           {(
             [
+              ['review', '🔎 Revisão'],
               ['questions', '📖 Perguntas'],
               ['users', '👥 Usuários'],
             ] as [Tab, string][]
@@ -62,11 +73,22 @@ export function AdminApp() {
               }`}
             >
               {label}
+              {value === 'review' && reviewCount > 0 && (
+                <span className="ml-2 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-grain-400 px-1.5 text-[10px] font-extrabold text-grain-900">
+                  {reviewCount}
+                </span>
+              )}
             </button>
           ))}
         </nav>
 
-        {tab === 'questions' ? <QuestionsPanel /> : <UsersPanel />}
+        {tab === 'review' ? (
+          <ReviewPanel />
+        ) : tab === 'questions' ? (
+          <QuestionsPanel />
+        ) : (
+          <UsersPanel />
+        )}
       </div>
     </div>
   )

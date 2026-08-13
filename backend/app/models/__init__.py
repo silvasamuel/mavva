@@ -4,6 +4,7 @@ from app.models.gamification import (
     ReviewItem,
     UserAchievement,
 )
+from app.models.moderation import QuestionFlag, QuestionProposal
 from app.models.question import Category, Question, QuestionAnswer, QuestionOption
 from app.models.quiz import QuizAnswer, QuizSession, QuizSessionQuestion
 from app.models.social import Duel, Friendship
@@ -18,7 +19,9 @@ __all__ = [
     "PasswordResetToken",
     "Question",
     "QuestionAnswer",
+    "QuestionFlag",
     "QuestionOption",
+    "QuestionProposal",
     "QuizAnswer",
     "QuizSession",
     "QuizSessionQuestion",

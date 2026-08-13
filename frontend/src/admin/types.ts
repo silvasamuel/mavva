@@ -1,4 +1,4 @@
-import type { Difficulty, QuestionType, Testament } from '@/types/api'
+import type { Difficulty, FlagReason, QuestionDraft, QuestionType, Testament } from '@/types/api'
 
 export interface AdminUser {
   id: string
@@ -104,4 +104,35 @@ export interface ContentPublish {
   mode: 'github' | 'local'
   published: string[]
   commit_url: string | null
+}
+
+export interface AdminFlag {
+  id: string
+  created_at: string
+  reason: FlagReason
+  comment: string | null
+  status: 'open' | 'resolved' | 'dismissed'
+  reporter_name: string
+  reporter_username: string
+  question_id: string
+  question_text: string
+  question_external_id: string
+  question_active: boolean
+}
+
+export interface AdminProposal {
+  id: string
+  created_at: string
+  status: 'pending' | 'approved' | 'rejected'
+  author_name: string
+  author_username: string
+  payload: QuestionDraft
+  question_id: string | null
+}
+
+export interface AdminReviewInbox {
+  open_flags: number
+  pending_proposals: number
+  flags: AdminFlag[]
+  proposals: AdminProposal[]
 }

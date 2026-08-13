@@ -21,6 +21,7 @@ const NAV_ITEMS: NavItem[] = [
   { to: '/friends', label: 'Amigos', icon: '🤝' },
   { to: '/ranking', label: 'Ranking', icon: '🏆' },
   { to: '/achievements', label: 'Conquistas', icon: '🏅' },
+  { to: '/suggest', label: 'Sugerir', icon: '✍️' },
   { to: '/profile', label: 'Perfil', icon: '👤' },
 ]
 
@@ -37,6 +38,7 @@ const MORE_ITEMS: NavItem[] = [
   { to: '/friends', label: 'Amigos', icon: '🤝' },
   { to: '/ranking', label: 'Ranking', icon: '🏆' },
   { to: '/achievements', label: 'Conquistas', icon: '🏅' },
+  { to: '/suggest', label: 'Sugerir', icon: '✍️' },
   { to: '/profile', label: 'Perfil', icon: '👤' },
 ]
 

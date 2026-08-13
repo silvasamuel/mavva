@@ -18,6 +18,7 @@ import { DuelsPage } from '@/features/duels/DuelsPage'
 import { DuelResultPage } from '@/features/duels/DuelResultPage'
 import { FriendsPage } from '@/features/friends/FriendsPage'
 import { RankingPage } from '@/features/ranking/RankingPage'
+import { SuggestQuestionPage } from '@/features/moderation/SuggestQuestionPage'
 import { AppShell } from './AppShell'
 import { RequireAuth } from './RequireAuth'
 
@@ -54,6 +55,7 @@ export default function App() {
                 <Route path="/friends" element={<FriendsPage />} />
                 <Route path="/ranking" element={<RankingPage />} />
                 <Route path="/achievements" element={<AchievementsPage />} />
+                <Route path="/suggest" element={<SuggestQuestionPage />} />
                 <Route path="/profile" element={<ProfilePage />} />
               </Route>
             </Route>
