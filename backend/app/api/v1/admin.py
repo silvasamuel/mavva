@@ -179,22 +179,27 @@ def content_status(_admin: AdminUser, db: DbDep) -> ContentStatusOut:
 def content_publish(_admin: AdminUser, db: DbDep) -> ContentPublishOut:
     """Writes the DB question bank back to content/questions/*.json.
 
-    Local mode writes to disk (review via git); github mode lands every dirty
-    file in one commit on the configured branch, whose deploy re-seeds the DB.
+    Local mode writes to disk (review via git); github mode opens (or updates)
+    a pull request against the configured base branch.
     """
     files = content_sync.rendered_files(db)
     try:
         dirty = content_sync.dirty_files(db, files)
         if not dirty:
-            return ContentPublishOut(mode=content_sync.write_mode(), published=[], commit_url=None)
-        commit_url = content_sync.publish(
+            return ContentPublishOut(
+                mode=content_sync.write_mode(), published=[], commit_url=None, pr_url=None
+            )
+        result = content_sync.publish(
             {path: files[path] for path in dirty},
             "content: update questions from admin panel",
         )
     except ContentSyncError as error:
         raise HTTPException(status.HTTP_502_BAD_GATEWAY, error.message) from error
     return ContentPublishOut(
-        mode=content_sync.write_mode(), published=sorted(dirty), commit_url=commit_url
+        mode=content_sync.write_mode(),
+        published=sorted(dirty),
+        commit_url=result.commit_url,
+        pr_url=result.pr_url,
     )
 
 

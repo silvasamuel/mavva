@@ -98,9 +98,10 @@ HTTP (api/v1/*)  →  Services (regra de negócio)  →  Models/DB (SQLAlchemy)
   (prod) e middleware de dev do Vite (local).
 - Edições do admin gravam **no banco** (dado vivo) e são **publicadas de volta**
   para `content/questions/*.json` pelo botão "Publicar" (`POST /admin/content/publish`):
-  em dev escreve nos arquivos (revisão via git); em produção cria **um commit** na
-  `main` via API do GitHub (`GITHUB_TOKEN`, PAT fine-grained só com `contents:write`) —
-  o deploy disparado pelo commit roda o seed e realinha o banco, fechando o ciclo.
+  em dev escreve nos arquivos (revisão via git); em produção abre **um pull request**
+  contra a `main` via API do GitHub (`GITHUB_TOKEN`, PAT fine-grained com
+  `contents:write` e `pull-requests:write`). Publicar de novo atualiza o mesmo PR.
+  O merge dispara o deploy, o seed realinha o banco e fecha o ciclo.
   O serializador regenera os arquivos no formato canônico do seed (diffs mínimos)
   e `is_active` faz parte do schema, então desativações sobrevivem ao re-seed.
 

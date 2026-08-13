@@ -98,6 +98,7 @@ export interface ContentPublish {
   mode: 'github' | 'local'
   published: string[]
   commit_url: string | null
+  pr_url: string | null
 }
 
 export interface AdminFlag {
