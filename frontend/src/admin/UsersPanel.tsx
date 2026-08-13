@@ -46,10 +46,11 @@ export function UsersPanel({ adminId }: { adminId: string }) {
         </div>
       ) : (
         <Card className="overflow-x-auto p-0">
-          <table className="w-full min-w-[720px] text-left text-sm">
+          <table className="w-full min-w-[880px] text-left text-sm">
             <thead className="border-b border-sand-100 text-xs font-extrabold uppercase tracking-wide text-sand-500">
               <tr>
                 <th className="px-4 py-3">Usuário</th>
+                <th className="px-4 py-3">E-mail</th>
                 <th className="px-4 py-3">Status</th>
                 <th className="px-4 py-3">Papel</th>
                 <th className="px-4 py-3">Nível / XP</th>
@@ -68,29 +69,18 @@ export function UsersPanel({ adminId }: { adminId: string }) {
                 >
                   <td className="px-4 py-3">
                     <p className="font-bold text-ink">{u.name}</p>
-                    <p className="text-xs text-sand-500">
-                      @{u.username} · {u.email}
-                    </p>
+                    <p className="text-xs font-semibold text-sand-500">@{u.username}</p>
+                    <p className="text-xs text-sand-400">{u.email}</p>
                   </td>
                   <td className="px-4 py-3">
-                    <div className="flex flex-col gap-1">
-                      <span
-                        className={`w-fit rounded-full px-2 py-0.5 text-xs font-extrabold ${
-                          u.is_active ? 'bg-leaf-100 text-leaf-700' : 'bg-red-50 text-red-700'
-                        }`}
-                      >
-                        {u.is_active ? 'Ativo' : 'Inativo'}
-                      </span>
-                      <span
-                        className={`w-fit rounded-full px-2 py-0.5 text-xs font-extrabold ${
-                          u.email_verified_at
-                            ? 'bg-leaf-100 text-leaf-700'
-                            : 'bg-red-50 text-red-700'
-                        }`}
-                      >
-                        {u.email_verified_at ? 'E-mail ok' : 'Não confirmou'}
-                      </span>
-                    </div>
+                    <Badge
+                      ok={Boolean(u.email_verified_at)}
+                      okLabel="Confirmado"
+                      badLabel="Não confirmou"
+                    />
+                  </td>
+                  <td className="px-4 py-3">
+                    <Badge ok={u.is_active} okLabel="Ativo" badLabel="Inativo" />
                   </td>
                   <td className="px-4 py-3">
                     <span
@@ -124,7 +114,7 @@ export function UsersPanel({ adminId }: { adminId: string }) {
               ))}
               {data.items.length === 0 && (
                 <tr>
-                  <td colSpan={8} className="px-4 py-10 text-center text-sand-500">
+                  <td colSpan={9} className="px-4 py-10 text-center text-sand-500">
                     Nenhum usuário encontrado.
                   </td>
                 </tr>
@@ -146,6 +136,26 @@ export function UsersPanel({ adminId }: { adminId: string }) {
         />
       )}
     </div>
+  )
+}
+
+function Badge({
+  ok,
+  okLabel,
+  badLabel,
+}: {
+  ok: boolean
+  okLabel: string
+  badLabel: string
+}) {
+  return (
+    <span
+      className={`inline-block rounded-full px-2 py-0.5 text-xs font-extrabold ${
+        ok ? 'bg-leaf-100 text-leaf-700' : 'bg-red-50 text-red-700'
+      }`}
+    >
+      {ok ? okLabel : badLabel}
+    </span>
   )
 }
 
