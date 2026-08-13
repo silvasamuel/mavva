@@ -32,14 +32,7 @@
         "verse_start": 1,
         "verse_end": 11
       },
-      "theme": "Glória de Cristo",
-      "difficulty": "easy",
-      "subcategory": "Milagres de Jesus",
-      "tags": [
-        "cana",
-        "milagre",
-        "joao"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "evangelhos-0002",
@@ -60,14 +53,7 @@
         "verse_start": 1,
         "verse_end": 2
       },
-      "theme": "Tentação",
-      "difficulty": "easy",
-      "subcategory": "Vida de Jesus",
-      "tags": [
-        "jejum",
-        "deserto",
-        "tentacao"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "evangelhos-0003",
@@ -100,14 +86,7 @@
         "verse_start": 43,
         "verse_end": 46
       },
-      "theme": "Sepultamento de Jesus",
-      "difficulty": "medium",
-      "subcategory": "Paixão de Cristo",
-      "tags": [
-        "jose de arimateia",
-        "sepultamento",
-        "pilatos"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "evangelhos-0004",
@@ -140,14 +119,7 @@
         "verse_start": 1,
         "verse_end": 8
       },
-      "theme": "Transfiguração",
-      "difficulty": "easy",
-      "subcategory": "Vida de Jesus",
-      "tags": [
-        "transfiguracao",
-        "moises",
-        "elias"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "evangelhos-0005",
@@ -180,14 +152,7 @@
         "verse_start": 9,
         "verse_end": 13
       },
-      "theme": "Chamado",
-      "difficulty": "easy",
-      "subcategory": "Os Doze",
-      "tags": [
-        "mateus",
-        "levi",
-        "publicano"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "evangelhos-0006",
@@ -206,14 +171,7 @@
         "verse_start": 13,
         "verse_end": 17
       },
-      "theme": "Batismo",
-      "difficulty": "easy",
-      "subcategory": "Vida de Jesus",
-      "tags": [
-        "batismo",
-        "jordao",
-        "joao batista"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "evangelhos-0007",
@@ -246,14 +204,7 @@
         "verse_start": 21,
         "verse_end": 22
       },
-      "theme": "Perdão",
-      "difficulty": "medium",
-      "subcategory": "Ensinos de Jesus",
-      "tags": [
-        "perdao",
-        "pedro",
-        "setenta vezes sete"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "evangelhos-0008",
@@ -286,14 +237,7 @@
         "verse_start": 1,
         "verse_end": 10
       },
-      "theme": "Salvação",
-      "difficulty": "easy",
-      "subcategory": "Encontros com Jesus",
-      "tags": [
-        "zaqueu",
-        "jerico",
-        "sicomoro"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "evangelhos-0009",
@@ -326,14 +270,7 @@
         "verse_start": 14,
         "verse_end": null
       },
-      "theme": "Autoria dos Evangelhos",
-      "difficulty": "medium",
-      "subcategory": "Os evangelistas",
-      "tags": [
-        "lucas",
-        "paulo",
-        "medico"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "evangelhos-0010",
@@ -354,14 +291,7 @@
         "verse_start": 32,
         "verse_end": null
       },
-      "theme": "Paixão de Cristo",
-      "difficulty": "medium",
-      "subcategory": "Paixão de Cristo",
-      "tags": [
-        "simao cireneu",
-        "cruz",
-        "calvario"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "evangelhos-0011",
@@ -394,13 +324,7 @@
         "verse_start": 20,
         "verse_end": null
       },
-      "theme": "Provisão",
-      "difficulty": "easy",
-      "subcategory": "Milagres de Jesus",
-      "tags": [
-        "multiplicacao",
-        "paes"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "evangelhos-0012",
@@ -433,13 +357,7 @@
         "verse_start": 37,
         "verse_end": 39
       },
-      "theme": "Amor",
-      "difficulty": "easy",
-      "subcategory": "Ensinos de Jesus",
-      "tags": [
-        "mandamento",
-        "amor"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "evangelhos-0013",
@@ -472,13 +390,7 @@
         "verse_start": 9,
         "verse_end": null
       },
-      "theme": "Bem-aventuranças",
-      "difficulty": "medium",
-      "subcategory": "Sermão do Monte",
-      "tags": [
-        "pacificadores",
-        "bem-aventurancas"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "evangelhos-0014",
@@ -499,13 +411,7 @@
         "verse_start": 17,
         "verse_end": null
       },
-      "theme": "Crucificação",
-      "difficulty": "medium",
-      "subcategory": "Paixão de Cristo",
-      "tags": [
-        "golgota",
-        "cruz"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "evangelhos-0015",
@@ -538,13 +444,7 @@
         "verse_start": 48,
         "verse_end": 49
       },
-      "theme": "Traição",
-      "difficulty": "easy",
-      "subcategory": "Paixão de Cristo",
-      "tags": [
-        "judas",
-        "traicao"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "evangelhos-0016",
@@ -577,13 +477,7 @@
         "verse_start": 17,
         "verse_end": 28
       },
-      "theme": "Martírio",
-      "difficulty": "medium",
-      "subcategory": "João Batista",
-      "tags": [
-        "joao batista",
-        "herodes"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "evangelhos-0017",
@@ -616,13 +510,7 @@
         "verse_start": 43,
         "verse_end": null
       },
-      "theme": "Graça",
-      "difficulty": "medium",
-      "subcategory": "Paixão de Cristo",
-      "tags": [
-        "ladrao",
-        "paraiso"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "evangelhos-0018",
@@ -640,13 +528,7 @@
         "verse_start": 40,
         "verse_end": 42
       },
-      "theme": "Chamado",
-      "difficulty": "easy",
-      "subcategory": "Os Doze",
-      "tags": [
-        "andre",
-        "pedro"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "evangelhos-0019",
@@ -679,13 +561,7 @@
         "verse_start": 14,
         "verse_end": null
       },
-      "theme": "Encarnação",
-      "difficulty": "hard",
-      "subcategory": "Prólogo de João",
-      "tags": [
-        "verbo",
-        "encarnacao"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "evangelhos-0020",
@@ -718,13 +594,7 @@
         "verse_start": 5,
         "verse_end": 7
       },
-      "theme": "Entrada triunfal",
-      "difficulty": "easy",
-      "subcategory": "Semana da Paixão",
-      "tags": [
-        "jumentinho",
-        "hosana"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "evangelhos-0021",
@@ -743,13 +613,7 @@
         "verse_start": 36,
         "verse_end": 38
       },
-      "theme": "Infância de Jesus",
-      "difficulty": "expert",
-      "subcategory": "Personagens",
-      "tags": [
-        "ana",
-        "templo"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "evangelhos-0022",
@@ -782,13 +646,7 @@
         "verse_start": 8,
         "verse_end": 9
       },
-      "theme": "Milagres",
-      "difficulty": "expert",
-      "subcategory": "Os Doze",
-      "tags": [
-        "andre",
-        "paes"
-      ]
+      "difficulty": "expert"
     }
   ]
 }

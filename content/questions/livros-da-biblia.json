@@ -32,14 +32,7 @@
         "verse_start": 1,
         "verse_end": 6
       },
-      "theme": "Estrutura das Escrituras",
-      "difficulty": "easy",
-      "subcategory": "Antigo Testamento",
-      "tags": [
-        "salmos",
-        "capitulos",
-        "hinario"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "livros-da-biblia-0002",
@@ -72,14 +65,7 @@
         "verse_start": 1,
         "verse_end": 4
       },
-      "theme": "Autoria e destinatários",
-      "difficulty": "medium",
-      "subcategory": "Novo Testamento",
-      "tags": [
-        "lucas",
-        "atos",
-        "teofilo"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "livros-da-biblia-0003",
@@ -98,14 +84,7 @@
         "verse_start": 18,
         "verse_end": 19
       },
-      "theme": "Cânon",
-      "difficulty": "easy",
-      "subcategory": "Novo Testamento",
-      "tags": [
-        "canon",
-        "novo testamento",
-        "27 livros"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "livros-da-biblia-0004",
@@ -138,14 +117,7 @@
         "verse_start": 13,
         "verse_end": 14
       },
-      "theme": "Providência",
-      "difficulty": "hard",
-      "subcategory": "Antigo Testamento",
-      "tags": [
-        "ester",
-        "providencia",
-        "nome de deus"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "livros-da-biblia-0005",
@@ -178,14 +150,7 @@
         "verse_start": 24,
         "verse_end": 26
       },
-      "theme": "Estrutura das Escrituras",
-      "difficulty": "easy",
-      "subcategory": "Antigo Testamento",
-      "tags": [
-        "pentateuco",
-        "tora",
-        "moises"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "livros-da-biblia-0006",
@@ -218,14 +183,7 @@
         "verse_start": 16,
         "verse_end": 17
       },
-      "theme": "Justificação pela fé",
-      "difficulty": "easy",
-      "subcategory": "Novo Testamento",
-      "tags": [
-        "romanos",
-        "paulo",
-        "justificacao"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "livros-da-biblia-0007",
@@ -244,14 +202,7 @@
         "verse_start": 1,
         "verse_end": 21
       },
-      "theme": "Profetas menores",
-      "difficulty": "hard",
-      "subcategory": "Antigo Testamento",
-      "tags": [
-        "obadias",
-        "edom",
-        "menor livro"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "livros-da-biblia-0008",
@@ -284,14 +235,7 @@
         "verse_start": 14,
         "verse_end": 16
       },
-      "theme": "Supremacia de Cristo",
-      "difficulty": "medium",
-      "subcategory": "Novo Testamento",
-      "tags": [
-        "hebreus",
-        "sumo sacerdote",
-        "superioridade"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "livros-da-biblia-0009",
@@ -324,14 +268,7 @@
         "verse_start": 13,
         "verse_end": 17
       },
-      "theme": "Estrutura das Escrituras",
-      "difficulty": "easy",
-      "subcategory": "Antigo Testamento",
-      "tags": [
-        "rute",
-        "ester",
-        "mulheres"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "livros-da-biblia-0010",
@@ -364,14 +301,7 @@
         "verse_start": 9,
         "verse_end": 11
       },
-      "theme": "Autoria e destinatários",
-      "difficulty": "easy",
-      "subcategory": "Novo Testamento",
-      "tags": [
-        "joao",
-        "patmos",
-        "apocalipse"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "livros-da-biblia-0011",
@@ -404,13 +334,7 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "theme": "Estrutura",
-      "difficulty": "medium",
-      "subcategory": "Poéticos",
-      "tags": [
-        "salmos",
-        "capitulos"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "livros-da-biblia-0012",
@@ -443,13 +367,7 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "theme": "Curiosidades",
-      "difficulty": "hard",
-      "subcategory": "Históricos",
-      "tags": [
-        "ester",
-        "providencia"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "livros-da-biblia-0013",
@@ -482,13 +400,7 @@
         "verse_start": 1,
         "verse_end": 2
       },
-      "theme": "Conteúdo",
-      "difficulty": "medium",
-      "subcategory": "Históricos do NT",
-      "tags": [
-        "atos",
-        "teofilo"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "livros-da-biblia-0014",
@@ -521,13 +433,7 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "theme": "Cartas",
-      "difficulty": "hard",
-      "subcategory": "Cartas paulinas",
-      "tags": [
-        "romanos",
-        "paulo"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "livros-da-biblia-0015",
@@ -560,13 +466,7 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "theme": "Conteúdo",
-      "difficulty": "hard",
-      "subcategory": "Profetas maiores",
-      "tags": [
-        "ezequiel",
-        "ossos"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "livros-da-biblia-0016",
@@ -599,13 +499,7 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "theme": "Conteúdo",
-      "difficulty": "medium",
-      "subcategory": "Poéticos",
-      "tags": [
-        "proverbios",
-        "salomao"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "livros-da-biblia-0017",
@@ -638,13 +532,7 @@
         "verse_start": 1,
         "verse_end": 3
       },
-      "theme": "Conteúdo",
-      "difficulty": "expert",
-      "subcategory": "Cartas gerais",
-      "tags": [
-        "hebreus",
-        "cristo"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "livros-da-biblia-0018",
@@ -677,13 +565,7 @@
         "verse_start": 21,
         "verse_end": null
       },
-      "theme": "Estrutura",
-      "difficulty": "easy",
-      "subcategory": "Profético do NT",
-      "tags": [
-        "apocalipse",
-        "canon"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "livros-da-biblia-0019",
@@ -701,13 +583,7 @@
         "verse_start": 16,
         "verse_end": 17
       },
-      "theme": "Conteúdo",
-      "difficulty": "hard",
-      "subcategory": "Históricos",
-      "tags": [
-        "rute",
-        "moabita"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "livros-da-biblia-0020",
@@ -740,13 +616,7 @@
         "verse_start": 17,
         "verse_end": 18
       },
-      "theme": "Conteúdo",
-      "difficulty": "medium",
-      "subcategory": "Históricos",
-      "tags": [
-        "neemias",
-        "muros"
-      ]
+      "difficulty": "medium"
     }
   ]
 }

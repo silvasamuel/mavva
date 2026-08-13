@@ -32,14 +32,7 @@
         "verse_start": 8,
         "verse_end": 10
       },
-      "theme": "Salvação",
-      "difficulty": "easy",
-      "subcategory": "Soteriologia",
-      "tags": [
-        "graca",
-        "fe",
-        "salvacao"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "doutrinas-0002",
@@ -72,14 +65,7 @@
         "verse_start": 18,
         "verse_end": 20
       },
-      "theme": "Trindade",
-      "difficulty": "easy",
-      "subcategory": "Teologia própria",
-      "tags": [
-        "trindade",
-        "batismo",
-        "grande comissao"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "doutrinas-0003",
@@ -112,14 +98,7 @@
         "verse_start": 1,
         "verse_end": 8
       },
-      "theme": "Regeneração",
-      "difficulty": "easy",
-      "subcategory": "Soteriologia",
-      "tags": [
-        "novo nascimento",
-        "nicodemos",
-        "regeneracao"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "doutrinas-0004",
@@ -152,14 +131,7 @@
         "verse_start": 1,
         "verse_end": 14
       },
-      "theme": "Cristologia",
-      "difficulty": "medium",
-      "subcategory": "Cristologia",
-      "tags": [
-        "encarnacao",
-        "verbo",
-        "joao"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "doutrinas-0005",
@@ -192,14 +164,7 @@
         "verse_start": 21,
         "verse_end": 26
       },
-      "theme": "Pecado",
-      "difficulty": "easy",
-      "subcategory": "Hamartiologia",
-      "tags": [
-        "pecado",
-        "universalidade",
-        "romanos"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "doutrinas-0006",
@@ -232,14 +197,7 @@
         "verse_start": 24,
         "verse_end": 26
       },
-      "theme": "Justificação",
-      "difficulty": "medium",
-      "subcategory": "Soteriologia",
-      "tags": [
-        "justificacao",
-        "graca",
-        "redencao"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "doutrinas-0007",
@@ -259,14 +217,7 @@
         "verse_start": 16,
         "verse_end": 17
       },
-      "theme": "Escrituras",
-      "difficulty": "medium",
-      "subcategory": "Bibliologia",
-      "tags": [
-        "inspiracao",
-        "escritura",
-        "timoteo"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "doutrinas-0008",
@@ -299,14 +250,7 @@
         "verse_start": 12,
         "verse_end": 20
       },
-      "theme": "Ressurreição",
-      "difficulty": "medium",
-      "subcategory": "Cristologia",
-      "tags": [
-        "ressurreicao",
-        "primicias",
-        "evangelho"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "doutrinas-0009",
@@ -339,14 +283,7 @@
         "verse_start": 16,
         "verse_end": 17
       },
-      "theme": "Espírito Santo",
-      "difficulty": "easy",
-      "subcategory": "Pneumatologia",
-      "tags": [
-        "espirito santo",
-        "consolador",
-        "promessa"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "doutrinas-0010",
@@ -379,14 +316,7 @@
         "verse_start": 23,
         "verse_end": 26
       },
-      "theme": "Igreja",
-      "difficulty": "hard",
-      "subcategory": "Eclesiologia",
-      "tags": [
-        "batismo",
-        "ceia",
-        "ordenancas"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "doutrinas-0011",
@@ -419,13 +349,7 @@
         "verse_start": 23,
         "verse_end": null
       },
-      "theme": "Pecado e graça",
-      "difficulty": "medium",
-      "subcategory": "Soteriologia",
-      "tags": [
-        "pecado",
-        "morte"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "doutrinas-0012",
@@ -458,13 +382,7 @@
         "verse_start": 28,
         "verse_end": null
       },
-      "theme": "Justificação",
-      "difficulty": "medium",
-      "subcategory": "Soteriologia",
-      "tags": [
-        "justificacao",
-        "fe"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "doutrinas-0013",
@@ -497,13 +415,7 @@
         "verse_start": 19,
         "verse_end": 20
       },
-      "theme": "Trindade",
-      "difficulty": "hard",
-      "subcategory": "Teologia própria",
-      "tags": [
-        "trindade",
-        "batismo"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "doutrinas-0014",
@@ -536,13 +448,7 @@
         "verse_start": 3,
         "verse_end": 5
       },
-      "theme": "Regeneração",
-      "difficulty": "medium",
-      "subcategory": "Soteriologia",
-      "tags": [
-        "novo nascimento",
-        "nicodemos"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "doutrinas-0015",
@@ -575,13 +481,7 @@
         "verse_start": 20,
         "verse_end": 22
       },
-      "theme": "Ressurreição",
-      "difficulty": "hard",
-      "subcategory": "Escatologia",
-      "tags": [
-        "ressurreicao",
-        "primicias"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "doutrinas-0016",
@@ -600,13 +500,7 @@
         "verse_start": 14,
         "verse_end": null
       },
-      "theme": "Cristologia",
-      "difficulty": "expert",
-      "subcategory": "Teologia própria",
-      "tags": [
-        "encarnacao",
-        "verbo"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "doutrinas-0017",
@@ -639,13 +533,7 @@
         "verse_start": 1,
         "verse_end": 2
       },
-      "theme": "Expiação",
-      "difficulty": "hard",
-      "subcategory": "Soteriologia",
-      "tags": [
-        "propiciacao",
-        "expiacao"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "doutrinas-0018",
@@ -678,13 +566,7 @@
         "verse_start": 26,
         "verse_end": null
       },
-      "theme": "Pneumatologia",
-      "difficulty": "medium",
-      "subcategory": "Teologia própria",
-      "tags": [
-        "espirito santo",
-        "consolador"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "doutrinas-0019",
@@ -717,13 +599,7 @@
         "verse_start": 28,
         "verse_end": 29
       },
-      "theme": "Segurança da salvação",
-      "difficulty": "expert",
-      "subcategory": "Soteriologia",
-      "tags": [
-        "vida eterna",
-        "seguranca"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "doutrinas-0020",
@@ -756,13 +632,7 @@
         "verse_start": 12,
         "verse_end": 16
       },
-      "theme": "Aliança davídica",
-      "difficulty": "hard",
-      "subcategory": "Teologia bíblica",
-      "tags": [
-        "alianca",
-        "davi"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "doutrinas-0021",
@@ -782,13 +652,7 @@
         "verse_start": 6,
         "verse_end": 8
       },
-      "theme": "Cristologia",
-      "difficulty": "expert",
-      "subcategory": "Teologia própria",
-      "tags": [
-        "kenosis",
-        "humilhacao"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "doutrinas-0022",
@@ -821,13 +685,7 @@
         "verse_start": 9,
         "verse_end": null
       },
-      "theme": "Cristologia",
-      "difficulty": "expert",
-      "subcategory": "Teologia própria",
-      "tags": [
-        "uniao hipostatica",
-        "cristo"
-      ]
+      "difficulty": "expert"
     }
   ]
 }

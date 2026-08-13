@@ -32,14 +32,7 @@
         "verse_start": 1,
         "verse_end": 1
       },
-      "theme": "Rios das Escrituras",
-      "difficulty": "medium",
-      "subcategory": "Rios e mares",
-      "tags": [
-        "mar da galileia",
-        "genesare",
-        "tiberiades"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "geografia-biblica-0002",
@@ -72,14 +65,7 @@
         "verse_start": 16,
         "verse_end": 20
       },
-      "theme": "Montes das Escrituras",
-      "difficulty": "easy",
-      "subcategory": "Montes",
-      "tags": [
-        "sinai",
-        "moises",
-        "lei"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "geografia-biblica-0003",
@@ -98,14 +84,7 @@
         "verse_start": 1,
         "verse_end": 3
       },
-      "theme": "Cidades das nações",
-      "difficulty": "easy",
-      "subcategory": "Cidades",
-      "tags": [
-        "ninive",
-        "jonas",
-        "assiria"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "geografia-biblica-0004",
@@ -138,14 +117,7 @@
         "verse_start": 1,
         "verse_end": 9
       },
-      "theme": "Cidades das nações",
-      "difficulty": "easy",
-      "subcategory": "Cidades",
-      "tags": [
-        "damasco",
-        "saulo",
-        "conversao"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "geografia-biblica-0005",
@@ -178,14 +150,7 @@
         "verse_start": 7,
         "verse_end": 7
       },
-      "theme": "Jornadas dos patriarcas",
-      "difficulty": "medium",
-      "subcategory": "Cidades",
-      "tags": [
-        "ur",
-        "abraao",
-        "hara"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "geografia-biblica-0006",
@@ -218,14 +183,7 @@
         "verse_start": 9,
         "verse_end": 12
       },
-      "theme": "Montes das Escrituras",
-      "difficulty": "medium",
-      "subcategory": "Montes",
-      "tags": [
-        "oliveiras",
-        "ascensao",
-        "jerusalem"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "geografia-biblica-0007",
@@ -258,14 +216,7 @@
         "verse_start": 2,
         "verse_end": 5
       },
-      "theme": "Rios das Escrituras",
-      "difficulty": "medium",
-      "subcategory": "Rios e mares",
-      "tags": [
-        "mar morto",
-        "mar salgado",
-        "juda"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "geografia-biblica-0008",
@@ -298,14 +249,7 @@
         "verse_start": 10,
         "verse_end": 14
       },
-      "theme": "Rios das Escrituras",
-      "difficulty": "hard",
-      "subcategory": "Rios e mares",
-      "tags": [
-        "eden",
-        "tigre",
-        "eufrates"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "geografia-biblica-0009",
@@ -338,14 +282,7 @@
         "verse_start": 12,
         "verse_end": 16
       },
-      "theme": "Regiões de Israel",
-      "difficulty": "easy",
-      "subcategory": "Regiões",
-      "tags": [
-        "galileia",
-        "nazare",
-        "cafarnaum"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "geografia-biblica-0010",
@@ -378,15 +315,7 @@
         "verse_start": 1,
         "verse_end": 2
       },
-      "theme": "Montes das Escrituras",
-      "difficulty": "expert",
-      "subcategory": "Montes",
-      "tags": [
-        "moria",
-        "templo",
-        "salomao",
-        "isaque"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "geografia-biblica-0011",
@@ -419,13 +348,7 @@
         "verse_start": 10,
         "verse_end": 14
       },
-      "theme": "Rios",
-      "difficulty": "medium",
-      "subcategory": "Hidrografia",
-      "tags": [
-        "jordao",
-        "naama"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "geografia-biblica-0012",
@@ -458,13 +381,7 @@
         "verse_start": 12,
         "verse_end": 13
       },
-      "theme": "Batalhas",
-      "difficulty": "hard",
-      "subcategory": "Geografia da conquista",
-      "tags": [
-        "gibeom",
-        "sol"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "geografia-biblica-0013",
@@ -497,13 +414,7 @@
         "verse_start": 4,
         "verse_end": null
       },
-      "theme": "Cidades",
-      "difficulty": "hard",
-      "subcategory": "Filístia",
-      "tags": [
-        "golias",
-        "gate"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "geografia-biblica-0014",
@@ -536,13 +447,7 @@
         "verse_start": 4,
         "verse_end": null
       },
-      "theme": "Montes",
-      "difficulty": "medium",
-      "subcategory": "Primórdios",
-      "tags": [
-        "ararate",
-        "arca"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "geografia-biblica-0015",
@@ -575,13 +480,7 @@
         "verse_start": 1,
         "verse_end": 2
       },
-      "theme": "Cidades",
-      "difficulty": "medium",
-      "subcategory": "Assíria",
-      "tags": [
-        "ninive",
-        "jonas"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "geografia-biblica-0016",
@@ -614,13 +513,7 @@
         "verse_start": 24,
         "verse_end": 25
       },
-      "theme": "Juízo",
-      "difficulty": "medium",
-      "subcategory": "Cidades",
-      "tags": [
-        "gomorra",
-        "sodoma"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "geografia-biblica-0017",
@@ -653,13 +546,7 @@
         "verse_start": 18,
         "verse_end": null
       },
-      "theme": "Hidrografia",
-      "difficulty": "medium",
-      "subcategory": "Galileia",
-      "tags": [
-        "galileia",
-        "mar"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "geografia-biblica-0018",
@@ -679,13 +566,7 @@
         "verse_start": 20,
         "verse_end": null
       },
-      "theme": "Montes",
-      "difficulty": "medium",
-      "subcategory": "Êxodo",
-      "tags": [
-        "sinai",
-        "lei"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "geografia-biblica-0019",
@@ -718,13 +599,7 @@
         "verse_start": 1,
         "verse_end": 2
       },
-      "theme": "Conquista",
-      "difficulty": "hard",
-      "subcategory": "Geografia da conquista",
-      "tags": [
-        "jerico",
-        "conquista"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "geografia-biblica-0020",
@@ -757,13 +632,7 @@
         "verse_start": 1,
         "verse_end": 6
       },
-      "theme": "Regiões",
-      "difficulty": "expert",
-      "subcategory": "Judeia",
-      "tags": [
-        "joao batista",
-        "judeia"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "geografia-biblica-0021",
@@ -783,13 +652,7 @@
         "verse_start": 2,
         "verse_end": 3
       },
-      "theme": "Vales",
-      "difficulty": "expert",
-      "subcategory": "Geografia da monarquia",
-      "tags": [
-        "ela",
-        "golias"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "geografia-biblica-0022",
@@ -822,13 +685,7 @@
         "verse_start": 3,
         "verse_end": null
       },
-      "theme": "Cidades",
-      "difficulty": "expert",
-      "subcategory": "Geografia da conquista",
-      "tags": [
-        "jerico",
-        "palmeiras"
-      ]
+      "difficulty": "expert"
     }
   ]
 }

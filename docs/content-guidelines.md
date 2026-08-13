@@ -61,10 +61,7 @@ Um arquivo por categoria: `content/questions/<categoria>.json`.
       "explanation": "Abigail, mulher de Nabal, saiu ao encontro de Davi com provisões e o convenceu a não se vingar. Após a morte de Nabal, Davi a tomou por esposa (1Sm 25:32-42).",
       "divergence_note": null,
       "reference": { "book": "1samuel", "chapter": 25, "verse_start": 23, "verse_end": 35 },
-      "theme": "Sabedoria",
-      "difficulty": "medium",              // easy | medium | hard | expert
-      "subcategory": "Mulheres da Bíblia",
-      "tags": ["davi", "abigail", "nabal"]
+      "difficulty": "medium"              // easy | medium | hard | expert
     }
   ]
 }

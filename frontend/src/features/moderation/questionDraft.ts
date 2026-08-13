@@ -20,10 +20,7 @@ export function emptyDraft(categoryId: number, book: string): QuestionDraft {
     chapter: 1,
     verse_start: 1,
     verse_end: null,
-    theme: '',
     difficulty: 'easy',
-    subcategory: null,
-    tags: [],
   }
 }
 
@@ -42,8 +39,6 @@ export function draftFromPayload(payload: QuestionDraft, fallback: QuestionDraft
     accepted_answers: type === 'open_answer' ? payload.accepted_answers ?? [''] : null,
     divergence_note: payload.divergence_note ?? null,
     verse_end: payload.verse_end ?? null,
-    subcategory: payload.subcategory ?? null,
-    tags: payload.tags ?? [],
   }
 }
 
@@ -52,7 +47,6 @@ export function validateDraft(draft: QuestionDraft): string | null {
   if (draft.explanation.trim().length < 10) {
     return 'A explicação precisa ter pelo menos 10 caracteres.'
   }
-  if (draft.theme.trim().length < 2) return 'Informe um tema.'
   if (!draft.book) return 'Escolha o livro.'
   if (!draft.category_id) return 'Escolha a categoria.'
   if (draft.chapter < 1 || draft.verse_start < 1) {
@@ -80,18 +74,12 @@ export function toApiDraft(draft: QuestionDraft): QuestionDraft {
     ...draft,
     text: draft.text.trim(),
     explanation: draft.explanation.trim(),
-    theme: draft.theme.trim(),
     divergence_note: draft.divergence_note?.trim() || null,
-    subcategory: draft.subcategory?.trim() || null,
     verse_end: draft.verse_end || null,
     options: draft.type === 'multiple_choice' ? draft.options : null,
     accepted_answers:
       draft.type === 'open_answer'
         ? (draft.accepted_answers ?? []).map((answer) => answer.trim()).filter(Boolean)
         : null,
-    tags: draft.tags
-      .map((tag) => tag.trim().toLowerCase())
-      .filter(Boolean)
-      .slice(0, 6),
   }
 }

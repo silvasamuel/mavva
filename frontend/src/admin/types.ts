@@ -61,11 +61,8 @@ export interface AdminQuestionDetail {
   chapter: number
   verse_start: number
   verse_end: number | null
-  theme: string
   difficulty: Difficulty
   category_id: number
-  subcategory: string | null
-  tags: string[]
   is_active: boolean
   options: AdminOption[]
   accepted_answers: AdminAnswer[]
@@ -86,10 +83,7 @@ export interface AdminQuestionUpdate {
   chapter?: number
   verse_start?: number
   verse_end?: number | null
-  theme?: string
   difficulty?: Difficulty
-  subcategory?: string | null
-  tags?: string[]
   is_active?: boolean
   options?: AdminOption[]
   accepted_answers?: AdminAnswer[]

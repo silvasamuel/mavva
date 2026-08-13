@@ -34,10 +34,8 @@ def make_mc_question(
         book="genesis" if testament == Testament.OLD else "mateus",
         chapter=1,
         verse_start=1,
-        theme="Fé",
         difficulty=difficulty,
         category=category,
-        tags=["teste"],
     )
     question.options = [
         QuestionOption(text="Alternativa correta", is_correct=True, position=0),
@@ -63,10 +61,8 @@ def make_open_question(
         book="joao",
         chapter=3,
         verse_start=16,
-        theme="Amor de Deus",
         difficulty=difficulty,
         category=category,
-        tags=["teste"],
     )
     question.accepted_answers = [
         QuestionAnswer(text="Jesus Cristo", position=0),

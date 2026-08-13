@@ -32,14 +32,7 @@
         "verse_start": 11,
         "verse_end": 15
       },
-      "theme": "Palavra de Deus",
-      "difficulty": "easy",
-      "subcategory": "Parábolas do Reino",
-      "tags": [
-        "semeador",
-        "solos",
-        "palavra"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "parabolas-0002",
@@ -72,14 +65,7 @@
         "verse_start": 20,
         "verse_end": 24
       },
-      "theme": "Graça",
-      "difficulty": "easy",
-      "subcategory": "Parábolas da graça",
-      "tags": [
-        "filho prodigo",
-        "pai",
-        "arrependimento"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "parabolas-0003",
@@ -112,14 +98,7 @@
         "verse_start": 30,
         "verse_end": 37
       },
-      "theme": "Amor ao próximo",
-      "difficulty": "easy",
-      "subcategory": "Parábolas do amor",
-      "tags": [
-        "bom samaritano",
-        "proximo",
-        "misericordia"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "parabolas-0004",
@@ -138,14 +117,7 @@
         "verse_start": 4,
         "verse_end": 7
       },
-      "theme": "Busca de Deus",
-      "difficulty": "easy",
-      "subcategory": "Parábolas da graça",
-      "tags": [
-        "ovelha perdida",
-        "pastor",
-        "alegria"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "parabolas-0005",
@@ -178,14 +150,7 @@
         "verse_start": 14,
         "verse_end": 30
       },
-      "theme": "Mordomia",
-      "difficulty": "medium",
-      "subcategory": "Parábolas do juízo",
-      "tags": [
-        "talentos",
-        "mordomia",
-        "fidelidade"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "parabolas-0006",
@@ -218,14 +183,7 @@
         "verse_start": 24,
         "verse_end": 27
       },
-      "theme": "Obediência",
-      "difficulty": "easy",
-      "subcategory": "Sermão do Monte",
-      "tags": [
-        "casa na rocha",
-        "obediencia",
-        "fundamento"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "parabolas-0007",
@@ -258,14 +216,7 @@
         "verse_start": 1,
         "verse_end": 13
       },
-      "theme": "Vigilância",
-      "difficulty": "easy",
-      "subcategory": "Parábolas do juízo",
-      "tags": [
-        "dez virgens",
-        "azeite",
-        "vigilancia"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "parabolas-0008",
@@ -298,14 +249,7 @@
         "verse_start": 36,
         "verse_end": 43
       },
-      "theme": "Juízo final",
-      "difficulty": "medium",
-      "subcategory": "Parábolas do Reino",
-      "tags": [
-        "joio",
-        "trigo",
-        "ceifa"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "parabolas-0009",
@@ -325,14 +269,7 @@
         "verse_start": 31,
         "verse_end": 32
       },
-      "theme": "Reino de Deus",
-      "difficulty": "easy",
-      "subcategory": "Parábolas do Reino",
-      "tags": [
-        "mostarda",
-        "reino",
-        "crescimento"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "parabolas-0010",
@@ -365,14 +302,7 @@
         "verse_start": 19,
         "verse_end": 31
       },
-      "theme": "Eternidade",
-      "difficulty": "hard",
-      "subcategory": "Parábolas do juízo",
-      "tags": [
-        "rico e lazaro",
-        "seio de abraao",
-        "eternidade"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "parabolas-0011",
@@ -405,13 +335,7 @@
         "verse_start": 28,
         "verse_end": 31
       },
-      "theme": "Obediência",
-      "difficulty": "medium",
-      "subcategory": "Parábolas do Reino",
-      "tags": [
-        "dois filhos",
-        "obediencia"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "parabolas-0012",
@@ -444,13 +368,7 @@
         "verse_start": 16,
         "verse_end": 21
       },
-      "theme": "Cobiça",
-      "difficulty": "hard",
-      "subcategory": "Parábolas de advertência",
-      "tags": [
-        "rico insensato",
-        "cobica"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "parabolas-0013",
@@ -483,13 +401,7 @@
         "verse_start": 10,
         "verse_end": 14
       },
-      "theme": "Humildade",
-      "difficulty": "medium",
-      "subcategory": "Parábolas de advertência",
-      "tags": [
-        "publicano",
-        "humildade"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "parabolas-0014",
@@ -522,13 +434,7 @@
         "verse_start": 9,
         "verse_end": 15
       },
-      "theme": "Graça",
-      "difficulty": "hard",
-      "subcategory": "Parábolas do Reino",
-      "tags": [
-        "vinha",
-        "graca"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "parabolas-0015",
@@ -561,13 +467,7 @@
         "verse_start": 47,
         "verse_end": 49
       },
-      "theme": "Juízo final",
-      "difficulty": "hard",
-      "subcategory": "Parábolas do Reino",
-      "tags": [
-        "rede",
-        "juizo"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "parabolas-0016",
@@ -600,13 +500,7 @@
         "verse_start": 6,
         "verse_end": 9
       },
-      "theme": "Arrependimento",
-      "difficulty": "medium",
-      "subcategory": "Parábolas de advertência",
-      "tags": [
-        "figueira",
-        "arrependimento"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "parabolas-0017",
@@ -639,13 +533,7 @@
         "verse_start": 44,
         "verse_end": null
       },
-      "theme": "Valor do Reino",
-      "difficulty": "medium",
-      "subcategory": "Parábolas do Reino",
-      "tags": [
-        "tesouro",
-        "reino"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "parabolas-0018",
@@ -665,13 +553,7 @@
         "verse_start": 31,
         "verse_end": 33
       },
-      "theme": "Misericórdia",
-      "difficulty": "medium",
-      "subcategory": "Parábolas do amor",
-      "tags": [
-        "samaritano",
-        "sacerdote"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "parabolas-0019",
@@ -704,13 +586,7 @@
         "verse_start": 1,
         "verse_end": 9
       },
-      "theme": "Prudência",
-      "difficulty": "expert",
-      "subcategory": "Parábolas de advertência",
-      "tags": [
-        "administrador",
-        "riquezas"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "parabolas-0020",
@@ -743,13 +619,7 @@
         "verse_start": 23,
         "verse_end": 33
       },
-      "theme": "Perdão",
-      "difficulty": "hard",
-      "subcategory": "Parábolas do Reino",
-      "tags": [
-        "credor",
-        "perdao"
-      ]
+      "difficulty": "hard"
     }
   ]
 }

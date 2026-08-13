@@ -32,14 +32,7 @@
         "verse_start": 1,
         "verse_end": 3
       },
-      "theme": "Aliança",
-      "difficulty": "easy",
-      "subcategory": "Patriarcas",
-      "tags": [
-        "abraao",
-        "alianca",
-        "promessa"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "historia-de-israel-0002",
@@ -72,14 +65,7 @@
         "verse_start": 15,
         "verse_end": 21
       },
-      "theme": "Providência",
-      "difficulty": "easy",
-      "subcategory": "Patriarcas",
-      "tags": [
-        "jose",
-        "egito",
-        "providencia"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "historia-de-israel-0003",
@@ -99,14 +85,7 @@
         "verse_start": 26,
         "verse_end": 35
       },
-      "theme": "Peregrinação",
-      "difficulty": "easy",
-      "subcategory": "Êxodo e deserto",
-      "tags": [
-        "deserto",
-        "quarenta anos",
-        "incredulidade"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "historia-de-israel-0004",
@@ -139,14 +118,7 @@
         "verse_start": 1,
         "verse_end": 9
       },
-      "theme": "Liderança",
-      "difficulty": "easy",
-      "subcategory": "Conquista",
-      "tags": [
-        "josue",
-        "moises",
-        "canaa"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "historia-de-israel-0005",
@@ -179,14 +151,7 @@
         "verse_start": 11,
         "verse_end": 19
       },
-      "theme": "Ciclo dos juízes",
-      "difficulty": "medium",
-      "subcategory": "Juízes",
-      "tags": [
-        "juizes",
-        "ciclo",
-        "apostasia"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "historia-de-israel-0006",
@@ -219,14 +184,7 @@
         "verse_start": 5,
         "verse_end": 18
       },
-      "theme": "Queda dos reinos",
-      "difficulty": "medium",
-      "subcategory": "Reino dividido",
-      "tags": [
-        "assiria",
-        "samaria",
-        "queda"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "historia-de-israel-0007",
@@ -246,14 +204,7 @@
         "verse_start": 11,
         "verse_end": 12
       },
-      "theme": "Exílio",
-      "difficulty": "medium",
-      "subcategory": "Exílio e retorno",
-      "tags": [
-        "setenta anos",
-        "babilonia",
-        "jeremias"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "historia-de-israel-0008",
@@ -286,14 +237,7 @@
         "verse_start": 15,
         "verse_end": 16
       },
-      "theme": "Restauração",
-      "difficulty": "easy",
-      "subcategory": "Exílio e retorno",
-      "tags": [
-        "neemias",
-        "muros",
-        "jerusalem"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "historia-de-israel-0009",
@@ -326,14 +270,7 @@
         "verse_start": 12,
         "verse_end": 20
       },
-      "theme": "Conquista",
-      "difficulty": "easy",
-      "subcategory": "Conquista",
-      "tags": [
-        "jerico",
-        "muros",
-        "conquista"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "historia-de-israel-0010",
@@ -366,14 +303,7 @@
         "verse_start": 40,
         "verse_end": 41
       },
-      "theme": "Cronologia de Israel",
-      "difficulty": "expert",
-      "subcategory": "Êxodo e deserto",
-      "tags": [
-        "egito",
-        "430 anos",
-        "cronologia"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "historia-de-israel-0011",
@@ -406,13 +336,7 @@
         "verse_start": 16,
         "verse_end": 20
       },
-      "theme": "Reino dividido",
-      "difficulty": "hard",
-      "subcategory": "Monarquia",
-      "tags": [
-        "divisao",
-        "roboao"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "historia-de-israel-0012",
@@ -445,13 +369,7 @@
         "verse_start": 6,
         "verse_end": null
       },
-      "theme": "Cativeiro",
-      "difficulty": "medium",
-      "subcategory": "Reino dividido",
-      "tags": [
-        "assiria",
-        "samaria"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "historia-de-israel-0013",
@@ -484,13 +402,7 @@
         "verse_start": 1,
         "verse_end": 3
       },
-      "theme": "Retorno",
-      "difficulty": "medium",
-      "subcategory": "Pós-exílio",
-      "tags": [
-        "ciro",
-        "retorno"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "historia-de-israel-0014",
@@ -508,13 +420,7 @@
         "verse_start": 15,
         "verse_end": null
       },
-      "theme": "Reconstrução",
-      "difficulty": "hard",
-      "subcategory": "Pós-exílio",
-      "tags": [
-        "neemias",
-        "muros"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "historia-de-israel-0015",
@@ -547,13 +453,7 @@
         "verse_start": 4,
         "verse_end": 9
       },
-      "theme": "Juízes",
-      "difficulty": "hard",
-      "subcategory": "Período dos juízes",
-      "tags": [
-        "debora",
-        "baraque"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "historia-de-israel-0016",
@@ -586,13 +486,7 @@
         "verse_start": 8,
         "verse_end": 10
       },
-      "theme": "Reconstrução",
-      "difficulty": "medium",
-      "subcategory": "Pós-exílio",
-      "tags": [
-        "zorobabel",
-        "templo"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "historia-de-israel-0017",
@@ -625,13 +519,7 @@
         "verse_start": 8,
         "verse_end": 9
       },
-      "theme": "Exílio",
-      "difficulty": "medium",
-      "subcategory": "Reino dividido",
-      "tags": [
-        "nabucodonosor",
-        "templo"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "historia-de-israel-0018",
@@ -664,13 +552,7 @@
         "verse_start": 1,
         "verse_end": 6
       },
-      "theme": "Conquista",
-      "difficulty": "medium",
-      "subcategory": "Conquista de Canaã",
-      "tags": [
-        "josue",
-        "canaa"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "historia-de-israel-0019",
@@ -703,13 +585,7 @@
         "verse_start": 1,
         "verse_end": 8
       },
-      "theme": "Restauração",
-      "difficulty": "hard",
-      "subcategory": "Pós-exílio",
-      "tags": [
-        "esdras",
-        "lei"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "historia-de-israel-0020",
@@ -742,13 +618,7 @@
         "verse_start": 23,
         "verse_end": 24
       },
-      "theme": "Reino dividido",
-      "difficulty": "expert",
-      "subcategory": "Monarquia",
-      "tags": [
-        "samaria",
-        "onri"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "historia-de-israel-0021",
@@ -781,13 +651,7 @@
         "verse_start": 21,
         "verse_end": null
       },
-      "theme": "Reino dividido",
-      "difficulty": "expert",
-      "subcategory": "Monarquia",
-      "tags": [
-        "juda",
-        "benjamim"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "historia-de-israel-0022",
@@ -820,13 +684,7 @@
         "verse_start": 30,
         "verse_end": 31
       },
-      "theme": "Apostasia",
-      "difficulty": "expert",
-      "subcategory": "Reis do Norte",
-      "tags": [
-        "acabe",
-        "jezabel"
-      ]
+      "difficulty": "expert"
     }
   ]
 }

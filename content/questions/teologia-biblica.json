@@ -32,14 +32,7 @@
         "verse_start": 8,
         "verse_end": 17
       },
-      "theme": "Aliança",
-      "difficulty": "easy",
-      "subcategory": "Alianças",
-      "tags": [
-        "arco iris",
-        "noe",
-        "alianca"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "teologia-biblica-0002",
@@ -72,14 +65,7 @@
         "verse_start": 29,
         "verse_end": 29
       },
-      "theme": "Cordeiro de Deus",
-      "difficulty": "medium",
-      "subcategory": "Temas messiânicos",
-      "tags": [
-        "cordeiro",
-        "sacrificio",
-        "joao batista"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "teologia-biblica-0003",
@@ -112,14 +98,7 @@
         "verse_start": 26,
         "verse_end": 28
       },
-      "theme": "Imagem de Deus",
-      "difficulty": "easy",
-      "subcategory": "Criação",
-      "tags": [
-        "imagem de deus",
-        "criacao",
-        "dignidade"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "teologia-biblica-0004",
@@ -152,14 +131,7 @@
         "verse_start": 14,
         "verse_end": 15
       },
-      "theme": "Promessa messiânica",
-      "difficulty": "hard",
-      "subcategory": "Temas messiânicos",
-      "tags": [
-        "protoevangelho",
-        "semente",
-        "serpente"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "teologia-biblica-0005",
@@ -192,14 +164,7 @@
         "verse_start": 14,
         "verse_end": 15
       },
-      "theme": "Reino de Deus",
-      "difficulty": "medium",
-      "subcategory": "Reino de Deus",
-      "tags": [
-        "reino de deus",
-        "pregacao",
-        "arrependimento"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "teologia-biblica-0006",
@@ -232,14 +197,7 @@
         "verse_start": 31,
         "verse_end": 34
       },
-      "theme": "Nova aliança",
-      "difficulty": "medium",
-      "subcategory": "Alianças",
-      "tags": [
-        "nova alianca",
-        "jeremias",
-        "coracao"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "teologia-biblica-0007",
@@ -272,14 +230,7 @@
         "verse_start": 3,
         "verse_end": 3
       },
-      "theme": "Presença de Deus",
-      "difficulty": "hard",
-      "subcategory": "Templo e presença",
-      "tags": [
-        "tabernaculo",
-        "templo",
-        "presenca"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "teologia-biblica-0008",
@@ -312,14 +263,7 @@
         "verse_start": 9,
         "verse_end": 10
       },
-      "theme": "Povo de Deus",
-      "difficulty": "medium",
-      "subcategory": "Povo de Deus",
-      "tags": [
-        "sacerdocio",
-        "povo de deus",
-        "pedro"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "teologia-biblica-0009",
@@ -352,14 +296,7 @@
         "verse_start": 22,
         "verse_end": 23
       },
-      "theme": "Pedra angular",
-      "difficulty": "medium",
-      "subcategory": "Temas messiânicos",
-      "tags": [
-        "pedra angular",
-        "salmo 118",
-        "rejeicao"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "teologia-biblica-0010",
@@ -392,14 +329,7 @@
         "verse_start": 1,
         "verse_end": 11
       },
-      "theme": "Descanso",
-      "difficulty": "expert",
-      "subcategory": "Tipologia",
-      "tags": [
-        "descanso",
-        "sabado",
-        "hebreus"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "teologia-biblica-0011",
@@ -432,13 +362,7 @@
         "verse_start": 12,
         "verse_end": 15
       },
-      "theme": "Aliança noética",
-      "difficulty": "medium",
-      "subcategory": "Alianças",
-      "tags": [
-        "arco-iris",
-        "noe"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "teologia-biblica-0012",
@@ -458,13 +382,7 @@
         "verse_start": 1,
         "verse_end": 3
       },
-      "theme": "Aliança abraâmica",
-      "difficulty": "hard",
-      "subcategory": "Alianças",
-      "tags": [
-        "abraao",
-        "bencao"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "teologia-biblica-0013",
@@ -497,13 +415,7 @@
         "verse_start": 7,
         "verse_end": null
       },
-      "theme": "Tipologia",
-      "difficulty": "medium",
-      "subcategory": "Cristo no AT",
-      "tags": [
-        "pascoa",
-        "cordeiro"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "teologia-biblica-0014",
@@ -536,13 +448,7 @@
         "verse_start": 14,
         "verse_end": 15
       },
-      "theme": "Tipologia",
-      "difficulty": "hard",
-      "subcategory": "Cristo no AT",
-      "tags": [
-        "serpente",
-        "cruz"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "teologia-biblica-0015",
@@ -575,13 +481,7 @@
         "verse_start": 18,
         "verse_end": 19
       },
-      "theme": "Cristologia",
-      "difficulty": "expert",
-      "subcategory": "Cristo no AT",
-      "tags": [
-        "segundo adao",
-        "justificacao"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "teologia-biblica-0016",
@@ -614,13 +514,7 @@
         "verse_start": 31,
         "verse_end": 34
       },
-      "theme": "Nova aliança",
-      "difficulty": "hard",
-      "subcategory": "Alianças",
-      "tags": [
-        "nova alianca",
-        "coracao"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "teologia-biblica-0017",
@@ -653,13 +547,7 @@
         "verse_start": 8,
         "verse_end": null
       },
-      "theme": "Presença de Deus",
-      "difficulty": "medium",
-      "subcategory": "Temas bíblicos",
-      "tags": [
-        "presenca",
-        "tabernaculo"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "teologia-biblica-0018",
@@ -692,13 +580,7 @@
         "verse_start": 9,
         "verse_end": 11
       },
-      "theme": "Repouso",
-      "difficulty": "expert",
-      "subcategory": "Temas bíblicos",
-      "tags": [
-        "repouso",
-        "sabado"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "teologia-biblica-0019",
@@ -731,13 +613,7 @@
         "verse_start": 10,
         "verse_end": 11
       },
-      "theme": "Aliança abraâmica",
-      "difficulty": "medium",
-      "subcategory": "Alianças",
-      "tags": [
-        "circuncisao",
-        "abraao"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "teologia-biblica-0020",
@@ -770,13 +646,7 @@
         "verse_start": 29,
         "verse_end": null
       },
-      "theme": "Cristologia",
-      "difficulty": "medium",
-      "subcategory": "Cristo no AT",
-      "tags": [
-        "cordeiro de deus",
-        "jesus"
-      ]
+      "difficulty": "medium"
     }
   ]
 }

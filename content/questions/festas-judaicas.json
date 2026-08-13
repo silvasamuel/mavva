@@ -32,14 +32,7 @@
         "verse_start": 21,
         "verse_end": 27
       },
-      "theme": "Redenção",
-      "difficulty": "easy",
-      "subcategory": "Festas da primavera",
-      "tags": [
-        "pascoa",
-        "egito",
-        "cordeiro"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "festas-judaicas-0002",
@@ -72,14 +65,7 @@
         "verse_start": 15,
         "verse_end": 17
       },
-      "theme": "Festas de peregrinação",
-      "difficulty": "medium",
-      "subcategory": "Festas da primavera",
-      "tags": [
-        "pentecostes",
-        "semanas",
-        "cinquenta"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "festas-judaicas-0003",
@@ -112,14 +98,7 @@
         "verse_start": 39,
         "verse_end": 43
       },
-      "theme": "Memória do deserto",
-      "difficulty": "medium",
-      "subcategory": "Festas do outono",
-      "tags": [
-        "tabernaculos",
-        "tendas",
-        "deserto"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "festas-judaicas-0004",
@@ -152,14 +131,7 @@
         "verse_start": 15,
         "verse_end": 22
       },
-      "theme": "Expiação",
-      "difficulty": "medium",
-      "subcategory": "Festas do outono",
-      "tags": [
-        "yom kipur",
-        "expiacao",
-        "bode emissario"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "festas-judaicas-0005",
@@ -192,14 +164,7 @@
         "verse_start": 20,
         "verse_end": 28
       },
-      "theme": "Livramento",
-      "difficulty": "medium",
-      "subcategory": "Festas pós-exílicas",
-      "tags": [
-        "purim",
-        "ester",
-        "hama"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "festas-judaicas-0006",
@@ -232,14 +197,7 @@
         "verse_start": 22,
         "verse_end": 23
       },
-      "theme": "Festas pós-exílicas",
-      "difficulty": "hard",
-      "subcategory": "Festas pós-exílicas",
-      "tags": [
-        "dedicacao",
-        "hanuca",
-        "macabeus"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "festas-judaicas-0007",
@@ -272,14 +230,7 @@
         "verse_start": 14,
         "verse_end": 20
       },
-      "theme": "Pureza",
-      "difficulty": "easy",
-      "subcategory": "Festas da primavera",
-      "tags": [
-        "paes asmos",
-        "fermento",
-        "pascoa"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "festas-judaicas-0008",
@@ -312,14 +263,7 @@
         "verse_start": 16,
         "verse_end": 17
       },
-      "theme": "Festas de peregrinação",
-      "difficulty": "hard",
-      "subcategory": "Calendário",
-      "tags": [
-        "peregrinacao",
-        "tres festas",
-        "jerusalem"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "festas-judaicas-0009",
@@ -352,14 +296,7 @@
         "verse_start": 14,
         "verse_end": 20
       },
-      "theme": "Cristo nas festas",
-      "difficulty": "easy",
-      "subcategory": "Cristo nas festas",
-      "tags": [
-        "pascoa",
-        "crucificacao",
-        "cordeiro"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "festas-judaicas-0010",
@@ -392,14 +329,7 @@
         "verse_start": 23,
         "verse_end": 25
       },
-      "theme": "Calendário sagrado",
-      "difficulty": "hard",
-      "subcategory": "Festas do outono",
-      "tags": [
-        "trombetas",
-        "setimo mes",
-        "convocacao"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "festas-judaicas-0011",
@@ -432,13 +362,7 @@
         "verse_start": 15,
         "verse_end": 16
       },
-      "theme": "Calendário",
-      "difficulty": "medium",
-      "subcategory": "Festas de peregrinação",
-      "tags": [
-        "pentecostes",
-        "colheita"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "festas-judaicas-0012",
@@ -471,13 +395,7 @@
         "verse_start": 42,
         "verse_end": 43
       },
-      "theme": "Calendário",
-      "difficulty": "hard",
-      "subcategory": "Festas de peregrinação",
-      "tags": [
-        "tabernaculos",
-        "cabanas"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "festas-judaicas-0013",
@@ -510,13 +428,7 @@
         "verse_start": 29,
         "verse_end": 34
       },
-      "theme": "Expiação",
-      "difficulty": "hard",
-      "subcategory": "Dias santos",
-      "tags": [
-        "expiacao",
-        "yom kippur"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "festas-judaicas-0014",
@@ -534,13 +446,7 @@
         "verse_start": 26,
         "verse_end": 28
       },
-      "theme": "Livramento",
-      "difficulty": "medium",
-      "subcategory": "Festas históricas",
-      "tags": [
-        "purim",
-        "ester"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "festas-judaicas-0015",
@@ -573,13 +479,7 @@
         "verse_start": 15,
         "verse_end": null
       },
-      "theme": "Símbolos",
-      "difficulty": "medium",
-      "subcategory": "Festas de peregrinação",
-      "tags": [
-        "paes asmos",
-        "fermento"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "festas-judaicas-0016",
@@ -612,13 +512,7 @@
         "verse_start": 24,
         "verse_end": 25
       },
-      "theme": "Calendário",
-      "difficulty": "hard",
-      "subcategory": "Dias santos",
-      "tags": [
-        "trombetas",
-        "setimo mes"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "festas-judaicas-0017",
@@ -651,13 +545,7 @@
         "verse_start": 16,
         "verse_end": null
       },
-      "theme": "Peregrinação",
-      "difficulty": "expert",
-      "subcategory": "Festas de peregrinação",
-      "tags": [
-        "tres festas",
-        "peregrinacao"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "festas-judaicas-0018",
@@ -690,13 +578,7 @@
         "verse_start": 22,
         "verse_end": 23
       },
-      "theme": "Festas históricas",
-      "difficulty": "hard",
-      "subcategory": "Pós-exílio",
-      "tags": [
-        "dedicacao",
-        "hanuca"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "festas-judaicas-0019",
@@ -729,13 +611,7 @@
         "verse_start": 5,
         "verse_end": 13
       },
-      "theme": "Páscoa",
-      "difficulty": "medium",
-      "subcategory": "Festas de peregrinação",
-      "tags": [
-        "cordeiro",
-        "pascoa"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "festas-judaicas-0020",
@@ -755,13 +631,7 @@
         "verse_start": 11,
         "verse_end": 14
       },
-      "theme": "Libertação",
-      "difficulty": "medium",
-      "subcategory": "Festas de peregrinação",
-      "tags": [
-        "pascoa",
-        "exodo"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "festas-judaicas-0021",
@@ -794,13 +664,7 @@
         "verse_start": 34,
         "verse_end": 36
       },
-      "theme": "Duração",
-      "difficulty": "expert",
-      "subcategory": "Festas de peregrinação",
-      "tags": [
-        "tabernaculos",
-        "sete dias"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "festas-judaicas-0022",
@@ -821,13 +685,7 @@
         "verse_start": 4,
         "verse_end": null
       },
-      "theme": "Calendário",
-      "difficulty": "expert",
-      "subcategory": "Festas de peregrinação",
-      "tags": [
-        "abibe",
-        "nisa"
-      ]
+      "difficulty": "expert"
     }
   ]
 }

@@ -13,7 +13,6 @@ class QuizCreateRequest(BaseModel):
     testament: Testament | None = None
     category_ids: list[int] | None = Field(default=None, max_length=30)
     difficulty: Difficulty | None = None
-    theme: str | None = Field(default=None, max_length=80)
     timer_seconds: Literal[15, 30] | None = None
 
 

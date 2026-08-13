@@ -60,10 +60,7 @@ def serialize_category(db: Session, category: Category) -> dict[str, Any] | None
                 "verse_start": q.verse_start,
                 "verse_end": q.verse_end,
             },
-            "theme": q.theme,
             "difficulty": q.difficulty.value,
-            "subcategory": q.subcategory,
-            "tags": list(q.tags),
         }
         if not q.is_active:
             item["is_active"] = False

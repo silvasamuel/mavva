@@ -18,14 +18,7 @@
         "verse_start": 16,
         "verse_end": 17
       },
-      "theme": "Cânon",
-      "difficulty": "easy",
-      "subcategory": "Cânon",
-      "tags": [
-        "66 livros",
-        "canon",
-        "biblia"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "organizacao-da-biblia-0002",
@@ -58,15 +51,7 @@
         "verse_start": 44,
         "verse_end": 45
       },
-      "theme": "Estrutura",
-      "difficulty": "medium",
-      "subcategory": "Antigo Testamento",
-      "tags": [
-        "lei",
-        "profetas",
-        "salmos",
-        "tanaque"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "organizacao-da-biblia-0003",
@@ -99,14 +84,7 @@
         "verse_start": 30,
         "verse_end": 31
       },
-      "theme": "Estrutura",
-      "difficulty": "medium",
-      "subcategory": "Novo Testamento",
-      "tags": [
-        "sinoticos",
-        "evangelhos",
-        "joao"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "organizacao-da-biblia-0004",
@@ -139,14 +117,7 @@
         "verse_start": 1,
         "verse_end": 7
       },
-      "theme": "Estrutura",
-      "difficulty": "medium",
-      "subcategory": "Antigo Testamento",
-      "tags": [
-        "poeticos",
-        "sabedoria",
-        "salmos"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "organizacao-da-biblia-0005",
@@ -179,14 +150,7 @@
         "verse_start": 1,
         "verse_end": 1
       },
-      "theme": "Estrutura",
-      "difficulty": "medium",
-      "subcategory": "Antigo Testamento",
-      "tags": [
-        "profetas maiores",
-        "profetas menores",
-        "estrutura"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "organizacao-da-biblia-0006",
@@ -219,14 +183,7 @@
         "verse_start": 1,
         "verse_end": 5
       },
-      "theme": "Estrutura",
-      "difficulty": "easy",
-      "subcategory": "Cânon",
-      "tags": [
-        "genesis",
-        "apocalipse",
-        "estrutura"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "organizacao-da-biblia-0007",
@@ -259,14 +216,7 @@
         "verse_start": 1,
         "verse_end": 1
       },
-      "theme": "Estrutura",
-      "difficulty": "hard",
-      "subcategory": "Novo Testamento",
-      "tags": [
-        "epistolas gerais",
-        "catolicas",
-        "estrutura"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "organizacao-da-biblia-0008",
@@ -285,14 +235,7 @@
         "verse_start": 4,
         "verse_end": 6
       },
-      "theme": "Cânon",
-      "difficulty": "easy",
-      "subcategory": "Antigo Testamento",
-      "tags": [
-        "39 livros",
-        "antigo testamento",
-        "canon"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "organizacao-da-biblia-0009",
@@ -325,14 +268,7 @@
         "verse_start": 8,
         "verse_end": 8
       },
-      "theme": "Transmissão do texto",
-      "difficulty": "hard",
-      "subcategory": "Cânon",
-      "tags": [
-        "capitulos",
-        "versiculos",
-        "manuscritos"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "organizacao-da-biblia-0010",
@@ -365,14 +301,7 @@
         "verse_start": 1,
         "verse_end": 8
       },
-      "theme": "Estrutura",
-      "difficulty": "easy",
-      "subcategory": "Novo Testamento",
-      "tags": [
-        "atos",
-        "narrativa",
-        "igreja primitiva"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "organizacao-da-biblia-0011",
@@ -405,13 +334,7 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "theme": "Cânon",
-      "difficulty": "medium",
-      "subcategory": "Estrutura",
-      "tags": [
-        "canon",
-        "66"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "organizacao-da-biblia-0012",
@@ -444,13 +367,7 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "theme": "Divisões",
-      "difficulty": "hard",
-      "subcategory": "Antigo Testamento",
-      "tags": [
-        "pentateuco",
-        "lei"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "organizacao-da-biblia-0013",
@@ -483,13 +400,7 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "theme": "Estrutura",
-      "difficulty": "medium",
-      "subcategory": "Novo Testamento",
-      "tags": [
-        "evangelhos",
-        "quatro"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "organizacao-da-biblia-0014",
@@ -522,13 +433,7 @@
         "verse_start": 1,
         "verse_end": 4
       },
-      "theme": "Divisões",
-      "difficulty": "hard",
-      "subcategory": "Novo Testamento",
-      "tags": [
-        "sinoticos",
-        "evangelhos"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "organizacao-da-biblia-0015",
@@ -561,13 +466,7 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "theme": "Cânon",
-      "difficulty": "medium",
-      "subcategory": "Antigo Testamento",
-      "tags": [
-        "at",
-        "39"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "organizacao-da-biblia-0016",
@@ -600,13 +499,7 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "theme": "Divisões",
-      "difficulty": "expert",
-      "subcategory": "Antigo Testamento",
-      "tags": [
-        "profetas menores",
-        "doze"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "organizacao-da-biblia-0017",
@@ -639,13 +532,7 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "theme": "Divisões",
-      "difficulty": "hard",
-      "subcategory": "Antigo Testamento",
-      "tags": [
-        "poeticos",
-        "sabedoria"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "organizacao-da-biblia-0018",
@@ -678,13 +565,7 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "theme": "Cânon",
-      "difficulty": "medium",
-      "subcategory": "Novo Testamento",
-      "tags": [
-        "nt",
-        "27"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "organizacao-da-biblia-0019",
@@ -717,13 +598,7 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "theme": "Divisões",
-      "difficulty": "hard",
-      "subcategory": "Antigo Testamento",
-      "tags": [
-        "profetas maiores",
-        "isaias"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "organizacao-da-biblia-0020",
@@ -756,13 +631,7 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "theme": "Estrutura",
-      "difficulty": "medium",
-      "subcategory": "Antigo Testamento",
-      "tags": [
-        "salmos",
-        "at"
-      ]
+      "difficulty": "medium"
     }
   ]
 }

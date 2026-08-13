@@ -58,10 +58,7 @@ export function QuestionEditor({
       chapter: form.chapter,
       verse_start: form.verse_start,
       verse_end: form.verse_end,
-      theme: form.theme,
       difficulty: form.difficulty,
-      subcategory: form.subcategory?.trim() ? form.subcategory : null,
-      tags: form.tags,
       is_active: form.is_active,
     }
     if (form.type === 'multiple_choice') payload.options = form.options
@@ -263,12 +260,6 @@ export function QuestionEditor({
                 </select>
               </div>
             </div>
-
-            <Input
-              label="Tema"
-              value={form.theme}
-              onChange={(e) => setForm({ ...form, theme: e.target.value })}
-            />
 
             <label className="flex items-center gap-2 text-sm font-bold text-sand-700">
               <input

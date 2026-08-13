@@ -32,14 +32,7 @@
         "verse_start": 1,
         "verse_end": 2
       },
-      "theme": "Moedas e valores",
-      "difficulty": "medium",
-      "subcategory": "Economia",
-      "tags": [
-        "denario",
-        "salario",
-        "vinha"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cultura-biblica-0002",
@@ -72,14 +65,7 @@
         "verse_start": 12,
         "verse_end": 13
       },
-      "theme": "Agricultura",
-      "difficulty": "easy",
-      "subcategory": "Agricultura",
-      "tags": [
-        "trigo",
-        "vinho",
-        "azeite"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "cultura-biblica-0003",
@@ -112,14 +98,7 @@
         "verse_start": 14,
         "verse_end": 17
       },
-      "theme": "Vida cotidiana",
-      "difficulty": "medium",
-      "subcategory": "Vida cotidiana",
-      "tags": [
-        "odres",
-        "vinho novo",
-        "parabola"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cultura-biblica-0004",
@@ -152,14 +131,7 @@
         "verse_start": 9,
         "verse_end": 10
       },
-      "theme": "Justiça social",
-      "difficulty": "medium",
-      "subcategory": "Agricultura",
-      "tags": [
-        "respiga",
-        "rute",
-        "pobres"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cultura-biblica-0005",
@@ -192,14 +164,7 @@
         "verse_start": 1,
         "verse_end": 5
       },
-      "theme": "Pastoreio",
-      "difficulty": "easy",
-      "subcategory": "Vida cotidiana",
-      "tags": [
-        "pastor",
-        "ovelhas",
-        "voz"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "cultura-biblica-0006",
@@ -232,14 +197,7 @@
         "verse_start": 41,
         "verse_end": 44
       },
-      "theme": "Moedas e valores",
-      "difficulty": "medium",
-      "subcategory": "Economia",
-      "tags": [
-        "viuva",
-        "leptos",
-        "oferta"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cultura-biblica-0007",
@@ -272,14 +230,7 @@
         "verse_start": 7,
         "verse_end": 10
       },
-      "theme": "Contratos e costumes",
-      "difficulty": "hard",
-      "subcategory": "Vida cotidiana",
-      "tags": [
-        "sandalia",
-        "resgate",
-        "boaz"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "cultura-biblica-0008",
@@ -312,14 +263,7 @@
         "verse_start": 23,
         "verse_end": 27
       },
-      "theme": "Moedas e valores",
-      "difficulty": "medium",
-      "subcategory": "Economia",
-      "tags": [
-        "talento",
-        "peso",
-        "divida"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cultura-biblica-0009",
@@ -352,14 +296,7 @@
         "verse_start": 5,
         "verse_end": 14
       },
-      "theme": "Vida cotidiana",
-      "difficulty": "easy",
-      "subcategory": "Vida cotidiana",
-      "tags": [
-        "poco",
-        "agua",
-        "encontros"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "cultura-biblica-0010",
@@ -378,14 +315,7 @@
         "verse_start": 13,
         "verse_end": 13
       },
-      "theme": "Vida cotidiana",
-      "difficulty": "easy",
-      "subcategory": "Alimentação",
-      "tags": [
-        "sal",
-        "discipulos",
-        "sermao do monte"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "cultura-biblica-0011",
@@ -418,13 +348,7 @@
         "verse_start": 2,
         "verse_end": null
       },
-      "theme": "Moedas",
-      "difficulty": "medium",
-      "subcategory": "Economia",
-      "tags": [
-        "denario",
-        "moeda"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cultura-biblica-0012",
@@ -457,13 +381,7 @@
         "verse_start": 3,
         "verse_end": null
       },
-      "theme": "Trabalho",
-      "difficulty": "hard",
-      "subcategory": "Ofícios",
-      "tags": [
-        "paulo",
-        "tendas"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "cultura-biblica-0013",
@@ -496,13 +414,7 @@
         "verse_start": 23,
         "verse_end": null
       },
-      "theme": "Música",
-      "difficulty": "medium",
-      "subcategory": "Cultura",
-      "tags": [
-        "harpa",
-        "davi"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cultura-biblica-0014",
@@ -535,13 +447,7 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "theme": "Agricultura",
-      "difficulty": "hard",
-      "subcategory": "Flora",
-      "tags": [
-        "oliveira",
-        "monte"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "cultura-biblica-0015",
@@ -574,13 +480,7 @@
         "verse_start": 14,
         "verse_end": null
       },
-      "theme": "Comércio",
-      "difficulty": "medium",
-      "subcategory": "Economia",
-      "tags": [
-        "purpura",
-        "lidia"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cultura-biblica-0016",
@@ -599,13 +499,7 @@
         "verse_start": 4,
         "verse_end": null
       },
-      "theme": "Pastoreio",
-      "difficulty": "hard",
-      "subcategory": "Cotidiano",
-      "tags": [
-        "pastor",
-        "vara"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "cultura-biblica-0017",
@@ -638,13 +532,7 @@
         "verse_start": 20,
         "verse_end": null
       },
-      "theme": "Luto",
-      "difficulty": "medium",
-      "subcategory": "Cotidiano",
-      "tags": [
-        "manto",
-        "luto"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cultura-biblica-0018",
@@ -677,13 +565,7 @@
         "verse_start": 12,
         "verse_end": null
       },
-      "theme": "Escrita",
-      "difficulty": "hard",
-      "subcategory": "Cultura",
-      "tags": [
-        "papiro",
-        "escrita"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "cultura-biblica-0019",
@@ -716,13 +598,7 @@
         "verse_start": 23,
         "verse_end": null
       },
-      "theme": "Agricultura",
-      "difficulty": "medium",
-      "subcategory": "Alimentação",
-      "tags": [
-        "trigo",
-        "cevada"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cultura-biblica-0020",
@@ -741,13 +617,7 @@
         "verse_start": 9,
         "verse_end": 10
       },
-      "theme": "Alimentação",
-      "difficulty": "medium",
-      "subcategory": "Cultura",
-      "tags": [
-        "vinho",
-        "cana"
-      ]
+      "difficulty": "medium"
     }
   ]
 }

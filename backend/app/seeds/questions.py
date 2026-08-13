@@ -49,10 +49,7 @@ class QuestionIn(BaseModel):
     explanation: str = Field(min_length=10)
     divergence_note: str | None = None
     reference: ReferenceIn
-    theme: str = Field(min_length=2, max_length=80)
     difficulty: Difficulty
-    subcategory: str | None = Field(default=None, max_length=80)
-    tags: list[str] = Field(default_factory=list, max_length=6)
     is_active: bool = True
 
     @model_validator(mode="after")
@@ -168,11 +165,8 @@ def seed_questions(db: Session, content_dir: Path, category_ids: dict[str, int])
             question.chapter = q_in.reference.chapter
             question.verse_start = q_in.reference.verse_start
             question.verse_end = q_in.reference.verse_end
-            question.theme = q_in.theme
             question.difficulty = q_in.difficulty
             question.category_id = category_ids[file_in.category]
-            question.subcategory = q_in.subcategory
-            question.tags = [t.strip().lower() for t in q_in.tags]
             question.is_active = q_in.is_active
 
             # Upsert in place so option UUIDs survive a no-op reseed (every

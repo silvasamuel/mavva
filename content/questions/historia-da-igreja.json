@@ -32,14 +32,7 @@
         "verse_start": 54,
         "verse_end": 60
       },
-      "theme": "Martírio",
-      "difficulty": "easy",
-      "subcategory": "Igreja apostólica",
-      "tags": [
-        "estevao",
-        "martir",
-        "apedrejamento"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "historia-da-igreja-0002",
@@ -58,14 +51,7 @@
         "verse_start": 19,
         "verse_end": 26
       },
-      "theme": "Igreja primitiva",
-      "difficulty": "medium",
-      "subcategory": "Igreja apostólica",
-      "tags": [
-        "antioquia",
-        "cristaos",
-        "nome"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "historia-da-igreja-0003",
@@ -98,15 +84,7 @@
         "verse_start": 1,
         "verse_end": 21
       },
-      "theme": "Concílios",
-      "difficulty": "medium",
-      "subcategory": "Igreja apostólica",
-      "tags": [
-        "concilio",
-        "jerusalem",
-        "gentios",
-        "circuncisao"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "historia-da-igreja-0004",
@@ -139,15 +117,7 @@
         "verse_start": 18,
         "verse_end": 19
       },
-      "theme": "Martírio",
-      "difficulty": "medium",
-      "subcategory": "Tradição apostólica",
-      "tags": [
-        "pedro",
-        "roma",
-        "martirio",
-        "tradicao"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "historia-da-igreja-0005",
@@ -180,14 +150,7 @@
         "verse_start": 1,
         "verse_end": 8
       },
-      "theme": "Expansão do evangelho",
-      "difficulty": "medium",
-      "subcategory": "Igreja apostólica",
-      "tags": [
-        "perseguicao",
-        "dispersao",
-        "samaria"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "historia-da-igreja-0006",
@@ -220,15 +183,7 @@
         "verse_start": 1,
         "verse_end": 3
       },
-      "theme": "Missões",
-      "difficulty": "medium",
-      "subcategory": "Igreja apostólica",
-      "tags": [
-        "barnabe",
-        "saulo",
-        "missoes",
-        "antioquia"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "historia-da-igreja-0007",
@@ -261,15 +216,7 @@
         "verse_start": 20,
         "verse_end": 23
       },
-      "theme": "Vida dos apóstolos",
-      "difficulty": "hard",
-      "subcategory": "Tradição apostólica",
-      "tags": [
-        "joao",
-        "efeso",
-        "patmos",
-        "tradicao"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "historia-da-igreja-0008",
@@ -302,14 +249,7 @@
         "verse_start": 24,
         "verse_end": 28
       },
-      "theme": "Discipulado",
-      "difficulty": "hard",
-      "subcategory": "Igreja apostólica",
-      "tags": [
-        "aquila",
-        "priscila",
-        "apolo"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "historia-da-igreja-0009",
@@ -342,14 +282,7 @@
         "verse_start": 1,
         "verse_end": 3
       },
-      "theme": "Concílios",
-      "difficulty": "expert",
-      "subcategory": "Igreja antiga",
-      "tags": [
-        "niceia",
-        "arianismo",
-        "divindade de cristo"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "historia-da-igreja-0010",
@@ -382,14 +315,7 @@
         "verse_start": 16,
         "verse_end": 17
       },
-      "theme": "Reforma",
-      "difficulty": "hard",
-      "subcategory": "Reforma",
-      "tags": [
-        "lutero",
-        "reforma",
-        "justificacao"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "historia-da-igreja-0011",
@@ -422,13 +348,7 @@
         "verse_start": 59,
         "verse_end": 60
       },
-      "theme": "Mártires",
-      "difficulty": "medium",
-      "subcategory": "Igreja primitiva",
-      "tags": [
-        "estevao",
-        "martir"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "historia-da-igreja-0012",
@@ -461,13 +381,7 @@
         "verse_start": 3,
         "verse_end": 6
       },
-      "theme": "Conversões",
-      "difficulty": "medium",
-      "subcategory": "Igreja primitiva",
-      "tags": [
-        "paulo",
-        "damasco"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "historia-da-igreja-0013",
@@ -500,13 +414,7 @@
         "verse_start": 23,
         "verse_end": 26
       },
-      "theme": "Apóstolos",
-      "difficulty": "hard",
-      "subcategory": "Igreja primitiva",
-      "tags": [
-        "matias",
-        "judas"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "historia-da-igreja-0014",
@@ -539,13 +447,7 @@
         "verse_start": 1,
         "verse_end": 3
       },
-      "theme": "Missões",
-      "difficulty": "expert",
-      "subcategory": "Igreja primitiva",
-      "tags": [
-        "paulo",
-        "barnabe"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "historia-da-igreja-0015",
@@ -578,13 +480,7 @@
         "verse_start": 5,
         "verse_end": 6
       },
-      "theme": "Evangelistas",
-      "difficulty": "medium",
-      "subcategory": "Igreja primitiva",
-      "tags": [
-        "filipe",
-        "samaria"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "historia-da-igreja-0016",
@@ -617,13 +513,7 @@
         "verse_start": 18,
         "verse_end": 19
       },
-      "theme": "Mártires",
-      "difficulty": "hard",
-      "subcategory": "Tradição",
-      "tags": [
-        "pedro",
-        "martirio"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "historia-da-igreja-0017",
@@ -656,13 +546,7 @@
         "verse_start": 9,
         "verse_end": null
       },
-      "theme": "Apóstolos",
-      "difficulty": "medium",
-      "subcategory": "Igreja primitiva",
-      "tags": [
-        "joao",
-        "patmos"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "historia-da-igreja-0018",
@@ -695,13 +579,7 @@
         "verse_start": 44,
         "verse_end": 48
       },
-      "theme": "Conversões",
-      "difficulty": "hard",
-      "subcategory": "Igreja primitiva",
-      "tags": [
-        "cornelio",
-        "gentios"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "historia-da-igreja-0019",
@@ -734,13 +612,7 @@
         "verse_start": 14,
         "verse_end": 15
       },
-      "theme": "Conversões",
-      "difficulty": "expert",
-      "subcategory": "Igreja primitiva",
-      "tags": [
-        "lidia",
-        "filipos"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "historia-da-igreja-0020",
@@ -773,13 +645,7 @@
         "verse_start": 16,
         "verse_end": null
       },
-      "theme": "Perseguição",
-      "difficulty": "hard",
-      "subcategory": "Tradição",
-      "tags": [
-        "nero",
-        "perseguicao"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "historia-da-igreja-0021",
@@ -798,13 +664,7 @@
         "verse_start": 1,
         "verse_end": 11
       },
-      "theme": "Disciplina",
-      "difficulty": "expert",
-      "subcategory": "Igreja primitiva",
-      "tags": [
-        "ananias",
-        "safira"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "historia-da-igreja-0022",
@@ -837,13 +697,7 @@
         "verse_start": 3,
         "verse_end": 5
       },
-      "theme": "Ministérios",
-      "difficulty": "expert",
-      "subcategory": "Igreja primitiva",
-      "tags": [
-        "diaconos",
-        "sete"
-      ]
+      "difficulty": "expert"
     }
   ]
 }

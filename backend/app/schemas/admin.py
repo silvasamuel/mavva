@@ -73,11 +73,8 @@ class AdminQuestionDetail(BaseModel):
     chapter: int
     verse_start: int
     verse_end: int | None
-    theme: str
     difficulty: Difficulty
     category_id: int
-    subcategory: str | None
-    tags: list[str]
     is_active: bool
     options: list[AdminOption]
     accepted_answers: list[AdminAnswer]
@@ -98,10 +95,7 @@ class AdminQuestionUpdate(BaseModel):
     chapter: int | None = Field(default=None, ge=1)
     verse_start: int | None = Field(default=None, ge=1)
     verse_end: int | None = Field(default=None, ge=1)
-    theme: str | None = Field(default=None, min_length=2, max_length=80)
     difficulty: Difficulty | None = None
-    subcategory: str | None = Field(default=None, max_length=80)
-    tags: list[str] | None = Field(default=None, max_length=6)
     is_active: bool | None = None
     options: list[AdminOption] | None = None
     accepted_answers: list[AdminAnswer] | None = None

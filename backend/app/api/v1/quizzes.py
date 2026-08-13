@@ -96,7 +96,6 @@ def create_quiz(body: QuizCreateRequest, user: CurrentUser, db: DbDep) -> QuizSe
             testament=body.testament,
             category_ids=body.category_ids,
             difficulty=body.difficulty,
-            theme=body.theme,
             timer_seconds=body.timer_seconds,
         )
     except QuizError as error:

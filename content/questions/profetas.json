@@ -32,14 +32,7 @@
         "verse_start": 2,
         "verse_end": 6
       },
-      "theme": "Provisão",
-      "difficulty": "medium",
-      "subcategory": "Profetas do Norte",
-      "tags": [
-        "elias",
-        "corvos",
-        "querite"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "profetas-0002",
@@ -72,14 +65,7 @@
         "verse_start": 1,
         "verse_end": 8
       },
-      "theme": "Chamado profético",
-      "difficulty": "medium",
-      "subcategory": "Profetas de Judá",
-      "tags": [
-        "isaias",
-        "uzias",
-        "visao do trono"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "profetas-0003",
@@ -112,14 +98,7 @@
         "verse_start": 1,
         "verse_end": 1
       },
-      "theme": "Vida dos profetas",
-      "difficulty": "easy",
-      "subcategory": "Profetas de Judá",
-      "tags": [
-        "jeremias",
-        "lamentacoes",
-        "jerusalem"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "profetas-0004",
@@ -138,14 +117,7 @@
         "verse_start": 24,
         "verse_end": 31
       },
-      "theme": "Juízo das nações",
-      "difficulty": "medium",
-      "subcategory": "Profetas do exílio",
-      "tags": [
-        "daniel",
-        "belsazar",
-        "escrita na parede"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "profetas-0005",
@@ -178,14 +150,7 @@
         "verse_start": 2,
         "verse_end": 3
       },
-      "theme": "Amor de Deus",
-      "difficulty": "medium",
-      "subcategory": "Profetas menores",
-      "tags": [
-        "oseias",
-        "gomer",
-        "fidelidade de deus"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "profetas-0006",
@@ -218,14 +183,7 @@
         "verse_start": 1,
         "verse_end": 14
       },
-      "theme": "Restauração",
-      "difficulty": "medium",
-      "subcategory": "Profetas do exílio",
-      "tags": [
-        "ezequiel",
-        "ossos secos",
-        "restauracao"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "profetas-0007",
@@ -258,14 +216,7 @@
         "verse_start": 14,
         "verse_end": 15
       },
-      "theme": "Chamado profético",
-      "difficulty": "hard",
-      "subcategory": "Profetas menores",
-      "tags": [
-        "amos",
-        "tecoa",
-        "justica"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "profetas-0008",
@@ -298,14 +249,7 @@
         "verse_start": 5,
         "verse_end": 6
       },
-      "theme": "Promessas messiânicas",
-      "difficulty": "hard",
-      "subcategory": "Profetas menores",
-      "tags": [
-        "malaquias",
-        "elias",
-        "joao batista"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "profetas-0009",
@@ -324,15 +268,7 @@
         "verse_start": 1,
         "verse_end": 13
       },
-      "theme": "Vida dos profetas",
-      "difficulty": "easy",
-      "subcategory": "Profetas de Israel unido",
-      "tags": [
-        "samuel",
-        "uncao",
-        "saul",
-        "davi"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "profetas-0010",
@@ -365,14 +301,7 @@
         "verse_start": 12,
         "verse_end": 13
       },
-      "theme": "Justiça de Deus",
-      "difficulty": "expert",
-      "subcategory": "Profetas menores",
-      "tags": [
-        "habacuque",
-        "caldeus",
-        "fe"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "profetas-0011",
@@ -405,13 +334,7 @@
         "verse_start": 17,
         "verse_end": null
       },
-      "theme": "Obediência",
-      "difficulty": "easy",
-      "subcategory": "Profetas menores",
-      "tags": [
-        "jonas",
-        "peixe"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "profetas-0012",
@@ -444,13 +367,7 @@
         "verse_start": 8,
         "verse_end": null
       },
-      "theme": "Chamado",
-      "difficulty": "medium",
-      "subcategory": "Profetas maiores",
-      "tags": [
-        "isaias",
-        "chamado"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "profetas-0013",
@@ -483,13 +400,7 @@
         "verse_start": 1,
         "verse_end": 10
       },
-      "theme": "Restauração",
-      "difficulty": "hard",
-      "subcategory": "Profetas maiores",
-      "tags": [
-        "ezequiel",
-        "ossos secos"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "profetas-0014",
@@ -507,13 +418,7 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "theme": "Lamento",
-      "difficulty": "medium",
-      "subcategory": "Profetas maiores",
-      "tags": [
-        "jeremias",
-        "lamentacoes"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "profetas-0015",
@@ -546,13 +451,7 @@
         "verse_start": 36,
         "verse_end": 39
       },
-      "theme": "Soberania de Deus",
-      "difficulty": "easy",
-      "subcategory": "Profetas do Norte",
-      "tags": [
-        "elias",
-        "carmelo"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "profetas-0016",
@@ -585,13 +484,7 @@
         "verse_start": 2,
         "verse_end": null
       },
-      "theme": "Messias",
-      "difficulty": "hard",
-      "subcategory": "Profetas menores",
-      "tags": [
-        "miqueias",
-        "belem"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "profetas-0017",
@@ -624,13 +517,7 @@
         "verse_start": 1,
         "verse_end": 10
       },
-      "theme": "Arrependimento",
-      "difficulty": "medium",
-      "subcategory": "Profetas menores",
-      "tags": [
-        "jonas",
-        "ninive"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "profetas-0018",
@@ -648,13 +535,7 @@
         "verse_start": 28,
         "verse_end": 29
       },
-      "theme": "Espírito Santo",
-      "difficulty": "hard",
-      "subcategory": "Profetas menores",
-      "tags": [
-        "joel",
-        "pentecostes"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "profetas-0019",
@@ -687,13 +568,7 @@
         "verse_start": 5,
         "verse_end": 6
       },
-      "theme": "Preparação",
-      "difficulty": "medium",
-      "subcategory": "Profetas menores",
-      "tags": [
-        "malaquias",
-        "elias"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "profetas-0020",
@@ -726,13 +601,7 @@
         "verse_start": 6,
         "verse_end": 15
       },
-      "theme": "Esperança",
-      "difficulty": "expert",
-      "subcategory": "Profetas maiores",
-      "tags": [
-        "jeremias",
-        "campo"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "profetas-0021",
@@ -765,13 +634,7 @@
         "verse_start": 1,
         "verse_end": 2
       },
-      "theme": "Visões",
-      "difficulty": "expert",
-      "subcategory": "Profetas menores",
-      "tags": [
-        "amos",
-        "visoes"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "profetas-0022",
@@ -804,13 +667,7 @@
         "verse_start": 10,
         "verse_end": 11
       },
-      "theme": "Atos proféticos",
-      "difficulty": "expert",
-      "subcategory": "Profetas maiores",
-      "tags": [
-        "jeremias",
-        "jugo"
-      ]
+      "difficulty": "expert"
     }
   ]
 }

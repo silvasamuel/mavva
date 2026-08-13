@@ -190,11 +190,8 @@ def _create_question(db: Session, draft: QuestionDraft) -> Question:
         chapter=draft.chapter,
         verse_start=draft.verse_start,
         verse_end=draft.verse_end,
-        theme=draft.theme,
         difficulty=draft.difficulty,
         category_id=category.id,
-        subcategory=draft.subcategory,
-        tags=[t.strip().lower() for t in draft.tags],
         is_active=True,
     )
     db.add(question)

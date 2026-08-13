@@ -76,15 +76,12 @@ erDiagram
 | book | VARCHAR(40) | slug canônico (`genesis`, `mateus`…) — validado contra catálogo dos 66 livros |
 | chapter | INT | |
 | verse_start / verse_end | INT / INT NULL | intervalo de versículos |
-| theme | VARCHAR(80) | ex: "Fé", "Aliança" |
 | difficulty | ENUM(easy, medium, hard, expert) | |
 | category_id | INT FK→categories | |
-| subcategory | VARCHAR(80) NULL | livre (ex: "Reis de Judá") |
-| tags | VARCHAR[] | GIN index |
 | is_active | BOOL | soft-disable sem apagar histórico |
 | created_at / updated_at | TIMESTAMPTZ | |
 
-Índices: `(category_id, difficulty)`, `(testament)`, GIN em `tags`.
+Índices: `(category_id, difficulty)`, `(testament)`.
 
 ### question_options *(múltipla escolha — exatamente 4 por pergunta, 1 correta)*
 `id UUID PK, question_id FK CASCADE, text TEXT, is_correct BOOL, position INT`
@@ -100,7 +97,7 @@ Constraint de aplicação (validada no seed): 4 opções, exatamente 1 `is_corre
 | id | UUID PK | |
 | user_id | UUID FK | |
 | mode | ENUM(practice, review) | review consome a fila SRS |
-| filters | JSONB | `{testament, category_ids, difficulty, theme}` — snapshot do que foi pedido |
+| filters | JSONB | `{testament, category_ids, difficulty}` — snapshot do que foi pedido |
 | question_count | INT | |
 | correct_count | INT | atualizado a cada resposta |
 | xp_earned | INT | consolidado no complete |

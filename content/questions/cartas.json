@@ -32,14 +32,7 @@
         "verse_start": 1,
         "verse_end": 13
       },
-      "theme": "Amor",
-      "difficulty": "easy",
-      "subcategory": "Cartas de Paulo",
-      "tags": [
-        "corintios",
-        "amor",
-        "dons"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "cartas-0002",
@@ -72,14 +65,7 @@
         "verse_start": 8,
         "verse_end": 18
       },
-      "theme": "Reconciliação",
-      "difficulty": "medium",
-      "subcategory": "Cartas de Paulo",
-      "tags": [
-        "filemom",
-        "onesimo",
-        "perdao"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cartas-0003",
@@ -112,14 +98,7 @@
         "verse_start": 4,
         "verse_end": 7
       },
-      "theme": "Alegria",
-      "difficulty": "medium",
-      "subcategory": "Cartas da prisão",
-      "tags": [
-        "filipenses",
-        "alegria",
-        "prisao"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cartas-0004",
@@ -152,14 +131,7 @@
         "verse_start": 22,
         "verse_end": 23
       },
-      "theme": "Vida no Espírito",
-      "difficulty": "medium",
-      "subcategory": "Cartas de Paulo",
-      "tags": [
-        "galatas",
-        "fruto do espirito",
-        "carater"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cartas-0005",
@@ -192,14 +164,7 @@
         "verse_start": 10,
         "verse_end": 18
       },
-      "theme": "Batalha espiritual",
-      "difficulty": "easy",
-      "subcategory": "Cartas da prisão",
-      "tags": [
-        "efesios",
-        "armadura",
-        "batalha espiritual"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "cartas-0006",
@@ -232,14 +197,7 @@
         "verse_start": 14,
         "verse_end": 15
       },
-      "theme": "Liderança da igreja",
-      "difficulty": "medium",
-      "subcategory": "Cartas de Paulo",
-      "tags": [
-        "pastorais",
-        "timoteo",
-        "tito"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cartas-0007",
@@ -258,14 +216,7 @@
         "verse_start": 1,
         "verse_end": 4
       },
-      "theme": "Cartas gerais",
-      "difficulty": "easy",
-      "subcategory": "Cartas gerais",
-      "tags": [
-        "joao",
-        "epistolas",
-        "tres cartas"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "cartas-0008",
@@ -298,14 +249,7 @@
         "verse_start": 14,
         "verse_end": 26
       },
-      "theme": "Fé e obras",
-      "difficulty": "medium",
-      "subcategory": "Cartas gerais",
-      "tags": [
-        "tiago",
-        "fe",
-        "obras"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cartas-0009",
@@ -338,14 +282,7 @@
         "verse_start": 1,
         "verse_end": 2
       },
-      "theme": "Cartas gerais",
-      "difficulty": "hard",
-      "subcategory": "Cartas gerais",
-      "tags": [
-        "pedro",
-        "dispersao",
-        "perseguicao"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "cartas-0010",
@@ -378,14 +315,7 @@
         "verse_start": 6,
         "verse_end": 8
       },
-      "theme": "Perseverança",
-      "difficulty": "hard",
-      "subcategory": "Cartas de Paulo",
-      "tags": [
-        "2timoteo",
-        "bom combate",
-        "paulo"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "cartas-0011",
@@ -418,13 +348,7 @@
         "verse_start": 4,
         "verse_end": 7
       },
-      "theme": "Amor",
-      "difficulty": "medium",
-      "subcategory": "Cartas paulinas",
-      "tags": [
-        "amor",
-        "corintios"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cartas-0012",
@@ -442,13 +366,7 @@
         "verse_start": 13,
         "verse_end": null
       },
-      "theme": "Contentamento",
-      "difficulty": "medium",
-      "subcategory": "Cartas paulinas",
-      "tags": [
-        "filipenses",
-        "forca"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cartas-0013",
@@ -481,13 +399,7 @@
         "verse_start": 17,
         "verse_end": null
       },
-      "theme": "Fé e obras",
-      "difficulty": "hard",
-      "subcategory": "Cartas gerais",
-      "tags": [
-        "tiago",
-        "obras"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "cartas-0014",
@@ -520,13 +432,7 @@
         "verse_start": 22,
         "verse_end": 23
       },
-      "theme": "Fruto do Espírito",
-      "difficulty": "medium",
-      "subcategory": "Cartas paulinas",
-      "tags": [
-        "galatas",
-        "espirito"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cartas-0015",
@@ -559,13 +465,7 @@
         "verse_start": 2,
         "verse_end": null
       },
-      "theme": "Discipulado",
-      "difficulty": "hard",
-      "subcategory": "Cartas pastorais",
-      "tags": [
-        "timoteo",
-        "paulo"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "cartas-0016",
@@ -598,13 +498,7 @@
         "verse_start": 16,
         "verse_end": 17
       },
-      "theme": "Inspiração",
-      "difficulty": "medium",
-      "subcategory": "Cartas pastorais",
-      "tags": [
-        "escritura",
-        "inspiracao"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cartas-0017",
@@ -637,13 +531,7 @@
         "verse_start": 8,
         "verse_end": 9
       },
-      "theme": "Graça",
-      "difficulty": "hard",
-      "subcategory": "Cartas paulinas",
-      "tags": [
-        "efesios",
-        "graca"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "cartas-0018",
@@ -676,13 +564,7 @@
         "verse_start": 15,
         "verse_end": 17
       },
-      "theme": "Sacerdócio de Cristo",
-      "difficulty": "expert",
-      "subcategory": "Cartas gerais",
-      "tags": [
-        "hebreus",
-        "melquisedeque"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "cartas-0019",
@@ -715,13 +597,7 @@
         "verse_start": 5,
         "verse_end": 9
       },
-      "theme": "Igreja",
-      "difficulty": "medium",
-      "subcategory": "Cartas gerais",
-      "tags": [
-        "pedro",
-        "pedras vivas"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cartas-0020",
@@ -739,13 +615,7 @@
         "verse_start": 10,
         "verse_end": 16
       },
-      "theme": "Reconciliação",
-      "difficulty": "hard",
-      "subcategory": "Cartas paulinas",
-      "tags": [
-        "filemom",
-        "onesimo"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "cartas-0021",
@@ -763,13 +633,7 @@
         "verse_start": 1,
         "verse_end": 2
       },
-      "theme": "Colaboradores",
-      "difficulty": "expert",
-      "subcategory": "Cartas paulinas",
-      "tags": [
-        "febe",
-        "cencreia"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "cartas-0022",
@@ -802,13 +666,7 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "theme": "Destinatários",
-      "difficulty": "expert",
-      "subcategory": "Cartas paulinas",
-      "tags": [
-        "colossenses",
-        "paulo"
-      ]
+      "difficulty": "expert"
     }
   ]
 }
