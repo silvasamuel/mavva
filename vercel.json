@@ -1,5 +1,10 @@
 {
     "$schema": "https://openapi.vercel.sh/vercel.json",
+    "git": {
+        "deploymentEnabled": {
+            "content/admin-publish": false
+        }
+    },
     "services": {
         "frontend": {
             "root": "frontend",

@@ -100,8 +100,10 @@ HTTP (api/v1/*)  →  Services (regra de negócio)  →  Models/DB (SQLAlchemy)
   para `content/questions/*.json` pelo botão "Publicar" (`POST /admin/content/publish`):
   em dev escreve nos arquivos (revisão via git); em produção abre **um pull request**
   contra a `main` via API do GitHub (`GITHUB_TOKEN`, PAT fine-grained com
-  `contents:write` e `pull-requests:write`). Publicar de novo atualiza o mesmo PR.
-  O merge dispara o deploy, o seed realinha o banco e fecha o ciclo.
+  `contents:write` e `pull-requests:write`; sem a segunda o GitHub cria a
+  branch e responde 403 no POST /pulls). Publicar de novo com o mesmo conteúdo
+  não gera commit novo. A branch `content/admin-publish` não dispara preview no
+  Vercel. O merge dispara o deploy, o seed realinha o banco e fecha o ciclo.
   O serializador regenera os arquivos no formato canônico do seed (diffs mínimos)
   e `is_active` faz parte do schema, então desativações sobrevivem ao re-seed.
 

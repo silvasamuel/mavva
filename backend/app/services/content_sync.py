@@ -168,12 +168,16 @@ def _github(method: str, path: str, *, allow_404: bool = False, **kwargs: Any) -
     if allow_404 and response.status_code == 404:
         return None
     if response.status_code >= 300:
-        raise ContentSyncError(
-            f"GitHub respondeu {response.status_code} em {path}: {response.text[:200]}"
-        )
+        raise ContentSyncError(_github_error(method, path, response))
     if not response.content:
         return None
     return response.json()
+
+
+def _github_error(method: str, path: str, response: httpx.Response) -> str:
+    if response.status_code == 403 and method == "POST" and path.rstrip("/") == "/pulls":
+        return "GitHub refused to create the pull request (403)."
+    return f"GitHub respondeu {response.status_code} em {path}: {response.text[:200]}"
 
 
 def _publish_github(files: dict[str, str], message: str) -> PublishResult:
@@ -194,15 +198,27 @@ def _publish_github(files: dict[str, str], message: str) -> PublishResult:
             ],
         },
     )
+    tree_sha = tree["sha"]
+    existing_ref = _github("GET", f"/git/ref/heads/{CONTENT_PR_BRANCH}", allow_404=True)
+    if existing_ref is not None:
+        existing_commit = _github("GET", f"/git/commits/{existing_ref['object']['sha']}")
+        if existing_commit["tree"]["sha"] == tree_sha:
+            # Same files already on the branch — a new commit would only
+            # retrigger preview deploys. Still try to open the missing PR.
+            pr_url = _open_or_reuse_pull_request(owner, base, message, files)
+            return PublishResult(
+                commit_url=f"https://github.com/{repo}/commit/{existing_ref['object']['sha']}",
+                pr_url=pr_url,
+            )
+
     commit = _github(
         "POST",
         "/git/commits",
-        json={"message": message, "tree": tree["sha"], "parents": [head_sha]},
+        json={"message": message, "tree": tree_sha, "parents": [head_sha]},
     )
     commit_sha = commit["sha"]
     commit_url = f"https://github.com/{repo}/commit/{commit_sha}"
 
-    existing_ref = _github("GET", f"/git/ref/heads/{CONTENT_PR_BRANCH}", allow_404=True)
     if existing_ref is None:
         _github(
             "POST",
