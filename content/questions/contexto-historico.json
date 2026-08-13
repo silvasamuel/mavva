@@ -349,7 +349,8 @@
         "verse_start": 1,
         "verse_end": 3
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "contexto-historico-0012",
@@ -382,7 +383,8 @@
         "verse_start": 24,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "contexto-historico-0013",
@@ -415,7 +417,8 @@
         "verse_start": 16,
         "verse_end": null
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "contexto-historico-0014",
@@ -448,7 +451,8 @@
         "verse_start": 8,
         "verse_end": null
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "contexto-historico-0015",
@@ -712,7 +716,161 @@
         "verse_start": 59,
         "verse_end": null
       },
+      "difficulty": "expert",
+      "is_active": false
+    },
+    {
+      "external_id": "contexto-historico-0023",
+      "type": "multiple_choice",
+      "text": "Que classe de judeus cobrava impostos para Roma e era vista como traidora?",
+      "options": [
+        {
+          "text": "Os publicanos",
+          "correct": true
+        },
+        {
+          "text": "Os essênios",
+          "correct": false
+        },
+        {
+          "text": "Os escribas",
+          "correct": false
+        },
+        {
+          "text": "Os levitas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Publicanos como Mateus e Zaqueu eram desprezados por servir a Roma; Jesus comeu com eles (Lc 5:29-30; 19:2-7).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 5,
+        "verse_start": 29,
+        "verse_end": 30
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0024",
+      "type": "multiple_choice",
+      "text": "Que estrutura política Roma usava na Judeia por meio de reis-clientes como Herodes?",
+      "options": [
+        {
+          "text": "Reinos vassalos sob autoridade romana",
+          "correct": true
+        },
+        {
+          "text": "Democracia direta",
+          "correct": false
+        },
+        {
+          "text": "Governo dos sacerdotes apenas",
+          "correct": false
+        },
+        {
+          "text": "Confederação de tribos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Herodes reinava por concessão de Roma; depois a Judeia passou a prefeitos/procuradores como Pilatos (Lc 3:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 3,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "contexto-historico-0025",
+      "type": "multiple_choice",
+      "text": "Que evento levou judeus a se espalharem por todo o Império, criando a Diáspora?",
+      "options": [
+        {
+          "text": "Os exílios assírio e babilônico e as migrações posteriores",
+          "correct": true
+        },
+        {
+          "text": "A queda de Roma",
+          "correct": false
+        },
+        {
+          "text": "As Cruzadas",
+          "correct": false
+        },
+        {
+          "text": "A guerra dos macabeus apenas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Por isso havia judeus 'de todas as nações' em Jerusalém no Pentecostes (At 2:5-11).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 2,
+        "verse_start": 5,
+        "verse_end": 11
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "contexto-historico-0026",
+      "type": "multiple_choice",
+      "text": "Que cidadania Paulo invocou para evitar ser açoitado sem julgamento?",
+      "options": [
+        {
+          "text": "A cidadania romana",
+          "correct": true
+        },
+        {
+          "text": "A cidadania de Tarso",
+          "correct": false
+        },
+        {
+          "text": "A cidadania grega",
+          "correct": false
+        },
+        {
+          "text": "A pertença ao Sinédrio",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'É-vos lícito açoitar um homem romano, sem ser condenado?' — o tribuno temeu ao saber (At 22:25-29).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 22,
+        "verse_start": 25,
+        "verse_end": 29
+      },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "contexto-historico-0027",
+      "type": "open_answer",
+      "text": "Segundo os historiadores, em que ano aproximado o templo de Jerusalém foi destruído pelos romanos?",
+      "options": null,
+      "accepted_answers": [
+        "70",
+        "70 d.C.",
+        "ano 70",
+        "70 dC"
+      ],
+      "explanation": "A destruição em 70 d.C. é registrada por historiadores como Josefo; Jesus a havia predito (Mt 24:1-2).",
+      "divergence_note": "A data de 70 d.C. vem de fontes históricas extrabíblicas (notadamente Josefo); o texto bíblico registra a predição de Jesus, não o ano.",
+      "reference": {
+        "book": "mateus",
+        "chapter": 24,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "hard"
     }
   ]
 }

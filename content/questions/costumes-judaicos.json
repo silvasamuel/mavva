@@ -339,7 +339,8 @@
         "verse_start": 3,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "costumes-judaicos-0012",
@@ -405,7 +406,8 @@
         "verse_start": 10,
         "verse_end": 11
       },
-      "difficulty": "expert"
+      "difficulty": "expert",
+      "is_active": false
     },
     {
       "external_id": "costumes-judaicos-0014",
@@ -504,7 +506,8 @@
         "verse_start": 8,
         "verse_end": 9
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "costumes-judaicos-0017",
@@ -537,7 +540,8 @@
         "verse_start": 65,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "costumes-judaicos-0018",
@@ -558,7 +562,8 @@
         "verse_start": 22,
         "verse_end": 24
       },
-      "difficulty": "expert"
+      "difficulty": "expert",
+      "is_active": false
     },
     {
       "external_id": "costumes-judaicos-0019",
@@ -591,7 +596,8 @@
         "verse_start": 4,
         "verse_end": 6
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "costumes-judaicos-0020",
@@ -624,7 +630,8 @@
         "verse_start": 8,
         "verse_end": 11
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "costumes-judaicos-0021",
@@ -678,6 +685,159 @@
         "verse_end": 10
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "costumes-judaicos-0023",
+      "type": "multiple_choice",
+      "text": "O que era o 'shemá', recitado diariamente pelos israelitas?",
+      "options": [
+        {
+          "text": "'Ouve, Israel, o SENHOR nosso Deus é o único SENHOR'",
+          "correct": true
+        },
+        {
+          "text": "Um cântico de guerra",
+          "correct": false
+        },
+        {
+          "text": "A lista das tribos",
+          "correct": false
+        },
+        {
+          "text": "A bênção sacerdotal",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Deuteronômio 6:4-5 ordena amar a Deus de todo o coração; Jesus o citou como o maior mandamento (Mc 12:29-30).",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 6,
+        "verse_start": 4,
+        "verse_end": 5
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "costumes-judaicos-0024",
+      "type": "multiple_choice",
+      "text": "Qual era a função do sumo sacerdote no Antigo Testamento?",
+      "options": [
+        {
+          "text": "Representar o povo diante de Deus e fazer expiação",
+          "correct": true
+        },
+        {
+          "text": "Comandar o exército",
+          "correct": false
+        },
+        {
+          "text": "Cobrar impostos",
+          "correct": false
+        },
+        {
+          "text": "Julgar disputas de terra",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O sumo sacerdote entrava no Santo dos Santos uma vez por ano com sangue por si e pelo povo (Lv 16:32-34; Hb 9:7).",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 16,
+        "verse_start": 32,
+        "verse_end": 34
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "costumes-judaicos-0025",
+      "type": "multiple_choice",
+      "text": "O que os israelitas prendiam nas bordas das vestes, por ordem da Lei?",
+      "options": [
+        {
+          "text": "Franjas com um cordão azul",
+          "correct": true
+        },
+        {
+          "text": "Sinos de prata",
+          "correct": false
+        },
+        {
+          "text": "Pedras preciosas",
+          "correct": false
+        },
+        {
+          "text": "Fitas vermelhas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Nas bordas das suas vestes... um cordão azul' para lembrarem os mandamentos do SENHOR (Nm 15:38-39).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 15,
+        "verse_start": 38,
+        "verse_end": 39
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "costumes-judaicos-0026",
+      "type": "multiple_choice",
+      "text": "Por que os judeus evitavam entrar na casa de um gentio antes da Páscoa?",
+      "options": [
+        {
+          "text": "Para não se contaminarem e poderem comer a Páscoa",
+          "correct": true
+        },
+        {
+          "text": "Por medo dos soldados",
+          "correct": false
+        },
+        {
+          "text": "Por proibição de Pilatos",
+          "correct": false
+        },
+        {
+          "text": "Por causa do sábado",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Não entraram na audiência, para não se contaminarem, mas poderem comer a páscoa' (Jo 18:28).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 18,
+        "verse_start": 28,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "costumes-judaicos-0027",
+      "type": "open_answer",
+      "text": "Que gesto público expressava arrependimento, acompanhado de pano áspero e cinza?",
+      "options": null,
+      "accepted_answers": [
+        "Vestir saco e cinza",
+        "Saco e cinza",
+        "Cobrir-se de saco e cinza",
+        "Pano de saco e cinza"
+      ],
+      "explanation": "Nínive se cobriu de saco e cinza ao ouvir Jonas (Jn 3:5-6); Jó também o fez em arrependimento (Jó 42:6).",
+      "divergence_note": null,
+      "reference": {
+        "book": "jonas",
+        "chapter": 3,
+        "verse_start": 5,
+        "verse_end": 6
+      },
+      "difficulty": "medium"
     }
   ]
 }

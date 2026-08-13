@@ -620,6 +620,158 @@
         "verse_end": 33
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "parabolas-0021",
+      "type": "multiple_choice",
+      "text": "Na parábola do grande banquete, quem acabou sendo trazido à festa?",
+      "options": [
+        {
+          "text": "Pobres, aleijados, cegos e coxos",
+          "correct": true
+        },
+        {
+          "text": "Somente os parentes",
+          "correct": false
+        },
+        {
+          "text": "Os sacerdotes",
+          "correct": false
+        },
+        {
+          "text": "Os primeiros convidados",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Diante das desculpas dos convidados, o senhor mandou trazer os pobres e depois compelir os que estavam pelos caminhos (Lc 14:21-23).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 14,
+        "verse_start": 16,
+        "verse_end": 23
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "parabolas-0022",
+      "type": "multiple_choice",
+      "text": "Na parábola do fermento, a que Jesus compara o Reino dos céus?",
+      "options": [
+        {
+          "text": "Ao fermento que leveda toda a massa",
+          "correct": true
+        },
+        {
+          "text": "Ao sal que tempera",
+          "correct": false
+        },
+        {
+          "text": "À luz sobre o monte",
+          "correct": false
+        },
+        {
+          "text": "Ao vinho novo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'O Reino dos céus é semelhante ao fermento, que uma mulher toma e introduz em três medidas de farinha, até que tudo esteja levedado' (Mt 13:33).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 13,
+        "verse_start": 33,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "parabolas-0023",
+      "type": "multiple_choice",
+      "text": "Na parábola das ovelhas e dos bodes, com base em que os povos são separados?",
+      "options": [
+        {
+          "text": "No que fizeram aos pequeninos com fome, sede e nus",
+          "correct": true
+        },
+        {
+          "text": "Na quantidade de orações",
+          "correct": false
+        },
+        {
+          "text": "Nos sacrifícios oferecidos",
+          "correct": false
+        },
+        {
+          "text": "Nos anos de sinagoga",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Quando o fizestes a um destes meus pequeninos irmãos, a mim o fizestes' (Mt 25:40) — a fé verdadeira se prova em misericórdia.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 25,
+        "verse_start": 31,
+        "verse_end": 40
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "parabolas-0024",
+      "type": "multiple_choice",
+      "text": "Na parábola da semente que cresce por si, o que o lavrador faz depois de semear?",
+      "options": [
+        {
+          "text": "Dorme e levanta, e a semente cresce sem ele saber como",
+          "correct": true
+        },
+        {
+          "text": "Rega todos os dias",
+          "correct": false
+        },
+        {
+          "text": "Conta os grãos",
+          "correct": false
+        },
+        {
+          "text": "Arranca o joio",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'A terra por si mesma frutifica' (Mc 4:26-28) — o crescimento do Reino é obra de Deus, não do esforço humano.",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 4,
+        "verse_start": 26,
+        "verse_end": 29
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "parabolas-0025",
+      "type": "open_answer",
+      "text": "Na parábola da moeda perdida, o que a mulher faz ao encontrá-la?",
+      "options": null,
+      "accepted_answers": [
+        "Convoca as amigas e vizinhas",
+        "Chama as amigas",
+        "Convida as vizinhas para se alegrarem"
+      ],
+      "explanation": "'Convoca as amigas e vizinhas, dizendo: Alegrai-vos comigo' (Lc 15:9); assim há alegria entre os anjos por um pecador que se arrepende.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 15,
+        "verse_start": 8,
+        "verse_end": 10
+      },
+      "difficulty": "hard"
     }
   ]
 }

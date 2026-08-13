@@ -447,7 +447,8 @@
         "verse_start": 1,
         "verse_end": 3
       },
-      "difficulty": "expert"
+      "difficulty": "expert",
+      "is_active": false
     },
     {
       "external_id": "historia-da-igreja-0015",
@@ -513,7 +514,8 @@
         "verse_start": 18,
         "verse_end": 19
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "historia-da-igreja-0017",
@@ -698,6 +700,158 @@
         "verse_end": 5
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "historia-da-igreja-0023",
+      "type": "multiple_choice",
+      "text": "Que decisão o concílio de Jerusalém comunicou às igrejas dos gentios?",
+      "options": [
+        {
+          "text": "Absterem-se de idolatria, sangue, sufocado e prostituição",
+          "correct": true
+        },
+        {
+          "text": "Circuncidarem-se",
+          "correct": false
+        },
+        {
+          "text": "Guardarem o sábado",
+          "correct": false
+        },
+        {
+          "text": "Falarem hebraico",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Pareceu bem ao Espírito Santo e a nós não vos impor mais encargo algum, senão estas coisas necessárias' (At 15:28-29).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 15,
+        "verse_start": 28,
+        "verse_end": 29
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-da-igreja-0024",
+      "type": "multiple_choice",
+      "text": "Onde Paulo passou dois anos preso, pregando o Reino 'sem impedimento algum'?",
+      "options": [
+        {
+          "text": "Em Roma",
+          "correct": true
+        },
+        {
+          "text": "Em Éfeso",
+          "correct": false
+        },
+        {
+          "text": "Em Filipos",
+          "correct": false
+        },
+        {
+          "text": "Em Corinto",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Atos termina com Paulo em Roma, numa casa alugada, pregando com toda a liberdade (At 28:30-31).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 28,
+        "verse_start": 30,
+        "verse_end": 31
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0025",
+      "type": "multiple_choice",
+      "text": "Que sinal marcou a conversão dos gentios na casa de Cornélio?",
+      "options": [
+        {
+          "text": "O Espírito Santo caiu sobre eles como no princípio",
+          "correct": true
+        },
+        {
+          "text": "Um terremoto",
+          "correct": false
+        },
+        {
+          "text": "Uma luz do céu",
+          "correct": false
+        },
+        {
+          "text": "Um anjo visível a todos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Também sobre os gentios se derramou o dom do Espírito Santo' — e Pedro mandou batizá-los (At 10:44-48).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 10,
+        "verse_start": 44,
+        "verse_end": 48
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-da-igreja-0026",
+      "type": "multiple_choice",
+      "text": "Que ofício a igreja primitiva instituiu para cuidar da distribuição diária às viúvas?",
+      "options": [
+        {
+          "text": "O serviço dos diáconos",
+          "correct": true
+        },
+        {
+          "text": "O episcopado",
+          "correct": false
+        },
+        {
+          "text": "O profetismo",
+          "correct": false
+        },
+        {
+          "text": "O apostolado",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Os apóstolos dedicaram-se à oração e à palavra, e sete foram escolhidos para servir às mesas (At 6:1-4).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 6,
+        "verse_start": 1,
+        "verse_end": 4
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0027",
+      "type": "open_answer",
+      "text": "Segundo a tradição cristã, qual apóstolo escreveu o Apocalipse na ilha de Patmos?",
+      "options": null,
+      "accepted_answers": [
+        "João",
+        "Joao",
+        "O apóstolo João"
+      ],
+      "explanation": "O livro se identifica como de 'João' (Ap 1:1,9); a tradição da igreja antiga o identifica com o apóstolo.",
+      "divergence_note": "A identificação do 'João' de Apocalipse com o apóstolo vem da tradição da igreja antiga; alguns estudiosos, desde os primeiros séculos, propuseram outro João.",
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 1,
+        "verse_start": 9,
+        "verse_end": null
+      },
+      "difficulty": "medium"
     }
   ]
 }

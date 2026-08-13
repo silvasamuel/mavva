@@ -640,6 +640,156 @@
         "verse_end": 39
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "personagens-0023",
+      "type": "multiple_choice",
+      "text": "Quem cortou os cabelos de Sansão, entregando-o aos filisteus?",
+      "options": [
+        {
+          "text": "Dalila",
+          "correct": true
+        },
+        {
+          "text": "Jezabel",
+          "correct": false
+        },
+        {
+          "text": "Micã",
+          "correct": false
+        },
+        {
+          "text": "Atalia",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Dalila descobriu que a força de Sansão estava no voto de nazireu e o traiu; ele foi preso pelos filisteus (Jz 16:19-21).",
+      "divergence_note": null,
+      "reference": {
+        "book": "juizes",
+        "chapter": 16,
+        "verse_start": 19,
+        "verse_end": 21
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "personagens-0024",
+      "type": "multiple_choice",
+      "text": "Qual sacerdote ficou mudo até o nascimento do filho por duvidar do anjo?",
+      "options": [
+        {
+          "text": "Zacarias",
+          "correct": true
+        },
+        {
+          "text": "Eli",
+          "correct": false
+        },
+        {
+          "text": "Abiatar",
+          "correct": false
+        },
+        {
+          "text": "Simeão",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Zacarias duvidou da promessa de Gabriel e ficou sem falar até dar ao filho o nome de João (Lc 1:20,63-64).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 1,
+        "verse_start": 18,
+        "verse_end": 20
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "personagens-0025",
+      "type": "multiple_choice",
+      "text": "Qual mulher orou em silêncio no templo e foi julgada embriagada por Eli?",
+      "options": [
+        {
+          "text": "Ana",
+          "correct": true
+        },
+        {
+          "text": "Noemi",
+          "correct": false
+        },
+        {
+          "text": "Rute",
+          "correct": false
+        },
+        {
+          "text": "Débora",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Ana orava movendo os lábios sem voz; Eli a repreendeu, mas ela pediu um filho e recebeu Samuel (1Sm 1:13-17).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 1,
+        "verse_start": 13,
+        "verse_end": 17
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "personagens-0026",
+      "type": "multiple_choice",
+      "text": "Quem se separou de Paulo por causa de João Marcos antes da segunda viagem?",
+      "options": [
+        {
+          "text": "Barnabé",
+          "correct": true
+        },
+        {
+          "text": "Silas",
+          "correct": false
+        },
+        {
+          "text": "Timóteo",
+          "correct": false
+        },
+        {
+          "text": "Tito",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Houve entre eles tal desavença que se apartaram um do outro': Barnabé levou Marcos, e Paulo seguiu com Silas (At 15:37-40).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 15,
+        "verse_start": 37,
+        "verse_end": 40
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "personagens-0027",
+      "type": "open_answer",
+      "text": "Qual fariseu, príncipe dos judeus, procurou Jesus de noite?",
+      "options": null,
+      "accepted_answers": [
+        "Nicodemos"
+      ],
+      "explanation": "Nicodemos foi a Jesus à noite e ouviu sobre o novo nascimento (Jo 3:1-3); mais tarde ajudou no sepultamento (Jo 19:39).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 3,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "medium"
     }
   ]
 }

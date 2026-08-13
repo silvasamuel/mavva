@@ -486,7 +486,8 @@
         "verse_start": 5,
         "verse_end": 7
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "milagres-0017",
@@ -657,6 +658,138 @@
         "verse_end": 40
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "milagres-0023",
+      "type": "multiple_choice",
+      "text": "Que sinal Deus deu a Gideão usando um velo de lã?",
+      "options": [
+        {
+          "text": "Orvalho só no velo e depois só no chão",
+          "correct": true
+        },
+        {
+          "text": "Fogo que consumiu o velo",
+          "correct": false
+        },
+        {
+          "text": "O velo que flutuou",
+          "correct": false
+        },
+        {
+          "text": "O velo que virou pedra",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Gideão pediu orvalho apenas no velo e, depois, apenas no chão; Deus atendeu nas duas noites (Jz 6:36-40).",
+      "divergence_note": null,
+      "reference": {
+        "book": "juizes",
+        "chapter": 6,
+        "verse_start": 36,
+        "verse_end": 40
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0024",
+      "type": "multiple_choice",
+      "text": "O que aconteceu quando Eliseu lançou sal na fonte de Jericó?",
+      "options": [
+        {
+          "text": "As águas foram saradas",
+          "correct": true
+        },
+        {
+          "text": "A fonte secou",
+          "correct": false
+        },
+        {
+          "text": "A água virou sangue",
+          "correct": false
+        },
+        {
+          "text": "Brotou óleo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Assim ficaram sãs aquelas águas até ao dia de hoje, conforme a palavra que Eliseu tinha dito' (2Rs 2:21-22).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 2,
+        "verse_start": 21,
+        "verse_end": 22
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "milagres-0025",
+      "type": "multiple_choice",
+      "text": "Que milagre libertou Pedro da prisão de Herodes?",
+      "options": [
+        {
+          "text": "Um anjo soltou suas correntes e abriu as portas",
+          "correct": true
+        },
+        {
+          "text": "Um terremoto derrubou os muros",
+          "correct": false
+        },
+        {
+          "text": "Um sonho enganou os guardas",
+          "correct": false
+        },
+        {
+          "text": "Um subôrno dos irmãos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Eis que sobreveio o anjo do Senhor... e caíram-lhe das mãos as cadeias'; a porta de ferro abriu-se por si mesma (At 12:7-10).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 12,
+        "verse_start": 7,
+        "verse_end": 10
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0026",
+      "type": "multiple_choice",
+      "text": "Que sinal acompanhou a morte de Jesus no templo?",
+      "options": [
+        {
+          "text": "O véu rasgou-se em dois, de alto a baixo",
+          "correct": true
+        },
+        {
+          "text": "As portas se fecharam",
+          "correct": false
+        },
+        {
+          "text": "O altar se partiu",
+          "correct": false
+        },
+        {
+          "text": "As luzes se apagaram",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'E eis que o véu do templo se rasgou em dois, de alto a baixo' (Mt 27:51) — o caminho ao Santo dos Santos foi aberto (Hb 10:19-20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 27,
+        "verse_start": 51,
+        "verse_end": null
+      },
+      "difficulty": "medium"
     }
   ]
 }

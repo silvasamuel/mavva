@@ -336,7 +336,8 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "idiomas-biblicos-0012",
@@ -388,7 +389,8 @@
         "verse_start": 23,
         "verse_end": null
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "idiomas-biblicos-0014",
@@ -454,7 +456,8 @@
         "verse_start": 34,
         "verse_end": null
       },
-      "difficulty": "expert"
+      "difficulty": "expert",
+      "is_active": false
     },
     {
       "external_id": "idiomas-biblicos-0016",
@@ -527,7 +530,8 @@
         "verse_start": 36,
         "verse_end": null
       },
-      "difficulty": "expert"
+      "difficulty": "expert",
+      "is_active": false
     },
     {
       "external_id": "idiomas-biblicos-0019",
@@ -630,6 +634,158 @@
         "book": "marcos",
         "chapter": 15,
         "verse_start": 22,
+        "verse_end": null
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "idiomas-biblicos-0023",
+      "type": "multiple_choice",
+      "text": "O que significa a palavra hebraica 'shalom', usada como saudação?",
+      "options": [
+        {
+          "text": "Paz, inteireza, bem-estar",
+          "correct": true
+        },
+        {
+          "text": "Vitória",
+          "correct": false
+        },
+        {
+          "text": "Perdão",
+          "correct": false
+        },
+        {
+          "text": "Luz",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Mais que ausência de guerra, shalom é plenitude e integridade — a bênção sacerdotal pede que Deus dê 'a paz' (Nm 6:26).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 6,
+        "verse_start": 24,
+        "verse_end": 26
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "idiomas-biblicos-0024",
+      "type": "multiple_choice",
+      "text": "O que significa 'evangelho' (euangelion) no grego do Novo Testamento?",
+      "options": [
+        {
+          "text": "Boas novas",
+          "correct": true
+        },
+        {
+          "text": "Lei escrita",
+          "correct": false
+        },
+        {
+          "text": "Assembleia",
+          "correct": false
+        },
+        {
+          "text": "Sacrifício",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Princípio do evangelho de Jesus Cristo, Filho de Deus' (Mc 1:1) — o anúncio da boa nova do Reino.",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "idiomas-biblicos-0025",
+      "type": "multiple_choice",
+      "text": "O que significa a palavra grega 'ekklesia', traduzida por 'igreja'?",
+      "options": [
+        {
+          "text": "Assembleia dos chamados para fora",
+          "correct": true
+        },
+        {
+          "text": "Templo de pedra",
+          "correct": false
+        },
+        {
+          "text": "Sacrifício comunitário",
+          "correct": false
+        },
+        {
+          "text": "Conselho de anciãos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jesus diz: 'edificarei a minha igreja' (Mt 16:18) — não um edifício, mas o povo convocado.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 16,
+        "verse_start": 18,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "idiomas-biblicos-0026",
+      "type": "multiple_choice",
+      "text": "O que significa 'Efatá', dito por Jesus ao curar o surdo?",
+      "options": [
+        {
+          "text": "Abre-te",
+          "correct": true
+        },
+        {
+          "text": "Levanta-te",
+          "correct": false
+        },
+        {
+          "text": "Cala-te",
+          "correct": false
+        },
+        {
+          "text": "Vai em paz",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'E, suspirando, disse: Efatá, isto é, Abre-te. E logo se abriram os seus ouvidos' (Mc 7:34-35).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 7,
+        "verse_start": 34,
+        "verse_end": 35
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "idiomas-biblicos-0027",
+      "type": "open_answer",
+      "text": "Que palavra hebraica, repetida três vezes por serafins em Isaías 6, significa 'santo'?",
+      "options": null,
+      "accepted_answers": [
+        "Kadosh",
+        "Qadosh",
+        "Santo"
+      ],
+      "explanation": "'Santo, Santo, Santo é o SENHOR dos Exércitos' (Is 6:3) — a repetição tripla marca o superlativo hebraico.",
+      "divergence_note": null,
+      "reference": {
+        "book": "isaias",
+        "chapter": 6,
+        "verse_start": 3,
         "verse_end": null
       },
       "difficulty": "expert"
