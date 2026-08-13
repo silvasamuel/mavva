@@ -176,9 +176,7 @@ def _github(method: str, path: str, *, allow_404: bool = False, **kwargs: Any) -
 
 def _github_error(method: str, path: str, response: httpx.Response) -> str:
     if response.status_code == 403 and method == "POST" and path.rstrip("/") == "/pulls":
-        return (
-            "GitHub refused to create the pull request (403)."
-        )
+        return "GitHub refused to create the pull request (403)."
     return f"GitHub respondeu {response.status_code} em {path}: {response.text[:200]}"
 
 
