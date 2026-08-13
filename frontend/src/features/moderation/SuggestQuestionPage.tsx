@@ -85,10 +85,6 @@ export function SuggestQuestionPage() {
     <div className="animate-float-up mx-auto max-w-2xl space-y-6">
       <header>
         <h1 className="text-2xl font-extrabold">Sugerir pergunta</h1>
-        <p className="text-sm font-semibold text-sand-500">
-          Mesmo formato do banco: enunciado, alternativas ou resposta aberta, explicação e
-          referência. A sugestão fica inativa até um revisor aprovar.
-        </p>
       </header>
 
       <Card>
