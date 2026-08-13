@@ -5,6 +5,7 @@ import { api, ApiError } from '@/lib/api'
 import type { Category, Difficulty, QuizSession, Testament } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Card, CardTitle } from '@/components/ui/Card'
+import { Spinner } from '@/components/ui/Spinner'
 import { DIFFICULTY_LABELS } from '@/lib/format'
 
 const TESTAMENT_OPTIONS: { value: Testament | null; label: string; icon: string }[] = [
@@ -51,7 +52,7 @@ export function QuizConfigPage() {
   const location = useLocation()
   const preselectedSlug = (location.state as { categorySlug?: string } | null)?.categorySlug
 
-  const { data: categories } = useQuery({
+  const { data: categories, isLoading } = useQuery({
     queryKey: ['categories'],
     queryFn: () => api.get<Category[]>('/categories'),
   })
@@ -95,6 +96,14 @@ export function QuizConfigPage() {
       setError(err instanceof ApiError ? err.message : 'Não foi possível criar o quiz.'),
   })
 
+  if (isLoading || !categories) {
+    return (
+      <div className="flex justify-center py-24">
+        <Spinner className="h-8 w-8 text-leaf-500" />
+      </div>
+    )
+  }
+
   return (
     <div className="animate-float-up mx-auto max-w-3xl space-y-6">
       <header>
@@ -137,7 +146,7 @@ export function QuizConfigPage() {
           >
             Todas
           </Chip>
-          {(categories ?? []).map((category) => (
+          {categories.map((category) => (
             <Chip
               key={category.id}
               selected={categoryIds.includes(category.id)}
