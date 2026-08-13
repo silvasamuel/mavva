@@ -108,5 +108,4 @@ def test_identical_republish_does_not_push_again(monkeypatch):
 def test_pulls_403_explains_missing_permission():
     response = httpx.Response(403, text="Resource not accessible by personal access token")
     message = content_sync._github_error("POST", "/pulls", response)
-    assert "pull-requests:write" in message
-    assert "403" in message
+    assert message == "GitHub refused to create the pull request (403)."
