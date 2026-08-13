@@ -35,8 +35,8 @@ def _set_refresh_cookie(response: Response, raw_token: str) -> None:
         max_age=settings.refresh_token_expire_days * 24 * 3600,
         httponly=True,
         secure=settings.is_production,
-        # Cross-site in production (Vercel frontend -> Render API) requires none+secure.
-        samesite="none" if settings.is_production else "lax",
+        # Same-origin /api on each Vercel host; Lax is enough and avoids third-party cookies.
+        samesite="lax",
         path="/api/v1/auth",
     )
 

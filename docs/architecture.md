@@ -71,7 +71,7 @@ HTTP (api/v1/*)  →  Services (regra de negócio)  →  Models/DB (SQLAlchemy)
 - **Access token:** JWT assinado (HS256), 15 min, enviado em `Authorization: Bearer`.
   Guardado **em memória** no frontend (nunca em localStorage — mitiga XSS).
 - **Refresh token:** opaco (256 bits aleatórios), 30 dias, guardado **hasheado (SHA-256)**
-  no banco. Entregue via **cookie httpOnly + Secure + SameSite=None** (web).
+  no banco. Entregue via **cookie httpOnly + Secure + SameSite=Lax** (web; same-origin `/api`).
 - **Rotação:** cada `/auth/refresh` invalida o token usado e emite um novo par.
   Reuso de token já rotacionado ⇒ revoga a cadeia inteira (detecção de roubo).
 - **Mobile (futuro):** mesmos endpoints aceitarão/retornarão o refresh token no corpo

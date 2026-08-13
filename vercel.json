@@ -31,6 +31,20 @@
             "buildCommand": "sh scripts/vercel_build.sh"
         }
     },
+    "redirects": [
+        {
+            "source": "/((?!api/).*)",
+            "has": [{ "type": "host", "value": "www.mavva.com.br" }],
+            "destination": "https://mavva.com.br/$1",
+            "permanent": true
+        },
+        {
+            "source": "/((?!api/).*)",
+            "has": [{ "type": "host", "value": "mavva.vercel.app" }],
+            "destination": "https://mavva.com.br/$1",
+            "permanent": true
+        }
+    ],
     "rewrites": [
         {
             "source": "/api(/.*)?",

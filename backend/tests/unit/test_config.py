@@ -24,7 +24,7 @@ class TestProductionSecret:
 class TestCorsOrigins:
     def test_single_origin(self):
         settings = Settings(frontend_origin="https://mavva.com.br")
-        assert settings.cors_origins == ["https://mavva.com.br"]
+        assert settings.cors_origins == ["https://mavva.com.br", "https://www.mavva.com.br"]
         assert settings.public_origin == "https://mavva.com.br"
 
     def test_comma_separated_allowlist(self):
@@ -37,3 +37,7 @@ class TestCorsOrigins:
             "https://mavva.vercel.app",
         ]
         assert settings.public_origin == "https://mavva.com.br"
+
+    def test_vercel_host_does_not_gain_www(self):
+        settings = Settings(frontend_origin="https://mavva.vercel.app")
+        assert settings.cors_origins == ["https://mavva.vercel.app"]
