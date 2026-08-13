@@ -6,6 +6,55 @@ from pydantic import BaseModel, Field, StringConstraints, model_validator
 
 from app.models.enums import Difficulty, QuestionType, Testament, UserRole
 
+# --- Dashboard ---
+
+
+class AdminDashboardUsers(BaseModel):
+    total: int
+    active: int
+    unverified: int
+    new_7d: int
+
+
+class AdminDashboardQuestions(BaseModel):
+    total: int
+    active: int
+    inactive: int
+    open_answer: int
+    old_testament: int
+    easy: int
+    medium: int
+    hard: int
+    expert: int
+
+
+class AdminDashboardReview(BaseModel):
+    flags_open: int
+    proposals_pending: int
+    pending: int
+
+
+class AdminDashboardActivity(BaseModel):
+    studied_today: int
+    xp_today: int
+    questions_answered: int
+    accuracy: float | None
+    total_xp: int
+    longest_streak: int
+    max_level: int
+    duels_open: int
+    duels_active: int
+    duels_finished: int
+    friendships: int
+
+
+class AdminDashboardOut(BaseModel):
+    users: AdminDashboardUsers
+    questions: AdminDashboardQuestions
+    review: AdminDashboardReview
+    activity: AdminDashboardActivity
+
+
 # --- Users ---
 
 

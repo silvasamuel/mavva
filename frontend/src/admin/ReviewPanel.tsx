@@ -43,6 +43,7 @@ export function ReviewPanel() {
 
   function refresh() {
     queryClient.invalidateQueries({ queryKey: ['admin', 'review'] })
+    queryClient.invalidateQueries({ queryKey: ['admin', 'dashboard'] })
     queryClient.invalidateQueries({ queryKey: ['admin', 'content'] })
     queryClient.invalidateQueries({ queryKey: ['admin', 'questions'] })
   }

@@ -4,23 +4,22 @@ import { api } from '@/lib/api'
 import { Spinner } from '@/components/ui/Spinner'
 import { useAdminAuth } from './useAdminAuth'
 import { AdminLogin } from './AdminLogin'
+import { DashboardPanel } from './DashboardPanel'
 import { UsersPanel } from './UsersPanel'
 import { QuestionsPanel } from './QuestionsPanel'
 import { ReviewPanel } from './ReviewPanel'
 import { PublishBar } from './PublishBar'
-import type { AdminReviewInbox } from './types'
-
-type Tab = 'review' | 'questions' | 'users'
+import type { AdminDashboard, AdminTab } from './types'
 
 export function AdminApp() {
   const { status, user, login, logout } = useAdminAuth()
-  const [tab, setTab] = useState<Tab>('questions')
-  const { data: inbox } = useQuery({
-    queryKey: ['admin', 'review'],
-    queryFn: () => api.get<AdminReviewInbox>('/admin/review'),
+  const [tab, setTab] = useState<AdminTab>('home')
+  const { data: dash } = useQuery({
+    queryKey: ['admin', 'dashboard'],
+    queryFn: () => api.get<AdminDashboard>('/admin/dashboard'),
     enabled: status === 'admin',
   })
-  const reviewCount = (inbox?.open_flags ?? 0) + (inbox?.pending_proposals ?? 0)
+  const reviewCount = dash?.review.pending ?? 0
 
   if (status === 'loading') {
     return (
@@ -59,10 +58,11 @@ export function AdminApp() {
         <nav className="mb-6 flex flex-wrap gap-2">
           {(
             [
+              ['home', '🏠 Início'],
               ['review', '🔎 Revisão'],
               ['questions', '📖 Perguntas'],
               ['users', '👥 Usuários'],
-            ] as [Tab, string][]
+            ] as [AdminTab, string][]
           ).map(([value, label]) => (
             <button
               key={value}
@@ -82,7 +82,15 @@ export function AdminApp() {
           ))}
         </nav>
 
-        {tab === 'review' ? (
+        {tab === 'home' ? (
+          dash ? (
+            <DashboardPanel data={dash} onNavigate={setTab} />
+          ) : (
+            <div className="flex justify-center py-16">
+              <Spinner className="h-7 w-7 text-leaf-500" />
+            </div>
+          )
+        ) : tab === 'review' ? (
           <ReviewPanel />
         ) : tab === 'questions' ? (
           <QuestionsPanel />

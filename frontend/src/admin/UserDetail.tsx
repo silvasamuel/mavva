@@ -28,6 +28,7 @@ export function UserDetail({
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['admin', 'users'] })
       queryClient.invalidateQueries({ queryKey: ['admin', 'user', userId] })
+      queryClient.invalidateQueries({ queryKey: ['admin', 'dashboard'] })
       setError('')
     },
     onError: (err) =>

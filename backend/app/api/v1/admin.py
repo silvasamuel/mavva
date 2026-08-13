@@ -20,6 +20,7 @@ from app.models.enums import Difficulty, QuestionFlagStatus, QuestionType
 from app.schemas.admin import (
     AdminAnswer,
     AdminCategoryOut,
+    AdminDashboardOut,
     AdminOption,
     AdminQuestionDetail,
     AdminQuestionList,
@@ -34,12 +35,17 @@ from app.schemas.admin import (
 )
 from app.schemas.moderation import AdminFlagOut, AdminProposalOut, AdminReviewInbox, QuestionDraft
 from app.seeds.questions import OptionIn, sync_accepted_answers, sync_options
-from app.services import auth_service, content_sync, moderation_service
+from app.services import admin_stats, auth_service, content_sync, moderation_service
 from app.services.content_sync import ContentSyncError
 from app.services.moderation_service import ModerationError
 
 # The AdminUser dependency on every path parameter is what enforces access.
 router = APIRouter(prefix="/admin", tags=["admin"])
+
+
+@router.get("/dashboard", response_model=AdminDashboardOut)
+def admin_dashboard(_admin: AdminUser, db: DbDep) -> AdminDashboardOut:
+    return admin_stats.dashboard(db)
 
 
 @router.get("/users", response_model=AdminUserList)
