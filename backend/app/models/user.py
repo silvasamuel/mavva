@@ -18,6 +18,7 @@ class User(TimestampMixin, Base):
     name: Mapped[str] = mapped_column(String(120))
     hashed_password: Mapped[str] = mapped_column(String(255))
     email_verified_at: Mapped[datetime | None] = mapped_column(default=None)
+    is_active: Mapped[bool] = mapped_column(default=True)
     role: Mapped[UserRole] = mapped_column(
         Enum(UserRole, name="user_role", values_callable=lambda e: [m.value for m in e]),
         default=UserRole.USER,

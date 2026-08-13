@@ -1,5 +1,5 @@
 import uuid
-from datetime import datetime
+from datetime import date, datetime
 from typing import Annotated
 
 from pydantic import BaseModel, Field, StringConstraints, model_validator
@@ -12,16 +12,37 @@ from app.models.enums import Difficulty, QuestionType, Testament, UserRole
 class AdminUserOut(BaseModel):
     id: uuid.UUID
     name: str
+    username: str
     email: str
     role: UserRole
     timezone: str
     daily_goal_xp: int
     created_at: datetime
+    email_verified_at: datetime | None
+    is_active: bool
     total_xp: int
     level: int
     current_streak: int
     questions_answered: int
     accuracy: float | None
+
+
+class AdminUserDetail(AdminUserOut):
+    updated_at: datetime
+    longest_streak: int
+    last_activity_date: date | None
+    correct_answers: int
+    perfect_sessions: int
+    total_time_seconds: int
+    duel_wins: int
+    duel_losses: int
+    duel_draws: int
+    current_duel_streak: int
+    best_duel_streak: int
+
+
+class AdminUserUpdate(BaseModel):
+    is_active: bool
 
 
 class AdminUserList(BaseModel):

@@ -44,7 +44,7 @@ def search_users(db: Session, me: User, query: str) -> list[tuple[User, Friendsh
         return []
     users = db.scalars(
         select(User)
-        .where(User.username.like(f"{term}%"), User.id != me.id)
+        .where(User.username.like(f"{term}%"), User.id != me.id, User.is_active.is_(True))
         .options(selectinload(User.stats))
         .order_by(User.username)
         .limit(MAX_SEARCH_RESULTS)
@@ -54,7 +54,7 @@ def search_users(db: Session, me: User, query: str) -> list[tuple[User, Friendsh
 
 def send_request(db: Session, me: User, username: str) -> Friendship:
     target = find_by_username(db, username)
-    if target is None:
+    if target is None or not target.is_active:
         raise FriendshipError("Usuário não encontrado", status_code=404)
     if target.id == me.id:
         raise FriendshipError("Você não pode adicionar a si mesmo")

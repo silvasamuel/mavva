@@ -25,14 +25,16 @@ from app.schemas.admin import (
     AdminQuestionList,
     AdminQuestionListItem,
     AdminQuestionUpdate,
+    AdminUserDetail,
     AdminUserList,
     AdminUserOut,
+    AdminUserUpdate,
     ContentPublishOut,
     ContentStatusOut,
 )
 from app.schemas.moderation import AdminFlagOut, AdminProposalOut, AdminReviewInbox, QuestionDraft
 from app.seeds.questions import OptionIn, sync_accepted_answers, sync_options
-from app.services import content_sync, moderation_service
+from app.services import auth_service, content_sync, moderation_service
 from app.services.content_sync import ContentSyncError
 from app.services.moderation_service import ModerationError
 
@@ -61,28 +63,79 @@ def list_users(
         .limit(limit)
         .offset(offset)
     ).all()
-    items = [
-        AdminUserOut(
-            id=u.id,
-            name=u.name,
-            email=u.email,
-            role=u.role,
-            timezone=u.timezone,
-            daily_goal_xp=u.daily_goal_xp,
-            created_at=u.created_at,
-            total_xp=u.stats.total_xp,
-            level=u.stats.level,
-            current_streak=u.stats.current_streak,
-            questions_answered=u.stats.questions_answered,
-            accuracy=(
-                u.stats.correct_answers / u.stats.questions_answered
-                if u.stats.questions_answered
-                else None
-            ),
-        )
-        for u in users
-    ]
+    items = [_admin_user_out(u) for u in users]
     return AdminUserList(items=items, total=total, limit=limit, offset=offset)
+
+
+def _load_user(db: DbDep, user_id: uuid.UUID) -> User:
+    user = db.scalar(select(User).where(User.id == user_id).options(selectinload(User.stats)))
+    if user is None:
+        raise HTTPException(status.HTTP_404_NOT_FOUND, "Usuário não encontrado")
+    return user
+
+
+def _admin_user_out(user: User) -> AdminUserOut:
+    stats = user.stats
+    answered = stats.questions_answered
+    return AdminUserOut(
+        id=user.id,
+        name=user.name,
+        username=user.username,
+        email=user.email,
+        role=user.role,
+        timezone=user.timezone,
+        daily_goal_xp=user.daily_goal_xp,
+        created_at=user.created_at,
+        email_verified_at=user.email_verified_at,
+        is_active=user.is_active,
+        total_xp=stats.total_xp,
+        level=stats.level,
+        current_streak=stats.current_streak,
+        questions_answered=answered,
+        accuracy=(stats.correct_answers / answered if answered else None),
+    )
+
+
+def _admin_user_detail(user: User) -> AdminUserDetail:
+    stats = user.stats
+    return AdminUserDetail(
+        **_admin_user_out(user).model_dump(),
+        updated_at=user.updated_at,
+        longest_streak=stats.longest_streak,
+        last_activity_date=stats.last_activity_date,
+        correct_answers=stats.correct_answers,
+        perfect_sessions=stats.perfect_sessions,
+        total_time_seconds=stats.total_time_seconds,
+        duel_wins=stats.duel_wins,
+        duel_losses=stats.duel_losses,
+        duel_draws=stats.duel_draws,
+        current_duel_streak=stats.current_duel_streak,
+        best_duel_streak=stats.best_duel_streak,
+    )
+
+
+@router.get("/users/{user_id}", response_model=AdminUserDetail)
+def get_user(_admin: AdminUser, db: DbDep, user_id: uuid.UUID) -> AdminUserDetail:
+    return _admin_user_detail(_load_user(db, user_id))
+
+
+@router.patch("/users/{user_id}", response_model=AdminUserDetail)
+def update_user(
+    admin: AdminUser, db: DbDep, user_id: uuid.UUID, body: AdminUserUpdate
+) -> AdminUserDetail:
+    user = _load_user(db, user_id)
+    if user.id == admin.id:
+        raise HTTPException(
+            status.HTTP_400_BAD_REQUEST, "Você não pode alterar o status da própria conta."
+        )
+    if user.is_active and not body.is_active:
+        user.is_active = False
+        auth_service.revoke_all_refresh_tokens(db, user.id)
+    else:
+        user.is_active = body.is_active
+    db.commit()
+    db.refresh(user)
+    return _admin_user_detail(_load_user(db, user.id))
 
 
 @router.get("/categories", response_model=list[AdminCategoryOut])

@@ -72,7 +72,7 @@ def rotate_refresh_token(db: Session, raw: str) -> tuple[User, str]:
         raise AuthError("Sessão inválida")
     if token.revoked_at is not None:
         # Token reuse: likely theft — kill every session for this user.
-        _revoke_all_refresh_tokens(db, token.user_id)
+        revoke_all_refresh_tokens(db, token.user_id)
         raise AuthError("Sessão revogada")
     if token.expires_at < datetime.now(UTC):
         raise AuthError("Sessão expirada")
@@ -90,7 +90,7 @@ def revoke_refresh_token(db: Session, raw: str) -> None:
         token.revoked_at = datetime.now(UTC)
 
 
-def _revoke_all_refresh_tokens(db: Session, user_id: uuid.UUID) -> None:
+def revoke_all_refresh_tokens(db: Session, user_id: uuid.UUID) -> None:
     db.execute(
         update(RefreshToken)
         .where(RefreshToken.user_id == user_id, RefreshToken.revoked_at.is_(None))
@@ -129,7 +129,7 @@ def reset_password(db: Session, raw_token: str, new_password: str) -> User:
     token.used_at = datetime.now(UTC)
     if user.email_verified_at is None:
         user.email_verified_at = datetime.now(UTC)
-    _revoke_all_refresh_tokens(db, user.id)  # force re-login everywhere
+    revoke_all_refresh_tokens(db, user.id)  # force re-login everywhere
     return user
 
 

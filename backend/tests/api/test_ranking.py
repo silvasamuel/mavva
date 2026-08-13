@@ -83,6 +83,19 @@ class TestGlobalRanking:
         assert body["top"][0]["is_me"] is True
         assert body["me"]["position"] == 1
 
+    def test_inactive_users_are_excluded(self, auth_client: TestClient, db: Session):
+        me = _me(auth_client, db)
+        _set_xp(db, me, 50)
+        ghost = _player(db, "ghost", 900)
+        ghost.is_active = False
+        db.flush()
+
+        body = auth_client.get("/api/v1/ranking/global").json()
+        names = [row["user"]["username"] for row in body["top"]]
+        assert "ghost" not in names
+        assert body["total_players"] == 1
+        assert body["me"]["position"] == 1
+
 
 class TestFriendsRanking:
     def test_includes_me_and_friends_only(self, auth_client: TestClient, db: Session):

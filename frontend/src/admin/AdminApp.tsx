@@ -86,9 +86,9 @@ export function AdminApp() {
           <ReviewPanel />
         ) : tab === 'questions' ? (
           <QuestionsPanel />
-        ) : (
-          <UsersPanel />
-        )}
+        ) : user ? (
+          <UsersPanel adminId={user.id} />
+        ) : null}
       </div>
     </div>
   )

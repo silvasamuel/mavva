@@ -10,7 +10,7 @@ Erros seguem o formato `{"detail": "mensagem"}` (padrão FastAPI) com status HTT
 | POST | `/auth/register` | Cria conta **não verificada**. Body: `{name, email, password}`. Envia e-mail de confirmação. **Não** emite tokens. 409 se o e-mail já existe. |
 | POST | `/auth/verify-email` | Body: `{token}`. Confirma a conta, emite `{access_token, user}` + cookie `refresh_token`. |
 | POST | `/auth/resend-verification` | Body: `{email}`. Sempre 202 (não revela existência). Invalida links anteriores. |
-| POST | `/auth/login` | Body: `{email, password}`. 401 se senha errada; **403** se a conta ainda não confirmou o e-mail. Retorna `{access_token, user}` + cookie httpOnly `refresh_token`. |
+| POST | `/auth/login` | Body: `{email, password}`. 401 se senha errada; **403** se a conta ainda não confirmou o e-mail ou está inativa. Retorna `{access_token, user}` + cookie httpOnly `refresh_token`. |
 | POST | `/auth/refresh` | Usa o cookie; rotaciona o refresh e retorna novo `access_token`. Reuso de token revogado ⇒ 401 + revogação da cadeia. |
 | POST | `/auth/logout` | Revoga o refresh atual e limpa o cookie. |
 | POST | `/auth/forgot-password` | Body: `{email}`. Sempre 202 (não revela existência). Envia e-mail com token. |
@@ -162,7 +162,9 @@ real — o front-end separado (bundle `/admin`) é conveniência, não proteçã
 
 | Método | Rota | Descrição |
 |---|---|---|
-| GET | `/admin/users?search&limit&offset` | Lista usuários com stats (XP, nível, streak, precisão). |
+| GET | `/admin/users?search&limit&offset` | Lista usuários com stats, `email_verified_at` e `is_active`. |
+| GET | `/admin/users/{id}` | Detalhe do usuário (conta, progresso, duelos). |
+| PATCH | `/admin/users/{id}` | Body: `{is_active}`. Inativar revoga sessões. Não vale para a própria conta (400). |
 | GET | `/admin/categories` | Categorias (id, slug, nome, ícone) para os filtros/edição. |
 | GET | `/admin/questions?search&category_id&difficulty&limit&offset` | Lista paginada de perguntas. |
 | GET | `/admin/questions/{id}` | Detalhe completo (enunciado, explicação, referência, opções, respostas). |
