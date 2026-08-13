@@ -889,26 +889,6 @@
       "difficulty": "hard"
     },
     {
-      "external_id": "eventos-biblicos-0030",
-      "type": "open_answer",
-      "text": "Que castigo caiu sobre Israel quando o povo murmurou e foi mordido no deserto?",
-      "options": null,
-      "accepted_answers": [
-        "Serpentes ardentes",
-        "Serpentes",
-        "As serpentes ardentes"
-      ],
-      "explanation": "O SENHOR enviou serpentes ardentes; a cura veio ao olhar para a serpente de bronze na haste (Nm 21:6-9).",
-      "divergence_note": null,
-      "reference": {
-        "book": "numeros",
-        "chapter": 21,
-        "verse_start": 6,
-        "verse_end": 9
-      },
-      "difficulty": "medium"
-    },
-    {
       "external_id": "eventos-biblicos-0029",
       "type": "multiple_choice",
       "text": "O que a pomba trouxe a Noé, mostrando que as águas haviam baixado?",
@@ -938,6 +918,26 @@
         "chapter": 8,
         "verse_start": 10,
         "verse_end": 12
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0030",
+      "type": "open_answer",
+      "text": "Que castigo caiu sobre Israel quando o povo murmurou e foi mordido no deserto?",
+      "options": null,
+      "accepted_answers": [
+        "Serpentes ardentes",
+        "Serpentes",
+        "As serpentes ardentes"
+      ],
+      "explanation": "O SENHOR enviou serpentes ardentes; a cura veio ao olhar para a serpente de bronze na haste (Nm 21:6-9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 21,
+        "verse_start": 6,
+        "verse_end": 9
       },
       "difficulty": "medium"
     }

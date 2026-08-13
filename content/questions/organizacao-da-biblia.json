@@ -858,6 +858,39 @@
       "difficulty": "medium"
     },
     {
+      "external_id": "organizacao-da-biblia-0028",
+      "type": "multiple_choice",
+      "text": "Quantos capítulos tem o livro de Apocalipse?",
+      "options": [
+        {
+          "text": "22",
+          "correct": true
+        },
+        {
+          "text": "16",
+          "correct": false
+        },
+        {
+          "text": "28",
+          "correct": false
+        },
+        {
+          "text": "12",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Apocalipse tem 22 capítulos e encerra o cânon com 'Ora vem, Senhor Jesus' (Ap 22:20-21).",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 22,
+        "verse_start": 20,
+        "verse_end": 21
+      },
+      "difficulty": "hard"
+    },
+    {
       "external_id": "organizacao-da-biblia-0029",
       "type": "multiple_choice",
       "text": "Quantos livros formam o Pentateuco?",
@@ -973,39 +1006,6 @@
         "chapter": 3,
         "verse_start": 16,
         "verse_end": 17
-      },
-      "difficulty": "hard"
-    },
-    {
-      "external_id": "organizacao-da-biblia-0028",
-      "type": "multiple_choice",
-      "text": "Quantos capítulos tem o livro de Apocalipse?",
-      "options": [
-        {
-          "text": "22",
-          "correct": true
-        },
-        {
-          "text": "16",
-          "correct": false
-        },
-        {
-          "text": "28",
-          "correct": false
-        },
-        {
-          "text": "12",
-          "correct": false
-        }
-      ],
-      "accepted_answers": null,
-      "explanation": "Apocalipse tem 22 capítulos e encerra o cânon com 'Ora vem, Senhor Jesus' (Ap 22:20-21).",
-      "divergence_note": null,
-      "reference": {
-        "book": "apocalipse",
-        "chapter": 22,
-        "verse_start": 20,
-        "verse_end": 21
       },
       "difficulty": "hard"
     }
