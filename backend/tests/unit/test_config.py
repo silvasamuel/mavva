@@ -19,3 +19,21 @@ class TestProductionSecret:
 
     def test_development_allows_the_dev_secret(self):
         assert Settings(environment="development", secret_key=_DEV_SECRET)
+
+
+class TestCorsOrigins:
+    def test_single_origin(self):
+        settings = Settings(frontend_origin="https://mavva.com.br")
+        assert settings.cors_origins == ["https://mavva.com.br"]
+        assert settings.public_origin == "https://mavva.com.br"
+
+    def test_comma_separated_allowlist(self):
+        settings = Settings(
+            frontend_origin="https://mavva.com.br, https://www.mavva.com.br, https://mavva.vercel.app/"
+        )
+        assert settings.cors_origins == [
+            "https://mavva.com.br",
+            "https://www.mavva.com.br",
+            "https://mavva.vercel.app",
+        ]
+        assert settings.public_origin == "https://mavva.com.br"

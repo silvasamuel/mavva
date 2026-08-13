@@ -21,6 +21,8 @@ class Settings(BaseSettings):
     reset_token_expire_minutes: int = 30
     verification_token_expire_hours: int = 24
 
+    # Canonical site URL, or a comma-separated allowlist. The first entry is
+    # used in email links; every entry is an allowed CORS origin.
     frontend_origin: str = "http://localhost:5173"
     rate_limit_enabled: bool = True
 
@@ -41,6 +43,20 @@ class Settings(BaseSettings):
     @property
     def is_production(self) -> bool:
         return self.environment == "production"
+
+    @property
+    def cors_origins(self) -> list[str]:
+        origins = [
+            origin.strip().rstrip("/")
+            for origin in self.frontend_origin.split(",")
+            if origin.strip()
+        ]
+        return origins or ["http://localhost:5173"]
+
+    @property
+    def public_origin(self) -> str:
+        """Canonical frontend URL for email links (first FRONTEND_ORIGIN entry)."""
+        return self.cors_origins[0]
 
     @field_validator("database_url", mode="before")
     @classmethod
