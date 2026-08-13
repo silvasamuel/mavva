@@ -448,7 +448,8 @@
         "verse_start": 3,
         "verse_end": 5
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "doutrinas-0015",
@@ -683,6 +684,158 @@
         "book": "colossenses",
         "chapter": 2,
         "verse_start": 9,
+        "verse_end": null
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "doutrinas-0023",
+      "type": "multiple_choice",
+      "text": "Segundo Efésios 1, quando Deus escolheu os que são dele em Cristo?",
+      "options": [
+        {
+          "text": "Antes da fundação do mundo",
+          "correct": true
+        },
+        {
+          "text": "No dia do batismo",
+          "correct": false
+        },
+        {
+          "text": "Quando creram",
+          "correct": false
+        },
+        {
+          "text": "No monte Sinai",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Como também nos elegeu nele antes da fundação do mundo, para que fôssemos santos' (Ef 1:4).",
+      "divergence_note": "As tradições cristãs divergem sobre como entender a eleição: o calvinismo a lê como incondicional; o arminianismo, como fundada na presciência divina da fé. A pergunta trata do que o texto afirma sobre o momento.",
+      "reference": {
+        "book": "efesios",
+        "chapter": 1,
+        "verse_start": 4,
+        "verse_end": 5
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "doutrinas-0024",
+      "type": "multiple_choice",
+      "text": "Que doutrina descreve o processo pelo qual o crente é progressivamente conformado a Cristo?",
+      "options": [
+        {
+          "text": "Santificação",
+          "correct": true
+        },
+        {
+          "text": "Justificação",
+          "correct": false
+        },
+        {
+          "text": "Glorificação",
+          "correct": false
+        },
+        {
+          "text": "Regeneração",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "A justificação é declarada de uma vez; a santificação é a obra contínua do Espírito, 'de glória em glória' (2Co 3:18; 1Ts 4:3).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1tessalonicenses",
+        "chapter": 4,
+        "verse_start": 3,
+        "verse_end": 4
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "doutrinas-0025",
+      "type": "multiple_choice",
+      "text": "Segundo Atos 4:12, em quem há salvação?",
+      "options": [
+        {
+          "text": "Somente em Jesus",
+          "correct": true
+        },
+        {
+          "text": "Em qualquer religião sincera",
+          "correct": false
+        },
+        {
+          "text": "Nas boas obras",
+          "correct": false
+        },
+        {
+          "text": "Na lei de Moisés",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Em nenhum outro há salvação, porque também debaixo do céu nenhum outro nome há... pelo qual devamos ser salvos' (At 4:12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 4,
+        "verse_start": 12,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "doutrinas-0026",
+      "type": "multiple_choice",
+      "text": "O que a Ceia do Senhor proclama, segundo 1 Coríntios 11?",
+      "options": [
+        {
+          "text": "A morte do Senhor, até que ele venha",
+          "correct": true
+        },
+        {
+          "text": "A pureza da igreja",
+          "correct": false
+        },
+        {
+          "text": "A unidade dos apóstolos",
+          "correct": false
+        },
+        {
+          "text": "A lei de Moisés",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Todas as vezes que comerdes este pão e beberdes este cálice anunciais a morte do Senhor, até que venha' (1Co 11:26).",
+      "divergence_note": "As tradições cristãs divergem sobre o modo da presença de Cristo na Ceia (memorial, presença espiritual, consubstanciação, transubstanciação). A pergunta trata do que o texto declara: a Ceia anuncia a morte do Senhor até que ele venha.",
+      "reference": {
+        "book": "1corintios",
+        "chapter": 11,
+        "verse_start": 23,
+        "verse_end": 26
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "doutrinas-0027",
+      "type": "open_answer",
+      "text": "Que palavra descreve a obra pela qual o Espírito dá vida nova ao pecador, também chamada 'novo nascimento'?",
+      "options": null,
+      "accepted_answers": [
+        "Regeneração",
+        "Regeneracao",
+        "Novo nascimento"
+      ],
+      "explanation": "'Ele nos salvou... pela lavagem da regeneração e da renovação do Espírito Santo' (Tt 3:5; cf. Jo 3:3-8).",
+      "divergence_note": null,
+      "reference": {
+        "book": "tito",
+        "chapter": 3,
+        "verse_start": 5,
         "verse_end": null
       },
       "difficulty": "expert"

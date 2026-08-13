@@ -400,7 +400,8 @@
         "verse_start": 1,
         "verse_end": 10
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "profetas-0014",
@@ -418,7 +419,8 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "profetas-0015",
@@ -666,6 +668,156 @@
         "chapter": 28,
         "verse_start": 10,
         "verse_end": 11
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "profetas-0023",
+      "type": "multiple_choice",
+      "text": "Que sinal Isaías deu a Acaz sobre a virgem que conceberia um filho?",
+      "options": [
+        {
+          "text": "O sinal do Emanuel",
+          "correct": true
+        },
+        {
+          "text": "O sinal do arco-íris",
+          "correct": false
+        },
+        {
+          "text": "O sinal do velo",
+          "correct": false
+        },
+        {
+          "text": "O sinal da sombra",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Eis que a virgem conceberá e dará à luz um filho, e chamará o seu nome Emanuel' (Is 7:14), citado em Mateus 1:23.",
+      "divergence_note": null,
+      "reference": {
+        "book": "isaias",
+        "chapter": 7,
+        "verse_start": 14,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "profetas-0024",
+      "type": "multiple_choice",
+      "text": "Qual profeta foi chamado ainda jovem e disse: 'Ah, Senhor DEUS! Eis que não sei falar'?",
+      "options": [
+        {
+          "text": "Jeremias",
+          "correct": true
+        },
+        {
+          "text": "Isaías",
+          "correct": false
+        },
+        {
+          "text": "Ezequiel",
+          "correct": false
+        },
+        {
+          "text": "Daniel",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Deus respondeu: 'Antes que te formasse no ventre te conheci' e tocou-lhe a boca (Jr 1:5-9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "jeremias",
+        "chapter": 1,
+        "verse_start": 5,
+        "verse_end": 9
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "profetas-0025",
+      "type": "multiple_choice",
+      "text": "Que visão Zacarias teve envolvendo um candeeiro de ouro e duas oliveiras?",
+      "options": [
+        {
+          "text": "A visão do castiçal e das oliveiras",
+          "correct": true
+        },
+        {
+          "text": "A visão dos ossos secos",
+          "correct": false
+        },
+        {
+          "text": "A visão do prumo",
+          "correct": false
+        },
+        {
+          "text": "A visão da videira",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "A palavra que a acompanha é célebre: 'Não por força nem por poder, mas pelo meu Espírito, diz o SENHOR' (Zc 4:2-6).",
+      "divergence_note": null,
+      "reference": {
+        "book": "zacarias",
+        "chapter": 4,
+        "verse_start": 2,
+        "verse_end": 6
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "profetas-0026",
+      "type": "open_answer",
+      "text": "Qual profeta anunciou que o SENHOR requer 'praticar a justiça, amar a beneficência e andar humildemente'?",
+      "options": null,
+      "accepted_answers": [
+        "Miqueias"
+      ],
+      "explanation": "'Ele te declarou, ó homem, o que é bom... senão que pratiques a justiça, e ames a beneficência, e andes humildemente com o teu Deus' (Mq 6:8).",
+      "divergence_note": null,
+      "reference": {
+        "book": "miqueias",
+        "chapter": 6,
+        "verse_start": 8,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "profetas-0027",
+      "type": "multiple_choice",
+      "text": "Contra qual povo Obadias, o menor livro do AT, dirigiu a sua profecia?",
+      "options": [
+        {
+          "text": "Edom",
+          "correct": true
+        },
+        {
+          "text": "Moabe",
+          "correct": false
+        },
+        {
+          "text": "Assíria",
+          "correct": false
+        },
+        {
+          "text": "Egito",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Obadias anuncia o juízo sobre Edom pela violência contra o irmão Jacó no dia da calamidade de Jerusalém (Ob 1:10).",
+      "divergence_note": null,
+      "reference": {
+        "book": "obadias",
+        "chapter": 1,
+        "verse_start": 10,
+        "verse_end": null
       },
       "difficulty": "expert"
     }

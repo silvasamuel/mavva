@@ -432,7 +432,8 @@
         "verse_start": 22,
         "verse_end": 23
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "cartas-0015",
@@ -615,7 +616,8 @@
         "verse_start": 10,
         "verse_end": 16
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "cartas-0021",
@@ -667,6 +669,157 @@
         "verse_end": null
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "cartas-0023",
+      "type": "multiple_choice",
+      "text": "Segundo Romanos 8, o que 'nos separará do amor de Cristo'?",
+      "options": [
+        {
+          "text": "Nada em toda a criação",
+          "correct": true
+        },
+        {
+          "text": "A tribulação",
+          "correct": false
+        },
+        {
+          "text": "A morte",
+          "correct": false
+        },
+        {
+          "text": "Os nossos pecados",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Nem a morte, nem a vida... nem alguma outra criatura nos poderá separar do amor de Deus, que está em Cristo Jesus' (Rm 8:38-39).",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 8,
+        "verse_start": 38,
+        "verse_end": 39
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cartas-0024",
+      "type": "multiple_choice",
+      "text": "Que imagem Paulo usa em 1 Coríntios 12 para descrever a igreja e seus dons?",
+      "options": [
+        {
+          "text": "Um corpo com muitos membros",
+          "correct": true
+        },
+        {
+          "text": "Um exército em ordem",
+          "correct": false
+        },
+        {
+          "text": "Uma videira e ramos",
+          "correct": false
+        },
+        {
+          "text": "Um edifício de pedras",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Porque assim como o corpo é um e tem muitos membros... assim é Cristo' (1Co 12:12); cada dom serve ao todo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1corintios",
+        "chapter": 12,
+        "verse_start": 12,
+        "verse_end": 14
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cartas-0025",
+      "type": "multiple_choice",
+      "text": "Em Filipenses 2, qual atitude Paulo pede que haja em nós, a mesma que houve em Cristo?",
+      "options": [
+        {
+          "text": "Humildade / esvaziar-se de si",
+          "correct": true
+        },
+        {
+          "text": "Zelo pela lei",
+          "correct": false
+        },
+        {
+          "text": "Coragem diante do perigo",
+          "correct": false
+        },
+        {
+          "text": "Firmeza na doutrina",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'De sorte que haja em vós o mesmo sentimento que houve também em Cristo Jesus', que se humilhou até à morte de cruz (Fp 2:5-8).",
+      "divergence_note": null,
+      "reference": {
+        "book": "filipenses",
+        "chapter": 2,
+        "verse_start": 5,
+        "verse_end": 8
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cartas-0026",
+      "type": "multiple_choice",
+      "text": "Segundo Hebreus 11, o que é a fé?",
+      "options": [
+        {
+          "text": "O firme fundamento das coisas que se esperam",
+          "correct": true
+        },
+        {
+          "text": "Um dom só de alguns",
+          "correct": false
+        },
+        {
+          "text": "O esforço da vontade",
+          "correct": false
+        },
+        {
+          "text": "A certeza da razão",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Ora, a fé é o firme fundamento das coisas que se esperam e a prova das que se não veem' (Hb 11:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "hebreus",
+        "chapter": 11,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cartas-0027",
+      "type": "open_answer",
+      "text": "Segundo 1 João 4, qual afirmação sobre a natureza de Deus é repetida no capítulo?",
+      "options": null,
+      "accepted_answers": [
+        "Deus é amor",
+        "Deus e amor"
+      ],
+      "explanation": "'Aquele que não ama não conhece a Deus, porque Deus é amor' (1Jo 4:8,16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1joao",
+        "chapter": 4,
+        "verse_start": 8,
+        "verse_end": 16
+      },
+      "difficulty": "medium"
     }
   ]
 }

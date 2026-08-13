@@ -686,6 +686,157 @@
         "verse_end": null
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "geografia-biblica-0023",
+      "type": "multiple_choice",
+      "text": "Em que monte Moisés viu a terra prometida antes de morrer?",
+      "options": [
+        {
+          "text": "Monte Nebo",
+          "correct": true
+        },
+        {
+          "text": "Monte Carmelo",
+          "correct": false
+        },
+        {
+          "text": "Monte Sinai",
+          "correct": false
+        },
+        {
+          "text": "Monte Hor",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Subiu Moisés das campinas de Moabe ao monte Nebo, ao cume de Pisga'; ali o SENHOR lhe mostrou toda a terra (Dt 34:1-4).",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 34,
+        "verse_start": 1,
+        "verse_end": 4
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "geografia-biblica-0024",
+      "type": "multiple_choice",
+      "text": "Qual cidade foi a primeira capital do reino de Davi, antes de Jerusalém?",
+      "options": [
+        {
+          "text": "Hebrom",
+          "correct": true
+        },
+        {
+          "text": "Siquém",
+          "correct": false
+        },
+        {
+          "text": "Betel",
+          "correct": false
+        },
+        {
+          "text": "Gibeá",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Davi reinou sete anos e meio sobre Judá em Hebrom, antes de tomar Jerusalém (2Sm 5:4-5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 5,
+        "verse_start": 4,
+        "verse_end": 5
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "geografia-biblica-0025",
+      "type": "multiple_choice",
+      "text": "Em que cidade Paulo discursou no Areópago sobre o 'Deus desconhecido'?",
+      "options": [
+        {
+          "text": "Atenas",
+          "correct": true
+        },
+        {
+          "text": "Corinto",
+          "correct": false
+        },
+        {
+          "text": "Éfeso",
+          "correct": false
+        },
+        {
+          "text": "Tessalônica",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Paulo, estando no meio do Areópago, disse: ...achei um altar em que estava escrito: AO DEUS DESCONHECIDO' (At 17:22-23).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 17,
+        "verse_start": 22,
+        "verse_end": 23
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "geografia-biblica-0026",
+      "type": "multiple_choice",
+      "text": "Qual mar/lago da Palestina é tão salgado que nele não há vida?",
+      "options": [
+        {
+          "text": "O mar Morto (mar Salgado)",
+          "correct": true
+        },
+        {
+          "text": "O mar da Galileia",
+          "correct": false
+        },
+        {
+          "text": "O mar Mediterrâneo",
+          "correct": false
+        },
+        {
+          "text": "O lago Merom",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Chamado 'mar Salgado' nas Escrituras, marca o limite oriental de Canaã (Nm 34:12; Js 15:5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 34,
+        "verse_start": 12,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "geografia-biblica-0027",
+      "type": "open_answer",
+      "text": "Em que cidade da Galileia Jesus foi criado e é chamado 'nazareno'?",
+      "options": null,
+      "accepted_answers": [
+        "Nazaré",
+        "Nazare"
+      ],
+      "explanation": "'E foi habitar numa cidade chamada Nazaré, para que se cumprisse... Ele será chamado nazareno' (Mt 2:23).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 2,
+        "verse_start": 23,
+        "verse_end": null
+      },
+      "difficulty": "medium"
     }
   ]
 }

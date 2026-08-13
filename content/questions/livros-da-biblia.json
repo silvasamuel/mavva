@@ -334,7 +334,8 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "livros-da-biblia-0012",
@@ -367,7 +368,8 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "livros-da-biblia-0013",
@@ -617,6 +619,158 @@
         "verse_end": 18
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "livros-da-biblia-0021",
+      "type": "multiple_choice",
+      "text": "Qual livro do Novo Testamento é uma carta pessoal sobre um escravo fugido?",
+      "options": [
+        {
+          "text": "Filemom",
+          "correct": true
+        },
+        {
+          "text": "Tito",
+          "correct": false
+        },
+        {
+          "text": "3 João",
+          "correct": false
+        },
+        {
+          "text": "Judas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Paulo pede que Filemom receba Onésimo 'não já como servo, mas como irmão amado' (Fm 1:16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "filemom",
+        "chapter": 1,
+        "verse_start": 15,
+        "verse_end": 16
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "livros-da-biblia-0022",
+      "type": "multiple_choice",
+      "text": "Qual livro registra a criação, a queda, o dilúvio e os patriarcas?",
+      "options": [
+        {
+          "text": "Gênesis",
+          "correct": true
+        },
+        {
+          "text": "Êxodo",
+          "correct": false
+        },
+        {
+          "text": "Josué",
+          "correct": false
+        },
+        {
+          "text": "Levítico",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Gênesis narra as origens: criação, queda, dilúvio, Babel e os patriarcas até José no Egito (Gn 1:1; 50:26).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "livros-da-biblia-0023",
+      "type": "multiple_choice",
+      "text": "Qual livro trata do sofrimento de um homem justo e das perguntas sobre a soberania de Deus?",
+      "options": [
+        {
+          "text": "Jó",
+          "correct": true
+        },
+        {
+          "text": "Eclesiastes",
+          "correct": false
+        },
+        {
+          "text": "Lamentações",
+          "correct": false
+        },
+        {
+          "text": "Salmos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jó perde tudo e discute com amigos até Deus responder do meio do redemoinho (Jó 1:1; 38:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "jo",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "livros-da-biblia-0024",
+      "type": "multiple_choice",
+      "text": "Qual livro do Antigo Testamento é um poema de amor entre esposo e esposa?",
+      "options": [
+        {
+          "text": "Cantares",
+          "correct": true
+        },
+        {
+          "text": "Provérbios",
+          "correct": false
+        },
+        {
+          "text": "Eclesiastes",
+          "correct": false
+        },
+        {
+          "text": "Rute",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Cantares de Salomão celebra o amor conjugal (Ct 1:1-2), lido por muitos também como figura do amor de Cristo pela igreja.",
+      "divergence_note": "As tradições cristãs divergem se Cantares deve ser lido apenas em sentido literal (o amor conjugal) ou também alegoricamente (Cristo e a igreja).",
+      "reference": {
+        "book": "cantares",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "livros-da-biblia-0025",
+      "type": "open_answer",
+      "text": "Qual livro do NT é o único endereçado a 'as doze tribos que andam dispersas'?",
+      "options": null,
+      "accepted_answers": [
+        "Tiago",
+        "Carta de Tiago",
+        "Epístola de Tiago"
+      ],
+      "explanation": "'Tiago, servo de Deus... às doze tribos que andam dispersas, saúde' (Tg 1:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "tiago",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "expert"
     }
   ]
 }
