@@ -821,6 +821,39 @@
       "difficulty": "hard"
     },
     {
+      "external_id": "escatologia-0029",
+      "type": "multiple_choice",
+      "text": "Em Apocalipse 5, quem foi achado digno de abrir o livro selado com sete selos?",
+      "options": [
+        {
+          "text": "O Leão da tribo de Judá, o Cordeiro que foi morto",
+          "correct": true
+        },
+        {
+          "text": "O arcanjo Miguel",
+          "correct": false
+        },
+        {
+          "text": "Um dos vinte e quatro anciãos",
+          "correct": false
+        },
+        {
+          "text": "O profeta Elias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "João chorava porque ninguém era digno; então ouviu do Leão de Judá e viu 'um Cordeiro como havendo sido morto' (Ap 5:4-6).",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 5,
+        "verse_start": 4,
+        "verse_end": 6
+      },
+      "difficulty": "hard"
+    },
+    {
       "external_id": "escatologia-0030",
       "type": "multiple_choice",
       "text": "Em João 5, para que ressuscitam os que praticaram o mal?",
@@ -906,39 +939,6 @@
         "verse_end": 14
       },
       "difficulty": "expert"
-    },
-    {
-      "external_id": "escatologia-0029",
-      "type": "multiple_choice",
-      "text": "Em Apocalipse 5, quem foi achado digno de abrir o livro selado com sete selos?",
-      "options": [
-        {
-          "text": "O Leão da tribo de Judá, o Cordeiro que foi morto",
-          "correct": true
-        },
-        {
-          "text": "O arcanjo Miguel",
-          "correct": false
-        },
-        {
-          "text": "Um dos vinte e quatro anciãos",
-          "correct": false
-        },
-        {
-          "text": "O profeta Elias",
-          "correct": false
-        }
-      ],
-      "accepted_answers": null,
-      "explanation": "João chorava porque ninguém era digno; então ouviu do Leão de Judá e viu 'um Cordeiro como havendo sido morto' (Ap 5:4-6).",
-      "divergence_note": null,
-      "reference": {
-        "book": "apocalipse",
-        "chapter": 5,
-        "verse_start": 4,
-        "verse_end": 6
-      },
-      "difficulty": "hard"
     }
   ]
 }
