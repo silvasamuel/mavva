@@ -29,7 +29,7 @@ class Settings(BaseSettings):
 
     # Email (production: Resend; otherwise reset links are logged)
     resend_api_key: str | None = None
-    email_from: str = "Mavva <contato@mavva.com.br>"
+    email_from: str = "Mavva <contato@contato.mavva.com.br>"
 
     # Question bank location (mounted read-only in Docker)
     content_dir: Path = Path(__file__).resolve().parents[3] / "content"
