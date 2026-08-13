@@ -168,7 +168,7 @@ real — o front-end separado (bundle `/admin`) é conveniência, não proteçã
 | GET | `/admin/questions/{id}` | Detalhe completo (enunciado, explicação, referência, opções, respostas). |
 | PATCH | `/admin/questions/{id}` | Edita campos enviados (`exclude_unset`). Valida MC (4 opções, 1 correta) e aberta (≥1 resposta). `type` e `category_id` são imutáveis. |
 | GET | `/admin/content/status` | Compara o banco com `content/questions/*.json`: `{mode: github\|local, dirty_files}`. |
-| POST | `/admin/content/publish` | Reescreve os arquivos a partir do banco. `mode=local` grava em disco; `mode=github` (com `GITHUB_TOKEN`) cria **1 commit** na branch configurada e retorna `commit_url`. |
+| POST | `/admin/content/publish` | Reescreve os arquivos a partir do banco. `mode=local` grava em disco; `mode=github` (com `GITHUB_TOKEN`) abre ou atualiza um PR contra a branch configurada e retorna `pr_url`. |
 
 ## Saúde
 

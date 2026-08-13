@@ -6,7 +6,7 @@ import type { ContentPublish, ContentStatus } from './types'
 
 /**
  * Admin edits write to the DB immediately; this bar pushes them back to
- * content/questions/*.json (one git commit in production) so the next
+ * content/questions/*.json (a pull request in production) so the next
  * deploy's seed doesn't revert them.
  */
 export function PublishBar() {
@@ -45,12 +45,12 @@ export function PublishBar() {
             </p>
             <p className="text-xs font-semibold text-grain-700">
               {status?.mode === 'github'
-                ? 'Publicar cria 1 commit no repositório — o deploy seguinte realinha o banco.'
+                ? 'Publicar abre um pull request (ou atualiza o já aberto). Depois do merge, o deploy realinha o banco.'
                 : 'Publicar grava os arquivos em content/questions/ para você revisar no git.'}
             </p>
           </div>
           <Button variant="gold" loading={publish.isPending} onClick={() => publish.mutate()}>
-            Publicar
+            {status?.mode === 'github' ? 'Abrir PR' : 'Publicar'}
           </Button>
         </div>
       )}
@@ -58,12 +58,17 @@ export function PublishBar() {
       {result && result.published.length > 0 && (
         <p className="rounded-2xl bg-leaf-50 px-4 py-3 text-sm font-bold text-leaf-800 ring-1 ring-leaf-200">
           ✅ {result.published.length}{' '}
-          {result.published.length === 1 ? 'arquivo publicado' : 'arquivos publicados'}.{' '}
-          {result.commit_url && (
+          {result.published.length === 1 ? 'arquivo' : 'arquivos'}{' '}
+          {result.pr_url ? 'no pull request' : 'publicados'}.{' '}
+          {result.pr_url ? (
+            <a href={result.pr_url} target="_blank" rel="noreferrer" className="underline">
+              Ver pull request
+            </a>
+          ) : result.commit_url ? (
             <a href={result.commit_url} target="_blank" rel="noreferrer" className="underline">
               Ver commit
             </a>
-          )}
+          ) : null}
         </p>
       )}
 

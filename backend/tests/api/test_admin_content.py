@@ -64,6 +64,7 @@ class TestContentEndpoints:
         publish = auth_client.post("/api/v1/admin/content/publish").json()
         assert expected_file in publish["published"]
         assert publish["commit_url"] is None
+        assert publish["pr_url"] is None
 
         written = tmp_path / "questions" / f"{category.slug}.json"
         assert written.exists()

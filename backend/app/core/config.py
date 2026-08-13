@@ -31,9 +31,9 @@ class Settings(BaseSettings):
     # Question bank location (mounted read-only in Docker)
     content_dir: Path = Path(__file__).resolve().parents[3] / "content"
 
-    # Admin content write-back. With a token, "Publicar" commits the regenerated
-    # JSON files straight to the repo (fine-grained PAT, contents:write only);
-    # without one (local dev), files are written to content_dir instead.
+    # Admin content write-back. With a token, "Publicar" opens a pull request
+    # with the regenerated JSON (fine-grained PAT: contents:write +
+    # pull-requests:write). Without one (local dev), files go to content_dir.
     github_token: str | None = None
     github_repo: str = "silvasamuel/mavva"
     github_branch: str = "main"

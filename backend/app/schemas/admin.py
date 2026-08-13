@@ -129,4 +129,5 @@ class ContentStatusOut(BaseModel):
 class ContentPublishOut(BaseModel):
     mode: str
     published: list[str]
-    commit_url: str | None
+    commit_url: str | None = None
+    pr_url: str | None = None
