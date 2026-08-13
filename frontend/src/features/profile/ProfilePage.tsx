@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/Button'
 import { Card, CardTitle } from '@/components/ui/Card'
 import { Input } from '@/components/ui/Input'
 import { RankBadge } from '@/components/RankBadge'
+import { Spinner } from '@/components/ui/Spinner'
 import { useAuth } from '@/features/auth/AuthContext'
 
 const GOAL_OPTIONS = [
@@ -46,8 +47,12 @@ export function ProfilePage() {
   return (
     <div className="animate-float-up mx-auto max-w-xl space-y-6">
       <header className="flex items-center gap-4">
-        {dashboard && (
+        {dashboard ? (
           <RankBadge code={dashboard.stats.rank.code} size="lg" />
+        ) : (
+          <div className="flex h-16 w-16 items-center justify-center">
+            <Spinner className="h-8 w-8 text-leaf-500" />
+          </div>
         )}
         <div>
           <h1 className="text-2xl font-extrabold">Perfil</h1>
