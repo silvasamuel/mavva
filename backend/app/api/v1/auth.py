@@ -61,7 +61,10 @@ def register(request: Request, body: RegisterRequest, db: DbDep) -> MessageRespo
     raw_token = auth_service.create_email_verification_token(db, user)
     db.commit()
     email_service.send_email_verification(user.email, user.name, raw_token)
-    return MessageResponse(message="Enviamos um link de confirmação para o seu e-mail.")
+    return MessageResponse(
+        message="Enviamos um link de confirmação para o seu e-mail.",
+        retry_after=get_settings().email_resend_cooldown_seconds,
+    )
 
 
 @router.post("/verify-email", response_model=TokenResponse)
@@ -76,15 +79,23 @@ def verify_email(
     return _issue_session(response, db, user)
 
 
-@router.post("/resend-verification", status_code=status.HTTP_202_ACCEPTED)
+@router.post(
+    "/resend-verification",
+    status_code=status.HTTP_202_ACCEPTED,
+    response_model=MessageResponse,
+)
 @limiter.limit("5/minute")
-def resend_verification(request: Request, body: ForgotPasswordRequest, db: DbDep) -> dict[str, str]:
+def resend_verification(
+    request: Request, body: ForgotPasswordRequest, db: DbDep
+) -> MessageResponse:
     result = auth_service.resend_email_verification(db, body.email)
-    if result is not None:
-        user, raw_token = result
+    if result.user is not None and result.raw_token is not None:
         db.commit()
-        email_service.send_email_verification(user.email, user.name, raw_token)
-    return {"message": "Se o e-mail existir, você receberá um link de confirmação"}
+        email_service.send_email_verification(result.user.email, result.user.name, result.raw_token)
+    return MessageResponse(
+        message="Se o e-mail existir, você receberá um link de confirmação",
+        retry_after=result.retry_after,
+    )
 
 
 @router.post("/login", response_model=TokenResponse)
@@ -137,16 +148,21 @@ def logout(request: Request, response: Response, db: DbDep) -> None:
     response.delete_cookie(REFRESH_COOKIE, path="/api/v1/auth")
 
 
-@router.post("/forgot-password", status_code=status.HTTP_202_ACCEPTED)
+@router.post(
+    "/forgot-password",
+    status_code=status.HTTP_202_ACCEPTED,
+    response_model=MessageResponse,
+)
 @limiter.limit("5/minute")
-def forgot_password(request: Request, body: ForgotPasswordRequest, db: DbDep) -> dict[str, str]:
+def forgot_password(request: Request, body: ForgotPasswordRequest, db: DbDep) -> MessageResponse:
     result = auth_service.create_password_reset_token(db, body.email)
-    if result is not None:
-        user, raw_token = result
+    if result.user is not None and result.raw_token is not None:
         db.commit()
-        email_service.send_password_reset(user.email, user.name, raw_token)
-    # Same response whether the account exists or not.
-    return {"message": "Se o e-mail existir, você receberá um link de recuperação"}
+        email_service.send_password_reset(result.user.email, result.user.name, result.raw_token)
+    return MessageResponse(
+        message="Se o e-mail existir, você receberá um link de recuperação",
+        retry_after=result.retry_after,
+    )
 
 
 @router.post("/reset-password", status_code=status.HTTP_204_NO_CONTENT)

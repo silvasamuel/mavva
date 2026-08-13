@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/Input'
 import { ApiError, api } from '@/lib/api'
 import { AuthLayout } from './AuthLayout'
 import { useAuth } from './AuthContext'
+import { useEmailCooldown } from './useEmailCooldown'
 
 export function RegisterPage() {
   const { user, register } = useAuth()
@@ -16,6 +17,7 @@ export function RegisterPage() {
   const [pendingEmail, setPendingEmail] = useState('')
   const [resending, setResending] = useState(false)
   const [resent, setResent] = useState(false)
+  const cooldown = useEmailCooldown('verify', pendingEmail || email)
 
   if (user) return <Navigate to="/" replace />
 
@@ -28,7 +30,8 @@ export function RegisterPage() {
     }
     setSubmitting(true)
     try {
-      await register(name, email, password)
+      const { retry_after } = await register(name, email, password)
+      cooldown.start(retry_after)
       setPendingEmail(email)
     } catch (err) {
       setError(
@@ -40,12 +43,16 @@ export function RegisterPage() {
   }
 
   async function handleResend() {
+    if (cooldown.remaining > 0) return
     setResending(true)
     setResent(false)
     try {
-      await api.post('/auth/resend-verification', { email: pendingEmail })
-    } finally {
+      const data = await api.post<{ retry_after?: number }>('/auth/resend-verification', {
+        email: pendingEmail,
+      })
+      cooldown.start(data.retry_after ?? 60)
       setResent(true)
+    } finally {
       setResending(false)
     }
   }
@@ -66,8 +73,14 @@ export function RegisterPage() {
               Se a conta ainda não estiver confirmada, um novo link foi enviado.
             </p>
           )}
-          <Button type="button" full loading={resending} onClick={() => void handleResend()}>
-            Reenviar e-mail
+          <Button
+            type="button"
+            full
+            disabled={cooldown.remaining > 0}
+            loading={resending}
+            onClick={() => void handleResend()}
+          >
+            {cooldown.remaining > 0 ? `Reenviar em ${cooldown.remaining}s` : 'Reenviar e-mail'}
           </Button>
           <Link to="/login" className="inline-block text-sm font-bold text-leaf-600 hover:underline">
             Já confirmou? Entrar

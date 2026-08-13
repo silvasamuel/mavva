@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/Input'
 import { ApiError, api } from '@/lib/api'
 import { AuthLayout } from './AuthLayout'
 import { useAuth } from './AuthContext'
+import { useEmailCooldown } from './useEmailCooldown'
 
 export function LoginPage() {
   const { user, login } = useAuth()
@@ -17,6 +18,7 @@ export function LoginPage() {
   const [resending, setResending] = useState(false)
   const [resent, setResent] = useState(false)
   const [submitting, setSubmitting] = useState(false)
+  const cooldown = useEmailCooldown('verify', email)
 
   if (user) return <Navigate to="/" replace />
 
@@ -38,11 +40,13 @@ export function LoginPage() {
   }
 
   async function handleResend() {
+    if (cooldown.remaining > 0) return
     setResending(true)
     try {
-      await api.post('/auth/resend-verification', { email })
-    } finally {
+      const data = await api.post<{ retry_after?: number }>('/auth/resend-verification', { email })
+      cooldown.start(data.retry_after ?? 60)
       setResent(true)
+    } finally {
       setResending(false)
     }
   }
@@ -80,8 +84,16 @@ export function LoginPage() {
                 Se a conta ainda não estiver confirmada, um novo link foi enviado.
               </p>
             )}
-            <Button type="button" full loading={resending} onClick={() => void handleResend()}>
-              Reenviar e-mail de confirmação
+            <Button
+              type="button"
+              full
+              disabled={cooldown.remaining > 0}
+              loading={resending}
+              onClick={() => void handleResend()}
+            >
+              {cooldown.remaining > 0
+                ? `Reenviar em ${cooldown.remaining}s`
+                : 'Reenviar e-mail de confirmação'}
             </Button>
           </div>
         )}
