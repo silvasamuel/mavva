@@ -1,7 +1,10 @@
+from datetime import datetime
+from zoneinfo import ZoneInfo
+
 from fastapi.testclient import TestClient
 from sqlalchemy.orm import Session
 
-from app.models import User
+from app.models import DailyActivity, User
 from app.models.enums import UserRole
 from tests.factories import make_category, make_mc_question, make_open_question
 from tests.helpers import register_user, verification_tokens
@@ -20,6 +23,7 @@ class TestAdminAccessControl:
         category = make_category(db)
         question = make_mc_question(db, category)
         for method, path in [
+            ("get", "/api/v1/admin/dashboard"),
             ("get", "/api/v1/admin/users"),
             ("get", "/api/v1/admin/questions"),
             ("get", "/api/v1/admin/categories"),
@@ -41,6 +45,7 @@ class TestAdminAccessControl:
         )
 
     def test_unauthenticated_is_401(self, client: TestClient, db: Session):
+        assert client.get("/api/v1/admin/dashboard").status_code == 401
         assert client.get("/api/v1/admin/users").status_code == 401
 
     def test_admin_can_list_users_and_questions(self, auth_client: TestClient, db: Session):
@@ -206,3 +211,49 @@ class TestAdminUsers:
             auth_client.get("/api/v1/admin/users/00000000-0000-0000-0000-000000000001").status_code
             == 404
         )
+
+
+class TestAdminDashboard:
+    def test_returns_aggregate_counts(
+        self, auth_client: TestClient, client: TestClient, db: Session
+    ):
+        _promote_to_admin(db, "samuel@teste.com")
+        category = make_category(db)
+        make_mc_question(db, category)
+        make_open_question(db, category)
+        inactive = make_mc_question(db, category)
+        inactive.is_active = False
+        admin = db.query(User).filter(User.email == "samuel@teste.com").one()
+        db.add(
+            DailyActivity(
+                user_id=admin.id,
+                date=datetime.now(ZoneInfo("America/Sao_Paulo")).date(),
+                xp=40,
+                questions=2,
+                correct=1,
+                time_seconds=30,
+            )
+        )
+        db.flush()
+        register_user(client, name="Pendente", email="pendente@teste.com")
+
+        response = auth_client.get("/api/v1/admin/dashboard")
+        assert response.status_code == 200
+        body = response.json()
+        assert body["users"]["total"] >= 2
+        assert body["users"]["active"] >= 1
+        assert body["users"]["unverified"] >= 1
+        assert body["users"]["new_7d"] >= 2
+        assert body["questions"]["total"] == 3
+        assert body["questions"]["active"] == 2
+        assert body["questions"]["inactive"] == 1
+        assert body["questions"]["open_answer"] == 1
+        assert body["questions"]["old_testament"] == 2
+        assert body["review"]["flags_open"] == 0
+        assert body["review"]["proposals_pending"] == 0
+        assert body["review"]["pending"] == 0
+        assert body["activity"]["studied_today"] == 1
+        assert body["activity"]["xp_today"] == 40
+        assert body["activity"]["duels_finished"] == 0
+        assert body["activity"]["friendships"] == 0
+        assert "accuracy" in body["activity"]
