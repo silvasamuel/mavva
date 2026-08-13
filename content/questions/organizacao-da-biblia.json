@@ -334,7 +334,8 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "organizacao-da-biblia-0012",
@@ -433,7 +434,8 @@
         "verse_start": 1,
         "verse_end": 4
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "organizacao-da-biblia-0015",
@@ -466,7 +468,8 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "organizacao-da-biblia-0016",
@@ -532,7 +535,8 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "organizacao-da-biblia-0018",
@@ -565,7 +569,8 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "organizacao-da-biblia-0019",
@@ -598,7 +603,8 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "organizacao-da-biblia-0020",
@@ -629,6 +635,224 @@
         "book": "salmos",
         "chapter": 1,
         "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0021",
+      "type": "multiple_choice",
+      "text": "Quantos capítulos tem o Salmo mais curto da Bíblia, o Salmo 117?",
+      "options": [
+        {
+          "text": "Não tem capítulos: são apenas 2 versículos",
+          "correct": true
+        },
+        {
+          "text": "10 versículos",
+          "correct": false
+        },
+        {
+          "text": "1 capítulo de 20 versículos",
+          "correct": false
+        },
+        {
+          "text": "5 versículos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O Salmo 117 tem apenas dois versículos, convocando todas as nações a louvarem o SENHOR (Sl 117:1-2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "salmos",
+        "chapter": 117,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0022",
+      "type": "multiple_choice",
+      "text": "Qual é a divisão histórica do Antigo Testamento, de Josué a Ester?",
+      "options": [
+        {
+          "text": "Livros históricos",
+          "correct": true
+        },
+        {
+          "text": "Pentateuco",
+          "correct": false
+        },
+        {
+          "text": "Poéticos",
+          "correct": false
+        },
+        {
+          "text": "Profetas maiores",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "De Josué a Ester, os livros narram a conquista, os juízes, a monarquia, o exílio e o retorno (Js 1:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "josue",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0023",
+      "type": "multiple_choice",
+      "text": "Quais cartas do Novo Testamento são chamadas 'epístolas da prisão'?",
+      "options": [
+        {
+          "text": "Efésios, Filipenses, Colossenses e Filemom",
+          "correct": true
+        },
+        {
+          "text": "Romanos e Gálatas",
+          "correct": false
+        },
+        {
+          "text": "1 e 2 Coríntios",
+          "correct": false
+        },
+        {
+          "text": "1 e 2 Pedro",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Nelas Paulo se identifica como prisioneiro, escrevendo do cárcere (Ef 3:1; Fp 1:13; Cl 4:18; Fm 1:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "efesios",
+        "chapter": 3,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0024",
+      "type": "multiple_choice",
+      "text": "Em que parte da Bíblia está o livro de Atos?",
+      "options": [
+        {
+          "text": "Novo Testamento, entre os evangelhos e as cartas",
+          "correct": true
+        },
+        {
+          "text": "Antigo Testamento, entre os históricos",
+          "correct": false
+        },
+        {
+          "text": "No fim do Novo Testamento",
+          "correct": false
+        },
+        {
+          "text": "Entre os profetas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Atos faz a ponte entre a vida de Jesus e as cartas, narrando a expansão da igreja (At 1:1-8).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 8
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0025",
+      "type": "multiple_choice",
+      "text": "Quantos Salmos compõem o saltério?",
+      "options": [
+        {
+          "text": "150",
+          "correct": true
+        },
+        {
+          "text": "100",
+          "correct": false
+        },
+        {
+          "text": "120",
+          "correct": false
+        },
+        {
+          "text": "180",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O livro dos Salmos reúne 150 cânticos, dividido tradicionalmente em cinco livros (Sl 150:6 encerra o saltério).",
+      "divergence_note": null,
+      "reference": {
+        "book": "salmos",
+        "chapter": 150,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0026",
+      "type": "multiple_choice",
+      "text": "Qual é o versículo central da estrutura da Bíblia protestante em capítulos?",
+      "options": [
+        {
+          "text": "Está no Salmo 117-118, o centro do saltério",
+          "correct": true
+        },
+        {
+          "text": "Está em Gênesis 25",
+          "correct": false
+        },
+        {
+          "text": "Está em Apocalipse 10",
+          "correct": false
+        },
+        {
+          "text": "Está em Mateus 1",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O Salmo 117 é o capítulo mais curto e fica próximo do centro da Bíblia em capítulos — curiosidade de estrutura, não de doutrina (Sl 118:8).",
+      "divergence_note": null,
+      "reference": {
+        "book": "salmos",
+        "chapter": 118,
+        "verse_start": 8,
+        "verse_end": null
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0027",
+      "type": "open_answer",
+      "text": "Como se chama o conjunto dos 27 livros que compõem a segunda parte da Bíblia?",
+      "options": null,
+      "accepted_answers": [
+        "Novo Testamento",
+        "O Novo Testamento",
+        "NT"
+      ],
+      "explanation": "O Novo Testamento reúne evangelhos, Atos, cartas e Apocalipse, centrados em Cristo e na nova aliança (Hb 9:15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "hebreus",
+        "chapter": 9,
+        "verse_start": 15,
         "verse_end": null
       },
       "difficulty": "medium"

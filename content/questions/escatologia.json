@@ -700,6 +700,92 @@
         "verse_end": null
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "escatologia-0025",
+      "type": "multiple_choice",
+      "text": "Como Pedro descreve a demora da volta do Senhor em 2 Pedro 3?",
+      "options": [
+        {
+          "text": "Deus é longânimo, não querendo que ninguém pereça",
+          "correct": true
+        },
+        {
+          "text": "Deus esqueceu a promessa",
+          "correct": false
+        },
+        {
+          "text": "O tempo já passou",
+          "correct": false
+        },
+        {
+          "text": "Os sinais falharam",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'O Senhor não retarda a sua promessa... mas é longânimo para conosco, não querendo que alguns se percam' (2Pe 3:9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2pedro",
+        "chapter": 3,
+        "verse_start": 8,
+        "verse_end": 9
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0026",
+      "type": "multiple_choice",
+      "text": "Que imagem Jesus usou para dizer que virá quando não se espera?",
+      "options": [
+        {
+          "text": "Como ladrão de noite",
+          "correct": true
+        },
+        {
+          "text": "Como o sol ao meio-dia",
+          "correct": false
+        },
+        {
+          "text": "Como a chuva de outono",
+          "correct": false
+        },
+        {
+          "text": "Como o vento norte",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'O dia do Senhor virá como o ladrão de noite' (1Ts 5:2; cf. Mt 24:43) — daí a ordem de vigiar.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1tessalonicenses",
+        "chapter": 5,
+        "verse_start": 2,
+        "verse_end": 4
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0027",
+      "type": "open_answer",
+      "text": "Segundo Apocalipse 21, quem será o templo da cidade eterna?",
+      "options": null,
+      "accepted_answers": [
+        "Deus e o Cordeiro",
+        "O Senhor Deus e o Cordeiro",
+        "Deus Todo-Poderoso e o Cordeiro"
+      ],
+      "explanation": "'Nela não vi templo, porque o seu templo é o Senhor Deus Todo-Poderoso e o Cordeiro' (Ap 21:22).",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 21,
+        "verse_start": 22,
+        "verse_end": 23
+      },
+      "difficulty": "expert"
     }
   ]
 }

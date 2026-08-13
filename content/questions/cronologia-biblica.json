@@ -416,7 +416,8 @@
         "verse_start": 3,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "cronologia-biblica-0014",
@@ -702,6 +703,158 @@
         "verse_end": null
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "cronologia-biblica-0023",
+      "type": "multiple_choice",
+      "text": "Quanto tempo durou a construção do templo de Salomão?",
+      "options": [
+        {
+          "text": "Sete anos",
+          "correct": true
+        },
+        {
+          "text": "Quarenta anos",
+          "correct": false
+        },
+        {
+          "text": "Vinte anos",
+          "correct": false
+        },
+        {
+          "text": "Três anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'E em sete anos o edificou e o acabou' (1Rs 6:38), começando no quarto ano do seu reinado.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 6,
+        "verse_start": 37,
+        "verse_end": 38
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "cronologia-biblica-0024",
+      "type": "multiple_choice",
+      "text": "Quantos dias Moisés permaneceu no monte Sinai recebendo a Lei?",
+      "options": [
+        {
+          "text": "Quarenta dias e quarenta noites",
+          "correct": true
+        },
+        {
+          "text": "Sete dias",
+          "correct": false
+        },
+        {
+          "text": "Doze dias",
+          "correct": false
+        },
+        {
+          "text": "Cem dias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Esteve ali com o SENHOR quarenta dias e quarenta noites; não comeu pão nem bebeu água' (Êx 34:28).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 34,
+        "verse_start": 28,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cronologia-biblica-0025",
+      "type": "multiple_choice",
+      "text": "Quantos anos Noé tinha quando veio o dilúvio sobre a terra?",
+      "options": [
+        {
+          "text": "Seiscentos anos",
+          "correct": true
+        },
+        {
+          "text": "Quinhentos anos",
+          "correct": false
+        },
+        {
+          "text": "Setecentos anos",
+          "correct": false
+        },
+        {
+          "text": "Novecentos anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Tinha Noé seiscentos anos de idade quando o dilúvio das águas veio sobre a terra' (Gn 7:6).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 7,
+        "verse_start": 6,
+        "verse_end": null
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "cronologia-biblica-0026",
+      "type": "multiple_choice",
+      "text": "Quantos dias durou a jornada de Elias até o monte Horebe, sustentado pela comida do anjo?",
+      "options": [
+        {
+          "text": "Quarenta dias e quarenta noites",
+          "correct": true
+        },
+        {
+          "text": "Três dias",
+          "correct": false
+        },
+        {
+          "text": "Sete dias",
+          "correct": false
+        },
+        {
+          "text": "Doze dias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Com a força daquela comida caminhou quarenta dias e quarenta noites até Horebe, o monte de Deus' (1Rs 19:8).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 19,
+        "verse_start": 8,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cronologia-biblica-0027",
+      "type": "open_answer",
+      "text": "Em que dia da semana Jesus ressuscitou, segundo os evangelhos?",
+      "options": null,
+      "accepted_answers": [
+        "Primeiro dia da semana",
+        "Domingo",
+        "No primeiro dia da semana"
+      ],
+      "explanation": "'E, no primeiro dia da semana, muito de madrugada, foram ao sepulcro' (Lc 24:1) — daí a igreja reunir-se nesse dia (At 20:7).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 24,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "medium"
     }
   ]
 }

@@ -362,7 +362,8 @@
         "verse_start": 12,
         "verse_end": 15
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "teologia-biblica-0012",
@@ -514,7 +515,8 @@
         "verse_start": 31,
         "verse_end": 34
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "teologia-biblica-0017",
@@ -547,7 +549,8 @@
         "verse_start": 8,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "teologia-biblica-0018",
@@ -580,7 +583,8 @@
         "verse_start": 9,
         "verse_end": 11
       },
-      "difficulty": "expert"
+      "difficulty": "expert",
+      "is_active": false
     },
     {
       "external_id": "teologia-biblica-0019",
@@ -646,7 +650,140 @@
         "verse_start": 29,
         "verse_end": null
       },
+      "difficulty": "medium",
+      "is_active": false
+    },
+    {
+      "external_id": "teologia-biblica-0021",
+      "type": "multiple_choice",
+      "text": "Que tema liga o sacrifício de Isaque ao monte onde 'o SENHOR proverá'?",
+      "options": [
+        {
+          "text": "A provisão do cordeiro por Deus",
+          "correct": true
+        },
+        {
+          "text": "A lei da primogenitura",
+          "correct": false
+        },
+        {
+          "text": "O direito à terra",
+          "correct": false
+        },
+        {
+          "text": "A aliança da circuncisão",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Deus proverá para si o cordeiro' (Gn 22:8); Abraão chamou o lugar de 'O SENHOR proverá' (Gn 22:14).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 22,
+        "verse_start": 8,
+        "verse_end": 14
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "teologia-biblica-0022",
+      "type": "multiple_choice",
+      "text": "Como Isaías 53 descreve o Servo que sofre?",
+      "options": [
+        {
+          "text": "Ferido pelas nossas transgressões",
+          "correct": true
+        },
+        {
+          "text": "Coroado entre exércitos",
+          "correct": false
+        },
+        {
+          "text": "Rico e poderoso",
+          "correct": false
+        },
+        {
+          "text": "Isento de dor",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Ele foi ferido pelas nossas transgressões e moído pelas nossas iniquidades... e o SENHOR fez cair sobre ele a iniquidade de nós todos' (Is 53:5-6).",
+      "divergence_note": null,
+      "reference": {
+        "book": "isaias",
+        "chapter": 53,
+        "verse_start": 5,
+        "verse_end": 6
+      },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "teologia-biblica-0023",
+      "type": "multiple_choice",
+      "text": "Que papel o tabernáculo cumpria na teologia do Antigo Testamento?",
+      "options": [
+        {
+          "text": "Ser o lugar da presença de Deus no meio do povo",
+          "correct": true
+        },
+        {
+          "text": "Servir de fortaleza militar",
+          "correct": false
+        },
+        {
+          "text": "Guardar os tesouros do rei",
+          "correct": false
+        },
+        {
+          "text": "Abrigar os anciãos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'E me farão um santuário, e habitarei no meio deles' (Êx 25:8) — sombra do que se cumpre em Cristo e na nova Jerusalém.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 25,
+        "verse_start": 8,
+        "verse_end": 9
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "teologia-biblica-0024",
+      "type": "multiple_choice",
+      "text": "O que o sábado do Antigo Testamento aponta, segundo o Novo?",
+      "options": [
+        {
+          "text": "O descanso que há em Cristo",
+          "correct": true
+        },
+        {
+          "text": "O fim das festas",
+          "correct": false
+        },
+        {
+          "text": "A libertação do Egito apenas",
+          "correct": false
+        },
+        {
+          "text": "A posse da terra apenas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "As festas e o sábado são 'sombras das coisas futuras, mas o corpo é de Cristo' (Cl 2:16-17; cf. Hb 4:9-10).",
+      "divergence_note": "As tradições cristãs divergem sobre a observância do sábado/domingo hoje (sabatistas, dominicais e os que veem liberdade cristã). A pergunta trata da leitura tipológica que o próprio NT faz.",
+      "reference": {
+        "book": "colossenses",
+        "chapter": 2,
+        "verse_start": 16,
+        "verse_end": 17
+      },
+      "difficulty": "expert"
     }
   ]
 }

@@ -647,6 +647,158 @@
         "verse_end": 9
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "evangelhos-0023",
+      "type": "multiple_choice",
+      "text": "O que Jesus respondeu ao ser tentado a transformar pedras em pão?",
+      "options": [
+        {
+          "text": "'Nem só de pão viverá o homem'",
+          "correct": true
+        },
+        {
+          "text": "'Não tentarás o Senhor'",
+          "correct": false
+        },
+        {
+          "text": "'Ao Senhor adorarás'",
+          "correct": false
+        },
+        {
+          "text": "'Vai-te, Satanás'",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jesus citou Deuteronômio 8:3: 'Nem só de pão viverá o homem, mas de toda a palavra que sai da boca de Deus' (Mt 4:4).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 4,
+        "verse_start": 3,
+        "verse_end": 4
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "evangelhos-0024",
+      "type": "multiple_choice",
+      "text": "Quantas pessoas Jesus levou consigo ao monte da transfiguração?",
+      "options": [
+        {
+          "text": "Três: Pedro, Tiago e João",
+          "correct": true
+        },
+        {
+          "text": "Todos os doze",
+          "correct": false
+        },
+        {
+          "text": "Apenas Pedro",
+          "correct": false
+        },
+        {
+          "text": "Sete discípulos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Tomou Jesus consigo a Pedro, e a Tiago, e a João, seu irmão, e os conduziu em particular a um alto monte' (Mt 17:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 17,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "evangelhos-0025",
+      "type": "multiple_choice",
+      "text": "Na cruz, a quem Jesus confiou o cuidado de sua mãe?",
+      "options": [
+        {
+          "text": "Ao discípulo amado",
+          "correct": true
+        },
+        {
+          "text": "A Tiago, seu irmão",
+          "correct": false
+        },
+        {
+          "text": "A Pedro",
+          "correct": false
+        },
+        {
+          "text": "A José de Arimateia",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Mulher, eis aí o teu filho... Eis aí tua mãe. E desde aquela hora o discípulo a recebeu em sua casa' (Jo 19:26-27).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 19,
+        "verse_start": 26,
+        "verse_end": 27
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "evangelhos-0026",
+      "type": "multiple_choice",
+      "text": "O que a mulher samaritana deixou junto ao poço ao correr para a cidade?",
+      "options": [
+        {
+          "text": "O seu cântaro",
+          "correct": true
+        },
+        {
+          "text": "O seu manto",
+          "correct": false
+        },
+        {
+          "text": "As suas sandálias",
+          "correct": false
+        },
+        {
+          "text": "A sua bolsa",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Deixou, pois, a mulher o seu cântaro e foi à cidade' anunciar: 'Vinde, vede um homem que me disse tudo quanto tenho feito' (Jo 4:28-29).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 4,
+        "verse_start": 28,
+        "verse_end": 29
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "evangelhos-0027",
+      "type": "open_answer",
+      "text": "Que palavras Jesus disse ao expirar, segundo João?",
+      "options": null,
+      "accepted_answers": [
+        "Está consumado",
+        "Esta consumado",
+        "Tudo está consumado"
+      ],
+      "explanation": "'Quando Jesus tomou o vinagre, disse: Está consumado. E, inclinando a cabeça, entregou o espírito' (Jo 19:30).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 19,
+        "verse_start": 30,
+        "verse_end": null
+      },
+      "difficulty": "medium"
     }
   ]
 }

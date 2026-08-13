@@ -334,7 +334,8 @@
         "verse_start": 27,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "genealogias-0012",
@@ -667,6 +668,138 @@
         "chapter": 10,
         "verse_start": 8,
         "verse_end": 11
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "genealogias-0023",
+      "type": "multiple_choice",
+      "text": "Quem foi o filho de Abraão com a serva Agar?",
+      "options": [
+        {
+          "text": "Ismael",
+          "correct": true
+        },
+        {
+          "text": "Isaque",
+          "correct": false
+        },
+        {
+          "text": "Midiã",
+          "correct": false
+        },
+        {
+          "text": "Esaú",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Ismael nasceu de Agar, a serva egípcia, antes da promessa cumprida em Isaque (Gn 16:15); Deus também o abençoou (Gn 17:20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 16,
+        "verse_start": 15,
+        "verse_end": 16
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "genealogias-0024",
+      "type": "multiple_choice",
+      "text": "Quais dois filhos de José receberam herança como tribos de Israel?",
+      "options": [
+        {
+          "text": "Efraim e Manassés",
+          "correct": true
+        },
+        {
+          "text": "Rúben e Simeão",
+          "correct": false
+        },
+        {
+          "text": "Dã e Naftali",
+          "correct": false
+        },
+        {
+          "text": "Gade e Aser",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jacó adotou os netos: 'Efraim e Manassés serão meus, como Rúben e Simeão' (Gn 48:5), tornando-se tribos.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 48,
+        "verse_start": 5,
+        "verse_end": 6
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "genealogias-0025",
+      "type": "multiple_choice",
+      "text": "De qual filho de Jacó Judá recebeu a promessa de que 'o cetro não se arredará'?",
+      "options": [
+        {
+          "text": "De Judá",
+          "correct": true
+        },
+        {
+          "text": "De Rúben",
+          "correct": false
+        },
+        {
+          "text": "De José",
+          "correct": false
+        },
+        {
+          "text": "De Benjamim",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'O cetro não se arredará de Judá... até que venha Siló' (Gn 49:10) — a linhagem real que desemboca em Cristo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 49,
+        "verse_start": 10,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "genealogias-0026",
+      "type": "multiple_choice",
+      "text": "Quem era o avô de Davi, filho de Obede?",
+      "options": [
+        {
+          "text": "Jessé",
+          "correct": true
+        },
+        {
+          "text": "Boaz",
+          "correct": false
+        },
+        {
+          "text": "Salmom",
+          "correct": false
+        },
+        {
+          "text": "Naassom",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Obede gerou a Jessé, e Jessé gerou a Davi' (Rt 4:22); Davi é chamado repetidamente 'filho de Jessé'.",
+      "divergence_note": null,
+      "reference": {
+        "book": "rute",
+        "chapter": 4,
+        "verse_start": 21,
+        "verse_end": 22
       },
       "difficulty": "expert"
     }

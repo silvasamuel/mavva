@@ -369,7 +369,8 @@
         "verse_start": 6,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "historia-de-israel-0013",
@@ -420,7 +421,8 @@
         "verse_start": 15,
         "verse_end": null
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "historia-de-israel-0015",
@@ -552,7 +554,8 @@
         "verse_start": 1,
         "verse_end": 6
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "historia-de-israel-0019",
@@ -685,6 +688,158 @@
         "verse_end": 31
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "historia-de-israel-0023",
+      "type": "multiple_choice",
+      "text": "Que pedido do povo desagradou a Samuel e inaugurou a monarquia?",
+      "options": [
+        {
+          "text": "'Dá-nos um rei, como todas as nações'",
+          "correct": true
+        },
+        {
+          "text": "'Constrói-nos um templo'",
+          "correct": false
+        },
+        {
+          "text": "'Volta-nos ao Egito'",
+          "correct": false
+        },
+        {
+          "text": "'Divide-nos a terra'",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Dá-nos um rei para que nos julgue, como todas as nações'; Deus disse a Samuel: 'não te rejeitaram a ti, mas a mim' (1Sm 8:5-7).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 8,
+        "verse_start": 5,
+        "verse_end": 7
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-de-israel-0024",
+      "type": "multiple_choice",
+      "text": "Que povo hostilizou Neemias e zombou da reconstrução dos muros?",
+      "options": [
+        {
+          "text": "Sambalate e Tobias",
+          "correct": true
+        },
+        {
+          "text": "Os filisteus",
+          "correct": false
+        },
+        {
+          "text": "Os midianitas",
+          "correct": false
+        },
+        {
+          "text": "Os amalequitas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Sambalate, o horonita, e Tobias, o amonita, zombaram e conspiraram contra a obra (Ne 2:19; 4:1-3).",
+      "divergence_note": null,
+      "reference": {
+        "book": "neemias",
+        "chapter": 4,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-de-israel-0025",
+      "type": "multiple_choice",
+      "text": "Que reforma Esdras conduziu ao voltar a Jerusalém?",
+      "options": [
+        {
+          "text": "A separação dos casamentos com os povos da terra",
+          "correct": true
+        },
+        {
+          "text": "A construção do muro",
+          "correct": false
+        },
+        {
+          "text": "A criação do exército",
+          "correct": false
+        },
+        {
+          "text": "A abolição do dízimo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Esdras liderou o povo ao arrependimento pelos casamentos mistos que ameaçavam a identidade da aliança (Ed 9:1-3; 10:1-3).",
+      "divergence_note": null,
+      "reference": {
+        "book": "esdras",
+        "chapter": 9,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "historia-de-israel-0026",
+      "type": "multiple_choice",
+      "text": "Onde a arca ficou por vinte anos após voltar dos filisteus?",
+      "options": [
+        {
+          "text": "Em Quiriate-Jearim",
+          "correct": true
+        },
+        {
+          "text": "Em Siló",
+          "correct": false
+        },
+        {
+          "text": "Em Betel",
+          "correct": false
+        },
+        {
+          "text": "Em Hebrom",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'A arca ficou em Quiriate-Jearim... e passaram-se vinte anos' até Samuel chamar o povo ao arrependimento (1Sm 7:1-2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 7,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "historia-de-israel-0027",
+      "type": "open_answer",
+      "text": "Que tribo não recebeu herança de terra, tendo o SENHOR como sua herança?",
+      "options": null,
+      "accepted_answers": [
+        "Levi",
+        "Tribo de Levi",
+        "Os levitas"
+      ],
+      "explanation": "'A tribo de Levi não recebeu herança... o SENHOR é a sua herança' (Dt 18:1-2; Js 13:14), servindo no santuário.",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 18,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "hard"
     }
   ]
 }

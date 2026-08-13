@@ -348,7 +348,8 @@
         "verse_start": 2,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "cultura-biblica-0012",
@@ -618,6 +619,158 @@
         "verse_end": 10
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0021",
+      "type": "multiple_choice",
+      "text": "Que animal era o principal meio de transporte de cargas nas caravanas do Oriente?",
+      "options": [
+        {
+          "text": "O camelo",
+          "correct": true
+        },
+        {
+          "text": "O cavalo de guerra",
+          "correct": false
+        },
+        {
+          "text": "O boi",
+          "correct": false
+        },
+        {
+          "text": "O leão",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Camelos carregavam as especiarias dos ismaelitas que compraram José (Gn 37:25) e os presentes da rainha de Sabá (1Rs 10:2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 37,
+        "verse_start": 25,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0022",
+      "type": "multiple_choice",
+      "text": "Como se moía o grão nas casas de Israel?",
+      "options": [
+        {
+          "text": "Em mós manuais, geralmente por mulheres",
+          "correct": true
+        },
+        {
+          "text": "Em moinhos de vento",
+          "correct": false
+        },
+        {
+          "text": "Com prensas de azeite",
+          "correct": false
+        },
+        {
+          "text": "Em fornos de barro",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Duas mulheres estarão moendo no moinho' (Mt 24:41); a Lei proibia tomar a mó em penhor, por ser meio de vida (Dt 24:6).",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 24,
+        "verse_start": 6,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cultura-biblica-0023",
+      "type": "multiple_choice",
+      "text": "Que uso tinha o azeite de oliva além de alimento?",
+      "options": [
+        {
+          "text": "Iluminação, unção e remédio",
+          "correct": true
+        },
+        {
+          "text": "Somente pagamento de impostos",
+          "correct": false
+        },
+        {
+          "text": "Somente sacrifícios",
+          "correct": false
+        },
+        {
+          "text": "Fabricação de armas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O azeite alimentava as lâmpadas do santuário (Êx 27:20), ungia reis (1Sm 16:13) e tratava feridas (Lc 10:34).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 27,
+        "verse_start": 20,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0024",
+      "type": "multiple_choice",
+      "text": "Por que a hospitalidade era um dever sagrado no mundo bíblico?",
+      "options": [
+        {
+          "text": "Porque o viajante dependia dela para sobreviver",
+          "correct": true
+        },
+        {
+          "text": "Porque rendia impostos",
+          "correct": false
+        },
+        {
+          "text": "Porque a lei romana exigia",
+          "correct": false
+        },
+        {
+          "text": "Porque garantia herança",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Abraão recebeu três visitantes (Gn 18:1-8) e Hebreus lembra: 'alguns, hospedando-a, sem o saberem, hospedaram anjos' (Hb 13:2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "hebreus",
+        "chapter": 13,
+        "verse_start": 2,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cultura-biblica-0025",
+      "type": "open_answer",
+      "text": "Que material era usado para escrever rolos duráveis, feito de pele de animal?",
+      "options": null,
+      "accepted_answers": [
+        "Pergaminho",
+        "Couro",
+        "Pergaminhos"
+      ],
+      "explanation": "Paulo pede a Timóteo que traga 'os livros, principalmente os pergaminhos' (2Tm 4:13).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2timoteo",
+        "chapter": 4,
+        "verse_start": 13,
+        "verse_end": null
+      },
+      "difficulty": "hard"
     }
   ]
 }

@@ -446,7 +446,8 @@
         "verse_start": 26,
         "verse_end": 28
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "festas-judaicas-0015",
@@ -479,7 +480,8 @@
         "verse_start": 15,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "festas-judaicas-0016",
@@ -512,7 +514,8 @@
         "verse_start": 24,
         "verse_end": 25
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "festas-judaicas-0017",
@@ -545,7 +548,8 @@
         "verse_start": 16,
         "verse_end": null
       },
-      "difficulty": "expert"
+      "difficulty": "expert",
+      "is_active": false
     },
     {
       "external_id": "festas-judaicas-0018",
@@ -686,6 +690,158 @@
         "verse_end": null
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "festas-judaicas-0023",
+      "type": "multiple_choice",
+      "text": "Que oferta especial marcava a Festa das Primícias, no início da colheita?",
+      "options": [
+        {
+          "text": "O primeiro molho da ceifa",
+          "correct": true
+        },
+        {
+          "text": "Um novilho inteiro",
+          "correct": false
+        },
+        {
+          "text": "Dez moedas de prata",
+          "correct": false
+        },
+        {
+          "text": "Um cordeiro de dois anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Trareis um molho das primícias da vossa sega ao sacerdote' (Lv 23:10); Paulo aplica a imagem a Cristo ressurreto (1Co 15:20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 23,
+        "verse_start": 10,
+        "verse_end": 11
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "festas-judaicas-0024",
+      "type": "multiple_choice",
+      "text": "Em qual festa Jesus proclamou: 'Se alguém tem sede, venha a mim e beba'?",
+      "options": [
+        {
+          "text": "Na Festa dos Tabernáculos",
+          "correct": true
+        },
+        {
+          "text": "Na Páscoa",
+          "correct": false
+        },
+        {
+          "text": "No Dia da Expiação",
+          "correct": false
+        },
+        {
+          "text": "No Purim",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'No último dia, o grande dia da festa' dos Tabernáculos, Jesus fez esse convite, falando do Espírito (Jo 7:37-39).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 7,
+        "verse_start": 37,
+        "verse_end": 39
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "festas-judaicas-0025",
+      "type": "multiple_choice",
+      "text": "Que alimento amargo acompanhava a refeição da Páscoa?",
+      "options": [
+        {
+          "text": "Ervas amargas",
+          "correct": true
+        },
+        {
+          "text": "Mel silvestre",
+          "correct": false
+        },
+        {
+          "text": "Azeitonas",
+          "correct": false
+        },
+        {
+          "text": "Figos secos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Com ervas amargas o comerão' (Êx 12:8) — memória da amargura da servidão no Egito.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 12,
+        "verse_start": 8,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "festas-judaicas-0026",
+      "type": "multiple_choice",
+      "text": "Qual era o propósito principal do Dia da Expiação para o povo?",
+      "options": [
+        {
+          "text": "Purificar o povo de todos os seus pecados",
+          "correct": true
+        },
+        {
+          "text": "Celebrar a colheita",
+          "correct": false
+        },
+        {
+          "text": "Lembrar o êxodo",
+          "correct": false
+        },
+        {
+          "text": "Coroar o rei",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Naquele dia se fará expiação por vós, para vos purificar de todos os vossos pecados' (Lv 16:30).",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 16,
+        "verse_start": 30,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "festas-judaicas-0027",
+      "type": "open_answer",
+      "text": "Que festa Jesus celebrava com os discípulos na última ceia?",
+      "options": null,
+      "accepted_answers": [
+        "Páscoa",
+        "Pascoa",
+        "A Páscoa"
+      ],
+      "explanation": "'Onde queres que preparemos a Páscoa?' (Mt 26:17-19); nessa ceia ele instituiu a Ceia do Senhor.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 26,
+        "verse_start": 17,
+        "verse_end": 19
+      },
+      "difficulty": "medium"
     }
   ]
 }

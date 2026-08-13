@@ -635,6 +635,159 @@
         "verse_end": 23
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0021",
+      "type": "multiple_choice",
+      "text": "O que Deus instituiu ao chamar Abrão para sair de Ur?",
+      "options": [
+        {
+          "text": "A promessa de fazer dele uma grande nação",
+          "correct": true
+        },
+        {
+          "text": "A lei do sábado",
+          "correct": false
+        },
+        {
+          "text": "O sacerdócio levítico",
+          "correct": false
+        },
+        {
+          "text": "A monarquia",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Sai da tua terra... e far-te-ei uma grande nação' (Gn 12:1-2) — o chamado que inaugura a história do povo da promessa.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 12,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0022",
+      "type": "multiple_choice",
+      "text": "O que aconteceu em Sinai enquanto Moisés estava no monte?",
+      "options": [
+        {
+          "text": "O povo fez um bezerro de ouro",
+          "correct": true
+        },
+        {
+          "text": "O povo construiu o tabernáculo",
+          "correct": false
+        },
+        {
+          "text": "O povo jejuou",
+          "correct": false
+        },
+        {
+          "text": "O povo cruzou o Jordão",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Impaciente, o povo pediu deuses a Arão, que fundiu um bezerro de ouro (Êx 32:1-4); Moisés quebrou as tábuas ao descer.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 32,
+        "verse_start": 1,
+        "verse_end": 4
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0023",
+      "type": "multiple_choice",
+      "text": "Que evento marcou a entrada da arca do concerto em Jerusalém sob Davi?",
+      "options": [
+        {
+          "text": "Davi dançou diante do SENHOR com todas as suas forças",
+          "correct": true
+        },
+        {
+          "text": "Davi ofereceu o próprio filho",
+          "correct": false
+        },
+        {
+          "text": "Davi construiu o templo",
+          "correct": false
+        },
+        {
+          "text": "Davi jejuou sete dias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Davi saltava com todas as suas forças diante do SENHOR'; Mical o desprezou por isso (2Sm 6:14-16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 6,
+        "verse_start": 14,
+        "verse_end": 16
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "eventos-biblicos-0024",
+      "type": "multiple_choice",
+      "text": "O que os discípulos faziam quando o Espírito Santo desceu no Pentecostes?",
+      "options": [
+        {
+          "text": "Estavam todos reunidos no mesmo lugar",
+          "correct": true
+        },
+        {
+          "text": "Pregavam no templo",
+          "correct": false
+        },
+        {
+          "text": "Pescavam na Galileia",
+          "correct": false
+        },
+        {
+          "text": "Viajavam para Damasco",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Estando todos reunidos no mesmo lugar', veio do céu um som como de vento impetuoso (At 2:1-2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0025",
+      "type": "open_answer",
+      "text": "Que acordo Jônatas fez com Davi, apesar de ser filho de Saul?",
+      "options": null,
+      "accepted_answers": [
+        "Um pacto",
+        "Um pacto de amizade",
+        "Aliança",
+        "Um concerto"
+      ],
+      "explanation": "'Jônatas fez concerto com Davi, porque o amava como à sua própria alma' (1Sm 18:3), protegendo-o da ira de Saul.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 18,
+        "verse_start": 1,
+        "verse_end": 4
+      },
+      "difficulty": "hard"
     }
   ]
 }

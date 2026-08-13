@@ -617,7 +617,8 @@
         "verse_start": 20,
         "verse_end": 24
       },
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "is_active": false
     },
     {
       "external_id": "reis-0021",
@@ -684,6 +685,171 @@
         "verse_end": 24
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "reis-0023",
+      "type": "multiple_choice",
+      "text": "Qual rei visitou Salomão atraída pela fama de sua sabedoria?",
+      "options": [
+        {
+          "text": "A rainha de Sabá",
+          "correct": true
+        },
+        {
+          "text": "A rainha Ester",
+          "correct": false
+        },
+        {
+          "text": "A rainha Jezabel",
+          "correct": false
+        },
+        {
+          "text": "A rainha Atalia",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "A rainha de Sabá veio prová-lo com perguntas difíceis e reconheceu que nem a metade lhe fora contada (1Rs 10:1-7).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 10,
+        "verse_start": 1,
+        "verse_end": 7
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "reis-0024",
+      "type": "multiple_choice",
+      "text": "Qual mulher usurpou o trono de Judá matando a descendência real?",
+      "options": [
+        {
+          "text": "Atalia",
+          "correct": true
+        },
+        {
+          "text": "Jezabel",
+          "correct": false
+        },
+        {
+          "text": "Mical",
+          "correct": false
+        },
+        {
+          "text": "Bate-Seba",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Morto Acazias, Atalia destruiu a descendência real e reinou seis anos, até Joás ser proclamado (2Rs 11:1-3).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 11,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "reis-0025",
+      "type": "multiple_choice",
+      "text": "Quem foi ungido por ordem de Eliseu para destruir a casa de Acabe?",
+      "options": [
+        {
+          "text": "Jeú",
+          "correct": true
+        },
+        {
+          "text": "Hazael",
+          "correct": false
+        },
+        {
+          "text": "Jeorão",
+          "correct": false
+        },
+        {
+          "text": "Onri",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Um dos filhos dos profetas ungiu Jeú por ordem de Eliseu para ferir a casa de Acabe (2Rs 9:6-7).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 9,
+        "verse_start": 6,
+        "verse_end": 7
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "reis-0026",
+      "type": "multiple_choice",
+      "text": "Qual rei de Judá mostrou todos os seus tesouros aos enviados da Babilônia?",
+      "options": [
+        {
+          "text": "Ezequias",
+          "correct": true
+        },
+        {
+          "text": "Josias",
+          "correct": false
+        },
+        {
+          "text": "Acaz",
+          "correct": false
+        },
+        {
+          "text": "Manassés",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Ezequias mostrou tudo aos embaixadores, e Isaías anunciou que aquilo seria levado à Babilônia (2Rs 20:13-17).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 20,
+        "verse_start": 13,
+        "verse_end": 17
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "reis-0027",
+      "type": "multiple_choice",
+      "text": "Qual rei de Israel se entristeceu por não conseguir a vinha de Nabote?",
+      "options": [
+        {
+          "text": "Acabe",
+          "correct": true
+        },
+        {
+          "text": "Jeroboão",
+          "correct": false
+        },
+        {
+          "text": "Onri",
+          "correct": false
+        },
+        {
+          "text": "Baasa",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Acabe ficou triste e indignado por Nabote recusar vender a vinha herdada dos pais; Jezabel a tomou por meio de falso testemunho (1Rs 21:3-4,15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 21,
+        "verse_start": 1,
+        "verse_end": 4
+      },
+      "difficulty": "medium"
     }
   ]
 }
