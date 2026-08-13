@@ -6,6 +6,7 @@ from app.api.v1 import (
     auth,
     catalog,
     dashboard,
+    moderation,
     quizzes,
     ranking,
     social,
@@ -22,4 +23,5 @@ api_router.include_router(achievements.router)
 api_router.include_router(social.friends_router)
 api_router.include_router(social.duels_router)
 api_router.include_router(ranking.router)
+api_router.include_router(moderation.router)
 api_router.include_router(admin.router)

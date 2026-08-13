@@ -32,3 +32,10 @@ export const TESTAMENT_LABELS: Record<string, string> = {
   old: 'Antigo Testamento',
   new: 'Novo Testamento',
 }
+
+export const FLAG_REASON_LABELS: Record<string, string> = {
+  wrong_text: 'Enunciado errado',
+  wrong_answer: 'Resposta errada',
+  wrong_reference: 'Referência bíblica errada',
+  other: 'Outro',
+}

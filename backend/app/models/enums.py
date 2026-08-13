@@ -46,3 +46,22 @@ class DuelStatus(StrEnum):
     FINISHED = "finished"  # resolved (winner or draw)
     EXPIRED = "expired"  # nobody joined before the deadline
     CANCELLED = "cancelled"  # someone walked out mid-duel (forfeit)
+
+
+class QuestionFlagReason(StrEnum):
+    WRONG_TEXT = "wrong_text"
+    WRONG_ANSWER = "wrong_answer"
+    WRONG_REFERENCE = "wrong_reference"
+    OTHER = "other"
+
+
+class QuestionFlagStatus(StrEnum):
+    OPEN = "open"
+    RESOLVED = "resolved"
+    DISMISSED = "dismissed"
+
+
+class QuestionProposalStatus(StrEnum):
+    PENDING = "pending"
+    APPROVED = "approved"
+    REJECTED = "rejected"

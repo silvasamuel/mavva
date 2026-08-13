@@ -266,3 +266,39 @@ export interface ReviewSummary {
   due_this_week: number
   total_items: number
 }
+
+export interface BibleBook {
+  slug: string
+  name: string
+  testament: Testament
+}
+
+export type FlagReason = 'wrong_text' | 'wrong_answer' | 'wrong_reference' | 'other'
+
+export interface QuestionDraft {
+  category_id: number
+  type: QuestionType
+  text: string
+  options: { text: string; correct: boolean }[] | null
+  accepted_answers: string[] | null
+  explanation: string
+  divergence_note: string | null
+  book: string
+  chapter: number
+  verse_start: number
+  verse_end: number | null
+  theme: string
+  difficulty: Difficulty
+  subcategory: string | null
+  tags: string[]
+}
+
+export interface FlagCreateResponse {
+  id: string
+  status: 'open' | 'resolved' | 'dismissed'
+}
+
+export interface ProposalCreateResponse {
+  id: string
+  status: 'pending' | 'approved' | 'rejected'
+}

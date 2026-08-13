@@ -11,10 +11,12 @@ from app.data.books import BOOKS
 from app.models import (
     Category,
     Question,
+    QuestionFlag,
+    QuestionProposal,
     User,
     UserStats,
 )
-from app.models.enums import Difficulty, QuestionType
+from app.models.enums import Difficulty, QuestionFlagStatus, QuestionType
 from app.schemas.admin import (
     AdminAnswer,
     AdminCategoryOut,
@@ -28,9 +30,11 @@ from app.schemas.admin import (
     ContentPublishOut,
     ContentStatusOut,
 )
+from app.schemas.moderation import AdminFlagOut, AdminProposalOut, AdminReviewInbox, QuestionDraft
 from app.seeds.questions import OptionIn, sync_accepted_answers, sync_options
-from app.services import content_sync
+from app.services import content_sync, moderation_service
 from app.services.content_sync import ContentSyncError
+from app.services.moderation_service import ModerationError
 
 # The AdminUser dependency on every path parameter is what enforces access.
 router = APIRouter(prefix="/admin", tags=["admin"])
@@ -249,3 +253,93 @@ def update_question(
     db.commit()
     db.refresh(question)
     return _detail(_load_question(db, question_id))
+
+
+def _flag_out(flag: QuestionFlag) -> AdminFlagOut:
+    return AdminFlagOut(
+        id=flag.id,
+        created_at=flag.created_at,
+        reason=flag.reason,
+        comment=flag.comment,
+        status=flag.status,
+        reporter_name=flag.user.name,
+        reporter_username=flag.user.username,
+        question_id=flag.question_id,
+        question_text=flag.question.text,
+        question_external_id=flag.question.external_id,
+        question_active=flag.question.is_active,
+    )
+
+
+def _proposal_out(proposal: QuestionProposal) -> AdminProposalOut:
+    return AdminProposalOut(
+        id=proposal.id,
+        created_at=proposal.created_at,
+        status=proposal.status,
+        author_name=proposal.user.name,
+        author_username=proposal.user.username,
+        payload=proposal.payload,
+        question_id=proposal.question_id,
+    )
+
+
+@router.get("/review", response_model=AdminReviewInbox)
+def review_inbox(_admin: AdminUser, db: DbDep) -> AdminReviewInbox:
+    flags = moderation_service.list_open_flags(db)
+    proposals = moderation_service.list_pending_proposals(db)
+    return AdminReviewInbox(
+        open_flags=len(flags),
+        pending_proposals=len(proposals),
+        flags=[_flag_out(flag) for flag in flags],
+        proposals=[_proposal_out(proposal) for proposal in proposals],
+    )
+
+
+@router.post("/review/flags/{flag_id}/resolve", status_code=status.HTTP_204_NO_CONTENT)
+def resolve_flag(flag_id: uuid.UUID, _admin: AdminUser, db: DbDep) -> None:
+    try:
+        moderation_service.set_flag_status(db, flag_id, QuestionFlagStatus.RESOLVED)
+    except ModerationError as error:
+        raise HTTPException(error.status_code, error.message) from error
+    db.commit()
+
+
+@router.post("/review/flags/{flag_id}/dismiss", status_code=status.HTTP_204_NO_CONTENT)
+def dismiss_flag(flag_id: uuid.UUID, _admin: AdminUser, db: DbDep) -> None:
+    try:
+        moderation_service.set_flag_status(db, flag_id, QuestionFlagStatus.DISMISSED)
+    except ModerationError as error:
+        raise HTTPException(error.status_code, error.message) from error
+    db.commit()
+
+
+@router.post("/review/flags/{flag_id}/deactivate", status_code=status.HTTP_204_NO_CONTENT)
+def deactivate_flagged_question(flag_id: uuid.UUID, _admin: AdminUser, db: DbDep) -> None:
+    try:
+        flag = moderation_service.set_flag_status(db, flag_id, QuestionFlagStatus.RESOLVED)
+        moderation_service.deactivate_question(db, flag.question_id)
+    except ModerationError as error:
+        raise HTTPException(error.status_code, error.message) from error
+    db.commit()
+
+
+@router.post("/review/proposals/{proposal_id}/approve", response_model=AdminProposalOut)
+def approve_proposal(
+    proposal_id: uuid.UUID, body: QuestionDraft, _admin: AdminUser, db: DbDep
+) -> AdminProposalOut:
+    try:
+        proposal = moderation_service.approve_proposal(db, proposal_id, body)
+    except ModerationError as error:
+        raise HTTPException(error.status_code, error.message) from error
+    db.commit()
+    db.refresh(proposal, attribute_names=["user"])
+    return _proposal_out(proposal)
+
+
+@router.post("/review/proposals/{proposal_id}/reject", status_code=status.HTTP_204_NO_CONTENT)
+def reject_proposal(proposal_id: uuid.UUID, _admin: AdminUser, db: DbDep) -> None:
+    try:
+        moderation_service.reject_proposal(db, proposal_id)
+    except ModerationError as error:
+        raise HTTPException(error.status_code, error.message) from error
+    db.commit()

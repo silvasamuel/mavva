@@ -2,8 +2,9 @@ from fastapi import APIRouter
 from sqlalchemy import func, select
 
 from app.core.deps import CurrentUser, DbDep
+from app.data.books import BOOKS
 from app.models import Question
-from app.schemas.catalog import CategoryOut, ReviewSummaryOut
+from app.schemas.catalog import BookOut, CategoryOut, ReviewSummaryOut
 from app.services import srs
 from app.services.gamification import today_for_user
 from app.services.stats_service import category_performance
@@ -40,3 +41,11 @@ def list_categories(user: CurrentUser, db: DbDep) -> list[CategoryOut]:
 def reviews_summary(user: CurrentUser, db: DbDep) -> ReviewSummaryOut:
     summary = srs.review_summary(db, user.id, today_for_user(user))
     return ReviewSummaryOut(**summary)
+
+
+@router.get("/books", response_model=list[BookOut])
+def list_books(_user: CurrentUser) -> list[BookOut]:
+    return [
+        BookOut(slug=book.slug, name=book.name, testament=book.testament.value)
+        for book in sorted(BOOKS.values(), key=lambda item: item.order)
+    ]

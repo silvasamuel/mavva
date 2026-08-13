@@ -14,10 +14,12 @@ export function QuestionEditor({
   questionId,
   categories,
   onClose,
+  onSaved,
 }: {
   questionId: string
   categories: AdminCategory[]
   onClose: () => void
+  onSaved?: () => void
 }) {
   const queryClient = useQueryClient()
   const { data, isLoading } = useQuery({
@@ -38,6 +40,7 @@ export function QuestionEditor({
       queryClient.invalidateQueries({ queryKey: ['admin', 'questions'] })
       queryClient.invalidateQueries({ queryKey: ['admin', 'question', questionId] })
       queryClient.invalidateQueries({ queryKey: ['admin', 'content'] })
+      onSaved?.()
       onClose()
     },
     onError: (err) =>

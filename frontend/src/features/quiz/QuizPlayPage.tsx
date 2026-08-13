@@ -14,6 +14,7 @@ import { Button } from '@/components/ui/Button'
 import { Spinner } from '@/components/ui/Spinner'
 import { ProgressBar } from '@/components/ui/ProgressBar'
 import { DIFFICULTY_LABELS } from '@/lib/format'
+import { ReportQuestionModal } from '@/features/moderation/ReportQuestionModal'
 
 interface AnswerPayload {
   question_id: string
@@ -47,6 +48,8 @@ export function QuizPlayPage() {
   const [timedOut, setTimedOut] = useState(false)
   const [error, setError] = useState('')
   const [exitConfirm, setExitConfirm] = useState(false)
+  const [reportOpen, setReportOpen] = useState(false)
+  const [reportedIds, setReportedIds] = useState<string[]>([])
   // Wrong/answered beyond what the session snapshot knew at load time.
   const [extraWrong, setExtraWrong] = useState(0)
   const [extraAnswered, setExtraAnswered] = useState(0)
@@ -197,6 +200,7 @@ export function QuizPlayPage() {
     setSelectedOption(null)
     setAnswerText('')
     setRemaining(null)
+    setReportOpen(false)
     questionStartedAt.current = Date.now()
     if (isLast) {
       completeQuiz.mutate()
@@ -397,6 +401,20 @@ export function QuizPlayPage() {
                 </p>
               )}
 
+              {reportedIds.includes(question.id) ? (
+                <p className="text-center text-xs font-semibold text-sand-400">
+                  Obrigado pelo aviso.
+                </p>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setReportOpen(true)}
+                  className="mx-auto block text-xs font-semibold text-sand-400 underline-offset-2 hover:text-sand-600 hover:underline"
+                >
+                  Há um problema nesta pergunta?
+                </button>
+              )}
+
               <Button
                 full
                 onClick={handleNext}
@@ -491,6 +509,18 @@ export function QuizPlayPage() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <ReportQuestionModal
+        open={reportOpen}
+        onClose={() => setReportOpen(false)}
+        onReported={() =>
+          setReportedIds((current) =>
+            current.includes(question.id) ? current : [...current, question.id]
+          )
+        }
+        questionId={question.id}
+        sessionId={session.id}
+      />
     </div>
   )
 }

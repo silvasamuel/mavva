@@ -27,3 +27,9 @@ class ReviewSummaryOut(BaseModel):
     due_today: int
     due_this_week: int
     total_items: int
+
+
+class BookOut(BaseModel):
+    slug: str
+    name: str
+    testament: str
