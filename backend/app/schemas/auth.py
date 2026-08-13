@@ -33,6 +33,7 @@ class VerifyEmailRequest(BaseModel):
 
 class MessageResponse(BaseModel):
     message: str
+    retry_after: int | None = None
 
 
 class TokenResponse(BaseModel):

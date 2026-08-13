@@ -7,7 +7,7 @@ interface AuthState {
   user: User | null
   loading: boolean
   login: (email: string, password: string) => Promise<void>
-  register: (name: string, email: string, password: string) => Promise<void>
+  register: (name: string, email: string, password: string) => Promise<{ retry_after: number }>
   applySession: (data: TokenResponse) => void
   logout: () => Promise<void>
   updateUser: (user: User) => void
@@ -61,7 +61,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   )
 
   const register = useCallback(async (name: string, email: string, password: string) => {
-    await api.post('/auth/register', { name, email, password })
+    const data = await api.post<{ message: string; retry_after?: number }>('/auth/register', {
+      name,
+      email,
+      password,
+    })
+    return { retry_after: data.retry_after ?? 60 }
   }, [])
 
   const logout = useCallback(async () => {

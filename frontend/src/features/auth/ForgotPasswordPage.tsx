@@ -4,20 +4,22 @@ import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
 import { api } from '@/lib/api'
 import { AuthLayout } from './AuthLayout'
+import { useEmailCooldown } from './useEmailCooldown'
 
 export function ForgotPasswordPage() {
   const [email, setEmail] = useState('')
   const [sent, setSent] = useState(false)
   const [submitting, setSubmitting] = useState(false)
+  const cooldown = useEmailCooldown('reset', email)
 
-  async function handleSubmit(event: React.FormEvent) {
-    event.preventDefault()
+  async function sendLink() {
+    if (cooldown.remaining > 0) return
     setSubmitting(true)
     try {
-      await api.post('/auth/forgot-password', { email })
-    } finally {
-      // Always show success — the API never reveals whether the e-mail exists.
+      const data = await api.post<{ retry_after?: number }>('/auth/forgot-password', { email })
+      cooldown.start(data.retry_after ?? 60)
       setSent(true)
+    } finally {
       setSubmitting(false)
     }
   }
@@ -33,12 +35,28 @@ export function ForgotPasswordPage() {
             Se existir uma conta com <strong>{email}</strong>, você receberá um link para criar uma
             nova senha. O link vale por 30 minutos.
           </p>
+          <Button
+            type="button"
+            full
+            disabled={cooldown.remaining > 0}
+            loading={submitting}
+            onClick={() => void sendLink()}
+          >
+            {cooldown.remaining > 0 ? `Reenviar em ${cooldown.remaining}s` : 'Enviar de novo'}
+          </Button>
           <Link to="/login" className="inline-block text-sm font-bold text-leaf-600 hover:underline">
             Voltar para o login
           </Link>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+        <form
+          onSubmit={(event) => {
+            event.preventDefault()
+            void sendLink()
+          }}
+          className="space-y-4"
+          noValidate
+        >
           <p className="text-sm font-semibold text-sand-600">
             Informe seu e-mail e enviaremos um link para redefinir sua senha.
           </p>
@@ -51,8 +69,8 @@ export function ForgotPasswordPage() {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="voce@exemplo.com"
           />
-          <Button type="submit" full loading={submitting}>
-            Enviar link
+          <Button type="submit" full disabled={cooldown.remaining > 0} loading={submitting}>
+            {cooldown.remaining > 0 ? `Reenviar em ${cooldown.remaining}s` : 'Enviar link'}
           </Button>
           <p className="text-center">
             <Link to="/login" className="text-sm font-bold text-leaf-600 hover:underline">
