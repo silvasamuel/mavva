@@ -855,6 +855,159 @@
         "verse_end": 3
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "cronologia-biblica-0028",
+      "type": "multiple_choice",
+      "text": "Quantos anos viveu Moisés, segundo Deuteronômio?",
+      "options": [
+        {
+          "text": "Cento e vinte anos",
+          "correct": true
+        },
+        {
+          "text": "Cem anos",
+          "correct": false
+        },
+        {
+          "text": "Cento e dez anos",
+          "correct": false
+        },
+        {
+          "text": "Cento e trinta anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Era Moisés da idade de cento e vinte anos quando morreu; os seus olhos nunca se escureceram' (Dt 34:7).",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 34,
+        "verse_start": 7,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cronologia-biblica-0029",
+      "type": "multiple_choice",
+      "text": "Quantos anos viveu Josué, servo do SENHOR?",
+      "options": [
+        {
+          "text": "Cento e dez anos",
+          "correct": true
+        },
+        {
+          "text": "Cento e vinte anos",
+          "correct": false
+        },
+        {
+          "text": "Noventa anos",
+          "correct": false
+        },
+        {
+          "text": "Cento e trinta anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Josué, filho de Num, servo do SENHOR, faleceu, sendo da idade de cento e dez anos' (Js 24:29).",
+      "divergence_note": null,
+      "reference": {
+        "book": "josue",
+        "chapter": 24,
+        "verse_start": 29,
+        "verse_end": null
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "cronologia-biblica-0030",
+      "type": "multiple_choice",
+      "text": "Quanto tempo Jonas ficou no ventre do grande peixe?",
+      "options": [
+        {
+          "text": "Três dias e três noites",
+          "correct": true
+        },
+        {
+          "text": "Um dia",
+          "correct": false
+        },
+        {
+          "text": "Sete dias",
+          "correct": false
+        },
+        {
+          "text": "Quarenta dias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Esteve Jonas três dias e três noites nas entranhas do peixe' (Jn 1:17), sinal que Jesus aplicou a si (Mt 12:40).",
+      "divergence_note": null,
+      "reference": {
+        "book": "jonas",
+        "chapter": 1,
+        "verse_start": 17,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cronologia-biblica-0031",
+      "type": "multiple_choice",
+      "text": "Por quanto tempo os israelitas rodearam Jericó antes de os muros caírem?",
+      "options": [
+        {
+          "text": "Seis dias uma vez, e sete voltas no sétimo dia",
+          "correct": true
+        },
+        {
+          "text": "Três dias seguidos",
+          "correct": false
+        },
+        {
+          "text": "Quarenta dias",
+          "correct": false
+        },
+        {
+          "text": "Um dia apenas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Rodearam uma vez por dia durante seis dias e sete vezes no sétimo, quando os muros caíram (Js 6:3-4,15-16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "josue",
+        "chapter": 6,
+        "verse_start": 3,
+        "verse_end": 4
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cronologia-biblica-0032",
+      "type": "open_answer",
+      "text": "Quantos anos Jacó viveu na terra do Egito antes de morrer?",
+      "options": null,
+      "accepted_answers": [
+        "17",
+        "dezessete",
+        "17 anos",
+        "dezessete anos"
+      ],
+      "explanation": "'Jacó viveu na terra do Egito dezessete anos', completando cento e quarenta e sete anos de vida (Gn 47:28).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 47,
+        "verse_start": 28,
+        "verse_end": null
+      },
+      "difficulty": "expert"
     }
   ]
 }

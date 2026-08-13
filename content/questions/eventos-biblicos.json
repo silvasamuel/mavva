@@ -788,6 +788,158 @@
         "verse_end": 4
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "eventos-biblicos-0026",
+      "type": "multiple_choice",
+      "text": "O que Deus fez descer sobre Sodoma e Gomorra em juízo?",
+      "options": [
+        {
+          "text": "Enxofre e fogo",
+          "correct": true
+        },
+        {
+          "text": "Granizo e trevas",
+          "correct": false
+        },
+        {
+          "text": "Um terremoto",
+          "correct": false
+        },
+        {
+          "text": "Uma praga de gafanhotos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Fez o SENHOR chover enxofre e fogo... e destruiu aquelas cidades' (Gn 19:24-25); a mulher de Ló olhou para trás e virou estátua de sal.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 19,
+        "verse_start": 24,
+        "verse_end": 26
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0027",
+      "type": "multiple_choice",
+      "text": "Que sinal Deus deu quando Israel atravessou o Jordão em seco?",
+      "options": [
+        {
+          "text": "As águas pararam amontoadas ao tocarem os pés dos sacerdotes",
+          "correct": true
+        },
+        {
+          "text": "O rio secou por três dias",
+          "correct": false
+        },
+        {
+          "text": "Uma ponte de pedra surgiu",
+          "correct": false
+        },
+        {
+          "text": "Anjos abriram caminho",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "As águas que desciam pararam quando os pés dos sacerdotes com a arca tocaram a beira do Jordão (Js 3:15-16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "josue",
+        "chapter": 3,
+        "verse_start": 15,
+        "verse_end": 17
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "eventos-biblicos-0028",
+      "type": "multiple_choice",
+      "text": "O que aconteceu quando Uzá tocou na arca para segurá-la?",
+      "options": [
+        {
+          "text": "Deus o feriu, e ele morreu ali",
+          "correct": true
+        },
+        {
+          "text": "A arca caiu no chão",
+          "correct": false
+        },
+        {
+          "text": "Nada aconteceu",
+          "correct": false
+        },
+        {
+          "text": "Ficou cego por sete dias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'A ira do SENHOR se acendeu contra Uzá, e Deus o feriu ali por esta imprudência' (2Sm 6:6-7) — a santidade de Deus não é banal.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 6,
+        "verse_start": 6,
+        "verse_end": 7
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "eventos-biblicos-0030",
+      "type": "open_answer",
+      "text": "Que castigo caiu sobre Israel quando o povo murmurou e foi mordido no deserto?",
+      "options": null,
+      "accepted_answers": [
+        "Serpentes ardentes",
+        "Serpentes",
+        "As serpentes ardentes"
+      ],
+      "explanation": "O SENHOR enviou serpentes ardentes; a cura veio ao olhar para a serpente de bronze na haste (Nm 21:6-9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 21,
+        "verse_start": 6,
+        "verse_end": 9
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0029",
+      "type": "multiple_choice",
+      "text": "O que a pomba trouxe a Noé, mostrando que as águas haviam baixado?",
+      "options": [
+        {
+          "text": "Uma folha de oliveira",
+          "correct": true
+        },
+        {
+          "text": "Um ramo de figueira",
+          "correct": false
+        },
+        {
+          "text": "Um punhado de terra",
+          "correct": false
+        },
+        {
+          "text": "Uma espiga de trigo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'A pomba voltou a ele à tarde; e eis, arrancada, uma folha de oliveira no seu bico' (Gn 8:11); na terceira vez ela não voltou mais.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 8,
+        "verse_start": 10,
+        "verse_end": 12
+      },
+      "difficulty": "medium"
     }
   ]
 }

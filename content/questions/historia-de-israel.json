@@ -840,6 +840,157 @@
         "verse_end": 2
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-de-israel-0028",
+      "type": "multiple_choice",
+      "text": "Que aliança Josué renovou com o povo em Siquém antes de morrer?",
+      "options": [
+        {
+          "text": "O compromisso de servir somente ao SENHOR",
+          "correct": true
+        },
+        {
+          "text": "A partilha da terra",
+          "correct": false
+        },
+        {
+          "text": "A construção do templo",
+          "correct": false
+        },
+        {
+          "text": "A escolha de um rei",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Eu e a minha casa serviremos ao SENHOR' (Js 24:15); o povo respondeu e Josué fez concerto em Siquém (Js 24:25).",
+      "divergence_note": null,
+      "reference": {
+        "book": "josue",
+        "chapter": 24,
+        "verse_start": 15,
+        "verse_end": 25
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-de-israel-0029",
+      "type": "multiple_choice",
+      "text": "O que caracterizava o período dos juízes, segundo a frase que encerra o livro?",
+      "options": [
+        {
+          "text": "'Cada um fazia o que parecia reto aos seus olhos'",
+          "correct": true
+        },
+        {
+          "text": "'Havia paz em toda a terra'",
+          "correct": false
+        },
+        {
+          "text": "'O rei julgava o povo'",
+          "correct": false
+        },
+        {
+          "text": "'Os sacerdotes governavam'",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Naqueles dias não havia rei em Israel; cada um fazia o que parecia reto aos seus olhos' (Jz 21:25).",
+      "divergence_note": null,
+      "reference": {
+        "book": "juizes",
+        "chapter": 21,
+        "verse_start": 25,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-de-israel-0030",
+      "type": "multiple_choice",
+      "text": "Que aliança Deus fez com Davi por meio do profeta Natã?",
+      "options": [
+        {
+          "text": "Que sua casa e seu reino seriam firmados para sempre",
+          "correct": true
+        },
+        {
+          "text": "Que ele construiria o templo",
+          "correct": false
+        },
+        {
+          "text": "Que viveria cem anos",
+          "correct": false
+        },
+        {
+          "text": "Que Israel nunca pecaria",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'A tua casa e o teu reino serão firmados para sempre diante de ti' (2Sm 7:16) — promessa cumprida em Cristo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 7,
+        "verse_start": 16,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-de-israel-0031",
+      "type": "multiple_choice",
+      "text": "Por que o reino do Norte caiu diante da Assíria, segundo 2 Reis 17?",
+      "options": [
+        {
+          "text": "Porque pecaram contra o SENHOR e serviram a outros deuses",
+          "correct": true
+        },
+        {
+          "text": "Por falta de muralhas",
+          "correct": false
+        },
+        {
+          "text": "Por causa da fome",
+          "correct": false
+        },
+        {
+          "text": "Por traição dos sacerdotes",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Os filhos de Israel pecaram contra o SENHOR seu Deus... e temeram outros deuses' (2Rs 17:7-8) — o exílio é apresentado como juízo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 17,
+        "verse_start": 7,
+        "verse_end": 8
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-de-israel-0032",
+      "type": "open_answer",
+      "text": "Que rainha judia arriscou a vida diante do rei persa para salvar o seu povo?",
+      "options": null,
+      "accepted_answers": [
+        "Ester",
+        "A rainha Ester"
+      ],
+      "explanation": "'Se perecer, pereci' (Et 4:16); Ester intercedeu e o povo foi livrado do decreto de Hamã.",
+      "divergence_note": null,
+      "reference": {
+        "book": "ester",
+        "chapter": 4,
+        "verse_start": 15,
+        "verse_end": 16
+      },
+      "difficulty": "medium"
     }
   ]
 }

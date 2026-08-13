@@ -837,6 +837,156 @@
         "verse_end": null
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "geografia-biblica-0028",
+      "type": "multiple_choice",
+      "text": "Em que região Jesus curou o endemoninhado cujos demônios entraram numa manada de porcos?",
+      "options": [
+        {
+          "text": "Na terra dos gadarenos/gerasenos",
+          "correct": true
+        },
+        {
+          "text": "Na Judeia",
+          "correct": false
+        },
+        {
+          "text": "Em Samaria",
+          "correct": false
+        },
+        {
+          "text": "Na Fenícia",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Ao chegar à outra banda do mar, Jesus libertou o homem, e os porcos se precipitaram no mar (Mc 5:1-13).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 5,
+        "verse_start": 1,
+        "verse_end": 13
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "geografia-biblica-0029",
+      "type": "multiple_choice",
+      "text": "Qual cidade da Ásia Menor abrigava o templo de Diana e recebeu uma carta de Paulo?",
+      "options": [
+        {
+          "text": "Éfeso",
+          "correct": true
+        },
+        {
+          "text": "Colossos",
+          "correct": false
+        },
+        {
+          "text": "Laodiceia",
+          "correct": false
+        },
+        {
+          "text": "Esmirna",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O tumulto dos ourives em Éfeso girou em torno do templo de Diana (At 19:23-28); a igreja de lá recebeu Efésios.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 19,
+        "verse_start": 23,
+        "verse_end": 28
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "geografia-biblica-0030",
+      "type": "multiple_choice",
+      "text": "Onde Jesus foi tentado pelo diabo depois do batismo?",
+      "options": [
+        {
+          "text": "No deserto",
+          "correct": true
+        },
+        {
+          "text": "No monte das Oliveiras",
+          "correct": false
+        },
+        {
+          "text": "No templo apenas",
+          "correct": false
+        },
+        {
+          "text": "Na Galileia",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Foi Jesus levado pelo Espírito ao deserto, para ser tentado pelo diabo' (Mt 4:1); uma das tentações se deu no pináculo do templo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 4,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "geografia-biblica-0031",
+      "type": "multiple_choice",
+      "text": "Que vale, junto a Jerusalém, é citado como cenário de juízo em Joel?",
+      "options": [
+        {
+          "text": "O vale de Josafá",
+          "correct": true
+        },
+        {
+          "text": "O vale de Elá",
+          "correct": false
+        },
+        {
+          "text": "O vale de Sorec",
+          "correct": false
+        },
+        {
+          "text": "O vale dos Reis",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Farei descer todas as nações ao vale de Josafá; e ali com elas entrarei em juízo' (Jl 3:2,12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joel",
+        "chapter": 3,
+        "verse_start": 2,
+        "verse_end": 12
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "geografia-biblica-0032",
+      "type": "open_answer",
+      "text": "Em que aldeia moravam Marta, Maria e Lázaro, perto de Jerusalém?",
+      "options": null,
+      "accepted_answers": [
+        "Betânia"
+      ],
+      "explanation": "'Estava enfermo um certo Lázaro, de Betânia, aldeia de Maria e de Marta, sua irmã' (Jo 11:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 11,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "medium"
     }
   ]
 }

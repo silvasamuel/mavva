@@ -852,6 +852,156 @@
         "verse_end": null
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0028",
+      "type": "multiple_choice",
+      "text": "O que os primeiros cristãos de Jerusalém perseveravam em fazer, segundo Atos 2?",
+      "options": [
+        {
+          "text": "Na doutrina dos apóstolos, na comunhão, no partir do pão e nas orações",
+          "correct": true
+        },
+        {
+          "text": "Somente no jejum",
+          "correct": false
+        },
+        {
+          "text": "Na guarda do templo",
+          "correct": false
+        },
+        {
+          "text": "Em viagens missionárias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'E perseveravam na doutrina dos apóstolos, e na comunhão, e no partir do pão, e nas orações' (At 2:42).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 2,
+        "verse_start": 42,
+        "verse_end": 47
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0029",
+      "type": "multiple_choice",
+      "text": "Qual rei perseguidor mandou matar o apóstolo Tiago à espada?",
+      "options": [
+        {
+          "text": "Herodes Agripa",
+          "correct": true
+        },
+        {
+          "text": "Herodes, o Grande",
+          "correct": false
+        },
+        {
+          "text": "Pôncio Pilatos",
+          "correct": false
+        },
+        {
+          "text": "Nero",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Matou à espada Tiago, irmão de João'; vendo que agradava aos judeus, prendeu também Pedro (At 12:1-3).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 12,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-da-igreja-0030",
+      "type": "multiple_choice",
+      "text": "Que igreja sustentou financeiramente Paulo mais de uma vez, segundo Filipenses?",
+      "options": [
+        {
+          "text": "A igreja de Filipos",
+          "correct": true
+        },
+        {
+          "text": "A de Corinto",
+          "correct": false
+        },
+        {
+          "text": "A de Éfeso",
+          "correct": false
+        },
+        {
+          "text": "A de Roma",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Ainda em Tessalônica me mandastes uma e outra vez o necessário' (Fp 4:15-16), parceria que Paulo chama de fruto que abunda.",
+      "divergence_note": null,
+      "reference": {
+        "book": "filipenses",
+        "chapter": 4,
+        "verse_start": 15,
+        "verse_end": 16
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "historia-da-igreja-0031",
+      "type": "multiple_choice",
+      "text": "Que prática marcou a comunidade primitiva quanto aos bens?",
+      "options": [
+        {
+          "text": "Tinham tudo em comum e repartiam conforme a necessidade",
+          "correct": true
+        },
+        {
+          "text": "Cobravam dízimo dobrado",
+          "correct": false
+        },
+        {
+          "text": "Proibiam a propriedade",
+          "correct": false
+        },
+        {
+          "text": "Guardavam tudo no templo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Vendiam suas propriedades e bens e repartiam com todos, segundo cada um havia mister' (At 2:44-45).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 2,
+        "verse_start": 44,
+        "verse_end": 45
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0032",
+      "type": "open_answer",
+      "text": "Quem foi o companheiro de Paulo enviado a Creta para pôr em ordem as igrejas?",
+      "options": null,
+      "accepted_answers": [
+        "Tito"
+      ],
+      "explanation": "'Por esta causa te deixei em Creta, para que pusesses em boa ordem as coisas que ainda restam' (Tt 1:5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "tito",
+        "chapter": 1,
+        "verse_start": 5,
+        "verse_end": null
+      },
+      "difficulty": "hard"
     }
   ]
 }

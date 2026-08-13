@@ -856,6 +856,158 @@
         "verse_end": null
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0029",
+      "type": "multiple_choice",
+      "text": "Quantos livros formam o Pentateuco?",
+      "options": [
+        {
+          "text": "Cinco",
+          "correct": true
+        },
+        {
+          "text": "Quatro",
+          "correct": false
+        },
+        {
+          "text": "Sete",
+          "correct": false
+        },
+        {
+          "text": "Doze",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Gênesis, Êxodo, Levítico, Números e Deuteronômio — a Torá, a Lei de Moisés (Gn 1:1; Dt 34:12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0030",
+      "type": "multiple_choice",
+      "text": "Quais são os quatro livros chamados 'profetas maiores'?",
+      "options": [
+        {
+          "text": "Isaías, Jeremias, Ezequiel e Daniel",
+          "correct": true
+        },
+        {
+          "text": "Oseias, Joel, Amós e Obadias",
+          "correct": false
+        },
+        {
+          "text": "Ageu, Zacarias, Malaquias e Jonas",
+          "correct": false
+        },
+        {
+          "text": "Josué, Juízes, Samuel e Reis",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "A designação vem da extensão dos livros, não de importância; Lamentações costuma acompanhar Jeremias (Is 1:1; Dn 1:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "isaias",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0031",
+      "type": "multiple_choice",
+      "text": "Em quantos livros o saltério é tradicionalmente dividido?",
+      "options": [
+        {
+          "text": "Cinco",
+          "correct": true
+        },
+        {
+          "text": "Três",
+          "correct": false
+        },
+        {
+          "text": "Dois",
+          "correct": false
+        },
+        {
+          "text": "Sete",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Cada bloco termina com uma doxologia (Sl 41:13; 72:19; 89:52; 106:48; 150:6), numa divisão que ecoa o Pentateuco.",
+      "divergence_note": null,
+      "reference": {
+        "book": "salmos",
+        "chapter": 41,
+        "verse_start": 13,
+        "verse_end": null
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0032",
+      "type": "open_answer",
+      "text": "Como se chama a lista de livros reconhecidos como Escritura pela igreja?",
+      "options": null,
+      "accepted_answers": [
+        "Cânon",
+        "Canon",
+        "O cânon"
+      ],
+      "explanation": "O cânon reúne os livros reconhecidos como inspirados; Paulo já trata os escritos como 'Escritura' (2Tm 3:16; 2Pe 3:15-16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2timoteo",
+        "chapter": 3,
+        "verse_start": 16,
+        "verse_end": 17
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0028",
+      "type": "multiple_choice",
+      "text": "Quantos capítulos tem o livro de Apocalipse?",
+      "options": [
+        {
+          "text": "22",
+          "correct": true
+        },
+        {
+          "text": "16",
+          "correct": false
+        },
+        {
+          "text": "28",
+          "correct": false
+        },
+        {
+          "text": "12",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Apocalipse tem 22 capítulos e encerra o cânon com 'Ora vem, Senhor Jesus' (Ap 22:20-21).",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 22,
+        "verse_start": 20,
+        "verse_end": 21
+      },
+      "difficulty": "hard"
     }
   ]
 }

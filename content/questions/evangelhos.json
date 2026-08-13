@@ -799,6 +799,159 @@
         "verse_end": null
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "evangelhos-0028",
+      "type": "multiple_choice",
+      "text": "O que Jesus fez antes de escolher os doze apóstolos, segundo Lucas?",
+      "options": [
+        {
+          "text": "Passou a noite em oração a Deus",
+          "correct": true
+        },
+        {
+          "text": "Jejuou quarenta dias",
+          "correct": false
+        },
+        {
+          "text": "Consultou os sacerdotes",
+          "correct": false
+        },
+        {
+          "text": "Leu no templo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Retirou-se ao monte a orar e passou a noite em oração a Deus. E, quando já era dia, chamou a si os seus discípulos' (Lc 6:12-13).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 6,
+        "verse_start": 12,
+        "verse_end": 13
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "evangelhos-0029",
+      "type": "multiple_choice",
+      "text": "Que pergunta Jesus fez em Cesareia de Filipe, respondida por Pedro?",
+      "options": [
+        {
+          "text": "'E vós, quem dizeis que eu sou?'",
+          "correct": true
+        },
+        {
+          "text": "'Onde está a vossa fé?'",
+          "correct": false
+        },
+        {
+          "text": "'Quereis vós também retirar-vos?'",
+          "correct": false
+        },
+        {
+          "text": "'Que quereis que vos faça?'",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Pedro respondeu: 'Tu és o Cristo, o Filho do Deus vivo' (Mt 16:15-16), confissão que Jesus atribuiu à revelação do Pai.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 16,
+        "verse_start": 15,
+        "verse_end": 17
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "evangelhos-0030",
+      "type": "multiple_choice",
+      "text": "O que Jesus fez na última ceia antes de dizer 'exemplo vos dei'?",
+      "options": [
+        {
+          "text": "Lavou os pés dos discípulos",
+          "correct": true
+        },
+        {
+          "text": "Partiu o pão",
+          "correct": false
+        },
+        {
+          "text": "Cantou um hino",
+          "correct": false
+        },
+        {
+          "text": "Ungiu suas cabeças",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Se eu, o Senhor e Mestre, vos lavei os pés, vós deveis também lavar os pés uns aos outros' (Jo 13:14-15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 13,
+        "verse_start": 12,
+        "verse_end": 15
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "evangelhos-0031",
+      "type": "multiple_choice",
+      "text": "Como Lucas descreve o encontro dos discípulos com Jesus a caminho de Emaús?",
+      "options": [
+        {
+          "text": "Os olhos deles estavam retidos para que não o conhecessem",
+          "correct": true
+        },
+        {
+          "text": "Eles o reconheceram de imediato",
+          "correct": false
+        },
+        {
+          "text": "Ele apareceu em glória",
+          "correct": false
+        },
+        {
+          "text": "Ele falou por trás de uma nuvem",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jesus lhes expôs as Escrituras e foi reconhecido ao partir o pão; 'não ardia em nós o nosso coração?' (Lc 24:16,30-32).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 24,
+        "verse_start": 15,
+        "verse_end": 16
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "evangelhos-0032",
+      "type": "open_answer",
+      "text": "Que ordem final Jesus deixou aos discípulos antes de subir ao céu, em Mateus 28?",
+      "options": null,
+      "accepted_answers": [
+        "Fazer discípulos de todas as nações",
+        "Ide e fazei discípulos",
+        "A Grande Comissão",
+        "Fazer discipulos de todas as nacoes"
+      ],
+      "explanation": "'Ide, portanto, fazei discípulos de todas as nações... eis que eu estou convosco todos os dias' (Mt 28:19-20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 28,
+        "verse_start": 19,
+        "verse_end": 20
+      },
+      "difficulty": "medium"
     }
   ]
 }

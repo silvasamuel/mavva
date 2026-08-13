@@ -772,6 +772,158 @@
         "verse_end": 10
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "parabolas-0026",
+      "type": "multiple_choice",
+      "text": "Na parábola do juiz iníquo, o que a viúva conseguiu com sua insistência?",
+      "options": [
+        {
+          "text": "Que ele lhe fizesse justiça",
+          "correct": true
+        },
+        {
+          "text": "Uma casa nova",
+          "correct": false
+        },
+        {
+          "text": "O perdão de dívidas",
+          "correct": false
+        },
+        {
+          "text": "Um lugar no tribunal",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jesus contou 'que importa orar sempre e nunca desfalecer' (Lc 18:1-8): se o juiz injusto cede, quanto mais o Pai justo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 18,
+        "verse_start": 1,
+        "verse_end": 8
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "parabolas-0027",
+      "type": "multiple_choice",
+      "text": "Na parábola dos dois devedores, quem amará mais aquele que perdoa?",
+      "options": [
+        {
+          "text": "Aquele a quem mais se perdoou",
+          "correct": true
+        },
+        {
+          "text": "Aquele que devia menos",
+          "correct": false
+        },
+        {
+          "text": "Aquele que pagou primeiro",
+          "correct": false
+        },
+        {
+          "text": "Ambos igualmente",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jesus aplicou a lição à mulher que lhe ungiu os pés: 'aquele a quem pouco se perdoa pouco ama' (Lc 7:41-47).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 7,
+        "verse_start": 41,
+        "verse_end": 47
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "parabolas-0028",
+      "type": "multiple_choice",
+      "text": "Na parábola da pérola de grande valor, o que o negociante faz?",
+      "options": [
+        {
+          "text": "Vende tudo o que tem e a compra",
+          "correct": true
+        },
+        {
+          "text": "Guarda o dinheiro",
+          "correct": false
+        },
+        {
+          "text": "Divide com sócios",
+          "correct": false
+        },
+        {
+          "text": "Espera baixar o preço",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Tendo achado uma pérola de grande valor, foi, vendeu tudo quanto tinha e comprou-a' (Mt 13:45-46) — o Reino vale tudo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 13,
+        "verse_start": 45,
+        "verse_end": 46
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "parabolas-0029",
+      "type": "multiple_choice",
+      "text": "Na parábola das bodas, por que um convidado foi lançado fora?",
+      "options": [
+        {
+          "text": "Por não ter veste nupcial",
+          "correct": true
+        },
+        {
+          "text": "Por chegar atrasado",
+          "correct": false
+        },
+        {
+          "text": "Por não trazer presente",
+          "correct": false
+        },
+        {
+          "text": "Por não conhecer o rei",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Amigo, como entraste aqui, não tendo veste nupcial?' (Mt 22:11-13); muitos são chamados, poucos escolhidos.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 22,
+        "verse_start": 11,
+        "verse_end": 14
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "parabolas-0030",
+      "type": "open_answer",
+      "text": "Na parábola dos vinhateiros maus, quem o dono da vinha enviou por último?",
+      "options": null,
+      "accepted_answers": [
+        "O filho",
+        "Seu filho",
+        "O próprio filho"
+      ],
+      "explanation": "'Enviou-lhes, finalmente, seu filho, dizendo: Terão respeito a meu filho' — mas o mataram (Mt 21:37-39).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 21,
+        "verse_start": 37,
+        "verse_end": 39
+      },
+      "difficulty": "hard"
     }
   ]
 }

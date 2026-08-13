@@ -871,6 +871,158 @@
         "verse_end": 2
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "contexto-historico-0028",
+      "type": "multiple_choice",
+      "text": "Qual imperador romano ordenou o recenseamento que levou José e Maria a Belém?",
+      "options": [
+        {
+          "text": "César Augusto",
+          "correct": true
+        },
+        {
+          "text": "Tibério César",
+          "correct": false
+        },
+        {
+          "text": "Nero",
+          "correct": false
+        },
+        {
+          "text": "Cláudio",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Saiu um decreto da parte de César Augusto para que todo o mundo se alistasse' (Lc 2:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0029",
+      "type": "multiple_choice",
+      "text": "Aos pés de qual mestre da lei Paulo foi instruído em Jerusalém?",
+      "options": [
+        {
+          "text": "Gamaliel",
+          "correct": true
+        },
+        {
+          "text": "Hilel",
+          "correct": false
+        },
+        {
+          "text": "Anás",
+          "correct": false
+        },
+        {
+          "text": "Nicodemos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Instruído aos pés de Gamaliel, conforme a verdade da lei de nossos pais' (At 22:3); o mesmo Gamaliel aconselhou moderação ao Sinédrio (At 5:34-39).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 22,
+        "verse_start": 3,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "contexto-historico-0030",
+      "type": "multiple_choice",
+      "text": "Que grupo judaico defendia a resistência armada contra o domínio de Roma?",
+      "options": [
+        {
+          "text": "Os zelotes",
+          "correct": true
+        },
+        {
+          "text": "Os saduceus",
+          "correct": false
+        },
+        {
+          "text": "Os herodianos",
+          "correct": false
+        },
+        {
+          "text": "Os escribas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Um dos doze é chamado 'Simão, o Zelote' (Lc 6:15), indicando essa corrente entre os seguidores de Jesus.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 6,
+        "verse_start": 15,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "contexto-historico-0031",
+      "type": "multiple_choice",
+      "text": "Para qual cidade litorânea Paulo foi enviado sob escolta, sede do governo romano na Judeia?",
+      "options": [
+        {
+          "text": "Cesareia",
+          "correct": true
+        },
+        {
+          "text": "Jope",
+          "correct": false
+        },
+        {
+          "text": "Tiro",
+          "correct": false
+        },
+        {
+          "text": "Antioquia",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O tribuno enviou Paulo de noite a Cesareia, ao governador Félix, com forte escolta (At 23:23-24,33).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 23,
+        "verse_start": 23,
+        "verse_end": 24
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "contexto-historico-0032",
+      "type": "open_answer",
+      "text": "Segundo os historiadores, qual estrada romana Paulo percorreu ao se aproximar de Roma?",
+      "options": null,
+      "accepted_answers": [
+        "Via Ápia",
+        "Via Apia",
+        "A Via Ápia"
+      ],
+      "explanation": "Os irmãos saíram ao encontro de Paulo até a Praça de Ápio e as Três Vendas (At 28:15), pontos da Via Ápia segundo os historiadores.",
+      "divergence_note": "A identificação da estrada como Via Ápia vem da geografia histórica romana; o texto bíblico nomeia apenas os pontos de parada (Praça de Ápio e Três Vendas).",
+      "reference": {
+        "book": "atos",
+        "chapter": 28,
+        "verse_start": 15,
+        "verse_end": null
+      },
+      "difficulty": "expert"
     }
   ]
 }
