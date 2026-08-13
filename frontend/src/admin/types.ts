@@ -3,16 +3,33 @@ import type { Difficulty, FlagReason, QuestionDraft, QuestionType, Testament } f
 export interface AdminUser {
   id: string
   name: string
+  username: string
   email: string
   role: 'user' | 'admin'
   timezone: string
   daily_goal_xp: number
   created_at: string
+  email_verified_at: string | null
+  is_active: boolean
   total_xp: number
   level: number
   current_streak: number
   questions_answered: number
   accuracy: number | null
+}
+
+export interface AdminUserDetail extends AdminUser {
+  updated_at: string
+  longest_streak: number
+  last_activity_date: string | null
+  correct_answers: number
+  perfect_sessions: number
+  total_time_seconds: number
+  duel_wins: number
+  duel_losses: number
+  duel_draws: number
+  current_duel_streak: number
+  best_duel_streak: number
 }
 
 export interface AdminUserList {

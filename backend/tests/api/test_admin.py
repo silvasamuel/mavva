@@ -4,6 +4,7 @@ from sqlalchemy.orm import Session
 from app.models import User
 from app.models.enums import UserRole
 from tests.factories import make_category, make_mc_question, make_open_question
+from tests.helpers import register_user, verification_tokens
 
 
 def _promote_to_admin(db: Session, email: str) -> None:
@@ -23,6 +24,7 @@ class TestAdminAccessControl:
             ("get", "/api/v1/admin/questions"),
             ("get", "/api/v1/admin/categories"),
             ("get", f"/api/v1/admin/questions/{question.id}"),
+            ("get", "/api/v1/admin/users/00000000-0000-0000-0000-000000000001"),
         ]:
             response = getattr(auth_client, method)(path)
             assert response.status_code == 403, f"{path} deveria ser 403"
@@ -30,6 +32,13 @@ class TestAdminAccessControl:
             f"/api/v1/admin/questions/{question.id}", json={"text": "hack attempt xxxxx"}
         )
         assert patch.status_code == 403
+        me = auth_client.get("/api/v1/users/me").json()
+        assert (
+            auth_client.patch(
+                f"/api/v1/admin/users/{me['id']}", json={"is_active": False}
+            ).status_code
+            == 403
+        )
 
     def test_unauthenticated_is_401(self, client: TestClient, db: Session):
         assert client.get("/api/v1/admin/users").status_code == 401
@@ -43,6 +52,8 @@ class TestAdminAccessControl:
         assert users.status_code == 200
         assert users.json()["total"] >= 1
         assert "accuracy" in users.json()["items"][0]
+        assert "email_verified_at" in users.json()["items"][0]
+        assert users.json()["items"][0]["is_active"] is True
 
         questions = auth_client.get("/api/v1/admin/questions")
         assert questions.status_code == 200
@@ -142,3 +153,56 @@ class TestAdminQuestionEditing:
             f"/api/v1/admin/questions/{question.id}", json={"book": "livro-inexistente"}
         )
         assert response.status_code == 400
+
+
+class TestAdminUsers:
+    def test_get_deactivate_and_reactivate(self, auth_client: TestClient, db: Session):
+        _promote_to_admin(db, "samuel@teste.com")
+        register_user(auth_client, name="Maria", email="maria@teste.com")
+        verified = auth_client.post(
+            "/api/v1/auth/verify-email", json={"token": verification_tokens["maria@teste.com"]}
+        )
+        assert verified.status_code == 200
+        user_id = verified.json()["user"]["id"]
+
+        detail = auth_client.get(f"/api/v1/admin/users/{user_id}")
+        assert detail.status_code == 200, detail.text
+        body = detail.json()
+        assert body["email"] == "maria@teste.com"
+        assert body["username"]
+        assert body["email_verified_at"]
+        assert body["is_active"] is True
+        assert "duel_wins" in body
+
+        patched = auth_client.patch(f"/api/v1/admin/users/{user_id}", json={"is_active": False})
+        assert patched.status_code == 200, patched.text
+        assert patched.json()["is_active"] is False
+
+        login = auth_client.post(
+            "/api/v1/auth/login",
+            json={"email": "maria@teste.com", "password": "senha-forte-123"},
+        )
+        assert login.status_code == 403
+        assert "inativa" in login.json()["detail"].lower()
+
+        me = auth_client.get("/api/v1/users/me").json()
+        deny = auth_client.patch(f"/api/v1/admin/users/{me['id']}", json={"is_active": False})
+        assert deny.status_code == 400
+
+        again = auth_client.patch(f"/api/v1/admin/users/{user_id}", json={"is_active": True})
+        assert again.status_code == 200
+        assert again.json()["is_active"] is True
+        assert (
+            auth_client.post(
+                "/api/v1/auth/login",
+                json={"email": "maria@teste.com", "password": "senha-forte-123"},
+            ).status_code
+            == 200
+        )
+
+    def test_unknown_user_is_404(self, auth_client: TestClient, db: Session):
+        _promote_to_admin(db, "samuel@teste.com")
+        assert (
+            auth_client.get("/api/v1/admin/users/00000000-0000-0000-0000-000000000001").status_code
+            == 404
+        )

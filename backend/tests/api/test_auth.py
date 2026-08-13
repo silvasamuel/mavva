@@ -1,6 +1,7 @@
 from fastapi.testclient import TestClient
 
 from app.core.security import create_access_token
+from app.models import User
 from app.services.auth_service import register_user
 from tests.helpers import register_and_login, verification_tokens
 from tests.helpers import register_user as api_register
@@ -120,6 +121,19 @@ class TestLogin:
         token = create_access_token(user.id)
         response = client.get("/api/v1/users/me", headers={"Authorization": f"Bearer {token}"})
         assert response.status_code == 403
+
+    def test_inactive_login_is_403(self, client: TestClient, db):
+        register_and_login(client, name="Novo Usuário", email="novo@teste.com")
+        user = db.query(User).filter(User.email == "novo@teste.com").one()
+        user.is_active = False
+        db.flush()
+        client.cookies.clear()
+        response = client.post(
+            "/api/v1/auth/login",
+            json={"email": "novo@teste.com", "password": "senha-forte-123"},
+        )
+        assert response.status_code == 403
+        assert "inativa" in response.json()["detail"].lower()
 
 
 class TestRefreshRotation:

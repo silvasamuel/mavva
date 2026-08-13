@@ -45,10 +45,11 @@ def _position_of(db: Session, me: User) -> int:
         .select_from(User)
         .join(UserStats, UserStats.user_id == User.id)
         .where(
+            User.is_active.is_(True),
             or_(
                 UserStats.total_xp > xp,
                 and_(UserStats.total_xp == xp, User.username < me.username),
-            )
+            ),
         )
     )
     return (ahead or 0) + 1
@@ -60,12 +61,13 @@ def global_board(db: Session, me: User) -> GlobalBoard:
         db.scalars(
             select(User)
             .join(UserStats, UserStats.user_id == User.id)
+            .where(User.is_active.is_(True))
             .options(selectinload(User.stats))
             .order_by(UserStats.total_xp.desc(), User.username.asc())
             .limit(GLOBAL_LIMIT)
         ).all()
     )
-    total = db.scalar(select(func.count()).select_from(User)) or 0
+    total = db.scalar(select(func.count()).select_from(User).where(User.is_active.is_(True))) or 0
     top = [
         RankedPlayer(position=index + 1, user=user, total_xp=_xp(user), is_me=user.id == me.id)
         for index, user in enumerate(top_users)
@@ -78,7 +80,8 @@ def global_board(db: Session, me: User) -> GlobalBoard:
 
 def friends_board(db: Session, me: User) -> list[RankedPlayer]:
     me = _with_stats(db, me)
-    circle = [me, *friendship_service.list_friends(db, me)]
+    friends = [friend for friend in friendship_service.list_friends(db, me) if friend.is_active]
+    circle = [me, *friends]
     circle.sort(key=lambda user: (-_xp(user), user.username))
     return [
         RankedPlayer(position=index + 1, user=user, total_xp=_xp(user), is_me=user.id == me.id)

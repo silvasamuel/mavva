@@ -11,6 +11,21 @@ export function formatPercent(ratio: number | null): string {
   return `${Math.round(ratio * 100)}%`
 }
 
+export function formatDateTime(iso: string | null | undefined): string {
+  if (!iso) return '—'
+  return new Date(iso).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' })
+}
+
+export function formatDate(iso: string | null | undefined): string {
+  if (!iso) return '—'
+  const [year, month, day] = iso.slice(0, 10).split('-').map(Number)
+  return new Date(year, month - 1, day).toLocaleDateString('pt-BR', {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric',
+  })
+}
+
 export function formatRelativeDate(iso: string): string {
   const date = new Date(iso)
   const today = new Date()

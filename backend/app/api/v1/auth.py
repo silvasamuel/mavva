@@ -25,6 +25,7 @@ REFRESH_COOKIE = "refresh_token"
 UNVERIFIED_LOGIN = (
     "Confirme seu e-mail antes de entrar. Verifique sua caixa de entrada ou reenvie o link."
 )
+INACTIVE_LOGIN = "Esta conta está inativa."
 
 
 def _set_refresh_cookie(response: Response, raw_token: str) -> None:
@@ -94,6 +95,8 @@ def login(request: Request, body: LoginRequest, response: Response, db: DbDep) -
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, "E-mail ou senha incorretos")
     if user.email_verified_at is None:
         raise HTTPException(status.HTTP_403_FORBIDDEN, UNVERIFIED_LOGIN)
+    if not user.is_active:
+        raise HTTPException(status.HTTP_403_FORBIDDEN, INACTIVE_LOGIN)
     return _issue_session(response, db, user)
 
 
@@ -113,6 +116,11 @@ def refresh(request: Request, response: Response, db: DbDep) -> TokenResponse:
         db.commit()
         response.delete_cookie(REFRESH_COOKIE, path="/api/v1/auth")
         raise HTTPException(status.HTTP_403_FORBIDDEN, UNVERIFIED_LOGIN)
+    if not user.is_active:
+        auth_service.revoke_all_refresh_tokens(db, user.id)
+        db.commit()
+        response.delete_cookie(REFRESH_COOKIE, path="/api/v1/auth")
+        raise HTTPException(status.HTTP_403_FORBIDDEN, INACTIVE_LOGIN)
     db.commit()
     _set_refresh_cookie(response, new_raw)
     return TokenResponse(

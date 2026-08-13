@@ -7,12 +7,14 @@ import { Spinner } from '@/components/ui/Spinner'
 import { formatPercent } from '@/lib/format'
 import { useDebouncedValue } from '@/lib/useDebouncedValue'
 import type { AdminUserList } from './types'
+import { UserDetail } from './UserDetail'
 
 const PAGE = 25
 
-export function UsersPanel() {
+export function UsersPanel({ adminId }: { adminId: string }) {
   const [search, setSearch] = useState('')
   const [offset, setOffset] = useState(0)
+  const [selectedId, setSelectedId] = useState<string | null>(null)
   // The input updates on every keystroke; the request only fires once typing pauses.
   const debouncedSearch = useDebouncedValue(search)
 
@@ -48,19 +50,47 @@ export function UsersPanel() {
             <thead className="border-b border-sand-100 text-xs font-extrabold uppercase tracking-wide text-sand-500">
               <tr>
                 <th className="px-4 py-3">Usuário</th>
+                <th className="px-4 py-3">Status</th>
                 <th className="px-4 py-3">Papel</th>
                 <th className="px-4 py-3">Nível / XP</th>
                 <th className="px-4 py-3">Streak</th>
                 <th className="px-4 py-3">Respondidas</th>
                 <th className="px-4 py-3">Precisão</th>
+                <th className="px-4 py-3"></th>
               </tr>
             </thead>
             <tbody className="divide-y divide-sand-50">
               {data.items.map((u) => (
-                <tr key={u.id} className="hover:bg-sand-25">
+                <tr
+                  key={u.id}
+                  className="cursor-pointer hover:bg-sand-25"
+                  onClick={() => setSelectedId(u.id)}
+                >
                   <td className="px-4 py-3">
                     <p className="font-bold text-ink">{u.name}</p>
-                    <p className="text-xs text-sand-500">{u.email}</p>
+                    <p className="text-xs text-sand-500">
+                      @{u.username} · {u.email}
+                    </p>
+                  </td>
+                  <td className="px-4 py-3">
+                    <div className="flex flex-col gap-1">
+                      <span
+                        className={`w-fit rounded-full px-2 py-0.5 text-xs font-extrabold ${
+                          u.is_active ? 'bg-leaf-100 text-leaf-700' : 'bg-red-50 text-red-700'
+                        }`}
+                      >
+                        {u.is_active ? 'Ativo' : 'Inativo'}
+                      </span>
+                      <span
+                        className={`w-fit rounded-full px-2 py-0.5 text-xs font-extrabold ${
+                          u.email_verified_at
+                            ? 'bg-leaf-100 text-leaf-700'
+                            : 'bg-red-50 text-red-700'
+                        }`}
+                      >
+                        {u.email_verified_at ? 'E-mail ok' : 'Não confirmou'}
+                      </span>
+                    </div>
                   </td>
                   <td className="px-4 py-3">
                     <span
@@ -79,11 +109,22 @@ export function UsersPanel() {
                   <td className="px-4 py-3 font-semibold">🔥 {u.current_streak}</td>
                   <td className="px-4 py-3 font-semibold">{u.questions_answered}</td>
                   <td className="px-4 py-3 font-semibold">{formatPercent(u.accuracy)}</td>
+                  <td className="px-4 py-3 text-right">
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        setSelectedId(u.id)
+                      }}
+                      className="rounded-xl bg-leaf-500 px-3 py-1.5 text-xs font-extrabold uppercase text-white hover:bg-leaf-600"
+                    >
+                      Ver
+                    </button>
+                  </td>
                 </tr>
               ))}
               {data.items.length === 0 && (
                 <tr>
-                  <td colSpan={6} className="px-4 py-10 text-center text-sand-500">
+                  <td colSpan={8} className="px-4 py-10 text-center text-sand-500">
                     Nenhum usuário encontrado.
                   </td>
                 </tr>
@@ -95,6 +136,14 @@ export function UsersPanel() {
 
       {data && data.total > PAGE && (
         <Pagination offset={offset} total={data.total} onChange={setOffset} />
+      )}
+
+      {selectedId && (
+        <UserDetail
+          userId={selectedId}
+          adminId={adminId}
+          onClose={() => setSelectedId(null)}
+        />
       )}
     </div>
   )
