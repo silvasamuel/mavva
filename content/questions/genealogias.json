@@ -802,6 +802,144 @@
         "verse_end": 22
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "genealogias-0027",
+      "type": "multiple_choice",
+      "text": "Qual filho de Noé foi amaldiçoado na pessoa de seu descendente Canaã?",
+      "options": [
+        {
+          "text": "Cão",
+          "correct": true
+        },
+        {
+          "text": "Sem",
+          "correct": false
+        },
+        {
+          "text": "Jafé",
+          "correct": false
+        },
+        {
+          "text": "Enoque",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Cão viu a nudez do pai; Noé amaldiçoou Canaã, filho de Cão, e abençoou Sem e Jafé (Gn 9:22-27).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 9,
+        "verse_start": 22,
+        "verse_end": 27
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "genealogias-0028",
+      "type": "multiple_choice",
+      "text": "Quem foi o pai de Abraão, que saiu de Ur dos caldeus com a família?",
+      "options": [
+        {
+          "text": "Terá",
+          "correct": true
+        },
+        {
+          "text": "Naor",
+          "correct": false
+        },
+        {
+          "text": "Harã",
+          "correct": false
+        },
+        {
+          "text": "Lote",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Tomou Terá a Abrão, seu filho... e saíram de Ur dos caldeus' até Harã, onde Terá morreu (Gn 11:31-32).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 11,
+        "verse_start": 31,
+        "verse_end": 32
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "genealogias-0029",
+      "type": "multiple_choice",
+      "text": "Quantas gerações Mateus conta do exílio babilônico até Cristo?",
+      "options": [
+        {
+          "text": "Catorze",
+          "correct": true
+        },
+        {
+          "text": "Doze",
+          "correct": false
+        },
+        {
+          "text": "Sete",
+          "correct": false
+        },
+        {
+          "text": "Vinte",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'E, desde a deportação para a Babilônia até Cristo, catorze gerações' (Mt 1:17), completando o arranjo em três blocos.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 1,
+        "verse_start": 17,
+        "verse_end": null
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "genealogias-0031",
+      "type": "open_answer",
+      "text": "De qual tribo era o apóstolo Paulo, como ele mesmo declara?",
+      "options": null,
+      "accepted_answers": [
+        "Benjamim",
+        "Tribo de Benjamim",
+        "De Benjamim"
+      ],
+      "explanation": "'Da linhagem de Israel, da tribo de Benjamim, hebreu de hebreus' (Fp 3:5; cf. Rm 11:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "filipenses",
+        "chapter": 3,
+        "verse_start": 5,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "genealogias-0030",
+      "type": "open_answer",
+      "text": "Quem foi o pai de Boaz, segundo a genealogia que encerra o livro de Rute?",
+      "options": null,
+      "accepted_answers": [
+        "Salmom",
+        "Salmon"
+      ],
+      "explanation": "'Salmom gerou a Boaz, e Boaz gerou a Obede' (Rt 4:21), linha que desemboca em Jessé e Davi.",
+      "divergence_note": null,
+      "reference": {
+        "book": "rute",
+        "chapter": 4,
+        "verse_start": 20,
+        "verse_end": 21
+      },
+      "difficulty": "expert"
     }
   ]
 }

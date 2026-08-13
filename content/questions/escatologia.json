@@ -786,6 +786,159 @@
         "verse_end": 23
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "escatologia-0028",
+      "type": "multiple_choice",
+      "text": "Que celebração Apocalipse 19 anuncia entre Cristo e a sua igreja?",
+      "options": [
+        {
+          "text": "As bodas do Cordeiro",
+          "correct": true
+        },
+        {
+          "text": "A coroação dos anjos",
+          "correct": false
+        },
+        {
+          "text": "O banquete das nações",
+          "correct": false
+        },
+        {
+          "text": "A festa dos tabernáculos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Vieram as bodas do Cordeiro, e já a sua esposa se aprontou' (Ap 19:7-9); a igreja é a noiva.",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 19,
+        "verse_start": 7,
+        "verse_end": 9
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "escatologia-0030",
+      "type": "multiple_choice",
+      "text": "Em João 5, para que ressuscitam os que praticaram o mal?",
+      "options": [
+        {
+          "text": "Para a ressurreição da condenação",
+          "correct": true
+        },
+        {
+          "text": "Para a vida eterna",
+          "correct": false
+        },
+        {
+          "text": "Para o juízo dos anjos",
+          "correct": false
+        },
+        {
+          "text": "Para o milênio",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Os que fizeram o bem sairão para a ressurreição da vida; e os que fizeram o mal, para a ressurreição da condenação' (Jo 5:28-29).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 5,
+        "verse_start": 28,
+        "verse_end": 29
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "escatologia-0031",
+      "type": "multiple_choice",
+      "text": "Que sinal Jesus disse que apareceria no céu antes de todas as tribos da terra o verem vindo?",
+      "options": [
+        {
+          "text": "O sinal do Filho do homem",
+          "correct": true
+        },
+        {
+          "text": "Uma estrela nova",
+          "correct": false
+        },
+        {
+          "text": "Uma coluna de fogo",
+          "correct": false
+        },
+        {
+          "text": "Um arco-íris duplo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Então aparecerá no céu o sinal do Filho do homem... vindo sobre as nuvens do céu, com poder e grande glória' (Mt 24:30).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 24,
+        "verse_start": 30,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "escatologia-0032",
+      "type": "open_answer",
+      "text": "Que palavra descreve o estado dos que morrem em Cristo, segundo Paulo, aguardando a ressurreição?",
+      "options": null,
+      "accepted_answers": [
+        "Dormem",
+        "Dormir",
+        "Adormecidos",
+        "Que dormem"
+      ],
+      "explanation": "'Não quero que sejais ignorantes acerca dos que já dormem' (1Ts 4:13) — imagem que aponta ao despertar da ressurreição.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1tessalonicenses",
+        "chapter": 4,
+        "verse_start": 13,
+        "verse_end": 14
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "escatologia-0029",
+      "type": "multiple_choice",
+      "text": "Em Apocalipse 5, quem foi achado digno de abrir o livro selado com sete selos?",
+      "options": [
+        {
+          "text": "O Leão da tribo de Judá, o Cordeiro que foi morto",
+          "correct": true
+        },
+        {
+          "text": "O arcanjo Miguel",
+          "correct": false
+        },
+        {
+          "text": "Um dos vinte e quatro anciãos",
+          "correct": false
+        },
+        {
+          "text": "O profeta Elias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "João chorava porque ninguém era digno; então ouviu do Leão de Judá e viu 'um Cordeiro como havendo sido morto' (Ap 5:4-6).",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 5,
+        "verse_start": 4,
+        "verse_end": 6
+      },
+      "difficulty": "hard"
     }
   ]
 }

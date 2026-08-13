@@ -839,6 +839,158 @@
         "verse_end": null
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "doutrinas-0028",
+      "type": "multiple_choice",
+      "text": "Que doutrina o 'Espírito de adoção, pelo qual clamamos: Aba, Pai' descreve?",
+      "options": [
+        {
+          "text": "A adoção dos crentes como filhos de Deus",
+          "correct": true
+        },
+        {
+          "text": "A criação do homem",
+          "correct": false
+        },
+        {
+          "text": "A ressurreição final",
+          "correct": false
+        },
+        {
+          "text": "A inspiração das Escrituras",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Não recebestes o espírito de escravidão, para outra vez estardes em temor, mas recebestes o espírito de adoção' (Rm 8:15-16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 8,
+        "verse_start": 15,
+        "verse_end": 16
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "doutrinas-0029",
+      "type": "multiple_choice",
+      "text": "Em Romanos 8:30, o que se segue à justificação na chamada 'cadeia de ouro'?",
+      "options": [
+        {
+          "text": "A glorificação",
+          "correct": true
+        },
+        {
+          "text": "A circuncisão",
+          "correct": false
+        },
+        {
+          "text": "A tribulação",
+          "correct": false
+        },
+        {
+          "text": "A ressurreição de Cristo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Aos que justificou, a estes também glorificou' (Rm 8:30) — a obra começada por Deus é levada até o fim.",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 8,
+        "verse_start": 29,
+        "verse_end": 30
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "doutrinas-0030",
+      "type": "multiple_choice",
+      "text": "Segundo o Salmo 139, para onde alguém poderia fugir da presença de Deus?",
+      "options": [
+        {
+          "text": "Para lugar nenhum",
+          "correct": true
+        },
+        {
+          "text": "Para o mar",
+          "correct": false
+        },
+        {
+          "text": "Para o deserto",
+          "correct": false
+        },
+        {
+          "text": "Para o Seol apenas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Se subir ao céu, lá tu estás; se fizer no Seol a minha cama, eis que tu ali estás' (Sl 139:7-10) — a onipresença divina.",
+      "divergence_note": null,
+      "reference": {
+        "book": "salmos",
+        "chapter": 139,
+        "verse_start": 7,
+        "verse_end": 10
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "doutrinas-0031",
+      "type": "multiple_choice",
+      "text": "Segundo Romanos 8:28, para quem todas as coisas contribuem juntamente para o bem?",
+      "options": [
+        {
+          "text": "Para os que amam a Deus, chamados segundo o seu propósito",
+          "correct": true
+        },
+        {
+          "text": "Para todos os homens",
+          "correct": false
+        },
+        {
+          "text": "Para os que guardam a lei",
+          "correct": false
+        },
+        {
+          "text": "Para os sacerdotes",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O versículo não promete ausência de sofrimento, mas que Deus o encaminha para o bem dos seus, conformando-os a Cristo (Rm 8:28-29).",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 8,
+        "verse_start": 28,
+        "verse_end": 29
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "doutrinas-0032",
+      "type": "open_answer",
+      "text": "Que doutrina 1 Coríntios 15 ensina ao contrastar o corpo semeado em corrupção com o ressuscitado em incorrupção?",
+      "options": null,
+      "accepted_answers": [
+        "Ressurreição do corpo",
+        "A ressurreição do corpo",
+        "Ressurreição dos mortos"
+      ],
+      "explanation": "'Semeia-se em corrupção, ressuscitará em incorrupção... semeia-se corpo natural, ressuscitará corpo espiritual' (1Co 15:42-44).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1corintios",
+        "chapter": 15,
+        "verse_start": 42,
+        "verse_end": 44
+      },
+      "difficulty": "hard"
     }
   ]
 }

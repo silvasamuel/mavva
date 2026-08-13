@@ -850,6 +850,157 @@
         "verse_end": 4
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "reis-0028",
+      "type": "multiple_choice",
+      "text": "Que sinal o SENHOR deu a Gideão contra os midianitas — e a qual rei Israel pediu depois?",
+      "options": [
+        {
+          "text": "Israel pediu um rei a Samuel",
+          "correct": true
+        },
+        {
+          "text": "Israel pediu um juiz a Gideão",
+          "correct": false
+        },
+        {
+          "text": "Israel pediu um profeta",
+          "correct": false
+        },
+        {
+          "text": "Israel pediu um sacerdote",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Gideão recusou reinar: 'o SENHOR sobre vós dominará' (Jz 8:23); só depois Israel exigiu um rei de Samuel (1Sm 8:5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "juizes",
+        "chapter": 8,
+        "verse_start": 22,
+        "verse_end": 23
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "reis-0029",
+      "type": "multiple_choice",
+      "text": "Qual rei de Judá reformou o culto, mas foi repreendido por se aliar à Síria?",
+      "options": [
+        {
+          "text": "Asa",
+          "correct": true
+        },
+        {
+          "text": "Josafá",
+          "correct": false
+        },
+        {
+          "text": "Joás",
+          "correct": false
+        },
+        {
+          "text": "Amazias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Asa tirou os ídolos, mas confiou no rei da Síria em vez do SENHOR e foi repreendido pelo vidente Hanani (2Cr 16:7-9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2cronicas",
+        "chapter": 16,
+        "verse_start": 7,
+        "verse_end": 9
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "reis-0030",
+      "type": "multiple_choice",
+      "text": "Que resposta insensata Roboão deu ao povo, causando a divisão do reino?",
+      "options": [
+        {
+          "text": "Prometeu aumentar o jugo que o pai lhes impusera",
+          "correct": true
+        },
+        {
+          "text": "Prometeu abolir os impostos",
+          "correct": false
+        },
+        {
+          "text": "Ofereceu terras aos anciãos",
+          "correct": false
+        },
+        {
+          "text": "Convocou uma assembleia",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Rejeitando os anciãos, seguiu os jovens: 'meu pai vos castigou com açoites, eu, porém, vos castigarei com escorpiões' (1Rs 12:13-14).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 12,
+        "verse_start": 13,
+        "verse_end": 14
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "reis-0031",
+      "type": "multiple_choice",
+      "text": "Qual rei de Judá recebeu de Isaías a promessa de livramento diante de Senaqueribe?",
+      "options": [
+        {
+          "text": "Ezequias",
+          "correct": true
+        },
+        {
+          "text": "Acaz",
+          "correct": false
+        },
+        {
+          "text": "Josias",
+          "correct": false
+        },
+        {
+          "text": "Manassés",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Ezequias estendeu a carta do assírio diante do SENHOR; o anjo feriu o acampamento e Senaqueribe voltou (2Rs 19:14-16,35-36).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 19,
+        "verse_start": 14,
+        "verse_end": 16
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "reis-0032",
+      "type": "open_answer",
+      "text": "Qual filho de Davi tentou usurpar o trono e morreu preso pelos cabelos num carvalho?",
+      "options": null,
+      "accepted_answers": [
+        "Absalão",
+        "Absalao"
+      ],
+      "explanation": "Absalão conspirou contra o pai; fugindo na batalha, sua cabeça prendeu-se no carvalho e Joabe o matou (2Sm 18:9-15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 18,
+        "verse_start": 9,
+        "verse_end": 15
+      },
+      "difficulty": "medium"
     }
   ]
 }

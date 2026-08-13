@@ -771,6 +771,157 @@
         "verse_end": null
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "livros-da-biblia-0026",
+      "type": "multiple_choice",
+      "text": "Qual livro narra a saída do Egito, a Páscoa e a entrega da Lei?",
+      "options": [
+        {
+          "text": "Êxodo",
+          "correct": true
+        },
+        {
+          "text": "Levítico",
+          "correct": false
+        },
+        {
+          "text": "Números",
+          "correct": false
+        },
+        {
+          "text": "Deuteronômio",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Êxodo vai da servidão no Egito à construção do tabernáculo, passando pelas pragas, pelo mar e pelo Sinai (Êx 1:1; 40:34).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "livros-da-biblia-0027",
+      "type": "multiple_choice",
+      "text": "Qual livro é essencialmente um manual de leis sobre sacrifícios, pureza e santidade?",
+      "options": [
+        {
+          "text": "Levítico",
+          "correct": true
+        },
+        {
+          "text": "Números",
+          "correct": false
+        },
+        {
+          "text": "Josué",
+          "correct": false
+        },
+        {
+          "text": "Juízes",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Sereis santos, porque eu, o SENHOR vosso Deus, sou santo' (Lv 19:2) resume o seu tema.",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 19,
+        "verse_start": 2,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "livros-da-biblia-0028",
+      "type": "multiple_choice",
+      "text": "Qual livro registra os discursos finais de Moisés antes de Israel entrar em Canaã?",
+      "options": [
+        {
+          "text": "Deuteronômio",
+          "correct": true
+        },
+        {
+          "text": "Êxodo",
+          "correct": false
+        },
+        {
+          "text": "Josué",
+          "correct": false
+        },
+        {
+          "text": "Números",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Deuteronômio ('segunda lei') recapitula a aliança e traz o shemá (Dt 6:4-5) e a bênção e maldição (Dt 30:19).",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 6,
+        "verse_start": 4,
+        "verse_end": 5
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "livros-da-biblia-0029",
+      "type": "multiple_choice",
+      "text": "Qual livro do Novo Testamento adverte contra falsos mestres e cita o arcanjo Miguel?",
+      "options": [
+        {
+          "text": "Judas",
+          "correct": true
+        },
+        {
+          "text": "2 João",
+          "correct": false
+        },
+        {
+          "text": "Tiago",
+          "correct": false
+        },
+        {
+          "text": "Filemom",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Miguel, o arcanjo, quando contendia com o diabo... disse: O Senhor te repreenda' (Jd 1:9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "judas",
+        "chapter": 1,
+        "verse_start": 9,
+        "verse_end": null
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "livros-da-biblia-0030",
+      "type": "open_answer",
+      "text": "Qual livro profético é o mais extenso do Antigo Testamento em número de capítulos?",
+      "options": null,
+      "accepted_answers": [
+        "Isaías",
+        "Isaias"
+      ],
+      "explanation": "Isaías tem 66 capítulos, dividido entre juízo (1-39) e consolação (40-66), com as célebres profecias do Servo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "isaias",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "hard"
     }
   ]
 }

@@ -838,6 +838,158 @@
         "verse_end": 6
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "costumes-judaicos-0028",
+      "type": "multiple_choice",
+      "text": "O que acontecia às dívidas no ano da remissão, a cada sete anos?",
+      "options": [
+        {
+          "text": "Eram perdoadas entre irmãos israelitas",
+          "correct": true
+        },
+        {
+          "text": "Dobravam de valor",
+          "correct": false
+        },
+        {
+          "text": "Passavam aos filhos",
+          "correct": false
+        },
+        {
+          "text": "Eram cobradas em dobro",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'No fim de cada sete anos farás remissão... todo credor perdoará o que emprestou ao seu próximo' (Dt 15:1-2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 15,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "costumes-judaicos-0029",
+      "type": "multiple_choice",
+      "text": "Para que serviam as cidades de refúgio em Israel?",
+      "options": [
+        {
+          "text": "Abrigar quem matasse alguém sem intenção",
+          "correct": true
+        },
+        {
+          "text": "Guardar o tesouro do templo",
+          "correct": false
+        },
+        {
+          "text": "Sediar os tribunais",
+          "correct": false
+        },
+        {
+          "text": "Alojar os levitas idosos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Serão para vós cidades de refúgio do vingador, para que não morra o homicida sem que primeiro esteja perante a congregação' (Nm 35:11-12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 35,
+        "verse_start": 11,
+        "verse_end": 12
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "costumes-judaicos-0030",
+      "type": "multiple_choice",
+      "text": "Quantos pães da proposição ficavam continuamente diante do SENHOR?",
+      "options": [
+        {
+          "text": "Doze",
+          "correct": true
+        },
+        {
+          "text": "Sete",
+          "correct": false
+        },
+        {
+          "text": "Cinco",
+          "correct": false
+        },
+        {
+          "text": "Dez",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Doze bolos em duas fileiras sobre a mesa de ouro puro, renovados a cada sábado — um por tribo (Lv 24:5-8).",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 24,
+        "verse_start": 5,
+        "verse_end": 8
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "costumes-judaicos-0031",
+      "type": "multiple_choice",
+      "text": "O que a Lei mandava fazer com o primogênito dos filhos de Israel?",
+      "options": [
+        {
+          "text": "Consagrá-lo ao SENHOR e resgatá-lo",
+          "correct": true
+        },
+        {
+          "text": "Sacrificá-lo no altar",
+          "correct": false
+        },
+        {
+          "text": "Entregá-lo ao rei",
+          "correct": false
+        },
+        {
+          "text": "Enviá-lo ao deserto",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Santifica-me todo o primogênito' (Êx 13:2); o primogênito humano era remido por resgate (Êx 13:13-15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 13,
+        "verse_start": 2,
+        "verse_end": 13
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "costumes-judaicos-0032",
+      "type": "open_answer",
+      "text": "Que utensílio o sacerdote usava para levar brasas e incenso ao lugar santo?",
+      "options": null,
+      "accepted_answers": [
+        "Incensário",
+        "O incensário",
+        "Turíbulo"
+      ],
+      "explanation": "Arão correu com o incensário para fazer expiação e deter a praga entre o povo (Nm 16:46-48).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 16,
+        "verse_start": 46,
+        "verse_end": 48
+      },
+      "difficulty": "expert"
     }
   ]
 }

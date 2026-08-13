@@ -784,6 +784,158 @@
         "verse_end": 17
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "teologia-biblica-0025",
+      "type": "multiple_choice",
+      "text": "Que promessa Deus repetiu a Isaque e a Jacó, confirmando a aliança feita com Abraão?",
+      "options": [
+        {
+          "text": "A promessa da terra e da descendência",
+          "correct": true
+        },
+        {
+          "text": "A promessa do sacerdócio",
+          "correct": false
+        },
+        {
+          "text": "A promessa da lei",
+          "correct": false
+        },
+        {
+          "text": "A promessa do templo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "A Isaque (Gn 26:3-4) e a Jacó em Betel (Gn 28:13-14) Deus renovou a mesma promessa: terra, descendência e bênção às nações.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 28,
+        "verse_start": 13,
+        "verse_end": 14
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "teologia-biblica-0026",
+      "type": "multiple_choice",
+      "text": "Que figura do Antigo Testamento Hebreus usa para explicar o santuário celestial?",
+      "options": [
+        {
+          "text": "O tabernáculo como sombra do verdadeiro",
+          "correct": true
+        },
+        {
+          "text": "A arca de Noé",
+          "correct": false
+        },
+        {
+          "text": "O trono de Salomão",
+          "correct": false
+        },
+        {
+          "text": "A torre de Babel",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Os sacerdotes serviam 'ao exemplar e sombra das coisas celestiais'; Cristo entrou no próprio céu (Hb 8:5; 9:24).",
+      "divergence_note": null,
+      "reference": {
+        "book": "hebreus",
+        "chapter": 8,
+        "verse_start": 5,
+        "verse_end": null
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "teologia-biblica-0027",
+      "type": "multiple_choice",
+      "text": "Como Paulo relaciona a lei ao evangelho em Gálatas 3?",
+      "options": [
+        {
+          "text": "A lei foi aio para nos conduzir a Cristo",
+          "correct": true
+        },
+        {
+          "text": "A lei substituiu a promessa",
+          "correct": false
+        },
+        {
+          "text": "A lei anulou a fé",
+          "correct": false
+        },
+        {
+          "text": "A lei salva quem a cumpre",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'A lei nos serviu de aio, para nos conduzir a Cristo, para que pela fé fôssemos justificados' (Gl 3:24).",
+      "divergence_note": null,
+      "reference": {
+        "book": "galatas",
+        "chapter": 3,
+        "verse_start": 23,
+        "verse_end": 25
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "teologia-biblica-0028",
+      "type": "multiple_choice",
+      "text": "Que tema une o maná no deserto e a declaração 'eu sou o pão da vida'?",
+      "options": [
+        {
+          "text": "Deus sustenta o seu povo, e Cristo é o sustento definitivo",
+          "correct": true
+        },
+        {
+          "text": "A obrigação do jejum",
+          "correct": false
+        },
+        {
+          "text": "A lei do sábado",
+          "correct": false
+        },
+        {
+          "text": "O dízimo dos alimentos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Vossos pais comeram o maná no deserto e morreram... eu sou o pão vivo que desceu do céu' (Jo 6:49-51).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 6,
+        "verse_start": 48,
+        "verse_end": 51
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "teologia-biblica-0029",
+      "type": "open_answer",
+      "text": "Que palavra descreve o resgate pago para libertar alguém, aplicada à obra de Cristo?",
+      "options": null,
+      "accepted_answers": [
+        "Redenção",
+        "Redencao",
+        "Resgate"
+      ],
+      "explanation": "'O Filho do homem não veio para ser servido, mas para servir e dar a sua vida em resgate de muitos' (Mc 10:45; cf. Ef 1:7).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 10,
+        "verse_start": 45,
+        "verse_end": null
+      },
+      "difficulty": "hard"
     }
   ]
 }

@@ -842,6 +842,159 @@
         "verse_end": 19
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "festas-judaicas-0028",
+      "type": "multiple_choice",
+      "text": "Que cerimônia abria o ano do jubileu, no Dia da Expiação?",
+      "options": [
+        {
+          "text": "O toque da trombeta por toda a terra",
+          "correct": true
+        },
+        {
+          "text": "A queima do incenso",
+          "correct": false
+        },
+        {
+          "text": "O sacrifício de dez novilhos",
+          "correct": false
+        },
+        {
+          "text": "A leitura completa da Lei",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Então, no mês sétimo, aos dez do mês, farás passar a trombeta do jubileu... e apregoareis liberdade na terra' (Lv 25:9-10).",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 25,
+        "verse_start": 9,
+        "verse_end": 10
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "festas-judaicas-0029",
+      "type": "multiple_choice",
+      "text": "O que os israelitas deviam contar entre a Páscoa e a Festa das Semanas?",
+      "options": [
+        {
+          "text": "Sete semanas, cinquenta dias",
+          "correct": true
+        },
+        {
+          "text": "Trinta dias",
+          "correct": false
+        },
+        {
+          "text": "Cem dias",
+          "correct": false
+        },
+        {
+          "text": "Um ano",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Contareis sete semanas inteiras... até ao dia seguinte ao sétimo sábado, cinquenta dias' (Lv 23:15-16) — daí o nome Pentecostes.",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 23,
+        "verse_start": 15,
+        "verse_end": 16
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "festas-judaicas-0030",
+      "type": "multiple_choice",
+      "text": "Que ramos os israelitas usavam para fazer as cabanas dos Tabernáculos?",
+      "options": [
+        {
+          "text": "Ramos de palmeiras e de árvores frondosas",
+          "correct": true
+        },
+        {
+          "text": "Ramos de oliveira apenas",
+          "correct": false
+        },
+        {
+          "text": "Juncos do rio",
+          "correct": false
+        },
+        {
+          "text": "Espinheiros do deserto",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Tomareis... ramos de palmeiras, ramos de árvores espessas e salgueiros de ribeiras' (Lv 23:40).",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 23,
+        "verse_start": 40,
+        "verse_end": 42
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "festas-judaicas-0031",
+      "type": "multiple_choice",
+      "text": "Quem instituiu a Festa de Purim e por qual motivo?",
+      "options": [
+        {
+          "text": "Mardoqueu, pelo livramento do plano de Hamã",
+          "correct": true
+        },
+        {
+          "text": "Moisés, pela saída do Egito",
+          "correct": false
+        },
+        {
+          "text": "Salomão, pela dedicação do templo",
+          "correct": false
+        },
+        {
+          "text": "Esdras, pelo retorno do exílio",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Mardoqueu escreveu às províncias para celebrarem os dias em que 'se lhes mudou a tristeza em alegria' (Et 9:20-22).",
+      "divergence_note": null,
+      "reference": {
+        "book": "ester",
+        "chapter": 9,
+        "verse_start": 20,
+        "verse_end": 22
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "festas-judaicas-0032",
+      "type": "open_answer",
+      "text": "Que refeição comemorativa Jesus reinterpretou ao dizer 'isto é o meu corpo'?",
+      "options": null,
+      "accepted_answers": [
+        "A ceia pascal",
+        "Páscoa",
+        "A Páscoa",
+        "Ceia pascal"
+      ],
+      "explanation": "Durante a ceia da Páscoa, Jesus tomou o pão e o cálice, instituindo a nova aliança em seu sangue (Lc 22:14-20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 22,
+        "verse_start": 14,
+        "verse_end": 20
+      },
+      "difficulty": "medium"
     }
   ]
 }

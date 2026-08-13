@@ -790,6 +790,159 @@
         "verse_end": null
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0027",
+      "type": "multiple_choice",
+      "text": "O que Jesus fez ao ver a viúva de Naim levando o filho único para sepultar?",
+      "options": [
+        {
+          "text": "Tocou o esquife e disse ao jovem que se levantasse",
+          "correct": true
+        },
+        {
+          "text": "Chorou com a multidão",
+          "correct": false
+        },
+        {
+          "text": "Pediu que orassem",
+          "correct": false
+        },
+        {
+          "text": "Mandou chamar os sacerdotes",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Moço, a ti te digo: Levanta-te. E o defunto assentou-se e começou a falar' (Lc 7:13-15) — o Senhor 'moveu-se de íntima compaixão'.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 7,
+        "verse_start": 12,
+        "verse_end": 15
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "milagres-0028",
+      "type": "multiple_choice",
+      "text": "Que sinal precedeu a libertação de Paulo e Silas na prisão de Filipos?",
+      "options": [
+        {
+          "text": "Um grande terremoto abriu as portas",
+          "correct": true
+        },
+        {
+          "text": "Um anjo apareceu",
+          "correct": false
+        },
+        {
+          "text": "Os guardas adormeceram",
+          "correct": false
+        },
+        {
+          "text": "Um clarão cegou a todos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Enquanto oravam e cantavam louvores à meia-noite, o terremoto abriu as portas e soltou as prisões de todos (At 16:25-26).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 16,
+        "verse_start": 25,
+        "verse_end": 26
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0029",
+      "type": "multiple_choice",
+      "text": "Que milagre Jesus operou com a sogra de Pedro?",
+      "options": [
+        {
+          "text": "Curou-a de uma grande febre",
+          "correct": true
+        },
+        {
+          "text": "Ressuscitou-a",
+          "correct": false
+        },
+        {
+          "text": "Curou-a de cegueira",
+          "correct": false
+        },
+        {
+          "text": "Libertou-a de um espírito imundo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Repreendeu a febre, e esta a deixou; e, levantando-se logo, servia-os' (Lc 4:38-39).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 4,
+        "verse_start": 38,
+        "verse_end": 39
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0030",
+      "type": "multiple_choice",
+      "text": "Como o cego de nascença recuperou a vista, segundo João 9?",
+      "options": [
+        {
+          "text": "Lavando-se no tanque de Siloé após Jesus lhe pôr lodo nos olhos",
+          "correct": true
+        },
+        {
+          "text": "Ao tocar a orla da veste",
+          "correct": false
+        },
+        {
+          "text": "Ao ouvir a voz de Jesus",
+          "correct": false
+        },
+        {
+          "text": "Ao beber da fonte de Betesda",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Vai, lava-te no tanque de Siloé. Foi, pois, e lavou-se, e voltou vendo' (Jo 9:6-7).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 9,
+        "verse_start": 6,
+        "verse_end": 7
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0031",
+      "type": "open_answer",
+      "text": "Que parte da veste de Jesus a mulher com fluxo de sangue tocou para ser curada?",
+      "options": null,
+      "accepted_answers": [
+        "A orla",
+        "A orla da veste",
+        "A borda",
+        "A franja"
+      ],
+      "explanation": "'Se eu tão-somente tocar na sua veste, ficarei sã'; Jesus disse: 'A tua fé te salvou' (Mt 9:20-22).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 9,
+        "verse_start": 20,
+        "verse_end": 22
+      },
+      "difficulty": "medium"
     }
   ]
 }

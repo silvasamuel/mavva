@@ -790,6 +790,157 @@
         "verse_end": 3
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "personagens-0028",
+      "type": "multiple_choice",
+      "text": "Quem foi o homem que Deus declarou 'sincero e reto, temente a Deus e desviando-se do mal'?",
+      "options": [
+        {
+          "text": "Jó",
+          "correct": true
+        },
+        {
+          "text": "Noé",
+          "correct": false
+        },
+        {
+          "text": "Abraão",
+          "correct": false
+        },
+        {
+          "text": "Daniel",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Assim Jó é apresentado (Jó 1:1,8), antes das provações que o levaram a dizer: 'ainda que ele me mate, nele esperarei' (Jó 13:15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "jo",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 8
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "personagens-0029",
+      "type": "multiple_choice",
+      "text": "Qual mulher de Israel matou Sísera cravando-lhe uma estaca na têmpora?",
+      "options": [
+        {
+          "text": "Jael",
+          "correct": true
+        },
+        {
+          "text": "Débora",
+          "correct": false
+        },
+        {
+          "text": "Míriam",
+          "correct": false
+        },
+        {
+          "text": "Ester",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jael, mulher de Héber, acolheu Sísera em sua tenda e o matou, cumprindo a palavra de Débora (Jz 4:21-22).",
+      "divergence_note": null,
+      "reference": {
+        "book": "juizes",
+        "chapter": 4,
+        "verse_start": 21,
+        "verse_end": 22
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "personagens-0030",
+      "type": "multiple_choice",
+      "text": "Quem foi o servo fiel de Elias que se tornou seu sucessor?",
+      "options": [
+        {
+          "text": "Eliseu",
+          "correct": true
+        },
+        {
+          "text": "Geazi",
+          "correct": false
+        },
+        {
+          "text": "Baruque",
+          "correct": false
+        },
+        {
+          "text": "Miqueias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Elias lançou seu manto sobre Eliseu, que 'deitava água sobre as mãos de Elias' e recebeu porção dobrada do seu espírito (1Rs 19:19; 2Rs 3:11).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 19,
+        "verse_start": 19,
+        "verse_end": 21
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "personagens-0031",
+      "type": "multiple_choice",
+      "text": "Qual carcereiro perguntou 'que é necessário que eu faça para me salvar?'",
+      "options": [
+        {
+          "text": "O carcereiro de Filipos",
+          "correct": true
+        },
+        {
+          "text": "O centurião Cornélio",
+          "correct": false
+        },
+        {
+          "text": "O eunuco etíope",
+          "correct": false
+        },
+        {
+          "text": "Sérgio Paulo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Após o terremoto que abriu a prisão, ouviu de Paulo e Silas: 'Crê no Senhor Jesus Cristo e serás salvo, tu e a tua casa' (At 16:30-31).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 16,
+        "verse_start": 30,
+        "verse_end": 31
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "personagens-0032",
+      "type": "open_answer",
+      "text": "Qual mulher de Corinto, junto ao marido Áquila, instruiu Apolo no caminho de Deus?",
+      "options": null,
+      "accepted_answers": [
+        "Priscila",
+        "Prisca"
+      ],
+      "explanation": "'Priscila e Áquila... lhe declararam mais precisamente o caminho de Deus' (At 18:26), aperfeiçoando o ensino de Apolo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 18,
+        "verse_start": 24,
+        "verse_end": 26
+      },
+      "difficulty": "hard"
     }
   ]
 }

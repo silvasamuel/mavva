@@ -820,6 +820,158 @@
         "verse_end": 16
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "cartas-0028",
+      "type": "multiple_choice",
+      "text": "Em qual carta Paulo repreende: 'Ó insensatos gálatas, quem vos fascinou?'",
+      "options": [
+        {
+          "text": "Gálatas",
+          "correct": true
+        },
+        {
+          "text": "Romanos",
+          "correct": false
+        },
+        {
+          "text": "Colossenses",
+          "correct": false
+        },
+        {
+          "text": "1 Coríntios",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Paulo confronta os que voltavam à lei depois de começar no Espírito (Gl 3:1-3), defendendo a justificação pela fé.",
+      "divergence_note": null,
+      "reference": {
+        "book": "galatas",
+        "chapter": 3,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cartas-0029",
+      "type": "multiple_choice",
+      "text": "Qual carta apresenta Cristo como 'a imagem do Deus invisível, o primogênito de toda a criação'?",
+      "options": [
+        {
+          "text": "Colossenses",
+          "correct": true
+        },
+        {
+          "text": "Efésios",
+          "correct": false
+        },
+        {
+          "text": "Hebreus",
+          "correct": false
+        },
+        {
+          "text": "Tiago",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Colossenses 1:15-17 exalta a supremacia de Cristo: nele foram criadas todas as coisas e nele tudo subsiste.",
+      "divergence_note": null,
+      "reference": {
+        "book": "colossenses",
+        "chapter": 1,
+        "verse_start": 15,
+        "verse_end": 17
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cartas-0030",
+      "type": "multiple_choice",
+      "text": "Em qual carta está o trio de ordens: 'Regozijai-vos sempre. Orai sem cessar. Em tudo dai graças'?",
+      "options": [
+        {
+          "text": "1 Tessalonicenses",
+          "correct": true
+        },
+        {
+          "text": "Filipenses",
+          "correct": false
+        },
+        {
+          "text": "1 Pedro",
+          "correct": false
+        },
+        {
+          "text": "Efésios",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Porque esta é a vontade de Deus em Cristo Jesus para convosco' (1Ts 5:16-18).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1tessalonicenses",
+        "chapter": 5,
+        "verse_start": 16,
+        "verse_end": 18
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cartas-0031",
+      "type": "multiple_choice",
+      "text": "Em qual carta Paulo relata ter ouvido: 'A minha graça te basta, porque o meu poder se aperfeiçoa na fraqueza'?",
+      "options": [
+        {
+          "text": "2 Coríntios",
+          "correct": true
+        },
+        {
+          "text": "Gálatas",
+          "correct": false
+        },
+        {
+          "text": "Filipenses",
+          "correct": false
+        },
+        {
+          "text": "2 Timóteo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Paulo pediu três vezes que o espinho na carne se afastasse; a resposta foi a suficiência da graça (2Co 12:8-9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2corintios",
+        "chapter": 12,
+        "verse_start": 8,
+        "verse_end": 9
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cartas-0032",
+      "type": "open_answer",
+      "text": "Qual carta breve exorta a 'batalhar pela fé que uma vez foi dada aos santos'?",
+      "options": null,
+      "accepted_answers": [
+        "Judas",
+        "Carta de Judas",
+        "Epístola de Judas"
+      ],
+      "explanation": "Judas escreve com urgência contra falsos mestres infiltrados na igreja (Jd 1:3-4).",
+      "divergence_note": null,
+      "reference": {
+        "book": "judas",
+        "chapter": 1,
+        "verse_start": 3,
+        "verse_end": 4
+      },
+      "difficulty": "expert"
     }
   ]
 }

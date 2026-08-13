@@ -820,6 +820,156 @@
         "verse_end": null
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "profetas-0028",
+      "type": "multiple_choice",
+      "text": "Que ordem incomum Deus deu a Ezequiel envolvendo um rolo escrito?",
+      "options": [
+        {
+          "text": "Comer o rolo, que ficou doce como mel",
+          "correct": true
+        },
+        {
+          "text": "Queimar o rolo",
+          "correct": false
+        },
+        {
+          "text": "Enterrá-lo no campo",
+          "correct": false
+        },
+        {
+          "text": "Lançá-lo no rio",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Come este rolo e vai, fala à casa de Israel'; ele o comeu, e foi na sua boca doce como mel (Ez 3:1-3).",
+      "divergence_note": null,
+      "reference": {
+        "book": "ezequiel",
+        "chapter": 3,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "profetas-0029",
+      "type": "multiple_choice",
+      "text": "Que resposta Elias ouviu no monte Horebe depois do vento, do terremoto e do fogo?",
+      "options": [
+        {
+          "text": "Uma voz mansa e delicada",
+          "correct": true
+        },
+        {
+          "text": "Um trovão",
+          "correct": false
+        },
+        {
+          "text": "O silêncio absoluto",
+          "correct": false
+        },
+        {
+          "text": "Um cântico de anjos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'O SENHOR não estava no vento... nem no terremoto... nem no fogo; e depois do fogo uma voz mansa e delicada' (1Rs 19:11-12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 19,
+        "verse_start": 11,
+        "verse_end": 12
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "profetas-0030",
+      "type": "multiple_choice",
+      "text": "O que o profeta Natã pediu a Davi que fizesse depois da parábola da cordeirinha?",
+      "options": [
+        {
+          "text": "Reconhecer que ele era o homem culpado",
+          "correct": true
+        },
+        {
+          "text": "Construir o templo",
+          "correct": false
+        },
+        {
+          "text": "Convocar o exército",
+          "correct": false
+        },
+        {
+          "text": "Deixar o trono",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Tu és este homem' (2Sm 12:7); Davi confessou: 'Pequei contra o SENHOR' (2Sm 12:13).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 12,
+        "verse_start": 7,
+        "verse_end": 13
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "profetas-0031",
+      "type": "multiple_choice",
+      "text": "Que sinal Jeremias usou ao esconder um cinto junto ao Eufrates?",
+      "options": [
+        {
+          "text": "O cinto apodrecido, figura do orgulho de Judá",
+          "correct": true
+        },
+        {
+          "text": "Um cinto novo, figura da aliança",
+          "correct": false
+        },
+        {
+          "text": "Um cinto de ouro, figura da riqueza",
+          "correct": false
+        },
+        {
+          "text": "Um cinto rasgado, figura da guerra",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O cinto estragado mostrava como o SENHOR faria apodrecer a soberba de Judá, que se apegara a ele como um cinto (Jr 13:1-11).",
+      "divergence_note": null,
+      "reference": {
+        "book": "jeremias",
+        "chapter": 13,
+        "verse_start": 1,
+        "verse_end": 11
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "profetas-0032",
+      "type": "open_answer",
+      "text": "Qual profeta declarou: 'Ainda que a figueira não floresça... eu me alegrarei no SENHOR'?",
+      "options": null,
+      "accepted_answers": [
+        "Habacuque"
+      ],
+      "explanation": "Depois de questionar os caminhos de Deus, Habacuque termina em adoração e confiança (Hc 3:17-18).",
+      "divergence_note": null,
+      "reference": {
+        "book": "habacuque",
+        "chapter": 3,
+        "verse_start": 17,
+        "verse_end": 18
+      },
+      "difficulty": "hard"
     }
   ]
 }

@@ -789,6 +789,158 @@
         "verse_end": null
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "idiomas-biblicos-0028",
+      "type": "multiple_choice",
+      "text": "O que significa o nome 'Israel', dado a Jacó após a luta em Peniel?",
+      "options": [
+        {
+          "text": "Aquele que luta com Deus e prevalece",
+          "correct": true
+        },
+        {
+          "text": "Servo do Altíssimo",
+          "correct": false
+        },
+        {
+          "text": "Filho da promessa",
+          "correct": false
+        },
+        {
+          "text": "Amigo de Deus",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Não te chamarás mais Jacó, mas Israel, pois como príncipe lutaste com Deus e com os homens e prevaleceste' (Gn 32:28).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 32,
+        "verse_start": 28,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "idiomas-biblicos-0029",
+      "type": "multiple_choice",
+      "text": "O que significa a palavra hebraica 'hesed', tão frequente nos Salmos?",
+      "options": [
+        {
+          "text": "Misericórdia/benignidade fiel da aliança",
+          "correct": true
+        },
+        {
+          "text": "Sacrifício voluntário",
+          "correct": false
+        },
+        {
+          "text": "Temor reverente",
+          "correct": false
+        },
+        {
+          "text": "Glória visível",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "É a bondade leal de Deus que não falha: 'a sua benignidade dura para sempre' (Sl 136:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "salmos",
+        "chapter": 136,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "idiomas-biblicos-0030",
+      "type": "multiple_choice",
+      "text": "O que significa o título 'Cefas', dado por Jesus a Simão?",
+      "options": [
+        {
+          "text": "Pedra",
+          "correct": true
+        },
+        {
+          "text": "Rocha eterna",
+          "correct": false
+        },
+        {
+          "text": "Pescador",
+          "correct": false
+        },
+        {
+          "text": "Chave",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Tu és Simão... tu serás chamado Cefas (que quer dizer Pedro)' (Jo 1:42) — Cefas é aramaico para pedra.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 1,
+        "verse_start": 42,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "idiomas-biblicos-0031",
+      "type": "multiple_choice",
+      "text": "O que significa 'Betel', nome dado por Jacó ao lugar do sonho da escada?",
+      "options": [
+        {
+          "text": "Casa de Deus",
+          "correct": true
+        },
+        {
+          "text": "Poço da aliança",
+          "correct": false
+        },
+        {
+          "text": "Monte da visão",
+          "correct": false
+        },
+        {
+          "text": "Porta do céu apenas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Chamou aquele lugar Betel'; ele exclamou: 'esta é a casa de Deus e a porta dos céus' (Gn 28:17-19).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 28,
+        "verse_start": 17,
+        "verse_end": 19
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "idiomas-biblicos-0032",
+      "type": "open_answer",
+      "text": "Que palavra grega, traduzida por 'graça', é central na teologia paulina?",
+      "options": null,
+      "accepted_answers": [
+        "Charis",
+        "Káris",
+        "Karis"
+      ],
+      "explanation": "'Pela graça sois salvos' (Ef 2:8) — charis é o favor imerecido de Deus, contraposto às obras.",
+      "divergence_note": null,
+      "reference": {
+        "book": "efesios",
+        "chapter": 2,
+        "verse_start": 8,
+        "verse_end": 9
+      },
+      "difficulty": "expert"
     }
   ]
 }

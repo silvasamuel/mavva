@@ -771,6 +771,158 @@
         "verse_end": null
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "cultura-biblica-0026",
+      "type": "multiple_choice",
+      "text": "Por que Deus mandou Moisés tirar as sandálias diante da sarça?",
+      "options": [
+        {
+          "text": "Porque o lugar era terra santa",
+          "correct": true
+        },
+        {
+          "text": "Porque estavam gastas",
+          "correct": false
+        },
+        {
+          "text": "Por respeito ao deserto",
+          "correct": false
+        },
+        {
+          "text": "Para caminhar mais rápido",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Tira os teus sapatos dos teus pés, porque o lugar em que tu estás é terra santa' (Êx 3:5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 3,
+        "verse_start": 5,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0027",
+      "type": "multiple_choice",
+      "text": "Que imagem do trabalho agrícola Jesus usou ao dizer 'o meu jugo é suave'?",
+      "options": [
+        {
+          "text": "O jugo que unia dois animais ao arado",
+          "correct": true
+        },
+        {
+          "text": "A foice do ceifeiro",
+          "correct": false
+        },
+        {
+          "text": "O carro de bois",
+          "correct": false
+        },
+        {
+          "text": "A prensa de azeite",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Tomai sobre vós o meu jugo... porque o meu jugo é suave e o meu fardo é leve' (Mt 11:29-30) — aprender com Cristo em vez de carregar sozinho.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 11,
+        "verse_start": 29,
+        "verse_end": 30
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0028",
+      "type": "multiple_choice",
+      "text": "Como eram os sepulcros das famílias mais abastadas no tempo de Jesus?",
+      "options": [
+        {
+          "text": "Escavados na rocha e fechados com uma pedra",
+          "correct": true
+        },
+        {
+          "text": "Covas rasas na areia",
+          "correct": false
+        },
+        {
+          "text": "Urnas de barro",
+          "correct": false
+        },
+        {
+          "text": "Pilhas de pedras soltas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "José de Arimateia pôs o corpo 'no seu sepulcro novo, que havia aberto em rocha, e rolou uma grande pedra para a porta' (Mt 27:60).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 27,
+        "verse_start": 59,
+        "verse_end": 60
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0029",
+      "type": "multiple_choice",
+      "text": "Que elementos compunham a vinha bem cuidada da canção de Isaías?",
+      "options": [
+        {
+          "text": "Cerca, lagar e torre de vigia",
+          "correct": true
+        },
+        {
+          "text": "Poço, moinho e forno",
+          "correct": false
+        },
+        {
+          "text": "Muro, celeiro e estábulo",
+          "correct": false
+        },
+        {
+          "text": "Fonte, altar e tenda",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O amado cercou a vinha, edificou uma torre e cavou um lagar, esperando uvas boas (Is 5:1-2) — figura retomada por Jesus (Mt 21:33).",
+      "divergence_note": null,
+      "reference": {
+        "book": "isaias",
+        "chapter": 5,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cultura-biblica-0030",
+      "type": "open_answer",
+      "text": "Que instrumento os pescadores da Galileia lançavam ao mar, citado no chamado dos primeiros discípulos?",
+      "options": null,
+      "accepted_answers": [
+        "Rede",
+        "As redes",
+        "Redes"
+      ],
+      "explanation": "'Lançavam a rede ao mar, porque eram pescadores'; Jesus os chamou para serem pescadores de homens (Mt 4:18-19).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 4,
+        "verse_start": 18,
+        "verse_end": 19
+      },
+      "difficulty": "medium"
     }
   ]
 }
