@@ -9,7 +9,9 @@ flowchart TD
     A -->|link| C[/forgot-password/]
     C -->|e-mail enviado| C2[/reset-password?token=…/]
     C2 --> A
-    B -->|conta criada| D
+    B -->|conta criada| B2[/verificar e-mail/]
+    B2 -->|link| VE[/verify-email?token=…/]
+    VE --> D
     D -->|Estudar agora| Q1[/quiz/new — filtros/]
     D -->|Revisar N pendentes| Q2[POST mode=review]
     Q1 -->|POST /quizzes| QP[/quiz/:id — jogar/]
@@ -23,7 +25,8 @@ flowchart TD
 ```
 
 Regras de rota:
-- `<RequireAuth>` envolve tudo exceto as 4 rotas públicas; sem sessão → redirect `/login`
+- `<RequireAuth>` envolve tudo exceto as rotas públicas (`/login`, `/register`,
+  `/forgot-password`, `/reset-password`, `/verify-email`); sem sessão → redirect `/login`
   (guardando `from` para voltar após login).
 - Sessão de quiz abandonada: ao reabrir `/quiz/:id`, continua de onde parou
   (estado vem do servidor, não de localStorage).

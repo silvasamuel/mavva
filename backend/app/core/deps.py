@@ -24,6 +24,8 @@ def get_current_user(
     user = db.get(User, user_id)
     if user is None:
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, "Usuário não encontrado")
+    if user.email_verified_at is None:
+        raise HTTPException(status.HTTP_403_FORBIDDEN, "Confirme seu e-mail antes de continuar.")
     return user
 
 

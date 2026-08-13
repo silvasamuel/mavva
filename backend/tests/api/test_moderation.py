@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 from app.models import Question, User
 from app.models.enums import UserRole
 from tests.factories import make_category, make_mc_question
+from tests.helpers import register_and_login
 
 
 def _promote_to_admin(db: Session, email: str = "samuel@teste.com") -> None:
@@ -60,14 +61,7 @@ class TestQuestionFlags:
         category = make_category(db)
         question = make_mc_question(db, category)
         quiz = auth_client.post("/api/v1/quizzes", json={"question_count": 1}).json()
-        other = client.post(
-            "/api/v1/auth/register",
-            json={
-                "name": "Outro",
-                "email": "outro@teste.com",
-                "password": "senha-forte-123",
-            },
-        ).json()
+        other = register_and_login(client, name="Outro", email="outro@teste.com")
         response = client.post(
             "/api/v1/flags",
             headers={"Authorization": f"Bearer {other['access_token']}"},

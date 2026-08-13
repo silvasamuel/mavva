@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 
 from app.core.config import get_settings
 from app.core.security import generate_opaque_token, hash_password, hash_token, verify_password
-from app.models import PasswordResetToken, RefreshToken, User, UserStats
+from app.models import EmailVerificationToken, PasswordResetToken, RefreshToken, User, UserStats
 
 
 class AuthError(Exception):
@@ -127,5 +127,59 @@ def reset_password(db: Session, raw_token: str, new_password: str) -> User:
         raise AuthError("Usuário não encontrado")
     user.hashed_password = hash_password(new_password)
     token.used_at = datetime.now(UTC)
+    if user.email_verified_at is None:
+        user.email_verified_at = datetime.now(UTC)
     _revoke_all_refresh_tokens(db, user.id)  # force re-login everywhere
+    return user
+
+
+def _invalidate_unused_verification_tokens(db: Session, user_id: uuid.UUID) -> None:
+    db.execute(
+        update(EmailVerificationToken)
+        .where(
+            EmailVerificationToken.user_id == user_id,
+            EmailVerificationToken.used_at.is_(None),
+        )
+        .values(used_at=datetime.now(UTC))
+    )
+
+
+def create_email_verification_token(db: Session, user: User) -> str:
+    _invalidate_unused_verification_tokens(db, user.id)
+    raw = generate_opaque_token()
+    settings = get_settings()
+    db.add(
+        EmailVerificationToken(
+            user_id=user.id,
+            token_hash=hash_token(raw),
+            expires_at=datetime.now(UTC)
+            + timedelta(hours=settings.verification_token_expire_hours),
+        )
+    )
+    db.flush()
+    return raw
+
+
+def resend_email_verification(db: Session, email: str) -> tuple[User, str] | None:
+    """Returns None silently for unknown or already-verified e-mails."""
+    user = db.scalar(select(User).where(User.email == email.strip().lower()))
+    if user is None or user.email_verified_at is not None:
+        return None
+    return user, create_email_verification_token(db, user)
+
+
+def verify_email(db: Session, raw_token: str) -> User:
+    token = db.scalar(
+        select(EmailVerificationToken).where(
+            EmailVerificationToken.token_hash == hash_token(raw_token)
+        )
+    )
+    if token is None or token.used_at is not None or token.expires_at < datetime.now(UTC):
+        raise AuthError("Link de confirmação inválido ou expirado")
+    user = db.get(User, token.user_id)
+    if user is None:
+        raise AuthError("Usuário não encontrado")
+    token.used_at = datetime.now(UTC)
+    if user.email_verified_at is None:
+        user.email_verified_at = datetime.now(UTC)
     return user

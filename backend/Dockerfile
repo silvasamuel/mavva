@@ -22,4 +22,4 @@ RUN uv sync --frozen --no-dev
 ENV PATH="/code/.venv/bin:$PATH" CONTENT_DIR=/code/content
 COPY backend/ ./
 COPY content ./content
-CMD ["sh", "-c", "alembic upgrade head && python -m app.seeds && uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
+CMD ["sh", "-c", "alembic upgrade head && python -m app.seeds && uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000} --proxy-headers --forwarded-allow-ips='*'"]

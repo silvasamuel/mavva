@@ -10,6 +10,7 @@ from sqlalchemy.orm import Session
 from app.models import QuizSession, ReviewItem
 from app.seeds.achievements import xp_reward_for
 from tests.factories import make_category, make_mc_question, make_open_question
+from tests.helpers import register_and_login
 
 
 def _badge_xp(client: TestClient) -> int:
@@ -184,10 +185,7 @@ class TestQuizFlow:
         make_mc_question(db, category)
         quiz = _start_quiz(auth_client, question_count=1)
 
-        other = auth_client.post(
-            "/api/v1/auth/register",
-            json={"name": "Intruso", "email": "outro@teste.com", "password": "senha-forte-123"},
-        ).json()
+        other = register_and_login(auth_client, name="Intruso", email="outro@teste.com")
         response = auth_client.get(
             f"/api/v1/quizzes/{quiz['id']}",
             headers={"Authorization": f"Bearer {other['access_token']}"},

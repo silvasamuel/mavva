@@ -1,19 +1,21 @@
 import { useState } from 'react'
-import { Link, Navigate, useNavigate } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
-import { ApiError } from '@/lib/api'
+import { ApiError, api } from '@/lib/api'
 import { AuthLayout } from './AuthLayout'
 import { useAuth } from './AuthContext'
 
 export function RegisterPage() {
   const { user, register } = useAuth()
-  const navigate = useNavigate()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [submitting, setSubmitting] = useState(false)
+  const [pendingEmail, setPendingEmail] = useState('')
+  const [resending, setResending] = useState(false)
+  const [resent, setResent] = useState(false)
 
   if (user) return <Navigate to="/" replace />
 
@@ -27,7 +29,7 @@ export function RegisterPage() {
     setSubmitting(true)
     try {
       await register(name, email, password)
-      navigate('/', { replace: true })
+      setPendingEmail(email)
     } catch (err) {
       setError(
         err instanceof ApiError ? err.message : 'Não foi possível criar a conta. Tente novamente.'
@@ -35,6 +37,44 @@ export function RegisterPage() {
     } finally {
       setSubmitting(false)
     }
+  }
+
+  async function handleResend() {
+    setResending(true)
+    setResent(false)
+    try {
+      await api.post('/auth/resend-verification', { email: pendingEmail })
+    } finally {
+      setResent(true)
+      setResending(false)
+    }
+  }
+
+  if (pendingEmail) {
+    return (
+      <AuthLayout title="Confirme seu e-mail">
+        <div className="space-y-4 text-center">
+          <span className="text-4xl" aria-hidden>
+            📬
+          </span>
+          <p className="text-sm font-semibold text-sand-600">
+            Enviamos um link de confirmação para <strong>{pendingEmail}</strong>. Abra o e-mail e
+            clique no link para ativar sua conta.
+          </p>
+          {resent && (
+            <p className="text-sm font-semibold text-leaf-700">
+              Se a conta ainda não estiver confirmada, um novo link foi enviado.
+            </p>
+          )}
+          <Button type="button" full loading={resending} onClick={() => void handleResend()}>
+            Reenviar e-mail
+          </Button>
+          <Link to="/login" className="inline-block text-sm font-bold text-leaf-600 hover:underline">
+            Já confirmou? Entrar
+          </Link>
+        </div>
+      </AuthLayout>
+    )
   }
 
   return (

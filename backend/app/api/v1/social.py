@@ -1,8 +1,9 @@
 import uuid
 
-from fastapi import APIRouter, HTTPException, Query, status
+from fastapi import APIRouter, HTTPException, Query, Request, status
 
 from app.core.deps import CurrentUser, DbDep
+from app.core.ratelimit import limiter
 from app.models import Duel, User, UserStats
 from app.models.enums import DuelStatus, FriendshipStatus
 from app.schemas.social import (
@@ -70,8 +71,12 @@ def friends_overview(user: CurrentUser, db: DbDep) -> FriendsOverview:
 
 
 @friends_router.get("/search", response_model=list[UserSearchResult])
+@limiter.limit("60/minute")
 def search_users(
-    user: CurrentUser, db: DbDep, q: str = Query(min_length=2, max_length=20)
+    request: Request,
+    user: CurrentUser,
+    db: DbDep,
+    q: str = Query(min_length=2, max_length=20),
 ) -> list[UserSearchResult]:
     results = []
     for found, friendship in friendship_service.search_users(db, user, q):

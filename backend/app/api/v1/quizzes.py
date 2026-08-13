@@ -1,8 +1,9 @@
 import uuid
 
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, HTTPException, Request, status
 
 from app.core.deps import CurrentUser, DbDep
+from app.core.ratelimit import limiter
 from app.data.books import BOOKS, format_reference
 from app.models import Question, QuizSession
 from app.models.enums import QuestionType
@@ -86,7 +87,10 @@ def _session_out(session: QuizSession, duel_id: uuid.UUID | None = None) -> Quiz
 
 
 @router.post("", status_code=status.HTTP_201_CREATED, response_model=QuizSessionOut)
-def create_quiz(body: QuizCreateRequest, user: CurrentUser, db: DbDep) -> QuizSessionOut:
+@limiter.limit("30/minute")
+def create_quiz(
+    request: Request, body: QuizCreateRequest, user: CurrentUser, db: DbDep
+) -> QuizSessionOut:
     try:
         session = quiz_service.create_session(
             db,
