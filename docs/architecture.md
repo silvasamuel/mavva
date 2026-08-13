@@ -71,7 +71,7 @@ HTTP (api/v1/*)  →  Services (regra de negócio)  →  Models/DB (SQLAlchemy)
 - **Access token:** JWT assinado (HS256), 15 min, enviado em `Authorization: Bearer`.
   Guardado **em memória** no frontend (nunca em localStorage — mitiga XSS).
 - **Refresh token:** opaco (256 bits aleatórios), 30 dias, guardado **hasheado (SHA-256)**
-  no banco. Entregue via **cookie httpOnly + Secure + SameSite=None** (web).
+  no banco. Entregue via **cookie httpOnly + Secure + SameSite=Lax** (web; same-origin `/api`).
 - **Rotação:** cada `/auth/refresh` invalida o token usado e emite um novo par.
   Reuso de token já rotacionado ⇒ revoga a cadeia inteira (detecção de roubo).
 - **Mobile (futuro):** mesmos endpoints aceitarão/retornarão o refresh token no corpo
@@ -187,7 +187,10 @@ Deploy contínuo: Vercel e Render observam a `main` (deploy automático após CI
 - Rate limiting (slowapi) por IP real (`X-Forwarded-For` em produção): auth
   (login/register 10/min, reset/resend 5/min), denúncias (20/h), sugestões (10/h),
   criação de quiz (30/min) e busca de amigos (60/min).
-- CORS restrito às origens conhecidas (localhost em dev, domínio Vercel em prod).
+- CORS restrito às origens em `FRONTEND_ORIGIN` (lista separada por vírgula; o
+  primeiro item é o domínio canônico dos e-mails). O frontend em produção chama
+  `/api` no mesmo host, para o cookie de refresh não virar third-party ao usar
+  `mavva.com.br` junto com `mavva.vercel.app`.
 - Nunca revelar se um e-mail existe (`/forgot-password` e
   `/resend-verification` respondem 202 sempre).
 - Cadastro exige confirmação de e-mail antes de login e de qualquer rota autenticada.

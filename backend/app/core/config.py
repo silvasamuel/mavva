@@ -1,5 +1,6 @@
 from functools import lru_cache
 from pathlib import Path
+from urllib.parse import urlparse
 
 from pydantic import field_validator, model_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -21,12 +22,14 @@ class Settings(BaseSettings):
     reset_token_expire_minutes: int = 30
     verification_token_expire_hours: int = 24
 
+    # Canonical site URL, or a comma-separated allowlist. The first entry is
+    # used in email links; every entry is an allowed CORS origin.
     frontend_origin: str = "http://localhost:5173"
     rate_limit_enabled: bool = True
 
     # Email (production: Resend; otherwise reset links are logged)
     resend_api_key: str | None = None
-    email_from: str = "Mavva <noreply@mavva.app>"
+    email_from: str = "Mavva <contato@contato.mavva.com.br>"
 
     # Question bank location (mounted read-only in Docker)
     content_dir: Path = Path(__file__).resolve().parents[3] / "content"
@@ -41,6 +44,23 @@ class Settings(BaseSettings):
     @property
     def is_production(self) -> bool:
         return self.environment == "production"
+
+    def _configured_origins(self) -> list[str]:
+        origins = [
+            origin.strip().rstrip("/")
+            for origin in self.frontend_origin.split(",")
+            if origin.strip()
+        ]
+        return origins or ["http://localhost:5173"]
+
+    @property
+    def cors_origins(self) -> list[str]:
+        return _with_www_siblings(self._configured_origins())
+
+    @property
+    def public_origin(self) -> str:
+        """Canonical frontend URL for email links (first FRONTEND_ORIGIN entry)."""
+        return self._configured_origins()[0]
 
     @field_validator("database_url", mode="before")
     @classmethod
@@ -61,6 +81,20 @@ class Settings(BaseSettings):
                 "when ENVIRONMENT=production"
             )
         return self
+
+
+def _with_www_siblings(origins: list[str]) -> list[str]:
+    """Allow both apex and www without listing them twice in FRONTEND_ORIGIN."""
+    extras: list[str] = []
+    for origin in origins:
+        host = urlparse(origin).hostname or ""
+        if host.endswith(".vercel.app") or host in {"localhost", "127.0.0.1"}:
+            continue
+        sibling_host = host.removeprefix("www.") if host.startswith("www.") else f"www.{host}"
+        sibling = origin.replace(f"://{host}", f"://{sibling_host}", 1)
+        if sibling not in origins and sibling not in extras:
+            extras.append(sibling)
+    return origins + extras
 
 
 @lru_cache

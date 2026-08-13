@@ -10,7 +10,7 @@ logger = logging.getLogger("mavva.email")
 
 def send_password_reset(to_email: str, to_name: str, raw_token: str) -> None:
     settings = get_settings()
-    link = f"{settings.frontend_origin}/reset-password?token={raw_token}"
+    link = f"{settings.public_origin}/reset-password?token={raw_token}"
 
     if not settings.resend_api_key:
         # Development: the link shows up in the server logs.
@@ -32,7 +32,7 @@ def send_password_reset(to_email: str, to_name: str, raw_token: str) -> None:
 
 def send_email_verification(to_email: str, to_name: str, raw_token: str) -> None:
     settings = get_settings()
-    link = f"{settings.frontend_origin}/verify-email?token={raw_token}"
+    link = f"{settings.public_origin}/verify-email?token={raw_token}"
 
     if not settings.resend_api_key:
         logger.info("Email verification for %s: %s", to_email, link)

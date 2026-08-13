@@ -91,8 +91,8 @@ editoriais: [docs/content-guidelines.md](docs/content-guidelines.md).
 
 | Peça | Serviço | Como |
 |---|---|---|
-| Frontend | Vercel | Importar o repo, root `frontend/`, framework Vite. Env: `VITE_API_URL`. |
-| Backend | Render | Blueprint [`render.yaml`](render.yaml) (Docker). Env: `DATABASE_URL` (Neon), `FRONTEND_ORIGIN`. |
+| Frontend | Vercel | Domínio canônico `mavva.com.br` (www e `mavva.vercel.app` redirecionam). Produção chama `/api` no mesmo host. |
+| Backend | Vercel (mesmo projeto) | `FRONTEND_ORIGIN=https://mavva.com.br,https://mavva.vercel.app`. Render (`render.yaml`) continua como alternativa. |
 | Postgres | Neon | Criar projeto free e copiar a connection string. |
 | E-mail | Resend | `RESEND_API_KEY` (opcional; sem ela, links de reset vão para o log). |
 

@@ -16,6 +16,6 @@ services:
       - key: DATABASE_URL
         sync: false # paste the Neon connection string (postgresql+psycopg://...)
       - key: FRONTEND_ORIGIN
-        sync: false # e.g. https://mavva.vercel.app
+        sync: false # e.g. https://mavva.com.br,https://mavva.vercel.app
       - key: RESEND_API_KEY
         sync: false

@@ -3,11 +3,37 @@
 // Transient 502/503/504 (typical of a Render restart) are retried and never
 // treated as a logged-out session.
 
-const API_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:8000'
-
 const TRANSIENT_STATUS = new Set([502, 503, 504])
 const MAX_ATTEMPTS = 10
+const NETWORK_ATTEMPTS = 3
 const BACKOFF_CAP_MS = 4000
+
+/** Same-origin (`''`) on a custom domain; never call mavva.vercel.app from mavva.com.br. */
+export function resolveApiUrl(
+  configured: string | undefined,
+  currentOrigin: string,
+  isProd: boolean
+): string {
+  const trimmed = configured?.replace(/\/$/, '')
+  if (!trimmed) return isProd ? '' : 'http://localhost:8000'
+  try {
+    const target = new URL(trimmed, currentOrigin)
+    const here = new URL(currentOrigin)
+    if (target.origin === here.origin) return ''
+    if (target.hostname.endsWith('.vercel.app') && here.hostname !== target.hostname) {
+      return ''
+    }
+  } catch {
+    return trimmed
+  }
+  return trimmed
+}
+
+const API_URL = resolveApiUrl(
+  import.meta.env.VITE_API_URL,
+  typeof window === 'undefined' ? 'http://localhost:8000' : window.location.origin,
+  import.meta.env.PROD
+)
 
 let accessToken: string | null = null
 let onSessionExpired: (() => void) | null = null
@@ -65,6 +91,7 @@ async function tryRefresh(): Promise<RefreshResult> {
         return 'ok'
       } catch {
         sawUnavailable = true
+        if (attempt + 1 >= NETWORK_ATTEMPTS) break
         await delay(backoff(attempt))
       }
     }
@@ -88,7 +115,7 @@ async function request<T>(path: string, options: RequestInit = {}, attempt = 0):
       credentials: 'include',
     })
   } catch {
-    if (attempt < MAX_ATTEMPTS - 1) {
+    if (attempt < NETWORK_ATTEMPTS - 1) {
       await delay(backoff(attempt))
       return request<T>(path, options, attempt + 1)
     }
