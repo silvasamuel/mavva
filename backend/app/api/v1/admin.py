@@ -156,11 +156,8 @@ def _detail(question: Question) -> AdminQuestionDetail:
         chapter=question.chapter,
         verse_start=question.verse_start,
         verse_end=question.verse_end,
-        theme=question.theme,
         difficulty=question.difficulty,
         category_id=question.category_id,
-        subcategory=question.subcategory,
-        tags=list(question.tags),
         is_active=question.is_active,
         options=[AdminOption(text=o.text, is_correct=o.is_correct) for o in question.options],
         accepted_answers=[AdminAnswer(text=a.text) for a in question.accepted_answers],
@@ -243,9 +240,6 @@ def update_question(
         if not answers:
             raise HTTPException(status.HTTP_400_BAD_REQUEST, "Informe ao menos uma resposta aceita")
         sync_accepted_answers(question, [a["text"] for a in answers])
-
-    if "tags" in data:
-        question.tags = [t.strip().lower() for t in data.pop("tags")]
 
     for field, value in data.items():
         setattr(question, field, value)

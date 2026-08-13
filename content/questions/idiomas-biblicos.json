@@ -32,14 +32,7 @@
         "verse_start": 1,
         "verse_end": 2
       },
-      "theme": "Línguas originais",
-      "difficulty": "easy",
-      "subcategory": "Hebraico",
-      "tags": [
-        "hebraico",
-        "antigo testamento",
-        "linguas"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "idiomas-biblicos-0002",
@@ -58,14 +51,7 @@
         "verse_start": 23,
         "verse_end": 23
       },
-      "theme": "Nomes e significados",
-      "difficulty": "easy",
-      "subcategory": "Hebraico",
-      "tags": [
-        "emanuel",
-        "deus conosco",
-        "nomes"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "idiomas-biblicos-0003",
@@ -98,14 +84,7 @@
         "verse_start": 36,
         "verse_end": 36
       },
-      "theme": "Palavras de Jesus",
-      "difficulty": "medium",
-      "subcategory": "Aramaico",
-      "tags": [
-        "abba",
-        "pai",
-        "aramaico"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "idiomas-biblicos-0004",
@@ -138,14 +117,7 @@
         "verse_start": 41,
         "verse_end": 42
       },
-      "theme": "Palavras de Jesus",
-      "difficulty": "medium",
-      "subcategory": "Aramaico",
-      "tags": [
-        "talita cumi",
-        "jairo",
-        "aramaico"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "idiomas-biblicos-0005",
@@ -178,14 +150,7 @@
         "verse_start": 45,
         "verse_end": 47
       },
-      "theme": "Palavras de Jesus",
-      "difficulty": "medium",
-      "subcategory": "Aramaico",
-      "tags": [
-        "eli eli",
-        "cruz",
-        "salmo 22"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "idiomas-biblicos-0006",
@@ -218,14 +183,7 @@
         "verse_start": 4,
         "verse_end": 4
       },
-      "theme": "Línguas originais",
-      "difficulty": "hard",
-      "subcategory": "Aramaico",
-      "tags": [
-        "daniel",
-        "esdras",
-        "aramaico"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "idiomas-biblicos-0007",
@@ -258,14 +216,7 @@
         "verse_start": 30,
         "verse_end": 35
       },
-      "theme": "Traduções antigas",
-      "difficulty": "hard",
-      "subcategory": "Grego",
-      "tags": [
-        "septuaginta",
-        "traducao",
-        "grego"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "idiomas-biblicos-0008",
@@ -298,14 +249,7 @@
         "verse_start": 22,
         "verse_end": 22
       },
-      "theme": "Orações da igreja",
-      "difficulty": "hard",
-      "subcategory": "Aramaico",
-      "tags": [
-        "maranata",
-        "vinda",
-        "oracao"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "idiomas-biblicos-0009",
@@ -338,14 +282,7 @@
         "verse_start": 13,
         "verse_end": 15
       },
-      "theme": "Nomes de Deus",
-      "difficulty": "medium",
-      "subcategory": "Hebraico",
-      "tags": [
-        "yhwh",
-        "eu sou",
-        "sarca"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "idiomas-biblicos-0010",
@@ -366,14 +303,7 @@
         "verse_start": 1,
         "verse_end": 6
       },
-      "theme": "Louvor",
-      "difficulty": "easy",
-      "subcategory": "Hebraico",
-      "tags": [
-        "aleluia",
-        "louvor",
-        "salmos"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "idiomas-biblicos-0011",
@@ -406,13 +336,7 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "theme": "Línguas originais",
-      "difficulty": "medium",
-      "subcategory": "Antigo Testamento",
-      "tags": [
-        "hebraico",
-        "at"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "idiomas-biblicos-0012",
@@ -445,13 +369,7 @@
         "verse_start": 20,
         "verse_end": null
       },
-      "theme": "Línguas originais",
-      "difficulty": "medium",
-      "subcategory": "Novo Testamento",
-      "tags": [
-        "grego",
-        "nt"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "idiomas-biblicos-0013",
@@ -470,13 +388,7 @@
         "verse_start": 23,
         "verse_end": null
       },
-      "theme": "Nomes",
-      "difficulty": "hard",
-      "subcategory": "Significados",
-      "tags": [
-        "emanuel",
-        "messias"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "idiomas-biblicos-0014",
@@ -509,13 +421,7 @@
         "verse_start": 1,
         "verse_end": 6
       },
-      "theme": "Louvor",
-      "difficulty": "medium",
-      "subcategory": "Significados",
-      "tags": [
-        "aleluia",
-        "louvor"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "idiomas-biblicos-0015",
@@ -548,13 +454,7 @@
         "verse_start": 34,
         "verse_end": null
       },
-      "theme": "Palavras da cruz",
-      "difficulty": "expert",
-      "subcategory": "Aramaico",
-      "tags": [
-        "sabactani",
-        "cruz"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "idiomas-biblicos-0016",
@@ -575,13 +475,7 @@
         "verse_start": 21,
         "verse_end": null
       },
-      "theme": "Nomes",
-      "difficulty": "medium",
-      "subcategory": "Significados",
-      "tags": [
-        "jesus",
-        "salvacao"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "idiomas-biblicos-0017",
@@ -614,13 +508,7 @@
         "verse_start": 41,
         "verse_end": null
       },
-      "theme": "Títulos",
-      "difficulty": "hard",
-      "subcategory": "Significados",
-      "tags": [
-        "messias",
-        "cristo"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "idiomas-biblicos-0018",
@@ -639,13 +527,7 @@
         "verse_start": 36,
         "verse_end": null
       },
-      "theme": "Intimidade",
-      "difficulty": "expert",
-      "subcategory": "Aramaico",
-      "tags": [
-        "aba",
-        "pai"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "idiomas-biblicos-0019",
@@ -678,13 +560,7 @@
         "verse_start": 15,
         "verse_end": 26
       },
-      "theme": "Confirmação",
-      "difficulty": "hard",
-      "subcategory": "Significados",
-      "tags": [
-        "amem",
-        "verdade"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "idiomas-biblicos-0020",
@@ -717,13 +593,7 @@
         "verse_start": 9,
         "verse_end": null
       },
-      "theme": "Aclamação",
-      "difficulty": "medium",
-      "subcategory": "Significados",
-      "tags": [
-        "hosana",
-        "entrada triunfal"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "idiomas-biblicos-0021",
@@ -742,13 +612,7 @@
         "verse_start": 16,
         "verse_end": null
       },
-      "theme": "Títulos",
-      "difficulty": "expert",
-      "subcategory": "Aramaico",
-      "tags": [
-        "raboni",
-        "mestre"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "idiomas-biblicos-0022",
@@ -768,13 +632,7 @@
         "verse_start": 22,
         "verse_end": null
       },
-      "theme": "Toponímia",
-      "difficulty": "expert",
-      "subcategory": "Aramaico",
-      "tags": [
-        "golgota",
-        "caveira"
-      ]
+      "difficulty": "expert"
     }
   ]
 }

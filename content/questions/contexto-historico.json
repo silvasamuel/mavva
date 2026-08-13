@@ -32,14 +32,7 @@
         "verse_start": 1,
         "verse_end": 5
       },
-      "theme": "Mundo romano",
-      "difficulty": "easy",
-      "subcategory": "Período do NT",
-      "tags": [
-        "roma",
-        "cesar augusto",
-        "judeia"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "contexto-historico-0002",
@@ -72,14 +65,7 @@
         "verse_start": 1,
         "verse_end": 16
       },
-      "theme": "Dinastia herodiana",
-      "difficulty": "easy",
-      "subcategory": "Período do NT",
-      "tags": [
-        "herodes",
-        "belem",
-        "magos"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "contexto-historico-0003",
@@ -99,14 +85,7 @@
         "verse_start": 12,
         "verse_end": 16
       },
-      "theme": "Julgamento de Jesus",
-      "difficulty": "easy",
-      "subcategory": "Período do NT",
-      "tags": [
-        "pilatos",
-        "julgamento",
-        "crucificacao"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "contexto-historico-0004",
@@ -139,14 +118,7 @@
         "verse_start": 6,
         "verse_end": 10
       },
-      "theme": "Grupos judaicos",
-      "difficulty": "medium",
-      "subcategory": "Grupos religiosos",
-      "tags": [
-        "fariseus",
-        "saduceus",
-        "ressurreicao"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "contexto-historico-0005",
@@ -179,14 +151,7 @@
         "verse_start": 57,
         "verse_end": 59
       },
-      "theme": "Instituições judaicas",
-      "difficulty": "medium",
-      "subcategory": "Instituições",
-      "tags": [
-        "sinedrio",
-        "conselho",
-        "julgamento"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "contexto-historico-0006",
@@ -219,14 +184,7 @@
         "verse_start": 15,
         "verse_end": 22
       },
-      "theme": "Economia romana",
-      "difficulty": "medium",
-      "subcategory": "Período do NT",
-      "tags": [
-        "denario",
-        "tributo",
-        "cesar"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "contexto-historico-0007",
@@ -259,14 +217,7 @@
         "verse_start": 37,
         "verse_end": 40
       },
-      "theme": "Mundo helenista",
-      "difficulty": "medium",
-      "subcategory": "Período do NT",
-      "tags": [
-        "grego",
-        "koine",
-        "helenismo"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "contexto-historico-0008",
@@ -299,14 +250,7 @@
         "verse_start": 9,
         "verse_end": 26
       },
-      "theme": "Povos e tensões",
-      "difficulty": "hard",
-      "subcategory": "Povos",
-      "tags": [
-        "samaritanos",
-        "gerizim",
-        "assiria"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "contexto-historico-0009",
@@ -339,14 +283,7 @@
         "verse_start": 16,
         "verse_end": 21
       },
-      "theme": "Instituições judaicas",
-      "difficulty": "medium",
-      "subcategory": "Instituições",
-      "tags": [
-        "sinagoga",
-        "leitura",
-        "exilio"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "contexto-historico-0010",
@@ -379,15 +316,7 @@
         "verse_start": 1,
         "verse_end": 2
       },
-      "theme": "Destruição do templo",
-      "difficulty": "hard",
-      "subcategory": "Período do NT",
-      "tags": [
-        "templo",
-        "tito",
-        "70 dc",
-        "josefo"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "contexto-historico-0011",
@@ -420,13 +349,7 @@
         "verse_start": 1,
         "verse_end": 3
       },
-      "theme": "Poder romano",
-      "difficulty": "medium",
-      "subcategory": "Mundo do NT",
-      "tags": [
-        "roma",
-        "augusto"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "contexto-historico-0012",
@@ -459,13 +382,7 @@
         "verse_start": 24,
         "verse_end": null
       },
-      "theme": "Autoridades",
-      "difficulty": "medium",
-      "subcategory": "Mundo do NT",
-      "tags": [
-        "pilatos",
-        "crucificacao"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "contexto-historico-0013",
@@ -498,13 +415,7 @@
         "verse_start": 16,
         "verse_end": null
       },
-      "theme": "Autoridades",
-      "difficulty": "hard",
-      "subcategory": "Mundo do NT",
-      "tags": [
-        "herodes",
-        "belem"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "contexto-historico-0014",
@@ -537,13 +448,7 @@
         "verse_start": 8,
         "verse_end": null
       },
-      "theme": "Grupos judaicos",
-      "difficulty": "hard",
-      "subcategory": "Mundo do NT",
-      "tags": [
-        "saduceus",
-        "ressurreicao"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "contexto-historico-0015",
@@ -576,13 +481,7 @@
         "verse_start": 26,
         "verse_end": null
       },
-      "theme": "Igreja primitiva",
-      "difficulty": "medium",
-      "subcategory": "Mundo do NT",
-      "tags": [
-        "antioquia",
-        "cristaos"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "contexto-historico-0016",
@@ -615,13 +514,7 @@
         "verse_start": 6,
         "verse_end": 20
       },
-      "theme": "Igreja primitiva",
-      "difficulty": "hard",
-      "subcategory": "Mundo do NT",
-      "tags": [
-        "concilio",
-        "gentios"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "contexto-historico-0017",
@@ -654,13 +547,7 @@
         "verse_start": 11,
         "verse_end": 12
       },
-      "theme": "Autoridades",
-      "difficulty": "expert",
-      "subcategory": "Mundo do NT",
-      "tags": [
-        "festo",
-        "cesar"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "contexto-historico-0018",
@@ -693,13 +580,7 @@
         "verse_start": 1,
         "verse_end": 3
       },
-      "theme": "Grupos judaicos",
-      "difficulty": "medium",
-      "subcategory": "Mundo do NT",
-      "tags": [
-        "fariseus",
-        "lei"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "contexto-historico-0019",
@@ -732,13 +613,7 @@
         "verse_start": 20,
         "verse_end": null
       },
-      "theme": "Cultura",
-      "difficulty": "hard",
-      "subcategory": "Mundo do NT",
-      "tags": [
-        "grego",
-        "imperio"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "contexto-historico-0020",
@@ -771,13 +646,7 @@
         "verse_start": 26,
         "verse_end": 27
       },
-      "theme": "Autoridades",
-      "difficulty": "expert",
-      "subcategory": "Mundo do NT",
-      "tags": [
-        "felix",
-        "cesareia"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "contexto-historico-0021",
@@ -810,13 +679,7 @@
         "verse_start": 7,
         "verse_end": 9
       },
-      "theme": "Autoridades",
-      "difficulty": "expert",
-      "subcategory": "Mundo do NT",
-      "tags": [
-        "herodes antipas",
-        "paixao"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "contexto-historico-0022",
@@ -849,13 +712,7 @@
         "verse_start": 59,
         "verse_end": null
       },
-      "theme": "Instituições",
-      "difficulty": "expert",
-      "subcategory": "Mundo do NT",
-      "tags": [
-        "sinedrio",
-        "tribunal"
-      ]
+      "difficulty": "expert"
     }
   ]
 }

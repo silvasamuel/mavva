@@ -20,14 +20,7 @@
         "verse_start": 11,
         "verse_end": 12
       },
-      "theme": "Primórdios",
-      "difficulty": "easy",
-      "subcategory": "Gênesis",
-      "tags": [
-        "diluvio",
-        "noe",
-        "quarenta dias"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "eventos-biblicos-0002",
@@ -60,14 +53,7 @@
         "verse_start": 1,
         "verse_end": 9
       },
-      "theme": "Primórdios",
-      "difficulty": "easy",
-      "subcategory": "Gênesis",
-      "tags": [
-        "babel",
-        "linguas",
-        "dispersao"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "eventos-biblicos-0003",
@@ -100,14 +86,7 @@
         "verse_start": 1,
         "verse_end": 4
       },
-      "theme": "Igreja",
-      "difficulty": "easy",
-      "subcategory": "Novo Testamento",
-      "tags": [
-        "pentecostes",
-        "espirito santo",
-        "linguas"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "eventos-biblicos-0004",
@@ -140,14 +119,7 @@
         "verse_start": 1,
         "verse_end": 8
       },
-      "theme": "Idolatria",
-      "difficulty": "easy",
-      "subcategory": "Êxodo",
-      "tags": [
-        "bezerro de ouro",
-        "sinai",
-        "arao"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "eventos-biblicos-0005",
@@ -180,14 +152,7 @@
         "verse_start": 1,
         "verse_end": 3
       },
-      "theme": "Presença de Deus",
-      "difficulty": "medium",
-      "subcategory": "Monarquia",
-      "tags": [
-        "templo",
-        "salomao",
-        "gloria"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "eventos-biblicos-0006",
@@ -220,14 +185,7 @@
         "verse_start": 16,
         "verse_end": 17
       },
-      "theme": "Vida de Cristo",
-      "difficulty": "easy",
-      "subcategory": "Novo Testamento",
-      "tags": [
-        "batismo",
-        "pomba",
-        "voz do pai"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "eventos-biblicos-0007",
@@ -260,14 +218,7 @@
         "verse_start": 44,
         "verse_end": 48
       },
-      "theme": "Expansão do evangelho",
-      "difficulty": "hard",
-      "subcategory": "Novo Testamento",
-      "tags": [
-        "cornelio",
-        "gentios",
-        "pedro"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "eventos-biblicos-0008",
@@ -300,14 +251,7 @@
         "verse_start": 8,
         "verse_end": 11
       },
-      "theme": "Criação",
-      "difficulty": "easy",
-      "subcategory": "Gênesis",
-      "tags": [
-        "criacao",
-        "seis dias",
-        "sabado"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "eventos-biblicos-0009",
@@ -340,14 +284,7 @@
         "verse_start": 23,
         "verse_end": 31
       },
-      "theme": "Juízes",
-      "difficulty": "medium",
-      "subcategory": "Juízes",
-      "tags": [
-        "sansao",
-        "dagom",
-        "filisteus"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "eventos-biblicos-0010",
@@ -380,14 +317,7 @@
         "verse_start": 50,
         "verse_end": 54
       },
-      "theme": "Cruz",
-      "difficulty": "medium",
-      "subcategory": "Novo Testamento",
-      "tags": [
-        "veu",
-        "templo",
-        "crucificacao"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "eventos-biblicos-0011",
@@ -420,13 +350,7 @@
         "verse_start": 7,
         "verse_end": 9
       },
-      "theme": "Juízo",
-      "difficulty": "medium",
-      "subcategory": "Primórdios",
-      "tags": [
-        "babel",
-        "linguas"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "eventos-biblicos-0012",
@@ -459,13 +383,7 @@
         "verse_start": 18,
         "verse_end": 20
       },
-      "theme": "Aliança",
-      "difficulty": "hard",
-      "subcategory": "Êxodo",
-      "tags": [
-        "sinai",
-        "lei"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "eventos-biblicos-0013",
@@ -498,13 +416,7 @@
         "verse_start": 21,
         "verse_end": 22
       },
-      "theme": "Livramento",
-      "difficulty": "medium",
-      "subcategory": "Êxodo",
-      "tags": [
-        "mar vermelho",
-        "exodo"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "eventos-biblicos-0014",
@@ -537,13 +449,7 @@
         "verse_start": 8,
         "verse_end": 11
       },
-      "theme": "Exílio",
-      "difficulty": "hard",
-      "subcategory": "Reino dividido",
-      "tags": [
-        "exilio",
-        "jerusalem"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "eventos-biblicos-0015",
@@ -563,13 +469,7 @@
         "verse_start": 1,
         "verse_end": 3
       },
-      "theme": "Restauração",
-      "difficulty": "medium",
-      "subcategory": "Pós-exílio",
-      "tags": [
-        "retorno",
-        "ciro"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "eventos-biblicos-0016",
@@ -602,12 +502,7 @@
         "verse_start": 1,
         "verse_end": 5
       },
-      "theme": "Glória de Cristo",
-      "difficulty": "hard",
-      "subcategory": "Ministério de Jesus",
-      "tags": [
-        "transfiguracao"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "eventos-biblicos-0017",
@@ -640,13 +535,7 @@
         "verse_start": 15,
         "verse_end": 20
       },
-      "theme": "Conquista",
-      "difficulty": "medium",
-      "subcategory": "Conquista de Canaã",
-      "tags": [
-        "jerico",
-        "muros"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "eventos-biblicos-0018",
@@ -679,13 +568,7 @@
         "verse_start": 1,
         "verse_end": 4
       },
-      "theme": "Espírito Santo",
-      "difficulty": "medium",
-      "subcategory": "Igreja primitiva",
-      "tags": [
-        "pentecostes",
-        "espirito"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "eventos-biblicos-0019",
@@ -718,13 +601,7 @@
         "verse_start": 3,
         "verse_end": 5
       },
-      "theme": "Criação",
-      "difficulty": "hard",
-      "subcategory": "Primórdios",
-      "tags": [
-        "criacao",
-        "luz"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "eventos-biblicos-0020",
@@ -757,13 +634,7 @@
         "verse_start": 21,
         "verse_end": 23
       },
-      "theme": "Juízo",
-      "difficulty": "medium",
-      "subcategory": "Primórdios",
-      "tags": [
-        "diluvio",
-        "noe"
-      ]
+      "difficulty": "medium"
     }
   ]
 }

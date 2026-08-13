@@ -32,14 +32,7 @@
         "verse_start": 1,
         "verse_end": 9
       },
-      "theme": "Primórdios",
-      "difficulty": "easy",
-      "subcategory": "Gênesis",
-      "tags": [
-        "diluvio",
-        "babel",
-        "ordem"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "cronologia-biblica-0002",
@@ -72,14 +65,7 @@
         "verse_start": 6,
         "verse_end": 6
       },
-      "theme": "Patriarcas",
-      "difficulty": "easy",
-      "subcategory": "Gênesis",
-      "tags": [
-        "patriarcas",
-        "ordem",
-        "abraao"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "cronologia-biblica-0003",
@@ -112,14 +98,7 @@
         "verse_start": 10,
         "verse_end": 12
       },
-      "theme": "Monarquia",
-      "difficulty": "easy",
-      "subcategory": "Monarquia",
-      "tags": [
-        "saul",
-        "davi",
-        "salomao"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "cronologia-biblica-0004",
@@ -152,14 +131,7 @@
         "verse_start": 16,
         "verse_end": 19
       },
-      "theme": "Linha do tempo",
-      "difficulty": "medium",
-      "subcategory": "Juízes",
-      "tags": [
-        "juizes",
-        "conquista",
-        "monarquia"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cronologia-biblica-0005",
@@ -192,14 +164,7 @@
         "verse_start": 1,
         "verse_end": 3
       },
-      "theme": "Profetas na linha do tempo",
-      "difficulty": "medium",
-      "subcategory": "Exílio",
-      "tags": [
-        "daniel",
-        "ezequiel",
-        "exilio"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cronologia-biblica-0006",
@@ -220,14 +185,7 @@
         "verse_start": 1,
         "verse_end": 1
       },
-      "theme": "Período interbíblico",
-      "difficulty": "hard",
-      "subcategory": "Entre os testamentos",
-      "tags": [
-        "silencio",
-        "interbiblico",
-        "malaquias"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "cronologia-biblica-0007",
@@ -260,14 +218,7 @@
         "verse_start": 1,
         "verse_end": 11
       },
-      "theme": "Vida de Cristo",
-      "difficulty": "medium",
-      "subcategory": "Novo Testamento",
-      "tags": [
-        "ascensao",
-        "quarenta dias",
-        "pentecostes"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cronologia-biblica-0008",
@@ -300,14 +251,7 @@
         "verse_start": 21,
         "verse_end": 23
       },
-      "theme": "Vida de Cristo",
-      "difficulty": "easy",
-      "subcategory": "Novo Testamento",
-      "tags": [
-        "batismo",
-        "ministerio",
-        "ordem"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "cronologia-biblica-0009",
@@ -340,14 +284,7 @@
         "verse_start": 20,
         "verse_end": 21
       },
-      "theme": "Impérios",
-      "difficulty": "hard",
-      "subcategory": "Linha do tempo geral",
-      "tags": [
-        "imperios",
-        "ordem",
-        "daniel"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "cronologia-biblica-0010",
@@ -380,14 +317,7 @@
         "verse_start": 1,
         "verse_end": 12
       },
-      "theme": "Vida de Cristo",
-      "difficulty": "easy",
-      "subcategory": "Novo Testamento",
-      "tags": [
-        "joao batista",
-        "precursor",
-        "ordem"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "cronologia-biblica-0011",
@@ -420,13 +350,7 @@
         "verse_start": 33,
         "verse_end": 34
       },
-      "theme": "Deserto",
-      "difficulty": "medium",
-      "subcategory": "Êxodo",
-      "tags": [
-        "deserto",
-        "40 anos"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cronologia-biblica-0012",
@@ -459,13 +383,7 @@
         "verse_start": 11,
         "verse_end": 12
       },
-      "theme": "Exílio",
-      "difficulty": "medium",
-      "subcategory": "Pós-exílio",
-      "tags": [
-        "70 anos",
-        "exilio"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cronologia-biblica-0013",
@@ -498,13 +416,7 @@
         "verse_start": 3,
         "verse_end": null
       },
-      "theme": "Ressurreição",
-      "difficulty": "medium",
-      "subcategory": "Igreja primitiva",
-      "tags": [
-        "40 dias",
-        "ascensao"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cronologia-biblica-0014",
@@ -537,13 +449,7 @@
         "verse_start": 5,
         "verse_end": null
       },
-      "theme": "Patriarcas",
-      "difficulty": "hard",
-      "subcategory": "Gênesis",
-      "tags": [
-        "abraao",
-        "isaque"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "cronologia-biblica-0015",
@@ -576,13 +482,7 @@
         "verse_start": 41,
         "verse_end": null
       },
-      "theme": "Patriarcas",
-      "difficulty": "hard",
-      "subcategory": "Gênesis",
-      "tags": [
-        "jaco",
-        "labao"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "cronologia-biblica-0016",
@@ -615,13 +515,7 @@
         "verse_start": 4,
         "verse_end": 5
       },
-      "theme": "Monarquia",
-      "difficulty": "medium",
-      "subcategory": "Reis",
-      "tags": [
-        "davi",
-        "reinado"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cronologia-biblica-0017",
@@ -642,13 +536,7 @@
         "verse_start": 1,
         "verse_end": 3
       },
-      "theme": "Criação",
-      "difficulty": "medium",
-      "subcategory": "Primórdios",
-      "tags": [
-        "criacao",
-        "6 dias"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cronologia-biblica-0018",
@@ -681,13 +569,7 @@
         "verse_start": 12,
         "verse_end": null
       },
-      "theme": "Dilúvio",
-      "difficulty": "hard",
-      "subcategory": "Primórdios",
-      "tags": [
-        "diluvio",
-        "40 dias"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "cronologia-biblica-0019",
@@ -720,13 +602,7 @@
         "verse_start": 24,
         "verse_end": null
       },
-      "theme": "Profecia",
-      "difficulty": "expert",
-      "subcategory": "Daniel",
-      "tags": [
-        "70 semanas",
-        "daniel"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "cronologia-biblica-0020",
@@ -759,13 +635,7 @@
         "verse_start": 42,
         "verse_end": null
       },
-      "theme": "Monarquia",
-      "difficulty": "medium",
-      "subcategory": "Reis",
-      "tags": [
-        "salomao",
-        "reinado"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "cronologia-biblica-0021",
@@ -798,13 +668,7 @@
         "verse_start": 40,
         "verse_end": 41
       },
-      "theme": "Egito",
-      "difficulty": "expert",
-      "subcategory": "Êxodo",
-      "tags": [
-        "430 anos",
-        "egito"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "cronologia-biblica-0022",
@@ -837,13 +701,7 @@
         "verse_start": 23,
         "verse_end": null
       },
-      "theme": "Vida de Jesus",
-      "difficulty": "expert",
-      "subcategory": "Novo Testamento",
-      "tags": [
-        "jesus",
-        "ministerio"
-      ]
+      "difficulty": "expert"
     }
   ]
 }

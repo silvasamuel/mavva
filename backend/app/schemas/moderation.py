@@ -28,10 +28,7 @@ class QuestionDraft(BaseModel):
     chapter: int = Field(ge=1)
     verse_start: int = Field(ge=1)
     verse_end: int | None = Field(default=None, ge=1)
-    theme: str = Field(min_length=2, max_length=80)
     difficulty: Difficulty
-    subcategory: str | None = Field(default=None, max_length=80)
-    tags: list[str] = Field(default_factory=list, max_length=6)
 
     @model_validator(mode="after")
     def type_specific_fields(self) -> "QuestionDraft":

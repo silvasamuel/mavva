@@ -29,9 +29,7 @@ def _draft(category_id: int) -> dict:
         "book": "genesis",
         "chapter": 6,
         "verse_start": 14,
-        "theme": "Obediência",
         "difficulty": "easy",
-        "tags": ["genesis"],
     }
 
 

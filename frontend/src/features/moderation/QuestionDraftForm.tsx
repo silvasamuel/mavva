@@ -223,45 +223,22 @@ export function QuestionDraftForm({
         }
       />
 
-      <div className="grid gap-3 sm:grid-cols-2">
-        <Input
-          label="Tema"
-          value={draft.theme}
-          onChange={(event) => onChange({ ...draft, theme: event.target.value })}
-        />
-        <div className="space-y-1.5">
-          <label className="block text-sm font-bold text-sand-700">Dificuldade</label>
-          <select
-            value={draft.difficulty}
-            onChange={(event) =>
-              onChange({ ...draft, difficulty: event.target.value as Difficulty })
-            }
-            className={FIELD}
-          >
-            {Object.entries(DIFFICULTY_LABELS).map(([value, label]) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
-            ))}
-          </select>
-        </div>
+      <div className="space-y-1.5">
+        <label className="block text-sm font-bold text-sand-700">Dificuldade</label>
+        <select
+          value={draft.difficulty}
+          onChange={(event) =>
+            onChange({ ...draft, difficulty: event.target.value as Difficulty })
+          }
+          className={FIELD}
+        >
+          {Object.entries(DIFFICULTY_LABELS).map(([value, label]) => (
+            <option key={value} value={value}>
+              {label}
+            </option>
+          ))}
+        </select>
       </div>
-
-      <Input
-        label="Subcategoria (opcional)"
-        value={draft.subcategory ?? ''}
-        onChange={(event) => onChange({ ...draft, subcategory: event.target.value })}
-      />
-      <Input
-        label="Tags (separadas por vírgula, até 6)"
-        value={draft.tags.join(', ')}
-        onChange={(event) =>
-          onChange({
-            ...draft,
-            tags: event.target.value.split(',').map((tag) => tag.trim()).slice(0, 6),
-          })
-        }
-      />
     </div>
   )
 }

@@ -51,7 +51,6 @@ def create_session(
     testament: Testament | None = None,
     category_ids: list[int] | None = None,
     difficulty: Difficulty | None = None,
-    theme: str | None = None,
     timer_seconds: int | None = None,
 ) -> QuizSession:
     if mode == QuizMode.REVIEW:
@@ -77,8 +76,6 @@ def create_session(
             query = query.where(Question.category_id.in_(category_ids))
         if difficulty is not None:
             query = query.where(Question.difficulty == difficulty)
-        if theme is not None:
-            query = query.where(Question.theme.ilike(f"%{theme}%"))
         query = query.order_by(
             func.coalesce(ReviewItem.repetitions, -1).asc(), func.random()
         ).limit(question_count)
@@ -94,7 +91,6 @@ def create_session(
             "testament": testament.value if testament else None,
             "category_ids": category_ids or None,
             "difficulty": difficulty.value if difficulty else None,
-            "theme": theme,
             "timer_seconds": timer_seconds,
         },
     )

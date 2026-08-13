@@ -32,15 +32,7 @@
         "verse_start": 18,
         "verse_end": 19
       },
-      "theme": "Origem dos povos",
-      "difficulty": "easy",
-      "subcategory": "Primórdios",
-      "tags": [
-        "noe",
-        "sem",
-        "cam",
-        "jafe"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "genealogias-0002",
@@ -73,14 +65,7 @@
         "verse_start": 22,
         "verse_end": 26
       },
-      "theme": "Tribos de Israel",
-      "difficulty": "easy",
-      "subcategory": "Patriarcas",
-      "tags": [
-        "jaco",
-        "doze filhos",
-        "tribos"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "genealogias-0003",
@@ -113,14 +98,7 @@
         "verse_start": 14,
         "verse_end": 14
       },
-      "theme": "Linhagem messiânica",
-      "difficulty": "medium",
-      "subcategory": "Linhagem de Davi",
-      "tags": [
-        "juda",
-        "davi",
-        "messias"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "genealogias-0004",
@@ -139,14 +117,7 @@
         "verse_start": 13,
         "verse_end": 17
       },
-      "theme": "Linhagem messiânica",
-      "difficulty": "medium",
-      "subcategory": "Linhagem de Davi",
-      "tags": [
-        "rute",
-        "boaz",
-        "davi"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "genealogias-0005",
@@ -179,15 +150,7 @@
         "verse_start": 23,
         "verse_end": 38
       },
-      "theme": "Genealogias de Jesus",
-      "difficulty": "hard",
-      "subcategory": "Genealogias de Jesus",
-      "tags": [
-        "mateus",
-        "lucas",
-        "adao",
-        "abraao"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "genealogias-0006",
@@ -206,14 +169,7 @@
         "verse_start": 25,
         "verse_end": 27
       },
-      "theme": "Longevidade",
-      "difficulty": "hard",
-      "subcategory": "Primórdios",
-      "tags": [
-        "matusalem",
-        "969",
-        "genesis 5"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "genealogias-0007",
@@ -246,14 +202,7 @@
         "verse_start": 5,
         "verse_end": 17
       },
-      "theme": "Famílias do NT",
-      "difficulty": "easy",
-      "subcategory": "Novo Testamento",
-      "tags": [
-        "zacarias",
-        "isabel",
-        "joao batista"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "genealogias-0008",
@@ -286,14 +235,7 @@
         "verse_start": 1,
         "verse_end": 1
       },
-      "theme": "Sacerdócio",
-      "difficulty": "medium",
-      "subcategory": "Tribos",
-      "tags": [
-        "levi",
-        "arao",
-        "sacerdocio"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "genealogias-0009",
@@ -326,15 +268,7 @@
         "verse_start": 1,
         "verse_end": 6
       },
-      "theme": "Genealogias de Jesus",
-      "difficulty": "expert",
-      "subcategory": "Genealogias de Jesus",
-      "tags": [
-        "tamar",
-        "raabe",
-        "rute",
-        "bate-seba"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "genealogias-0010",
@@ -367,14 +301,7 @@
         "verse_start": 5,
         "verse_end": 5
       },
-      "theme": "Linhagem messiânica",
-      "difficulty": "hard",
-      "subcategory": "Linhagem de Davi",
-      "tags": [
-        "raabe",
-        "boaz",
-        "salmom"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "genealogias-0011",
@@ -407,13 +334,7 @@
         "verse_start": 27,
         "verse_end": null
       },
-      "theme": "Longevidade",
-      "difficulty": "medium",
-      "subcategory": "Antediluvianos",
-      "tags": [
-        "matusalem",
-        "longevidade"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "genealogias-0012",
@@ -446,13 +367,7 @@
         "verse_start": 21,
         "verse_end": 22
       },
-      "theme": "Nações",
-      "difficulty": "hard",
-      "subcategory": "Filhos de Noé",
-      "tags": [
-        "sem",
-        "noe"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "genealogias-0013",
@@ -485,13 +400,7 @@
         "verse_start": 22,
         "verse_end": 26
       },
-      "theme": "Tribos",
-      "difficulty": "medium",
-      "subcategory": "Patriarcas",
-      "tags": [
-        "jaco",
-        "tribos"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "genealogias-0014",
@@ -509,13 +418,7 @@
         "verse_start": 17,
         "verse_end": 22
       },
-      "theme": "Linhagem de Davi",
-      "difficulty": "hard",
-      "subcategory": "Genealogia real",
-      "tags": [
-        "rute",
-        "davi"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "genealogias-0015",
@@ -548,13 +451,7 @@
         "verse_start": 17,
         "verse_end": null
       },
-      "theme": "Genealogia de Jesus",
-      "difficulty": "expert",
-      "subcategory": "Novo Testamento",
-      "tags": [
-        "mateus",
-        "geracoes"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "genealogias-0016",
@@ -587,13 +484,7 @@
         "verse_start": 2,
         "verse_end": 3
       },
-      "theme": "Filho da promessa",
-      "difficulty": "medium",
-      "subcategory": "Patriarcas",
-      "tags": [
-        "isaque",
-        "promessa"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "genealogias-0017",
@@ -626,13 +517,7 @@
         "verse_start": 24,
         "verse_end": null
       },
-      "theme": "Comunhão",
-      "difficulty": "hard",
-      "subcategory": "Antediluvianos",
-      "tags": [
-        "enoque",
-        "arrebatamento"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "genealogias-0018",
@@ -665,13 +550,7 @@
         "verse_start": 18,
         "verse_end": 22
       },
-      "theme": "Tribo de Judá",
-      "difficulty": "medium",
-      "subcategory": "Genealogia real",
-      "tags": [
-        "juda",
-        "davi"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "genealogias-0019",
@@ -704,13 +583,7 @@
         "verse_start": 1,
         "verse_end": 2
       },
-      "theme": "Primeira família",
-      "difficulty": "medium",
-      "subcategory": "Primórdios",
-      "tags": [
-        "caim",
-        "adao"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "genealogias-0020",
@@ -729,13 +602,7 @@
         "verse_start": 25,
         "verse_end": null
       },
-      "theme": "Linhagem",
-      "difficulty": "hard",
-      "subcategory": "Primórdios",
-      "tags": [
-        "sete",
-        "abel"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "genealogias-0021",
@@ -768,13 +635,7 @@
         "verse_start": 3,
         "verse_end": 4
       },
-      "theme": "Primogenitura",
-      "difficulty": "expert",
-      "subcategory": "Filhos de Jacó",
-      "tags": [
-        "ruben",
-        "primogenitura"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "genealogias-0022",
@@ -807,13 +668,7 @@
         "verse_start": 8,
         "verse_end": 11
       },
-      "theme": "Nações",
-      "difficulty": "expert",
-      "subcategory": "Descendentes de Noé",
-      "tags": [
-        "ninrode",
-        "babel"
-      ]
+      "difficulty": "expert"
     }
   ]
 }

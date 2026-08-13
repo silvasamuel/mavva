@@ -1,7 +1,6 @@
 import uuid
 
 from sqlalchemy import Enum, ForeignKey, Index, String, Text
-from sqlalchemy.dialects.postgresql import ARRAY
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.base import Base, TimestampMixin
@@ -45,11 +44,8 @@ class Question(TimestampMixin, Base):
     verse_start: Mapped[int]
     verse_end: Mapped[int | None] = mapped_column(default=None)
 
-    theme: Mapped[str] = mapped_column(String(80))
     difficulty: Mapped[Difficulty] = mapped_column(_enum(Difficulty, "difficulty"))
     category_id: Mapped[int] = mapped_column(ForeignKey("categories.id"))
-    subcategory: Mapped[str | None] = mapped_column(String(80), default=None)
-    tags: Mapped[list[str]] = mapped_column(ARRAY(String(40)), default=list)
     is_active: Mapped[bool] = mapped_column(default=True)
 
     category: Mapped[Category] = relationship(back_populates="questions")

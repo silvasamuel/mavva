@@ -32,14 +32,7 @@
         "verse_start": 1,
         "verse_end": 1
       },
-      "theme": "Monarquia de Israel",
-      "difficulty": "easy",
-      "subcategory": "Reino unido",
-      "tags": [
-        "saul",
-        "samuel",
-        "uncao"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "reis-0002",
@@ -72,14 +65,7 @@
         "verse_start": 5,
         "verse_end": 14
       },
-      "theme": "Sabedoria",
-      "difficulty": "easy",
-      "subcategory": "Reino unido",
-      "tags": [
-        "salomao",
-        "sabedoria",
-        "gibeao"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "reis-0003",
@@ -112,14 +98,7 @@
         "verse_start": 16,
         "verse_end": 20
       },
-      "theme": "Reino dividido",
-      "difficulty": "medium",
-      "subcategory": "Reino do Norte",
-      "tags": [
-        "jeroboao",
-        "roboao",
-        "divisao"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "reis-0004",
@@ -138,14 +117,7 @@
         "verse_start": 1,
         "verse_end": 13
       },
-      "theme": "Reforma espiritual",
-      "difficulty": "medium",
-      "subcategory": "Reino do Sul",
-      "tags": [
-        "josias",
-        "livro da lei",
-        "reforma"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "reis-0005",
@@ -178,14 +150,7 @@
         "verse_start": 29,
         "verse_end": 33
       },
-      "theme": "Idolatria",
-      "difficulty": "easy",
-      "subcategory": "Reino do Norte",
-      "tags": [
-        "acabe",
-        "jezabel",
-        "baal"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "reis-0006",
@@ -218,14 +183,7 @@
         "verse_start": 16,
         "verse_end": 21
       },
-      "theme": "Soberba",
-      "difficulty": "hard",
-      "subcategory": "Reino do Sul",
-      "tags": [
-        "uzias",
-        "lepra",
-        "incenso"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "reis-0007",
@@ -258,14 +216,7 @@
         "verse_start": 1,
         "verse_end": 12
       },
-      "theme": "Exílio",
-      "difficulty": "easy",
-      "subcategory": "Reis das nações",
-      "tags": [
-        "nabucodonosor",
-        "babilonia",
-        "cativeiro"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "reis-0008",
@@ -285,14 +236,7 @@
         "verse_start": 10,
         "verse_end": 12
       },
-      "theme": "Monarquia de Israel",
-      "difficulty": "hard",
-      "subcategory": "Reino unido",
-      "tags": [
-        "davi",
-        "hebrom",
-        "jerusalem"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "reis-0009",
@@ -325,14 +269,7 @@
         "verse_start": 1,
         "verse_end": 4
       },
-      "theme": "Restauração",
-      "difficulty": "medium",
-      "subcategory": "Reis das nações",
-      "tags": [
-        "ciro",
-        "persia",
-        "retorno"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "reis-0010",
@@ -365,14 +302,7 @@
         "verse_start": 1,
         "verse_end": 13
       },
-      "theme": "Arrependimento",
-      "difficulty": "expert",
-      "subcategory": "Reino do Sul",
-      "tags": [
-        "manasses",
-        "idolatria",
-        "arrependimento"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "reis-0011",
@@ -405,13 +335,7 @@
         "verse_start": 9,
         "verse_end": 13
       },
-      "theme": "Sabedoria",
-      "difficulty": "easy",
-      "subcategory": "Reis de Israel unido",
-      "tags": [
-        "salomao",
-        "sabedoria"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "reis-0012",
@@ -444,13 +368,7 @@
         "verse_start": 20,
         "verse_end": 28
       },
-      "theme": "Divisão do reino",
-      "difficulty": "medium",
-      "subcategory": "Reis do Norte",
-      "tags": [
-        "jeroboao",
-        "divisao"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "reis-0013",
@@ -483,13 +401,7 @@
         "verse_start": 8,
         "verse_end": 13
       },
-      "theme": "Reforma",
-      "difficulty": "hard",
-      "subcategory": "Reis de Judá",
-      "tags": [
-        "josias",
-        "reforma"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "reis-0014",
@@ -507,13 +419,7 @@
         "verse_start": 1,
         "verse_end": 2
       },
-      "theme": "Idolatria",
-      "difficulty": "medium",
-      "subcategory": "Reis do Norte",
-      "tags": [
-        "jezabel",
-        "acabe"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "reis-0015",
@@ -546,13 +452,7 @@
         "verse_start": 25,
         "verse_end": 30
       },
-      "theme": "Juízo",
-      "difficulty": "hard",
-      "subcategory": "Reis da Babilônia",
-      "tags": [
-        "belsazar",
-        "daniel"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "reis-0016",
@@ -585,13 +485,7 @@
         "verse_start": 1,
         "verse_end": 2
       },
-      "theme": "Realeza",
-      "difficulty": "hard",
-      "subcategory": "Reis de Judá",
-      "tags": [
-        "josias",
-        "idade"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "reis-0017",
@@ -624,13 +518,7 @@
         "verse_start": 9,
         "verse_end": 11
       },
-      "theme": "Milagre",
-      "difficulty": "medium",
-      "subcategory": "Reis de Judá",
-      "tags": [
-        "ezequias",
-        "sinal"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "reis-0018",
@@ -663,13 +551,7 @@
         "verse_start": 24,
         "verse_end": null
       },
-      "theme": "Sucessão",
-      "difficulty": "easy",
-      "subcategory": "Reis de Israel unido",
-      "tags": [
-        "salomao",
-        "davi"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "reis-0019",
@@ -702,13 +584,7 @@
         "verse_start": 28,
         "verse_end": 29
       },
-      "theme": "Idolatria",
-      "difficulty": "hard",
-      "subcategory": "Reis do Norte",
-      "tags": [
-        "jeroboao",
-        "bezerros"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "reis-0020",
@@ -741,13 +617,7 @@
         "verse_start": 20,
         "verse_end": 24
       },
-      "theme": "Monarquia",
-      "difficulty": "easy",
-      "subcategory": "Reis de Israel unido",
-      "tags": [
-        "saul",
-        "benjamim"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "reis-0021",
@@ -780,13 +650,7 @@
         "verse_start": 3,
         "verse_end": 4
       },
-      "theme": "Sucessão",
-      "difficulty": "expert",
-      "subcategory": "Reis de Judá",
-      "tags": [
-        "joas",
-        "joiada"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "reis-0022",
@@ -819,13 +683,7 @@
         "verse_start": 23,
         "verse_end": 24
       },
-      "theme": "Capitais",
-      "difficulty": "expert",
-      "subcategory": "Reis do Norte",
-      "tags": [
-        "onri",
-        "samaria"
-      ]
+      "difficulty": "expert"
     }
   ]
 }

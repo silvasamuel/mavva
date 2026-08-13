@@ -39,7 +39,7 @@ marcado como tal. Divergências entre interpretações cristãs são indicadas n
 **Quiz**
 - Múltipla escolha: 4 alternativas, 1 correta
 - Resposta aberta: aceita variações de escrita (acentos, caixa, pequenos erros de digitação)
-- Filtros: testamento (AT / NT / Bíblia inteira), categorias (múltipla escolha), dificuldade, tema
+- Filtros: testamento (AT / NT / Bíblia inteira), categorias (múltipla escolha), dificuldade
 - Timer opcional por pergunta (15s ou 30s, escolhido ao montar o estudo); o tempo corre
   apenas enquanto se responde — a explicação é lida sem pressa; tempo estourado conta como erro
 - Feedback imediato: correto/errado + explicação + referência bíblica (texto ARC)
@@ -71,7 +71,7 @@ marcado como tal. Divergências entre interpretações cristãs são indicadas n
 - Meta: 400–600 perguntas curadas no lançamento, crescendo continuamente
 - Seeds versionados no repositório (JSON), com validação automática de schema
 - Campos obrigatórios: pergunta, resposta correta, explicação, referência (livro/cap/vers),
-  tema, dificuldade, categoria, subcategoria, tags, nota de divergência (quando aplicável)
+  dificuldade, categoria, nota de divergência (quando aplicável)
 
 **Duelos 1×1 (assíncrono)**
 - Desafio a um amigo ou adversário aleatório (fila de matchmaking)

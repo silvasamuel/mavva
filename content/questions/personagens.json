@@ -32,14 +32,7 @@
         "verse_start": 16,
         "verse_end": 23
       },
-      "theme": "Fidelidade",
-      "difficulty": "easy",
-      "subcategory": "Profetas e exilados",
-      "tags": [
-        "daniel",
-        "perseguicao",
-        "oracao"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "personagens-0002",
@@ -72,14 +65,7 @@
         "verse_start": 29,
         "verse_end": 34
       },
-      "theme": "Primogenitura",
-      "difficulty": "easy",
-      "subcategory": "Patriarcas",
-      "tags": [
-        "esau",
-        "jaco",
-        "primogenitura"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "personagens-0003",
@@ -98,14 +84,7 @@
         "verse_start": 2,
         "verse_end": 3
       },
-      "theme": "Promessa",
-      "difficulty": "easy",
-      "subcategory": "Mulheres da Bíblia",
-      "tags": [
-        "sara",
-        "abraao",
-        "isaque"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "personagens-0004",
@@ -138,15 +117,7 @@
         "verse_start": 25,
         "verse_end": 32
       },
-      "theme": "Providência",
-      "difficulty": "easy",
-      "subcategory": "Patriarcas",
-      "tags": [
-        "jose",
-        "farao",
-        "egito",
-        "sonhos"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "personagens-0005",
@@ -179,14 +150,7 @@
         "verse_start": 1,
         "verse_end": 7
       },
-      "theme": "Arrependimento",
-      "difficulty": "medium",
-      "subcategory": "Profetas",
-      "tags": [
-        "nata",
-        "davi",
-        "bate-seba"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "personagens-0006",
@@ -205,14 +169,7 @@
         "verse_start": 16,
         "verse_end": 17
       },
-      "theme": "Lealdade",
-      "difficulty": "easy",
-      "subcategory": "Mulheres da Bíblia",
-      "tags": [
-        "rute",
-        "noemi",
-        "moabe"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "personagens-0007",
@@ -245,14 +202,7 @@
         "verse_start": 11,
         "verse_end": null
       },
-      "theme": "Arrebatamento",
-      "difficulty": "easy",
-      "subcategory": "Profetas",
-      "tags": [
-        "elias",
-        "eliseu",
-        "carro de fogo"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "personagens-0008",
@@ -285,14 +235,7 @@
         "verse_start": 7,
         "verse_end": null
       },
-      "theme": "Dependência de Deus",
-      "difficulty": "easy",
-      "subcategory": "Juízes",
-      "tags": [
-        "gideao",
-        "midianitas",
-        "juizes"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "personagens-0009",
@@ -325,14 +268,7 @@
         "verse_start": 1,
         "verse_end": 10
       },
-      "theme": "Chamado",
-      "difficulty": "medium",
-      "subcategory": "Sacerdotes",
-      "tags": [
-        "eli",
-        "samuel",
-        "silo"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "personagens-0010",
@@ -350,14 +286,7 @@
         "verse_start": 1,
         "verse_end": 6
       },
-      "theme": "Oração",
-      "difficulty": "hard",
-      "subcategory": "Reis de Judá",
-      "tags": [
-        "ezequias",
-        "isaias",
-        "cura"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "personagens-0011",
@@ -390,13 +319,7 @@
         "verse_start": 28,
         "verse_end": null
       },
-      "theme": "Providência",
-      "difficulty": "easy",
-      "subcategory": "Patriarcas",
-      "tags": [
-        "jose",
-        "egito"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "personagens-0012",
@@ -429,13 +352,7 @@
         "verse_start": 1,
         "verse_end": 21
       },
-      "theme": "Fé",
-      "difficulty": "medium",
-      "subcategory": "Mulheres da Bíblia",
-      "tags": [
-        "raabe",
-        "jerico"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "personagens-0013",
@@ -468,13 +385,7 @@
         "verse_start": 1,
         "verse_end": 9
       },
-      "theme": "Liderança",
-      "difficulty": "easy",
-      "subcategory": "Líderes",
-      "tags": [
-        "josue",
-        "jordao"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "personagens-0014",
@@ -507,14 +418,7 @@
         "verse_start": 13,
         "verse_end": null
       },
-      "theme": "Unção",
-      "difficulty": "medium",
-      "subcategory": "Profetas",
-      "tags": [
-        "samuel",
-        "saul",
-        "davi"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "personagens-0015",
@@ -547,13 +451,7 @@
         "verse_start": 27,
         "verse_end": 38
       },
-      "theme": "Evangelização",
-      "difficulty": "hard",
-      "subcategory": "Igreja primitiva",
-      "tags": [
-        "eunuco",
-        "filipe"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "personagens-0016",
@@ -572,13 +470,7 @@
         "verse_start": 14,
         "verse_end": 16
       },
-      "theme": "Sacerdócio",
-      "difficulty": "easy",
-      "subcategory": "Sacerdotes",
-      "tags": [
-        "arao",
-        "moises"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "personagens-0017",
@@ -611,13 +503,7 @@
         "verse_start": 18,
         "verse_end": 20
       },
-      "theme": "Sacerdócio",
-      "difficulty": "hard",
-      "subcategory": "Patriarcas",
-      "tags": [
-        "melquisedeque",
-        "abraao"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "personagens-0018",
@@ -650,13 +536,7 @@
         "verse_start": 24,
         "verse_end": 29
       },
-      "theme": "Fé e dúvida",
-      "difficulty": "easy",
-      "subcategory": "Os Doze",
-      "tags": [
-        "tome",
-        "ressurreicao"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "personagens-0019",
@@ -674,13 +554,7 @@
         "verse_start": 2,
         "verse_end": 3
       },
-      "theme": "Fidelidade de Deus",
-      "difficulty": "hard",
-      "subcategory": "Profetas",
-      "tags": [
-        "oseias",
-        "gomer"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "personagens-0020",
@@ -713,13 +587,7 @@
         "verse_start": 14,
         "verse_end": 18
       },
-      "theme": "Ressurreição",
-      "difficulty": "medium",
-      "subcategory": "Mulheres da Bíblia",
-      "tags": [
-        "maria madalena",
-        "ressurreicao"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "personagens-0021",
@@ -752,13 +620,7 @@
         "verse_start": 28,
         "verse_end": 29
       },
-      "theme": "Genealogia",
-      "difficulty": "expert",
-      "subcategory": "Antediluvianos",
-      "tags": [
-        "lameque",
-        "noe"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "personagens-0022",
@@ -777,13 +639,7 @@
         "verse_start": 30,
         "verse_end": 39
       },
-      "theme": "Votos",
-      "difficulty": "expert",
-      "subcategory": "Juízes",
-      "tags": [
-        "jefte",
-        "voto"
-      ]
+      "difficulty": "expert"
     }
   ]
 }

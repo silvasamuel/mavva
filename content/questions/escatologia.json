@@ -32,14 +32,7 @@
         "verse_start": 1,
         "verse_end": 3
       },
-      "theme": "Segunda vinda",
-      "difficulty": "easy",
-      "subcategory": "Volta de Cristo",
-      "tags": [
-        "segunda vinda",
-        "promessa",
-        "moradas"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "escatologia-0002",
@@ -72,14 +65,7 @@
         "verse_start": 9,
         "verse_end": 11
       },
-      "theme": "Segunda vinda",
-      "difficulty": "easy",
-      "subcategory": "Volta de Cristo",
-      "tags": [
-        "ascensao",
-        "nuvens",
-        "retorno visivel"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "escatologia-0003",
@@ -112,14 +98,7 @@
         "verse_start": 13,
         "verse_end": 18
       },
-      "theme": "Ressurreição",
-      "difficulty": "medium",
-      "subcategory": "Arrebatamento",
-      "tags": [
-        "arrebatamento",
-        "ressurreicao",
-        "tessalonicenses"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "escatologia-0004",
@@ -139,14 +118,7 @@
         "verse_start": 1,
         "verse_end": 6
       },
-      "theme": "Milênio",
-      "difficulty": "medium",
-      "subcategory": "Milênio",
-      "tags": [
-        "milenio",
-        "apocalipse",
-        "mil anos"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "escatologia-0005",
@@ -179,14 +151,7 @@
         "verse_start": 1,
         "verse_end": 4
       },
-      "theme": "Estado eterno",
-      "difficulty": "easy",
-      "subcategory": "Novo céu e nova terra",
-      "tags": [
-        "nova jerusalem",
-        "apocalipse",
-        "eternidade"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "escatologia-0006",
@@ -219,14 +184,7 @@
         "verse_start": 11,
         "verse_end": 15
       },
-      "theme": "Juízo final",
-      "difficulty": "medium",
-      "subcategory": "Juízo",
-      "tags": [
-        "trono branco",
-        "livro da vida",
-        "juizo"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "escatologia-0007",
@@ -259,14 +217,7 @@
         "verse_start": 1,
         "verse_end": 8
       },
-      "theme": "Anticristo",
-      "difficulty": "hard",
-      "subcategory": "Sinais dos tempos",
-      "tags": [
-        "homem do pecado",
-        "apostasia",
-        "tessalonicenses"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "escatologia-0008",
@@ -299,14 +250,7 @@
         "verse_start": 8,
         "verse_end": 10
       },
-      "theme": "Dia do Senhor",
-      "difficulty": "medium",
-      "subcategory": "Sinais dos tempos",
-      "tags": [
-        "dia do senhor",
-        "ladrao",
-        "vigilancia"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "escatologia-0009",
@@ -339,14 +283,7 @@
         "verse_start": 36,
         "verse_end": 44
       },
-      "theme": "Vigilância",
-      "difficulty": "easy",
-      "subcategory": "Volta de Cristo",
-      "tags": [
-        "dia e hora",
-        "vigiai",
-        "mateus 24"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "escatologia-0010",
@@ -379,14 +316,7 @@
         "verse_start": 4,
         "verse_end": 5
       },
-      "theme": "Estado eterno",
-      "difficulty": "easy",
-      "subcategory": "Novo céu e nova terra",
-      "tags": [
-        "eternidade",
-        "sem morte",
-        "consolacao"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "escatologia-0011",
@@ -419,13 +349,7 @@
         "verse_start": 16,
         "verse_end": 17
       },
-      "theme": "Volta de Cristo",
-      "difficulty": "medium",
-      "subcategory": "Últimas coisas",
-      "tags": [
-        "volta",
-        "trombeta"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "escatologia-0012",
@@ -458,13 +382,7 @@
         "verse_start": 4,
         "verse_end": 6
       },
-      "theme": "Milênio",
-      "difficulty": "hard",
-      "subcategory": "Últimas coisas",
-      "tags": [
-        "milenio",
-        "reino"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "escatologia-0013",
@@ -497,13 +415,7 @@
         "verse_start": 2,
         "verse_end": 4
       },
-      "theme": "Estado eterno",
-      "difficulty": "medium",
-      "subcategory": "Últimas coisas",
-      "tags": [
-        "nova jerusalem",
-        "eternidade"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "escatologia-0014",
@@ -536,13 +448,7 @@
         "verse_start": 13,
         "verse_end": 15
       },
-      "theme": "Juízo final",
-      "difficulty": "hard",
-      "subcategory": "Últimas coisas",
-      "tags": [
-        "lago de fogo",
-        "juizo"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "escatologia-0015",
@@ -562,13 +468,7 @@
         "verse_start": 36,
         "verse_end": null
       },
-      "theme": "Vigilância",
-      "difficulty": "medium",
-      "subcategory": "Últimas coisas",
-      "tags": [
-        "dia e hora",
-        "vigilancia"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "escatologia-0016",
@@ -601,13 +501,7 @@
         "verse_start": 13,
         "verse_end": 14
       },
-      "theme": "Reino eterno",
-      "difficulty": "expert",
-      "subcategory": "Profecia",
-      "tags": [
-        "filho do homem",
-        "daniel"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "escatologia-0017",
@@ -640,13 +534,7 @@
         "verse_start": 51,
         "verse_end": 52
       },
-      "theme": "Ressurreição",
-      "difficulty": "hard",
-      "subcategory": "Últimas coisas",
-      "tags": [
-        "transformacao",
-        "trombeta"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "escatologia-0018",
@@ -679,13 +567,7 @@
         "verse_start": 4,
         "verse_end": 8
       },
-      "theme": "Selados",
-      "difficulty": "expert",
-      "subcategory": "Últimas coisas",
-      "tags": [
-        "144 mil",
-        "selados"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "escatologia-0019",
@@ -718,13 +600,7 @@
         "verse_start": 6,
         "verse_end": 8
       },
-      "theme": "Sinais do fim",
-      "difficulty": "hard",
-      "subcategory": "Últimas coisas",
-      "tags": [
-        "sinais",
-        "dores"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "escatologia-0020",
@@ -757,13 +633,7 @@
         "verse_start": 4,
         "verse_end": null
       },
-      "theme": "Estado eterno",
-      "difficulty": "medium",
-      "subcategory": "Últimas coisas",
-      "tags": [
-        "eternidade",
-        "consolacao"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "escatologia-0021",
@@ -796,13 +666,7 @@
         "verse_start": 4,
         "verse_end": null
       },
-      "theme": "Visão celestial",
-      "difficulty": "expert",
-      "subcategory": "Últimas coisas",
-      "tags": [
-        "ancioes",
-        "trono"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "escatologia-0022",
@@ -835,13 +699,7 @@
         "verse_start": 18,
         "verse_end": null
       },
-      "theme": "Besta",
-      "difficulty": "expert",
-      "subcategory": "Últimas coisas",
-      "tags": [
-        "666",
-        "besta"
-      ]
+      "difficulty": "expert"
     }
   ]
 }

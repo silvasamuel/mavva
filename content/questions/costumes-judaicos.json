@@ -32,14 +32,7 @@
         "verse_start": 2,
         "verse_end": 3
       },
-      "theme": "Sinais da aliança",
-      "difficulty": "medium",
-      "subcategory": "Ritos",
-      "tags": [
-        "circuncisao",
-        "oitavo dia",
-        "alianca"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "costumes-judaicos-0002",
@@ -72,14 +65,7 @@
         "verse_start": 8,
         "verse_end": 11
       },
-      "theme": "Sábado",
-      "difficulty": "easy",
-      "subcategory": "Lei",
-      "tags": [
-        "sabado",
-        "descanso",
-        "mandamento"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "costumes-judaicos-0003",
@@ -112,14 +98,7 @@
         "verse_start": 5,
         "verse_end": 6
       },
-      "theme": "Família",
-      "difficulty": "hard",
-      "subcategory": "Lei",
-      "tags": [
-        "levirato",
-        "rute",
-        "cunhado"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "costumes-judaicos-0004",
@@ -152,14 +131,7 @@
         "verse_start": 5,
         "verse_end": 7
       },
-      "theme": "Piedade e ostentação",
-      "difficulty": "hard",
-      "subcategory": "Práticas religiosas",
-      "tags": [
-        "filacterios",
-        "fariseus",
-        "ostentacao"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "costumes-judaicos-0005",
@@ -192,14 +164,7 @@
         "verse_start": 1,
         "verse_end": 13
       },
-      "theme": "Tradição e Escritura",
-      "difficulty": "medium",
-      "subcategory": "Práticas religiosas",
-      "tags": [
-        "tradicao",
-        "lavar maos",
-        "fariseus"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "costumes-judaicos-0006",
@@ -221,14 +186,7 @@
         "verse_start": 30,
         "verse_end": 32
       },
-      "theme": "Ofertas",
-      "difficulty": "easy",
-      "subcategory": "Lei",
-      "tags": [
-        "dizimo",
-        "levitas",
-        "decima parte"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "costumes-judaicos-0007",
@@ -249,14 +207,7 @@
         "verse_start": 8,
         "verse_end": 13
       },
-      "theme": "Liberdade e restituição",
-      "difficulty": "hard",
-      "subcategory": "Lei",
-      "tags": [
-        "jubileu",
-        "cinquenta anos",
-        "liberdade"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "costumes-judaicos-0008",
@@ -289,14 +240,7 @@
         "verse_start": 22,
         "verse_end": 24
       },
-      "theme": "Purificação",
-      "difficulty": "medium",
-      "subcategory": "Ritos",
-      "tags": [
-        "apresentacao",
-        "rolas",
-        "pobreza"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "costumes-judaicos-0009",
@@ -329,14 +273,7 @@
         "verse_start": 12,
         "verse_end": 13
       },
-      "theme": "Luto",
-      "difficulty": "medium",
-      "subcategory": "Costumes sociais",
-      "tags": [
-        "vestes rasgadas",
-        "luto",
-        "lamento"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "costumes-judaicos-0010",
@@ -369,14 +306,7 @@
         "verse_start": 3,
         "verse_end": 15
       },
-      "theme": "Hospitalidade",
-      "difficulty": "easy",
-      "subcategory": "Costumes sociais",
-      "tags": [
-        "lavar pes",
-        "hospitalidade",
-        "servico"
-      ]
+      "difficulty": "easy"
     },
     {
       "external_id": "costumes-judaicos-0011",
@@ -409,13 +339,7 @@
         "verse_start": 3,
         "verse_end": null
       },
-      "theme": "Aliança",
-      "difficulty": "medium",
-      "subcategory": "Ritos",
-      "tags": [
-        "circuncisao",
-        "oitavo dia"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "costumes-judaicos-0012",
@@ -448,13 +372,7 @@
         "verse_start": 3,
         "verse_end": 4
       },
-      "theme": "Leis da terra",
-      "difficulty": "hard",
-      "subcategory": "Calendário sagrado",
-      "tags": [
-        "ano sabatico",
-        "descanso"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "costumes-judaicos-0013",
@@ -487,13 +405,7 @@
         "verse_start": 10,
         "verse_end": 11
       },
-      "theme": "Leis da terra",
-      "difficulty": "expert",
-      "subcategory": "Calendário sagrado",
-      "tags": [
-        "jubileu",
-        "restituicao"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "costumes-judaicos-0014",
@@ -526,13 +438,7 @@
         "verse_start": 10,
         "verse_end": 22
       },
-      "theme": "Expiação",
-      "difficulty": "hard",
-      "subcategory": "Ritos",
-      "tags": [
-        "bode emissario",
-        "expiacao"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "costumes-judaicos-0015",
@@ -565,13 +471,7 @@
         "verse_start": 7,
         "verse_end": 8
       },
-      "theme": "Leis alimentares",
-      "difficulty": "medium",
-      "subcategory": "Pureza",
-      "tags": [
-        "porco",
-        "kosher"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "costumes-judaicos-0016",
@@ -604,13 +504,7 @@
         "verse_start": 8,
         "verse_end": 9
       },
-      "theme": "Devoção",
-      "difficulty": "hard",
-      "subcategory": "Práticas",
-      "tags": [
-        "filacterios",
-        "lei"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "costumes-judaicos-0017",
@@ -643,13 +537,7 @@
         "verse_start": 65,
         "verse_end": null
       },
-      "theme": "Luto",
-      "difficulty": "medium",
-      "subcategory": "Costumes",
-      "tags": [
-        "rasgar vestes",
-        "luto"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "costumes-judaicos-0018",
@@ -670,13 +558,7 @@
         "verse_start": 22,
         "verse_end": 24
       },
-      "theme": "Purificação",
-      "difficulty": "expert",
-      "subcategory": "Ritos",
-      "tags": [
-        "purificacao",
-        "oferta"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "costumes-judaicos-0019",
@@ -709,13 +591,7 @@
         "verse_start": 4,
         "verse_end": 6
       },
-      "theme": "Leis de família",
-      "difficulty": "hard",
-      "subcategory": "Costumes",
-      "tags": [
-        "goel",
-        "remidor"
-      ]
+      "difficulty": "hard"
     },
     {
       "external_id": "costumes-judaicos-0020",
@@ -748,13 +624,7 @@
         "verse_start": 8,
         "verse_end": 11
       },
-      "theme": "Sábado",
-      "difficulty": "medium",
-      "subcategory": "Calendário sagrado",
-      "tags": [
-        "sabado",
-        "descanso"
-      ]
+      "difficulty": "medium"
     },
     {
       "external_id": "costumes-judaicos-0021",
@@ -774,13 +644,7 @@
         "verse_start": 2,
         "verse_end": 5
       },
-      "theme": "Votos",
-      "difficulty": "expert",
-      "subcategory": "Consagração",
-      "tags": [
-        "nazireu",
-        "voto"
-      ]
+      "difficulty": "expert"
     },
     {
       "external_id": "costumes-judaicos-0022",
@@ -813,13 +677,7 @@
         "verse_start": 9,
         "verse_end": 10
       },
-      "theme": "Justiça social",
-      "difficulty": "expert",
-      "subcategory": "Leis da colheita",
-      "tags": [
-        "respiga",
-        "pobres"
-      ]
+      "difficulty": "expert"
     }
   ]
 }

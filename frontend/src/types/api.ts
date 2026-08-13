@@ -287,10 +287,7 @@ export interface QuestionDraft {
   chapter: number
   verse_start: number
   verse_end: number | null
-  theme: string
   difficulty: Difficulty
-  subcategory: string | null
-  tags: string[]
 }
 
 export interface FlagCreateResponse {

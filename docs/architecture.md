@@ -9,7 +9,7 @@
 | API | **Versionada em `/api/v1`** | O app mobile futuro poderá depender de `v1` estável enquanto a web evolui para `v2`. |
 | Frontend | **Feature-based** (`features/auth`, `features/quiz`…) | Cada feature é autocontida (páginas, hooks, componentes, api). Escala melhor que separar por tipo de arquivo. |
 | Estado servidor | **React Query** | Cache, invalidação e retry de dados da API. Sem Redux — estado global de cliente é mínimo (só sessão de auth, via context). |
-| Banco | **PostgreSQL 16** | Relacional (quiz ↔ perguntas ↔ respostas), JSONB para filtros, arrays para tags. |
+| Banco | **PostgreSQL 16** | Relacional (quiz ↔ perguntas ↔ respostas), JSONB para filtros de sessão. |
 | Python | **3.12 + uv** | uv é ordens de magnitude mais rápido que pip/poetry e gera lockfile determinístico. |
 | Node | **pnpm** | Instalação rápida, disco eficiente, padrão moderno para monorepos. |
 | IDs | **UUID v4** | Seguro para expor na API e pronto para sync offline no futuro (mobile gera IDs localmente sem colisão). |
