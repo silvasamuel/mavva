@@ -115,7 +115,7 @@ export function DashboardPage() {
       </motion.section>
 
       <motion.div variants={enter}>
-        <RankLadder currentCode={stats.rank.code} />
+        <RankLadder currentCode={stats.rank.code} level={stats.level} />
       </motion.div>
 
       {data.friend_requests > 0 && (

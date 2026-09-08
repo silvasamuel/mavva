@@ -35,7 +35,7 @@ export function VerifyEmailPage() {
 
   if (!token) {
     return (
-      <AuthLayout title="Link inválido">
+      <AuthLayout robots="noindex, nofollow" title="Link inválido">
         <p className="text-center text-sm font-semibold text-sand-600">
           Este link de confirmação é inválido ou está incompleto.{' '}
           <Link to="/register" className="font-bold text-leaf-600 hover:underline">
@@ -49,7 +49,7 @@ export function VerifyEmailPage() {
 
   if (error) {
     return (
-      <AuthLayout title="Não foi possível confirmar">
+      <AuthLayout robots="noindex, nofollow" title="Não foi possível confirmar">
         <p className="text-center text-sm font-semibold text-sand-600">
           {error}{' '}
           <Link to="/login" className="font-bold text-leaf-600 hover:underline">
@@ -62,7 +62,7 @@ export function VerifyEmailPage() {
   }
 
   return (
-    <AuthLayout title="Confirmando e-mail">
+    <AuthLayout robots="noindex, nofollow" title="Confirmando e-mail">
       <p className="text-center text-sm font-semibold text-sand-600">Aguarde um instante…</p>
     </AuthLayout>
   )

@@ -1,6 +1,7 @@
 import { RankBadge } from '@/components/RankBadge'
 import { ProgressBar } from '@/components/ui/ProgressBar'
 import { AppIcons, Glyph } from '@/lib/icons'
+import { nextRankCopy, rankFromLevel, rankProgress } from '@/lib/ranks'
 
 export function GameHud({
   rankCode,
@@ -20,6 +21,9 @@ export function GameHud({
   loading?: boolean
 }) {
   const days = streak ?? 0
+  const band = rankFromLevel(level ?? 1)
+  const next = band.maxLevel != null ? rankFromLevel(band.maxLevel + 1) : null
+  const elo = rankProgress(level ?? 1, band.minLevel, next?.minLevel ?? null)
   return (
     <div className="flex items-center gap-3 rounded-2xl bg-white/80 px-3 py-2 shadow-card backdrop-blur-md">
       <RankBadge code={rankCode ?? 'semente'} size="sm" />
@@ -38,6 +42,9 @@ export function GameHud({
           className="mt-1.5 h-2"
           color="bg-grain-400"
         />
+        <p className="mt-1 truncate text-xs font-extrabold text-sand-500">
+          {nextRankCopy(elo.remaining, next?.name ?? null)}
+        </p>
       </div>
       <div
         className={`flex min-w-12 flex-col items-center rounded-xl px-2 py-1 ${

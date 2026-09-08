@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/Button'
 import { Card, CardTitle } from '@/components/ui/Card'
 import { Input } from '@/components/ui/Input'
 import { RankBadge } from '@/components/RankBadge'
+import { nextRankCopy, rankFromLevel, rankProgress } from '@/lib/ranks'
 import { Spinner } from '@/components/ui/Spinner'
 import { useAuth } from '@/features/auth/AuthContext'
 
@@ -44,6 +45,21 @@ export function ProfilePage() {
     },
   })
 
+  const profileBand = dashboard ? rankFromLevel(dashboard.stats.level) : null
+  const profileNext =
+    profileBand?.maxLevel != null ? rankFromLevel(profileBand.maxLevel + 1) : null
+  const eloHint =
+    dashboard && profileBand
+      ? nextRankCopy(
+          rankProgress(
+            dashboard.stats.level,
+            profileBand.minLevel,
+            profileNext?.minLevel ?? null
+          ).remaining,
+          profileNext?.name ?? null
+        )
+      : null
+
   return (
     <div className="animate-float-up mx-auto max-w-xl space-y-6">
       <header className="flex items-center gap-4">
@@ -61,6 +77,7 @@ export function ProfilePage() {
               ? `${dashboard.stats.rank.name} · nível ${dashboard.stats.level}`
               : user?.email}
           </p>
+          {eloHint && <p className="text-xs font-extrabold text-leaf-700">{eloHint}</p>}
           {dashboard && (
             <p className="text-xs font-semibold text-sand-400">{user?.email}</p>
           )}

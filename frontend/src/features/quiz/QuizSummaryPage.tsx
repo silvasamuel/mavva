@@ -179,7 +179,7 @@ export function QuizSummaryPage() {
                 <p className="mt-2 font-bold text-sand-600">{RANK_FLAVOR[summary.rank.code]}</p>
               )}
               <div className="mt-6 text-left">
-                <RankLadder currentCode={summary.rank.code} />
+                <RankLadder currentCode={summary.rank.code} level={summary.level.current} />
               </div>
             </>
           )}
