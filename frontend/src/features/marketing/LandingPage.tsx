@@ -10,23 +10,41 @@ const FEATURES = [
     icon: AppIcons.study,
     title: 'Quiz bíblico',
     text: 'Perguntas de múltipla escolha com referência e explicação. Antigo e Novo Testamento, do fácil ao expert.',
+    action: 'study' as const,
   },
   {
     icon: AppIcons.review,
     title: 'Revisão inteligente',
     text: 'A repetição espaçada devolve cada pergunta na hora certa para fixar de verdade.',
+    action: 'review' as const,
   },
   {
     icon: AppIcons.duels,
     title: 'Duelos',
     text: 'Desafie um amigo ou um adversário aleatório para provar quem conhece melhor as escrituras.',
+    action: 'duel' as const,
   },
   {
     icon: AppIcons.crown,
     title: 'Elos e maná',
     text: 'Suba de Semente a Celeiro, cumpra a meta diária e mantenha a sequência.',
+    action: 'elo' as const,
   },
 ]
+
+const HOVER = {
+  study: 'hover:border-leaf-400 hover:bg-leaf-50 hover:text-leaf-800',
+  review: 'hover:border-leaf-400 hover:bg-leaf-100 hover:text-leaf-800',
+  duel: 'hover:border-red-300 hover:bg-red-50 hover:text-red-700',
+  elo: 'hover:border-grain-400 hover:bg-grain-100 hover:text-grain-900',
+}
+
+const ICON_MOTION = {
+  study: 'group-hover:animate-icon-bob',
+  review: 'group-hover:animate-icon-spin',
+  duel: 'group-hover:animate-icon-slash',
+  elo: 'group-hover:animate-icon-shine',
+}
 
 export function LandingPage() {
   return (
@@ -63,13 +81,21 @@ export function LandingPage() {
           {FEATURES.map((feature) => (
             <li
               key={feature.title}
-              className="rounded-3xl bg-white/80 p-5 shadow-card backdrop-blur-sm"
+              className={`group rounded-3xl border border-transparent bg-white/80 p-5 shadow-card backdrop-blur-sm transition-[transform,background-color,border-color,color] hover:scale-[1.03] ${HOVER[feature.action]}`}
             >
-              <span className="text-leaf-700">
-                <Glyph as={feature.icon} className="h-7 w-7" />
+              <span className={`relative inline-flex text-leaf-700 group-hover:text-inherit ${feature.action === 'elo' ? 'overflow-hidden' : ''}`}>
+                <Glyph as={feature.icon} className={`h-7 w-7 ${ICON_MOTION[feature.action]}`} />
+                {feature.action === 'elo' && (
+                  <span
+                    aria-hidden
+                    className="pointer-events-none absolute inset-y-0 left-0 w-1/2 -skew-x-12 bg-gradient-to-r from-transparent via-white/80 to-transparent opacity-0 group-hover:animate-shine-sweep"
+                  />
+                )}
               </span>
               <h3 className="mt-3 text-lg font-extrabold">{feature.title}</h3>
-              <p className="mt-1 text-sm font-semibold text-sand-600">{feature.text}</p>
+              <p className="mt-1 text-sm font-semibold text-sand-600 group-hover:text-inherit">
+                {feature.text}
+              </p>
             </li>
           ))}
         </ul>

@@ -29,7 +29,8 @@
   .animate-icon-spin,
   .animate-icon-slash,
   .animate-icon-shine,
-  .animate-shine-sweep {
+  .animate-shine-sweep,
+  .animate-icon-bob {
     animation: none;
   }
 }
