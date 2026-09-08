@@ -5,6 +5,7 @@ import type { FlagCreateResponse, FlagReason } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { FLAG_REASON_LABELS } from '@/lib/format'
+import { AppIcons, Glyph } from '@/lib/icons'
 
 const REASONS: FlagReason[] = ['wrong_text', 'wrong_answer', 'wrong_reference', 'other']
 
@@ -61,9 +62,9 @@ export function ReportQuestionModal({
       <div className="space-y-4 text-left">
         {done ? (
           <>
-            <p className="text-center text-3xl" aria-hidden>
-              🙏
-            </p>
+            <span className="mx-auto flex justify-center text-leaf-600">
+              <Glyph as={AppIcons.pray} className="h-12 w-12" />
+            </span>
             <p className="text-center font-extrabold">Obrigado, vamos revisar.</p>
             <Button full onClick={onClose}>
               Fechar

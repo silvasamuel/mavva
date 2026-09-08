@@ -5,41 +5,43 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { api } from '@/lib/api'
 import type { DashboardData } from '@/types/api'
 import { Logo } from '@/components/Logo'
+import { GameHud } from '@/components/GameHud'
 import { useAuth } from '@/features/auth/AuthContext'
+import { AppIcons, Glyph, type Icon } from '@/lib/icons'
 
 interface NavItem {
   to: string
   label: string
-  icon: string
+  icon: Icon
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { to: '/', label: 'Início', icon: '🏠' },
-  { to: '/quiz/new', label: 'Estudar', icon: '📖' },
-  { to: '/duels', label: 'Duelos', icon: '⚔️' },
-  { to: '/review', label: 'Revisar', icon: '🔁' },
-  { to: '/friends', label: 'Amigos', icon: '🤝' },
-  { to: '/ranking', label: 'Ranking', icon: '🏆' },
-  { to: '/achievements', label: 'Conquistas', icon: '🏅' },
-  { to: '/suggest', label: 'Sugerir', icon: '✍️' },
-  { to: '/profile', label: 'Perfil', icon: '👤' },
+  { to: '/', label: 'Início', icon: AppIcons.home },
+  { to: '/quiz/new', label: 'Estudar', icon: AppIcons.study },
+  { to: '/duels', label: 'Duelos', icon: AppIcons.duels },
+  { to: '/review', label: 'Revisar', icon: AppIcons.review },
+  { to: '/friends', label: 'Amigos', icon: AppIcons.friends },
+  { to: '/ranking', label: 'Ranking', icon: AppIcons.ranking },
+  { to: '/achievements', label: 'Conquistas', icon: AppIcons.achievements },
+  { to: '/suggest', label: 'Sugerir', icon: AppIcons.suggest },
+  { to: '/profile', label: 'Perfil', icon: AppIcons.profile },
 ]
 
 const MOBILE_TABS: NavItem[] = [
-  { to: '/', label: 'Início', icon: '🏠' },
-  { to: '/quiz/new', label: 'Estudar', icon: '📖' },
-  { to: '/duels', label: 'Duelos', icon: '⚔️' },
+  { to: '/', label: 'Início', icon: AppIcons.home },
+  { to: '/quiz/new', label: 'Estudar', icon: AppIcons.study },
+  { to: '/duels', label: 'Duelos', icon: AppIcons.duels },
 ]
 
 const BADGE_PATHS = ['/duels', '/review', '/friends']
 
 const MORE_ITEMS: NavItem[] = [
-  { to: '/review', label: 'Revisar', icon: '🔁' },
-  { to: '/friends', label: 'Amigos', icon: '🤝' },
-  { to: '/ranking', label: 'Ranking', icon: '🏆' },
-  { to: '/achievements', label: 'Conquistas', icon: '🏅' },
-  { to: '/suggest', label: 'Sugerir', icon: '✍️' },
-  { to: '/profile', label: 'Perfil', icon: '👤' },
+  { to: '/review', label: 'Revisar', icon: AppIcons.review },
+  { to: '/friends', label: 'Amigos', icon: AppIcons.friends },
+  { to: '/ranking', label: 'Ranking', icon: AppIcons.ranking },
+  { to: '/achievements', label: 'Conquistas', icon: AppIcons.achievements },
+  { to: '/suggest', label: 'Sugerir', icon: AppIcons.suggest },
+  { to: '/profile', label: 'Perfil', icon: AppIcons.profile },
 ]
 
 function navClass({ isActive }: { isActive: boolean }) {
@@ -105,16 +107,16 @@ export function AppShell() {
   }
 
   return (
-    <div className="mx-auto flex min-h-screen max-w-6xl">
+    <div className="relative mx-auto flex min-h-screen max-w-6xl">
       {/* Desktop sidebar */}
-      <aside className="sticky top-0 hidden h-screen w-60 flex-col gap-6 border-r border-sand-100 px-4 py-6 md:flex">
+      <aside className="sticky top-0 hidden h-screen w-60 flex-col gap-6 border-r border-sand-200/60 bg-white/50 px-4 py-6 backdrop-blur-md md:flex">
         <div className="px-2">
           <Logo />
         </div>
         <nav className="flex flex-1 flex-col gap-1" aria-label="Principal">
           {NAV_ITEMS.map((item) => (
             <NavLink key={item.to} to={item.to} end={item.to === '/'} className={navClass}>
-              <span aria-hidden>{item.icon}</span>
+              <Glyph as={item.icon} className="h-5 w-5" />
               {item.label}
               <Badge
                 count={badgeFor(item.to)}
@@ -123,34 +125,34 @@ export function AppShell() {
             </NavLink>
           ))}
         </nav>
-        <div className="flex items-center gap-3 rounded-2xl bg-grain-50 px-4 py-3 ring-1 ring-grain-200">
-          <span className="text-2xl" aria-hidden>
-            {streak > 0 ? '🔥' : '🪵'}
-          </span>
-          <div>
-            <p className="text-lg font-extrabold leading-none text-grain-700">{streak}</p>
-            <p className="text-xs font-bold text-grain-600">
-              {streak === 1 ? 'dia seguido' : 'dias seguidos'}
-            </p>
-          </div>
-        </div>
         <button
           onClick={handleLogout}
-          className="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-extrabold uppercase tracking-wide text-sand-500 transition-colors hover:bg-red-50 hover:text-red-600"
+          className="flex items-center gap-3 rounded-2xl bg-red-50 px-4 py-3 text-sm font-extrabold uppercase tracking-wide text-red-600 ring-1 ring-red-100 transition-colors hover:bg-red-100"
         >
-          <span aria-hidden>🚪</span>
+          <Glyph as={AppIcons.logout} className="h-5 w-5" />
           Sair
         </button>
       </aside>
 
       {/* Content */}
-      <main className="min-w-0 flex-1 px-4 pb-24 pt-6 md:px-8 md:pb-10">
+      <main className="min-w-0 flex-1 px-4 pb-24 pt-4 md:px-8 md:pb-10">
+        <div className="sticky top-0 z-10 -mx-4 mb-4 bg-gradient-to-b from-[#f4efe0]/90 to-transparent px-4 pb-2 pt-2 backdrop-blur-[2px] md:-mx-8 md:px-8">
+          <GameHud
+            loading={isPending}
+            rankCode={data?.stats.rank.code}
+            rankName={data?.stats.rank.name}
+            level={data?.stats.level}
+            xpInto={data?.stats.xp_into_level}
+            xpForNext={data?.stats.xp_for_next_level}
+            streak={streak}
+          />
+        </div>
         <Outlet />
       </main>
 
       {/* Mobile bottom tabs */}
       <nav
-        className="fixed inset-x-0 bottom-0 z-20 flex justify-around border-t border-sand-200 bg-white/95 py-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] backdrop-blur md:hidden"
+        className="fixed inset-x-0 bottom-0 z-20 flex justify-around border-t border-sand-200/70 bg-white/80 py-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] backdrop-blur-md md:hidden"
         aria-label="Principal"
       >
         {MOBILE_TABS.map((item) => {
@@ -166,9 +168,7 @@ export function AppShell() {
                 }`
               }
             >
-              <span className="text-xl" aria-hidden>
-                {item.icon}
-              </span>
+              <Glyph as={item.icon} className="h-5 w-5" />
               {isPending && item.to === '/duels' ? (
                 <span
                   className="absolute right-1 top-0 h-4 w-4 animate-pulse rounded-full bg-sand-200"
@@ -194,9 +194,7 @@ export function AppShell() {
             moreActive ? 'text-leaf-600' : 'text-sand-500'
           }`}
         >
-          <span className="text-xl" aria-hidden>
-            ☰
-          </span>
+          <Glyph as={AppIcons.more} className="h-5 w-5" />
           {isPending ? (
             <span
               className="absolute right-1 top-0 h-4 w-4 animate-pulse rounded-full bg-sand-200"
@@ -233,7 +231,7 @@ export function AppShell() {
               animate={{ y: 0 }}
               exit={{ y: '100%' }}
               transition={{ type: 'spring', stiffness: 380, damping: 32 }}
-              className="fixed inset-x-0 bottom-0 z-40 rounded-t-3xl bg-white px-4 pt-3 pb-[max(1.25rem,env(safe-area-inset-bottom))] shadow-card md:hidden"
+              className="fixed inset-x-0 bottom-0 z-40 rounded-t-3xl bg-white/90 px-4 pt-3 pb-[max(1.25rem,env(safe-area-inset-bottom))] shadow-card backdrop-blur-md md:hidden"
             >
               <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-sand-200" />
               <nav className="flex flex-col gap-1" aria-label="Mais">
@@ -244,7 +242,7 @@ export function AppShell() {
                     onClick={() => setMoreOpen(false)}
                     className={navClass}
                   >
-                    <span aria-hidden>{item.icon}</span>
+                    <Glyph as={item.icon} className="h-5 w-5" />
                     {item.label}
                     <Badge
                       count={badgeFor(item.to)}

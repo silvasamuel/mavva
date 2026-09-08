@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
 import { api } from '@/lib/api'
 import { AuthLayout } from './AuthLayout'
+import { AppIcons, Glyph } from '@/lib/icons'
 
 export function ForgotPasswordPage() {
   const [email, setEmail] = useState('')
@@ -26,8 +27,8 @@ export function ForgotPasswordPage() {
     <AuthLayout title="Recuperar senha">
       {sent ? (
         <div className="space-y-4 text-center">
-          <span className="text-4xl" aria-hidden>
-            📬
+          <span className="mx-auto flex justify-center text-leaf-600">
+            <Glyph as={AppIcons.mail} className="h-12 w-12" />
           </span>
           <p className="text-sm font-semibold text-sand-600">
             Se existir uma conta com <strong>{email}</strong>, você receberá um link para criar uma

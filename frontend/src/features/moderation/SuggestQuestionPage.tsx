@@ -7,6 +7,7 @@ import { Card } from '@/components/ui/Card'
 import { Spinner } from '@/components/ui/Spinner'
 import { QuestionDraftForm } from './QuestionDraftForm'
 import { emptyDraft, toApiDraft, validateDraft } from './questionDraft'
+import { AppIcons, Glyph } from '@/lib/icons'
 
 export function SuggestQuestionPage() {
   const { data: categories } = useQuery({
@@ -61,9 +62,9 @@ export function SuggestQuestionPage() {
   if (done) {
     return (
       <div className="animate-float-up mx-auto max-w-xl space-y-4 py-10 text-center">
-        <p className="text-4xl" aria-hidden>
-          🌱
-        </p>
+        <span className="mx-auto flex justify-center text-leaf-600">
+          <Glyph as={AppIcons.plant} className="h-12 w-12" />
+        </span>
         <h1 className="text-2xl font-extrabold">Sugestão enviada</h1>
         <p className="text-sm font-semibold text-sand-500">
           Ela entra na fila de revisão e só aparece nos quizzes depois de aprovada. Você pode ter

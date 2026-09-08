@@ -8,18 +8,19 @@ import { Card } from '@/components/ui/Card'
 import { Spinner } from '@/components/ui/Spinner'
 import { RankBadge } from '@/components/RankBadge'
 import { formatStudyTime } from '@/lib/format'
+import { AppIcons, Glyph, type Icon } from '@/lib/icons'
 
-const HEADLINE = {
-  win: { title: 'Você venceu! 🏆', tone: 'text-leaf-700' },
-  loss: { title: 'Dessa vez não 💪', tone: 'text-red-600' },
-  draw: { title: 'Empate! 🤝', tone: 'text-grain-700' },
-} as const
+const HEADLINE: Record<string, { title: string; tone: string; icon: Icon }> = {
+  win: { title: 'Você venceu!', tone: 'text-leaf-700', icon: AppIcons.crown },
+  loss: { title: 'Dessa vez não', tone: 'text-red-600', icon: AppIcons.sad },
+  draw: { title: 'Empate', tone: 'text-grain-700', icon: AppIcons.friends },
+}
 
-const CANCELLED_HEADLINE = {
-  win: { title: 'Seu rival desistiu 🏳️', tone: 'text-leaf-700' },
-  loss: { title: 'Duelo cancelado 🏳️', tone: 'text-red-600' },
-  draw: { title: 'Duelo cancelado', tone: 'text-sand-600' },
-} as const
+const CANCELLED_HEADLINE: Record<string, { title: string; tone: string; icon: Icon }> = {
+  win: { title: 'Seu rival desistiu', tone: 'text-leaf-700', icon: AppIcons.flag },
+  loss: { title: 'Duelo cancelado', tone: 'text-red-600', icon: AppIcons.flag },
+  draw: { title: 'Duelo cancelado', tone: 'text-sand-600', icon: AppIcons.flag },
+}
 
 export function DuelResultPage() {
   const { duelId } = useParams<{ duelId: string }>()
@@ -51,9 +52,14 @@ export function DuelResultPage() {
 
   return (
     <div className="animate-float-up mx-auto max-w-xl space-y-6">
-      <h1 className={`text-center text-2xl font-extrabold ${headline?.tone ?? ''}`}>
-        {headline ? headline.title : 'Rodada enviada! ⏳'}
-      </h1>
+      <div className="text-center">
+        <span className={`mx-auto flex justify-center ${headline?.tone ?? 'text-sand-500'}`}>
+          <Glyph as={headline?.icon ?? AppIcons.hourglass} className="h-10 w-10" />
+        </span>
+        <h1 className={`mt-2 text-2xl font-extrabold ${headline?.tone ?? ''}`}>
+          {headline ? headline.title : 'Rodada enviada'}
+        </h1>
+      </div>
 
       {!resolved && (
         <p className="text-center text-sm font-semibold text-sand-500">

@@ -11,6 +11,7 @@ import { EmptyState } from '@/components/ui/EmptyState'
 import { RankBadge } from '@/components/RankBadge'
 import { Modal } from '@/components/ui/Modal'
 import { useAuth } from '@/features/auth/AuthContext'
+import { AppIcons, Glyph } from '@/lib/icons'
 
 function PlayerRow({ user, children }: { user: PublicUser; children?: React.ReactNode }) {
   return (
@@ -188,7 +189,7 @@ export function FriendsPage() {
         <CardTitle>Meus amigos ({data.friends.length})</CardTitle>
         {data.friends.length === 0 ? (
           <EmptyState
-            icon="🤝"
+            icon={<Glyph as={AppIcons.friends} className="h-10 w-10" />}
             title="Nenhum amigo ainda"
             description="Busque pelo nome de usuário acima para enviar um pedido e começar a duelar."
           />

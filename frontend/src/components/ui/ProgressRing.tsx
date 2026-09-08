@@ -5,17 +5,22 @@ export function ProgressRing({
   max,
   size = 96,
   stroke = 10,
+  trackClass = 'stroke-sand-100',
+  barClass,
   children,
 }: {
   value: number
   max: number
   size?: number
   stroke?: number
+  trackClass?: string
+  barClass?: string
   children?: React.ReactNode
 }) {
   const radius = (size - stroke) / 2
   const circumference = 2 * Math.PI * radius
   const ratio = max > 0 ? Math.min(1, value / max) : 0
+  const bar = barClass ?? (ratio >= 1 ? 'stroke-grain-400' : 'stroke-leaf-500')
 
   return (
     <div className="relative inline-flex items-center justify-center" style={{ width: size, height: size }}>
@@ -26,7 +31,7 @@ export function ProgressRing({
           r={radius}
           fill="none"
           strokeWidth={stroke}
-          className="stroke-sand-100"
+          className={trackClass}
         />
         <motion.circle
           cx={size / 2}
@@ -35,7 +40,7 @@ export function ProgressRing({
           fill="none"
           strokeWidth={stroke}
           strokeLinecap="round"
-          className={ratio >= 1 ? 'stroke-grain-400' : 'stroke-leaf-500'}
+          className={bar}
           strokeDasharray={circumference}
           initial={false}
           animate={{ strokeDashoffset: circumference * (1 - ratio) }}
