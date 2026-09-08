@@ -68,7 +68,7 @@ export function QuizPlayPage() {
   const timerSeconds = session?.timer_seconds ?? null
   // The API already serves options shuffled per session (server-side, so the
   // answer position cannot be inferred by calling it directly).
-  const displayOptions = question?.options ?? []
+  const displayOptions = useMemo(() => question?.options ?? [], [question])
   const [remaining, setRemaining] = useState<number | null>(null)
 
   const wrongTotal = session
