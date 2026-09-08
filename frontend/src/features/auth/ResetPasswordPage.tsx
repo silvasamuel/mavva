@@ -34,7 +34,7 @@ export function ResetPasswordPage() {
 
   if (!token) {
     return (
-      <AuthLayout title="Link inválido">
+      <AuthLayout robots="noindex, nofollow" title="Link inválido">
         <p className="text-center text-sm font-semibold text-sand-600">
           Este link de recuperação é inválido ou está incompleto.{' '}
           <Link to="/forgot-password" className="font-bold text-leaf-600 hover:underline">
@@ -47,7 +47,7 @@ export function ResetPasswordPage() {
   }
 
   return (
-    <AuthLayout title="Criar nova senha">
+    <AuthLayout robots="noindex, nofollow" title="Criar nova senha">
       <form onSubmit={handleSubmit} className="space-y-4" noValidate>
         <Input
           label="Nova senha"

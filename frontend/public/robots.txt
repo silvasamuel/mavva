@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /admin/
+Disallow: /quiz/
+Disallow: /duels/
+Disallow: /reset-password
+Disallow: /verify-email
+Disallow: /forgot-password
+
+Sitemap: https://mavva.com.br/sitemap.xml

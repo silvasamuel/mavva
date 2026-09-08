@@ -24,7 +24,7 @@ export function ForgotPasswordPage() {
   }
 
   return (
-    <AuthLayout title="Recuperar senha">
+    <AuthLayout title="Recuperar senha" robots="noindex, nofollow">
       {sent ? (
         <div className="space-y-4 text-center">
           <span className="mx-auto flex justify-center text-leaf-600">

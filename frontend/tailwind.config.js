@@ -88,6 +88,10 @@ export default {
           '25%': { opacity: '0.9' },
           '100%': { transform: 'translateX(180%)', opacity: '0' },
         },
+        'icon-bob': {
+          '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+          '40%': { transform: 'translateY(-3px) rotate(-8deg)' },
+        },
       },
       animation: {
         'float-up': 'float-up 0.35s ease-out both',
@@ -97,6 +101,7 @@ export default {
         'icon-slash': 'icon-slash 0.55s ease-in-out',
         'icon-shine': 'icon-shine 0.8s ease-in-out',
         'shine-sweep': 'shine-sweep 0.85s ease-in-out',
+        'icon-bob': 'icon-bob 0.6s ease-in-out',
       },
     },
   },

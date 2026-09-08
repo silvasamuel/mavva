@@ -62,3 +62,22 @@ export function isRankCode(value: string): value is RankCode {
 export function rankLadderIndex(code: string): number {
   return isRankCode(code) ? RANK_CODES.indexOf(code) : 0
 }
+
+export function rankProgress(
+  level: number,
+  minLevel: number,
+  nextLevel: number | null
+): { current: number; total: number; remaining: number } {
+  if (nextLevel == null) {
+    return { current: 1, total: 1, remaining: 0 }
+  }
+  const total = nextLevel - minLevel
+  const current = Math.min(total, Math.max(0, level - minLevel))
+  return { current, total, remaining: Math.max(0, nextLevel - level) }
+}
+
+export function nextRankCopy(remaining: number, nextName: string | null): string {
+  if (!nextName) return 'Você chegou ao elo mais alto'
+  if (remaining === 1) return `Falta 1 nível para ${nextName}`
+  return `Faltam ${remaining} níveis para ${nextName}`
+}

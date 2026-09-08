@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
 import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -69,7 +69,7 @@ function Badge({ count, loading }: { count: number; loading?: boolean }) {
   )
 }
 
-export function AppShell() {
+export function AppShell({ children }: { children?: ReactNode }) {
   const { logout } = useAuth()
   const navigate = useNavigate()
   const location = useLocation()
@@ -147,7 +147,7 @@ export function AppShell() {
             streak={streak}
           />
         </div>
-        <Outlet />
+        {children ?? <Outlet />}
       </main>
 
       {/* Mobile bottom tabs */}
