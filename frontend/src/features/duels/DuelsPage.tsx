@@ -11,6 +11,7 @@ import { EmptyState } from '@/components/ui/EmptyState'
 import { RankBadge } from '@/components/RankBadge'
 import { Modal } from '@/components/ui/Modal'
 import { formatPercent, formatRelativeDate } from '@/lib/format'
+import { AppIcons, Glyph } from '@/lib/icons'
 
 const CLOSED: Duel['status'][] = ['finished', 'expired', 'cancelled']
 
@@ -45,7 +46,14 @@ function DuelCard({ duel, onPlay }: { duel: Duel; onPlay: (duel: Duel) => void }
               {badge.text}
             </span>
             <span className="text-xs font-bold text-sand-400">
-              {duel.mode === 'friend' ? '👥 Amigo' : '🎲 Aleatório'} ·{' '}
+              <span className="inline-flex items-center gap-1">
+                <Glyph
+                  as={duel.mode === 'friend' ? AppIcons.friends : AppIcons.dice}
+                  className="h-3.5 w-3.5"
+                />
+                {duel.mode === 'friend' ? 'Amigo' : 'Aleatório'}
+              </span>{' '}
+              ·{' '}
               {formatRelativeDate(duel.created_at)}
             </span>
           </div>
@@ -125,7 +133,10 @@ export function DuelsPage() {
     <div className="animate-float-up space-y-6">
       <header className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-extrabold">Duelos ⚔️</h1>
+          <h1 className="flex items-center gap-2 text-2xl font-extrabold">
+            <Glyph as={AppIcons.duels} className="h-7 w-7 text-leaf-700" />
+            Duelos
+          </h1>
           <p className="text-sm font-semibold text-sand-500">
             10 perguntas, 20 segundos cada. Quem acertar mais leva +50 XP.
           </p>
@@ -148,7 +159,12 @@ export function DuelsPage() {
         </Card>
         <Card className="text-center">
           <p className="text-2xl font-extrabold text-grain-600">
-            {record.current_streak > 0 ? `🔥 ${record.current_streak}` : record.current_streak}
+            <span className="inline-flex items-center justify-center gap-1">
+              {record.current_streak > 0 && (
+                <Glyph as={AppIcons.streak} className="h-5 w-5 text-grain-600" />
+              )}
+              {record.current_streak}
+            </span>
           </p>
           <p className="text-xs font-bold uppercase text-sand-500">
             seguidas · recorde {record.best_streak}
@@ -164,7 +180,10 @@ export function DuelsPage() {
             Entra na fila e enfrenta quem estiver procurando partida.
           </p>
           <Button loading={createDuel.isPending} onClick={() => createDuel.mutate(undefined)}>
-            🎲 Procurar partida
+            <span className="inline-flex items-center gap-1.5">
+              <Glyph as={AppIcons.dice} className="h-4 w-4" />
+              Procurar partida
+            </span>
           </Button>
         </div>
 
@@ -233,7 +252,7 @@ export function DuelsPage() {
         {data.items.length === 0 ? (
           <Card>
             <EmptyState
-              icon="⚔️"
+              icon={<Glyph as={AppIcons.duels} className="h-10 w-10" />}
               title="Nenhum duelo ainda"
               description="Desafie um amigo ou enfrente um adversário aleatório para estrear."
             />
@@ -254,8 +273,8 @@ export function DuelsPage() {
       >
         {challenging && (
           <>
-            <span className="text-4xl" aria-hidden>
-              ⚔️
+            <span className="mx-auto flex justify-center text-leaf-700">
+              <Glyph as={AppIcons.duels} className="h-10 w-10" />
             </span>
             <div>
               <p className="text-lg font-extrabold">Desafiar {challenging.name}?</p>

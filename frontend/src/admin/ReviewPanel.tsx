@@ -15,6 +15,7 @@ import {
   validateDraft,
 } from '@/features/moderation/questionDraft'
 import { QuestionEditor } from './QuestionEditor'
+import { AppIcons, Glyph } from '@/lib/icons'
 import type {
   AdminCategory,
   AdminFlag,
@@ -86,7 +87,7 @@ export function ReviewPanel() {
 
       {empty && (
         <EmptyState
-          icon="✅"
+          icon={<Glyph as={AppIcons.check} className="h-10 w-10" />}
           title="Fila vazia"
           description="Nenhum report aberto nem sugestão pendente."
         />

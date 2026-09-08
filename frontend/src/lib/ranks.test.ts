@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { rankFromLevel } from './ranks'
+import { rankFromLevel, rankLadderIndex } from './ranks'
 
 describe('rankFromLevel', () => {
   it('keeps five levels per band', () => {
@@ -14,5 +14,10 @@ describe('rankFromLevel', () => {
 
   it('leaves celeiro open-ended', () => {
     expect(rankFromLevel(31).maxLevel).toBeNull()
+  })
+
+  it('places semente first and celeiro last on the ladder', () => {
+    expect(rankLadderIndex('semente')).toBe(0)
+    expect(rankLadderIndex('celeiro')).toBe(6)
   })
 })

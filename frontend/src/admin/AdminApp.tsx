@@ -10,6 +10,14 @@ import { QuestionsPanel } from './QuestionsPanel'
 import { ReviewPanel } from './ReviewPanel'
 import { PublishBar } from './PublishBar'
 import type { AdminDashboard, AdminTab } from './types'
+import { AppIcons, Glyph } from '@/lib/icons'
+
+const TABS: { value: AdminTab; label: string; icon: typeof AppIcons.home }[] = [
+  { value: 'home', label: 'Início', icon: AppIcons.home },
+  { value: 'review', label: 'Revisão', icon: AppIcons.search },
+  { value: 'questions', label: 'Perguntas', icon: AppIcons.study },
+  { value: 'users', label: 'Usuários', icon: AppIcons.users },
+]
 
 export function AdminApp() {
   const { status, user, login, logout } = useAdminAuth()
@@ -37,8 +45,8 @@ export function AdminApp() {
     <div className="min-h-screen">
       <header className="sticky top-0 z-10 flex items-center justify-between border-b border-sand-200 bg-white px-4 py-3 md:px-8">
         <div className="flex items-center gap-2">
-          <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-leaf-500 text-sm">
-            🔒
+          <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-leaf-500 text-white">
+            <Glyph as={AppIcons.lock} className="h-4 w-4" />
           </span>
           <span className="text-lg font-extrabold tracking-tight">mavva · admin</span>
         </div>
@@ -56,22 +64,16 @@ export function AdminApp() {
       <div className="mx-auto max-w-6xl px-4 py-6 md:px-8">
         <PublishBar />
         <nav className="mb-6 flex flex-wrap gap-2">
-          {(
-            [
-              ['home', '🏠 Início'],
-              ['review', '🔎 Revisão'],
-              ['questions', '📖 Perguntas'],
-              ['users', '👥 Usuários'],
-            ] as [AdminTab, string][]
-          ).map(([value, label]) => (
+          {TABS.map(({ value, label, icon }) => (
             <button
               key={value}
               onClick={() => setTab(value)}
               aria-pressed={tab === value}
-              className={`rounded-2xl px-4 py-2 text-sm font-extrabold transition-colors ${
+              className={`inline-flex items-center gap-1.5 rounded-2xl px-4 py-2 text-sm font-extrabold transition-colors ${
                 tab === value ? 'bg-leaf-500 text-white' : 'bg-white text-sand-600 shadow-card'
               }`}
             >
+              <Glyph as={icon} className="h-4 w-4" />
               {label}
               {value === 'review' && reviewCount > 0 && (
                 <span className="ml-2 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-grain-400 px-1.5 text-[10px] font-extrabold text-grain-900">

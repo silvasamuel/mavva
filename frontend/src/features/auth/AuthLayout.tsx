@@ -9,7 +9,7 @@ export function AuthLayout({ title, children }: { title: string; children: React
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.25 }}
-        className="w-full max-w-md rounded-3xl bg-white p-8 shadow-card"
+        className="w-full max-w-md rounded-3xl bg-white/85 p-8 shadow-card backdrop-blur-sm"
       >
         <h1 className="mb-6 text-center text-2xl font-extrabold">{title}</h1>
         {children}

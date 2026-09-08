@@ -1,5 +1,6 @@
 import { Card, CardTitle } from '@/components/ui/Card'
 import { DIFFICULTY_LABELS, formatPercent } from '@/lib/format'
+import { AppIcons, Glyph, type Icon } from '@/lib/icons'
 import type { AdminDashboard, AdminTab } from './types'
 
 function fmt(n: number) {
@@ -34,21 +35,21 @@ export function DashboardPanel({
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         <HeroStat
-          emoji="👥"
+          icon={AppIcons.users}
           label="Usuários"
           value={users.total}
           hint={`${fmt(users.active)} contas ativas`}
           onClick={() => onNavigate('users')}
         />
         <HeroStat
-          emoji="📖"
+          icon={AppIcons.study}
           label="Perguntas ativas"
           value={questions.active}
           hint={`${fmt(questions.total)} no banco`}
           onClick={() => onNavigate('questions')}
         />
         <HeroStat
-          emoji="🔎"
+          icon={AppIcons.search}
           label="Fila de revisão"
           value={review.pending}
           hint={`${fmt(review.flags_open)} denúncias · ${fmt(review.proposals_pending)} sugestões`}
@@ -56,7 +57,7 @@ export function DashboardPanel({
           onClick={() => onNavigate('review')}
         />
         <HeroStat
-          emoji="🌾"
+          icon={AppIcons.manna}
           label="Estudaram hoje"
           value={activity.studied_today}
           hint={`${fmt(activity.xp_today)} XP hoje`}
@@ -118,14 +119,14 @@ export function DashboardPanel({
 }
 
 function HeroStat({
-  emoji,
+  icon,
   label,
   value,
   hint,
   highlight,
   onClick,
 }: {
-  emoji: string
+  icon: Icon
   label: string
   value: number
   hint: string
@@ -137,8 +138,9 @@ function HeroStat({
   } ${onClick ? 'cursor-pointer transition-colors hover:bg-sand-25' : ''}`
   const inner = (
     <>
-      <p className="text-xs font-extrabold uppercase tracking-wide text-sand-500">
-        <span aria-hidden>{emoji}</span> {label}
+      <p className="inline-flex items-center gap-1 text-xs font-extrabold uppercase tracking-wide text-sand-500">
+        <Glyph as={icon} className="h-3.5 w-3.5" />
+        {label}
       </p>
       <p className="text-3xl font-extrabold text-ink">{fmt(value)}</p>
       <p className="text-xs font-semibold text-sand-400">{hint}</p>

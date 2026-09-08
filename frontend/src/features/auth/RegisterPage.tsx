@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/Input'
 import { ApiError, api } from '@/lib/api'
 import { AuthLayout } from './AuthLayout'
 import { useAuth } from './AuthContext'
+import { AppIcons, Glyph } from '@/lib/icons'
 
 export function RegisterPage() {
   const { user, register } = useAuth()
@@ -54,8 +55,8 @@ export function RegisterPage() {
     return (
       <AuthLayout title="Confirme seu e-mail">
         <div className="space-y-4 text-center">
-          <span className="text-4xl" aria-hidden>
-            📬
+          <span className="mx-auto flex justify-center text-leaf-600">
+            <Glyph as={AppIcons.mail} className="h-12 w-12" />
           </span>
           <p className="text-sm font-semibold text-sand-600">
             Enviamos um link de confirmação para <strong>{pendingEmail}</strong>. Abra o e-mail e

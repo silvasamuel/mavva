@@ -8,6 +8,7 @@ import { formatPercent } from '@/lib/format'
 import { useDebouncedValue } from '@/lib/useDebouncedValue'
 import type { AdminUserList } from './types'
 import { UserDetail } from './UserDetail'
+import { AppIcons, Glyph } from '@/lib/icons'
 
 const PAGE = 25
 
@@ -96,7 +97,14 @@ export function UsersPanel({ adminId }: { adminId: string }) {
                   <td className="px-4 py-3 font-semibold">
                     Nível {u.level} · {u.total_xp} XP
                   </td>
-                  <td className="px-4 py-3 font-semibold">🔥 {u.current_streak}</td>
+                  <td className="px-4 py-3 font-semibold">
+                    <span className="inline-flex items-center gap-1">
+                      {u.current_streak > 0 && (
+                        <Glyph as={AppIcons.streak} className="h-4 w-4 text-grain-600" />
+                      )}
+                      {u.current_streak}
+                    </span>
+                  </td>
                   <td className="px-4 py-3 font-semibold">{u.questions_answered}</td>
                   <td className="px-4 py-3 font-semibold">{formatPercent(u.accuracy)}</td>
                   <td className="px-4 py-3 text-right">

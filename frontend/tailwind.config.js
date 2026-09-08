@@ -62,9 +62,41 @@ export default {
           '0%': { opacity: '0', transform: 'translateY(8px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        'streak-pulse': {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.12)' },
+        },
+        'soft-glow': {
+          '0%, 100%': { opacity: '0.25' },
+          '50%': { opacity: '0.55' },
+        },
+        'icon-spin': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+        'icon-slash': {
+          '0%, 100%': { transform: 'rotate(0deg) translate(0, 0)' },
+          '30%': { transform: 'rotate(-22deg) translate(-2px, 2px)' },
+          '60%': { transform: 'rotate(18deg) translate(2px, -1px)' },
+        },
+        'icon-shine': {
+          '0%, 100%': { filter: 'brightness(1) drop-shadow(0 0 0 transparent)', transform: 'scale(1)' },
+          '45%': { filter: 'brightness(1.4) drop-shadow(0 0 8px #f3cb57)', transform: 'scale(1.12)' },
+        },
+        'shine-sweep': {
+          '0%': { transform: 'translateX(-120%)', opacity: '0' },
+          '25%': { opacity: '0.9' },
+          '100%': { transform: 'translateX(180%)', opacity: '0' },
+        },
       },
       animation: {
         'float-up': 'float-up 0.35s ease-out both',
+        'streak-pulse': 'streak-pulse 1.6s ease-in-out infinite',
+        'soft-glow': 'soft-glow 3s ease-in-out infinite',
+        'icon-spin': 'icon-spin 0.7s ease-in-out',
+        'icon-slash': 'icon-slash 0.55s ease-in-out',
+        'icon-shine': 'icon-shine 0.8s ease-in-out',
+        'shine-sweep': 'shine-sweep 0.85s ease-in-out',
       },
     },
   },
