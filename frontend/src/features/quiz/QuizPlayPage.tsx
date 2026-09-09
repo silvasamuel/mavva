@@ -62,6 +62,9 @@ export function QuizPlayPage() {
   const [extraWrong, setExtraWrong] = useState(0)
   const [extraAnswered, setExtraAnswered] = useState(0)
   const questionStartedAt = useRef(Date.now())
+  const feedbackRef = useRef<AnswerFeedback | null>(null)
+  const submittedIds = useRef(new Set<string>())
+  feedbackRef.current = feedback
 
   const question: QuizQuestion | undefined = session?.questions[currentIndex]
   const isLast = session ? currentIndex >= session.questions.length - 1 : false
@@ -96,12 +99,23 @@ export function QuizPlayPage() {
     },
     onError: async (err) => {
       if (err instanceof ApiError && err.message.includes('já foi respondida')) {
+        // A refetch here calls GET /quizzes/:id, which starts the next
+        // question's server clock. Doing that on the splash (duplicate
+        // submit, or a report that keeps the player there) makes every
+        // following question arrive already timed out.
+        if (feedbackRef.current) return
         await queryClient.invalidateQueries({ queryKey: ['quiz', sessionId] })
         setIndex(null)
         setFeedback(null)
+        setTimedOut(false)
+        setSelectedOption(null)
+        setAnswerText('')
+        setRemaining(null)
+        setReportOpen(false)
         setError('')
         return
       }
+      if (question) submittedIds.current.delete(question.id)
       if (err instanceof ApiError && err.message.includes('Alternativa inválida')) {
         await queryClient.invalidateQueries({ queryKey: ['quiz', sessionId] })
         setSelectedOption(null)
@@ -179,11 +193,14 @@ export function QuizPlayPage() {
   const handleSubmit = useCallback(() => {
     setError('')
     if (!question || feedback || submitAnswer.isPending) return
+    if (submittedIds.current.has(question.id)) return
     if (question.type === 'multiple_choice') {
       if (!selectedOption) return
+      submittedIds.current.add(question.id)
       submitAnswer.mutate({ question_id: question.id, selected_option_id: selectedOption })
     } else {
       if (!answerText.trim()) return
+      submittedIds.current.add(question.id)
       submitAnswer.mutate({ question_id: question.id, answer_text: answerText })
     }
   }, [question, feedback, selectedOption, answerText, submitAnswer])
@@ -206,7 +223,10 @@ export function QuizPlayPage() {
 
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
-      if (exitConfirm || reportOpen) return
+      if (exitConfirm || reportOpen) {
+        if (event.key === 'Enter') event.preventDefault()
+        return
+      }
       if (event.metaKey || event.ctrlKey || event.altKey) return
 
       const target = event.target
@@ -245,13 +265,24 @@ export function QuizPlayPage() {
     displayOptions,
   ])
 
-  // Time's up: auto-submit as a miss.
+  // Time's up: auto-submit as a miss. Depend on the current question/feedback
+  // so a leftover 0s from the previous splash cannot timeout the next one.
   useEffect(() => {
-    if (remaining !== 0 || !question || feedback || submitAnswer.isPending) return
+    if (
+      remaining !== 0 ||
+      !question ||
+      feedback ||
+      reportOpen ||
+      question.answered ||
+      submitAnswer.isPending
+    ) {
+      return
+    }
+    if (submittedIds.current.has(question.id)) return
+    submittedIds.current.add(question.id)
     setTimedOut(true)
     submitAnswer.mutate({ question_id: question.id, timed_out: true })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [remaining])
+  }, [remaining, question, feedback, reportOpen, submitAnswer])
 
   if (isLoading || !session || !question) {
     return (
@@ -266,7 +297,11 @@ export function QuizPlayPage() {
   const questionNumber = Math.min(currentIndex + 1, session.question_count)
 
     return (
-    <div className="relative mx-auto flex min-h-screen max-w-2xl flex-col px-4 py-4">
+    <>
+    <div
+      className="relative mx-auto flex min-h-screen max-w-2xl flex-col px-4 py-4"
+      {...(reportOpen ? { inert: '' } : {})}
+    >
       <div className="mb-3">
         <GameHud
           rankCode={dash?.stats.rank.code}
@@ -570,17 +605,18 @@ export function QuizPlayPage() {
         )}
       </AnimatePresence>
 
-      <ReportQuestionModal
-        open={reportOpen}
-        onClose={() => setReportOpen(false)}
-        onReported={() =>
-          setReportedIds((current) =>
-            current.includes(question.id) ? current : [...current, question.id]
-          )
-        }
-        questionId={question.id}
-        sessionId={session.id}
-      />
     </div>
+    <ReportQuestionModal
+      open={reportOpen}
+      onClose={() => setReportOpen(false)}
+      onReported={() =>
+        setReportedIds((current) =>
+          current.includes(question.id) ? current : [...current, question.id]
+        )
+      }
+      questionId={question.id}
+      sessionId={session.id}
+    />
+    </>
   )
 }
