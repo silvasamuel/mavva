@@ -5,9 +5,9 @@ from sqlalchemy.orm import Session
 
 from app.models import Question, QuizSessionQuestion, User
 from app.models.enums import UserRole
+from tests.api.test_quiz_flow import _correct_option_id
 from tests.factories import make_category, make_mc_question
 from tests.helpers import register_and_login
-from tests.api.test_quiz_flow import _correct_option_id
 
 
 def _promote_to_admin(db: Session, email: str = "samuel@teste.com") -> None:
