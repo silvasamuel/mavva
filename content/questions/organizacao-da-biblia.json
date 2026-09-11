@@ -301,8 +301,7 @@
         "verse_start": 1,
         "verse_end": 8
       },
-      "difficulty": "easy",
-      "is_active": false
+      "difficulty": "easy"
     },
     {
       "external_id": "organizacao-da-biblia-0011",
@@ -435,8 +434,7 @@
         "verse_start": 1,
         "verse_end": 4
       },
-      "difficulty": "hard",
-      "is_active": false
+      "difficulty": "hard"
     },
     {
       "external_id": "organizacao-da-biblia-0015",
@@ -536,8 +534,7 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "difficulty": "hard",
-      "is_active": false
+      "difficulty": "hard"
     },
     {
       "external_id": "organizacao-da-biblia-0018",
@@ -924,7 +921,7 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "easy"
     },
     {
       "external_id": "organizacao-da-biblia-0030",

@@ -506,8 +506,7 @@
         "verse_start": 8,
         "verse_end": 9
       },
-      "difficulty": "hard",
-      "is_active": false
+      "difficulty": "hard"
     },
     {
       "external_id": "costumes-judaicos-0017",
@@ -596,8 +595,7 @@
         "verse_start": 4,
         "verse_end": 6
       },
-      "difficulty": "hard",
-      "is_active": false
+      "difficulty": "hard"
     },
     {
       "external_id": "costumes-judaicos-0020",
@@ -630,8 +628,7 @@
         "verse_start": 8,
         "verse_end": 11
       },
-      "difficulty": "medium",
-      "is_active": false
+      "difficulty": "easy"
     },
     {
       "external_id": "costumes-judaicos-0021",

@@ -520,8 +520,7 @@
         "verse_start": 6,
         "verse_end": 20
       },
-      "difficulty": "hard",
-      "is_active": false
+      "difficulty": "hard"
     },
     {
       "external_id": "contexto-historico-0017",
@@ -720,8 +719,7 @@
         "verse_start": 59,
         "verse_end": null
       },
-      "difficulty": "expert",
-      "is_active": false
+      "difficulty": "expert"
     },
     {
       "external_id": "contexto-historico-0023",

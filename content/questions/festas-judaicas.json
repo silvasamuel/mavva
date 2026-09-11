@@ -362,8 +362,7 @@
         "verse_start": 15,
         "verse_end": 16
       },
-      "difficulty": "medium",
-      "is_active": false
+      "difficulty": "medium"
     },
     {
       "external_id": "festas-judaicas-0012",
@@ -396,8 +395,7 @@
         "verse_start": 42,
         "verse_end": 43
       },
-      "difficulty": "hard",
-      "is_active": false
+      "difficulty": "hard"
     },
     {
       "external_id": "festas-judaicas-0013",
@@ -430,8 +428,7 @@
         "verse_start": 29,
         "verse_end": 34
       },
-      "difficulty": "hard",
-      "is_active": false
+      "difficulty": "hard"
     },
     {
       "external_id": "festas-judaicas-0014",
@@ -517,8 +514,7 @@
         "verse_start": 24,
         "verse_end": 25
       },
-      "difficulty": "hard",
-      "is_active": false
+      "difficulty": "hard"
     },
     {
       "external_id": "festas-judaicas-0017",
@@ -551,8 +547,7 @@
         "verse_start": 16,
         "verse_end": null
       },
-      "difficulty": "expert",
-      "is_active": false
+      "difficulty": "expert"
     },
     {
       "external_id": "festas-judaicas-0018",
@@ -639,8 +634,7 @@
         "verse_start": 11,
         "verse_end": 14
       },
-      "difficulty": "medium",
-      "is_active": false
+      "difficulty": "easy"
     },
     {
       "external_id": "festas-judaicas-0021",

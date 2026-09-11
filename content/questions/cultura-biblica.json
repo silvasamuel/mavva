@@ -131,8 +131,7 @@
         "verse_start": 9,
         "verse_end": 10
       },
-      "difficulty": "medium",
-      "is_active": false
+      "difficulty": "medium"
     },
     {
       "external_id": "cultura-biblica-0005",
@@ -349,8 +348,7 @@
         "verse_start": 2,
         "verse_end": null
       },
-      "difficulty": "medium",
-      "is_active": false
+      "difficulty": "medium"
     },
     {
       "external_id": "cultura-biblica-0012",
@@ -482,8 +480,7 @@
         "verse_start": 14,
         "verse_end": null
       },
-      "difficulty": "medium",
-      "is_active": false
+      "difficulty": "medium"
     },
     {
       "external_id": "cultura-biblica-0016",
@@ -621,8 +618,7 @@
         "verse_start": 9,
         "verse_end": 10
       },
-      "difficulty": "medium",
-      "is_active": false
+      "difficulty": "easy"
     },
     {
       "external_id": "cultura-biblica-0021",

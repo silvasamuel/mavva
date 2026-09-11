@@ -20,8 +20,7 @@
         "verse_start": 11,
         "verse_end": 12
       },
-      "difficulty": "easy",
-      "is_active": false
+      "difficulty": "easy"
     },
     {
       "external_id": "eventos-biblicos-0002",
@@ -252,8 +251,7 @@
         "verse_start": 8,
         "verse_end": 11
       },
-      "difficulty": "easy",
-      "is_active": false
+      "difficulty": "easy"
     },
     {
       "external_id": "eventos-biblicos-0009",
@@ -505,8 +503,7 @@
         "verse_start": 1,
         "verse_end": 5
       },
-      "difficulty": "hard",
-      "is_active": false
+      "difficulty": "hard"
     },
     {
       "external_id": "eventos-biblicos-0017",
@@ -572,8 +569,7 @@
         "verse_start": 1,
         "verse_end": 4
       },
-      "difficulty": "medium",
-      "is_active": false
+      "difficulty": "medium"
     },
     {
       "external_id": "eventos-biblicos-0019",

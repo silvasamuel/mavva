@@ -515,8 +515,7 @@
         "verse_start": 18,
         "verse_end": 19
       },
-      "difficulty": "hard",
-      "is_active": false
+      "difficulty": "hard"
     },
     {
       "external_id": "historia-da-igreja-0017",
@@ -852,8 +851,7 @@
         "verse_start": 9,
         "verse_end": null
       },
-      "difficulty": "medium",
-      "is_active": false
+      "difficulty": "medium"
     },
     {
       "external_id": "historia-da-igreja-0028",

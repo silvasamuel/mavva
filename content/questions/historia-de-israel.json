@@ -85,8 +85,7 @@
         "verse_start": 26,
         "verse_end": 35
       },
-      "difficulty": "easy",
-      "is_active": false
+      "difficulty": "easy"
     },
     {
       "external_id": "historia-de-israel-0004",
@@ -205,8 +204,7 @@
         "verse_start": 11,
         "verse_end": 12
       },
-      "difficulty": "medium",
-      "is_active": false
+      "difficulty": "medium"
     },
     {
       "external_id": "historia-de-israel-0008",
