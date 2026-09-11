@@ -1191,6 +1191,138 @@
         "verse_end": 45
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "reis-0039",
+      "type": "multiple_choice",
+      "text": "Qual rei de Judá sacrificou o próprio filho no fogo e fechou as portas do templo, pai de Ezequias?",
+      "options": [
+        {
+          "text": "Acaz",
+          "correct": true
+        },
+        {
+          "text": "Amom",
+          "correct": false
+        },
+        {
+          "text": "Manassés",
+          "correct": false
+        },
+        {
+          "text": "Jeoaquim",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Acaz 'até fez passar pelo fogo a seu filho' (2Rs 16:3) e 'fechou as portas da casa do SENHOR' (2Cr 28:24).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 16,
+        "verse_start": 1,
+        "verse_end": 4
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "reis-0040",
+      "type": "multiple_choice",
+      "text": "Qual rei do Egito matou Josias na batalha de Megido?",
+      "options": [
+        {
+          "text": "Faraó Neco",
+          "correct": true
+        },
+        {
+          "text": "Sisaque",
+          "correct": false
+        },
+        {
+          "text": "Faraó Hofra",
+          "correct": false
+        },
+        {
+          "text": "Tirhaca",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Faraó Neco... o matou em Megido, logo que o viu' (2Rs 23:29) — o fim trágico do rei reformador.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 23,
+        "verse_start": 29,
+        "verse_end": 30
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "reis-0041",
+      "type": "multiple_choice",
+      "text": "Qual rei de Israel foi pastor de ovelhas em Belém antes de ser ungido?",
+      "options": [
+        {
+          "text": "Davi",
+          "correct": true
+        },
+        {
+          "text": "Saul",
+          "correct": false
+        },
+        {
+          "text": "Salomão",
+          "correct": false
+        },
+        {
+          "text": "Jeroboão",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Quando Samuel chegou, Davi 'apascenta as ovelhas'; foi trazido do campo e ungido diante dos irmãos (1Sm 16:11-13).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 16,
+        "verse_start": 11,
+        "verse_end": 13
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "reis-0042",
+      "type": "multiple_choice",
+      "text": "Sob qual rei de Israel os profetas Amós e Oseias ministraram, num tempo de prosperidade?",
+      "options": [
+        {
+          "text": "Jeroboão II",
+          "correct": true
+        },
+        {
+          "text": "Jeroboão I",
+          "correct": false
+        },
+        {
+          "text": "Onri",
+          "correct": false
+        },
+        {
+          "text": "Jeú",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Palavras de Amós... nos dias de Jeroboão, filho de Joás, rei de Israel' (Am 1:1; cf. Os 1:1) — riqueza com injustiça.",
+      "divergence_note": null,
+      "reference": {
+        "book": "amos",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "hard"
     }
   ]
 }

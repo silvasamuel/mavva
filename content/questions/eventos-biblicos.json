@@ -1164,6 +1164,171 @@
         "verse_end": 19
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0038",
+      "type": "multiple_choice",
+      "text": "Quantos espias Moisés enviou para reconhecer a terra de Canaã?",
+      "options": [
+        {
+          "text": "Doze, um de cada tribo",
+          "correct": true
+        },
+        {
+          "text": "Dois",
+          "correct": false
+        },
+        {
+          "text": "Sete",
+          "correct": false
+        },
+        {
+          "text": "Setenta",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Envia homens que espiem a terra de Canaã... de cada tribo de seus pais enviareis um homem' (Nm 13:2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 13,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0039",
+      "type": "multiple_choice",
+      "text": "Com que arma improvisada Sansão matou mil filisteus?",
+      "options": [
+        {
+          "text": "Uma queixada de jumento",
+          "correct": true
+        },
+        {
+          "text": "Uma funda",
+          "correct": false
+        },
+        {
+          "text": "Uma lança quebrada",
+          "correct": false
+        },
+        {
+          "text": "Um bastão de carvalho",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Achou uma queixada fresca de um jumento... e feriu com ela mil homens' (Jz 15:15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "juizes",
+        "chapter": 15,
+        "verse_start": 14,
+        "verse_end": 16
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0040",
+      "type": "multiple_choice",
+      "text": "Quantas pedras Davi escolheu no ribeiro antes de enfrentar Golias?",
+      "options": [
+        {
+          "text": "Cinco pedras lisas",
+          "correct": true
+        },
+        {
+          "text": "Uma pedra",
+          "correct": false
+        },
+        {
+          "text": "Três pedras",
+          "correct": false
+        },
+        {
+          "text": "Sete pedras",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Escolheu para si cinco seixos do ribeiro e pô-los no alforje' (1Sm 17:40) — bastou uma.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 17,
+        "verse_start": 40,
+        "verse_end": 50
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "eventos-biblicos-0041",
+      "type": "multiple_choice",
+      "text": "O que aconteceu a Coré, Datã e Abirão ao se rebelarem contra Moisés?",
+      "options": [
+        {
+          "text": "A terra se abriu e os tragou",
+          "correct": true
+        },
+        {
+          "text": "Foram apedrejados",
+          "correct": false
+        },
+        {
+          "text": "Ficaram leprosos",
+          "correct": false
+        },
+        {
+          "text": "Foram expulsos do arraial",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'A terra abriu a sua boca e os tragou com as suas casas' (Nm 16:31-33) — juízo sobre a rebelião contra o sacerdócio.",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 16,
+        "verse_start": 28,
+        "verse_end": 33
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "eventos-biblicos-0042",
+      "type": "multiple_choice",
+      "text": "Que alimento Deus fez cair do céu para sustentar Israel no deserto?",
+      "options": [
+        {
+          "text": "Maná",
+          "correct": true
+        },
+        {
+          "text": "Trigo",
+          "correct": false
+        },
+        {
+          "text": "Codornizes apenas",
+          "correct": false
+        },
+        {
+          "text": "Figos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Eis que vos farei chover pão dos céus'; o povo o chamou maná — 'como semente de coentro, branco' (Êx 16:4,31).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 16,
+        "verse_start": 4,
+        "verse_end": 15
+      },
+      "difficulty": "easy"
     }
   ]
 }

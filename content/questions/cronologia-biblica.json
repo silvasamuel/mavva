@@ -1194,6 +1194,171 @@
         "verse_end": null
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "cronologia-biblica-0039",
+      "type": "multiple_choice",
+      "text": "Com que idade Jesus ficou no templo entre os doutores, enquanto os pais o procuravam?",
+      "options": [
+        {
+          "text": "Doze anos",
+          "correct": true
+        },
+        {
+          "text": "Oito anos",
+          "correct": false
+        },
+        {
+          "text": "Trinta anos",
+          "correct": false
+        },
+        {
+          "text": "Sete anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Tendo ele já doze anos, subiram a Jerusalém, segundo o costume' e o acharam no templo (Lc 2:42-46).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 2,
+        "verse_start": 41,
+        "verse_end": 47
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cronologia-biblica-0040",
+      "type": "multiple_choice",
+      "text": "Quantos anos José tinha quando foi vendido pelos irmãos?",
+      "options": [
+        {
+          "text": "Dezessete anos",
+          "correct": true
+        },
+        {
+          "text": "Doze anos",
+          "correct": false
+        },
+        {
+          "text": "Vinte anos",
+          "correct": false
+        },
+        {
+          "text": "Trinta anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'José, sendo de dezessete anos, apascentava as ovelhas com seus irmãos' (Gn 37:2) — pouco antes de ser vendido.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 37,
+        "verse_start": 2,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cronologia-biblica-0041",
+      "type": "multiple_choice",
+      "text": "Quantos anos José tinha quando se apresentou diante de Faraó?",
+      "options": [
+        {
+          "text": "Trinta anos",
+          "correct": true
+        },
+        {
+          "text": "Dezessete anos",
+          "correct": false
+        },
+        {
+          "text": "Quarenta anos",
+          "correct": false
+        },
+        {
+          "text": "Vinte e cinco anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'José era da idade de trinta anos quando se apresentou a Faraó' (Gn 41:46) — treze anos entre a venda e a exaltação.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 41,
+        "verse_start": 46,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cronologia-biblica-0042",
+      "type": "multiple_choice",
+      "text": "Quantos anos Enoque viveu antes de Deus o tomar?",
+      "options": [
+        {
+          "text": "Trezentos e sessenta e cinco",
+          "correct": true
+        },
+        {
+          "text": "Novecentos e sessenta e nove",
+          "correct": false
+        },
+        {
+          "text": "Cento e vinte",
+          "correct": false
+        },
+        {
+          "text": "Setecentos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Foram todos os dias de Enoque trezentos e sessenta e cinco anos. E andou Enoque com Deus; e não apareceu mais' (Gn 5:23-24).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 5,
+        "verse_start": 23,
+        "verse_end": 24
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "cronologia-biblica-0043",
+      "type": "multiple_choice",
+      "text": "Quantos anos Noé viveu ao todo?",
+      "options": [
+        {
+          "text": "Novecentos e cinquenta",
+          "correct": true
+        },
+        {
+          "text": "Seiscentos",
+          "correct": false
+        },
+        {
+          "text": "Novecentos e trinta",
+          "correct": false
+        },
+        {
+          "text": "Oitocentos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Foram todos os dias de Noé novecentos e cinquenta anos, e morreu' (Gn 9:29) — 350 anos depois do dilúvio.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 9,
+        "verse_start": 28,
+        "verse_end": 29
+      },
+      "difficulty": "hard"
     }
   ]
 }

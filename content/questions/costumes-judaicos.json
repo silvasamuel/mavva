@@ -1175,6 +1175,138 @@
         "verse_end": 21
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "costumes-judaicos-0039",
+      "type": "multiple_choice",
+      "text": "Quantos mandamentos Deus entregou a Moisés no monte Sinai, escritos em tábuas?",
+      "options": [
+        {
+          "text": "Dez",
+          "correct": true
+        },
+        {
+          "text": "Sete",
+          "correct": false
+        },
+        {
+          "text": "Doze",
+          "correct": false
+        },
+        {
+          "text": "Cinco",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Escreveu nas tábuas as palavras da aliança, os dez mandamentos' (Êx 34:28).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 34,
+        "verse_start": 28,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "costumes-judaicos-0040",
+      "type": "multiple_choice",
+      "text": "Que gesto o servo de Abraão fez ao jurar que buscaria uma esposa para Isaque?",
+      "options": [
+        {
+          "text": "Pôs a mão debaixo da coxa de Abraão",
+          "correct": true
+        },
+        {
+          "text": "Ergueu a mão direita",
+          "correct": false
+        },
+        {
+          "text": "Rasgou as vestes",
+          "correct": false
+        },
+        {
+          "text": "Beijou o chão",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Põe agora a tua mão debaixo da minha coxa, para que eu te faça jurar pelo SENHOR' (Gn 24:2-3) — gesto solene de juramento.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 24,
+        "verse_start": 2,
+        "verse_end": 9
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "costumes-judaicos-0041",
+      "type": "multiple_choice",
+      "text": "Como se chama o princípio da Lei citado por Jesus: 'olho por olho e dente por dente'?",
+      "options": [
+        {
+          "text": "Lei de talião",
+          "correct": true
+        },
+        {
+          "text": "Lei do levirato",
+          "correct": false
+        },
+        {
+          "text": "Lei do jubileu",
+          "correct": false
+        },
+        {
+          "text": "Lei da respiga",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Ouvistes que foi dito: Olho por olho e dente por dente' (Mt 5:38; cf. Êx 21:24) — limite à vingança, que Jesus supera com o amor ao inimigo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 5,
+        "verse_start": 38,
+        "verse_end": 39
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "costumes-judaicos-0042",
+      "type": "multiple_choice",
+      "text": "Onde, segundo Jesus, os hipócritas gostavam de orar para serem vistos?",
+      "options": [
+        {
+          "text": "Nas sinagogas e nos cantos das ruas",
+          "correct": true
+        },
+        {
+          "text": "No deserto",
+          "correct": false
+        },
+        {
+          "text": "Dentro do Santo dos Santos",
+          "correct": false
+        },
+        {
+          "text": "Nos telhados",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Gostam de orar em pé nas sinagogas e às esquinas das ruas, para serem vistos pelos homens' (Mt 6:5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 6,
+        "verse_start": 5,
+        "verse_end": 6
+      },
+      "difficulty": "medium"
     }
   ]
 }

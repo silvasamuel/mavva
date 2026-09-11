@@ -1111,6 +1111,171 @@
         "verse_end": null
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "cultura-biblica-0037",
+      "type": "multiple_choice",
+      "text": "Qual era o ofício de José, esposo de Maria?",
+      "options": [
+        {
+          "text": "Carpinteiro",
+          "correct": true
+        },
+        {
+          "text": "Pescador",
+          "correct": false
+        },
+        {
+          "text": "Pastor",
+          "correct": false
+        },
+        {
+          "text": "Escriba",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Em Nazaré perguntavam: 'Não é este o filho do carpinteiro?' (Mt 13:55); Marcos chama o próprio Jesus de carpinteiro (Mc 6:3).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 13,
+        "verse_start": 55,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cultura-biblica-0038",
+      "type": "multiple_choice",
+      "text": "Qual era o ofício de Simão, em cuja casa Pedro se hospedou em Jope?",
+      "options": [
+        {
+          "text": "Curtidor de couro",
+          "correct": true
+        },
+        {
+          "text": "Pescador",
+          "correct": false
+        },
+        {
+          "text": "Oleiro",
+          "correct": false
+        },
+        {
+          "text": "Tecelão",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Está hospedado com um certo Simão, curtidor, que tem a sua casa junto do mar' (At 10:6) — ofício impuro para muitos judeus.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 10,
+        "verse_start": 5,
+        "verse_end": 6
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cultura-biblica-0039",
+      "type": "multiple_choice",
+      "text": "Quanto valia o perfume de nardo derramado sobre Jesus, segundo a queixa de Judas?",
+      "options": [
+        {
+          "text": "Trezentos denários",
+          "correct": true
+        },
+        {
+          "text": "Trinta moedas de prata",
+          "correct": false
+        },
+        {
+          "text": "Dez talentos",
+          "correct": false
+        },
+        {
+          "text": "Um siclo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Por que não se vendeu este unguento por trezentos denários e não se deu aos pobres?' (Jo 12:5) — quase um ano de salário.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 12,
+        "verse_start": 3,
+        "verse_end": 6
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cultura-biblica-0040",
+      "type": "multiple_choice",
+      "text": "Por quanto Abraão comprou a caverna de Macpela para sepultar Sara?",
+      "options": [
+        {
+          "text": "Quatrocentos siclos de prata",
+          "correct": true
+        },
+        {
+          "text": "Trinta siclos",
+          "correct": false
+        },
+        {
+          "text": "Mil siclos de ouro",
+          "correct": false
+        },
+        {
+          "text": "Cem cordeiros",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Abraão pesou a Efrom 'quatrocentos siclos de prata, correntes entre mercadores' (Gn 23:15-16) — a primeira posse em Canaã.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 23,
+        "verse_start": 15,
+        "verse_end": 16
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "cultura-biblica-0041",
+      "type": "multiple_choice",
+      "text": "De que material eram feitas as tábuas dos Dez Mandamentos?",
+      "options": [
+        {
+          "text": "Pedra",
+          "correct": true
+        },
+        {
+          "text": "Madeira de acácia",
+          "correct": false
+        },
+        {
+          "text": "Bronze",
+          "correct": false
+        },
+        {
+          "text": "Argila",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Deu a Moisés... as duas tábuas do testemunho, tábuas de pedra, escritas pelo dedo de Deus' (Êx 31:18).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 31,
+        "verse_start": 18,
+        "verse_end": null
+      },
+      "difficulty": "easy"
     }
   ]
 }

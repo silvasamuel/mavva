@@ -1198,6 +1198,171 @@
         "verse_end": 13
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0039",
+      "type": "multiple_choice",
+      "text": "Em quantas partes principais a Bíblia se divide?",
+      "options": [
+        {
+          "text": "Duas: Antigo e Novo Testamento",
+          "correct": true
+        },
+        {
+          "text": "Três: Lei, Profetas e Evangelhos",
+          "correct": false
+        },
+        {
+          "text": "Quatro",
+          "correct": false
+        },
+        {
+          "text": "Sete",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O Antigo Testamento (39 livros) e o Novo (27) — 'a antiga e a nova aliança' (Hb 8:13; 9:15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "hebreus",
+        "chapter": 8,
+        "verse_start": 13,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0040",
+      "type": "multiple_choice",
+      "text": "Qual é o capítulo mais longo da Bíblia?",
+      "options": [
+        {
+          "text": "Salmo 119",
+          "correct": true
+        },
+        {
+          "text": "Salmo 23",
+          "correct": false
+        },
+        {
+          "text": "Gênesis 1",
+          "correct": false
+        },
+        {
+          "text": "Isaías 53",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O Salmo 119 é um acróstico em que cada bloco de oito versículos começa com uma letra do alfabeto hebraico, celebrando a Lei do SENHOR (Sl 119:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "salmos",
+        "chapter": 119,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0041",
+      "type": "multiple_choice",
+      "text": "Quantos versículos tem o Salmo 119?",
+      "options": [
+        {
+          "text": "176",
+          "correct": true
+        },
+        {
+          "text": "150",
+          "correct": false
+        },
+        {
+          "text": "119",
+          "correct": false
+        },
+        {
+          "text": "200",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Vinte e duas letras hebraicas vezes oito versículos: 176 (Sl 119:176 encerra: 'desgarrei-me como ovelha perdida').",
+      "divergence_note": null,
+      "reference": {
+        "book": "salmos",
+        "chapter": 119,
+        "verse_start": 176,
+        "verse_end": null
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0042",
+      "type": "multiple_choice",
+      "text": "Quantos livros do Novo Testamento são tradicionalmente atribuídos ao apóstolo João?",
+      "options": [
+        {
+          "text": "Cinco",
+          "correct": true
+        },
+        {
+          "text": "Três",
+          "correct": false
+        },
+        {
+          "text": "Quatro",
+          "correct": false
+        },
+        {
+          "text": "Dois",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O evangelho, três cartas e o Apocalipse (Jo 21:24; 1Jo 1:1; Ap 1:1) — cinco livros.",
+      "divergence_note": "A autoria joanina dos cinco livros é a tradição da igreja antiga; estudiosos debatem se um mesmo João escreveu todos.",
+      "reference": {
+        "book": "joao",
+        "chapter": 21,
+        "verse_start": 24,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0043",
+      "type": "multiple_choice",
+      "text": "Para quais duas igrejas Paulo escreveu duas cartas canônicas cada?",
+      "options": [
+        {
+          "text": "Coríntios e Tessalonicenses",
+          "correct": true
+        },
+        {
+          "text": "Efésios e Filipenses",
+          "correct": false
+        },
+        {
+          "text": "Romanos e Gálatas",
+          "correct": false
+        },
+        {
+          "text": "Colossenses e Filemom",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "1 e 2 Coríntios, 1 e 2 Tessalonicenses; a Timóteo também escreveu duas, mas a uma pessoa (1Co 1:1; 1Ts 1:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1corintios",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "hard"
     }
   ]
 }

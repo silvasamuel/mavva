@@ -1187,6 +1187,138 @@
         "verse_end": 11
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-da-igreja-0039",
+      "type": "multiple_choice",
+      "text": "Qual apóstolo pregou o primeiro sermão da igreja, no dia de Pentecostes?",
+      "options": [
+        {
+          "text": "Pedro",
+          "correct": true
+        },
+        {
+          "text": "Paulo",
+          "correct": false
+        },
+        {
+          "text": "João",
+          "correct": false
+        },
+        {
+          "text": "Tiago",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Pedro, pondo-se em pé com os onze, levantou a voz' e pregou Cristo ressurreto aos judeus de todas as nações (At 2:14-36).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 2,
+        "verse_start": 14,
+        "verse_end": 36
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "historia-da-igreja-0040",
+      "type": "multiple_choice",
+      "text": "Quantas pessoas foram acrescentadas à igreja no dia de Pentecostes?",
+      "options": [
+        {
+          "text": "Cerca de três mil",
+          "correct": true
+        },
+        {
+          "text": "Cento e vinte",
+          "correct": false
+        },
+        {
+          "text": "Quinhentas",
+          "correct": false
+        },
+        {
+          "text": "Cinco mil",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Naquele dia agregaram-se quase três mil almas' (At 2:41).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 2,
+        "verse_start": 41,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0041",
+      "type": "multiple_choice",
+      "text": "Que cooperador abandonou Paulo 'amando o presente século', segundo 2 Timóteo?",
+      "options": [
+        {
+          "text": "Demas",
+          "correct": true
+        },
+        {
+          "text": "Tíquico",
+          "correct": false
+        },
+        {
+          "text": "Lucas",
+          "correct": false
+        },
+        {
+          "text": "Marcos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Demas me desamparou, amando o presente século, e foi para Tessalônica' (2Tm 4:10) — antes citado como cooperador (Cl 4:14).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2timoteo",
+        "chapter": 4,
+        "verse_start": 10,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-da-igreja-0042",
+      "type": "multiple_choice",
+      "text": "Quantos dias Saulo ficou cego em Damasco, sem comer nem beber?",
+      "options": [
+        {
+          "text": "Três dias",
+          "correct": true
+        },
+        {
+          "text": "Um dia",
+          "correct": false
+        },
+        {
+          "text": "Sete dias",
+          "correct": false
+        },
+        {
+          "text": "Quarenta dias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Esteve três dias sem ver, e não comeu nem bebeu' até Ananias impor-lhe as mãos (At 9:9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 9,
+        "verse_start": 8,
+        "verse_end": 9
+      },
+      "difficulty": "medium"
     }
   ]
 }

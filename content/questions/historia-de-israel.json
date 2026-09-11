@@ -1214,6 +1214,138 @@
         "verse_end": 12
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "historia-de-israel-0040",
+      "type": "multiple_choice",
+      "text": "Qual rei conquistou Jerusalém dos jebuseus e a fez capital de Israel?",
+      "options": [
+        {
+          "text": "Davi",
+          "correct": true
+        },
+        {
+          "text": "Saul",
+          "correct": false
+        },
+        {
+          "text": "Salomão",
+          "correct": false
+        },
+        {
+          "text": "Josué",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Davi tomou a fortaleza de Sião, 'e habitou na fortaleza, e chamou-a a cidade de Davi' (2Sm 5:6-9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 5,
+        "verse_start": 6,
+        "verse_end": 9
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-de-israel-0041",
+      "type": "multiple_choice",
+      "text": "Que povo, com cidades como Gate e Asdode, foi inimigo constante de Israel nos dias de Sansão, Saul e Davi?",
+      "options": [
+        {
+          "text": "Os filisteus",
+          "correct": true
+        },
+        {
+          "text": "Os moabitas",
+          "correct": false
+        },
+        {
+          "text": "Os edomitas",
+          "correct": false
+        },
+        {
+          "text": "Os amonitas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Os filisteus dominavam a costa com cinco cidades (Js 13:3) e oprimiram Israel até serem subjugados por Davi (2Sm 8:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 4,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-de-israel-0042",
+      "type": "multiple_choice",
+      "text": "Qual rei da Pérsia tomou Ester por rainha?",
+      "options": [
+        {
+          "text": "Assuero (Xerxes)",
+          "correct": true
+        },
+        {
+          "text": "Ciro",
+          "correct": false
+        },
+        {
+          "text": "Dario",
+          "correct": false
+        },
+        {
+          "text": "Artaxerxes",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'O rei amou a Ester mais do que a todas as mulheres... e a fez rainha em lugar de Vasti' (Et 2:17).",
+      "divergence_note": null,
+      "reference": {
+        "book": "ester",
+        "chapter": 2,
+        "verse_start": 16,
+        "verse_end": 17
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-de-israel-0043",
+      "type": "multiple_choice",
+      "text": "Quem foi o último rei de Israel (reino do Norte), no trono quando Samaria caiu?",
+      "options": [
+        {
+          "text": "Oseias, filho de Elá",
+          "correct": true
+        },
+        {
+          "text": "Jeroboão II",
+          "correct": false
+        },
+        {
+          "text": "Peca",
+          "correct": false
+        },
+        {
+          "text": "Menaém",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'No ano nono de Oseias, o rei da Assíria tomou Samaria e transportou Israel' (2Rs 17:6) — não confundir com o profeta Oseias.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 17,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "expert"
     }
   ]
 }

@@ -1128,6 +1128,157 @@
         "verse_end": 21
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0039",
+      "type": "multiple_choice",
+      "text": "Segundo 1 Coríntios 15:26, qual é 'o último inimigo' a ser aniquilado?",
+      "options": [
+        {
+          "text": "A morte",
+          "correct": true
+        },
+        {
+          "text": "O pecado",
+          "correct": false
+        },
+        {
+          "text": "Satanás",
+          "correct": false
+        },
+        {
+          "text": "A lei",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'O último inimigo que há de ser aniquilado é a morte' (1Co 15:26) — vencida na ressurreição final.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1corintios",
+        "chapter": 15,
+        "verse_start": 24,
+        "verse_end": 26
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0040",
+      "type": "multiple_choice",
+      "text": "Segundo Filipenses 2:10-11, o que todo joelho e toda língua farão diante do nome de Jesus?",
+      "options": [
+        {
+          "text": "Dobrar-se e confessar que Jesus Cristo é o Senhor",
+          "correct": true
+        },
+        {
+          "text": "Calar-se",
+          "correct": false
+        },
+        {
+          "text": "Fugir",
+          "correct": false
+        },
+        {
+          "text": "Pedir julgamento",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Ao nome de Jesus se dobre todo joelho... e toda língua confesse que Jesus Cristo é o Senhor, para glória de Deus Pai' (Fp 2:10-11).",
+      "divergence_note": null,
+      "reference": {
+        "book": "filipenses",
+        "chapter": 2,
+        "verse_start": 9,
+        "verse_end": 11
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0041",
+      "type": "multiple_choice",
+      "text": "Como Apocalipse 20 chama a ressurreição dos que reinam com Cristo mil anos?",
+      "options": [
+        {
+          "text": "A primeira ressurreição",
+          "correct": true
+        },
+        {
+          "text": "A ressurreição geral",
+          "correct": false
+        },
+        {
+          "text": "O arrebatamento",
+          "correct": false
+        },
+        {
+          "text": "A segunda morte",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Esta é a primeira ressurreição. Bem-aventurado e santo aquele que tem parte na primeira ressurreição' (Ap 20:5-6).",
+      "divergence_note": "As tradições divergem sobre a natureza dessa ressurreição e do milênio (pré-, pós- e amilenismo). A pergunta trata do nome que o texto usa.",
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 20,
+        "verse_start": 4,
+        "verse_end": 6
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "escatologia-0042",
+      "type": "multiple_choice",
+      "text": "Segundo Mateus 24:14, o que acontecerá antes de vir o fim?",
+      "options": [
+        {
+          "text": "O evangelho será pregado em todo o mundo, a todas as nações",
+          "correct": true
+        },
+        {
+          "text": "O templo será reconstruído",
+          "correct": false
+        },
+        {
+          "text": "Todos os judeus voltarão",
+          "correct": false
+        },
+        {
+          "text": "Roma cairá",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Este evangelho do reino será pregado em todo o mundo, em testemunho a todas as gentes, e então virá o fim' (Mt 24:14).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 24,
+        "verse_start": 14,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0043",
+      "type": "open_answer",
+      "text": "Que palavra grega para a 'vinda' de Cristo Paulo usa em 1 Tessalonicenses 4:15?",
+      "options": null,
+      "accepted_answers": [
+        "Parousia",
+        "Parusia"
+      ],
+      "explanation": "Parousia significa 'presença, chegada' — a vinda pessoal do Senhor: 'nós, os que ficarmos vivos para a vinda do Senhor' (1Ts 4:15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1tessalonicenses",
+        "chapter": 4,
+        "verse_start": 15,
+        "verse_end": null
+      },
+      "difficulty": "expert"
     }
   ]
 }

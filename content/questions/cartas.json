@@ -1159,6 +1159,105 @@
         "verse_end": null
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "cartas-0039",
+      "type": "multiple_choice",
+      "text": "Em qual carta Paulo escreve 'nem judeu nem grego, nem servo nem livre... todos vós sois um em Cristo'?",
+      "options": [
+        {
+          "text": "Gálatas",
+          "correct": true
+        },
+        {
+          "text": "Romanos",
+          "correct": false
+        },
+        {
+          "text": "Efésios",
+          "correct": false
+        },
+        {
+          "text": "Colossenses",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Não há judeu nem grego; não há servo nem livre; não há macho nem fêmea; porque todos vós sois um em Cristo Jesus' (Gl 3:28).",
+      "divergence_note": null,
+      "reference": {
+        "book": "galatas",
+        "chapter": 3,
+        "verse_start": 26,
+        "verse_end": 29
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cartas-0040",
+      "type": "multiple_choice",
+      "text": "Qual carta compara falsos mestres a 'fontes sem água' e cita o caminho de Balaão?",
+      "options": [
+        {
+          "text": "2 Pedro",
+          "correct": true
+        },
+        {
+          "text": "Judas",
+          "correct": false
+        },
+        {
+          "text": "1 João",
+          "correct": false
+        },
+        {
+          "text": "Tiago",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Estes são fontes sem água, nuvens levadas pela força do vento... seguindo o caminho de Balaão' (2Pe 2:15-17).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2pedro",
+        "chapter": 2,
+        "verse_start": 15,
+        "verse_end": 17
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "cartas-0041",
+      "type": "multiple_choice",
+      "text": "Qual é a carta mais curta de Paulo, com um único capítulo?",
+      "options": [
+        {
+          "text": "Filemom",
+          "correct": true
+        },
+        {
+          "text": "Tito",
+          "correct": false
+        },
+        {
+          "text": "2 Tessalonicenses",
+          "correct": false
+        },
+        {
+          "text": "Judas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Filemom tem 25 versículos — um apelo pessoal em favor de Onésimo, 'não já como servo, mas como irmão amado' (Fm 1:16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "filemom",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 25
+      },
+      "difficulty": "medium"
     }
   ]
 }

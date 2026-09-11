@@ -1122,6 +1122,171 @@
         "verse_end": 20
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "teologia-biblica-0036",
+      "type": "multiple_choice",
+      "text": "Que título Paulo dá a Cristo em Colossenses 1:18 em relação à igreja?",
+      "options": [
+        {
+          "text": "A cabeça do corpo",
+          "correct": true
+        },
+        {
+          "text": "O alicerce do templo",
+          "correct": false
+        },
+        {
+          "text": "O sumo sacerdote",
+          "correct": false
+        },
+        {
+          "text": "O cordeiro",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Ele é a cabeça do corpo, da igreja; é o princípio e o primogênito dentre os mortos' (Cl 1:18).",
+      "divergence_note": null,
+      "reference": {
+        "book": "colossenses",
+        "chapter": 1,
+        "verse_start": 18,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "teologia-biblica-0037",
+      "type": "multiple_choice",
+      "text": "Que imagem do Antigo Testamento Jesus aplica a si em João 10: 'eu sou o bom ___'?",
+      "options": [
+        {
+          "text": "Pastor",
+          "correct": true
+        },
+        {
+          "text": "Rei",
+          "correct": false
+        },
+        {
+          "text": "Sacerdote",
+          "correct": false
+        },
+        {
+          "text": "Juiz",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Eu sou o bom Pastor; o bom Pastor dá a sua vida pelas ovelhas' (Jo 10:11) — o SENHOR-pastor do Salmo 23 e de Ezequiel 34.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 10,
+        "verse_start": 11,
+        "verse_end": 16
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "teologia-biblica-0038",
+      "type": "multiple_choice",
+      "text": "Segundo Hebreus 10:20, o que o véu do templo representava?",
+      "options": [
+        {
+          "text": "A carne de Cristo",
+          "correct": true
+        },
+        {
+          "text": "A lei de Moisés",
+          "correct": false
+        },
+        {
+          "text": "O pecado do povo",
+          "correct": false
+        },
+        {
+          "text": "O céu",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Pelo novo e vivo caminho que ele nos consagrou, pelo véu, isto é, pela sua carne' (Hb 10:20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "hebreus",
+        "chapter": 10,
+        "verse_start": 19,
+        "verse_end": 22
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "teologia-biblica-0039",
+      "type": "multiple_choice",
+      "text": "Que nome divino Jesus aplicou a si ao dizer 'antes que Abraão existisse, eu sou'?",
+      "options": [
+        {
+          "text": "O 'EU SOU' revelado a Moisés",
+          "correct": true
+        },
+        {
+          "text": "Emanuel",
+          "correct": false
+        },
+        {
+          "text": "Filho de Davi",
+          "correct": false
+        },
+        {
+          "text": "Príncipe da Paz",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Antes que Abraão existisse, eu sou' (Jo 8:58) ecoa Êxodo 3:14 — por isso pegaram pedras para apedrejá-lo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 8,
+        "verse_start": 58,
+        "verse_end": 59
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "teologia-biblica-0040",
+      "type": "multiple_choice",
+      "text": "Que aliança Hebreus 8:13 declara 'envelhecida' e prestes a desaparecer?",
+      "options": [
+        {
+          "text": "A primeira aliança, do Sinai",
+          "correct": true
+        },
+        {
+          "text": "A aliança com Noé",
+          "correct": false
+        },
+        {
+          "text": "A aliança com Abraão",
+          "correct": false
+        },
+        {
+          "text": "A aliança com Davi",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Dizendo Nova aliança, envelheceu a primeira. Ora, o que foi tornado velho e se envelhece perto está de acabar' (Hb 8:13).",
+      "divergence_note": null,
+      "reference": {
+        "book": "hebreus",
+        "chapter": 8,
+        "verse_start": 6,
+        "verse_end": 13
+      },
+      "difficulty": "medium"
     }
   ]
 }

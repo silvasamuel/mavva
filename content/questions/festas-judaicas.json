@@ -1221,6 +1221,105 @@
         "verse_end": 23
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "festas-judaicas-0040",
+      "type": "multiple_choice",
+      "text": "Quantos dias durava a Festa dos Pães Asmos, logo após a Páscoa?",
+      "options": [
+        {
+          "text": "Sete dias",
+          "correct": true
+        },
+        {
+          "text": "Um dia",
+          "correct": false
+        },
+        {
+          "text": "Três dias",
+          "correct": false
+        },
+        {
+          "text": "Cinquenta dias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Aos quinze dias deste mês é a festa dos pães asmos do SENHOR; sete dias comereis pães asmos' (Lv 23:6).",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 23,
+        "verse_start": 6,
+        "verse_end": 8
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "festas-judaicas-0041",
+      "type": "multiple_choice",
+      "text": "Que oferta singular marcava Pentecostes, a Festa das Semanas, segundo Levítico 23?",
+      "options": [
+        {
+          "text": "Dois pães levedados, como primícias",
+          "correct": true
+        },
+        {
+          "text": "Um cordeiro sem mancha",
+          "correct": false
+        },
+        {
+          "text": "Um molho de cevada",
+          "correct": false
+        },
+        {
+          "text": "Sete novilhos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Trareis dois pães... serão levedados; são as primícias ao SENHOR' (Lv 23:17) — a única oferta com fermento sobre o altar.",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 23,
+        "verse_start": 15,
+        "verse_end": 17
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "festas-judaicas-0042",
+      "type": "multiple_choice",
+      "text": "Que celebração mensal Israel marcava com trombetas e sacrifícios, citada com o sábado?",
+      "options": [
+        {
+          "text": "A lua nova",
+          "correct": true
+        },
+        {
+          "text": "O dízimo",
+          "correct": false
+        },
+        {
+          "text": "A vigília",
+          "correct": false
+        },
+        {
+          "text": "O sorteio das tribos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Nos princípios dos vossos meses oferecereis holocausto ao SENHOR' (Nm 28:11); 'lua nova e sábado' andam juntos (Is 1:13; Cl 2:16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 28,
+        "verse_start": 11,
+        "verse_end": 15
+      },
+      "difficulty": "hard"
     }
   ]
 }

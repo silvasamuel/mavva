@@ -1110,6 +1110,204 @@
         "verse_end": 30
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "parabolas-0037",
+      "type": "multiple_choice",
+      "text": "Na parábola do filho pródigo, o que o filho mais novo pediu ao pai antes de partir?",
+      "options": [
+        {
+          "text": "A sua parte da herança",
+          "correct": true
+        },
+        {
+          "text": "Um rebanho",
+          "correct": false
+        },
+        {
+          "text": "A bênção do primogênito",
+          "correct": false
+        },
+        {
+          "text": "Um servo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Pai, dá-me a parte dos bens que me pertence' — e ele repartiu os bens (Lc 15:12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 15,
+        "verse_start": 11,
+        "verse_end": 13
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "parabolas-0038",
+      "type": "multiple_choice",
+      "text": "Na parábola do semeador, o que aconteceu com a semente que caiu entre espinhos?",
+      "options": [
+        {
+          "text": "Os espinhos cresceram e a sufocaram",
+          "correct": true
+        },
+        {
+          "text": "As aves a comeram",
+          "correct": false
+        },
+        {
+          "text": "Secou ao sol",
+          "correct": false
+        },
+        {
+          "text": "Deu fruto a cento por um",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Crescendo com ela os espinhos, a sufocaram' — os cuidados, riquezas e deleites da vida (Lc 8:7,14).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 8,
+        "verse_start": 7,
+        "verse_end": 14
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "parabolas-0039",
+      "type": "multiple_choice",
+      "text": "Na parábola do bom samaritano, o que o samaritano fez pelo homem ferido?",
+      "options": [
+        {
+          "text": "Tratou-lhe as feridas, levou-o a uma hospedaria e pagou a conta",
+          "correct": true
+        },
+        {
+          "text": "Chamou os soldados",
+          "correct": false
+        },
+        {
+          "text": "Levou-o ao templo",
+          "correct": false
+        },
+        {
+          "text": "Deu-lhe dinheiro e seguiu",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Atou-lhe as feridas com azeite e vinho, levou-o no seu animal e deu dois denários ao hospedeiro (Lc 10:34-35).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 10,
+        "verse_start": 33,
+        "verse_end": 35
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "parabolas-0040",
+      "type": "multiple_choice",
+      "text": "Na parábola da ovelha perdida, o que o pastor faz ao encontrá-la?",
+      "options": [
+        {
+          "text": "Põe-na sobre os ombros e chama os amigos para se alegrarem",
+          "correct": true
+        },
+        {
+          "text": "Castiga-a",
+          "correct": false
+        },
+        {
+          "text": "Vende-a",
+          "correct": false
+        },
+        {
+          "text": "Deixa-a no deserto",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Achando-a, põe-na sobre os seus ombros, gostoso; e... convoca os amigos e vizinhos: Alegrai-vos comigo' (Lc 15:5-6).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 15,
+        "verse_start": 4,
+        "verse_end": 7
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "parabolas-0041",
+      "type": "multiple_choice",
+      "text": "Na parábola do rico e Lázaro, o que o rico pediu a Abraão do lugar de tormento?",
+      "options": [
+        {
+          "text": "Que Lázaro molhasse o dedo para refrescar-lhe a língua, e que avisasse seus irmãos",
+          "correct": true
+        },
+        {
+          "text": "Que o levasse ao paraíso",
+          "correct": false
+        },
+        {
+          "text": "Que castigasse Lázaro",
+          "correct": false
+        },
+        {
+          "text": "Que devolvesse suas riquezas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Manda a Lázaro que molhe na água a ponta do seu dedo'; depois: 'manda-o a casa de meu pai' (Lc 16:24-28).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 16,
+        "verse_start": 24,
+        "verse_end": 31
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "parabolas-0042",
+      "type": "multiple_choice",
+      "text": "Na parábola do fariseu e do publicano, o que o publicano orou?",
+      "options": [
+        {
+          "text": "'Ó Deus, tem misericórdia de mim, pecador'",
+          "correct": true
+        },
+        {
+          "text": "'Graças te dou porque não sou como os outros'",
+          "correct": false
+        },
+        {
+          "text": "'Dou o dízimo de tudo'",
+          "correct": false
+        },
+        {
+          "text": "'Jejuo duas vezes na semana'",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'O publicano, estando em pé, de longe... batia no peito, dizendo: Ó Deus, tem misericórdia de mim, pecador!' (Lc 18:13).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 18,
+        "verse_start": 13,
+        "verse_end": 14
+      },
+      "difficulty": "medium"
     }
   ]
 }

@@ -1245,6 +1245,138 @@
         "verse_end": 14
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0040",
+      "type": "multiple_choice",
+      "text": "Que língua Jesus falava no dia a dia, preservada em expressões como 'Talita cumi' e 'Efatá'?",
+      "options": [
+        {
+          "text": "Aramaico",
+          "correct": true
+        },
+        {
+          "text": "Grego",
+          "correct": false
+        },
+        {
+          "text": "Latim",
+          "correct": false
+        },
+        {
+          "text": "Hebraico clássico",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O aramaico era a língua comum da Palestina; os evangelhos guardam palavras de Jesus nela (Mc 5:41; 7:34).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 5,
+        "verse_start": 41,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0041",
+      "type": "multiple_choice",
+      "text": "Quem eram os 'escribas', tantas vezes citados ao lado dos fariseus?",
+      "options": [
+        {
+          "text": "Estudiosos e copistas da Lei, mestres em interpretá-la",
+          "correct": true
+        },
+        {
+          "text": "Cobradores de impostos",
+          "correct": false
+        },
+        {
+          "text": "Guardas do templo",
+          "correct": false
+        },
+        {
+          "text": "Oficiais romanos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Os escribas ensinavam 'como os que têm autoridade' — e o povo notou que Jesus ensinava diferente deles (Mc 1:22).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 1,
+        "verse_start": 22,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0042",
+      "type": "multiple_choice",
+      "text": "Qual imperador expulsou os judeus de Roma, trazendo Áquila e Priscila a Corinto?",
+      "options": [
+        {
+          "text": "Cláudio",
+          "correct": true
+        },
+        {
+          "text": "Nero",
+          "correct": false
+        },
+        {
+          "text": "Tibério",
+          "correct": false
+        },
+        {
+          "text": "Calígula",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Áquila e Priscila haviam chegado 'da Itália, por Cláudio ter mandado que todos os judeus saíssem de Roma' (At 18:2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 18,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "contexto-historico-0043",
+      "type": "multiple_choice",
+      "text": "Quem eram os 'herodianos' que se uniram aos fariseus para armar contra Jesus?",
+      "options": [
+        {
+          "text": "Partidários da dinastia de Herodes, aliados de Roma",
+          "correct": true
+        },
+        {
+          "text": "Uma seita do deserto",
+          "correct": false
+        },
+        {
+          "text": "Sacerdotes do templo",
+          "correct": false
+        },
+        {
+          "text": "Soldados de Pilatos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Fariseus e herodianos, normalmente rivais, uniram-se para 'matá-lo' (Mc 3:6) e na pergunta sobre o tributo (Mc 12:13).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 3,
+        "verse_start": 6,
+        "verse_end": null
+      },
+      "difficulty": "hard"
     }
   ]
 }

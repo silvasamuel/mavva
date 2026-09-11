@@ -1155,6 +1155,105 @@
         "verse_end": 17
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "profetas-0039",
+      "type": "multiple_choice",
+      "text": "Qual profeta anunciou o 'Sol da justiça' que traria 'salvação nas suas asas'?",
+      "options": [
+        {
+          "text": "Malaquias",
+          "correct": true
+        },
+        {
+          "text": "Zacarias",
+          "correct": false
+        },
+        {
+          "text": "Ageu",
+          "correct": false
+        },
+        {
+          "text": "Joel",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Para vós que temeis o meu nome nascerá o Sol da justiça, e cura trará nas suas asas' (Ml 4:2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "malaquias",
+        "chapter": 4,
+        "verse_start": 2,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "profetas-0040",
+      "type": "multiple_choice",
+      "text": "Qual profeta mandou Josafá e Jeorão cavarem valas em Moabe, que Deus encheu de água?",
+      "options": [
+        {
+          "text": "Eliseu",
+          "correct": true
+        },
+        {
+          "text": "Elias",
+          "correct": false
+        },
+        {
+          "text": "Micaías",
+          "correct": false
+        },
+        {
+          "text": "Jeú",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Fazei neste vale muitas covas... este vale se encherá de água' — e Deus deu vitória sobre Moabe (2Rs 3:16-20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 3,
+        "verse_start": 11,
+        "verse_end": 20
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "profetas-0041",
+      "type": "multiple_choice",
+      "text": "Qual profeta rasgou uma capa em doze pedaços diante de Jeroboão, anunciando a divisão do reino?",
+      "options": [
+        {
+          "text": "Aías",
+          "correct": true
+        },
+        {
+          "text": "Semaías",
+          "correct": false
+        },
+        {
+          "text": "Natã",
+          "correct": false
+        },
+        {
+          "text": "Gade",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Aías rasgou a capa nova: 'toma dez pedaços... porque eu rasgarei o reino da mão de Salomão' (1Rs 11:29-31).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 11,
+        "verse_start": 29,
+        "verse_end": 31
+      },
+      "difficulty": "expert"
     }
   ]
 }

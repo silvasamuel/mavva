@@ -1139,6 +1139,204 @@
         "verse_end": 75
       },
       "difficulty": "easy"
+    },
+    {
+      "external_id": "evangelhos-0039",
+      "type": "multiple_choice",
+      "text": "Qual oração Jesus ensinou aos discípulos, começando com 'Pai nosso, que estás nos céus'?",
+      "options": [
+        {
+          "text": "O Pai Nosso",
+          "correct": true
+        },
+        {
+          "text": "O Credo",
+          "correct": false
+        },
+        {
+          "text": "O Cântico de Maria",
+          "correct": false
+        },
+        {
+          "text": "A Ave Maria",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Portanto, vós orareis assim: Pai nosso, que estás nos céus, santificado seja o teu nome' (Mt 6:9-13).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 6,
+        "verse_start": 9,
+        "verse_end": 13
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "evangelhos-0040",
+      "type": "multiple_choice",
+      "text": "Quem traiu Jesus por trinta moedas de prata?",
+      "options": [
+        {
+          "text": "Judas Iscariotes",
+          "correct": true
+        },
+        {
+          "text": "Pedro",
+          "correct": false
+        },
+        {
+          "text": "Tomé",
+          "correct": false
+        },
+        {
+          "text": "Barrabás",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Judas perguntou aos sacerdotes 'que me quereis dar?', e 'eles lhe pesaram trinta moedas de prata' (Mt 26:14-15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 26,
+        "verse_start": 14,
+        "verse_end": 16
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "evangelhos-0041",
+      "type": "multiple_choice",
+      "text": "Quantos apóstolos Jesus escolheu para estarem com ele?",
+      "options": [
+        {
+          "text": "Doze",
+          "correct": true
+        },
+        {
+          "text": "Sete",
+          "correct": false
+        },
+        {
+          "text": "Dez",
+          "correct": false
+        },
+        {
+          "text": "Setenta",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Chamando os seus doze discípulos, deu-lhes poder sobre os espíritos imundos' (Mt 10:1) — os nomes seguem em Mt 10:2-4.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 10,
+        "verse_start": 1,
+        "verse_end": 4
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "evangelhos-0042",
+      "type": "multiple_choice",
+      "text": "Quem ungiu os pés de Jesus com perfume de nardo em Betânia, enxugando-os com os cabelos?",
+      "options": [
+        {
+          "text": "Maria, irmã de Lázaro",
+          "correct": true
+        },
+        {
+          "text": "Maria Madalena",
+          "correct": false
+        },
+        {
+          "text": "Marta",
+          "correct": false
+        },
+        {
+          "text": "Salomé",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Maria, tomando um arrátel de unguento de nardo puro... ungiu os pés de Jesus e enxugou-lhos com os seus cabelos' (Jo 12:3).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 12,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "evangelhos-0043",
+      "type": "multiple_choice",
+      "text": "Que apelido Jesus deu aos irmãos Tiago e João?",
+      "options": [
+        {
+          "text": "Boanerges — filhos do trovão",
+          "correct": true
+        },
+        {
+          "text": "Filhos da luz",
+          "correct": false
+        },
+        {
+          "text": "Colunas da igreja",
+          "correct": false
+        },
+        {
+          "text": "Pescadores de homens",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Tiago, filho de Zebedeu, e João, irmão de Tiago, aos quais pôs o nome de Boanerges, que significa: Filhos do trovão' (Mc 3:17).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 3,
+        "verse_start": 17,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "evangelhos-0044",
+      "type": "multiple_choice",
+      "text": "Que discípulo Jesus viu 'debaixo da figueira' e chamou 'verdadeiro israelita, em quem não há dolo'?",
+      "options": [
+        {
+          "text": "Natanael",
+          "correct": true
+        },
+        {
+          "text": "Filipe",
+          "correct": false
+        },
+        {
+          "text": "Tomé",
+          "correct": false
+        },
+        {
+          "text": "Bartolomeu",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Natanael duvidou de Nazaré, mas ao ouvir 'quando estavas debaixo da figueira, te vi' confessou: 'Tu és o Filho de Deus' (Jo 1:45-49).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 1,
+        "verse_start": 45,
+        "verse_end": 51
+      },
+      "difficulty": "hard"
     }
   ]
 }

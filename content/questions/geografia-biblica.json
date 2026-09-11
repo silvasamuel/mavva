@@ -1176,6 +1176,138 @@
         "verse_end": 28
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "geografia-biblica-0039",
+      "type": "multiple_choice",
+      "text": "Em que cidade Jesus nasceu?",
+      "options": [
+        {
+          "text": "Belém",
+          "correct": true
+        },
+        {
+          "text": "Nazaré",
+          "correct": false
+        },
+        {
+          "text": "Jerusalém",
+          "correct": false
+        },
+        {
+          "text": "Cafarnaum",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Jesus nasceu em Belém da Judeia, no tempo do rei Herodes' (Mt 2:1), a cidade de Davi (Lc 2:4).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "geografia-biblica-0040",
+      "type": "multiple_choice",
+      "text": "Em que região da Palestina ficavam Jerusalém e Belém?",
+      "options": [
+        {
+          "text": "Judeia",
+          "correct": true
+        },
+        {
+          "text": "Galileia",
+          "correct": false
+        },
+        {
+          "text": "Samaria",
+          "correct": false
+        },
+        {
+          "text": "Decápolis",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Belém e Jerusalém ficam na Judeia, ao sul; a Galileia, ao norte, era a região de Nazaré (Mt 2:1; Lc 2:4).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 2,
+        "verse_start": 4,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "geografia-biblica-0041",
+      "type": "multiple_choice",
+      "text": "Em que monte, segundo a tradição, Jesus foi transfigurado?",
+      "options": [
+        {
+          "text": "Monte Tabor",
+          "correct": true
+        },
+        {
+          "text": "Monte Carmelo",
+          "correct": false
+        },
+        {
+          "text": "Monte Sinai",
+          "correct": false
+        },
+        {
+          "text": "Monte Nebo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Os evangelhos dizem apenas 'um alto monte' (Mt 17:1); a tradição cristã, desde os primeiros séculos, aponta o Tabor, na Galileia.",
+      "divergence_note": "O texto bíblico não nomeia o monte da transfiguração. O Tabor é a identificação tradicional; alguns estudiosos propõem o Hermom, perto de Cesareia de Filipe.",
+      "reference": {
+        "book": "mateus",
+        "chapter": 17,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "geografia-biblica-0042",
+      "type": "multiple_choice",
+      "text": "Para que país José foi levado como escravo pelos mercadores?",
+      "options": [
+        {
+          "text": "Egito",
+          "correct": true
+        },
+        {
+          "text": "Assíria",
+          "correct": false
+        },
+        {
+          "text": "Babilônia",
+          "correct": false
+        },
+        {
+          "text": "Midiã",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Os midianitas venderam José no Egito a Potifar, eunuco de Faraó' (Gn 37:36).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 37,
+        "verse_start": 28,
+        "verse_end": 36
+      },
+      "difficulty": "easy"
     }
   ]
 }

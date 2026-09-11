@@ -1129,6 +1129,171 @@
         "verse_end": 12
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "milagres-0038",
+      "type": "multiple_choice",
+      "text": "Como Moisés fez sair água da rocha em Refidim?",
+      "options": [
+        {
+          "text": "Feriu a rocha com a vara",
+          "correct": true
+        },
+        {
+          "text": "Orou sete vezes",
+          "correct": false
+        },
+        {
+          "text": "Lançou sal",
+          "correct": false
+        },
+        {
+          "text": "Cavou um poço",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Ferirás a rocha, e dela sairão águas, para que o povo beba' (Êx 17:6) — em Horebe, diante dos anciãos.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 17,
+        "verse_start": 5,
+        "verse_end": 6
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "milagres-0039",
+      "type": "multiple_choice",
+      "text": "Que animal Deus fez falar para repreender o profeta Balaão?",
+      "options": [
+        {
+          "text": "A jumenta",
+          "correct": true
+        },
+        {
+          "text": "Um corvo",
+          "correct": false
+        },
+        {
+          "text": "Um leão",
+          "correct": false
+        },
+        {
+          "text": "Uma serpente",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Abriu o SENHOR a boca da jumenta, e ela disse a Balaão: Que te fiz eu, que me espancaste?' (Nm 22:28).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 22,
+        "verse_start": 28,
+        "verse_end": 30
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0040",
+      "type": "multiple_choice",
+      "text": "Qual foi a segunda praga sobre o Egito?",
+      "options": [
+        {
+          "text": "Rãs",
+          "correct": true
+        },
+        {
+          "text": "Piolhos",
+          "correct": false
+        },
+        {
+          "text": "Gafanhotos",
+          "correct": false
+        },
+        {
+          "text": "Trevas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Farei que rãs cubram a tua terra... subirão e entrarão na tua casa' (Êx 8:2-6).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 8,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0041",
+      "type": "multiple_choice",
+      "text": "O que aconteceu com a vara de Arão diante de Faraó?",
+      "options": [
+        {
+          "text": "Tornou-se serpente e engoliu as varas dos magos",
+          "correct": true
+        },
+        {
+          "text": "Floresceu",
+          "correct": false
+        },
+        {
+          "text": "Queimou",
+          "correct": false
+        },
+        {
+          "text": "Partiu-se em duas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Arão lançou a sua vara diante de Faraó, e tornou-se em serpente... mas a vara de Arão tragou as varas deles' (Êx 7:10-12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 7,
+        "verse_start": 8,
+        "verse_end": 12
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0042",
+      "type": "multiple_choice",
+      "text": "Que sinal confirmou o sacerdócio de Arão quando as varas das tribos foram postas no tabernáculo?",
+      "options": [
+        {
+          "text": "A vara de Arão floresceu e deu amêndoas",
+          "correct": true
+        },
+        {
+          "text": "Caiu fogo do céu",
+          "correct": false
+        },
+        {
+          "text": "A vara virou ouro",
+          "correct": false
+        },
+        {
+          "text": "As outras varas queimaram",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'A vara de Arão... brotara, e produzira gomos, e dera flores, e amadurecera amêndoas' (Nm 17:8) — guardada depois na arca.",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 17,
+        "verse_start": 1,
+        "verse_end": 10
+      },
+      "difficulty": "hard"
     }
   ]
 }

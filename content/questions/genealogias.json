@@ -841,7 +841,7 @@
     {
       "external_id": "genealogias-0028",
       "type": "multiple_choice",
-      "text": "Quem foi o pai de Abraão, que saiu de Ur dos caldeus com a família?",
+      "text": "Quem foi o pai de Davi, filho de Obede?",
       "options": [
         {
           "text": "Terá",
@@ -861,7 +861,7 @@
         }
       ],
       "accepted_answers": null,
-      "explanation": "'Tomou Terá a Abrão, seu filho... e saíram de Ur dos caldeus' até Harã, onde Terá morreu (Gn 11:31-32).",
+      "explanation": "'Obede gerou a Jessé, e Jessé gerou a Davi' (Rt 4:22); Davi é chamado repetidamente 'filho de Jessé' (1Sm 16:18).",
       "divergence_note": null,
       "reference": {
         "book": "genesis",
@@ -1127,6 +1127,138 @@
         "verse_end": 21
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "genealogias-0038",
+      "type": "multiple_choice",
+      "text": "Quais gêmeos nasceram a Isaque, já lutando no ventre da mãe?",
+      "options": [
+        {
+          "text": "Jacó e Esaú",
+          "correct": true
+        },
+        {
+          "text": "Caim e Abel",
+          "correct": false
+        },
+        {
+          "text": "Efraim e Manassés",
+          "correct": false
+        },
+        {
+          "text": "Perez e Zerá",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Os filhos lutavam dentro dela'; nasceu Esaú, ruivo, e depois Jacó, segurando-lhe o calcanhar (Gn 25:22-26).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 25,
+        "verse_start": 21,
+        "verse_end": 26
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "genealogias-0039",
+      "type": "multiple_choice",
+      "text": "Quem foi a esposa de Isaque, encontrada junto ao poço pelo servo de Abraão?",
+      "options": [
+        {
+          "text": "Rebeca",
+          "correct": true
+        },
+        {
+          "text": "Raquel",
+          "correct": false
+        },
+        {
+          "text": "Lia",
+          "correct": false
+        },
+        {
+          "text": "Sara",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Rebeca deu de beber ao servo e aos camelos — o sinal pedido em oração (Gn 24:14-19) — e tornou-se mãe de Jacó e Esaú.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 24,
+        "verse_start": 15,
+        "verse_end": 20
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "genealogias-0040",
+      "type": "multiple_choice",
+      "text": "Quantas gerações Gênesis 5 lista de Adão a Noé?",
+      "options": [
+        {
+          "text": "Dez",
+          "correct": true
+        },
+        {
+          "text": "Sete",
+          "correct": false
+        },
+        {
+          "text": "Doze",
+          "correct": false
+        },
+        {
+          "text": "Catorze",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Adão, Sete, Enos, Cainã, Maalalel, Jarede, Enoque, Metusalém, Lameque e Noé — dez gerações (Gn 5:1-32).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 5,
+        "verse_start": 1,
+        "verse_end": 32
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "genealogias-0041",
+      "type": "multiple_choice",
+      "text": "Quantos filhos Jacó teve com Lia, sua primeira esposa?",
+      "options": [
+        {
+          "text": "Seis",
+          "correct": true
+        },
+        {
+          "text": "Dois",
+          "correct": false
+        },
+        {
+          "text": "Quatro",
+          "correct": false
+        },
+        {
+          "text": "Doze",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Rúben, Simeão, Levi, Judá, Issacar e Zebulom — e também a filha Diná (Gn 29:32-35; 30:17-21).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 30,
+        "verse_start": 17,
+        "verse_end": 21
+      },
+      "difficulty": "hard"
     }
   ]
 }

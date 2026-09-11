@@ -1126,6 +1126,225 @@
         "verse_end": null
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "idiomas-biblicos-0039",
+      "type": "multiple_choice",
+      "text": "O que significa a palavra 'apóstolo' (apostolos)?",
+      "options": [
+        {
+          "text": "Enviado",
+          "correct": true
+        },
+        {
+          "text": "Discípulo",
+          "correct": false
+        },
+        {
+          "text": "Sacerdote",
+          "correct": false
+        },
+        {
+          "text": "Ancião",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Apóstolo é 'aquele que é enviado' com autoridade de quem envia — 'assim como o Pai me enviou, também eu vos envio' (Jo 20:21).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 20,
+        "verse_start": 21,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "idiomas-biblicos-0040",
+      "type": "multiple_choice",
+      "text": "O que significa 'Pentecostes'?",
+      "options": [
+        {
+          "text": "Quinquagésimo (dia)",
+          "correct": true
+        },
+        {
+          "text": "Colheita",
+          "correct": false
+        },
+        {
+          "text": "Fogo do céu",
+          "correct": false
+        },
+        {
+          "text": "Reunião",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Do grego pentekoste, 'quinquagésimo': a festa cinquenta dias após a Páscoa (At 2:1; cf. Lv 23:16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "idiomas-biblicos-0041",
+      "type": "multiple_choice",
+      "text": "O que significa 'Babel', segundo a explicação de Gênesis 11:9?",
+      "options": [
+        {
+          "text": "Confusão",
+          "correct": true
+        },
+        {
+          "text": "Porta de Deus",
+          "correct": false
+        },
+        {
+          "text": "Torre alta",
+          "correct": false
+        },
+        {
+          "text": "Cidade grande",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Chamou-se o seu nome Babel, porquanto ali confundiu o SENHOR a língua de toda a terra' (Gn 11:9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 11,
+        "verse_start": 9,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "idiomas-biblicos-0042",
+      "type": "multiple_choice",
+      "text": "O que significa o nome 'Barnabé', dado a José, o levita de Chipre?",
+      "options": [
+        {
+          "text": "Filho da consolação",
+          "correct": true
+        },
+        {
+          "text": "Filho do trovão",
+          "correct": false
+        },
+        {
+          "text": "Homem de Deus",
+          "correct": false
+        },
+        {
+          "text": "Servo fiel",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'José, cognominado pelos apóstolos Barnabé (que, traduzido, é filho da consolação)' (At 4:36).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 4,
+        "verse_start": 36,
+        "verse_end": 37
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "idiomas-biblicos-0043",
+      "type": "multiple_choice",
+      "text": "O que significa 'Belém' (Bete-Leém) em hebraico?",
+      "options": [
+        {
+          "text": "Casa do pão",
+          "correct": true
+        },
+        {
+          "text": "Cidade de Davi",
+          "correct": false
+        },
+        {
+          "text": "Casa de Deus",
+          "correct": false
+        },
+        {
+          "text": "Poço da promessa",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Beth-lechem, 'casa do pão' — onde nasceu aquele que disse 'eu sou o pão da vida' (Jo 6:35; Mt 2:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "idiomas-biblicos-0044",
+      "type": "multiple_choice",
+      "text": "O que significa 'Torá', nome hebraico dos cinco livros de Moisés?",
+      "options": [
+        {
+          "text": "Lei, instrução",
+          "correct": true
+        },
+        {
+          "text": "Aliança",
+          "correct": false
+        },
+        {
+          "text": "Profecia",
+          "correct": false
+        },
+        {
+          "text": "Louvor",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Torá é 'instrução, lei' — 'a lei do SENHOR é perfeita' (Sl 19:7); Jesus a chama 'a Lei de Moisés' (Lc 24:44).",
+      "divergence_note": null,
+      "reference": {
+        "book": "salmos",
+        "chapter": 19,
+        "verse_start": 7,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "idiomas-biblicos-0045",
+      "type": "open_answer",
+      "text": "Que palavra hebraica abre a Bíblia e significa 'no princípio'?",
+      "options": null,
+      "accepted_answers": [
+        "Bereshit",
+        "Bereshith",
+        "Bereshít",
+        "Bere'shit"
+      ],
+      "explanation": "Bereshit bara Elohim — 'No princípio criou Deus os céus e a terra' (Gn 1:1); é também o nome hebraico do livro de Gênesis.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "expert"
     }
   ]
 }
