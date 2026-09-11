@@ -1,7 +1,10 @@
+from datetime import UTC, datetime, timedelta
+
 from fastapi.testclient import TestClient
+from sqlalchemy.orm import Session
 
 from app.core.security import create_access_token
-from app.models import User
+from app.models import EmailVerificationToken, User
 from app.services.auth_service import register_user
 from tests.helpers import register_and_login, verification_tokens
 from tests.helpers import register_user as api_register
@@ -11,11 +14,20 @@ def _register(client: TestClient, email: str = "novo@teste.com") -> dict:
     return api_register(client, name="Novo Usuário", email=email)
 
 
+def _age_verification_tokens(db: Session, email: str) -> None:
+    user = db.query(User).filter(User.email == email).one()
+    db.query(EmailVerificationToken).filter(EmailVerificationToken.user_id == user.id).update(
+        {"created_at": datetime.now(UTC) - timedelta(minutes=2)}
+    )
+    db.flush()
+
+
 class TestRegister:
     def test_register_asks_for_email_confirmation(self, client: TestClient):
         body = _register(client)
         assert "access_token" not in body
         assert "confirmação" in body["message"].lower()
+        assert body["retry_after"] == 60
         assert client.cookies.get("refresh_token") is None
         assert verification_tokens["novo@teste.com"]
 
@@ -71,10 +83,20 @@ class TestResendVerification:
             "/api/v1/auth/resend-verification", json={"email": "nao-existe@teste.com"}
         )
         assert response.status_code == 202
+        assert response.json()["retry_after"] == 60
 
-    def test_issues_a_new_token(self, client: TestClient):
+    def test_cooldown_does_not_issue_a_new_token(self, client: TestClient):
         _register(client)
         first = verification_tokens["novo@teste.com"]
+        again = client.post("/api/v1/auth/resend-verification", json={"email": "novo@teste.com"})
+        assert again.status_code == 202
+        assert again.json()["retry_after"] > 0
+        assert verification_tokens["novo@teste.com"] == first
+
+    def test_issues_a_new_token(self, client: TestClient, db: Session):
+        _register(client)
+        first = verification_tokens["novo@teste.com"]
+        _age_verification_tokens(db, "novo@teste.com")
         assert (
             client.post(
                 "/api/v1/auth/resend-verification", json={"email": "novo@teste.com"}
