@@ -348,7 +348,8 @@
         "verse_start": 59,
         "verse_end": 60
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "historia-da-igreja-0012",
@@ -851,7 +852,8 @@
         "verse_start": 9,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "historia-da-igreja-0028",
@@ -1000,6 +1002,189 @@
         "chapter": 1,
         "verse_start": 5,
         "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-da-igreja-0033",
+      "type": "multiple_choice",
+      "text": "Qual profeta previu a prisão de Paulo em Jerusalém, atando as próprias mãos e pés com o cinto dele?",
+      "options": [
+        {
+          "text": "Ágabo",
+          "correct": true
+        },
+        {
+          "text": "Silas",
+          "correct": false
+        },
+        {
+          "text": "Apolo",
+          "correct": false
+        },
+        {
+          "text": "Judas Barsabás",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Ágabo tomou o cinto de Paulo e disse: 'Assim ligarão os judeus em Jerusalém o homem de quem é este cinto' (At 21:10-11).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 21,
+        "verse_start": 10,
+        "verse_end": 11
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-da-igreja-0034",
+      "type": "multiple_choice",
+      "text": "Quem foi o orador que acusou Paulo perante o governador Félix?",
+      "options": [
+        {
+          "text": "Tértulo",
+          "correct": true
+        },
+        {
+          "text": "Anás",
+          "correct": false
+        },
+        {
+          "text": "Demétrio",
+          "correct": false
+        },
+        {
+          "text": "Alexandre",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Tértulo começou a acusá-lo, dizendo: ...achamos que este homem é uma peste' (At 24:1-5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 24,
+        "verse_start": 1,
+        "verse_end": 5
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "historia-da-igreja-0035",
+      "type": "multiple_choice",
+      "text": "Que jovem adormeceu numa janela durante a longa pregação de Paulo em Trôade e caiu do terceiro andar?",
+      "options": [
+        {
+          "text": "Êutico",
+          "correct": true
+        },
+        {
+          "text": "Timóteo",
+          "correct": false
+        },
+        {
+          "text": "Trófimo",
+          "correct": false
+        },
+        {
+          "text": "Tíquico",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Paulo o abraçou e disse: 'Não vos perturbeis, que a sua alma nele está' (At 20:9-12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 20,
+        "verse_start": 7,
+        "verse_end": 12
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0036",
+      "type": "multiple_choice",
+      "text": "Em que cidade Paulo ensinou diariamente por dois anos na 'escola de Tirano'?",
+      "options": [
+        {
+          "text": "Éfeso",
+          "correct": true
+        },
+        {
+          "text": "Corinto",
+          "correct": false
+        },
+        {
+          "text": "Atenas",
+          "correct": false
+        },
+        {
+          "text": "Filipos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Após deixar a sinagoga, Paulo ensinou 'todos os dias na escola de um certo Tirano', e a palavra se espalhou pela Ásia (At 19:9-10).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 19,
+        "verse_start": 8,
+        "verse_end": 10
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-da-igreja-0037",
+      "type": "multiple_choice",
+      "text": "Que discípulo de Damasco foi enviado a impor as mãos sobre Saulo cego?",
+      "options": [
+        {
+          "text": "Ananias de Damasco",
+          "correct": true
+        },
+        {
+          "text": "Barnabé",
+          "correct": false
+        },
+        {
+          "text": "Filipe",
+          "correct": false
+        },
+        {
+          "text": "Estêvão",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Irmão Saulo, o Senhor Jesus... me enviou para que tornes a ver e sejas cheio do Espírito Santo' (At 9:10-18).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 9,
+        "verse_start": 10,
+        "verse_end": 18
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0038",
+      "type": "open_answer",
+      "text": "Qual companheiro Paulo diz ser o único que ficou com ele no fim: 'Só ___ está comigo'?",
+      "options": null,
+      "accepted_answers": [
+        "Lucas"
+      ],
+      "explanation": "'Só Lucas está comigo' (2Tm 4:11), escrito da prisão, pouco antes da morte do apóstolo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2timoteo",
+        "chapter": 4,
+        "verse_start": 9,
+        "verse_end": 11
       },
       "difficulty": "hard"
     }

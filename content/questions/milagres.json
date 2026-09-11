@@ -369,7 +369,8 @@
         "verse_start": 43,
         "verse_end": 44
       },
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "is_active": false
     },
     {
       "external_id": "milagres-0013",
@@ -789,7 +790,8 @@
         "verse_start": 51,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "milagres-0027",
@@ -855,7 +857,8 @@
         "verse_start": 25,
         "verse_end": 26
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "milagres-0029",
@@ -943,6 +946,189 @@
         "verse_end": 22
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0032",
+      "type": "multiple_choice",
+      "text": "Que árvore Jesus amaldiçoou por ter folhas e nenhum fruto, e ela secou até a raiz?",
+      "options": [
+        {
+          "text": "Uma figueira",
+          "correct": true
+        },
+        {
+          "text": "Uma oliveira",
+          "correct": false
+        },
+        {
+          "text": "Uma videira",
+          "correct": false
+        },
+        {
+          "text": "Um sicômoro",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Nunca mais coma alguém fruto de ti'; no dia seguinte 'viram que a figueira se havia secado desde as raízes' (Mc 11:14,20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 11,
+        "verse_start": 12,
+        "verse_end": 21
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0033",
+      "type": "multiple_choice",
+      "text": "Que milagre Jesus fez em Caná pela segunda vez, a pedido de um oficial do rei?",
+      "options": [
+        {
+          "text": "Curou à distância o filho do oficial, que estava em Cafarnaum",
+          "correct": true
+        },
+        {
+          "text": "Transformou água em vinho de novo",
+          "correct": false
+        },
+        {
+          "text": "Multiplicou pães",
+          "correct": false
+        },
+        {
+          "text": "Acalmou uma tempestade",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Vai, o teu filho vive'; o oficial soube que a febre o deixara na mesma hora (Jo 4:46-53) — o segundo sinal em Caná.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 4,
+        "verse_start": 46,
+        "verse_end": 54
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "milagres-0034",
+      "type": "multiple_choice",
+      "text": "Quantas pessoas Jesus alimentou com sete pães e alguns peixinhos, na segunda multiplicação?",
+      "options": [
+        {
+          "text": "Quatro mil",
+          "correct": true
+        },
+        {
+          "text": "Cinco mil",
+          "correct": false
+        },
+        {
+          "text": "Três mil",
+          "correct": false
+        },
+        {
+          "text": "Sete mil",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Os que comeram eram quatro mil homens, além de mulheres e crianças', e sobraram sete cestos (Mt 15:34-38).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 15,
+        "verse_start": 32,
+        "verse_end": 38
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "milagres-0035",
+      "type": "multiple_choice",
+      "text": "Que sinais Deus operou pela sombra de Pedro e pelos lenços de Paulo, segundo Atos?",
+      "options": [
+        {
+          "text": "Enfermos eram curados",
+          "correct": true
+        },
+        {
+          "text": "Mortos ressuscitavam",
+          "correct": false
+        },
+        {
+          "text": "Prisões se abriam",
+          "correct": false
+        },
+        {
+          "text": "Chuvas cessavam",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Traziam os doentes 'para que ao menos a sombra de Pedro cobrisse alguns' (At 5:15); lenços de Paulo curavam (At 19:12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 5,
+        "verse_start": 15,
+        "verse_end": 16
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "milagres-0036",
+      "type": "multiple_choice",
+      "text": "Que milagre acompanhou a batalha de Josué contra os amorreus, além de o sol se deter?",
+      "options": [
+        {
+          "text": "Grandes pedras de saraiva caíram do céu sobre os inimigos",
+          "correct": true
+        },
+        {
+          "text": "Um rio se abriu",
+          "correct": false
+        },
+        {
+          "text": "Os muros caíram",
+          "correct": false
+        },
+        {
+          "text": "Os cavalos empacaram",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'O SENHOR lançou do céu grandes pedras... mais morreram da saraiva do que os filhos de Israel mataram à espada' (Js 10:11).",
+      "divergence_note": null,
+      "reference": {
+        "book": "josue",
+        "chapter": 10,
+        "verse_start": 11,
+        "verse_end": 14
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "milagres-0037",
+      "type": "open_answer",
+      "text": "Qual profeta fez descer fogo do céu para consumir os soldados enviados pelo rei Acazias?",
+      "options": null,
+      "accepted_answers": [
+        "Elias"
+      ],
+      "explanation": "'Se eu sou homem de Deus, desça fogo do céu e te consuma a ti e aos teus cinquenta' — e assim foi, duas vezes (2Rs 1:10-12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 1,
+        "verse_start": 9,
+        "verse_end": 12
+      },
+      "difficulty": "hard"
     }
   ]
 }

@@ -301,7 +301,8 @@
         "verse_start": 1,
         "verse_end": 8
       },
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "is_active": false
     },
     {
       "external_id": "organizacao-da-biblia-0011",
@@ -670,7 +671,8 @@
         "verse_start": 1,
         "verse_end": 2
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "organizacao-da-biblia-0022",
@@ -835,7 +837,8 @@
         "verse_start": 8,
         "verse_end": null
       },
-      "difficulty": "expert"
+      "difficulty": "expert",
+      "is_active": false
     },
     {
       "external_id": "organizacao-da-biblia-0027",
@@ -921,7 +924,8 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "organizacao-da-biblia-0030",
@@ -1006,6 +1010,192 @@
         "chapter": 3,
         "verse_start": 16,
         "verse_end": 17
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0033",
+      "type": "multiple_choice",
+      "text": "Quais livros recontam a história de Israel desde Adão, com foco em Judá e no templo?",
+      "options": [
+        {
+          "text": "1 e 2 Crônicas",
+          "correct": true
+        },
+        {
+          "text": "1 e 2 Reis",
+          "correct": false
+        },
+        {
+          "text": "Esdras e Neemias",
+          "correct": false
+        },
+        {
+          "text": "1 e 2 Samuel",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Crônicas abre com genealogias desde Adão (1Cr 1:1) e encerra com o decreto de Ciro (2Cr 36:23).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1cronicas",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0034",
+      "type": "multiple_choice",
+      "text": "Quantas cartas do Novo Testamento são tradicionalmente atribuídas a Paulo?",
+      "options": [
+        {
+          "text": "Treze",
+          "correct": true
+        },
+        {
+          "text": "Sete",
+          "correct": false
+        },
+        {
+          "text": "Nove",
+          "correct": false
+        },
+        {
+          "text": "Vinte e uma",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "De Romanos a Filemom são treze cartas com o nome de Paulo; Hebreus é anônima (Rm 1:1; Fm 1:1).",
+      "divergence_note": "Algumas tradições contam catorze incluindo Hebreus, cuja autoria paulina foi defendida na antiguidade; o próprio texto de Hebreus não nomeia autor.",
+      "reference": {
+        "book": "romanos",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0035",
+      "type": "multiple_choice",
+      "text": "Em que ordem aparecem os quatro evangelhos no Novo Testamento?",
+      "options": [
+        {
+          "text": "Mateus, Marcos, Lucas e João",
+          "correct": true
+        },
+        {
+          "text": "Marcos, Mateus, Lucas e João",
+          "correct": false
+        },
+        {
+          "text": "João, Mateus, Marcos e Lucas",
+          "correct": false
+        },
+        {
+          "text": "Lucas, Mateus, Marcos e João",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "A ordem canônica tradicional coloca os três sinóticos primeiro e João por último (Mt 1:1; Jo 1:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0036",
+      "type": "multiple_choice",
+      "text": "Quantas cartas de Pedro o Novo Testamento contém?",
+      "options": [
+        {
+          "text": "Duas",
+          "correct": true
+        },
+        {
+          "text": "Uma",
+          "correct": false
+        },
+        {
+          "text": "Três",
+          "correct": false
+        },
+        {
+          "text": "Quatro",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "1 Pedro fala aos que sofrem; 2 Pedro alerta contra falsos mestres e reafirma a volta do Senhor (1Pe 1:1; 2Pe 1:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1pedro",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0037",
+      "type": "multiple_choice",
+      "text": "Que livro encerra a Bíblia hebraica (Tanakh), numa ordem diferente da cristã?",
+      "options": [
+        {
+          "text": "2 Crônicas",
+          "correct": true
+        },
+        {
+          "text": "Malaquias",
+          "correct": false
+        },
+        {
+          "text": "Ester",
+          "correct": false
+        },
+        {
+          "text": "Daniel",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Na Bíblia hebraica os Escritos terminam em Crônicas; a ordem cristã põe Malaquias por último, apontando ao precursor (Ml 4:5-6).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2cronicas",
+        "chapter": 36,
+        "verse_start": 22,
+        "verse_end": 23
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0038",
+      "type": "open_answer",
+      "text": "Qual é o livro com menos versículos do Novo Testamento, com apenas treze?",
+      "options": null,
+      "accepted_answers": [
+        "2 João",
+        "Segunda João",
+        "2Joao",
+        "2 Joao"
+      ],
+      "explanation": "2 João tem treze versículos — o livro mais curto em versículos do NT (2Jo 1:1-13); 3 João tem menos palavras.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2joao",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 13
       },
       "difficulty": "hard"
     }

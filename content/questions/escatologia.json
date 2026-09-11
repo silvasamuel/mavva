@@ -382,7 +382,8 @@
         "verse_start": 4,
         "verse_end": 6
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "escatologia-0013",
@@ -415,7 +416,8 @@
         "verse_start": 2,
         "verse_end": 4
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "escatologia-0014",
@@ -468,7 +470,8 @@
         "verse_start": 36,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "escatologia-0016",
@@ -633,7 +636,8 @@
         "verse_start": 4,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "escatologia-0021",
@@ -765,7 +769,8 @@
         "verse_start": 2,
         "verse_end": 4
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "escatologia-0027",
@@ -939,6 +944,190 @@
         "verse_end": 14
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "escatologia-0033",
+      "type": "multiple_choice",
+      "text": "Segundo Mateus 25:31, quem acompanha o Filho do homem quando ele vier em sua glória?",
+      "options": [
+        {
+          "text": "Todos os santos anjos",
+          "correct": true
+        },
+        {
+          "text": "Os doze apóstolos",
+          "correct": false
+        },
+        {
+          "text": "Moisés e Elias",
+          "correct": false
+        },
+        {
+          "text": "Os mártires",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Quando o Filho do homem vier em sua glória, e todos os santos anjos com ele, então se assentará no trono' (Mt 25:31).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 25,
+        "verse_start": 31,
+        "verse_end": 32
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0034",
+      "type": "multiple_choice",
+      "text": "Segundo 1 João 3:2, o que acontecerá conosco quando Cristo se manifestar?",
+      "options": [
+        {
+          "text": "Seremos semelhantes a ele, porque o veremos como ele é",
+          "correct": true
+        },
+        {
+          "text": "Deixaremos de ser filhos",
+          "correct": false
+        },
+        {
+          "text": "Voltaremos ao Éden",
+          "correct": false
+        },
+        {
+          "text": "Seremos anjos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Sabemos que, quando ele se manifestar, seremos semelhantes a ele; porque assim como é o veremos' (1Jo 3:2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1joao",
+        "chapter": 3,
+        "verse_start": 2,
+        "verse_end": 3
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "escatologia-0035",
+      "type": "multiple_choice",
+      "text": "Em Apocalipse 22, que árvore está junto ao rio da água da vida, dando fruto todo mês?",
+      "options": [
+        {
+          "text": "A árvore da vida",
+          "correct": true
+        },
+        {
+          "text": "A figueira",
+          "correct": false
+        },
+        {
+          "text": "A oliveira",
+          "correct": false
+        },
+        {
+          "text": "O cedro do Líbano",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'De uma e de outra banda do rio, estava a árvore da vida, que produz doze frutos' (Ap 22:2) — a volta ao que o Éden perdeu.",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 22,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0036",
+      "type": "multiple_choice",
+      "text": "Segundo Romanos 8, o que a criação inteira espera 'gemendo'?",
+      "options": [
+        {
+          "text": "A manifestação dos filhos de Deus e sua libertação da corrupção",
+          "correct": true
+        },
+        {
+          "text": "O fim das estações",
+          "correct": false
+        },
+        {
+          "text": "A destruição total",
+          "correct": false
+        },
+        {
+          "text": "O retorno ao caos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'A ardente expectação da criatura espera a manifestação dos filhos de Deus... libertada da servidão da corrupção' (Rm 8:19-21).",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 8,
+        "verse_start": 19,
+        "verse_end": 22
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "escatologia-0037",
+      "type": "multiple_choice",
+      "text": "Que dois exemplos do Antigo Testamento Jesus usou em Lucas 17 para a vinda repentina do Filho do homem?",
+      "options": [
+        {
+          "text": "Os dias de Noé e os dias de Ló",
+          "correct": true
+        },
+        {
+          "text": "Babel e Jericó",
+          "correct": false
+        },
+        {
+          "text": "Egito e Babilônia",
+          "correct": false
+        },
+        {
+          "text": "Sansão e Gideão",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Como aconteceu nos dias de Noé... como também aconteceu nos dias de Ló' — comiam, bebiam, e o juízo veio de repente (Lc 17:26-30).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 17,
+        "verse_start": 26,
+        "verse_end": 30
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "escatologia-0038",
+      "type": "open_answer",
+      "text": "Qual é a última palavra de Jesus registrada em Apocalipse 22:20: 'Certamente cedo ___'?",
+      "options": null,
+      "accepted_answers": [
+        "Venho",
+        "venho"
+      ],
+      "explanation": "'Certamente cedo venho. Amém. Ora vem, Senhor Jesus!' (Ap 22:20) — promessa e oração que encerram a Bíblia.",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 22,
+        "verse_start": 20,
+        "verse_end": 21
+      },
+      "difficulty": "medium"
     }
   ]
 }

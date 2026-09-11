@@ -1008,6 +1008,192 @@
         "verse_end": null
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "cronologia-biblica-0033",
+      "type": "multiple_choice",
+      "text": "Quantos anos viveu Adão, segundo Gênesis 5?",
+      "options": [
+        {
+          "text": "Novecentos e trinta anos",
+          "correct": true
+        },
+        {
+          "text": "Oitocentos anos",
+          "correct": false
+        },
+        {
+          "text": "Novecentos e sessenta e nove",
+          "correct": false
+        },
+        {
+          "text": "Mil anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Foram todos os dias que Adão viveu novecentos e trinta anos, e morreu' (Gn 5:5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 5,
+        "verse_start": 5,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cronologia-biblica-0034",
+      "type": "multiple_choice",
+      "text": "Quanto tempo Davi reinou em Hebrom antes de reinar sobre todo o Israel?",
+      "options": [
+        {
+          "text": "Sete anos e seis meses",
+          "correct": true
+        },
+        {
+          "text": "Três anos",
+          "correct": false
+        },
+        {
+          "text": "Doze anos",
+          "correct": false
+        },
+        {
+          "text": "Vinte anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Em Hebrom reinou sobre Judá sete anos e seis meses, e em Jerusalém reinou trinta e três anos' (2Sm 5:5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 5,
+        "verse_start": 4,
+        "verse_end": 5
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "cronologia-biblica-0035",
+      "type": "multiple_choice",
+      "text": "Segundo Gálatas 1, quantos anos depois da conversão Paulo subiu a Jerusalém para ver Pedro?",
+      "options": [
+        {
+          "text": "Três anos",
+          "correct": true
+        },
+        {
+          "text": "Quarenta dias",
+          "correct": false
+        },
+        {
+          "text": "Um ano",
+          "correct": false
+        },
+        {
+          "text": "Catorze anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Depois, passados três anos, fui a Jerusalém para ver a Pedro' (Gl 1:18); catorze anos depois subiu de novo (Gl 2:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "galatas",
+        "chapter": 1,
+        "verse_start": 18,
+        "verse_end": null
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "cronologia-biblica-0036",
+      "type": "multiple_choice",
+      "text": "Há quantos anos o paralítico do tanque de Betesda estava enfermo?",
+      "options": [
+        {
+          "text": "Trinta e oito anos",
+          "correct": true
+        },
+        {
+          "text": "Doze anos",
+          "correct": false
+        },
+        {
+          "text": "Dezoito anos",
+          "correct": false
+        },
+        {
+          "text": "Quarenta anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Estava ali um homem que, havia trinta e oito anos, se achava enfermo' (Jo 5:5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 5,
+        "verse_start": 5,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cronologia-biblica-0037",
+      "type": "multiple_choice",
+      "text": "Quantos anos tinha Ana, a profetisa viúva, quando viu o menino Jesus no templo?",
+      "options": [
+        {
+          "text": "Cerca de oitenta e quatro",
+          "correct": true
+        },
+        {
+          "text": "Sessenta",
+          "correct": false
+        },
+        {
+          "text": "Setenta",
+          "correct": false
+        },
+        {
+          "text": "Cem",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Era viúva, de quase oitenta e quatro anos, e não se afastava do templo' (Lc 2:37).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 2,
+        "verse_start": 36,
+        "verse_end": 37
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cronologia-biblica-0038",
+      "type": "open_answer",
+      "text": "Quantos anos tinha Sara quando Isaque nasceu?",
+      "options": null,
+      "accepted_answers": [
+        "90",
+        "noventa",
+        "90 anos",
+        "noventa anos"
+      ],
+      "explanation": "Abraão riu: 'dará à luz Sara da idade de noventa anos?' (Gn 17:17) — e Deus cumpriu a promessa (Gn 21:2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 17,
+        "verse_start": 17,
+        "verse_end": null
+      },
+      "difficulty": "medium"
     }
   ]
 }

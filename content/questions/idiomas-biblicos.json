@@ -423,7 +423,8 @@
         "verse_start": 1,
         "verse_end": 6
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "idiomas-biblicos-0015",
@@ -941,6 +942,190 @@
         "verse_end": 9
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "idiomas-biblicos-0033",
+      "type": "multiple_choice",
+      "text": "O que significa 'Getsêmani', nome do jardim onde Jesus orou antes da prisão?",
+      "options": [
+        {
+          "text": "Prensa (lagar) de azeite",
+          "correct": true
+        },
+        {
+          "text": "Jardim das oliveiras",
+          "correct": false
+        },
+        {
+          "text": "Lugar de oração",
+          "correct": false
+        },
+        {
+          "text": "Vale das sombras",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O nome aramaico designa a prensa de azeitonas do monte das Oliveiras (Mt 26:36) — ali o Filho foi 'prensado' em oração.",
+      "divergence_note": "O significado 'prensa de azeite' vem da etimologia do nome aramaico/hebraico (gat shemanim); o texto bíblico não traduz o termo.",
+      "reference": {
+        "book": "mateus",
+        "chapter": 26,
+        "verse_start": 36,
+        "verse_end": 39
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "idiomas-biblicos-0034",
+      "type": "multiple_choice",
+      "text": "O que significa 'Betesda', nome do tanque em Jerusalém onde Jesus curou o paralítico?",
+      "options": [
+        {
+          "text": "Casa de misericórdia",
+          "correct": true
+        },
+        {
+          "text": "Casa do pão",
+          "correct": false
+        },
+        {
+          "text": "Águas tranquilas",
+          "correct": false
+        },
+        {
+          "text": "Porta das ovelhas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Betesda (hebraico beth hesda) é lido como 'casa de misericórdia' — o lugar onde o enfermo de 38 anos foi curado (Jo 5:2-9).",
+      "divergence_note": "A etimologia 'casa de misericórdia' é a leitura mais comum, mas manuscritos variam a grafia (Betzata, Betsaida); o significado não é dado no texto.",
+      "reference": {
+        "book": "joao",
+        "chapter": 5,
+        "verse_start": 2,
+        "verse_end": 9
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "idiomas-biblicos-0035",
+      "type": "multiple_choice",
+      "text": "O que significa o nome 'Isaque', dado ao filho da promessa?",
+      "options": [
+        {
+          "text": "Riso / ele ri",
+          "correct": true
+        },
+        {
+          "text": "Filho da aliança",
+          "correct": false
+        },
+        {
+          "text": "Deus ouviu",
+          "correct": false
+        },
+        {
+          "text": "Herdeiro",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Abraão e Sara riram da promessa (Gn 17:17; 18:12), e Sara disse: 'Deus me tem feito riso' (Gn 21:6).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 21,
+        "verse_start": 3,
+        "verse_end": 6
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "idiomas-biblicos-0036",
+      "type": "multiple_choice",
+      "text": "Que palavra grega para 'amor' João usa em 'Deus amou o mundo de tal maneira'?",
+      "options": [
+        {
+          "text": "Ágape (agapao)",
+          "correct": true
+        },
+        {
+          "text": "Eros",
+          "correct": false
+        },
+        {
+          "text": "Storgé",
+          "correct": false
+        },
+        {
+          "text": "Epithymia",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Porque Deus amou (egápesen) o mundo de tal maneira' (Jo 3:16) — o amor que se doa, não o que deseja.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 3,
+        "verse_start": 16,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "idiomas-biblicos-0037",
+      "type": "multiple_choice",
+      "text": "O que significa 'Icabode', nome dado pela mulher de Fineias ao morrer?",
+      "options": [
+        {
+          "text": "'Foi-se a glória'",
+          "correct": true
+        },
+        {
+          "text": "'Deus é juiz'",
+          "correct": false
+        },
+        {
+          "text": "'Filho da dor'",
+          "correct": false
+        },
+        {
+          "text": "'O SENHOR provê'",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Chamou o menino Icabode, dizendo: Foi-se a glória de Israel', porque a arca fora tomada (1Sm 4:21-22).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 4,
+        "verse_start": 19,
+        "verse_end": 22
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "idiomas-biblicos-0038",
+      "type": "open_answer",
+      "text": "Que palavra grega traduzida por 'arrependimento' significa literalmente 'mudança de mente'?",
+      "options": null,
+      "accepted_answers": [
+        "Metanoia",
+        "Metanóia"
+      ],
+      "explanation": "'Arrependei-vos (metanoeite), porque é chegado o reino dos céus' (Mt 4:17) — não só pesar, mas mudança de rumo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 4,
+        "verse_start": 17,
+        "verse_end": null
+      },
+      "difficulty": "hard"
     }
   ]
 }

@@ -936,6 +936,192 @@
         "verse_end": null
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "teologia-biblica-0030",
+      "type": "multiple_choice",
+      "text": "Que instituição Êxodo 31 chama de 'sinal perpétuo' entre Deus e os filhos de Israel?",
+      "options": [
+        {
+          "text": "O sábado",
+          "correct": true
+        },
+        {
+          "text": "A circuncisão",
+          "correct": false
+        },
+        {
+          "text": "A Páscoa",
+          "correct": false
+        },
+        {
+          "text": "O dízimo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Guardarão os filhos de Israel o sábado... sinal perpétuo entre mim e os filhos de Israel' (Êx 31:16-17).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 31,
+        "verse_start": 16,
+        "verse_end": 17
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "teologia-biblica-0031",
+      "type": "multiple_choice",
+      "text": "Segundo 1 Coríntios 10:4, quem era a 'pedra espiritual' que deu água a Israel no deserto?",
+      "options": [
+        {
+          "text": "Cristo",
+          "correct": true
+        },
+        {
+          "text": "Moisés",
+          "correct": false
+        },
+        {
+          "text": "Arão",
+          "correct": false
+        },
+        {
+          "text": "O anjo do SENHOR",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Beberam todos de uma mesma bebida espiritual, porque bebiam da pedra espiritual que os seguia; e a pedra era Cristo' (1Co 10:4).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1corintios",
+        "chapter": 10,
+        "verse_start": 1,
+        "verse_end": 4
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "teologia-biblica-0032",
+      "type": "multiple_choice",
+      "text": "O que Hebreus 10 diz que os sacrifícios anuais não podiam fazer, mas Cristo fez 'uma vez para sempre'?",
+      "options": [
+        {
+          "text": "Aperfeiçoar e purificar de vez os que se aproximam",
+          "correct": true
+        },
+        {
+          "text": "Alimentar os sacerdotes",
+          "correct": false
+        },
+        {
+          "text": "Sustentar o templo",
+          "correct": false
+        },
+        {
+          "text": "Abençoar as colheitas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'A lei... nunca pode aperfeiçoar os que a ela se chegam'; Cristo, 'com uma só oblação, aperfeiçoou para sempre os santificados' (Hb 10:1,14).",
+      "divergence_note": null,
+      "reference": {
+        "book": "hebreus",
+        "chapter": 10,
+        "verse_start": 1,
+        "verse_end": 14
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "teologia-biblica-0033",
+      "type": "multiple_choice",
+      "text": "Que 'sinal de Jonas' Jesus aplicou a si mesmo em Mateus 12?",
+      "options": [
+        {
+          "text": "Três dias e três noites no ventre da terra — sua morte e ressurreição",
+          "correct": true
+        },
+        {
+          "text": "Pregar a Nínive",
+          "correct": false
+        },
+        {
+          "text": "Fugir para Társis",
+          "correct": false
+        },
+        {
+          "text": "A planta que secou",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Como Jonas esteve três dias e três noites no ventre da baleia, assim estará o Filho do homem no seio da terra' (Mt 12:40).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 12,
+        "verse_start": 39,
+        "verse_end": 41
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "teologia-biblica-0034",
+      "type": "multiple_choice",
+      "text": "Em Colossenses 2, de que a circuncisão é apresentada como figura para o cristão?",
+      "options": [
+        {
+          "text": "Da 'circuncisão de Cristo' — o despojar-se do pecado, ligado ao batismo",
+          "correct": true
+        },
+        {
+          "text": "Da dieta pura",
+          "correct": false
+        },
+        {
+          "text": "Do sacerdócio",
+          "correct": false
+        },
+        {
+          "text": "Do sábado",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Nele também estais circuncidados com a circuncisão não feita por mão... sepultados com ele no batismo' (Cl 2:11-12).",
+      "divergence_note": "As tradições cristãs divergem sobre as implicações desse texto para o batismo (de infantes ou de crentes). A pergunta trata da conexão que o próprio texto faz.",
+      "reference": {
+        "book": "colossenses",
+        "chapter": 2,
+        "verse_start": 11,
+        "verse_end": 12
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "teologia-biblica-0035",
+      "type": "open_answer",
+      "text": "Como se chama a revelação de Deus por meio da criação, descrita em Romanos 1:20 e Salmo 19?",
+      "options": null,
+      "accepted_answers": [
+        "Revelação geral",
+        "Revelação natural",
+        "Revelacao geral",
+        "Revelacao natural"
+      ],
+      "explanation": "'As suas coisas invisíveis... se entendem e claramente se veem pelas coisas que estão criadas' (Rm 1:20); 'os céus manifestam a glória de Deus' (Sl 19:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 1,
+        "verse_start": 19,
+        "verse_end": 20
+      },
+      "difficulty": "expert"
     }
   ]
 }

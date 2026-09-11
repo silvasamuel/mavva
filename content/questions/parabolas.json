@@ -924,6 +924,192 @@
         "verse_end": 39
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "parabolas-0031",
+      "type": "multiple_choice",
+      "text": "Na parábola do amigo à meia-noite, o que o homem pedia com insistência?",
+      "options": [
+        {
+          "text": "Três pães",
+          "correct": true
+        },
+        {
+          "text": "Azeite para a lâmpada",
+          "correct": false
+        },
+        {
+          "text": "Um cordeiro",
+          "correct": false
+        },
+        {
+          "text": "Dinheiro emprestado",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Amigo, empresta-me três pães' (Lc 11:5) — pela importunação ele recebe; quanto mais o Pai dará aos que pedem.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 11,
+        "verse_start": 5,
+        "verse_end": 8
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "parabolas-0032",
+      "type": "multiple_choice",
+      "text": "Na parábola dos servos vigilantes, o que o senhor faz ao voltar e achá-los acordados?",
+      "options": [
+        {
+          "text": "Cinge-se e os serve à mesa",
+          "correct": true
+        },
+        {
+          "text": "Dá-lhes um dia de folga",
+          "correct": false
+        },
+        {
+          "text": "Paga-lhes em dobro",
+          "correct": false
+        },
+        {
+          "text": "Manda-os dormir",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Cingir-se-á, e os fará assentar à mesa, e, chegando-se, os servirá' (Lc 12:37) — o Senhor que serve.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 12,
+        "verse_start": 35,
+        "verse_end": 38
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "parabolas-0033",
+      "type": "multiple_choice",
+      "text": "Na parábola da torre, por que Jesus diz que se deve calcular a despesa antes de construir?",
+      "options": [
+        {
+          "text": "Para não deixar a obra pela metade — o custo de segui-lo deve ser contado",
+          "correct": true
+        },
+        {
+          "text": "Para pagar impostos",
+          "correct": false
+        },
+        {
+          "text": "Para agradar aos vizinhos",
+          "correct": false
+        },
+        {
+          "text": "Para terminar antes do inverno",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Qual de vós, querendo edificar uma torre, não se assenta primeiro a fazer as contas?' (Lc 14:28-30) — sobre o custo do discipulado.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 14,
+        "verse_start": 28,
+        "verse_end": 33
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "parabolas-0034",
+      "type": "multiple_choice",
+      "text": "Na parábola do servo que voltou do campo (Lucas 17), o que o servo deve dizer após fazer tudo?",
+      "options": [
+        {
+          "text": "'Somos servos inúteis; fizemos o que devíamos fazer'",
+          "correct": true
+        },
+        {
+          "text": "'Merecemos recompensa'",
+          "correct": false
+        },
+        {
+          "text": "'Descansaremos agora'",
+          "correct": false
+        },
+        {
+          "text": "'Servimos mais que os outros'",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Depois de haverdes feito tudo o que vos foi mandado, dizei: Somos servos inúteis' (Lc 17:10) — serviço sem pretensão de mérito.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 17,
+        "verse_start": 7,
+        "verse_end": 10
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "parabolas-0035",
+      "type": "multiple_choice",
+      "text": "Na parábola das minas (Lucas 19), quanto recebeu cada um dos dez servos?",
+      "options": [
+        {
+          "text": "Uma mina cada",
+          "correct": true
+        },
+        {
+          "text": "Dez minas cada",
+          "correct": false
+        },
+        {
+          "text": "Um talento cada",
+          "correct": false
+        },
+        {
+          "text": "Cem denários cada",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Chamando dez servos seus, deu-lhes dez minas' — uma a cada um, para negociar até ele voltar (Lc 19:13).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 19,
+        "verse_start": 12,
+        "verse_end": 13
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "parabolas-0036",
+      "type": "open_answer",
+      "text": "Na parábola do trigo e do joio, quem semeou o joio no campo?",
+      "options": null,
+      "accepted_answers": [
+        "O inimigo",
+        "Um inimigo",
+        "O diabo",
+        "O maligno"
+      ],
+      "explanation": "'Vindo o seu inimigo, semeou joio no meio do trigo' (Mt 13:25); Jesus explica: 'o inimigo que o semeou é o diabo' (Mt 13:39).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 13,
+        "verse_start": 24,
+        "verse_end": 30
+      },
+      "difficulty": "medium"
     }
   ]
 }

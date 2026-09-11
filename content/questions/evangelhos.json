@@ -951,7 +951,194 @@
         "verse_start": 19,
         "verse_end": 20
       },
+      "difficulty": "medium",
+      "is_active": false
+    },
+    {
+      "external_id": "evangelhos-0033",
+      "type": "multiple_choice",
+      "text": "Qual era a profissão de Pedro, André, Tiago e João quando Jesus os chamou?",
+      "options": [
+        {
+          "text": "Pescadores",
+          "correct": true
+        },
+        {
+          "text": "Carpinteiros",
+          "correct": false
+        },
+        {
+          "text": "Publicanos",
+          "correct": false
+        },
+        {
+          "text": "Pastores",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jesus os viu lançando e consertando redes junto ao mar da Galileia e disse: 'Vinde após mim' (Mt 4:18-22).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 4,
+        "verse_start": 18,
+        "verse_end": 22
+      },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "evangelhos-0034",
+      "type": "multiple_choice",
+      "text": "Quem perguntou a Jesus o que fazer para herdar a vida eterna e se retirou triste?",
+      "options": [
+        {
+          "text": "O jovem rico",
+          "correct": true
+        },
+        {
+          "text": "Nicodemos",
+          "correct": false
+        },
+        {
+          "text": "Zaqueu",
+          "correct": false
+        },
+        {
+          "text": "O escriba de Marcos 12",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Ao ouvir 'vende tudo o que tens e dá aos pobres', o jovem 'retirou-se triste, porque possuía muitas propriedades' (Mt 19:16-22).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 19,
+        "verse_start": 16,
+        "verse_end": 22
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "evangelhos-0035",
+      "type": "multiple_choice",
+      "text": "O que Jesus disse aos que acusavam a mulher surpreendida em adultério?",
+      "options": [
+        {
+          "text": "'Aquele que dentre vós está sem pecado seja o primeiro que atire pedra'",
+          "correct": true
+        },
+        {
+          "text": "'Apedrejai-a conforme a lei'",
+          "correct": false
+        },
+        {
+          "text": "'Levai-a a Pilatos'",
+          "correct": false
+        },
+        {
+          "text": "'Deixai-a com o sacerdote'",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Um a um saíram, e Jesus disse à mulher: 'Nem eu também te condeno; vai-te e não peques mais' (Jo 8:7-11).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 8,
+        "verse_start": 7,
+        "verse_end": 11
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "evangelhos-0036",
+      "type": "multiple_choice",
+      "text": "Que pedido a mãe de Tiago e João fez a Jesus?",
+      "options": [
+        {
+          "text": "Que os filhos se sentassem à sua direita e à sua esquerda no reino",
+          "correct": true
+        },
+        {
+          "text": "Que curasse os filhos",
+          "correct": false
+        },
+        {
+          "text": "Que os dispensasse da cruz",
+          "correct": false
+        },
+        {
+          "text": "Que fossem sacerdotes",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jesus respondeu que beber do seu cálice era o caminho, e que 'quem quiser ser grande seja vosso servo' (Mt 20:20-27).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 20,
+        "verse_start": 20,
+        "verse_end": 23
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "evangelhos-0037",
+      "type": "multiple_choice",
+      "text": "Qual cego de Jericó clamou 'Jesus, filho de Davi, tem misericórdia de mim'?",
+      "options": [
+        {
+          "text": "Bartimeu",
+          "correct": true
+        },
+        {
+          "text": "Zaqueu",
+          "correct": false
+        },
+        {
+          "text": "Lázaro",
+          "correct": false
+        },
+        {
+          "text": "Malco",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Bartimeu, o cego, filho de Timeu' não se calou; Jesus disse: 'Vai, a tua fé te salvou', e ele o seguiu (Mc 10:46-52).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 10,
+        "verse_start": 46,
+        "verse_end": 52
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "evangelhos-0038",
+      "type": "open_answer",
+      "text": "Quantas vezes Pedro negou conhecer Jesus, como o Senhor havia predito?",
+      "options": null,
+      "accepted_answers": [
+        "3",
+        "três",
+        "tres",
+        "três vezes"
+      ],
+      "explanation": "'Antes que o galo cante, três vezes me negarás' (Mt 26:34) — cumprido no pátio de Caifás (Mt 26:69-75).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 26,
+        "verse_start": 69,
+        "verse_end": 75
+      },
+      "difficulty": "easy"
     }
   ]
 }

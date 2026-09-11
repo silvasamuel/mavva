@@ -85,7 +85,8 @@
         "verse_start": 26,
         "verse_end": 35
       },
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "is_active": false
     },
     {
       "external_id": "historia-de-israel-0004",
@@ -204,7 +205,8 @@
         "verse_start": 11,
         "verse_end": 12
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "historia-de-israel-0008",
@@ -303,7 +305,8 @@
         "verse_start": 40,
         "verse_end": 41
       },
-      "difficulty": "expert"
+      "difficulty": "expert",
+      "is_active": false
     },
     {
       "external_id": "historia-de-israel-0011",
@@ -403,7 +406,8 @@
         "verse_start": 1,
         "verse_end": 3
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "historia-de-israel-0014",
@@ -521,7 +525,8 @@
         "verse_start": 8,
         "verse_end": 9
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "historia-de-israel-0018",
@@ -687,7 +692,8 @@
         "verse_start": 30,
         "verse_end": 31
       },
-      "difficulty": "expert"
+      "difficulty": "expert",
+      "is_active": false
     },
     {
       "external_id": "historia-de-israel-0023",
@@ -991,6 +997,223 @@
         "verse_end": 16
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-de-israel-0033",
+      "type": "multiple_choice",
+      "text": "Que rei de Judá foi cegado e levado à Babilônia depois de ver os filhos mortos?",
+      "options": [
+        {
+          "text": "Zedequias",
+          "correct": true
+        },
+        {
+          "text": "Joaquim",
+          "correct": false
+        },
+        {
+          "text": "Jeoaquim",
+          "correct": false
+        },
+        {
+          "text": "Josias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Os babilônios 'lhe vazaram os olhos e o ataram com cadeias de bronze' após matar seus filhos (2Rs 25:7) — o último rei de Judá.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 25,
+        "verse_start": 6,
+        "verse_end": 7
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-de-israel-0034",
+      "type": "multiple_choice",
+      "text": "Quem foi o último juiz de Israel, também profeta, antes da monarquia?",
+      "options": [
+        {
+          "text": "Samuel",
+          "correct": true
+        },
+        {
+          "text": "Sansão",
+          "correct": false
+        },
+        {
+          "text": "Eli",
+          "correct": false
+        },
+        {
+          "text": "Gideão",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Samuel julgou a Israel todos os dias da sua vida' (1Sm 7:15), até ungir Saul por ordem de Deus.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 7,
+        "verse_start": 15,
+        "verse_end": 17
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-de-israel-0035",
+      "type": "multiple_choice",
+      "text": "Que governador Nabucodonosor deixou sobre o povo que ficou em Judá, assassinado em Mispa?",
+      "options": [
+        {
+          "text": "Gedalias",
+          "correct": true
+        },
+        {
+          "text": "Zorobabel",
+          "correct": false
+        },
+        {
+          "text": "Sesbazar",
+          "correct": false
+        },
+        {
+          "text": "Neemias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Gedalias foi morto por Ismael e os que restaram fugiram para o Egito (2Rs 25:22-26).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 25,
+        "verse_start": 22,
+        "verse_end": 26
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "historia-de-israel-0036",
+      "type": "multiple_choice",
+      "text": "Que rei da Assíria cercou Samaria por três anos e levou Israel cativo?",
+      "options": [
+        {
+          "text": "Salmanasar",
+          "correct": true
+        },
+        {
+          "text": "Senaqueribe",
+          "correct": false
+        },
+        {
+          "text": "Tiglate-Pileser",
+          "correct": false
+        },
+        {
+          "text": "Assurbanipal",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Salmanasar, rei da Assíria, subiu contra Samaria e a cercou... e transportou Israel para a Assíria' (2Rs 17:3-6).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 17,
+        "verse_start": 3,
+        "verse_end": 6
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "historia-de-israel-0037",
+      "type": "multiple_choice",
+      "text": "Que filho de Gideão matou seus setenta irmãos e se fez rei em Siquém?",
+      "options": [
+        {
+          "text": "Abimeleque",
+          "correct": true
+        },
+        {
+          "text": "Jotão",
+          "correct": false
+        },
+        {
+          "text": "Jefté",
+          "correct": false
+        },
+        {
+          "text": "Tola",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Abimeleque matou os irmãos sobre uma pedra; só Jotão escapou e proferiu a parábola das árvores (Jz 9:1-6).",
+      "divergence_note": null,
+      "reference": {
+        "book": "juizes",
+        "chapter": 9,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-de-israel-0038",
+      "type": "multiple_choice",
+      "text": "Que tribo quase foi extinta em Israel após a guerra provocada pelo crime em Gibeá?",
+      "options": [
+        {
+          "text": "Benjamim",
+          "correct": true
+        },
+        {
+          "text": "Dã",
+          "correct": false
+        },
+        {
+          "text": "Simeão",
+          "correct": false
+        },
+        {
+          "text": "Levi",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Restaram seiscentos homens de Benjamim, e Israel lamentou: 'hoje é cortada uma tribo de Israel' (Jz 20:47; 21:6).",
+      "divergence_note": null,
+      "reference": {
+        "book": "juizes",
+        "chapter": 21,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "historia-de-israel-0039",
+      "type": "open_answer",
+      "text": "Qual rei persa, em Esdras 6, confirmou o decreto de Ciro e fez concluir o templo?",
+      "options": null,
+      "accepted_answers": [
+        "Dario",
+        "Dario I"
+      ],
+      "explanation": "Dario achou o rolo do decreto em Ecbátana e ordenou que a obra prosseguisse às custas do tesouro real (Ed 6:1-12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "esdras",
+        "chapter": 6,
+        "verse_start": 1,
+        "verse_end": 12
+      },
+      "difficulty": "expert"
     }
   ]
 }

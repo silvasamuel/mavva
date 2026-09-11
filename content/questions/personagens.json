@@ -385,7 +385,8 @@
         "verse_start": 1,
         "verse_end": 9
       },
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "is_active": false
     },
     {
       "external_id": "personagens-0014",
@@ -418,7 +419,8 @@
         "verse_start": 13,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "personagens-0015",
@@ -940,7 +942,191 @@
         "verse_start": 24,
         "verse_end": 26
       },
+      "difficulty": "hard",
+      "is_active": false
+    },
+    {
+      "external_id": "personagens-0033",
+      "type": "multiple_choice",
+      "text": "Quem foi a mãe de Moisés, que o escondeu num cesto no Nilo?",
+      "options": [
+        {
+          "text": "Joquebede",
+          "correct": true
+        },
+        {
+          "text": "Zípora",
+          "correct": false
+        },
+        {
+          "text": "Míriam",
+          "correct": false
+        },
+        {
+          "text": "Bitiá",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Anrão tomou por mulher a Joquebede... e ela lhe deu a Arão e a Moisés' (Êx 6:20; cf. Êx 2:2-3).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 6,
+        "verse_start": 20,
+        "verse_end": null
+      },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "personagens-0034",
+      "type": "multiple_choice",
+      "text": "Quem era o comandante do exército de Davi, que matou Abner e Amasa?",
+      "options": [
+        {
+          "text": "Joabe",
+          "correct": true
+        },
+        {
+          "text": "Abisai",
+          "correct": false
+        },
+        {
+          "text": "Benaia",
+          "correct": false
+        },
+        {
+          "text": "Urias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Joabe, filho de Zeruia, general de Davi, vingou-se de Abner (2Sm 3:27) e matou Amasa (2Sm 20:10).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 3,
+        "verse_start": 27,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "personagens-0035",
+      "type": "multiple_choice",
+      "text": "Que mágico e falso profeta Paulo enfrentou em Chipre, deixando-o cego por um tempo?",
+      "options": [
+        {
+          "text": "Barjesus (Elimas)",
+          "correct": true
+        },
+        {
+          "text": "Simão, o mágico",
+          "correct": false
+        },
+        {
+          "text": "Ceva",
+          "correct": false
+        },
+        {
+          "text": "Demétrio",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Ó filho do diabo... eis aí a mão do Senhor sobre ti, e ficarás cego' (At 13:6-11) — e o procônsul creu.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 13,
+        "verse_start": 6,
+        "verse_end": 12
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "personagens-0036",
+      "type": "multiple_choice",
+      "text": "Que mordomo do rei Acabe temia ao SENHOR e escondeu cem profetas em cavernas?",
+      "options": [
+        {
+          "text": "Obadias, o mordomo",
+          "correct": true
+        },
+        {
+          "text": "Naamã",
+          "correct": false
+        },
+        {
+          "text": "Geazi",
+          "correct": false
+        },
+        {
+          "text": "Zimri",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Obadias, o mordomo... temia muito ao SENHOR' e sustentou cem profetas com pão e água quando Jezabel os matava (1Rs 18:3-4).",
+      "divergence_note": "Este Obadias, mordomo de Acabe, não deve ser confundido com o profeta autor do livro de Obadias; a Bíblia não os identifica.",
+      "reference": {
+        "book": "1reis",
+        "chapter": 18,
+        "verse_start": 3,
+        "verse_end": 4
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "personagens-0037",
+      "type": "multiple_choice",
+      "text": "Qual rei filisteu de Gate recebeu Davi fugitivo, diante de quem Davi fingiu loucura?",
+      "options": [
+        {
+          "text": "Aquis",
+          "correct": true
+        },
+        {
+          "text": "Golias",
+          "correct": false
+        },
+        {
+          "text": "Abimeleque",
+          "correct": false
+        },
+        {
+          "text": "Hirão",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Com medo de Aquis, Davi 'fazia-se de doido... e deixava correr saliva pela barba' (1Sm 21:10-15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 21,
+        "verse_start": 10,
+        "verse_end": 15
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "personagens-0038",
+      "type": "open_answer",
+      "text": "Qual mulher, esposa de Nabal, apaziguou Davi com provisões e depois se tornou sua esposa?",
+      "options": null,
+      "accepted_answers": [
+        "Abigail"
+      ],
+      "explanation": "Abigail saiu ao encontro de Davi e o dissuadiu de se vingar; após a morte de Nabal, Davi a tomou por mulher (1Sm 25:23-42).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 25,
+        "verse_start": 23,
+        "verse_end": 42
+      },
+      "difficulty": "medium"
     }
   ]
 }

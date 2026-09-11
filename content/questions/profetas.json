@@ -519,7 +519,8 @@
         "verse_start": 1,
         "verse_end": 10
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "profetas-0018",
@@ -570,7 +571,8 @@
         "verse_start": 5,
         "verse_end": 6
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "profetas-0020",
@@ -970,6 +972,189 @@
         "verse_end": 18
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "profetas-0033",
+      "type": "multiple_choice",
+      "text": "Qual profeta viu um carneiro de dois chifres e um bode, explicados como Média-Pérsia e Grécia?",
+      "options": [
+        {
+          "text": "Daniel",
+          "correct": true
+        },
+        {
+          "text": "Ezequiel",
+          "correct": false
+        },
+        {
+          "text": "Zacarias",
+          "correct": false
+        },
+        {
+          "text": "Isaías",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'O carneiro que viste com dois chifres são os reis da Média e da Pérsia; e o bode peludo é o rei da Grécia' (Dn 8:20-21).",
+      "divergence_note": null,
+      "reference": {
+        "book": "daniel",
+        "chapter": 8,
+        "verse_start": 1,
+        "verse_end": 21
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "profetas-0034",
+      "type": "multiple_choice",
+      "text": "Quem anunciou a Jeroboão, em Betel, que um rei chamado Josias queimaria ossos sobre aquele altar?",
+      "options": [
+        {
+          "text": "Um homem de Deus vindo de Judá, não nomeado",
+          "correct": true
+        },
+        {
+          "text": "Elias",
+          "correct": false
+        },
+        {
+          "text": "Aías",
+          "correct": false
+        },
+        {
+          "text": "Natã",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Eis que um filho nascerá à casa de Davi, cujo nome será Josias' (1Rs 13:1-2) — cumprido três séculos depois (2Rs 23:15-16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 13,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "profetas-0035",
+      "type": "multiple_choice",
+      "text": "Qual profeta viu quatro carros saindo dentre dois montes de bronze e coroou o sumo sacerdote Josué?",
+      "options": [
+        {
+          "text": "Zacarias",
+          "correct": true
+        },
+        {
+          "text": "Ageu",
+          "correct": false
+        },
+        {
+          "text": "Malaquias",
+          "correct": false
+        },
+        {
+          "text": "Ezequiel",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "As visões de Zacarias 6 culminam na coroação de Josué, figura do 'Renovo' que edificará o templo (Zc 6:1-13).",
+      "divergence_note": null,
+      "reference": {
+        "book": "zacarias",
+        "chapter": 6,
+        "verse_start": 1,
+        "verse_end": 13
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "profetas-0036",
+      "type": "multiple_choice",
+      "text": "Qual profetisa foi consultada em nome do rei Josias após a descoberta do Livro da Lei?",
+      "options": [
+        {
+          "text": "Hulda",
+          "correct": true
+        },
+        {
+          "text": "Débora",
+          "correct": false
+        },
+        {
+          "text": "Ana",
+          "correct": false
+        },
+        {
+          "text": "Noadias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Os enviados de Josias 'foram a Hulda, a profetisa', que confirmou o juízo, mas prometeu paz ao rei (2Rs 22:14-20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 22,
+        "verse_start": 14,
+        "verse_end": 20
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "profetas-0037",
+      "type": "multiple_choice",
+      "text": "Qual profeta anunciou o 'dia do SENHOR' com gafanhotos e a promessa 'restituirei os anos'?",
+      "options": [
+        {
+          "text": "Joel",
+          "correct": true
+        },
+        {
+          "text": "Amós",
+          "correct": false
+        },
+        {
+          "text": "Naum",
+          "correct": false
+        },
+        {
+          "text": "Obadias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Restituir-vos-ei os anos que foram consumidos pelo gafanhoto' (Jl 2:25) — juízo e restauração no mesmo livro.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joel",
+        "chapter": 2,
+        "verse_start": 25,
+        "verse_end": 27
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "profetas-0038",
+      "type": "open_answer",
+      "text": "Qual profeta menor encerra com Deus 'se alegrando com cânticos' sobre seu povo restaurado?",
+      "options": null,
+      "accepted_answers": [
+        "Sofonias"
+      ],
+      "explanation": "'O SENHOR teu Deus está no meio de ti... se alegrará em ti com cânticos' (Sf 3:17) — após anunciar o grande dia do SENHOR.",
+      "divergence_note": null,
+      "reference": {
+        "book": "sofonias",
+        "chapter": 3,
+        "verse_start": 14,
+        "verse_end": 17
+      },
+      "difficulty": "expert"
     }
   ]
 }

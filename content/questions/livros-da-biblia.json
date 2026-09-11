@@ -301,7 +301,8 @@
         "verse_start": 9,
         "verse_end": 11
       },
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "is_active": false
     },
     {
       "external_id": "livros-da-biblia-0011",
@@ -468,7 +469,8 @@
         "verse_start": 1,
         "verse_end": null
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "livros-da-biblia-0016",
@@ -534,7 +536,8 @@
         "verse_start": 1,
         "verse_end": 3
       },
-      "difficulty": "expert"
+      "difficulty": "expert",
+      "is_active": false
     },
     {
       "external_id": "livros-da-biblia-0018",
@@ -567,7 +570,8 @@
         "verse_start": 21,
         "verse_end": null
       },
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "is_active": false
     },
     {
       "external_id": "livros-da-biblia-0019",
@@ -922,6 +926,189 @@
         "verse_end": null
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "livros-da-biblia-0031",
+      "type": "multiple_choice",
+      "text": "Qual livro começa com 'Palavras do Pregador, filho de Davi' e repete 'vaidade de vaidades'?",
+      "options": [
+        {
+          "text": "Eclesiastes",
+          "correct": true
+        },
+        {
+          "text": "Provérbios",
+          "correct": false
+        },
+        {
+          "text": "Cantares",
+          "correct": false
+        },
+        {
+          "text": "Jó",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Eclesiastes examina a vida 'debaixo do sol' e conclui: 'Teme a Deus e guarda os seus mandamentos' (Ec 1:1-2; 12:13).",
+      "divergence_note": null,
+      "reference": {
+        "book": "eclesiastes",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "livros-da-biblia-0032",
+      "type": "multiple_choice",
+      "text": "Qual profeta menor anunciou a queda de Nínive, um século depois de Jonas?",
+      "options": [
+        {
+          "text": "Naum",
+          "correct": true
+        },
+        {
+          "text": "Obadias",
+          "correct": false
+        },
+        {
+          "text": "Habacuque",
+          "correct": false
+        },
+        {
+          "text": "Sofonias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Peso de Nínive. Livro da visão de Naum' (Na 1:1) — a cidade que se arrependera com Jonas agora recebe sentença.",
+      "divergence_note": null,
+      "reference": {
+        "book": "naum",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "livros-da-biblia-0033",
+      "type": "multiple_choice",
+      "text": "Qual livro registra a visão de quatro animais: leão com asas, urso, leopardo e uma quarta besta terrível?",
+      "options": [
+        {
+          "text": "Daniel",
+          "correct": true
+        },
+        {
+          "text": "Ezequiel",
+          "correct": false
+        },
+        {
+          "text": "Apocalipse",
+          "correct": false
+        },
+        {
+          "text": "Zacarias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Os quatro animais de Daniel 7 representam reinos que dão lugar ao reino eterno do Filho do homem (Dn 7:3-7,13-14).",
+      "divergence_note": null,
+      "reference": {
+        "book": "daniel",
+        "chapter": 7,
+        "verse_start": 1,
+        "verse_end": 8
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "livros-da-biblia-0034",
+      "type": "multiple_choice",
+      "text": "Qual evangelho declara seu propósito: 'para que creiais que Jesus é o Cristo... e tenhais vida'?",
+      "options": [
+        {
+          "text": "João",
+          "correct": true
+        },
+        {
+          "text": "Mateus",
+          "correct": false
+        },
+        {
+          "text": "Marcos",
+          "correct": false
+        },
+        {
+          "text": "Lucas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Estes foram escritos para que creiais que Jesus é o Cristo, o Filho de Deus, e para que, crendo, tenhais vida' (Jo 20:31).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 20,
+        "verse_start": 30,
+        "verse_end": 31
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "livros-da-biblia-0035",
+      "type": "multiple_choice",
+      "text": "Qual livro do Antigo Testamento contém o cântico de Débora e a história de Sansão?",
+      "options": [
+        {
+          "text": "Juízes",
+          "correct": true
+        },
+        {
+          "text": "Josué",
+          "correct": false
+        },
+        {
+          "text": "1 Samuel",
+          "correct": false
+        },
+        {
+          "text": "Rute",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Juízes cobre o período entre Josué e a monarquia, com Débora (Jz 5) e Sansão (Jz 13-16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "juizes",
+        "chapter": 5,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "livros-da-biblia-0036",
+      "type": "open_answer",
+      "text": "Qual livro do AT se dirige ao governador Zorobabel e ao sumo sacerdote Josué, exortando a reconstruir o templo?",
+      "options": null,
+      "accepted_answers": [
+        "Ageu"
+      ],
+      "explanation": "'Veio a palavra do SENHOR, pelo ministério do profeta Ageu, a Zorobabel... e a Josué, sumo sacerdote' (Ag 1:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "ageu",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 8
+      },
+      "difficulty": "expert"
     }
   ]
 }
