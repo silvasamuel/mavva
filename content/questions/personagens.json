@@ -385,7 +385,8 @@
         "verse_start": 1,
         "verse_end": 9
       },
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "is_active": false
     },
     {
       "external_id": "personagens-0014",
@@ -418,7 +419,8 @@
         "verse_start": 13,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "personagens-0015",
@@ -939,6 +941,519 @@
         "chapter": 18,
         "verse_start": 24,
         "verse_end": 26
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "personagens-0033",
+      "type": "multiple_choice",
+      "text": "Quem foi a mãe de Moisés, que o escondeu num cesto no Nilo?",
+      "options": [
+        {
+          "text": "Joquebede",
+          "correct": true
+        },
+        {
+          "text": "Zípora",
+          "correct": false
+        },
+        {
+          "text": "Míriam",
+          "correct": false
+        },
+        {
+          "text": "Bitiá",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Anrão tomou por mulher a Joquebede... e ela lhe deu a Arão e a Moisés' (Êx 6:20; cf. Êx 2:2-3).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 6,
+        "verse_start": 20,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "personagens-0034",
+      "type": "multiple_choice",
+      "text": "Quem era o comandante do exército de Davi, que matou Abner e Amasa?",
+      "options": [
+        {
+          "text": "Joabe",
+          "correct": true
+        },
+        {
+          "text": "Abisai",
+          "correct": false
+        },
+        {
+          "text": "Benaia",
+          "correct": false
+        },
+        {
+          "text": "Urias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Joabe, filho de Zeruia, general de Davi, vingou-se de Abner (2Sm 3:27) e matou Amasa (2Sm 20:10).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 3,
+        "verse_start": 27,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "personagens-0035",
+      "type": "multiple_choice",
+      "text": "Que mágico e falso profeta Paulo enfrentou em Chipre, deixando-o cego por um tempo?",
+      "options": [
+        {
+          "text": "Barjesus (Elimas)",
+          "correct": true
+        },
+        {
+          "text": "Simão, o mágico",
+          "correct": false
+        },
+        {
+          "text": "Ceva",
+          "correct": false
+        },
+        {
+          "text": "Demétrio",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Ó filho do diabo... eis aí a mão do Senhor sobre ti, e ficarás cego' (At 13:6-11) — e o procônsul creu.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 13,
+        "verse_start": 6,
+        "verse_end": 12
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "personagens-0036",
+      "type": "multiple_choice",
+      "text": "Que mordomo do rei Acabe temia ao SENHOR e escondeu cem profetas em cavernas?",
+      "options": [
+        {
+          "text": "Obadias, o mordomo",
+          "correct": true
+        },
+        {
+          "text": "Naamã",
+          "correct": false
+        },
+        {
+          "text": "Geazi",
+          "correct": false
+        },
+        {
+          "text": "Zimri",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Obadias, o mordomo... temia muito ao SENHOR' e sustentou cem profetas com pão e água quando Jezabel os matava (1Rs 18:3-4).",
+      "divergence_note": "Este Obadias, mordomo de Acabe, não deve ser confundido com o profeta autor do livro de Obadias; a Bíblia não os identifica.",
+      "reference": {
+        "book": "1reis",
+        "chapter": 18,
+        "verse_start": 3,
+        "verse_end": 4
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "personagens-0037",
+      "type": "multiple_choice",
+      "text": "Qual rei filisteu de Gate recebeu Davi fugitivo, diante de quem Davi fingiu loucura?",
+      "options": [
+        {
+          "text": "Aquis",
+          "correct": true
+        },
+        {
+          "text": "Golias",
+          "correct": false
+        },
+        {
+          "text": "Abimeleque",
+          "correct": false
+        },
+        {
+          "text": "Hirão",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Com medo de Aquis, Davi 'fazia-se de doido... e deixava correr saliva pela barba' (1Sm 21:10-15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 21,
+        "verse_start": 10,
+        "verse_end": 15
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "personagens-0038",
+      "type": "open_answer",
+      "text": "Qual mulher, esposa de Nabal, apaziguou Davi com provisões e depois se tornou sua esposa?",
+      "options": null,
+      "accepted_answers": [
+        "Abigail"
+      ],
+      "explanation": "Abigail saiu ao encontro de Davi e o dissuadiu de se vingar; após a morte de Nabal, Davi a tomou por mulher (1Sm 25:23-42).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 25,
+        "verse_start": 23,
+        "verse_end": 42
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "personagens-0039",
+      "type": "multiple_choice",
+      "text": "Quem construiu a arca por ordem de Deus para escapar do dilúvio?",
+      "options": [
+        {
+          "text": "Noé",
+          "correct": true
+        },
+        {
+          "text": "Abraão",
+          "correct": false
+        },
+        {
+          "text": "Moisés",
+          "correct": false
+        },
+        {
+          "text": "Ló",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Faze para ti uma arca de madeira de gofer' (Gn 6:14); Noé 'fez conforme a tudo o que Deus lhe mandou' (Gn 6:22).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 6,
+        "verse_start": 13,
+        "verse_end": 22
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "personagens-0040",
+      "type": "multiple_choice",
+      "text": "Quem matou o gigante Golias com uma funda e uma pedra?",
+      "options": [
+        {
+          "text": "Davi",
+          "correct": true
+        },
+        {
+          "text": "Saul",
+          "correct": false
+        },
+        {
+          "text": "Jônatas",
+          "correct": false
+        },
+        {
+          "text": "Sansão",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Tomou uma pedra e com a funda lha atirou, e feriu o filisteu na testa' (1Sm 17:49).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 17,
+        "verse_start": 48,
+        "verse_end": 50
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "personagens-0041",
+      "type": "multiple_choice",
+      "text": "Quem foi a primeira mulher, formada da costela de Adão?",
+      "options": [
+        {
+          "text": "Eva",
+          "correct": true
+        },
+        {
+          "text": "Sara",
+          "correct": false
+        },
+        {
+          "text": "Raquel",
+          "correct": false
+        },
+        {
+          "text": "Ana",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Da costela que tirou do homem formou uma mulher'; Adão a chamou Eva, 'porque era a mãe de todos os viventes' (Gn 2:22; 3:20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 2,
+        "verse_start": 21,
+        "verse_end": 23
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "personagens-0042",
+      "type": "multiple_choice",
+      "text": "Qual filho de Adão foi morto pelo próprio irmão?",
+      "options": [
+        {
+          "text": "Abel",
+          "correct": true
+        },
+        {
+          "text": "Sete",
+          "correct": false
+        },
+        {
+          "text": "Enos",
+          "correct": false
+        },
+        {
+          "text": "Lameque",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Caim se levantou contra o seu irmão Abel, e o matou' (Gn 4:8) — o sangue de Abel clama da terra (Hb 12:24).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 4,
+        "verse_start": 8,
+        "verse_end": 10
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "personagens-0043",
+      "type": "multiple_choice",
+      "text": "Quem se transformou em estátua de sal ao olhar para trás?",
+      "options": [
+        {
+          "text": "A mulher de Ló",
+          "correct": true
+        },
+        {
+          "text": "A mulher de Noé",
+          "correct": false
+        },
+        {
+          "text": "Sara",
+          "correct": false
+        },
+        {
+          "text": "Agar",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'A mulher de Ló olhou para trás e ficou convertida numa estátua de sal' (Gn 19:26); Jesus a cita como advertência (Lc 17:32).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 19,
+        "verse_start": 26,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "personagens-0044",
+      "type": "multiple_choice",
+      "text": "Quais eram os três amigos de Daniel lançados na fornalha ardente?",
+      "options": [
+        {
+          "text": "Sadraque, Mesaque e Abednego",
+          "correct": true
+        },
+        {
+          "text": "Ananias, Misael e Azarias apenas",
+          "correct": false
+        },
+        {
+          "text": "Sem, Cão e Jafé",
+          "correct": false
+        },
+        {
+          "text": "Pedro, Tiago e João",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Hananias, Misael e Azarias receberam na Babilônia os nomes Sadraque, Mesaque e Abednego (Dn 1:7; 3:20-25).",
+      "divergence_note": null,
+      "reference": {
+        "book": "daniel",
+        "chapter": 3,
+        "verse_start": 19,
+        "verse_end": 25
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "personagens-0045",
+      "type": "multiple_choice",
+      "text": "Qual espia, junto com Josué, creu que Israel venceria e recebeu Hebrom por herança?",
+      "options": [
+        {
+          "text": "Calebe",
+          "correct": true
+        },
+        {
+          "text": "Eleazar",
+          "correct": false
+        },
+        {
+          "text": "Finéias",
+          "correct": false
+        },
+        {
+          "text": "Otniel",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Calebe disse: 'Subamos animosamente e possuamo-la em herança' (Nm 13:30); aos 85 anos recebeu Hebrom (Js 14:6-14).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 13,
+        "verse_start": 30,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "personagens-0046",
+      "type": "multiple_choice",
+      "text": "Quem foi a esposa de Moisés, filha do sacerdote de Midiã?",
+      "options": [
+        {
+          "text": "Zípora",
+          "correct": true
+        },
+        {
+          "text": "Míriam",
+          "correct": false
+        },
+        {
+          "text": "Joquebede",
+          "correct": false
+        },
+        {
+          "text": "Raabe",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Reuel (Jetro) 'deu a Moisés sua filha Zípora' (Êx 2:21), que lhe deu Gérson e Eliézer.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 2,
+        "verse_start": 21,
+        "verse_end": 22
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "personagens-0047",
+      "type": "multiple_choice",
+      "text": "Que animal Sansão despedaçou com as próprias mãos a caminho de Timna?",
+      "options": [
+        {
+          "text": "Um leão",
+          "correct": true
+        },
+        {
+          "text": "Um urso",
+          "correct": false
+        },
+        {
+          "text": "Um touro",
+          "correct": false
+        },
+        {
+          "text": "Um lobo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Um filho de leão... e ele o fendeu de alto a baixo, como quem fende um cabrito' (Jz 14:5-6) — e depois achou mel na carcaça.",
+      "divergence_note": null,
+      "reference": {
+        "book": "juizes",
+        "chapter": 14,
+        "verse_start": 5,
+        "verse_end": 9
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "personagens-0048",
+      "type": "multiple_choice",
+      "text": "Quantos filhos Jó tinha antes da provação?",
+      "options": [
+        {
+          "text": "Sete filhos e três filhas",
+          "correct": true
+        },
+        {
+          "text": "Doze filhos",
+          "correct": false
+        },
+        {
+          "text": "Três filhos e sete filhas",
+          "correct": false
+        },
+        {
+          "text": "Dez filhos apenas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Nasceram-lhe sete filhos e três filhas' (Jó 1:2); todos morreram, e Deus lhe deu de novo sete filhos e três filhas (Jó 42:13).",
+      "divergence_note": null,
+      "reference": {
+        "book": "jo",
+        "chapter": 1,
+        "verse_start": 2,
+        "verse_end": 3
       },
       "difficulty": "hard"
     }

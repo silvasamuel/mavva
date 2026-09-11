@@ -348,8 +348,7 @@
         "verse_start": 2,
         "verse_end": null
       },
-      "difficulty": "medium",
-      "is_active": false
+      "difficulty": "medium"
     },
     {
       "external_id": "cultura-biblica-0012",
@@ -533,7 +532,8 @@
         "verse_start": 20,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "cultura-biblica-0018",
@@ -618,7 +618,7 @@
         "verse_start": 9,
         "verse_end": 10
       },
-      "difficulty": "medium"
+      "difficulty": "easy"
     },
     {
       "external_id": "cultura-biblica-0021",
@@ -923,6 +923,355 @@
         "verse_end": 19
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0031",
+      "type": "multiple_choice",
+      "text": "Que instrumento convocava o povo e anunciava as festas em Israel, por ordem de Números 10?",
+      "options": [
+        {
+          "text": "Trombetas de prata",
+          "correct": true
+        },
+        {
+          "text": "Harpas",
+          "correct": false
+        },
+        {
+          "text": "Címbalos",
+          "correct": false
+        },
+        {
+          "text": "Flautas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Faze-te duas trombetas de prata... para a convocação da congregação e para a partida dos arraiais' (Nm 10:2,10).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 10,
+        "verse_start": 1,
+        "verse_end": 10
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0032",
+      "type": "multiple_choice",
+      "text": "Que bebida foi oferecida a Jesus na cruz, numa esponja?",
+      "options": [
+        {
+          "text": "Vinagre",
+          "correct": true
+        },
+        {
+          "text": "Leite",
+          "correct": false
+        },
+        {
+          "text": "Mel",
+          "correct": false
+        },
+        {
+          "text": "Água pura",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Tomando uma esponja, embebeu-a em vinagre e... deu-lhe de beber' (Mt 27:48), cumprindo o Salmo 69:21.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 27,
+        "verse_start": 48,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0033",
+      "type": "multiple_choice",
+      "text": "Que peça de roupa de Jesus os soldados sortearam, por ser tecida sem costura?",
+      "options": [
+        {
+          "text": "A túnica",
+          "correct": true
+        },
+        {
+          "text": "O manto",
+          "correct": false
+        },
+        {
+          "text": "O cinto",
+          "correct": false
+        },
+        {
+          "text": "As sandálias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'A túnica não tinha costura... disseram: Lancemos sortes sobre ela' (Jo 19:23-24), cumprindo o Salmo 22:18.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 19,
+        "verse_start": 23,
+        "verse_end": 24
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0034",
+      "type": "multiple_choice",
+      "text": "Debaixo de que objeto Jesus disse que ninguém acende uma candeia para escondê-la?",
+      "options": [
+        {
+          "text": "Do alqueire",
+          "correct": true
+        },
+        {
+          "text": "Da mesa",
+          "correct": false
+        },
+        {
+          "text": "Do leito",
+          "correct": false
+        },
+        {
+          "text": "Da mó",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Não se acende a candeia e se coloca debaixo do alqueire, mas no velador' (Mt 5:15) — o alqueire era medida de grãos.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 5,
+        "verse_start": 15,
+        "verse_end": 16
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0035",
+      "type": "multiple_choice",
+      "text": "Que objetos o pai deu ao filho pródigo, restaurando sua dignidade de filho?",
+      "options": [
+        {
+          "text": "A melhor roupa, um anel e sandálias",
+          "correct": true
+        },
+        {
+          "text": "Um cajado e uma bolsa",
+          "correct": false
+        },
+        {
+          "text": "Uma coroa e um cetro",
+          "correct": false
+        },
+        {
+          "text": "Uma túnica de saco",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Trazei a melhor roupa... ponde-lhe um anel na mão e alparcas nos pés' (Lc 15:22) — anel e sandálias eram sinais de filho, não de servo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 15,
+        "verse_start": 22,
+        "verse_end": 24
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cultura-biblica-0036",
+      "type": "open_answer",
+      "text": "Que produto medicinal Gileade exportava, lembrado em 'não há bálsamo em Gileade?'",
+      "options": null,
+      "accepted_answers": [
+        "Bálsamo",
+        "Balsamo"
+      ],
+      "explanation": "'Porventura não há bálsamo em Gileade? Ou não há lá médico?' (Jr 8:22) — o bálsamo era remédio famoso da região.",
+      "divergence_note": null,
+      "reference": {
+        "book": "jeremias",
+        "chapter": 8,
+        "verse_start": 22,
+        "verse_end": null
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "cultura-biblica-0037",
+      "type": "multiple_choice",
+      "text": "Qual era o ofício de José, esposo de Maria?",
+      "options": [
+        {
+          "text": "Carpinteiro",
+          "correct": true
+        },
+        {
+          "text": "Pescador",
+          "correct": false
+        },
+        {
+          "text": "Pastor",
+          "correct": false
+        },
+        {
+          "text": "Escriba",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Em Nazaré perguntavam: 'Não é este o filho do carpinteiro?' (Mt 13:55); Marcos chama o próprio Jesus de carpinteiro (Mc 6:3).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 13,
+        "verse_start": 55,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cultura-biblica-0038",
+      "type": "multiple_choice",
+      "text": "Qual era o ofício de Simão, em cuja casa Pedro se hospedou em Jope?",
+      "options": [
+        {
+          "text": "Curtidor de couro",
+          "correct": true
+        },
+        {
+          "text": "Pescador",
+          "correct": false
+        },
+        {
+          "text": "Oleiro",
+          "correct": false
+        },
+        {
+          "text": "Tecelão",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Está hospedado com um certo Simão, curtidor, que tem a sua casa junto do mar' (At 10:6) — ofício impuro para muitos judeus.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 10,
+        "verse_start": 5,
+        "verse_end": 6
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cultura-biblica-0039",
+      "type": "multiple_choice",
+      "text": "Quanto valia o perfume de nardo derramado sobre Jesus, segundo a queixa de Judas?",
+      "options": [
+        {
+          "text": "Trezentos denários",
+          "correct": true
+        },
+        {
+          "text": "Trinta moedas de prata",
+          "correct": false
+        },
+        {
+          "text": "Dez talentos",
+          "correct": false
+        },
+        {
+          "text": "Um siclo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Por que não se vendeu este unguento por trezentos denários e não se deu aos pobres?' (Jo 12:5) — quase um ano de salário.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 12,
+        "verse_start": 3,
+        "verse_end": 6
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cultura-biblica-0040",
+      "type": "multiple_choice",
+      "text": "Por quanto Abraão comprou a caverna de Macpela para sepultar Sara?",
+      "options": [
+        {
+          "text": "Quatrocentos siclos de prata",
+          "correct": true
+        },
+        {
+          "text": "Trinta siclos",
+          "correct": false
+        },
+        {
+          "text": "Mil siclos de ouro",
+          "correct": false
+        },
+        {
+          "text": "Cem cordeiros",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Abraão pesou a Efrom 'quatrocentos siclos de prata, correntes entre mercadores' (Gn 23:15-16) — a primeira posse em Canaã.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 23,
+        "verse_start": 15,
+        "verse_end": 16
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "cultura-biblica-0041",
+      "type": "multiple_choice",
+      "text": "De que material eram feitas as tábuas dos Dez Mandamentos?",
+      "options": [
+        {
+          "text": "Pedra",
+          "correct": true
+        },
+        {
+          "text": "Madeira de acácia",
+          "correct": false
+        },
+        {
+          "text": "Bronze",
+          "correct": false
+        },
+        {
+          "text": "Argila",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Deu a Moisés... as duas tábuas do testemunho, tábuas de pedra, escritas pelo dedo de Deus' (Êx 31:18).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 31,
+        "verse_start": 18,
+        "verse_end": null
+      },
+      "difficulty": "easy"
     }
   ]
 }

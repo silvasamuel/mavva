@@ -480,7 +480,8 @@
         "verse_start": 1,
         "verse_end": 2
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "geografia-biblica-0016",
@@ -566,7 +567,8 @@
         "verse_start": 20,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "geografia-biblica-0019",
@@ -599,7 +601,8 @@
         "verse_start": 1,
         "verse_end": 2
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "geografia-biblica-0020",
@@ -817,7 +820,8 @@
         "verse_start": 12,
         "verse_end": null
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "geografia-biblica-0027",
@@ -987,6 +991,323 @@
         "verse_end": null
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "geografia-biblica-0033",
+      "type": "multiple_choice",
+      "text": "Em que cidade Paulo foi apedrejado e arrastado para fora como morto, na primeira viagem?",
+      "options": [
+        {
+          "text": "Listra",
+          "correct": true
+        },
+        {
+          "text": "Icônio",
+          "correct": false
+        },
+        {
+          "text": "Derbe",
+          "correct": false
+        },
+        {
+          "text": "Antioquia da Pisídia",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Judeus de Antioquia e Icônio 'apedrejaram a Paulo e o arrastaram para fora da cidade, cuidando que estivesse morto' (At 14:19).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 14,
+        "verse_start": 19,
+        "verse_end": 20
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "geografia-biblica-0034",
+      "type": "multiple_choice",
+      "text": "Junto a que rio Ezequiel estava entre os cativos quando teve suas visões?",
+      "options": [
+        {
+          "text": "Rio Quebar",
+          "correct": true
+        },
+        {
+          "text": "Rio Eufrates",
+          "correct": false
+        },
+        {
+          "text": "Rio Ulai",
+          "correct": false
+        },
+        {
+          "text": "Rio Tigre",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Estando eu no meio dos cativos, junto ao rio Quebar, abriram-se os céus, e eu vi visões de Deus' (Ez 1:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "ezequiel",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "geografia-biblica-0035",
+      "type": "multiple_choice",
+      "text": "Que cidade da Galileia Jesus tomou como base do ministério, chamada 'a sua cidade'?",
+      "options": [
+        {
+          "text": "Cafarnaum",
+          "correct": true
+        },
+        {
+          "text": "Nazaré",
+          "correct": false
+        },
+        {
+          "text": "Caná",
+          "correct": false
+        },
+        {
+          "text": "Betsaida",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Deixando Nazaré, foi habitar em Cafarnaum' (Mt 4:13); Mateus a chama de 'sua cidade' (Mt 9:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 4,
+        "verse_start": 13,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "geografia-biblica-0036",
+      "type": "multiple_choice",
+      "text": "Que planície costeira, célebre pela beleza, dá nome à 'rosa de Sarom'?",
+      "options": [
+        {
+          "text": "Sarom",
+          "correct": true
+        },
+        {
+          "text": "Sefelá",
+          "correct": false
+        },
+        {
+          "text": "Jezreel",
+          "correct": false
+        },
+        {
+          "text": "Arabá",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Eu sou a rosa de Sarom, o lírio dos vales' (Ct 2:1); Sarom é a planície entre Jope e o Carmelo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "cantares",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "geografia-biblica-0037",
+      "type": "multiple_choice",
+      "text": "Em que ilha Paulo naufragou a caminho de Roma, sendo bem recebido pelos habitantes?",
+      "options": [
+        {
+          "text": "Malta",
+          "correct": true
+        },
+        {
+          "text": "Chipre",
+          "correct": false
+        },
+        {
+          "text": "Creta",
+          "correct": false
+        },
+        {
+          "text": "Patmos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Souberam que a ilha se chamava Malta. E os bárbaros usaram conosco de não pouca humanidade' (At 28:1-2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 28,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "geografia-biblica-0038",
+      "type": "open_answer",
+      "text": "Que porto no mar Vermelho, junto a Elate, abrigou a frota de Salomão?",
+      "options": null,
+      "accepted_answers": [
+        "Eziom-Geber",
+        "Eziom Geber",
+        "Eziongeber"
+      ],
+      "explanation": "'O rei Salomão fez naus em Eziom-Geber, que está junto a Elate, à praia do mar Vermelho' (1Rs 9:26).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 9,
+        "verse_start": 26,
+        "verse_end": 28
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "geografia-biblica-0039",
+      "type": "multiple_choice",
+      "text": "Em que cidade Jesus nasceu?",
+      "options": [
+        {
+          "text": "Belém",
+          "correct": true
+        },
+        {
+          "text": "Nazaré",
+          "correct": false
+        },
+        {
+          "text": "Jerusalém",
+          "correct": false
+        },
+        {
+          "text": "Cafarnaum",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Jesus nasceu em Belém da Judeia, no tempo do rei Herodes' (Mt 2:1), a cidade de Davi (Lc 2:4).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "geografia-biblica-0040",
+      "type": "multiple_choice",
+      "text": "Em que região da Palestina ficavam Jerusalém e Belém?",
+      "options": [
+        {
+          "text": "Judeia",
+          "correct": true
+        },
+        {
+          "text": "Galileia",
+          "correct": false
+        },
+        {
+          "text": "Samaria",
+          "correct": false
+        },
+        {
+          "text": "Decápolis",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Belém e Jerusalém ficam na Judeia, ao sul; a Galileia, ao norte, era a região de Nazaré (Mt 2:1; Lc 2:4).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 2,
+        "verse_start": 4,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "geografia-biblica-0041",
+      "type": "multiple_choice",
+      "text": "Em que monte, segundo a tradição, Jesus foi transfigurado?",
+      "options": [
+        {
+          "text": "Monte Tabor",
+          "correct": true
+        },
+        {
+          "text": "Monte Carmelo",
+          "correct": false
+        },
+        {
+          "text": "Monte Sinai",
+          "correct": false
+        },
+        {
+          "text": "Monte Nebo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Os evangelhos dizem apenas 'um alto monte' (Mt 17:1); a tradição cristã, desde os primeiros séculos, aponta o Tabor, na Galileia.",
+      "divergence_note": "O texto bíblico não nomeia o monte da transfiguração. O Tabor é a identificação tradicional; alguns estudiosos propõem o Hermom, perto de Cesareia de Filipe.",
+      "reference": {
+        "book": "mateus",
+        "chapter": 17,
+        "verse_start": 1,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "geografia-biblica-0042",
+      "type": "multiple_choice",
+      "text": "Para que país José foi levado como escravo pelos mercadores?",
+      "options": [
+        {
+          "text": "Egito",
+          "correct": true
+        },
+        {
+          "text": "Assíria",
+          "correct": false
+        },
+        {
+          "text": "Babilônia",
+          "correct": false
+        },
+        {
+          "text": "Midiã",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Os midianitas venderam José no Egito a Potifar, eunuco de Faraó' (Gn 37:36).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 37,
+        "verse_start": 28,
+        "verse_end": 36
+      },
+      "difficulty": "easy"
     }
   ]
 }

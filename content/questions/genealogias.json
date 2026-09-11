@@ -334,8 +334,7 @@
         "verse_start": 27,
         "verse_end": null
       },
-      "difficulty": "medium",
-      "is_active": false
+      "difficulty": "medium"
     },
     {
       "external_id": "genealogias-0012",
@@ -419,7 +418,8 @@
         "verse_start": 17,
         "verse_end": 22
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "genealogias-0015",
@@ -551,7 +551,8 @@
         "verse_start": 18,
         "verse_end": 22
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "genealogias-0019",
@@ -839,7 +840,7 @@
     {
       "external_id": "genealogias-0028",
       "type": "multiple_choice",
-      "text": "Quem foi o pai de Abraão, que saiu de Ur dos caldeus com a família?",
+      "text": "Quem foi o pai de Davi, filho de Obede?",
       "options": [
         {
           "text": "Terá",
@@ -859,7 +860,7 @@
         }
       ],
       "accepted_answers": null,
-      "explanation": "'Tomou Terá a Abrão, seu filho... e saíram de Ur dos caldeus' até Harã, onde Terá morreu (Gn 11:31-32).",
+      "explanation": "'Obede gerou a Jessé, e Jessé gerou a Davi' (Rt 4:22); Davi é chamado repetidamente 'filho de Jessé' (1Sm 16:18).",
       "divergence_note": null,
       "reference": {
         "book": "genesis",
@@ -938,6 +939,323 @@
         "chapter": 3,
         "verse_start": 5,
         "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "genealogias-0032",
+      "type": "multiple_choice",
+      "text": "Quem foi a mãe de José e Benjamim, esposa amada de Jacó?",
+      "options": [
+        {
+          "text": "Raquel",
+          "correct": true
+        },
+        {
+          "text": "Lia",
+          "correct": false
+        },
+        {
+          "text": "Bila",
+          "correct": false
+        },
+        {
+          "text": "Zilpa",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Raquel deu à luz José (Gn 30:22-24) e morreu ao dar à luz Benjamim, a caminho de Efrata (Gn 35:16-19).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 35,
+        "verse_start": 16,
+        "verse_end": 19
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "genealogias-0033",
+      "type": "multiple_choice",
+      "text": "Qual filho de Isaque é apresentado como pai dos edomitas?",
+      "options": [
+        {
+          "text": "Esaú",
+          "correct": true
+        },
+        {
+          "text": "Jacó",
+          "correct": false
+        },
+        {
+          "text": "Ismael",
+          "correct": false
+        },
+        {
+          "text": "Midiã",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Estas são as gerações de Esaú, que é Edom' (Gn 36:1); o povo de Edom descende dele.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 36,
+        "verse_start": 1,
+        "verse_end": 8
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "genealogias-0034",
+      "type": "multiple_choice",
+      "text": "Qual filho de Judá com Tamar aparece na genealogia de Jesus em Mateus 1?",
+      "options": [
+        {
+          "text": "Perez (Fares)",
+          "correct": true
+        },
+        {
+          "text": "Selá",
+          "correct": false
+        },
+        {
+          "text": "Er",
+          "correct": false
+        },
+        {
+          "text": "Onã",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Judá gerou de Tamar a Fares e a Zara' (Mt 1:3); a linhagem real de Davi passa por Perez (Rt 4:18).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 1,
+        "verse_start": 3,
+        "verse_end": null
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "genealogias-0035",
+      "type": "multiple_choice",
+      "text": "Como Lucas introduz José ao começar a genealogia de Jesus?",
+      "options": [
+        {
+          "text": "Jesus era 'filho, como se cuidava, de José'",
+          "correct": true
+        },
+        {
+          "text": "'Filho legítimo de José'",
+          "correct": false
+        },
+        {
+          "text": "'Herdeiro de José'",
+          "correct": false
+        },
+        {
+          "text": "'Enteado de José'",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Jesus... sendo, como se cuidava, filho de José' (Lc 3:23) — Lucas marca a concepção virginal que já narrara.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 3,
+        "verse_start": 23,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "genealogias-0036",
+      "type": "multiple_choice",
+      "text": "Qual neto de Jacó, filho de José, recebeu a bênção da mão direita apesar de ser o mais novo?",
+      "options": [
+        {
+          "text": "Efraim",
+          "correct": true
+        },
+        {
+          "text": "Manassés",
+          "correct": false
+        },
+        {
+          "text": "Benjamim",
+          "correct": false
+        },
+        {
+          "text": "Rúben",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jacó cruzou as mãos de propósito, pondo a direita sobre Efraim: 'o seu irmão menor será maior que ele' (Gn 48:14-19).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 48,
+        "verse_start": 13,
+        "verse_end": 19
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "genealogias-0037",
+      "type": "open_answer",
+      "text": "Quem foi a irmã de Moisés e Arão, profetisa que cantou após a travessia do mar?",
+      "options": null,
+      "accepted_answers": [
+        "Míriam",
+        "Miriam",
+        "Miriã"
+      ],
+      "explanation": "'Míriam, a profetisa, irmã de Arão, tomou o tamboril na mão, e todas as mulheres saíram atrás dela' (Êx 15:20-21).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 15,
+        "verse_start": 20,
+        "verse_end": 21
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "genealogias-0038",
+      "type": "multiple_choice",
+      "text": "Quais gêmeos nasceram a Isaque, já lutando no ventre da mãe?",
+      "options": [
+        {
+          "text": "Jacó e Esaú",
+          "correct": true
+        },
+        {
+          "text": "Caim e Abel",
+          "correct": false
+        },
+        {
+          "text": "Efraim e Manassés",
+          "correct": false
+        },
+        {
+          "text": "Perez e Zerá",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Os filhos lutavam dentro dela'; nasceu Esaú, ruivo, e depois Jacó, segurando-lhe o calcanhar (Gn 25:22-26).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 25,
+        "verse_start": 21,
+        "verse_end": 26
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "genealogias-0039",
+      "type": "multiple_choice",
+      "text": "Quem foi a esposa de Isaque, encontrada junto ao poço pelo servo de Abraão?",
+      "options": [
+        {
+          "text": "Rebeca",
+          "correct": true
+        },
+        {
+          "text": "Raquel",
+          "correct": false
+        },
+        {
+          "text": "Lia",
+          "correct": false
+        },
+        {
+          "text": "Sara",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Rebeca deu de beber ao servo e aos camelos — o sinal pedido em oração (Gn 24:14-19) — e tornou-se mãe de Jacó e Esaú.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 24,
+        "verse_start": 15,
+        "verse_end": 20
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "genealogias-0040",
+      "type": "multiple_choice",
+      "text": "Quantas gerações Gênesis 5 lista de Adão a Noé?",
+      "options": [
+        {
+          "text": "Dez",
+          "correct": true
+        },
+        {
+          "text": "Sete",
+          "correct": false
+        },
+        {
+          "text": "Doze",
+          "correct": false
+        },
+        {
+          "text": "Catorze",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Adão, Sete, Enos, Cainã, Maalalel, Jarede, Enoque, Metusalém, Lameque e Noé — dez gerações (Gn 5:1-32).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 5,
+        "verse_start": 1,
+        "verse_end": 32
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "genealogias-0041",
+      "type": "multiple_choice",
+      "text": "Quantos filhos Jacó teve com Lia, sua primeira esposa?",
+      "options": [
+        {
+          "text": "Seis",
+          "correct": true
+        },
+        {
+          "text": "Dois",
+          "correct": false
+        },
+        {
+          "text": "Quatro",
+          "correct": false
+        },
+        {
+          "text": "Doze",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Rúben, Simeão, Levi, Judá, Issacar e Zebulom — e também a filha Diná (Gn 29:32-35; 30:17-21).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 30,
+        "verse_start": 17,
+        "verse_end": 21
       },
       "difficulty": "hard"
     }

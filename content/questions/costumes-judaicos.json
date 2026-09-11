@@ -506,8 +506,7 @@
         "verse_start": 8,
         "verse_end": 9
       },
-      "difficulty": "hard",
-      "is_active": false
+      "difficulty": "hard"
     },
     {
       "external_id": "costumes-judaicos-0017",
@@ -596,8 +595,7 @@
         "verse_start": 4,
         "verse_end": 6
       },
-      "difficulty": "hard",
-      "is_active": false
+      "difficulty": "hard"
     },
     {
       "external_id": "costumes-judaicos-0020",
@@ -630,8 +628,7 @@
         "verse_start": 8,
         "verse_end": 11
       },
-      "difficulty": "medium",
-      "is_active": false
+      "difficulty": "easy"
     },
     {
       "external_id": "costumes-judaicos-0021",
@@ -990,6 +987,323 @@
         "verse_end": 48
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "costumes-judaicos-0033",
+      "type": "multiple_choice",
+      "text": "O que a Lei ordenava fazer com o corpo de um executado pendurado num madeiro?",
+      "options": [
+        {
+          "text": "Sepultá-lo no mesmo dia",
+          "correct": true
+        },
+        {
+          "text": "Deixá-lo três dias",
+          "correct": false
+        },
+        {
+          "text": "Queimá-lo fora da cidade",
+          "correct": false
+        },
+        {
+          "text": "Lançá-lo ao rio",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'O seu cadáver não permanecerá no madeiro... o enterrarás no mesmo dia' (Dt 21:22-23) — por isso a pressa em sepultar Jesus antes do sábado.",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 21,
+        "verse_start": 22,
+        "verse_end": 23
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "costumes-judaicos-0034",
+      "type": "multiple_choice",
+      "text": "O que Jesus ordenou ao leproso curado, conforme a Lei de Moisés?",
+      "options": [
+        {
+          "text": "Mostrar-se ao sacerdote e oferecer o que Moisés ordenou",
+          "correct": true
+        },
+        {
+          "text": "Jejuar sete dias",
+          "correct": false
+        },
+        {
+          "text": "Lavar-se no Jordão",
+          "correct": false
+        },
+        {
+          "text": "Ir a Jerusalém a pé",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Vai, mostra-te ao sacerdote e apresenta a oferta que Moisés determinou' (Mt 8:4; cf. Lv 14) — a purificação ritual exigia sacrifícios.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 8,
+        "verse_start": 4,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "costumes-judaicos-0035",
+      "type": "multiple_choice",
+      "text": "Onde a Lei mandava escrever as palavras do mandamento, além de atá-las à mão?",
+      "options": [
+        {
+          "text": "Nos umbrais da casa e nas portas",
+          "correct": true
+        },
+        {
+          "text": "No altar",
+          "correct": false
+        },
+        {
+          "text": "Nas sandálias",
+          "correct": false
+        },
+        {
+          "text": "Nas vestes dos filhos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'E as escreverás nos umbrais de tua casa e nas tuas portas' (Dt 6:9) — origem da mezuzá.",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 6,
+        "verse_start": 8,
+        "verse_end": 9
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "costumes-judaicos-0036",
+      "type": "multiple_choice",
+      "text": "Com que idade os levitas entravam no serviço do tabernáculo, segundo Números 4?",
+      "options": [
+        {
+          "text": "Trinta anos",
+          "correct": true
+        },
+        {
+          "text": "Vinte anos",
+          "correct": false
+        },
+        {
+          "text": "Doze anos",
+          "correct": false
+        },
+        {
+          "text": "Quarenta anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Da idade de trinta anos para cima até aos cinquenta... todo o que entra no serviço' (Nm 4:3).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 4,
+        "verse_start": 3,
+        "verse_end": null
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "costumes-judaicos-0037",
+      "type": "multiple_choice",
+      "text": "Qual era a pena prevista na Lei para quem blasfemasse o nome do SENHOR?",
+      "options": [
+        {
+          "text": "Apedrejamento",
+          "correct": true
+        },
+        {
+          "text": "Multa em prata",
+          "correct": false
+        },
+        {
+          "text": "Exílio",
+          "correct": false
+        },
+        {
+          "text": "Açoites",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Aquele que blasfemar o nome do SENHOR certamente morrerá; toda a congregação o apedrejará' (Lv 24:16) — acusação usada contra Jesus e Estêvão.",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 24,
+        "verse_start": 15,
+        "verse_end": 16
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "costumes-judaicos-0038",
+      "type": "open_answer",
+      "text": "Que peça do traje do sumo sacerdote trazia doze pedras, uma por tribo?",
+      "options": null,
+      "accepted_answers": [
+        "Peitoral",
+        "O peitoral",
+        "Peitoral do juízo"
+      ],
+      "explanation": "'As pedras serão segundo os nomes dos filhos de Israel, doze' no peitoral (Êx 28:21) — o sacerdote levava o povo sobre o coração.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 28,
+        "verse_start": 15,
+        "verse_end": 21
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "costumes-judaicos-0039",
+      "type": "multiple_choice",
+      "text": "Quantos mandamentos Deus entregou a Moisés no monte Sinai, escritos em tábuas?",
+      "options": [
+        {
+          "text": "Dez",
+          "correct": true
+        },
+        {
+          "text": "Sete",
+          "correct": false
+        },
+        {
+          "text": "Doze",
+          "correct": false
+        },
+        {
+          "text": "Cinco",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Escreveu nas tábuas as palavras da aliança, os dez mandamentos' (Êx 34:28).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 34,
+        "verse_start": 28,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "costumes-judaicos-0040",
+      "type": "multiple_choice",
+      "text": "Que gesto o servo de Abraão fez ao jurar que buscaria uma esposa para Isaque?",
+      "options": [
+        {
+          "text": "Pôs a mão debaixo da coxa de Abraão",
+          "correct": true
+        },
+        {
+          "text": "Ergueu a mão direita",
+          "correct": false
+        },
+        {
+          "text": "Rasgou as vestes",
+          "correct": false
+        },
+        {
+          "text": "Beijou o chão",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Põe agora a tua mão debaixo da minha coxa, para que eu te faça jurar pelo SENHOR' (Gn 24:2-3) — gesto solene de juramento.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 24,
+        "verse_start": 2,
+        "verse_end": 9
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "costumes-judaicos-0041",
+      "type": "multiple_choice",
+      "text": "Como se chama o princípio da Lei citado por Jesus: 'olho por olho e dente por dente'?",
+      "options": [
+        {
+          "text": "Lei de talião",
+          "correct": true
+        },
+        {
+          "text": "Lei do levirato",
+          "correct": false
+        },
+        {
+          "text": "Lei do jubileu",
+          "correct": false
+        },
+        {
+          "text": "Lei da respiga",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Ouvistes que foi dito: Olho por olho e dente por dente' (Mt 5:38; cf. Êx 21:24) — limite à vingança, que Jesus supera com o amor ao inimigo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 5,
+        "verse_start": 38,
+        "verse_end": 39
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "costumes-judaicos-0042",
+      "type": "multiple_choice",
+      "text": "Onde, segundo Jesus, os hipócritas gostavam de orar para serem vistos?",
+      "options": [
+        {
+          "text": "Nas sinagogas e nos cantos das ruas",
+          "correct": true
+        },
+        {
+          "text": "No deserto",
+          "correct": false
+        },
+        {
+          "text": "Dentro do Santo dos Santos",
+          "correct": false
+        },
+        {
+          "text": "Nos telhados",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Gostam de orar em pé nas sinagogas e às esquinas das ruas, para serem vistos pelos homens' (Mt 6:5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 6,
+        "verse_start": 5,
+        "verse_end": 6
+      },
+      "difficulty": "medium"
     }
   ]
 }

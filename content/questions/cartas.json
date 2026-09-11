@@ -348,7 +348,8 @@
         "verse_start": 4,
         "verse_end": 7
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "cartas-0012",
@@ -399,7 +400,8 @@
         "verse_start": 17,
         "verse_end": null
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "cartas-0014",
@@ -972,6 +974,290 @@
         "verse_end": 4
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "cartas-0033",
+      "type": "multiple_choice",
+      "text": "Em qual carta Paulo diz desejar visitar a igreja a caminho da Espanha, sem nunca ter estado lá?",
+      "options": [
+        {
+          "text": "Romanos",
+          "correct": true
+        },
+        {
+          "text": "Colossenses",
+          "correct": false
+        },
+        {
+          "text": "Efésios",
+          "correct": false
+        },
+        {
+          "text": "1 Tessalonicenses",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Quando partir para a Espanha irei ter convosco' (Rm 15:24,28) — Paulo escreve a uma igreja que ainda não conhecia pessoalmente.",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 15,
+        "verse_start": 24,
+        "verse_end": 28
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cartas-0034",
+      "type": "multiple_choice",
+      "text": "Qual carta de João é dirigida a 'Gaio, o amado'?",
+      "options": [
+        {
+          "text": "3 João",
+          "correct": true
+        },
+        {
+          "text": "1 João",
+          "correct": false
+        },
+        {
+          "text": "2 João",
+          "correct": false
+        },
+        {
+          "text": "Judas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'O ancião ao amado Gaio, a quem em verdade eu amo' (3Jo 1:1); a carta elogia a hospitalidade e repreende Diótrefes.",
+      "divergence_note": null,
+      "reference": {
+        "book": "3joao",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 4
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cartas-0035",
+      "type": "multiple_choice",
+      "text": "Em qual carta Paulo escreve que 'a letra mata, mas o espírito vivifica'?",
+      "options": [
+        {
+          "text": "2 Coríntios",
+          "correct": true
+        },
+        {
+          "text": "Gálatas",
+          "correct": false
+        },
+        {
+          "text": "Romanos",
+          "correct": false
+        },
+        {
+          "text": "Hebreus",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Contrastando o ministério da lei com o do Espírito, Paulo afirma: 'a letra mata e o espírito vivifica' (2Co 3:6).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2corintios",
+        "chapter": 3,
+        "verse_start": 6,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cartas-0036",
+      "type": "multiple_choice",
+      "text": "Qual carta manda 'não desprezar as profecias', mas 'examinar tudo e reter o bem'?",
+      "options": [
+        {
+          "text": "1 Tessalonicenses",
+          "correct": true
+        },
+        {
+          "text": "1 Coríntios",
+          "correct": false
+        },
+        {
+          "text": "Tiago",
+          "correct": false
+        },
+        {
+          "text": "2 Pedro",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Não desprezeis as profecias. Examinai tudo. Retende o bem' (1Ts 5:20-21) — discernimento sem apagar o Espírito.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1tessalonicenses",
+        "chapter": 5,
+        "verse_start": 19,
+        "verse_end": 21
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cartas-0037",
+      "type": "multiple_choice",
+      "text": "Qual carta compara a língua a um 'fogo' e a um 'mundo de iniquidade' que nenhum homem pode domar?",
+      "options": [
+        {
+          "text": "Tiago",
+          "correct": true
+        },
+        {
+          "text": "1 Pedro",
+          "correct": false
+        },
+        {
+          "text": "Filemom",
+          "correct": false
+        },
+        {
+          "text": "Judas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'A língua também é um fogo... nenhum homem a pode domar' (Tg 3:6-8); pequena como o leme, governa o navio inteiro.",
+      "divergence_note": null,
+      "reference": {
+        "book": "tiago",
+        "chapter": 3,
+        "verse_start": 5,
+        "verse_end": 8
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cartas-0038",
+      "type": "open_answer",
+      "text": "Em qual carta Pedro fala de 'novos céus e nova terra, em que habita a justiça'?",
+      "options": null,
+      "accepted_answers": [
+        "2 Pedro",
+        "Segunda Pedro",
+        "2Pedro"
+      ],
+      "explanation": "'Aguardamos novos céus e nova terra, em que habita a justiça' (2Pe 3:13) — a esperança que sustenta a santidade.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2pedro",
+        "chapter": 3,
+        "verse_start": 13,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cartas-0039",
+      "type": "multiple_choice",
+      "text": "Em qual carta Paulo escreve 'nem judeu nem grego, nem servo nem livre... todos vós sois um em Cristo'?",
+      "options": [
+        {
+          "text": "Gálatas",
+          "correct": true
+        },
+        {
+          "text": "Romanos",
+          "correct": false
+        },
+        {
+          "text": "Efésios",
+          "correct": false
+        },
+        {
+          "text": "Colossenses",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Não há judeu nem grego; não há servo nem livre; não há macho nem fêmea; porque todos vós sois um em Cristo Jesus' (Gl 3:28).",
+      "divergence_note": null,
+      "reference": {
+        "book": "galatas",
+        "chapter": 3,
+        "verse_start": 26,
+        "verse_end": 29
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cartas-0040",
+      "type": "multiple_choice",
+      "text": "Qual carta compara falsos mestres a 'fontes sem água' e cita o caminho de Balaão?",
+      "options": [
+        {
+          "text": "2 Pedro",
+          "correct": true
+        },
+        {
+          "text": "Judas",
+          "correct": false
+        },
+        {
+          "text": "1 João",
+          "correct": false
+        },
+        {
+          "text": "Tiago",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Estes são fontes sem água, nuvens levadas pela força do vento... seguindo o caminho de Balaão' (2Pe 2:15-17).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2pedro",
+        "chapter": 2,
+        "verse_start": 15,
+        "verse_end": 17
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "cartas-0041",
+      "type": "multiple_choice",
+      "text": "Qual é a carta mais curta de Paulo, com um único capítulo?",
+      "options": [
+        {
+          "text": "Filemom",
+          "correct": true
+        },
+        {
+          "text": "Tito",
+          "correct": false
+        },
+        {
+          "text": "2 Tessalonicenses",
+          "correct": false
+        },
+        {
+          "text": "Judas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Filemom tem 25 versículos — um apelo pessoal em favor de Onésimo, 'não já como servo, mas como irmão amado' (Fm 1:16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "filemom",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 25
+      },
+      "difficulty": "medium"
     }
   ]
 }

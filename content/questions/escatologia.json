@@ -382,7 +382,8 @@
         "verse_start": 4,
         "verse_end": 6
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "escatologia-0013",
@@ -415,7 +416,8 @@
         "verse_start": 2,
         "verse_end": 4
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "escatologia-0014",
@@ -468,7 +470,8 @@
         "verse_start": 36,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "escatologia-0016",
@@ -633,7 +636,8 @@
         "verse_start": 4,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "escatologia-0021",
@@ -937,6 +941,341 @@
         "chapter": 4,
         "verse_start": 13,
         "verse_end": 14
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "escatologia-0033",
+      "type": "multiple_choice",
+      "text": "Segundo Mateus 25:31, quem acompanha o Filho do homem quando ele vier em sua glória?",
+      "options": [
+        {
+          "text": "Todos os santos anjos",
+          "correct": true
+        },
+        {
+          "text": "Os doze apóstolos",
+          "correct": false
+        },
+        {
+          "text": "Moisés e Elias",
+          "correct": false
+        },
+        {
+          "text": "Os mártires",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Quando o Filho do homem vier em sua glória, e todos os santos anjos com ele, então se assentará no trono' (Mt 25:31).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 25,
+        "verse_start": 31,
+        "verse_end": 32
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0034",
+      "type": "multiple_choice",
+      "text": "Segundo 1 João 3:2, o que acontecerá conosco quando Cristo se manifestar?",
+      "options": [
+        {
+          "text": "Seremos semelhantes a ele, porque o veremos como ele é",
+          "correct": true
+        },
+        {
+          "text": "Deixaremos de ser filhos",
+          "correct": false
+        },
+        {
+          "text": "Voltaremos ao Éden",
+          "correct": false
+        },
+        {
+          "text": "Seremos anjos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Sabemos que, quando ele se manifestar, seremos semelhantes a ele; porque assim como é o veremos' (1Jo 3:2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1joao",
+        "chapter": 3,
+        "verse_start": 2,
+        "verse_end": 3
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "escatologia-0035",
+      "type": "multiple_choice",
+      "text": "Em Apocalipse 22, que árvore está junto ao rio da água da vida, dando fruto todo mês?",
+      "options": [
+        {
+          "text": "A árvore da vida",
+          "correct": true
+        },
+        {
+          "text": "A figueira",
+          "correct": false
+        },
+        {
+          "text": "A oliveira",
+          "correct": false
+        },
+        {
+          "text": "O cedro do Líbano",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'De uma e de outra banda do rio, estava a árvore da vida, que produz doze frutos' (Ap 22:2) — a volta ao que o Éden perdeu.",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 22,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0036",
+      "type": "multiple_choice",
+      "text": "Segundo Romanos 8, o que a criação inteira espera 'gemendo'?",
+      "options": [
+        {
+          "text": "A manifestação dos filhos de Deus e sua libertação da corrupção",
+          "correct": true
+        },
+        {
+          "text": "O fim das estações",
+          "correct": false
+        },
+        {
+          "text": "A destruição total",
+          "correct": false
+        },
+        {
+          "text": "O retorno ao caos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'A ardente expectação da criatura espera a manifestação dos filhos de Deus... libertada da servidão da corrupção' (Rm 8:19-21).",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 8,
+        "verse_start": 19,
+        "verse_end": 22
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "escatologia-0037",
+      "type": "multiple_choice",
+      "text": "Que dois exemplos do Antigo Testamento Jesus usou em Lucas 17 para a vinda repentina do Filho do homem?",
+      "options": [
+        {
+          "text": "Os dias de Noé e os dias de Ló",
+          "correct": true
+        },
+        {
+          "text": "Babel e Jericó",
+          "correct": false
+        },
+        {
+          "text": "Egito e Babilônia",
+          "correct": false
+        },
+        {
+          "text": "Sansão e Gideão",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Como aconteceu nos dias de Noé... como também aconteceu nos dias de Ló' — comiam, bebiam, e o juízo veio de repente (Lc 17:26-30).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 17,
+        "verse_start": 26,
+        "verse_end": 30
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "escatologia-0038",
+      "type": "open_answer",
+      "text": "Qual é a última palavra de Jesus registrada em Apocalipse 22:20: 'Certamente cedo ___'?",
+      "options": null,
+      "accepted_answers": [
+        "Venho",
+        "venho"
+      ],
+      "explanation": "'Certamente cedo venho. Amém. Ora vem, Senhor Jesus!' (Ap 22:20) — promessa e oração que encerram a Bíblia.",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 22,
+        "verse_start": 20,
+        "verse_end": 21
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0039",
+      "type": "multiple_choice",
+      "text": "Segundo 1 Coríntios 15:26, qual é 'o último inimigo' a ser aniquilado?",
+      "options": [
+        {
+          "text": "A morte",
+          "correct": true
+        },
+        {
+          "text": "O pecado",
+          "correct": false
+        },
+        {
+          "text": "Satanás",
+          "correct": false
+        },
+        {
+          "text": "A lei",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'O último inimigo que há de ser aniquilado é a morte' (1Co 15:26) — vencida na ressurreição final.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1corintios",
+        "chapter": 15,
+        "verse_start": 24,
+        "verse_end": 26
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0040",
+      "type": "multiple_choice",
+      "text": "Segundo Filipenses 2:10-11, o que todo joelho e toda língua farão diante do nome de Jesus?",
+      "options": [
+        {
+          "text": "Dobrar-se e confessar que Jesus Cristo é o Senhor",
+          "correct": true
+        },
+        {
+          "text": "Calar-se",
+          "correct": false
+        },
+        {
+          "text": "Fugir",
+          "correct": false
+        },
+        {
+          "text": "Pedir julgamento",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Ao nome de Jesus se dobre todo joelho... e toda língua confesse que Jesus Cristo é o Senhor, para glória de Deus Pai' (Fp 2:10-11).",
+      "divergence_note": null,
+      "reference": {
+        "book": "filipenses",
+        "chapter": 2,
+        "verse_start": 9,
+        "verse_end": 11
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0041",
+      "type": "multiple_choice",
+      "text": "Como Apocalipse 20 chama a ressurreição dos que reinam com Cristo mil anos?",
+      "options": [
+        {
+          "text": "A primeira ressurreição",
+          "correct": true
+        },
+        {
+          "text": "A ressurreição geral",
+          "correct": false
+        },
+        {
+          "text": "O arrebatamento",
+          "correct": false
+        },
+        {
+          "text": "A segunda morte",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Esta é a primeira ressurreição. Bem-aventurado e santo aquele que tem parte na primeira ressurreição' (Ap 20:5-6).",
+      "divergence_note": "As tradições divergem sobre a natureza dessa ressurreição e do milênio (pré-, pós- e amilenismo). A pergunta trata do nome que o texto usa.",
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 20,
+        "verse_start": 4,
+        "verse_end": 6
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "escatologia-0042",
+      "type": "multiple_choice",
+      "text": "Segundo Mateus 24:14, o que acontecerá antes de vir o fim?",
+      "options": [
+        {
+          "text": "O evangelho será pregado em todo o mundo, a todas as nações",
+          "correct": true
+        },
+        {
+          "text": "O templo será reconstruído",
+          "correct": false
+        },
+        {
+          "text": "Todos os judeus voltarão",
+          "correct": false
+        },
+        {
+          "text": "Roma cairá",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Este evangelho do reino será pregado em todo o mundo, em testemunho a todas as gentes, e então virá o fim' (Mt 24:14).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 24,
+        "verse_start": 14,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0043",
+      "type": "open_answer",
+      "text": "Que palavra grega para a 'vinda' de Cristo Paulo usa em 1 Tessalonicenses 4:15?",
+      "options": null,
+      "accepted_answers": [
+        "Parousia",
+        "Parusia"
+      ],
+      "explanation": "Parousia significa 'presença, chegada' — a vinda pessoal do Senhor: 'nós, os que ficarmos vivos para a vinda do Senhor' (1Ts 4:15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1tessalonicenses",
+        "chapter": 4,
+        "verse_start": 15,
+        "verse_end": null
       },
       "difficulty": "expert"
     }

@@ -217,7 +217,8 @@
         "verse_start": 37,
         "verse_end": 40
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "contexto-historico-0008",
@@ -485,7 +486,8 @@
         "verse_start": 26,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "contexto-historico-0016",
@@ -617,7 +619,8 @@
         "verse_start": 20,
         "verse_end": null
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "contexto-historico-0020",
@@ -716,8 +719,7 @@
         "verse_start": 59,
         "verse_end": null
       },
-      "difficulty": "expert",
-      "is_active": false
+      "difficulty": "expert"
     },
     {
       "external_id": "contexto-historico-0023",
@@ -870,7 +872,8 @@
         "verse_start": 1,
         "verse_end": 2
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "contexto-historico-0028",
@@ -1023,6 +1026,355 @@
         "verse_end": null
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "contexto-historico-0033",
+      "type": "multiple_choice",
+      "text": "Qual procônsul de Acaia se recusou a julgar a acusação dos judeus contra Paulo em Corinto?",
+      "options": [
+        {
+          "text": "Gálio",
+          "correct": true
+        },
+        {
+          "text": "Festo",
+          "correct": false
+        },
+        {
+          "text": "Félix",
+          "correct": false
+        },
+        {
+          "text": "Sérgio Paulo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Gálio disse que não seria juiz de 'questões de palavras e nomes da vossa lei' e os expulsou do tribunal (At 18:12-17).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 18,
+        "verse_start": 12,
+        "verse_end": 17
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "contexto-historico-0034",
+      "type": "multiple_choice",
+      "text": "Qual imperador reinava quando João Batista começou a pregar, segundo Lucas 3:1?",
+      "options": [
+        {
+          "text": "Tibério César",
+          "correct": true
+        },
+        {
+          "text": "César Augusto",
+          "correct": false
+        },
+        {
+          "text": "Nero",
+          "correct": false
+        },
+        {
+          "text": "Cláudio",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'No ano quinze do império de Tibério César, sendo Pôncio Pilatos presidente da Judeia' (Lc 3:1) — Lucas ancora o evangelho na história.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 3,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0035",
+      "type": "multiple_choice",
+      "text": "Que cargo romano tinha Sérgio Paulo, que ouviu o evangelho em Chipre?",
+      "options": [
+        {
+          "text": "Procônsul",
+          "correct": true
+        },
+        {
+          "text": "Centurião",
+          "correct": false
+        },
+        {
+          "text": "Tribuno",
+          "correct": false
+        },
+        {
+          "text": "Tetrarca",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'O procônsul Sérgio Paulo, homem prudente' chamou Barnabé e Saulo para ouvir a palavra de Deus (At 13:7).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 13,
+        "verse_start": 6,
+        "verse_end": 12
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "contexto-historico-0036",
+      "type": "multiple_choice",
+      "text": "Que estatuto Filipos tinha no Império, sendo chamada 'colônia' em Atos 16?",
+      "options": [
+        {
+          "text": "Colônia romana, com cidadãos de direito romano",
+          "correct": true
+        },
+        {
+          "text": "Cidade livre grega",
+          "correct": false
+        },
+        {
+          "text": "Capital de província",
+          "correct": false
+        },
+        {
+          "text": "Porto franco",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Filipos era colônia romana (At 16:12); por isso Paulo pôde invocar seus direitos ao ser açoitado sem julgamento (At 16:37).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 16,
+        "verse_start": 12,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "contexto-historico-0037",
+      "type": "multiple_choice",
+      "text": "Que moeda de valor ínfimo Jesus citou ao dizer que dois passarinhos se vendem por ela?",
+      "options": [
+        {
+          "text": "Um ceitil (asse)",
+          "correct": true
+        },
+        {
+          "text": "Um denário",
+          "correct": false
+        },
+        {
+          "text": "Um talento",
+          "correct": false
+        },
+        {
+          "text": "Um siclo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Não se vendem dois passarinhos por um ceitil? E nenhum deles cairá em terra sem a vontade de vosso Pai' (Mt 10:29).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 10,
+        "verse_start": 29,
+        "verse_end": 31
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "contexto-historico-0038",
+      "type": "multiple_choice",
+      "text": "Que tipo de tribunal era a 'audiência' (pretório) onde Pilatos interrogou Jesus?",
+      "options": [
+        {
+          "text": "A residência e sede do governador romano",
+          "correct": true
+        },
+        {
+          "text": "A sala do Sinédrio",
+          "correct": false
+        },
+        {
+          "text": "O pátio do templo",
+          "correct": false
+        },
+        {
+          "text": "A sinagoga principal",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Levaram Jesus 'à audiência' de Pilatos, onde os judeus não entraram para não se contaminar (Jo 18:28) — o pretório romano.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 18,
+        "verse_start": 28,
+        "verse_end": 33
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "contexto-historico-0039",
+      "type": "open_answer",
+      "text": "Qual sumo sacerdote, genro de Anás, presidiu o julgamento de Jesus?",
+      "options": null,
+      "accepted_answers": [
+        "Caifás",
+        "Caifas"
+      ],
+      "explanation": "'Levaram-no primeiro a Anás... sogro de Caifás, que era o sumo sacerdote daquele ano' (Jo 18:13).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 18,
+        "verse_start": 13,
+        "verse_end": 14
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0040",
+      "type": "multiple_choice",
+      "text": "Que língua Jesus falava no dia a dia, preservada em expressões como 'Talita cumi' e 'Efatá'?",
+      "options": [
+        {
+          "text": "Aramaico",
+          "correct": true
+        },
+        {
+          "text": "Grego",
+          "correct": false
+        },
+        {
+          "text": "Latim",
+          "correct": false
+        },
+        {
+          "text": "Hebraico clássico",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O aramaico era a língua comum da Palestina; os evangelhos guardam palavras de Jesus nela (Mc 5:41; 7:34).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 5,
+        "verse_start": 41,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0041",
+      "type": "multiple_choice",
+      "text": "Quem eram os 'escribas', tantas vezes citados ao lado dos fariseus?",
+      "options": [
+        {
+          "text": "Estudiosos e copistas da Lei, mestres em interpretá-la",
+          "correct": true
+        },
+        {
+          "text": "Cobradores de impostos",
+          "correct": false
+        },
+        {
+          "text": "Guardas do templo",
+          "correct": false
+        },
+        {
+          "text": "Oficiais romanos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Os escribas ensinavam 'como os que têm autoridade' — e o povo notou que Jesus ensinava diferente deles (Mc 1:22).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 1,
+        "verse_start": 22,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0042",
+      "type": "multiple_choice",
+      "text": "Qual imperador expulsou os judeus de Roma, trazendo Áquila e Priscila a Corinto?",
+      "options": [
+        {
+          "text": "Cláudio",
+          "correct": true
+        },
+        {
+          "text": "Nero",
+          "correct": false
+        },
+        {
+          "text": "Tibério",
+          "correct": false
+        },
+        {
+          "text": "Calígula",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Áquila e Priscila haviam chegado 'da Itália, por Cláudio ter mandado que todos os judeus saíssem de Roma' (At 18:2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 18,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "contexto-historico-0043",
+      "type": "multiple_choice",
+      "text": "Quem eram os 'herodianos' que se uniram aos fariseus para armar contra Jesus?",
+      "options": [
+        {
+          "text": "Partidários da dinastia de Herodes, aliados de Roma",
+          "correct": true
+        },
+        {
+          "text": "Uma seita do deserto",
+          "correct": false
+        },
+        {
+          "text": "Sacerdotes do templo",
+          "correct": false
+        },
+        {
+          "text": "Soldados de Pilatos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Fariseus e herodianos, normalmente rivais, uniram-se para 'matá-lo' (Mc 3:6) e na pergunta sobre o tributo (Mc 12:13).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 3,
+        "verse_start": 6,
+        "verse_end": null
+      },
+      "difficulty": "hard"
     }
   ]
 }

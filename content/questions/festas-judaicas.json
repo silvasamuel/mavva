@@ -514,8 +514,7 @@
         "verse_start": 24,
         "verse_end": 25
       },
-      "difficulty": "hard",
-      "is_active": false
+      "difficulty": "hard"
     },
     {
       "external_id": "festas-judaicas-0017",
@@ -548,8 +547,7 @@
         "verse_start": 16,
         "verse_end": null
       },
-      "difficulty": "expert",
-      "is_active": false
+      "difficulty": "expert"
     },
     {
       "external_id": "festas-judaicas-0018",
@@ -582,7 +580,8 @@
         "verse_start": 22,
         "verse_end": 23
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "festas-judaicas-0019",
@@ -635,7 +634,7 @@
         "verse_start": 11,
         "verse_end": 14
       },
-      "difficulty": "medium"
+      "difficulty": "easy"
     },
     {
       "external_id": "festas-judaicas-0021",
@@ -821,7 +820,8 @@
         "verse_start": 30,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "festas-judaicas-0027",
@@ -841,7 +841,8 @@
         "verse_start": 17,
         "verse_end": 19
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "festas-judaicas-0028",
@@ -907,7 +908,8 @@
         "verse_start": 15,
         "verse_end": 16
       },
-      "difficulty": "hard"
+      "difficulty": "hard",
+      "is_active": false
     },
     {
       "external_id": "festas-judaicas-0030",
@@ -995,6 +997,323 @@
         "verse_end": 20
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "festas-judaicas-0033",
+      "type": "multiple_choice",
+      "text": "Em que dia começava a Festa dos Tabernáculos, segundo Levítico 23?",
+      "options": [
+        {
+          "text": "No dia quinze do sétimo mês",
+          "correct": true
+        },
+        {
+          "text": "No primeiro dia do primeiro mês",
+          "correct": false
+        },
+        {
+          "text": "No dia dez do sétimo mês",
+          "correct": false
+        },
+        {
+          "text": "No dia catorze do primeiro mês",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Aos quinze dias deste mês sétimo será a festa dos tabernáculos ao SENHOR, por sete dias' (Lv 23:34).",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 23,
+        "verse_start": 33,
+        "verse_end": 36
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "festas-judaicas-0034",
+      "type": "multiple_choice",
+      "text": "Em que dia do mês o cordeiro pascal devia ser separado, antes de ser morto no dia catorze?",
+      "options": [
+        {
+          "text": "No dia dez",
+          "correct": true
+        },
+        {
+          "text": "No dia primeiro",
+          "correct": false
+        },
+        {
+          "text": "No dia sete",
+          "correct": false
+        },
+        {
+          "text": "No dia doze",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Aos dez deste mês tome cada um para si um cordeiro... e o guardareis até ao décimo quarto dia' (Êx 12:3-6).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 12,
+        "verse_start": 3,
+        "verse_end": 6
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "festas-judaicas-0035",
+      "type": "multiple_choice",
+      "text": "Segundo Deuteronômio 16, o que ninguém deveria fazer ao comparecer às três festas anuais?",
+      "options": [
+        {
+          "text": "Aparecer de mãos vazias — cada um trazia oferta conforme a bênção recebida",
+          "correct": true
+        },
+        {
+          "text": "Levar a família",
+          "correct": false
+        },
+        {
+          "text": "Falar em hebraico",
+          "correct": false
+        },
+        {
+          "text": "Entrar no templo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Não aparecerá vazio perante o SENHOR; cada qual conforme o dom da sua mão' (Dt 16:16-17).",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 16,
+        "verse_start": 16,
+        "verse_end": 17
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "festas-judaicas-0036",
+      "type": "multiple_choice",
+      "text": "O que Ester pediu aos judeus de Susã antes de comparecer ao rei — prática depois ligada ao Purim?",
+      "options": [
+        {
+          "text": "Jejuar três dias por ela",
+          "correct": true
+        },
+        {
+          "text": "Vestir púrpura",
+          "correct": false
+        },
+        {
+          "text": "Sair da cidade",
+          "correct": false
+        },
+        {
+          "text": "Oferecer sacrifícios",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Jejuai por mim, e não comais nem bebais por três dias... e assim irei ter com o rei' (Et 4:16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "ester",
+        "chapter": 4,
+        "verse_start": 15,
+        "verse_end": 17
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "festas-judaicas-0037",
+      "type": "multiple_choice",
+      "text": "Para qual festa Paulo se apressava a chegar a Jerusalém, segundo Atos 20:16?",
+      "options": [
+        {
+          "text": "Pentecostes",
+          "correct": true
+        },
+        {
+          "text": "Páscoa",
+          "correct": false
+        },
+        {
+          "text": "Tabernáculos",
+          "correct": false
+        },
+        {
+          "text": "Purim",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Apressava-se para estar em Jerusalém no dia de Pentecostes, se lhe fosse possível' (At 20:16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 20,
+        "verse_start": 16,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "festas-judaicas-0038",
+      "type": "multiple_choice",
+      "text": "Que sacrifício acompanhava o Dia da Expiação além do bode emissário, oferecido pelo próprio sacerdote?",
+      "options": [
+        {
+          "text": "Um novilho pela expiação do sacerdote e de sua casa",
+          "correct": true
+        },
+        {
+          "text": "Sete cordeiros pelos anciãos",
+          "correct": false
+        },
+        {
+          "text": "Uma rola pelos pobres",
+          "correct": false
+        },
+        {
+          "text": "Um carneiro pelo rei",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Arão fará chegar o novilho da expiação, que será para ele, e fará expiação por si e pela sua casa' (Lv 16:6,11).",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 16,
+        "verse_start": 6,
+        "verse_end": 11
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "festas-judaicas-0039",
+      "type": "open_answer",
+      "text": "Que planta era mergulhada no sangue do cordeiro para marcar os umbrais na primeira Páscoa?",
+      "options": null,
+      "accepted_answers": [
+        "Hissopo",
+        "Hissope",
+        "Molho de hissopo"
+      ],
+      "explanation": "'Tomai um molho de hissopo, e molhai-o no sangue... e marcai a verga da porta e ambas as ombreiras' (Êx 12:22).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 12,
+        "verse_start": 21,
+        "verse_end": 23
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "festas-judaicas-0040",
+      "type": "multiple_choice",
+      "text": "Quantos dias durava a Festa dos Pães Asmos, logo após a Páscoa?",
+      "options": [
+        {
+          "text": "Sete dias",
+          "correct": true
+        },
+        {
+          "text": "Um dia",
+          "correct": false
+        },
+        {
+          "text": "Três dias",
+          "correct": false
+        },
+        {
+          "text": "Cinquenta dias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Aos quinze dias deste mês é a festa dos pães asmos do SENHOR; sete dias comereis pães asmos' (Lv 23:6).",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 23,
+        "verse_start": 6,
+        "verse_end": 8
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "festas-judaicas-0041",
+      "type": "multiple_choice",
+      "text": "Que oferta singular marcava Pentecostes, a Festa das Semanas, segundo Levítico 23?",
+      "options": [
+        {
+          "text": "Dois pães levedados, como primícias",
+          "correct": true
+        },
+        {
+          "text": "Um cordeiro sem mancha",
+          "correct": false
+        },
+        {
+          "text": "Um molho de cevada",
+          "correct": false
+        },
+        {
+          "text": "Sete novilhos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Trareis dois pães... serão levedados; são as primícias ao SENHOR' (Lv 23:17) — a única oferta com fermento sobre o altar.",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 23,
+        "verse_start": 15,
+        "verse_end": 17
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "festas-judaicas-0042",
+      "type": "multiple_choice",
+      "text": "Que celebração mensal Israel marcava com trombetas e sacrifícios, citada com o sábado?",
+      "options": [
+        {
+          "text": "A lua nova",
+          "correct": true
+        },
+        {
+          "text": "O dízimo",
+          "correct": false
+        },
+        {
+          "text": "A vigília",
+          "correct": false
+        },
+        {
+          "text": "O sorteio das tribos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Nos princípios dos vossos meses oferecereis holocausto ao SENHOR' (Nm 28:11); 'lua nova e sábado' andam juntos (Is 1:13; Cl 2:16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 28,
+        "verse_start": 11,
+        "verse_end": 15
+      },
+      "difficulty": "hard"
     }
   ]
 }
