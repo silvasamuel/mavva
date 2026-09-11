@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
 import { ApiError } from '@/lib/api'
+import { AppIcons, Glyph } from '@/lib/icons'
 
 export function AdminLogin({
   onLogin,
@@ -33,16 +34,16 @@ export function AdminLogin({
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-6 bg-ink px-4">
       <div className="flex items-center gap-2 text-white">
-        <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-leaf-500 text-xl">
-          🔒
+        <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-leaf-500 text-white">
+          <Glyph as={AppIcons.lock} className="h-5 w-5" />
         </span>
         <span className="text-2xl font-extrabold tracking-tight">mavva · admin</span>
       </div>
 
       {forbidden ? (
         <div className="w-full max-w-sm space-y-4 rounded-3xl bg-white p-8 text-center shadow-card">
-          <span className="text-4xl" aria-hidden>
-            🚫
+          <span className="mx-auto flex justify-center text-red-600">
+            <Glyph as={AppIcons.prohibit} className="h-12 w-12" />
           </span>
           <p className="font-extrabold text-ink">Acesso restrito</p>
           <p className="text-sm font-semibold text-sand-500">

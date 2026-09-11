@@ -521,7 +521,7 @@
     {
       "external_id": "cronologia-biblica-0017",
       "type": "open_answer",
-      "text": "Em quantos dias Deus criou os céus e a terra, descansando no sétimo?",
+      "text": "Em quantos dias Deus criou os céus e a terra?",
       "options": null,
       "accepted_answers": [
         "6",
@@ -1008,6 +1008,357 @@
         "verse_end": null
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "cronologia-biblica-0033",
+      "type": "multiple_choice",
+      "text": "Quantos anos viveu Adão, segundo Gênesis 5?",
+      "options": [
+        {
+          "text": "Novecentos e trinta anos",
+          "correct": true
+        },
+        {
+          "text": "Oitocentos anos",
+          "correct": false
+        },
+        {
+          "text": "Novecentos e sessenta e nove",
+          "correct": false
+        },
+        {
+          "text": "Mil anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Foram todos os dias que Adão viveu novecentos e trinta anos, e morreu' (Gn 5:5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 5,
+        "verse_start": 5,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cronologia-biblica-0034",
+      "type": "multiple_choice",
+      "text": "Quanto tempo Davi reinou em Hebrom antes de reinar sobre todo o Israel?",
+      "options": [
+        {
+          "text": "Sete anos e seis meses",
+          "correct": true
+        },
+        {
+          "text": "Três anos",
+          "correct": false
+        },
+        {
+          "text": "Doze anos",
+          "correct": false
+        },
+        {
+          "text": "Vinte anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Em Hebrom reinou sobre Judá sete anos e seis meses, e em Jerusalém reinou trinta e três anos' (2Sm 5:5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 5,
+        "verse_start": 4,
+        "verse_end": 5
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "cronologia-biblica-0035",
+      "type": "multiple_choice",
+      "text": "Segundo Gálatas 1, quantos anos depois da conversão Paulo subiu a Jerusalém para ver Pedro?",
+      "options": [
+        {
+          "text": "Três anos",
+          "correct": true
+        },
+        {
+          "text": "Quarenta dias",
+          "correct": false
+        },
+        {
+          "text": "Um ano",
+          "correct": false
+        },
+        {
+          "text": "Catorze anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Depois, passados três anos, fui a Jerusalém para ver a Pedro' (Gl 1:18); catorze anos depois subiu de novo (Gl 2:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "galatas",
+        "chapter": 1,
+        "verse_start": 18,
+        "verse_end": null
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "cronologia-biblica-0036",
+      "type": "multiple_choice",
+      "text": "Há quantos anos o paralítico do tanque de Betesda estava enfermo?",
+      "options": [
+        {
+          "text": "Trinta e oito anos",
+          "correct": true
+        },
+        {
+          "text": "Doze anos",
+          "correct": false
+        },
+        {
+          "text": "Dezoito anos",
+          "correct": false
+        },
+        {
+          "text": "Quarenta anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Estava ali um homem que, havia trinta e oito anos, se achava enfermo' (Jo 5:5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 5,
+        "verse_start": 5,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cronologia-biblica-0037",
+      "type": "multiple_choice",
+      "text": "Quantos anos tinha Ana, a profetisa viúva, quando viu o menino Jesus no templo?",
+      "options": [
+        {
+          "text": "Cerca de oitenta e quatro",
+          "correct": true
+        },
+        {
+          "text": "Sessenta",
+          "correct": false
+        },
+        {
+          "text": "Setenta",
+          "correct": false
+        },
+        {
+          "text": "Cem",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Era viúva, de quase oitenta e quatro anos, e não se afastava do templo' (Lc 2:37).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 2,
+        "verse_start": 36,
+        "verse_end": 37
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cronologia-biblica-0038",
+      "type": "open_answer",
+      "text": "Quantos anos tinha Sara quando Isaque nasceu?",
+      "options": null,
+      "accepted_answers": [
+        "90",
+        "noventa",
+        "90 anos",
+        "noventa anos"
+      ],
+      "explanation": "Abraão riu: 'dará à luz Sara da idade de noventa anos?' (Gn 17:17) — e Deus cumpriu a promessa (Gn 21:2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 17,
+        "verse_start": 17,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cronologia-biblica-0039",
+      "type": "multiple_choice",
+      "text": "Com que idade Jesus ficou no templo entre os doutores, enquanto os pais o procuravam?",
+      "options": [
+        {
+          "text": "Doze anos",
+          "correct": true
+        },
+        {
+          "text": "Oito anos",
+          "correct": false
+        },
+        {
+          "text": "Trinta anos",
+          "correct": false
+        },
+        {
+          "text": "Sete anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Tendo ele já doze anos, subiram a Jerusalém, segundo o costume' e o acharam no templo (Lc 2:42-46).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 2,
+        "verse_start": 41,
+        "verse_end": 47
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cronologia-biblica-0040",
+      "type": "multiple_choice",
+      "text": "Quantos anos José tinha quando foi vendido pelos irmãos?",
+      "options": [
+        {
+          "text": "Dezessete anos",
+          "correct": true
+        },
+        {
+          "text": "Doze anos",
+          "correct": false
+        },
+        {
+          "text": "Vinte anos",
+          "correct": false
+        },
+        {
+          "text": "Trinta anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'José, sendo de dezessete anos, apascentava as ovelhas com seus irmãos' (Gn 37:2) — pouco antes de ser vendido.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 37,
+        "verse_start": 2,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cronologia-biblica-0041",
+      "type": "multiple_choice",
+      "text": "Quantos anos José tinha quando se apresentou diante de Faraó?",
+      "options": [
+        {
+          "text": "Trinta anos",
+          "correct": true
+        },
+        {
+          "text": "Dezessete anos",
+          "correct": false
+        },
+        {
+          "text": "Quarenta anos",
+          "correct": false
+        },
+        {
+          "text": "Vinte e cinco anos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'José era da idade de trinta anos quando se apresentou a Faraó' (Gn 41:46) — treze anos entre a venda e a exaltação.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 41,
+        "verse_start": 46,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cronologia-biblica-0042",
+      "type": "multiple_choice",
+      "text": "Quantos anos Enoque viveu antes de Deus o tomar?",
+      "options": [
+        {
+          "text": "Trezentos e sessenta e cinco",
+          "correct": true
+        },
+        {
+          "text": "Novecentos e sessenta e nove",
+          "correct": false
+        },
+        {
+          "text": "Cento e vinte",
+          "correct": false
+        },
+        {
+          "text": "Setecentos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Foram todos os dias de Enoque trezentos e sessenta e cinco anos. E andou Enoque com Deus; e não apareceu mais' (Gn 5:23-24).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 5,
+        "verse_start": 23,
+        "verse_end": 24
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "cronologia-biblica-0043",
+      "type": "multiple_choice",
+      "text": "Quantos anos Noé viveu ao todo?",
+      "options": [
+        {
+          "text": "Novecentos e cinquenta",
+          "correct": true
+        },
+        {
+          "text": "Seiscentos",
+          "correct": false
+        },
+        {
+          "text": "Novecentos e trinta",
+          "correct": false
+        },
+        {
+          "text": "Oitocentos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Foram todos os dias de Noé novecentos e cinquenta anos, e morreu' (Gn 9:29) — 350 anos depois do dilúvio.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 9,
+        "verse_start": 28,
+        "verse_end": 29
+      },
+      "difficulty": "hard"
     }
   ]
 }

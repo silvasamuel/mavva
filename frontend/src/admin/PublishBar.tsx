@@ -3,6 +3,7 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { api, ApiError } from '@/lib/api'
 import { Button } from '@/components/ui/Button'
 import type { ContentPublish, ContentStatus } from './types'
+import { AppIcons, Glyph } from '@/lib/icons'
 
 /**
  * Admin edits write to the DB immediately; this bar pushes them back to
@@ -57,7 +58,8 @@ export function PublishBar() {
 
       {result && result.published.length > 0 && (
         <p className="rounded-2xl bg-leaf-50 px-4 py-3 text-sm font-bold text-leaf-800 ring-1 ring-leaf-200">
-          ✅ {result.published.length}{' '}
+          <Glyph as={AppIcons.check} className="mr-1 inline h-4 w-4 align-text-bottom" />
+          {result.published.length}{' '}
           {result.published.length === 1 ? 'arquivo' : 'arquivos'}{' '}
           {result.pr_url ? 'no pull request' : 'publicados'}.{' '}
           {result.pr_url ? (

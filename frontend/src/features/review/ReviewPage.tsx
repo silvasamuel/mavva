@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { Spinner } from '@/components/ui/Spinner'
+import { AppIcons, Glyph } from '@/lib/icons'
 import { useState } from 'react'
 
 export function ReviewPage() {
@@ -62,7 +63,7 @@ export function ReviewPage() {
       ) : (
         <Card>
           <EmptyState
-            icon="🌤️"
+            icon={<Glyph as={AppIcons.sun} className="h-10 w-10" />}
             title="Tudo revisado por hoje!"
             description={
               data.total_items === 0

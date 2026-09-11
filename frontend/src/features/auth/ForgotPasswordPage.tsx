@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
 import { api } from '@/lib/api'
+import { AppIcons, Glyph } from '@/lib/icons'
 import { AuthLayout } from './AuthLayout'
 import { useEmailCooldown } from './useEmailCooldown'
 
@@ -25,11 +26,11 @@ export function ForgotPasswordPage() {
   }
 
   return (
-    <AuthLayout title="Recuperar senha">
+    <AuthLayout title="Recuperar senha" robots="noindex, nofollow">
       {sent ? (
         <div className="space-y-4 text-center">
-          <span className="text-4xl" aria-hidden>
-            📬
+          <span className="mx-auto flex justify-center text-leaf-600">
+            <Glyph as={AppIcons.mail} className="h-12 w-12" />
           </span>
           <p className="text-sm font-semibold text-sand-600">
             Se existir uma conta com <strong>{email}</strong>, você receberá um link para criar uma

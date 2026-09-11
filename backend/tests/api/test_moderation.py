@@ -3,8 +3,9 @@ from uuid import UUID
 from fastapi.testclient import TestClient
 from sqlalchemy.orm import Session
 
-from app.models import Question, User
+from app.models import Question, QuizSessionQuestion, User
 from app.models.enums import UserRole
+from tests.api.test_quiz_flow import _correct_option_id
 from tests.factories import make_category, make_mc_question
 from tests.helpers import register_and_login
 
@@ -54,6 +55,52 @@ class TestQuestionFlags:
             json={"question_id": str(question.id), "reason": "other"},
         )
         assert again.status_code == 400
+
+    def test_flagging_a_question_does_not_break_the_rest_of_the_quiz(
+        self, auth_client: TestClient, db: Session
+    ):
+        category = make_category(db)
+        for _ in range(3):
+            make_mc_question(db, category)
+        quiz = auth_client.post("/api/v1/quizzes", json={"question_count": 3}).json()
+        session_id = quiz["id"]
+        first, second, third = quiz["questions"]
+
+        answered = auth_client.post(
+            f"/api/v1/quizzes/{session_id}/answers",
+            json={
+                "question_id": first["id"],
+                "selected_option_id": _correct_option_id(db, first),
+            },
+        )
+        assert answered.status_code == 200, answered.text
+
+        flagged = auth_client.post(
+            "/api/v1/flags",
+            json={
+                "question_id": first["id"],
+                "reason": "wrong_text",
+                "comment": "Enunciado ambíguo.",
+                "session_id": session_id,
+            },
+        )
+        assert flagged.status_code == 201, flagged.text
+
+        still_there = db.query(QuizSessionQuestion).filter_by(session_id=session_id).count()
+        assert still_there == 3
+
+        for question in (second, third):
+            response = auth_client.post(
+                f"/api/v1/quizzes/{session_id}/answers",
+                json={
+                    "question_id": question["id"],
+                    "selected_option_id": _correct_option_id(db, question),
+                },
+            )
+            assert response.status_code == 200, response.text
+
+        complete = auth_client.post(f"/api/v1/quizzes/{session_id}/complete")
+        assert complete.status_code == 200, complete.text
 
     def test_cannot_flag_question_from_someone_elses_session(
         self, auth_client: TestClient, client: TestClient, db: Session

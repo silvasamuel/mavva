@@ -40,6 +40,7 @@ export function QuestionEditor({
       queryClient.invalidateQueries({ queryKey: ['admin', 'questions'] })
       queryClient.invalidateQueries({ queryKey: ['admin', 'question', questionId] })
       queryClient.invalidateQueries({ queryKey: ['admin', 'content'] })
+      queryClient.invalidateQueries({ queryKey: ['admin', 'dashboard'] })
       onSaved?.()
       onClose()
     },

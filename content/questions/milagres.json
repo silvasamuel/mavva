@@ -789,7 +789,8 @@
         "verse_start": 51,
         "verse_end": null
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "milagres-0027",
@@ -855,7 +856,8 @@
         "verse_start": 25,
         "verse_end": 26
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "milagres-0029",
@@ -943,6 +945,354 @@
         "verse_end": 22
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0032",
+      "type": "multiple_choice",
+      "text": "Que árvore Jesus amaldiçoou por ter folhas e nenhum fruto, e ela secou até a raiz?",
+      "options": [
+        {
+          "text": "Uma figueira",
+          "correct": true
+        },
+        {
+          "text": "Uma oliveira",
+          "correct": false
+        },
+        {
+          "text": "Uma videira",
+          "correct": false
+        },
+        {
+          "text": "Um sicômoro",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Nunca mais coma alguém fruto de ti'; no dia seguinte 'viram que a figueira se havia secado desde as raízes' (Mc 11:14,20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 11,
+        "verse_start": 12,
+        "verse_end": 21
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0033",
+      "type": "multiple_choice",
+      "text": "Que milagre Jesus fez em Caná pela segunda vez, a pedido de um oficial do rei?",
+      "options": [
+        {
+          "text": "Curou à distância o filho do oficial, que estava em Cafarnaum",
+          "correct": true
+        },
+        {
+          "text": "Transformou água em vinho de novo",
+          "correct": false
+        },
+        {
+          "text": "Multiplicou pães",
+          "correct": false
+        },
+        {
+          "text": "Acalmou uma tempestade",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Vai, o teu filho vive'; o oficial soube que a febre o deixara na mesma hora (Jo 4:46-53) — o segundo sinal em Caná.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 4,
+        "verse_start": 46,
+        "verse_end": 54
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "milagres-0034",
+      "type": "multiple_choice",
+      "text": "Quantas pessoas Jesus alimentou com sete pães e alguns peixinhos, na segunda multiplicação?",
+      "options": [
+        {
+          "text": "Quatro mil",
+          "correct": true
+        },
+        {
+          "text": "Cinco mil",
+          "correct": false
+        },
+        {
+          "text": "Três mil",
+          "correct": false
+        },
+        {
+          "text": "Sete mil",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Os que comeram eram quatro mil homens, além de mulheres e crianças', e sobraram sete cestos (Mt 15:34-38).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 15,
+        "verse_start": 32,
+        "verse_end": 38
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "milagres-0035",
+      "type": "multiple_choice",
+      "text": "Que sinais Deus operou pela sombra de Pedro e pelos lenços de Paulo, segundo Atos?",
+      "options": [
+        {
+          "text": "Enfermos eram curados",
+          "correct": true
+        },
+        {
+          "text": "Mortos ressuscitavam",
+          "correct": false
+        },
+        {
+          "text": "Prisões se abriam",
+          "correct": false
+        },
+        {
+          "text": "Chuvas cessavam",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Traziam os doentes 'para que ao menos a sombra de Pedro cobrisse alguns' (At 5:15); lenços de Paulo curavam (At 19:12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 5,
+        "verse_start": 15,
+        "verse_end": 16
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "milagres-0036",
+      "type": "multiple_choice",
+      "text": "Que milagre acompanhou a batalha de Josué contra os amorreus, além de o sol se deter?",
+      "options": [
+        {
+          "text": "Grandes pedras de saraiva caíram do céu sobre os inimigos",
+          "correct": true
+        },
+        {
+          "text": "Um rio se abriu",
+          "correct": false
+        },
+        {
+          "text": "Os muros caíram",
+          "correct": false
+        },
+        {
+          "text": "Os cavalos empacaram",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'O SENHOR lançou do céu grandes pedras... mais morreram da saraiva do que os filhos de Israel mataram à espada' (Js 10:11).",
+      "divergence_note": null,
+      "reference": {
+        "book": "josue",
+        "chapter": 10,
+        "verse_start": 11,
+        "verse_end": 14
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "milagres-0037",
+      "type": "open_answer",
+      "text": "Qual profeta fez descer fogo do céu para consumir os soldados enviados pelo rei Acazias?",
+      "options": null,
+      "accepted_answers": [
+        "Elias"
+      ],
+      "explanation": "'Se eu sou homem de Deus, desça fogo do céu e te consuma a ti e aos teus cinquenta' — e assim foi, duas vezes (2Rs 1:10-12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 1,
+        "verse_start": 9,
+        "verse_end": 12
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "milagres-0038",
+      "type": "multiple_choice",
+      "text": "Como Moisés fez sair água da rocha em Refidim?",
+      "options": [
+        {
+          "text": "Feriu a rocha com a vara",
+          "correct": true
+        },
+        {
+          "text": "Orou sete vezes",
+          "correct": false
+        },
+        {
+          "text": "Lançou sal",
+          "correct": false
+        },
+        {
+          "text": "Cavou um poço",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Ferirás a rocha, e dela sairão águas, para que o povo beba' (Êx 17:6) — em Horebe, diante dos anciãos.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 17,
+        "verse_start": 5,
+        "verse_end": 6
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "milagres-0039",
+      "type": "multiple_choice",
+      "text": "Que animal Deus fez falar para repreender o profeta Balaão?",
+      "options": [
+        {
+          "text": "A jumenta",
+          "correct": true
+        },
+        {
+          "text": "Um corvo",
+          "correct": false
+        },
+        {
+          "text": "Um leão",
+          "correct": false
+        },
+        {
+          "text": "Uma serpente",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Abriu o SENHOR a boca da jumenta, e ela disse a Balaão: Que te fiz eu, que me espancaste?' (Nm 22:28).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 22,
+        "verse_start": 28,
+        "verse_end": 30
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0040",
+      "type": "multiple_choice",
+      "text": "Qual foi a segunda praga sobre o Egito?",
+      "options": [
+        {
+          "text": "Rãs",
+          "correct": true
+        },
+        {
+          "text": "Piolhos",
+          "correct": false
+        },
+        {
+          "text": "Gafanhotos",
+          "correct": false
+        },
+        {
+          "text": "Trevas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Farei que rãs cubram a tua terra... subirão e entrarão na tua casa' (Êx 8:2-6).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 8,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0041",
+      "type": "multiple_choice",
+      "text": "O que aconteceu com a vara de Arão diante de Faraó?",
+      "options": [
+        {
+          "text": "Tornou-se serpente e engoliu as varas dos magos",
+          "correct": true
+        },
+        {
+          "text": "Floresceu",
+          "correct": false
+        },
+        {
+          "text": "Queimou",
+          "correct": false
+        },
+        {
+          "text": "Partiu-se em duas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Arão lançou a sua vara diante de Faraó, e tornou-se em serpente... mas a vara de Arão tragou as varas deles' (Êx 7:10-12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 7,
+        "verse_start": 8,
+        "verse_end": 12
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0042",
+      "type": "multiple_choice",
+      "text": "Que sinal confirmou o sacerdócio de Arão quando as varas das tribos foram postas no tabernáculo?",
+      "options": [
+        {
+          "text": "A vara de Arão floresceu e deu amêndoas",
+          "correct": true
+        },
+        {
+          "text": "Caiu fogo do céu",
+          "correct": false
+        },
+        {
+          "text": "A vara virou ouro",
+          "correct": false
+        },
+        {
+          "text": "As outras varas queimaram",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'A vara de Arão... brotara, e produzira gomos, e dera flores, e amadurecera amêndoas' (Nm 17:8) — guardada depois na arca.",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 17,
+        "verse_start": 1,
+        "verse_end": 10
+      },
+      "difficulty": "hard"
     }
   ]
 }

@@ -225,7 +225,7 @@
       "text": "Em 1 Coríntios 15, o que Paulo aponta como consequência se Cristo não tivesse ressuscitado?",
       "options": [
         {
-          "text": "\"É vã a nossa pregação, e também é vã a vossa fé\"",
+          "text": "É vã a nossa pregação, e também é vã a vossa fé",
           "correct": true
         },
         {
@@ -991,6 +991,376 @@
         "verse_end": 44
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "doutrinas-0033",
+      "type": "multiple_choice",
+      "text": "Segundo Hebreus 9:27, o que está ordenado aos homens depois de morrerem uma só vez?",
+      "options": [
+        {
+          "text": "O juízo",
+          "correct": true
+        },
+        {
+          "text": "Uma nova vida na terra",
+          "correct": false
+        },
+        {
+          "text": "O sono eterno",
+          "correct": false
+        },
+        {
+          "text": "Um segundo teste",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Aos homens está ordenado morrerem uma vez, vindo depois disso o juízo' (Hb 9:27).",
+      "divergence_note": null,
+      "reference": {
+        "book": "hebreus",
+        "chapter": 9,
+        "verse_start": 27,
+        "verse_end": 28
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "doutrinas-0034",
+      "type": "multiple_choice",
+      "text": "Segundo 1 Timóteo 2:5, quem é o único mediador entre Deus e os homens?",
+      "options": [
+        {
+          "text": "Jesus Cristo, homem",
+          "correct": true
+        },
+        {
+          "text": "Os anjos",
+          "correct": false
+        },
+        {
+          "text": "Os sacerdotes",
+          "correct": false
+        },
+        {
+          "text": "Moisés",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Há um só Deus e um só mediador entre Deus e os homens, Jesus Cristo, homem' (1Tm 2:5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1timoteo",
+        "chapter": 2,
+        "verse_start": 5,
+        "verse_end": 6
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "doutrinas-0035",
+      "type": "multiple_choice",
+      "text": "Segundo Tiago 1, de onde vem a tentação para o mal?",
+      "options": [
+        {
+          "text": "Da própria concupiscência de cada um — Deus a ninguém tenta",
+          "correct": true
+        },
+        {
+          "text": "De Deus, para provar",
+          "correct": false
+        },
+        {
+          "text": "Só do diabo",
+          "correct": false
+        },
+        {
+          "text": "Do acaso",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Deus não pode ser tentado pelo mal e a ninguém tenta. Cada um é tentado, quando atraído pela sua própria concupiscência' (Tg 1:13-14).",
+      "divergence_note": null,
+      "reference": {
+        "book": "tiago",
+        "chapter": 1,
+        "verse_start": 13,
+        "verse_end": 15
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "doutrinas-0036",
+      "type": "multiple_choice",
+      "text": "Que atributo de Deus Malaquias 3:6 afirma: 'Eu, o SENHOR, não mudo'?",
+      "options": [
+        {
+          "text": "Imutabilidade",
+          "correct": true
+        },
+        {
+          "text": "Onipresença",
+          "correct": false
+        },
+        {
+          "text": "Onisciência",
+          "correct": false
+        },
+        {
+          "text": "Eternidade",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Porque Deus não muda, suas promessas permanecem: 'por isso vós, filhos de Jacó, não sois consumidos' (Ml 3:6; cf. Tg 1:17).",
+      "divergence_note": null,
+      "reference": {
+        "book": "malaquias",
+        "chapter": 3,
+        "verse_start": 6,
+        "verse_end": null
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "doutrinas-0037",
+      "type": "multiple_choice",
+      "text": "Segundo Hebreus 1:1-2, por meio de quem Deus falou 'nestes últimos dias'?",
+      "options": [
+        {
+          "text": "Pelo Filho",
+          "correct": true
+        },
+        {
+          "text": "Pelos profetas apenas",
+          "correct": false
+        },
+        {
+          "text": "Pelos anjos",
+          "correct": false
+        },
+        {
+          "text": "Pela lei",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Havendo Deus antigamente falado pelos profetas... a nós falou-nos nestes últimos dias pelo Filho' (Hb 1:1-2) — a revelação definitiva.",
+      "divergence_note": null,
+      "reference": {
+        "book": "hebreus",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "doutrinas-0038",
+      "type": "open_answer",
+      "text": "Segundo 2 Coríntios 5:21, o que Deus fez de Cristo por nós, ele que não conheceu pecado?",
+      "options": null,
+      "accepted_answers": [
+        "Pecado",
+        "Fez pecado",
+        "Ele o fez pecado"
+      ],
+      "explanation": "'Aquele que não conheceu pecado, o fez pecado por nós, para que nele fôssemos feitos justiça de Deus' (2Co 5:21) — a grande troca.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2corintios",
+        "chapter": 5,
+        "verse_start": 21,
+        "verse_end": null
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "doutrinas-0039",
+      "type": "multiple_choice",
+      "text": "Segundo João 3:16, o que Deus deu por amar o mundo?",
+      "options": [
+        {
+          "text": "O seu Filho unigênito",
+          "correct": true
+        },
+        {
+          "text": "A Lei",
+          "correct": false
+        },
+        {
+          "text": "Os profetas",
+          "correct": false
+        },
+        {
+          "text": "Os anjos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça' (Jo 3:16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 3,
+        "verse_start": 16,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "doutrinas-0040",
+      "type": "multiple_choice",
+      "text": "Segundo 1 João 1:9, o que Deus faz se confessarmos os nossos pecados?",
+      "options": [
+        {
+          "text": "Ele é fiel e justo para nos perdoar e purificar",
+          "correct": true
+        },
+        {
+          "text": "Exige um sacrifício",
+          "correct": false
+        },
+        {
+          "text": "Adia o perdão",
+          "correct": false
+        },
+        {
+          "text": "Nos afasta por um tempo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Se confessarmos os nossos pecados, ele é fiel e justo para nos perdoar os pecados e nos purificar de toda injustiça' (1Jo 1:9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1joao",
+        "chapter": 1,
+        "verse_start": 8,
+        "verse_end": 9
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "doutrinas-0041",
+      "type": "multiple_choice",
+      "text": "Como se chama a doutrina de um só Deus em três pessoas — Pai, Filho e Espírito Santo?",
+      "options": [
+        {
+          "text": "Trindade",
+          "correct": true
+        },
+        {
+          "text": "Encarnação",
+          "correct": false
+        },
+        {
+          "text": "Providência",
+          "correct": false
+        },
+        {
+          "text": "Eleição",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O termo não está na Bíblia, mas resume o que ela ensina: um só Deus (Dt 6:4) revelado como Pai, Filho e Espírito (Mt 28:19; 2Co 13:13).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2corintios",
+        "chapter": 13,
+        "verse_start": 13,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "doutrinas-0042",
+      "type": "multiple_choice",
+      "text": "Segundo Efésios 2:10, para que fomos criados em Cristo Jesus?",
+      "options": [
+        {
+          "text": "Para as boas obras",
+          "correct": true
+        },
+        {
+          "text": "Para guardar a lei",
+          "correct": false
+        },
+        {
+          "text": "Para julgar os anjos",
+          "correct": false
+        },
+        {
+          "text": "Para governar nações",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Salvos pela graça (Ef 2:8-9) e 'criados em Cristo Jesus para as boas obras, as quais Deus preparou' (Ef 2:10) — obras como fruto, não raiz.",
+      "divergence_note": null,
+      "reference": {
+        "book": "efesios",
+        "chapter": 2,
+        "verse_start": 8,
+        "verse_end": 10
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "doutrinas-0043",
+      "type": "multiple_choice",
+      "text": "Como Hebreus 4:12 descreve a Palavra de Deus?",
+      "options": [
+        {
+          "text": "Viva e eficaz, mais penetrante que espada de dois gumes",
+          "correct": true
+        },
+        {
+          "text": "Antiga e obscura",
+          "correct": false
+        },
+        {
+          "text": "Um livro de leis",
+          "correct": false
+        },
+        {
+          "text": "Suave e passageira",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'A palavra de Deus é viva e eficaz, e mais penetrante do que espada alguma de dois gumes' (Hb 4:12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "hebreus",
+        "chapter": 4,
+        "verse_start": 12,
+        "verse_end": 13
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "doutrinas-0044",
+      "type": "open_answer",
+      "text": "Que expressão latina descreve a criação 'do nada', sem matéria preexistente, ensinada em Hebreus 11:3?",
+      "options": null,
+      "accepted_answers": [
+        "Ex nihilo",
+        "Criação ex nihilo",
+        "Creatio ex nihilo"
+      ],
+      "explanation": "'O que se vê não foi feito do que é aparente' (Hb 11:3) — Deus criou pela palavra, não a partir de algo que já existia.",
+      "divergence_note": null,
+      "reference": {
+        "book": "hebreus",
+        "chapter": 11,
+        "verse_start": 3,
+        "verse_end": null
+      },
+      "difficulty": "expert"
     }
   ]
 }

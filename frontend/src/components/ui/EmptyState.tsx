@@ -4,14 +4,14 @@ export function EmptyState({
   description,
   action,
 }: {
-  icon: string
+  icon: React.ReactNode
   title: string
   description?: string
   action?: React.ReactNode
 }) {
   return (
     <div className="flex flex-col items-center gap-2 py-10 text-center">
-      <span className="text-4xl" aria-hidden>
+      <span className="text-leaf-600" aria-hidden>
         {icon}
       </span>
       <p className="font-extrabold text-sand-700">{title}</p>

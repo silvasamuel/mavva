@@ -15,6 +15,7 @@ import {
   validateDraft,
 } from '@/features/moderation/questionDraft'
 import { QuestionEditor } from './QuestionEditor'
+import { AppIcons, Glyph } from '@/lib/icons'
 import type {
   AdminCategory,
   AdminFlag,
@@ -43,6 +44,7 @@ export function ReviewPanel() {
 
   function refresh() {
     queryClient.invalidateQueries({ queryKey: ['admin', 'review'] })
+    queryClient.invalidateQueries({ queryKey: ['admin', 'dashboard'] })
     queryClient.invalidateQueries({ queryKey: ['admin', 'content'] })
     queryClient.invalidateQueries({ queryKey: ['admin', 'questions'] })
   }
@@ -85,7 +87,7 @@ export function ReviewPanel() {
 
       {empty && (
         <EmptyState
-          icon="✅"
+          icon={<Glyph as={AppIcons.check} className="h-10 w-10" />}
           title="Fila vazia"
           description="Nenhum report aberto nem sugestão pendente."
         />

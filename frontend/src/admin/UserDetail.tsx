@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/Button'
 import { Spinner } from '@/components/ui/Spinner'
 import { formatDate, formatDateTime, formatPercent, formatStudyTime } from '@/lib/format'
 import type { AdminUserDetail } from './types'
+import { AppIcons, Glyph } from '@/lib/icons'
 
 export function UserDetail({
   userId,
@@ -28,6 +29,7 @@ export function UserDetail({
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['admin', 'users'] })
       queryClient.invalidateQueries({ queryKey: ['admin', 'user', userId] })
+      queryClient.invalidateQueries({ queryKey: ['admin', 'dashboard'] })
       setError('')
     },
     onError: (err) =>
@@ -100,7 +102,17 @@ export function UserDetail({
             <Section title="Progresso">
               <Row label="Nível" value={String(data.level)} />
               <Row label="XP total" value={String(data.total_xp)} />
-              <Row label="Streak atual" value={`🔥 ${data.current_streak}`} />
+              <Row
+                label="Streak atual"
+                value={
+                  <span className="inline-flex items-center justify-end gap-1">
+                    {data.current_streak > 0 && (
+                      <Glyph as={AppIcons.streak} className="h-4 w-4 text-grain-600" />
+                    )}
+                    {data.current_streak}
+                  </span>
+                }
+              />
               <Row label="Maior streak" value={String(data.longest_streak)} />
               <Row label="Última atividade" value={formatDate(data.last_activity_date)} />
               <Row label="Respondidas" value={String(data.questions_answered)} />
@@ -154,7 +166,7 @@ function Section({ title, children }: { title: string; children: ReactNode }) {
   )
 }
 
-function Row({ label, value }: { label: string; value: string }) {
+function Row({ label, value }: { label: string; value: ReactNode }) {
   return (
     <div className="flex items-baseline justify-between gap-3 text-sm">
       <dt className="font-semibold text-sand-500">{label}</dt>

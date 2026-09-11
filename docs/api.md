@@ -162,6 +162,7 @@ real — o front-end separado (bundle `/admin`) é conveniência, não proteçã
 
 | Método | Rota | Descrição |
 |---|---|---|
+| GET | `/admin/dashboard` | Contagens agregadas da tela inicial (`users`, `questions`, `review`, `activity`). Só `COUNT`/`SUM`/`MAX` — não carrega linhas. |
 | GET | `/admin/users?search&limit&offset` | Lista usuários com stats, `email_verified_at` e `is_active`. |
 | GET | `/admin/users/{id}` | Detalhe do usuário (conta, progresso, duelos). |
 | PATCH | `/admin/users/{id}` | Body: `{is_active}`. Inativar revoga sessões. Não vale para a própria conta (400). |

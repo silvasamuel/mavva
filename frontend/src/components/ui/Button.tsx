@@ -19,12 +19,22 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
-  { variant = 'primary', loading = false, full = false, className = '', children, disabled, ...rest },
+  {
+    variant = 'primary',
+    loading = false,
+    full = false,
+    className = '',
+    children,
+    disabled,
+    type = 'button',
+    ...rest
+  },
   ref
 ) {
   return (
     <button
       ref={ref}
+      type={type}
       disabled={disabled || loading}
       className={`inline-flex items-center justify-center gap-2 rounded-2xl px-5 py-3 text-sm font-extrabold uppercase tracking-wide disabled:cursor-not-allowed disabled:opacity-50 ${VARIANTS[variant]} ${full ? 'w-full' : ''} ${className}`}
       {...rest}

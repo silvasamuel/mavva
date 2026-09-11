@@ -1,10 +1,11 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { AnimatePresence, motion } from 'framer-motion'
 import { api, ApiError } from '@/lib/api'
 import type {
   AnswerFeedback,
+  DashboardData,
   QuizAbandonResult,
   QuizComplete,
   QuizQuestion,
@@ -13,7 +14,10 @@ import type {
 import { Button } from '@/components/ui/Button'
 import { Spinner } from '@/components/ui/Spinner'
 import { ProgressBar } from '@/components/ui/ProgressBar'
+import { GameHud } from '@/components/GameHud'
 import { DIFFICULTY_LABELS } from '@/lib/format'
+import { playCorrect, playWrong } from '@/lib/sfx'
+import { AppIcons, CategoryGlyph, Glyph } from '@/lib/icons'
 import { ReportQuestionModal } from '@/features/moderation/ReportQuestionModal'
 
 interface AnswerPayload {
@@ -32,6 +36,10 @@ export function QuizPlayPage() {
     queryKey: ['quiz', sessionId],
     queryFn: () => api.get<QuizSession>(`/quizzes/${sessionId}`),
     staleTime: Infinity,
+  })
+  const { data: dash } = useQuery({
+    queryKey: ['dashboard'],
+    queryFn: () => api.get<DashboardData>('/dashboard'),
   })
 
   // Resume where the user left off (server knows what was answered).
@@ -54,13 +62,16 @@ export function QuizPlayPage() {
   const [extraWrong, setExtraWrong] = useState(0)
   const [extraAnswered, setExtraAnswered] = useState(0)
   const questionStartedAt = useRef(Date.now())
+  const feedbackRef = useRef<AnswerFeedback | null>(null)
+  const submittedIds = useRef(new Set<string>())
+  feedbackRef.current = feedback
 
   const question: QuizQuestion | undefined = session?.questions[currentIndex]
   const isLast = session ? currentIndex >= session.questions.length - 1 : false
   const timerSeconds = session?.timer_seconds ?? null
   // The API already serves options shuffled per session (server-side, so the
   // answer position cannot be inferred by calling it directly).
-  const displayOptions = question?.options ?? []
+  const displayOptions = useMemo(() => question?.options ?? [], [question])
   const [remaining, setRemaining] = useState<number | null>(null)
 
   const wrongTotal = session
@@ -80,18 +91,31 @@ export function QuizPlayPage() {
         ),
       }),
     onSuccess: (result) => {
+      if (result.is_correct) playCorrect()
+      else playWrong()
       setFeedback(result)
       setExtraAnswered((count) => count + 1)
       if (!result.is_correct) setExtraWrong((count) => count + 1)
     },
     onError: async (err) => {
       if (err instanceof ApiError && err.message.includes('já foi respondida')) {
+        // A refetch here calls GET /quizzes/:id, which starts the next
+        // question's server clock. Doing that on the splash (duplicate
+        // submit, or a report that keeps the player there) makes every
+        // following question arrive already timed out.
+        if (feedbackRef.current) return
         await queryClient.invalidateQueries({ queryKey: ['quiz', sessionId] })
         setIndex(null)
         setFeedback(null)
+        setTimedOut(false)
+        setSelectedOption(null)
+        setAnswerText('')
+        setRemaining(null)
+        setReportOpen(false)
         setError('')
         return
       }
+      if (question) submittedIds.current.delete(question.id)
       if (err instanceof ApiError && err.message.includes('Alternativa inválida')) {
         await queryClient.invalidateQueries({ queryKey: ['quiz', sessionId] })
         setSelectedOption(null)
@@ -166,35 +190,23 @@ export function QuizPlayPage() {
     }
   }, [timerSeconds, question, feedback, sessionId])
 
-  // Time's up: auto-submit as a miss.
-  useEffect(() => {
-    if (remaining !== 0 || !question || feedback || submitAnswer.isPending) return
-    setTimedOut(true)
-    submitAnswer.mutate({ question_id: question.id, timed_out: true })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [remaining])
-
-  if (isLoading || !session || !question) {
-    return (
-      <div className="flex min-h-screen items-center justify-center">
-        <Spinner className="h-8 w-8 text-leaf-500" />
-      </div>
-    )
-  }
-
-  function handleSubmit() {
+  const handleSubmit = useCallback(() => {
     setError('')
     if (!question || feedback || submitAnswer.isPending) return
+    if (submittedIds.current.has(question.id)) return
     if (question.type === 'multiple_choice') {
       if (!selectedOption) return
+      submittedIds.current.add(question.id)
       submitAnswer.mutate({ question_id: question.id, selected_option_id: selectedOption })
     } else {
       if (!answerText.trim()) return
+      submittedIds.current.add(question.id)
       submitAnswer.mutate({ question_id: question.id, answer_text: answerText })
     }
-  }
+  }, [question, feedback, selectedOption, answerText, submitAnswer])
 
-  function handleNext() {
+  const handleNext = useCallback(() => {
+    if (completeQuiz.isPending) return
     setFeedback(null)
     setTimedOut(false)
     setSelectedOption(null)
@@ -207,14 +219,99 @@ export function QuizPlayPage() {
     } else {
       setIndex(currentIndex + 1)
     }
+  }, [completeQuiz, isLast, currentIndex])
+
+  useEffect(() => {
+    function onKey(event: KeyboardEvent) {
+      if (exitConfirm || reportOpen) {
+        if (event.key === 'Enter') event.preventDefault()
+        return
+      }
+      if (event.metaKey || event.ctrlKey || event.altKey) return
+
+      const target = event.target
+      const typing =
+        target instanceof HTMLElement &&
+        (target.tagName === 'INPUT' ||
+          target.tagName === 'TEXTAREA' ||
+          target.isContentEditable)
+      if (typing) return
+
+      if (event.key === 'Enter') {
+        event.preventDefault()
+        if (feedback) handleNext()
+        else handleSubmit()
+        return
+      }
+
+      if (feedback || submitAnswer.isPending || question?.type !== 'multiple_choice') return
+      if (event.key.length !== 1) return
+      const index = event.key.toUpperCase().charCodeAt(0) - 65
+      if (index < 0 || index >= displayOptions.length) return
+      event.preventDefault()
+      setSelectedOption(displayOptions[index].id)
+    }
+
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [
+    exitConfirm,
+    reportOpen,
+    feedback,
+    handleNext,
+    handleSubmit,
+    submitAnswer.isPending,
+    question?.type,
+    displayOptions,
+  ])
+
+  // Time's up: auto-submit as a miss. Depend on the current question/feedback
+  // so a leftover 0s from the previous splash cannot timeout the next one.
+  useEffect(() => {
+    if (
+      remaining !== 0 ||
+      !question ||
+      feedback ||
+      reportOpen ||
+      question.answered ||
+      submitAnswer.isPending
+    ) {
+      return
+    }
+    if (submittedIds.current.has(question.id)) return
+    submittedIds.current.add(question.id)
+    setTimedOut(true)
+    submitAnswer.mutate({ question_id: question.id, timed_out: true })
+  }, [remaining, question, feedback, reportOpen, submitAnswer])
+
+  if (isLoading || !session || !question) {
+    return (
+      <div className="flex min-h-screen items-center justify-center">
+        <Spinner className="h-8 w-8 text-leaf-500" />
+      </div>
+    )
   }
 
   const answeredSoFar = session.answered_count + extraAnswered
   const timerUrgent = remaining !== null && remaining <= 5
   const questionNumber = Math.min(currentIndex + 1, session.question_count)
 
-  return (
-    <div className="mx-auto flex min-h-screen max-w-2xl flex-col px-4 py-6">
+    return (
+    <>
+    <div
+      className="relative mx-auto flex min-h-screen max-w-2xl flex-col px-4 py-4"
+      {...(reportOpen ? { inert: '' } : {})}
+    >
+      <div className="mb-3">
+        <GameHud
+          rankCode={dash?.stats.rank.code}
+          rankName={dash?.stats.rank.name}
+          level={dash?.stats.level}
+          xpInto={dash?.stats.xp_into_level}
+          xpForNext={dash?.stats.xp_for_next_level}
+          streak={dash?.stats.current_streak}
+        />
+      </div>
       {/* Top bar */}
       <div className="flex items-center gap-4">
         <button
@@ -241,7 +338,10 @@ export function QuizPlayPage() {
             aria-hidden={Boolean(feedback) || remaining === null}
             aria-label={remaining != null ? `${remaining} segundos restantes` : undefined}
           >
-            ⏱ {remaining ?? timerSeconds}s
+            <span className="inline-flex items-center gap-1">
+              <Glyph as={AppIcons.timer} className="h-3.5 w-3.5" />
+              {remaining ?? timerSeconds}s
+            </span>
           </motion.span>
         )}
         <span className="text-sm font-extrabold text-sand-500">
@@ -260,7 +360,7 @@ export function QuizPlayPage() {
           className="flex flex-1 flex-col gap-5 py-8"
         >
           <div className="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wide text-sand-500">
-            <span aria-hidden>{question.category_icon}</span>
+            <CategoryGlyph emoji={question.category_icon} className="h-4 w-4" />
             {question.category_name}
             <span className="rounded-full bg-sand-100 px-2 py-0.5">
               {DIFFICULTY_LABELS[question.difficulty]}
@@ -287,6 +387,7 @@ export function QuizPlayPage() {
                     key={option.id}
                     role="radio"
                     aria-checked={isSelected}
+                    aria-keyshortcuts={String.fromCharCode(65 + optionIndex)}
                     disabled={Boolean(feedback)}
                     onClick={() => setSelectedOption(option.id)}
                     animate={isWrongPick ? { x: [0, -8, 8, -5, 5, 0] } : {}}
@@ -341,108 +442,99 @@ export function QuizPlayPage() {
         </motion.div>
       </AnimatePresence>
 
-      {/* Feedback / actions footer */}
-      <div className="sticky bottom-0 -mx-4 border-t-2 border-sand-100 bg-sand-25 px-4 py-4">
-        <AnimatePresence mode="wait">
-          {feedback ? (
-            <motion.div
-              key="feedback"
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              className="mx-auto max-w-2xl space-y-3"
+      {!feedback && (
+        <div className="sticky bottom-0 -mx-4 border-t-2 border-sand-200/60 bg-[#f4efe0]/90 px-4 py-4 backdrop-blur-sm">
+          <div className="mx-auto max-w-2xl">
+            <Button
+              full
+              className="relative"
+              onClick={handleSubmit}
+              loading={submitAnswer.isPending}
+              disabled={question.type === 'multiple_choice' ? !selectedOption : !answerText.trim()}
             >
-              <div className="flex items-start justify-between gap-3">
-                <p
-                  className={`flex items-center gap-2 text-lg font-extrabold ${
-                    feedback.is_correct ? 'text-leaf-700' : 'text-red-600'
-                  }`}
-                >
-                  <span aria-hidden>{feedback.is_correct ? '🎉' : timedOut ? '⏰' : '💭'}</span>
-                  {feedback.is_correct
-                    ? 'Correto!'
-                    : timedOut
-                      ? 'Tempo esgotado!'
-                      : 'Não foi dessa vez'}
-                </p>
-                {feedback.xp_earned !== 0 && (
-                  <motion.span
-                    initial={{ scale: 0.6, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ type: 'spring', stiffness: 300, damping: 15 }}
-                    className={`rounded-full px-3 py-1 text-sm font-extrabold ${
-                      feedback.xp_earned > 0
-                        ? 'bg-grain-100 text-grain-700'
-                        : 'bg-red-50 text-red-600'
-                    }`}
-                  >
-                    {feedback.xp_earned > 0 ? `+${feedback.xp_earned}` : feedback.xp_earned} XP
-                  </motion.span>
-                )}
-              </div>
+              Responder
+              <span className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-[#f4efe0] px-2 py-0.5 text-[10px] font-extrabold tracking-wider text-leaf-700">
+                ENTER
+              </span>
+            </Button>
+          </div>
+        </div>
+      )}
 
+      <AnimatePresence>
+        {feedback && (
+          <motion.div
+            key="splash"
+            role="dialog"
+            aria-modal="true"
+            aria-label={feedback.is_correct ? 'Resposta correta' : 'Resposta incorreta'}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className={`fixed inset-0 z-40 flex flex-col overflow-y-auto px-4 py-8 ${
+              feedback.is_correct
+                ? 'bg-leaf-600 text-white'
+                : 'bg-red-600 text-white'
+            }`}
+          >
+            <div className="mx-auto flex min-h-full w-full max-w-lg flex-1 flex-col justify-center gap-5">
+              <motion.p
+                initial={{ scale: 0.6, y: 24 }}
+                animate={{ scale: 1, y: 0 }}
+                transition={{ type: 'spring', stiffness: 280, damping: 16 }}
+                className="text-center text-5xl font-extrabold leading-none sm:text-6xl"
+              >
+                {feedback.is_correct ? 'Correto!' : timedOut ? 'Tempo!' : 'Errou'}
+              </motion.p>
+              {feedback.xp_earned !== 0 && (
+                <motion.p
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.15 }}
+                  className="text-center text-2xl font-extrabold text-grain-200"
+                >
+                  {feedback.xp_earned > 0 ? `+${feedback.xp_earned}` : feedback.xp_earned} XP
+                </motion.p>
+              )}
               {!feedback.is_correct && feedback.correct_answer && (
-                <p className="text-sm font-bold">
-                  Resposta: <span className="text-leaf-700">{feedback.correct_answer}</span>
+                <p className="text-center text-lg font-extrabold">
+                  Resposta: {feedback.correct_answer}
                 </p>
               )}
-
-              <p className="text-sm font-semibold leading-relaxed text-sand-700">
+              <p className="text-center text-sm font-bold leading-relaxed text-white/90">
                 {feedback.explanation}
               </p>
-
-              <p className="inline-block rounded-full bg-leaf-50 px-3 py-1 text-xs font-extrabold text-leaf-700 ring-1 ring-leaf-200">
-                📖 {feedback.reference.display}
+              <p className="mx-auto rounded-full bg-white/15 px-3 py-1 text-xs font-extrabold">
+                {feedback.reference.display}
               </p>
-
               {feedback.divergence_note && (
-                <p className="rounded-2xl bg-grain-50 px-4 py-3 text-xs font-semibold leading-relaxed text-grain-800 ring-1 ring-grain-200">
-                  <strong>Nota:</strong> {feedback.divergence_note}
+                <p className="rounded-2xl bg-black/15 px-4 py-3 text-xs font-semibold leading-relaxed">
+                  {feedback.divergence_note}
                 </p>
               )}
-
               {reportedIds.includes(question.id) ? (
-                <p className="text-center text-xs font-semibold text-sand-400">
-                  Obrigado pelo aviso.
-                </p>
+                <p className="text-center text-xs font-semibold text-white/70">Obrigado pelo aviso.</p>
               ) : (
                 <button
                   type="button"
                   onClick={() => setReportOpen(true)}
-                  className="mx-auto block text-xs font-semibold text-sand-400 underline-offset-2 hover:text-sand-600 hover:underline"
+                  className="mx-auto text-xs font-semibold text-white/70 underline-offset-2 hover:text-white hover:underline"
                 >
                   Há um problema nesta pergunta?
                 </button>
               )}
-
               <Button
                 full
+                variant="gold"
                 onClick={handleNext}
                 loading={completeQuiz.isPending}
-                variant={feedback.is_correct ? 'primary' : 'secondary'}
               >
                 {isLast ? 'Ver resultado' : 'Continuar'}
               </Button>
-            </motion.div>
-          ) : (
-            <motion.div
-              key="submit"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="mx-auto max-w-2xl"
-            >
-              <Button
-                full
-                onClick={handleSubmit}
-                loading={submitAnswer.isPending}
-                disabled={question.type === 'multiple_choice' ? !selectedOption : !answerText.trim()}
-              >
-                Responder
-              </Button>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Exit confirmation with penalty warning */}
       <AnimatePresence>
@@ -461,8 +553,11 @@ export function QuizPlayPage() {
               animate={{ scale: 1, y: 0 }}
               className="w-full max-w-sm space-y-4 rounded-3xl bg-white p-6 text-center shadow-card"
             >
-              <span className="text-4xl" aria-hidden>
-                {session?.duel_id ? '🏳️' : wrongTotal > 0 ? '⚠️' : '🥺'}
+              <span className="mx-auto flex justify-center text-red-600">
+                <Glyph
+                  as={session?.duel_id ? AppIcons.flag : wrongTotal > 0 ? AppIcons.warning : AppIcons.sad}
+                  className="h-10 w-10"
+                />
               </span>
               <p className="font-extrabold">
                 {session?.duel_id ? 'Desistir do duelo?' : 'Sair sem terminar?'}
@@ -510,17 +605,18 @@ export function QuizPlayPage() {
         )}
       </AnimatePresence>
 
-      <ReportQuestionModal
-        open={reportOpen}
-        onClose={() => setReportOpen(false)}
-        onReported={() =>
-          setReportedIds((current) =>
-            current.includes(question.id) ? current : [...current, question.id]
-          )
-        }
-        questionId={question.id}
-        sessionId={session.id}
-      />
     </div>
+    <ReportQuestionModal
+      open={reportOpen}
+      onClose={() => setReportOpen(false)}
+      onReported={() =>
+        setReportedIds((current) =>
+          current.includes(question.id) ? current : [...current, question.id]
+        )
+      }
+      questionId={question.id}
+      sessionId={session.id}
+    />
+    </>
   )
 }

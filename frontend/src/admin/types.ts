@@ -1,5 +1,45 @@
 import type { Difficulty, FlagReason, QuestionDraft, QuestionType, Testament } from '@/types/api'
 
+export type AdminTab = 'home' | 'review' | 'questions' | 'users'
+
+export interface AdminDashboard {
+  users: {
+    total: number
+    active: number
+    unverified: number
+    new_7d: number
+  }
+  questions: {
+    total: number
+    active: number
+    inactive: number
+    open_answer: number
+    old_testament: number
+    easy: number
+    medium: number
+    hard: number
+    expert: number
+  }
+  review: {
+    flags_open: number
+    proposals_pending: number
+    pending: number
+  }
+  activity: {
+    studied_today: number
+    xp_today: number
+    questions_answered: number
+    accuracy: number | null
+    total_xp: number
+    longest_streak: number
+    max_level: number
+    duels_open: number
+    duels_active: number
+    duels_finished: number
+    friendships: number
+  }
+}
+
 export interface AdminUser {
   id: string
   name: string

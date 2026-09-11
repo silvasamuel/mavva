@@ -350,7 +350,8 @@
         "verse_start": 7,
         "verse_end": 9
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "eventos-biblicos-0012",
@@ -700,7 +701,8 @@
         "verse_start": 1,
         "verse_end": 4
       },
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "is_active": false
     },
     {
       "external_id": "eventos-biblicos-0023",
@@ -940,6 +942,389 @@
         "verse_end": 9
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0031",
+      "type": "multiple_choice",
+      "text": "O que aconteceu com os egípcios que perseguiram Israel pelo meio do mar?",
+      "options": [
+        {
+          "text": "As águas voltaram e os cobriram",
+          "correct": true
+        },
+        {
+          "text": "Voltaram para o Egito",
+          "correct": false
+        },
+        {
+          "text": "Ficaram cegos",
+          "correct": false
+        },
+        {
+          "text": "Renderam-se a Moisés",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'As águas tornaram e cobriram os carros e os cavaleiros de todo o exército de Faraó... não ficou nem um deles' (Êx 14:28).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 14,
+        "verse_start": 26,
+        "verse_end": 28
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0032",
+      "type": "multiple_choice",
+      "text": "O que Josué mandou fazer com as doze pedras tiradas do leito do Jordão?",
+      "options": [
+        {
+          "text": "Erguê-las como memorial em Gilgal",
+          "correct": true
+        },
+        {
+          "text": "Lançá-las contra Jericó",
+          "correct": false
+        },
+        {
+          "text": "Construir um altar de sacrifício",
+          "correct": false
+        },
+        {
+          "text": "Enterrá-las no deserto",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Levantou Josué em Gilgal as doze pedras', para que os filhos perguntassem e ouvissem o que o SENHOR fizera (Js 4:20-24).",
+      "divergence_note": null,
+      "reference": {
+        "book": "josue",
+        "chapter": 4,
+        "verse_start": 20,
+        "verse_end": 24
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "eventos-biblicos-0033",
+      "type": "multiple_choice",
+      "text": "O que aconteceu no monte Carmelo depois de o fogo consumir o sacrifício de Elias?",
+      "options": [
+        {
+          "text": "Veio uma grande chuva, encerrando a seca",
+          "correct": true
+        },
+        {
+          "text": "Elias foi arrebatado",
+          "correct": false
+        },
+        {
+          "text": "O povo fugiu",
+          "correct": false
+        },
+        {
+          "text": "Jezabel se arrependeu",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Elias orou sete vezes; uma nuvem subiu do mar e 'houve uma grande chuva' (1Rs 18:41-45), fim de três anos e meio de seca.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 18,
+        "verse_start": 41,
+        "verse_end": 45
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "eventos-biblicos-0034",
+      "type": "multiple_choice",
+      "text": "O que aconteceu na mesma noite em que Daniel interpretou a escrita na parede?",
+      "options": [
+        {
+          "text": "Belsazar foi morto e Dario, o medo, tomou o reino",
+          "correct": true
+        },
+        {
+          "text": "Daniel foi lançado aos leões",
+          "correct": false
+        },
+        {
+          "text": "Babilônia foi incendiada",
+          "correct": false
+        },
+        {
+          "text": "Belsazar se converteu",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Naquela mesma noite foi morto Belsazar, rei dos caldeus. E Dario, o medo, ocupou o reino' (Dn 5:30-31).",
+      "divergence_note": null,
+      "reference": {
+        "book": "daniel",
+        "chapter": 5,
+        "verse_start": 30,
+        "verse_end": 31
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "eventos-biblicos-0035",
+      "type": "multiple_choice",
+      "text": "Que aviso levou José a fugir com Maria e o menino para o Egito?",
+      "options": [
+        {
+          "text": "Um anjo apareceu em sonho avisando da matança de Herodes",
+          "correct": true
+        },
+        {
+          "text": "Uma estrela se moveu para o sul",
+          "correct": false
+        },
+        {
+          "text": "Os magos o alertaram",
+          "correct": false
+        },
+        {
+          "text": "Uma carta de Zacarias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Apareceu um anjo do Senhor a José em sonhos... foge para o Egito, porque Herodes há de procurar o menino para o matar' (Mt 2:13).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 2,
+        "verse_start": 13,
+        "verse_end": 15
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0036",
+      "type": "multiple_choice",
+      "text": "O que aconteceu no instante em que Pedro negou Jesus pela terceira vez?",
+      "options": [
+        {
+          "text": "O galo cantou, e Jesus olhou para ele",
+          "correct": true
+        },
+        {
+          "text": "O véu se rasgou",
+          "correct": false
+        },
+        {
+          "text": "Um anjo apareceu",
+          "correct": false
+        },
+        {
+          "text": "Judas entrou no pátio",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Estando ele ainda a falar, cantou o galo. E, virando-se o Senhor, olhou para Pedro... e Pedro chorou amargamente' (Lc 22:60-62).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 22,
+        "verse_start": 60,
+        "verse_end": 62
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0037",
+      "type": "open_answer",
+      "text": "Que fenômeno cobriu o Sinai quando Deus desceu para falar: 'trovões, relâmpagos e uma espessa ___'?",
+      "options": null,
+      "accepted_answers": [
+        "Nuvem",
+        "Uma nuvem",
+        "Nuvem espessa"
+      ],
+      "explanation": "'Houve trovões e relâmpagos sobre o monte e uma espessa nuvem... e todo o povo estremeceu' (Êx 19:16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 19,
+        "verse_start": 16,
+        "verse_end": 19
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0038",
+      "type": "multiple_choice",
+      "text": "Quantos espias Moisés enviou para reconhecer a terra de Canaã?",
+      "options": [
+        {
+          "text": "Doze, um de cada tribo",
+          "correct": true
+        },
+        {
+          "text": "Dois",
+          "correct": false
+        },
+        {
+          "text": "Sete",
+          "correct": false
+        },
+        {
+          "text": "Setenta",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Envia homens que espiem a terra de Canaã... de cada tribo de seus pais enviareis um homem' (Nm 13:2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 13,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0039",
+      "type": "multiple_choice",
+      "text": "Com que arma improvisada Sansão matou mil filisteus?",
+      "options": [
+        {
+          "text": "Uma queixada de jumento",
+          "correct": true
+        },
+        {
+          "text": "Uma funda",
+          "correct": false
+        },
+        {
+          "text": "Uma lança quebrada",
+          "correct": false
+        },
+        {
+          "text": "Um bastão de carvalho",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Achou uma queixada fresca de um jumento... e feriu com ela mil homens' (Jz 15:15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "juizes",
+        "chapter": 15,
+        "verse_start": 14,
+        "verse_end": 16
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0040",
+      "type": "multiple_choice",
+      "text": "Quantas pedras Davi escolheu no ribeiro antes de enfrentar Golias?",
+      "options": [
+        {
+          "text": "Cinco pedras lisas",
+          "correct": true
+        },
+        {
+          "text": "Uma pedra",
+          "correct": false
+        },
+        {
+          "text": "Três pedras",
+          "correct": false
+        },
+        {
+          "text": "Sete pedras",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Escolheu para si cinco seixos do ribeiro e pô-los no alforje' (1Sm 17:40) — bastou uma.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 17,
+        "verse_start": 40,
+        "verse_end": 50
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "eventos-biblicos-0041",
+      "type": "multiple_choice",
+      "text": "O que aconteceu a Coré, Datã e Abirão ao se rebelarem contra Moisés?",
+      "options": [
+        {
+          "text": "A terra se abriu e os tragou",
+          "correct": true
+        },
+        {
+          "text": "Foram apedrejados",
+          "correct": false
+        },
+        {
+          "text": "Ficaram leprosos",
+          "correct": false
+        },
+        {
+          "text": "Foram expulsos do arraial",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'A terra abriu a sua boca e os tragou com as suas casas' (Nm 16:31-33) — juízo sobre a rebelião contra o sacerdócio.",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 16,
+        "verse_start": 28,
+        "verse_end": 33
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "eventos-biblicos-0042",
+      "type": "multiple_choice",
+      "text": "Que alimento Deus fez cair do céu para sustentar Israel no deserto?",
+      "options": [
+        {
+          "text": "Maná",
+          "correct": true
+        },
+        {
+          "text": "Trigo",
+          "correct": false
+        },
+        {
+          "text": "Codornizes apenas",
+          "correct": false
+        },
+        {
+          "text": "Figos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "'Eis que vos farei chover pão dos céus'; o povo o chamou maná — 'como semente de coentro, branco' (Êx 16:4,31).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 16,
+        "verse_start": 4,
+        "verse_end": 15
+      },
+      "difficulty": "easy"
     }
   ]
 }

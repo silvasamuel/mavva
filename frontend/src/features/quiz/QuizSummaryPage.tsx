@@ -1,183 +1,240 @@
+import { useEffect, useMemo, useState } from 'react'
 import { Link, Navigate, useLocation } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import type { QuizComplete } from '@/types/api'
+import { AnimatePresence, motion } from 'framer-motion'
+import type { Achievement, QuizComplete } from '@/types/api'
 import { RankBadge } from '@/components/RankBadge'
+import { RankLadder } from '@/components/RankLadder'
 import { Button } from '@/components/ui/Button'
-import { Card } from '@/components/ui/Card'
 import { formatStudyTime } from '@/lib/format'
 import { RANK_FLAVOR, isRankCode } from '@/lib/ranks'
+import { playFanfare, playRankUp } from '@/lib/sfx'
+import { AchievementGlyph, AppIcons, Glyph } from '@/lib/icons'
 
-const stagger = {
-  hidden: { opacity: 0, y: 16 },
-  show: (order: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: 0.12 * order, duration: 0.3 },
-  }),
-}
+type Beat =
+  | { kind: 'hero' }
+  | { kind: 'xp' }
+  | { kind: 'streak' }
+  | { kind: 'goal' }
+  | { kind: 'rank' }
+  | { kind: 'level' }
+  | { kind: 'achievement'; achievement: Achievement }
+  | { kind: 'done' }
 
 export function QuizSummaryPage() {
   const location = useLocation()
   const summary = location.state as QuizComplete | null
+  const [step, setStep] = useState(0)
+  const [shownXp, setShownXp] = useState(0)
 
-  if (!summary) return <Navigate to="/" replace />
+  const beats = useMemo<Beat[]>(() => {
+    if (!summary) return []
+    const items: Beat[] = [{ kind: 'hero' }, { kind: 'xp' }]
+    if (summary.streak.current > 0) items.push({ kind: 'streak' })
+    if (summary.daily_goal.achieved) items.push({ kind: 'goal' })
+    if (summary.rank?.rank_up) items.push({ kind: 'rank' })
+    else if (summary.level.leveled_up) items.push({ kind: 'level' })
+    for (const achievement of summary.unlocked_achievements) {
+      items.push({ kind: 'achievement', achievement })
+    }
+    items.push({ kind: 'done' })
+    return items
+  }, [summary])
+
+  const beat = beats[step]
+  const last = step >= beats.length - 1
+
+  useEffect(() => {
+    if (!summary) return
+    playFanfare()
+  }, [summary])
+
+  useEffect(() => {
+    if (beat?.kind === 'rank') playRankUp()
+  }, [beat])
+
+  const achievementXp = summary
+    ? summary.unlocked_achievements.reduce((total, item) => total + (item.xp_reward ?? 0), 0)
+    : 0
+  const totalXp = summary ? summary.xp_earned + achievementXp : 0
+
+  useEffect(() => {
+    if (beat?.kind !== 'xp') return
+    const target = totalXp
+    const started = performance.now()
+    let frame = 0
+    const tick = (now: number) => {
+      const t = Math.min(1, (now - started) / 700)
+      setShownXp(Math.round(target * t))
+      if (t < 1) frame = requestAnimationFrame(tick)
+    }
+    frame = requestAnimationFrame(tick)
+    return () => cancelAnimationFrame(frame)
+  }, [beat, totalXp])
+
+  useEffect(() => {
+    function onKey(event: KeyboardEvent) {
+      if (event.key !== 'Enter' || last) return
+      event.preventDefault()
+      setStep((current) => current + 1)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [last])
+
+  if (!summary || !beat) return <Navigate to="/" replace />
 
   const perfect = summary.correct_count === summary.question_count
   const headline = perfect
-    ? 'Sessão perfeita! 🌟'
+    ? 'Sessão perfeita!'
     : summary.accuracy >= 0.7
-      ? 'Muito bem! 🙌'
-      : 'Semente plantada 🌱'
-  const achievementXp = summary.unlocked_achievements.reduce(
-    (total, achievement) => total + (achievement.xp_reward ?? 0),
-    0,
-  )
-  const totalXp = summary.xp_earned + achievementXp
+      ? 'Muito bem!'
+      : 'Semente plantada'
+
+  function advance() {
+    if (!last) setStep((current) => current + 1)
+  }
 
   return (
-    <div className="mx-auto flex min-h-screen max-w-xl flex-col items-center justify-center gap-6 px-4 py-10">
-      <motion.h1
-        custom={0}
-        variants={stagger}
-        initial="hidden"
-        animate="show"
-        className="text-center text-3xl font-extrabold"
-      >
-        {headline}
-      </motion.h1>
-
-      <motion.div custom={1} variants={stagger} initial="hidden" animate="show" className="w-full">
-        <div className="grid grid-cols-3 gap-3">
-          <Card className="text-center">
-            <p className="text-2xl font-extrabold text-leaf-600">
-              {summary.correct_count}/{summary.question_count}
-            </p>
-            <p className="text-xs font-bold uppercase text-sand-500">corretas</p>
-          </Card>
-          <Card className="text-center">
-            <motion.p
-              initial={{ scale: 0.5 }}
-              animate={{ scale: 1 }}
-              transition={{ type: 'spring', stiffness: 260, damping: 14, delay: 0.3 }}
-              className={`text-2xl font-extrabold ${
-                totalXp >= 0 ? 'text-grain-600' : 'text-red-600'
-              }`}
-            >
-              {totalXp >= 0 ? `+${totalXp}` : totalXp}
-            </motion.p>
-            <p className="text-xs font-bold uppercase text-sand-500">XP</p>
-          </Card>
-          <Card className="text-center">
-            <p className="text-2xl font-extrabold">{formatStudyTime(summary.duration_seconds)}</p>
-            <p className="text-xs font-bold uppercase text-sand-500">tempo</p>
-          </Card>
-        </div>
-      </motion.div>
-
-      <motion.div
-        custom={2}
-        variants={stagger}
-        initial="hidden"
-        animate="show"
-        className="flex w-full flex-col gap-3"
-      >
-        <Card className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <span className="text-2xl" aria-hidden>
-              🔥
-            </span>
-            <p className="font-extrabold">
-              {summary.streak.current} {summary.streak.current === 1 ? 'dia' : 'dias'} de sequência
-            </p>
-          </div>
-          {summary.streak.extended_today && (
-            <span className="rounded-full bg-grain-100 px-3 py-1 text-xs font-extrabold text-grain-700">
-              +1 hoje!
-            </span>
+    <div
+      className="mx-auto flex min-h-screen max-w-lg flex-col justify-center px-4 py-10"
+      onClick={last ? undefined : advance}
+    >
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={step}
+          initial={{ opacity: 0, scale: 0.92, y: 18 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.96, y: -12 }}
+          transition={{ type: 'spring', stiffness: 320, damping: 26 }}
+          className="text-center"
+        >
+          {beat.kind === 'hero' && (
+            <>
+              <span className="mx-auto flex justify-center text-leaf-600">
+                <Glyph
+                  as={perfect ? AppIcons.sparkle : summary.accuracy >= 0.7 ? AppIcons.confetti : AppIcons.plant}
+                  className="h-16 w-16"
+                />
+              </span>
+              <h1 className="mt-4 text-4xl font-extrabold">{headline}</h1>
+              <p className="mt-2 text-lg font-extrabold text-sand-600">
+                {summary.correct_count}/{summary.question_count} acertos
+              </p>
+              <p className="mt-6 text-sm font-bold text-sand-400">Toque para continuar</p>
+            </>
           )}
-        </Card>
 
-        {summary.rank?.rank_up ? (
-          <Card className="flex items-center gap-3 bg-grain-50 ring-2 ring-grain-300">
-            <RankBadge code={summary.rank.code} size="md" />
-            <div>
-              <p className="text-xs font-extrabold uppercase tracking-wide text-grain-700">
+          {beat.kind === 'xp' && (
+            <>
+              <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-sand-500">
+                XP desta partida
+              </p>
+              <p
+                className={`mt-3 text-6xl font-extrabold ${
+                  totalXp >= 0 ? 'text-grain-700' : 'text-red-600'
+                }`}
+              >
+                {shownXp >= 0 ? `+${shownXp}` : shownXp}
+              </p>
+              <p className="mt-2 text-sm font-bold text-sand-500">
+                {formatStudyTime(summary.duration_seconds)} de estudo
+              </p>
+            </>
+          )}
+
+          {beat.kind === 'streak' && (
+            <>
+              <span className="mx-auto flex justify-center text-grain-600">
+                <Glyph as={AppIcons.streak} className="h-16 w-16" />
+              </span>
+              <h2 className="mt-4 text-3xl font-extrabold">
+                {summary.streak.current} {summary.streak.current === 1 ? 'dia' : 'dias'}
+              </h2>
+              <p className="mt-2 font-bold text-sand-600">
+                {summary.streak.extended_today ? 'A chama cresceu hoje.' : 'Sequência mantida.'}
+              </p>
+            </>
+          )}
+
+          {beat.kind === 'goal' && (
+            <>
+              <span className="mx-auto flex justify-center text-grain-600">
+                <Glyph as={AppIcons.manna} className="h-16 w-16" />
+              </span>
+              <h2 className="mt-4 text-3xl font-extrabold">Maná recolhido</h2>
+              <p className="mt-2 font-bold text-sand-600">
+                Meta de {summary.daily_goal.target} XP cumprida.
+              </p>
+            </>
+          )}
+
+          {beat.kind === 'rank' && (
+            <>
+              <RankBadge code={summary.rank.code} size="lg" />
+              <p className="mt-4 text-xs font-extrabold uppercase tracking-[0.2em] text-grain-700">
                 Novo grau
               </p>
-              <p className="font-extrabold text-grain-800">Você alcançou {summary.rank.name}!</p>
+              <h2 className="mt-1 text-3xl font-extrabold">{summary.rank.name}</h2>
               {isRankCode(summary.rank.code) && (
-                <p className="text-xs font-semibold text-sand-600">
-                  {RANK_FLAVOR[summary.rank.code]}
+                <p className="mt-2 font-bold text-sand-600">{RANK_FLAVOR[summary.rank.code]}</p>
+              )}
+              <div className="mt-6 text-left">
+                <RankLadder currentCode={summary.rank.code} level={summary.level.current} />
+              </div>
+            </>
+          )}
+
+          {beat.kind === 'level' && (
+            <>
+              <span className="mx-auto flex justify-center text-leaf-600">
+                <Glyph as={AppIcons.levelUp} className="h-16 w-16" />
+              </span>
+              <h2 className="mt-4 text-3xl font-extrabold">Nível {summary.level.current}</h2>
+              <p className="mt-2 font-bold text-sand-600">Você subiu de nível.</p>
+            </>
+          )}
+
+          {beat.kind === 'achievement' && (
+            <>
+              <span className="mx-auto flex justify-center text-grain-700">
+                <AchievementGlyph code={beat.achievement.code} className="h-16 w-16" />
+              </span>
+              <p className="mt-4 text-xs font-extrabold uppercase tracking-[0.2em] text-grain-700">
+                Conquista
+              </p>
+              <h2 className="mt-1 text-3xl font-extrabold">{beat.achievement.name}</h2>
+              <p className="mt-2 font-bold text-sand-600">{beat.achievement.description}</p>
+              {beat.achievement.xp_reward > 0 && (
+                <p className="mt-3 text-sm font-extrabold text-grain-700">
+                  +{beat.achievement.xp_reward} XP
                 </p>
               )}
-            </div>
-          </Card>
-        ) : (
-          summary.level.leveled_up && (
-            <Card className="flex items-center gap-3 bg-leaf-50 ring-1 ring-leaf-200">
-              <span className="text-2xl" aria-hidden>
-                ⬆️
-              </span>
-              <p className="font-extrabold text-leaf-800">
-                Você subiu para o nível {summary.level.current}!
-              </p>
-            </Card>
-          )
-        )}
+            </>
+          )}
 
-        {summary.daily_goal.achieved && (
-          <Card className="flex items-center gap-3 bg-grain-50 ring-1 ring-grain-200">
-            <span className="text-2xl" aria-hidden>
-              🎯
-            </span>
-            <p className="font-extrabold text-grain-800">Meta diária cumprida — maná recolhido!</p>
-          </Card>
-        )}
-
-        {summary.unlocked_achievements.map((achievement) => (
-          <motion.div
-            key={achievement.code}
-            initial={{ scale: 0.85, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ type: 'spring', stiffness: 200, damping: 16, delay: 0.5 }}
-          >
-            <Card className="flex items-center gap-3 bg-grain-50 ring-2 ring-grain-300">
-              <span className="text-3xl" aria-hidden>
-                {achievement.icon}
-              </span>
+          {beat.kind === 'done' && (
+            <div className="space-y-6" onClick={(event) => event.stopPropagation()}>
               <div>
-                <p className="text-xs font-extrabold uppercase tracking-wide text-grain-600">
-                  Conquista desbloqueada
+                <h2 className="text-3xl font-extrabold">Celeiro guardado</h2>
+                <p className="mt-2 font-bold text-sand-600">
+                  {summary.correct_count}/{summary.question_count} ·{' '}
+                  {totalXp >= 0 ? `+${totalXp}` : totalXp} XP
                 </p>
-                <p className="font-extrabold">{achievement.name}</p>
-                <p className="text-xs font-semibold text-sand-600">{achievement.description}</p>
-                {achievement.xp_reward > 0 && (
-                  <p className="mt-1 text-xs font-extrabold text-grain-700">
-                    +{achievement.xp_reward} XP
-                  </p>
-                )}
               </div>
-            </Card>
-          </motion.div>
-        ))}
-      </motion.div>
-
-      <motion.div
-        custom={3}
-        variants={stagger}
-        initial="hidden"
-        animate="show"
-        className="flex w-full gap-3"
-      >
-        <Link to="/quiz/new" className="flex-1">
-          <Button variant="secondary" full>
-            Estudar de novo
-          </Button>
-        </Link>
-        <Link to="/" className="flex-1">
-          <Button full>Ver painel</Button>
-        </Link>
-      </motion.div>
+              <div className="flex gap-3">
+                <Link to="/quiz/new" className="flex-1">
+                  <Button variant="secondary" full>
+                    Jogar de novo
+                  </Button>
+                </Link>
+                <Link to="/" className="flex-1">
+                  <Button full>Início</Button>
+                </Link>
+              </div>
+            </div>
+          )}
+        </motion.div>
+      </AnimatePresence>
     </div>
   )
 }

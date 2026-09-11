@@ -4,6 +4,7 @@ import type { Achievement } from '@/types/api'
 import { Card } from '@/components/ui/Card'
 import { ProgressBar } from '@/components/ui/ProgressBar'
 import { Spinner } from '@/components/ui/Spinner'
+import { AchievementGlyph, AppIcons, Glyph } from '@/lib/icons'
 
 export function AchievementsPage() {
   const { data, isLoading } = useQuery({
@@ -41,8 +42,8 @@ export function AchievementsPage() {
               }
             >
               <div className="flex items-start gap-3">
-                <span className="text-3xl" aria-hidden>
-                  {achievement.icon}
+                <span className="text-grain-700" aria-hidden>
+                  <AchievementGlyph code={achievement.code} className="h-8 w-8" />
                 </span>
                 <div className="min-w-0 flex-1">
                   <div className="flex items-start justify-between gap-2">
@@ -66,8 +67,9 @@ export function AchievementsPage() {
                     </div>
                   )}
                   {unlocked && (
-                    <p className="mt-1 text-[10px] font-extrabold uppercase tracking-wide text-grain-600">
-                      Desbloqueada 🎉
+                    <p className="mt-1 inline-flex items-center gap-1 text-[10px] font-extrabold uppercase tracking-wide text-grain-600">
+                      <Glyph as={AppIcons.confetti} className="h-3.5 w-3.5" />
+                      Desbloqueada
                     </p>
                   )}
                 </div>

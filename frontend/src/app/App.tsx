@@ -1,14 +1,17 @@
+import { useEffect } from 'react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/react'
+import { IconContext } from '@phosphor-icons/react'
+import { WorldBackdrop } from '@/components/WorldBackdrop'
+import { armAudio } from '@/lib/sfx'
 import { AuthProvider } from '@/features/auth/AuthContext'
 import { LoginPage } from '@/features/auth/LoginPage'
 import { RegisterPage } from '@/features/auth/RegisterPage'
 import { ForgotPasswordPage } from '@/features/auth/ForgotPasswordPage'
 import { ResetPasswordPage } from '@/features/auth/ResetPasswordPage'
 import { VerifyEmailPage } from '@/features/auth/VerifyEmailPage'
-import { DashboardPage } from '@/features/dashboard/DashboardPage'
 import { QuizConfigPage } from '@/features/quiz/QuizConfigPage'
 import { QuizPlayPage } from '@/features/quiz/QuizPlayPage'
 import { QuizSummaryPage } from '@/features/quiz/QuizSummaryPage'
@@ -21,6 +24,7 @@ import { FriendsPage } from '@/features/friends/FriendsPage'
 import { RankingPage } from '@/features/ranking/RankingPage'
 import { SuggestQuestionPage } from '@/features/moderation/SuggestQuestionPage'
 import { AppShell } from './AppShell'
+import { HomeGate } from './HomeGate'
 import { RequireAuth } from './RequireAuth'
 
 const queryClient = new QueryClient({
@@ -30,13 +34,21 @@ const queryClient = new QueryClient({
 })
 
 export default function App() {
+  useEffect(() => {
+    armAudio()
+  }, [])
+
   return (
     <QueryClientProvider client={queryClient}>
       <Analytics />
       <SpeedInsights />
+      <WorldBackdrop />
+      <IconContext.Provider value={{ weight: 'duotone', color: 'currentColor' }}>
+      <div className="relative z-10">
       <BrowserRouter>
         <AuthProvider>
           <Routes>
+            <Route path="/" element={<HomeGate />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
@@ -49,7 +61,6 @@ export default function App() {
               <Route path="/quiz/:sessionId/summary" element={<QuizSummaryPage />} />
 
               <Route element={<AppShell />}>
-                <Route path="/" element={<DashboardPage />} />
                 <Route path="/quiz/new" element={<QuizConfigPage />} />
                 <Route path="/review" element={<ReviewPage />} />
                 <Route path="/duels" element={<DuelsPage />} />
@@ -66,6 +77,8 @@ export default function App() {
           </Routes>
         </AuthProvider>
       </BrowserRouter>
+      </div>
+      </IconContext.Provider>
     </QueryClientProvider>
   )
 }

@@ -14,7 +14,7 @@ export interface Rank {
   maxLevel: number | null
 }
 
-const CODES: RankCode[] = [
+export const RANK_CODES: RankCode[] = [
   'semente',
   'broto',
   'espiga',
@@ -24,7 +24,7 @@ const CODES: RankCode[] = [
   'celeiro',
 ]
 
-const NAMES: Record<RankCode, string> = {
+export const RANK_NAMES: Record<RankCode, string> = {
   semente: 'Semente',
   broto: 'Broto',
   espiga: 'Espiga',
@@ -48,13 +48,36 @@ const LEVELS_PER_RANK = 5
 
 export function rankFromLevel(level: number): Rank {
   const safe = Math.max(1, level)
-  const index = Math.min(Math.floor((safe - 1) / LEVELS_PER_RANK), CODES.length - 1)
-  const code = CODES[index]
+  const index = Math.min(Math.floor((safe - 1) / LEVELS_PER_RANK), RANK_CODES.length - 1)
+  const code = RANK_CODES[index]
   const minLevel = index * LEVELS_PER_RANK + 1
-  const maxLevel = index === CODES.length - 1 ? null : minLevel + LEVELS_PER_RANK - 1
-  return { code, name: NAMES[code], minLevel, maxLevel }
+  const maxLevel = index === RANK_CODES.length - 1 ? null : minLevel + LEVELS_PER_RANK - 1
+  return { code, name: RANK_NAMES[code], minLevel, maxLevel }
 }
 
 export function isRankCode(value: string): value is RankCode {
-  return CODES.includes(value as RankCode)
+  return RANK_CODES.includes(value as RankCode)
+}
+
+export function rankLadderIndex(code: string): number {
+  return isRankCode(code) ? RANK_CODES.indexOf(code) : 0
+}
+
+export function rankProgress(
+  level: number,
+  minLevel: number,
+  nextLevel: number | null
+): { current: number; total: number; remaining: number } {
+  if (nextLevel == null) {
+    return { current: 1, total: 1, remaining: 0 }
+  }
+  const total = nextLevel - minLevel
+  const current = Math.min(total, Math.max(0, level - minLevel))
+  return { current, total, remaining: Math.max(0, nextLevel - level) }
+}
+
+export function nextRankCopy(remaining: number, nextName: string | null): string {
+  if (!nextName) return 'Você chegou ao elo mais alto'
+  if (remaining === 1) return `Falta 1 nível para ${nextName}`
+  return `Faltam ${remaining} níveis para ${nextName}`
 }

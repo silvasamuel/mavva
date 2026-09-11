@@ -8,6 +8,7 @@ import {
   YAxis,
 } from 'recharts'
 import { EmptyState } from '@/components/ui/EmptyState'
+import { AppIcons, Glyph } from '@/lib/icons'
 
 interface Point {
   date: string
@@ -33,7 +34,7 @@ export function EvolutionChart({ data }: { data: Point[] }) {
   if (data.length === 0) {
     return (
       <EmptyState
-        icon="📈"
+        icon={<Glyph as={AppIcons.chart} className="h-10 w-10" />}
         title="Seu gráfico nasce no primeiro quiz"
         description="Estude hoje e volte aqui para ver sua constância tomar forma."
       />

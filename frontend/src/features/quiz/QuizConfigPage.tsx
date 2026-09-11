@@ -7,19 +7,20 @@ import { Button } from '@/components/ui/Button'
 import { Card, CardTitle } from '@/components/ui/Card'
 import { Spinner } from '@/components/ui/Spinner'
 import { DIFFICULTY_LABELS } from '@/lib/format'
+import { AppIcons, CategoryGlyph, Glyph, type Icon } from '@/lib/icons'
 
-const TESTAMENT_OPTIONS: { value: Testament | null; label: string; icon: string }[] = [
-  { value: null, label: 'Bíblia inteira', icon: '📖' },
-  { value: 'old', label: 'Antigo Testamento', icon: '📜' },
-  { value: 'new', label: 'Novo Testamento', icon: '✝️' },
+const TESTAMENT_OPTIONS: { value: Testament | null; label: string; icon: Icon }[] = [
+  { value: null, label: 'Bíblia inteira', icon: AppIcons.study },
+  { value: 'old', label: 'Antigo Testamento', icon: AppIcons.scroll },
+  { value: 'new', label: 'Novo Testamento', icon: AppIcons.cross },
 ]
 
 const DIFFICULTY_OPTIONS: (Difficulty | null)[] = [null, 'easy', 'medium', 'hard', 'expert']
 const COUNT_OPTIONS = [5, 10, 15, 20]
 const TIMER_OPTIONS: { value: number | null; label: string }[] = [
   { value: null, label: 'Sem tempo' },
-  { value: 15, label: '⏱️ 15s' },
-  { value: 30, label: '⏱️ 30s' },
+  { value: 15, label: '15s' },
+  { value: 30, label: '30s' },
 ]
 
 function Chip({
@@ -36,7 +37,7 @@ function Chip({
       type="button"
       onClick={onClick}
       aria-pressed={selected}
-      className={`rounded-2xl px-4 py-2.5 text-sm font-extrabold transition-colors ${
+      className={`inline-flex items-center gap-1.5 rounded-2xl px-4 py-2.5 text-sm font-extrabold transition-colors ${
         selected
           ? 'bg-leaf-500 text-white shadow-card'
           : 'bg-white text-sand-600 shadow-card hover:bg-sand-50'
@@ -125,7 +126,7 @@ export function QuizConfigPage() {
                 setTestament(option.value)
               }}
             >
-              <span aria-hidden>{option.icon}</span> {option.label}
+              <Glyph as={option.icon} className="inline h-4 w-4" /> {option.label}
             </Chip>
           ))}
         </div>
@@ -152,7 +153,8 @@ export function QuizConfigPage() {
               selected={categoryIds.includes(category.id)}
               onClick={() => toggleCategory(category.id)}
             >
-              <span aria-hidden>{category.icon}</span> {category.name}
+              <CategoryGlyph slug={category.slug} emoji={category.icon} className="h-4 w-4" />
+              {category.name}
             </Chip>
           ))}
         </div>
@@ -205,6 +207,7 @@ export function QuizConfigPage() {
                 selected={timerSeconds === option.value}
                 onClick={() => setTimerSeconds(option.value)}
               >
+                {option.value != null && <Glyph as={AppIcons.timer} className="inline h-4 w-4" />}{' '}
                 {option.label}
               </Chip>
             ))}
