@@ -1,18 +1,43 @@
+from typing import Any
 from zoneinfo import ZoneInfo
 
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, HTTPException, Response, status
 from sqlalchemy import select
 
 from app.core.deps import CurrentUser, DbDep
 from app.models import User
-from app.schemas.user import UserOut, UserUpdate
+from app.schemas.user import AccountDeleteRequest, UserOut, UserUpdate
+from app.services.user_service import UserServiceError, delete_account, export_account
 
 router = APIRouter(prefix="/users", tags=["users"])
+REFRESH_COOKIE = "refresh_token"
 
 
 @router.get("/me", response_model=UserOut)
 def get_me(user: CurrentUser) -> UserOut:
     return UserOut.model_validate(user)
+
+
+def _service_error(error: UserServiceError) -> HTTPException:
+    headers = {"Retry-After": str(error.retry_after)} if error.retry_after else None
+    return HTTPException(error.status_code, error.message, headers=headers)
+
+
+@router.get("/me/export")
+def export_me(user: CurrentUser, db: DbDep) -> dict[str, Any]:
+    try:
+        return export_account(db, user)
+    except UserServiceError as error:
+        raise _service_error(error) from error
+
+
+@router.delete("/me", status_code=status.HTTP_204_NO_CONTENT)
+def delete_me(body: AccountDeleteRequest, user: CurrentUser, db: DbDep, response: Response) -> None:
+    try:
+        delete_account(db, user, body.password)
+    except UserServiceError as error:
+        raise _service_error(error) from error
+    response.delete_cookie(REFRESH_COOKIE, path="/api/v1/auth")
 
 
 @router.patch("/me", response_model=UserOut)

@@ -1,9 +1,8 @@
 import uuid
 
-from fastapi import APIRouter, HTTPException, Request, status
+from fastapi import APIRouter, HTTPException, status
 
 from app.core.deps import CurrentUser, DbDep
-from app.core.ratelimit import limiter
 from app.data.books import BOOKS, format_reference
 from app.models import Question, QuizSession
 from app.models.enums import QuestionType
@@ -28,6 +27,7 @@ from app.schemas.quiz import (
 )
 from app.services import duel_service, option_shuffle, quiz_service
 from app.services.quiz_service import QuizError
+from app.services.rate_limit_service import enforce_user_limit
 
 router = APIRouter(prefix="/quizzes", tags=["quizzes"])
 
@@ -87,10 +87,8 @@ def _session_out(session: QuizSession, duel_id: uuid.UUID | None = None) -> Quiz
 
 
 @router.post("", status_code=status.HTTP_201_CREATED, response_model=QuizSessionOut)
-@limiter.limit("30/minute")
-def create_quiz(
-    request: Request, body: QuizCreateRequest, user: CurrentUser, db: DbDep
-) -> QuizSessionOut:
+def create_quiz(body: QuizCreateRequest, user: CurrentUser, db: DbDep) -> QuizSessionOut:
+    enforce_user_limit(db, user.id, "quiz_create", limit=30, window_seconds=60)
     try:
         session = quiz_service.create_session(
             db,

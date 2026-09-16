@@ -22,6 +22,7 @@ class Settings(BaseSettings):
     reset_token_expire_minutes: int = 30
     verification_token_expire_hours: int = 24
     email_resend_cooldown_seconds: int = 60
+    data_export_cooldown_seconds: int = 6 * 3600
 
     # Canonical site URL, or a comma-separated allowlist. The first entry is
     # used in email links; every entry is an allowed CORS origin.

@@ -78,8 +78,9 @@ export function TermsPage() {
 
       <h2>9. Encerramento</h2>
       <p>
-        Você pode pedir a exclusão da conta pelo e-mail acima. Nós podemos encerrar o acesso em
-        caso de violação destes Termos ou exigência legal.
+        Você pode apagar a conta no perfil, confirmando com a senha, ou pelo e-mail do
+        encarregado. Nós podemos encerrar o acesso em caso de violação destes Termos ou exigência
+        legal.
       </p>
 
       <h2>10. Privacidade</h2>

@@ -184,9 +184,9 @@ Deploy contínuo: Vercel e Render observam a `main` (deploy automático após CI
 ## 9. Segurança
 
 - Senhas: bcrypt (via passlib), custo 12.
-- Rate limiting (slowapi) por IP real (`X-Forwarded-For` em produção): auth
-  (login/register 10/min, reset/resend 5/min), denúncias (20/h), sugestões (10/h),
-  criação de quiz (30/min) e busca de amigos (60/min).
+- Rate limiting: auth ainda usa slowapi por IP. Rotas autenticadas (quiz, busca
+  de amigos, denúncia, sugestão) e o export de dados usam teto por `user.id` no
+  Postgres, para o limite sobreviver ao isolate da Vercel.
 - CORS restrito às origens em `FRONTEND_ORIGIN` (lista separada por vírgula; o
   primeiro item é o domínio canônico dos e-mails). O frontend em produção chama
   `/api` no mesmo host, para o cookie de refresh não virar third-party ao usar

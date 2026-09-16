@@ -82,14 +82,16 @@ export function PrivacyPage() {
       </p>
 
       <h2>6. Seus direitos (art. 18 da LGPD)</h2>
-      <p>Você pode pedir, pelo e-mail do encarregado:</p>
+      <p>
+        No perfil você baixa uma cópia dos seus dados e apaga a conta (com a senha). Também pode
+        escrever ao encarregado para:
+      </p>
       <ul>
         <li>confirmação da existência de tratamento e acesso aos dados;</li>
         <li>correção de dados incompletos ou desatualizados;</li>
         <li>anonimização, bloqueio ou eliminação de dados desnecessários;</li>
-        <li>portabilidade, quando aplicável;</li>
         <li>informação sobre compartilhamentos;</li>
-        <li>revogação do consentimento e exclusão da conta.</li>
+        <li>revogação do consentimento, se preferir não usar o fluxo do perfil.</li>
       </ul>
       <p>
         Também é possível reclamar à Autoridade Nacional de Proteção de Dados (ANPD). Respondemos
@@ -115,8 +117,9 @@ export function PrivacyPage() {
         O Mavva é um jogo para todas as idades. Não pedimos data de nascimento e não impedimos o
         cadastro de crianças ou adolescentes. Nos termos do art. 14 da LGPD, o tratamento de dados
         de criança deve ser feito no melhor interesse dela: coletamos só o necessário para jogar,
-        não fazemos publicidade com esses dados e o responsável pode pedir acesso, correção ou
-        exclusão pelo e-mail do encarregado. Quem autoriza a criança a jogar consente em nome dela.
+        não fazemos publicidade com esses dados e o responsável pode baixar ou apagar os dados no
+        perfil, ou pelo e-mail do encarregado. Quem autoriza a criança a jogar consente em nome
+        dela.
       </p>
 
       <h2>10. Alterações</h2>

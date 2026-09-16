@@ -1,9 +1,8 @@
 import uuid
 
-from fastapi import APIRouter, HTTPException, Query, Request, status
+from fastapi import APIRouter, HTTPException, Query, status
 
 from app.core.deps import CurrentUser, DbDep
-from app.core.ratelimit import limiter
 from app.models import Duel, User, UserStats
 from app.models.enums import DuelStatus, FriendshipStatus
 from app.schemas.social import (
@@ -23,6 +22,7 @@ from app.services import duel_service, friendship_service
 from app.services.duel_service import DUEL_XP, DuelError
 from app.services.friendship_service import FriendshipError
 from app.services.gamification import rank_from_level
+from app.services.rate_limit_service import enforce_user_limit
 
 friends_router = APIRouter(prefix="/friends", tags=["friends"])
 duels_router = APIRouter(prefix="/duels", tags=["duels"])
@@ -71,13 +71,12 @@ def friends_overview(user: CurrentUser, db: DbDep) -> FriendsOverview:
 
 
 @friends_router.get("/search", response_model=list[UserSearchResult])
-@limiter.limit("60/minute")
 def search_users(
-    request: Request,
     user: CurrentUser,
     db: DbDep,
     q: str = Query(min_length=2, max_length=20),
 ) -> list[UserSearchResult]:
+    enforce_user_limit(db, user.id, "friend_search", limit=60, window_seconds=60)
     results = []
     for found, friendship in friendship_service.search_users(db, user, q):
         relation = "none"

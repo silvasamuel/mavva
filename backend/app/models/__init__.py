@@ -7,6 +7,7 @@ from app.models.gamification import (
 from app.models.moderation import QuestionFlag, QuestionProposal
 from app.models.question import Category, Question, QuestionAnswer, QuestionOption
 from app.models.quiz import QuizAnswer, QuizSession, QuizSessionQuestion
+from app.models.rate_limit import RateLimitBucket
 from app.models.social import Duel, Friendship
 from app.models.user import (
     EmailVerificationToken,
@@ -32,6 +33,7 @@ __all__ = [
     "QuizAnswer",
     "QuizSession",
     "QuizSessionQuestion",
+    "RateLimitBucket",
     "RefreshToken",
     "ReviewItem",
     "User",

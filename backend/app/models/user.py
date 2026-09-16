@@ -28,6 +28,7 @@ class User(TimestampMixin, Base):
     # Proof of informed consent (LGPD art. 8) — set only when the player accepts.
     terms_accepted_at: Mapped[datetime | None] = mapped_column(default=None)
     terms_version: Mapped[str | None] = mapped_column(String(20), default=None)
+    last_data_export_at: Mapped[datetime | None] = mapped_column(default=None)
 
     stats: Mapped["UserStats"] = relationship(back_populates="user", cascade="all, delete-orphan")
 
