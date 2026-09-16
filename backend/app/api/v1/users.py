@@ -32,9 +32,7 @@ def export_me(user: CurrentUser, db: DbDep) -> dict[str, Any]:
 
 
 @router.delete("/me", status_code=status.HTTP_204_NO_CONTENT)
-def delete_me(
-    body: AccountDeleteRequest, user: CurrentUser, db: DbDep, response: Response
-) -> None:
+def delete_me(body: AccountDeleteRequest, user: CurrentUser, db: DbDep, response: Response) -> None:
     try:
         delete_account(db, user, body.password)
     except UserServiceError as error:

@@ -84,10 +84,14 @@ def export_account(db: Session, user: User) -> dict[str, Any]:
         row.opponent_id for row in duels if row.opponent_id
     }
     other_ids = (friend_ids | duel_ids) - {user.id}
-    others = {
-        other.id: other.username
-        for other in db.scalars(select(User).where(User.id.in_(other_ids))).all()
-    } if other_ids else {}
+    others = (
+        {
+            other.id: other.username
+            for other in db.scalars(select(User).where(User.id.in_(other_ids))).all()
+        }
+        if other_ids
+        else {}
+    )
 
     payload = {
         "exported_at": now.isoformat(),

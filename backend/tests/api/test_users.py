@@ -75,9 +75,12 @@ class TestAccountDelete:
             headers={"Authorization": f"Bearer {other['access_token']}"},
         )
 
-        assert auth_client.request(
-            "DELETE", "/api/v1/users/me", json={"password": "senha-forte-123"}
-        ).status_code == 204
+        assert (
+            auth_client.request(
+                "DELETE", "/api/v1/users/me", json={"password": "senha-forte-123"}
+            ).status_code
+            == 204
+        )
         assert db.scalar(select(Friendship)) is None
         leftover = client.get(
             "/api/v1/friends", headers={"Authorization": f"Bearer {other['access_token']}"}
