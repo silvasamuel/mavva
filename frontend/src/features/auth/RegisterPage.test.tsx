@@ -32,26 +32,29 @@ describe('RegisterPage consent', () => {
     register.mockResolvedValue({ retry_after: 60 })
   })
 
-  it('keeps submit disabled until terms are accepted and sends the flag', async () => {
+  it('keeps submit disabled until the form is complete and terms are accepted', async () => {
     const user = userEvent.setup()
     renderRegister()
 
-    await user.type(screen.getByLabelText('Nome'), 'Ana')
-    await user.type(screen.getByLabelText('E-mail'), 'ana@teste.com')
-    await user.type(screen.getByLabelText('Senha'), 'senha-forte-123')
-
     const submit = screen.getByRole('button', { name: /criar conta/i })
     expect(submit).toBeDisabled()
+
+    await user.click(screen.getByRole('checkbox'))
+    expect(submit).toBeDisabled()
+
+    await user.type(screen.getByLabelText('Nome'), 'Ana')
+    await user.type(screen.getByLabelText('E-mail'), 'ana@teste.com')
+    expect(submit).toBeDisabled()
+
+    await user.type(screen.getByLabelText('Senha'), 'senha-forte-123')
+    expect(submit).toBeEnabled()
     expect(screen.getByRole('link', { name: /termos de uso/i })).toHaveAttribute('href', '/termos')
     expect(screen.getByRole('link', { name: /política de privacidade/i })).toHaveAttribute(
       'href',
       '/privacidade'
     )
 
-    await user.click(screen.getByRole('checkbox'))
-    expect(submit).toBeEnabled()
     await user.click(submit)
-
     expect(register).toHaveBeenCalledWith('Ana', 'ana@teste.com', 'senha-forte-123', true)
   })
 })

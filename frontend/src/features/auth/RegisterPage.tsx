@@ -8,6 +8,15 @@ import { AuthLayout } from './AuthLayout'
 import { useAuth } from './AuthContext'
 import { useEmailCooldown } from './useEmailCooldown'
 
+function isRegisterReady(name: string, email: string, password: string, acceptedTerms: boolean) {
+  return (
+    name.trim().length >= 2 &&
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim()) &&
+    password.length >= 8 &&
+    acceptedTerms
+  )
+}
+
 export function RegisterPage() {
   const { user, register } = useAuth()
   const [name, setName] = useState('')
@@ -26,12 +35,8 @@ export function RegisterPage() {
   async function handleSubmit(event: React.FormEvent) {
     event.preventDefault()
     setError('')
-    if (password.length < 8) {
-      setError('A senha precisa ter pelo menos 8 caracteres.')
-      return
-    }
-    if (!acceptedTerms) {
-      setError('Aceite os Termos de Uso e a Política de Privacidade para criar a conta.')
+    if (!isRegisterReady(name, email, password, acceptedTerms)) {
+      setError('Preencha nome, e-mail, senha e o aceite dos termos.')
       return
     }
     setSubmitting(true)
@@ -156,7 +161,12 @@ export function RegisterPage() {
             {error}
           </p>
         )}
-        <Button type="submit" full loading={submitting} disabled={!acceptedTerms}>
+        <Button
+          type="submit"
+          full
+          loading={submitting}
+          disabled={!isRegisterReady(name, email, password, acceptedTerms)}
+        >
           Criar conta
         </Button>
       </form>
