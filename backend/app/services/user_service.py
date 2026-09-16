@@ -31,6 +31,10 @@ def _iso(value: datetime | date | None) -> str | None:
     return value.isoformat() if value is not None else None
 
 
+def _username(others: dict[UUID, str], user_id: UUID | None) -> str | None:
+    return None if user_id is None else others.get(user_id)
+
+
 def _wait_label(seconds: int) -> str:
     hours = seconds // 3600
     minutes = max(1, (seconds % 3600) // 60)
@@ -153,8 +157,9 @@ def export_account(db: Session, user: User) -> dict[str, Any]:
         ],
         "friends": [
             {
-                "username": others.get(
-                    row.addressee_id if row.requester_id == user.id else row.requester_id
+                "username": _username(
+                    others,
+                    row.addressee_id if row.requester_id == user.id else row.requester_id,
                 ),
                 "status": row.status.value,
                 "created_at": _iso(row.created_at),
@@ -167,8 +172,9 @@ def export_account(db: Session, user: User) -> dict[str, Any]:
                 "mode": row.mode.value,
                 "status": row.status.value,
                 "role": "challenger" if row.challenger_id == user.id else "opponent",
-                "opponent_username": others.get(
-                    row.opponent_id if row.challenger_id == user.id else row.challenger_id
+                "opponent_username": _username(
+                    others,
+                    row.opponent_id if row.challenger_id == user.id else row.challenger_id,
                 ),
                 "is_draw": row.is_draw,
                 "created_at": _iso(row.created_at),
