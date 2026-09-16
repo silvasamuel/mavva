@@ -1,6 +1,6 @@
 """add user last data export timestamp
 
-Revision ID: a1b2c3d4e5f6
+Revision ID: e6f7a8b9c0d1
 Revises: e4f5a6b7c8d9
 Create Date: 2026-09-16 18:15:00.000000
 
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 
 from alembic import op
 
-revision: str = "a1b2c3d4e5f6"
+revision: str = "e6f7a8b9c0d1"
 down_revision: str | None = "e4f5a6b7c8d9"
 branch_labels: str | Sequence[str] | None = None
 depends_on: str | Sequence[str] | None = None

@@ -1,7 +1,7 @@
 """add rate limit buckets
 
-Revision ID: b2c3d4e5f6a7
-Revises: a1b2c3d4e5f6
+Revision ID: f7a8b9c0d1e2
+Revises: e6f7a8b9c0d1
 Create Date: 2026-09-16 18:20:00.000000
 
 """
@@ -12,8 +12,8 @@ import sqlalchemy as sa
 
 from alembic import op
 
-revision: str = "b2c3d4e5f6a7"
-down_revision: str | None = "a1b2c3d4e5f6"
+revision: str = "f7a8b9c0d1e2"
+down_revision: str | None = "e6f7a8b9c0d1"
 branch_labels: str | Sequence[str] | None = None
 depends_on: str | Sequence[str] | None = None
 
