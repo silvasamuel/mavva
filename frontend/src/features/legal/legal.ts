@@ -7,7 +7,7 @@ export const CONTROLLER = {
   tradeName: 'Mavva',
   cnpj: '45.836.623/0001-37',
   cnpjDigits: '45836623000137',
-  address: 'Avenida Guarapari, 1299, Santa Amélia, Belo Horizonte/MG, CEP 31560-300',
+  address: 'Belo Horizonte/MG',
   officer: 'Samuel Eusébio da Silva',
   officerRole: 'Sócio-administrador e encarregado pelo tratamento de dados',
 } as const
