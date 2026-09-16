@@ -61,7 +61,8 @@ export function AccountRights() {
       <CardTitle>Seus direitos</CardTitle>
       <p className="text-sm font-semibold text-sand-600">
         Baixe uma cópia do que o Mavva guarda sobre você ou apague a conta. A exclusão remove
-        quizzes, duelos, amigos e o cadastro, e não dá para desfazer.
+        quizzes, duelos, amigos e o cadastro, e não dá para desfazer. A cópia pode ser pedida de
+        novo depois de algumas horas.
       </p>
       {message && <p className="text-sm font-bold text-leaf-700">{message}</p>}
       {error && (

@@ -1,3 +1,5 @@
+from datetime import UTC, datetime, timedelta
+
 from fastapi.testclient import TestClient
 from sqlalchemy import select
 from sqlalchemy.orm import Session
@@ -23,6 +25,19 @@ class TestAccountExport:
 
     def test_export_requires_auth(self, client: TestClient):
         assert client.get("/api/v1/users/me/export").status_code == 401
+
+    def test_export_waits_before_another_download(self, auth_client: TestClient, db: Session):
+        assert auth_client.get("/api/v1/users/me/export").status_code == 200
+        blocked = auth_client.get("/api/v1/users/me/export")
+        assert blocked.status_code == 429
+        assert blocked.headers.get("retry-after")
+        assert "tente de novo" in blocked.json()["detail"].lower()
+
+        user = db.scalar(select(User).where(User.email == "samuel@teste.com"))
+        assert user is not None
+        user.last_data_export_at = datetime.now(UTC) - timedelta(hours=7)
+        db.flush()
+        assert auth_client.get("/api/v1/users/me/export").status_code == 200
 
 
 class TestAccountDelete:

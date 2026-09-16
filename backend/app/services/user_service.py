@@ -1,3 +1,4 @@
+import math
 from datetime import UTC, date, datetime
 from typing import Any
 from uuid import UUID
@@ -5,6 +6,7 @@ from uuid import UUID
 from sqlalchemy import or_, select
 from sqlalchemy.orm import Session
 
+from app.core.config import get_settings
 from app.core.security import verify_password
 from app.models import (
     DailyActivity,
@@ -19,16 +21,39 @@ from app.models import (
 
 
 class UserServiceError(Exception):
-    def __init__(self, message: str, status_code: int = 400):
+    def __init__(self, message: str, status_code: int = 400, retry_after: int | None = None):
         self.message = message
         self.status_code = status_code
+        self.retry_after = retry_after
 
 
 def _iso(value: datetime | date | None) -> str | None:
     return value.isoformat() if value is not None else None
 
 
+def _wait_label(seconds: int) -> str:
+    hours = seconds // 3600
+    minutes = max(1, (seconds % 3600) // 60)
+    if hours:
+        return f"{hours} h"
+    return f"{minutes} min"
+
+
 def export_account(db: Session, user: User) -> dict[str, Any]:
+    cooldown = get_settings().data_export_cooldown_seconds
+    now = datetime.now(UTC)
+    last = user.last_data_export_at
+    if last is not None:
+        if last.tzinfo is None:
+            last = last.replace(tzinfo=UTC)
+        remaining = max(0, math.ceil(cooldown - (now - last).total_seconds()))
+        if remaining > 0:
+            raise UserServiceError(
+                f"Você já baixou seus dados. Tente de novo em {_wait_label(remaining)}.",
+                status_code=429,
+                retry_after=remaining,
+            )
+
     stats = user.stats
     sessions = db.scalars(
         select(QuizSession).where(QuizSession.user_id == user.id).order_by(QuizSession.started_at)
@@ -64,8 +89,8 @@ def export_account(db: Session, user: User) -> dict[str, Any]:
         for other in db.scalars(select(User).where(User.id.in_(other_ids))).all()
     } if other_ids else {}
 
-    return {
-        "exported_at": datetime.now(UTC).isoformat(),
+    payload = {
+        "exported_at": now.isoformat(),
         "user": {
             "id": str(user.id),
             "name": user.name,
@@ -160,6 +185,9 @@ def export_account(db: Session, user: User) -> dict[str, Any]:
             for row in proposals
         ],
     }
+    user.last_data_export_at = now
+    db.commit()
+    return payload
 
 
 def delete_account(db: Session, user: User, password: str) -> UUID:

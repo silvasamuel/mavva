@@ -31,7 +31,7 @@ Erros seguem o formato `{"detail": "mensagem"}` (padrão FastAPI) com status HTT
 |---|---|---|
 | GET | `/users/me` | Perfil do usuário logado. |
 | PATCH | `/users/me` | Atualiza `name`, `daily_goal_xp`, `timezone`. |
-| GET | `/users/me/export` | Cópia JSON dos dados do titular (cadastro, stats, quizzes, duelos, amigos). Sem senha nem hash. |
+| GET | `/users/me/export` | Cópia JSON dos dados do titular (cadastro, stats, quizzes, duelos, amigos). Sem senha nem hash. 429 se já exportou nas últimas 6 h (`Retry-After`). |
 | DELETE | `/users/me` | Apaga a conta. Body: `{password}`. 403 se a senha estiver errada. 204 + limpa o cookie. |
 
 ## Catálogo

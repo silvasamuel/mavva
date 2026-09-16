@@ -18,9 +18,17 @@ def get_me(user: CurrentUser) -> UserOut:
     return UserOut.model_validate(user)
 
 
+def _service_error(error: UserServiceError) -> HTTPException:
+    headers = {"Retry-After": str(error.retry_after)} if error.retry_after else None
+    return HTTPException(error.status_code, error.message, headers=headers)
+
+
 @router.get("/me/export")
 def export_me(user: CurrentUser, db: DbDep) -> dict[str, Any]:
-    return export_account(db, user)
+    try:
+        return export_account(db, user)
+    except UserServiceError as error:
+        raise _service_error(error) from error
 
 
 @router.delete("/me", status_code=status.HTTP_204_NO_CONTENT)
@@ -30,7 +38,7 @@ def delete_me(
     try:
         delete_account(db, user, body.password)
     except UserServiceError as error:
-        raise HTTPException(error.status_code, error.message) from error
+        raise _service_error(error) from error
     response.delete_cookie(REFRESH_COOKIE, path="/api/v1/auth")
 
 
