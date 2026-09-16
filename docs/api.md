@@ -7,7 +7,7 @@ Erros seguem o formato `{"detail": "mensagem"}` (padrão FastAPI) com status HTT
 
 | Método | Rota | Descrição |
 |---|---|---|
-| POST | `/auth/register` | Cria conta **não verificada**. Body: `{name, email, password}`. Envia e-mail de confirmação. **Não** emite tokens. 409 se o e-mail já existe. Resposta inclui `retry_after` (segundos até poder reenviar). |
+| POST | `/auth/register` | Cria conta **não verificada**. Body: `{name, email, password, accepted_terms: true}`. Recusa sem o aceite (422). Envia e-mail de confirmação. **Não** emite tokens. 409 se o e-mail já existe. Resposta inclui `retry_after` (segundos até poder reenviar). |
 | POST | `/auth/verify-email` | Body: `{token}`. Confirma a conta, emite `{access_token, user}` + cookie `refresh_token`. |
 | POST | `/auth/resend-verification` | Body: `{email}`. Sempre 202 (não revela existência). Cooldown de 60s por conta; `retry_after` diz quanto falta. Invalida links anteriores quando envia de fato. |
 | POST | `/auth/login` | Body: `{email, password}`. 401 se senha errada; **403** se a conta ainda não confirmou o e-mail ou está inativa. Retorna `{access_token, user}` + cookie httpOnly `refresh_token`. |

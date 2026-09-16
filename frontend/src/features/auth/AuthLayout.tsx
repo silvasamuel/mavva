@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Logo } from '@/components/Logo'
 import { PageMeta } from '@/components/PageMeta'
+import { LegalLinks } from '@/features/legal/LegalLinks'
 
 export function AuthLayout({
   title,
@@ -27,6 +28,7 @@ export function AuthLayout({
       <p className="max-w-xs text-center text-xs font-semibold text-sand-500">
         “O maná... era como semente de coentro” — alimento novo a cada manhã. (Êx 16:31)
       </p>
+      <LegalLinks />
     </div>
   )
 }

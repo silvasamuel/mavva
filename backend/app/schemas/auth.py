@@ -1,4 +1,4 @@
-from typing import Annotated
+from typing import Annotated, Literal
 
 from pydantic import BaseModel, EmailStr, Field
 
@@ -11,6 +11,7 @@ class RegisterRequest(BaseModel):
     name: Name
     email: EmailStr
     password: Password
+    accepted_terms: Literal[True]
 
 
 class LoginRequest(BaseModel):

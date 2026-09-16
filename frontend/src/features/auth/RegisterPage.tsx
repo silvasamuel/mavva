@@ -18,6 +18,7 @@ export function RegisterPage() {
   const [pendingEmail, setPendingEmail] = useState('')
   const [resending, setResending] = useState(false)
   const [resent, setResent] = useState(false)
+  const [acceptedTerms, setAcceptedTerms] = useState(false)
   const cooldown = useEmailCooldown('verify', pendingEmail || email)
 
   if (user) return <Navigate to="/" replace />
@@ -29,9 +30,13 @@ export function RegisterPage() {
       setError('A senha precisa ter pelo menos 8 caracteres.')
       return
     }
+    if (!acceptedTerms) {
+      setError('Aceite os Termos de Uso e a Política de Privacidade para criar a conta.')
+      return
+    }
     setSubmitting(true)
     try {
-      const { retry_after } = await register(name, email, password)
+      const { retry_after } = await register(name, email, password, acceptedTerms)
       cooldown.start(retry_after)
       setPendingEmail(email)
     } catch (err) {
@@ -121,12 +126,37 @@ export function RegisterPage() {
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Mínimo de 8 caracteres"
         />
+        <label className="flex items-start gap-3 text-sm font-semibold text-sand-700">
+          <input
+            type="checkbox"
+            required
+            checked={acceptedTerms}
+            onChange={(event) => setAcceptedTerms(event.target.checked)}
+            className="mt-1 h-4 w-4 shrink-0 accent-leaf-500"
+          />
+          <span>
+            Li e aceito os{' '}
+            <Link to="/termos" target="_blank" rel="noreferrer" className="font-extrabold text-leaf-700 underline">
+              Termos de Uso
+            </Link>{' '}
+            e a{' '}
+            <Link
+              to="/privacidade"
+              target="_blank"
+              rel="noreferrer"
+              className="font-extrabold text-leaf-700 underline"
+            >
+              Política de Privacidade
+            </Link>
+            . Autorizo o tratamento dos meus dados para criar e operar esta conta.
+          </span>
+        </label>
         {error && (
           <p role="alert" className="rounded-xl bg-red-50 px-3 py-2 text-sm font-semibold text-red-700">
             {error}
           </p>
         )}
-        <Button type="submit" full loading={submitting}>
+        <Button type="submit" full loading={submitting} disabled={!acceptedTerms}>
           Criar conta
         </Button>
       </form>
