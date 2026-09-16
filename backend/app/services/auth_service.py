@@ -11,6 +11,9 @@ from app.core.config import get_settings
 from app.core.security import generate_opaque_token, hash_password, hash_token, verify_password
 from app.models import EmailVerificationToken, PasswordResetToken, RefreshToken, User, UserStats
 
+# Bump when Termos or Política de Privacidade change, so old acceptances stay auditable.
+TERMS_VERSION = "2026-09-16"
+
 
 class AuthError(Exception):
     def __init__(self, message: str):
@@ -61,6 +64,8 @@ def register_user(db: Session, name: str, email: str, password: str) -> User:
         email=email,
         username=generate_username(db, email),
         hashed_password=hash_password(password),
+        terms_accepted_at=datetime.now(UTC),
+        terms_version=TERMS_VERSION,
     )
     user.stats = UserStats()
     db.add(user)

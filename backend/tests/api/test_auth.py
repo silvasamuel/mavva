@@ -35,16 +35,43 @@ class TestRegister:
         _register(client)
         response = client.post(
             "/api/v1/auth/register",
-            json={"name": "Outro", "email": "NOVO@teste.com", "password": "senha-forte-123"},
+            json={
+                "name": "Outro",
+                "email": "NOVO@teste.com",
+                "password": "senha-forte-123",
+                "accepted_terms": True,
+            },
         )
         assert response.status_code == 409
 
     def test_short_password_rejected(self, client: TestClient):
         response = client.post(
             "/api/v1/auth/register",
-            json={"name": "Novo", "email": "x@teste.com", "password": "curta"},
+            json={
+                "name": "Novo",
+                "email": "x@teste.com",
+                "password": "curta",
+                "accepted_terms": True,
+            },
         )
         assert response.status_code == 422
+
+    def test_register_requires_accepted_terms(self, client: TestClient):
+        missing = client.post(
+            "/api/v1/auth/register",
+            json={"name": "Novo", "email": "termos@teste.com", "password": "senha-forte-123"},
+        )
+        assert missing.status_code == 422
+        refused = client.post(
+            "/api/v1/auth/register",
+            json={
+                "name": "Novo",
+                "email": "termos@teste.com",
+                "password": "senha-forte-123",
+                "accepted_terms": False,
+            },
+        )
+        assert refused.status_code == 422
 
 
 class TestVerifyEmail:

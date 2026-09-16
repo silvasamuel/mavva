@@ -1,8 +1,6 @@
 import { useEffect } from 'react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/react'
 import { IconContext } from '@phosphor-icons/react'
 import { WorldBackdrop } from '@/components/WorldBackdrop'
 import { armAudio } from '@/lib/sfx'
@@ -23,6 +21,9 @@ import { DuelResultPage } from '@/features/duels/DuelResultPage'
 import { FriendsPage } from '@/features/friends/FriendsPage'
 import { RankingPage } from '@/features/ranking/RankingPage'
 import { SuggestQuestionPage } from '@/features/moderation/SuggestQuestionPage'
+import { PrivacyPage } from '@/features/legal/PrivacyPage'
+import { TermsPage } from '@/features/legal/TermsPage'
+import { TrackingConsent } from '@/features/legal/TrackingConsent'
 import { AppShell } from './AppShell'
 import { HomeGate } from './HomeGate'
 import { RequireAuth } from './RequireAuth'
@@ -40,12 +41,11 @@ export default function App() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Analytics />
-      <SpeedInsights />
       <WorldBackdrop />
       <IconContext.Provider value={{ weight: 'duotone', color: 'currentColor' }}>
       <div className="relative z-10">
       <BrowserRouter>
+        <TrackingConsent />
         <AuthProvider>
           <Routes>
             <Route path="/" element={<HomeGate />} />
@@ -54,6 +54,8 @@ export default function App() {
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
             <Route path="/reset-password" element={<ResetPasswordPage />} />
             <Route path="/verify-email" element={<VerifyEmailPage />} />
+            <Route path="/termos" element={<TermsPage />} />
+            <Route path="/privacidade" element={<PrivacyPage />} />
 
             <Route element={<RequireAuth />}>
               {/* Quiz play is fullscreen-focused, outside the shell */}

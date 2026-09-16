@@ -25,6 +25,9 @@ class User(TimestampMixin, Base):
     )
     timezone: Mapped[str] = mapped_column(String(64), default="America/Sao_Paulo")
     daily_goal_xp: Mapped[int] = mapped_column(default=50)
+    # Proof of informed consent (LGPD art. 8) — set only when the player accepts.
+    terms_accepted_at: Mapped[datetime | None] = mapped_column(default=None)
+    terms_version: Mapped[str | None] = mapped_column(String(20), default=None)
 
     stats: Mapped["UserStats"] = relationship(back_populates="user", cascade="all, delete-orphan")
 

@@ -123,6 +123,14 @@ export function LandingPage() {
           <Link to="/register" className="text-grain-200 underline-offset-2 hover:text-white hover:underline">
             Cadastrar
           </Link>
+          <span className="text-white/50"> · </span>
+          <Link to="/termos" className="text-grain-200 underline-offset-2 hover:text-white hover:underline">
+            Termos
+          </Link>
+          <span className="text-white/50"> · </span>
+          <Link to="/privacidade" className="text-grain-200 underline-offset-2 hover:text-white hover:underline">
+            Privacidade
+          </Link>
         </p>
       </footer>
     </div>

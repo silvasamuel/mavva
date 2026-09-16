@@ -10,6 +10,8 @@ import { RankBadge } from '@/components/RankBadge'
 import { nextRankCopy, rankFromLevel, rankProgress } from '@/lib/ranks'
 import { Spinner } from '@/components/ui/Spinner'
 import { useAuth } from '@/features/auth/AuthContext'
+import { LEGAL_CONTACT_EMAIL } from '@/features/legal/legal'
+import { LegalLinks } from '@/features/legal/LegalLinks'
 
 const GOAL_OPTIONS = [
   { value: 20, label: '20 XP — Casual' },
@@ -138,6 +140,14 @@ export function ProfilePage() {
         >
           Sair da conta
         </Button>
+        <p className="pt-3 text-center text-xs font-semibold text-sand-500">
+          Para corrigir ou apagar seus dados, escreva para{' '}
+          <a href={`mailto:${LEGAL_CONTACT_EMAIL}`} className="font-extrabold text-leaf-700 underline">
+            {LEGAL_CONTACT_EMAIL}
+          </a>
+          .
+        </p>
+        <LegalLinks />
       </Card>
     </div>
   )

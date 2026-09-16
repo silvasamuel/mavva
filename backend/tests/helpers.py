@@ -12,7 +12,7 @@ def register_user(
 ) -> dict:
     response = client.post(
         "/api/v1/auth/register",
-        json={"name": name, "email": email, "password": password},
+        json={"name": name, "email": email, "password": password, "accepted_terms": True},
     )
     assert response.status_code == 201, response.text
     return response.json()
