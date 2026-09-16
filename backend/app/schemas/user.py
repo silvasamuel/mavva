@@ -36,3 +36,7 @@ class UserUpdate(BaseModel):
     username: Username | None = None
     daily_goal_xp: int | None = Field(default=None, ge=10, le=500)
     timezone: str | None = Field(default=None, max_length=64)
+
+
+class AccountDeleteRequest(BaseModel):
+    password: str = Field(min_length=1, max_length=128)
