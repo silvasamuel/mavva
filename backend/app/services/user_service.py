@@ -44,6 +44,12 @@ def _wait_label(seconds: int) -> str:
 
 
 def export_account(db: Session, user: User) -> dict[str, Any]:
+    """Builds the full data-portability payload for one user.
+
+    Called from the admin panel while self-service is disabled (LGPD art.
+    18 export requests go through the DPO for now) — the cooldown message is
+    phrased for that third-person caller, not the account owner.
+    """
     cooldown = get_settings().data_export_cooldown_seconds
     now = datetime.now(UTC)
     last = user.last_data_export_at
@@ -53,7 +59,8 @@ def export_account(db: Session, user: User) -> dict[str, Any]:
         remaining = max(0, math.ceil(cooldown - (now - last).total_seconds()))
         if remaining > 0:
             raise UserServiceError(
-                f"Você já baixou seus dados. Tente de novo em {_wait_label(remaining)}.",
+                f"Os dados deste usuário já foram exportados recentemente. "
+                f"Tente de novo em {_wait_label(remaining)}.",
                 status_code=429,
                 retry_after=remaining,
             )

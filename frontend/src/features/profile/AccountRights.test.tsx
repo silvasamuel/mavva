@@ -5,7 +5,6 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { AccountRights } from './AccountRights'
 
 const logout = vi.fn()
-const apiGet = vi.fn()
 const apiDelete = vi.fn()
 
 vi.mock('@/features/auth/AuthContext', () => ({
@@ -14,7 +13,6 @@ vi.mock('@/features/auth/AuthContext', () => ({
 
 vi.mock('@/lib/api', () => ({
   api: {
-    get: (...args: unknown[]) => apiGet(...args),
     delete: (...args: unknown[]) => apiDelete(...args),
   },
   ApiError: class ApiError extends Error {
@@ -25,13 +23,20 @@ vi.mock('@/lib/api', () => ({
 describe('AccountRights', () => {
   beforeEach(() => {
     logout.mockReset().mockResolvedValue(undefined)
-    apiGet.mockReset().mockResolvedValue({ user: { email: 'ana@teste.com' } })
     apiDelete.mockReset().mockResolvedValue(undefined)
-    URL.createObjectURL = vi.fn(() => 'blob:mavva')
-    URL.revokeObjectURL = vi.fn()
   })
 
-  it('downloads an export and deletes only after the password is confirmed', async () => {
+  it('has no self-service export — only account deletion', () => {
+    render(
+      <MemoryRouter>
+        <AccountRights />
+      </MemoryRouter>
+    )
+    expect(screen.queryByRole('button', { name: /baixar meus dados/i })).not.toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /apagar conta/i })).toBeInTheDocument()
+  })
+
+  it('keeps the confirm button disabled until both the typed word and the password are given', async () => {
     const user = userEvent.setup()
     render(
       <MemoryRouter>
@@ -39,17 +44,52 @@ describe('AccountRights', () => {
       </MemoryRouter>
     )
 
-    await user.click(screen.getByRole('button', { name: /baixar meus dados/i }))
-    await waitFor(() => expect(apiGet).toHaveBeenCalledWith('/users/me/export'))
-    expect(await screen.findByText(/cópia dos seus dados baixada/i)).toBeInTheDocument()
+    await user.click(screen.getByRole('button', { name: /^apagar conta$/i }))
+    const confirmButton = screen.getByRole('button', { name: /apagar definitivamente/i })
+    expect(confirmButton).toBeDisabled()
 
-    await user.click(screen.getByRole('button', { name: /apagar conta/i }))
+    await user.type(screen.getByLabelText(/digite apagar para confirmar/i), 'apagar')
+    expect(confirmButton).toBeDisabled()
+
     await user.type(screen.getByLabelText('Senha'), 'senha-forte-123')
-    await user.click(screen.getByRole('button', { name: /apagar definitivamente/i }))
+    expect(confirmButton).toBeEnabled()
 
+    await user.click(confirmButton)
     await waitFor(() =>
       expect(apiDelete).toHaveBeenCalledWith('/users/me', { password: 'senha-forte-123' })
     )
     expect(logout).toHaveBeenCalled()
+  })
+
+  it('does not delete when only the password is filled without the confirm word', async () => {
+    const user = userEvent.setup()
+    render(
+      <MemoryRouter>
+        <AccountRights />
+      </MemoryRouter>
+    )
+
+    await user.click(screen.getByRole('button', { name: /^apagar conta$/i }))
+    await user.type(screen.getByLabelText('Senha'), 'senha-forte-123')
+    expect(screen.getByRole('button', { name: /apagar definitivamente/i })).toBeDisabled()
+    expect(apiDelete).not.toHaveBeenCalled()
+  })
+
+  it('clears the typed password when the confirmation is cancelled', async () => {
+    const user = userEvent.setup()
+    render(
+      <MemoryRouter>
+        <AccountRights />
+      </MemoryRouter>
+    )
+
+    await user.click(screen.getByRole('button', { name: /^apagar conta$/i }))
+    await user.type(screen.getByLabelText(/digite apagar para confirmar/i), 'APAGAR')
+    await user.type(screen.getByLabelText('Senha'), 'senha-forte-123')
+    await user.click(screen.getByRole('button', { name: /cancelar/i }))
+
+    await user.click(screen.getByRole('button', { name: /^apagar conta$/i }))
+    expect(screen.getByLabelText('Senha')).toHaveValue('')
+    expect(screen.getByLabelText(/digite apagar para confirmar/i)).toHaveValue('')
   })
 })

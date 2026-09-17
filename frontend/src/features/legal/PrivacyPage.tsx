@@ -83,11 +83,13 @@ export function PrivacyPage() {
 
       <h2>6. Seus direitos (art. 18 da LGPD)</h2>
       <p>
-        No perfil você baixa uma cópia dos seus dados e apaga a conta (com a senha). Também pode
-        escrever ao encarregado para:
+        No perfil você apaga a conta a qualquer momento (com a senha). A cópia dos seus dados
+        pode ser pedida ao encarregado por e-mail; o download direto no perfil está
+        temporariamente desativado. Também pode escrever ao encarregado para:
       </p>
       <ul>
-        <li>confirmação da existência de tratamento e acesso aos dados;</li>
+        <li>acesso e cópia dos seus dados;</li>
+        <li>confirmação da existência de tratamento;</li>
         <li>correção de dados incompletos ou desatualizados;</li>
         <li>anonimização, bloqueio ou eliminação de dados desnecessários;</li>
         <li>informação sobre compartilhamentos;</li>

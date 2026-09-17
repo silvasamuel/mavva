@@ -31,8 +31,7 @@ Erros seguem o formato `{"detail": "mensagem"}` (padrão FastAPI) com status HTT
 |---|---|---|
 | GET | `/users/me` | Perfil do usuário logado. |
 | PATCH | `/users/me` | Atualiza `name`, `daily_goal_xp`, `timezone`. |
-| GET | `/users/me/export` | Cópia JSON dos dados do titular (cadastro, stats, quizzes, duelos, amigos). Sem senha nem hash. 429 se já exportou nas últimas 6 h (`Retry-After`). Quiz/amigos/denúncia/sugestão também têm teto por `user.id` no Postgres. |
-| DELETE | `/users/me` | Apaga a conta. Body: `{password}`. 403 se a senha estiver errada. 204 + limpa o cookie. |
+| DELETE | `/users/me` | Apaga a conta. Body: `{password}`. 403 se a senha estiver errada. 204 + limpa o cookie. Perfil confirma com senha + digitar "APAGAR". |
 
 ## Catálogo
 
@@ -165,11 +164,12 @@ real — o front-end separado (bundle `/admin`) é conveniência, não proteçã
 | Método | Rota | Descrição |
 |---|---|---|
 | GET | `/admin/dashboard` | Contagens agregadas da tela inicial (`users`, `questions`, `review`, `activity`). Só `COUNT`/`SUM`/`MAX` — não carrega linhas. |
-| GET | `/admin/users?search&limit&offset` | Lista usuários com stats, `email_verified_at` e `is_active`. |
+| GET | `/admin/users?search&sort&limit&offset` | Lista usuários com stats, `email_verified_at` e `is_active`. `sort` ordena por qualquer coluna clicável da tabela (`name`, `email_verified`, `is_active`, `role`, `xp`, `streak`, `answered`, `accuracy`); prefixo `-` inverte. |
 | GET | `/admin/users/{id}` | Detalhe do usuário (conta, progresso, duelos). |
 | PATCH | `/admin/users/{id}` | Body: `{is_active}`. Inativar revoga sessões. Não vale para a própria conta (400). |
+| GET | `/admin/users/{id}/export` | Cópia JSON dos dados do titular (LGPD art. 18: cadastro, stats, quizzes, duelos, amigos). Sem senha nem hash. Admin-only enquanto o self-service (`/users/me/export`) fica desativado. 429 se já exportado nas últimas 6 h (`Retry-After`). |
 | GET | `/admin/categories` | Categorias (id, slug, nome, ícone) para os filtros/edição. |
-| GET | `/admin/questions?search&category_id&difficulty&limit&offset` | Lista paginada de perguntas. |
+| GET | `/admin/questions?search&category_id&difficulty&type&limit&offset` | Lista paginada de perguntas. |
 | GET | `/admin/questions/{id}` | Detalhe completo (enunciado, explicação, referência, opções, respostas). |
 | PATCH | `/admin/questions/{id}` | Edita campos enviados (`exclude_unset`). Valida MC (4 opções, 1 correta) e aberta (≥1 resposta). `type` e `category_id` são imutáveis. |
 | GET | `/admin/content/status` | Compara o banco com `content/questions/*.json`: `{mode: github\|local, dirty_files}`. |

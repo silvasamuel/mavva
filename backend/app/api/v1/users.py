@@ -1,4 +1,3 @@
-from typing import Any
 from zoneinfo import ZoneInfo
 
 from fastapi import APIRouter, HTTPException, Response, status
@@ -7,7 +6,7 @@ from sqlalchemy import select
 from app.core.deps import CurrentUser, DbDep
 from app.models import User
 from app.schemas.user import AccountDeleteRequest, UserOut, UserUpdate
-from app.services.user_service import UserServiceError, delete_account, export_account
+from app.services.user_service import UserServiceError, delete_account
 
 router = APIRouter(prefix="/users", tags=["users"])
 REFRESH_COOKIE = "refresh_token"
@@ -23,12 +22,9 @@ def _service_error(error: UserServiceError) -> HTTPException:
     return HTTPException(error.status_code, error.message, headers=headers)
 
 
-@router.get("/me/export")
-def export_me(user: CurrentUser, db: DbDep) -> dict[str, Any]:
-    try:
-        return export_account(db, user)
-    except UserServiceError as error:
-        raise _service_error(error) from error
+# Self-service export used to live here (GET /me/export). It's admin-only for
+# now — see /admin/users/{id}/export — while the download flow gets more
+# review; players can still request a copy from the DPO by e-mail.
 
 
 @router.delete("/me", status_code=status.HTTP_204_NO_CONTENT)
