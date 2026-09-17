@@ -28,9 +28,6 @@ export function DashboardPanel({
     <div className="space-y-6">
       <header>
         <h1 className="text-2xl font-extrabold">Início</h1>
-        <p className="text-sm font-semibold text-sand-500">
-          Visão geral do Mavva — só contagens, sem carregar tabelas.
-        </p>
       </header>
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">

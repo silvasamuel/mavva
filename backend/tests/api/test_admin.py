@@ -4,8 +4,8 @@ from zoneinfo import ZoneInfo
 from fastapi.testclient import TestClient
 from sqlalchemy.orm import Session
 
-from app.models import DailyActivity, User
-from app.models.enums import UserRole
+from app.models import DailyActivity, User, UserStats
+from app.models.enums import Difficulty, QuestionType, UserRole
 from tests.factories import make_category, make_mc_question, make_open_question
 from tests.helpers import register_user, verification_tokens
 
@@ -211,6 +211,105 @@ class TestAdminUsers:
             auth_client.get("/api/v1/admin/users/00000000-0000-0000-0000-000000000001").status_code
             == 404
         )
+
+
+class TestAdminQuestionTypeFilter:
+    def test_filters_by_multiple_choice_and_open_answer(self, auth_client: TestClient, db: Session):
+        _promote_to_admin(db, "samuel@teste.com")
+        category = make_category(db)
+        mc = make_mc_question(db, category)
+        op = make_open_question(db, category)
+
+        mc_only = auth_client.get("/api/v1/admin/questions?type=multiple_choice")
+        assert mc_only.status_code == 200, mc_only.text
+        mc_ids = {item["id"] for item in mc_only.json()["items"]}
+        assert str(mc.id) in mc_ids
+        assert str(op.id) not in mc_ids
+        assert all(item["type"] == "multiple_choice" for item in mc_only.json()["items"])
+
+        open_only = auth_client.get("/api/v1/admin/questions?type=open_answer")
+        open_ids = {item["id"] for item in open_only.json()["items"]}
+        assert str(op.id) in open_ids
+        assert str(mc.id) not in open_ids
+
+    def test_combines_with_difficulty_and_category(self, auth_client: TestClient, db: Session):
+        _promote_to_admin(db, "samuel@teste.com")
+        category = make_category(db)
+        easy_open = make_open_question(db, category, difficulty=Difficulty.EASY)
+        make_mc_question(db, category, difficulty=Difficulty.EASY)
+        make_open_question(db, category, difficulty=Difficulty.HARD)
+
+        response = auth_client.get(
+            "/api/v1/admin/questions"
+            f"?type={QuestionType.OPEN_ANSWER.value}&difficulty=easy&category_id={category.id}"
+        )
+        items = response.json()["items"]
+        assert [item["id"] for item in items] == [str(easy_open.id)]
+
+
+class TestAdminUsersSorting:
+    def _set_stats(
+        self,
+        db: Session,
+        email: str,
+        *,
+        total_xp: int = 0,
+        current_streak: int = 0,
+        questions_answered: int = 0,
+        correct_answers: int = 0,
+    ) -> None:
+        user = db.query(User).filter(User.email == email).one()
+        stats = db.get(UserStats, user.id)
+        assert stats is not None
+        stats.total_xp = total_xp
+        stats.current_streak = current_streak
+        stats.questions_answered = questions_answered
+        stats.correct_answers = correct_answers
+        db.flush()
+
+    def test_sort_by_xp_ascending_and_descending(self, auth_client: TestClient, db: Session):
+        _promote_to_admin(db, "samuel@teste.com")
+        register_user(auth_client, name="Baixo XP", email="baixo@teste.com")
+        register_user(auth_client, name="Alto XP", email="alto@teste.com")
+        self._set_stats(db, "samuel@teste.com", total_xp=50)
+        self._set_stats(db, "baixo@teste.com", total_xp=10)
+        self._set_stats(db, "alto@teste.com", total_xp=200)
+
+        ascending = auth_client.get("/api/v1/admin/users?sort=xp").json()["items"]
+        assert [u["email"] for u in ascending] == [
+            "baixo@teste.com",
+            "samuel@teste.com",
+            "alto@teste.com",
+        ]
+
+        descending = auth_client.get("/api/v1/admin/users?sort=-xp").json()["items"]
+        assert [u["email"] for u in descending] == [
+            "alto@teste.com",
+            "samuel@teste.com",
+            "baixo@teste.com",
+        ]
+
+    def test_sort_by_accuracy_treats_zero_answers_as_lowest(
+        self, auth_client: TestClient, db: Session
+    ):
+        _promote_to_admin(db, "samuel@teste.com")
+        register_user(auth_client, name="Sem respostas", email="zero@teste.com")
+        register_user(auth_client, name="Precisão alta", email="preciso@teste.com")
+        self._set_stats(db, "preciso@teste.com", questions_answered=10, correct_answers=9)
+        # "samuel@teste.com" and "zero@teste.com" both have 0 answered.
+
+        ascending = auth_client.get("/api/v1/admin/users?sort=accuracy").json()["items"]
+        assert ascending[-1]["email"] == "preciso@teste.com"
+
+        descending = auth_client.get("/api/v1/admin/users?sort=-accuracy").json()["items"]
+        assert descending[0]["email"] == "preciso@teste.com"
+
+    def test_unknown_sort_field_falls_back_to_default(self, auth_client: TestClient, db: Session):
+        _promote_to_admin(db, "samuel@teste.com")
+        register_user(auth_client, name="Outro", email="outro@teste.com")
+        response = auth_client.get("/api/v1/admin/users?sort=not_a_real_field")
+        assert response.status_code == 200
+        assert len(response.json()["items"]) == 2
 
 
 class TestAdminDashboard:

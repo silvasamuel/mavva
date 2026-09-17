@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { CaretDown, CaretUp } from '@phosphor-icons/react'
 import { keepPreviousData, useQuery } from '@tanstack/react-query'
 import { api } from '@/lib/api'
 import { Card } from '@/components/ui/Card'
@@ -12,19 +13,42 @@ import { AppIcons, Glyph } from '@/lib/icons'
 
 const PAGE = 25
 
+// Maps each clickable header to the backend's sort field. The trailing
+// action column has no entry — it isn't sortable.
+const SORT_FIELDS = {
+  user: 'name',
+  emailStatus: 'email_verified',
+  status: 'is_active',
+  role: 'role',
+  xp: 'xp',
+  streak: 'streak',
+  answered: 'answered',
+  accuracy: 'accuracy',
+} as const
+
+type SortKey = (typeof SORT_FIELDS)[keyof typeof SORT_FIELDS]
+
 export function UsersPanel({ adminId }: { adminId: string }) {
   const [search, setSearch] = useState('')
   const [offset, setOffset] = useState(0)
   const [selectedId, setSelectedId] = useState<string | null>(null)
+  // "" = default (newest first); otherwise a SORT_FIELDS value, "-" prefixed for descending.
+  const [sort, setSort] = useState('')
   // The input updates on every keystroke; the request only fires once typing pauses.
   const debouncedSearch = useDebouncedValue(search)
 
+  function toggleSort(field: SortKey) {
+    setSort((current) => (current === field ? `-${field}` : field))
+    setOffset(0)
+  }
+
   const { data, isLoading } = useQuery({
-    queryKey: ['admin', 'users', debouncedSearch, offset],
+    queryKey: ['admin', 'users', debouncedSearch, sort, offset],
     queryFn: () =>
       api.get<AdminUserList>(
         `/admin/users?limit=${PAGE}&offset=${offset}` +
-          (debouncedSearch ? `&search=${encodeURIComponent(debouncedSearch)}` : '')
+          (debouncedSearch ? `&search=${encodeURIComponent(debouncedSearch)}` : '') +
+          (sort ? `&sort=${sort}` : '')
       ),
     placeholderData: keepPreviousData,
   })
@@ -50,14 +74,29 @@ export function UsersPanel({ adminId }: { adminId: string }) {
           <table className="w-full min-w-[880px] text-left text-sm">
             <thead className="border-b border-sand-100 text-xs font-extrabold uppercase tracking-wide text-sand-500">
               <tr>
-                <th className="px-4 py-3">Usuário</th>
-                <th className="px-4 py-3">E-mail</th>
-                <th className="px-4 py-3">Status</th>
-                <th className="px-4 py-3">Papel</th>
-                <th className="px-4 py-3">Nível / XP</th>
-                <th className="px-4 py-3">Streak</th>
-                <th className="px-4 py-3">Respondidas</th>
-                <th className="px-4 py-3">Precisão</th>
+                <SortHeader label="Usuário" field={SORT_FIELDS.user} sort={sort} onSort={toggleSort} />
+                <SortHeader
+                  label="E-mail"
+                  field={SORT_FIELDS.emailStatus}
+                  sort={sort}
+                  onSort={toggleSort}
+                />
+                <SortHeader label="Status" field={SORT_FIELDS.status} sort={sort} onSort={toggleSort} />
+                <SortHeader label="Papel" field={SORT_FIELDS.role} sort={sort} onSort={toggleSort} />
+                <SortHeader label="Nível / XP" field={SORT_FIELDS.xp} sort={sort} onSort={toggleSort} />
+                <SortHeader label="Streak" field={SORT_FIELDS.streak} sort={sort} onSort={toggleSort} />
+                <SortHeader
+                  label="Respondidas"
+                  field={SORT_FIELDS.answered}
+                  sort={sort}
+                  onSort={toggleSort}
+                />
+                <SortHeader
+                  label="Precisão"
+                  field={SORT_FIELDS.accuracy}
+                  sort={sort}
+                  onSort={toggleSort}
+                />
                 <th className="px-4 py-3"></th>
               </tr>
             </thead>
@@ -144,6 +183,37 @@ export function UsersPanel({ adminId }: { adminId: string }) {
         />
       )}
     </div>
+  )
+}
+
+function SortHeader({
+  label,
+  field,
+  sort,
+  onSort,
+}: {
+  label: string
+  field: SortKey
+  sort: string
+  onSort: (field: SortKey) => void
+}) {
+  const active = sort === field || sort === `-${field}`
+  const descending = sort === `-${field}`
+  return (
+    <th className="px-4 py-3">
+      <button
+        onClick={() => onSort(field)}
+        className={`inline-flex items-center gap-1 hover:text-ink ${active ? 'text-ink' : ''}`}
+      >
+        {label}
+        {active &&
+          (descending ? (
+            <CaretDown weight="bold" className="h-3 w-3" aria-hidden />
+          ) : (
+            <CaretUp weight="bold" className="h-3 w-3" aria-hidden />
+          ))}
+      </button>
+    </th>
   )
 }
 

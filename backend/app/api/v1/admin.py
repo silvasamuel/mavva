@@ -1,9 +1,10 @@
 """Admin-only API. Every route depends on AdminUser (403 for non-admins)."""
 
 import uuid
+from typing import Any
 
 from fastapi import APIRouter, HTTPException, Query, status
-from sqlalchemy import func, or_, select
+from sqlalchemy import Float, case, cast, func, or_, select
 from sqlalchemy.orm import selectinload
 
 from app.core.deps import AdminUser, DbDep
@@ -48,11 +49,42 @@ def admin_dashboard(_admin: AdminUser, db: DbDep) -> AdminDashboardOut:
     return admin_stats.dashboard(db)
 
 
+# Column key -> sortable expression, for the admin users table headers.
+# "accuracy" needs no-answers users to sort as the lowest, not crash on 0/0.
+_USER_SORT_FIELDS = {
+    "name": User.name,
+    "email_verified": User.email_verified_at,
+    "is_active": User.is_active,
+    "role": User.role,
+    "xp": UserStats.total_xp,
+    "streak": UserStats.current_streak,
+    "answered": UserStats.questions_answered,
+    "accuracy": case(
+        (UserStats.questions_answered == 0, -1.0),
+        else_=UserStats.correct_answers / cast(UserStats.questions_answered, Float),
+    ),
+}
+
+
+def _user_sort_order(sort: str | None) -> list[Any]:
+    """Parses "field" (ascending) or "-field" (descending); unknown or missing
+    falls back to newest-first, the table's original default."""
+    if not sort:
+        return [User.created_at.desc()]
+    field = sort.removeprefix("-")
+    column = _USER_SORT_FIELDS.get(field)
+    if column is None:
+        return [User.created_at.desc()]
+    ordered = column.desc() if sort.startswith("-") else column.asc()
+    return [ordered, User.id]  # tiebreaker keeps paging stable
+
+
 @router.get("/users", response_model=AdminUserList)
 def list_users(
     _admin: AdminUser,
     db: DbDep,
     search: str | None = Query(default=None, max_length=120),
+    sort: str | None = Query(default=None, max_length=32),
     limit: int = Query(default=25, ge=1, le=100),
     offset: int = Query(default=0, ge=0),
 ) -> AdminUserList:
@@ -65,7 +97,7 @@ def list_users(
     total = db.scalar(select(func.count()).select_from(query.subquery())) or 0
     users = db.scalars(
         query.options(selectinload(User.stats))
-        .order_by(User.created_at.desc())
+        .order_by(*_user_sort_order(sort))
         .limit(limit)
         .offset(offset)
     ).all()
@@ -157,6 +189,7 @@ def list_questions(
     search: str | None = Query(default=None, max_length=200),
     category_id: int | None = None,
     difficulty: Difficulty | None = None,
+    type: QuestionType | None = None,
     limit: int = Query(default=25, ge=1, le=100),
     offset: int = Query(default=0, ge=0),
 ) -> AdminQuestionList:
@@ -170,6 +203,8 @@ def list_questions(
         query = query.where(Question.category_id == category_id)
     if difficulty is not None:
         query = query.where(Question.difficulty == difficulty)
+    if type is not None:
+        query = query.where(Question.type == type)
 
     total = db.scalar(select(func.count()).select_from(query.subquery())) or 0
     rows = db.execute(
