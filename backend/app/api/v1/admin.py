@@ -36,9 +36,10 @@ from app.schemas.admin import (
 )
 from app.schemas.moderation import AdminFlagOut, AdminProposalOut, AdminReviewInbox, QuestionDraft
 from app.seeds.questions import OptionIn, sync_accepted_answers, sync_options
-from app.services import admin_stats, auth_service, content_sync, moderation_service
+from app.services import admin_stats, auth_service, content_sync, moderation_service, user_service
 from app.services.content_sync import ContentSyncError
 from app.services.moderation_service import ModerationError
+from app.services.user_service import UserServiceError
 
 # The AdminUser dependency on every path parameter is what enforces access.
 router = APIRouter(prefix="/admin", tags=["admin"])
@@ -174,6 +175,18 @@ def update_user(
     db.commit()
     db.refresh(user)
     return _admin_user_detail(_load_user(db, user.id))
+
+
+@router.get("/users/{user_id}/export")
+def export_user(_admin: AdminUser, db: DbDep, user_id: uuid.UUID) -> dict[str, Any]:
+    """Data-portability copy (LGPD art. 18), gated to admins while the
+    self-service /users/me/export flow is disabled."""
+    user = _load_user(db, user_id)
+    try:
+        return user_service.export_account(db, user)
+    except UserServiceError as error:
+        headers = {"Retry-After": str(error.retry_after)} if error.retry_after else None
+        raise HTTPException(error.status_code, error.message, headers=headers) from error
 
 
 @router.get("/categories", response_model=list[AdminCategoryOut])

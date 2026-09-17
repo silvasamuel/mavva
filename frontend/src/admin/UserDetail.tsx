@@ -18,10 +18,34 @@ export function UserDetail({
 }) {
   const queryClient = useQueryClient()
   const [error, setError] = useState('')
+  const [exporting, setExporting] = useState(false)
+  const [exportMessage, setExportMessage] = useState('')
   const { data, isLoading } = useQuery({
     queryKey: ['admin', 'user', userId],
     queryFn: () => api.get<AdminUserDetail>(`/admin/users/${userId}`),
   })
+
+  async function downloadExport() {
+    if (!data) return
+    setExporting(true)
+    setError('')
+    setExportMessage('')
+    try {
+      const payload = await api.get<Record<string, unknown>>(`/admin/users/${userId}/export`)
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' })
+      const url = URL.createObjectURL(blob)
+      const link = document.createElement('a')
+      link.href = url
+      link.download = `mavva-dados-${data.username}.json`
+      link.click()
+      URL.revokeObjectURL(url)
+      setExportMessage('Cópia dos dados baixada.')
+    } catch (err) {
+      setError(err instanceof ApiError ? err.message : 'Não foi possível exportar os dados.')
+    } finally {
+      setExporting(false)
+    }
+  }
 
   const toggleActive = useMutation({
     mutationFn: (is_active: boolean) =>
@@ -130,11 +154,25 @@ export function UserDetail({
               <Row label="Melhor sequência" value={String(data.best_duel_streak)} />
             </Section>
 
+            {exportMessage && (
+              <p className="rounded-xl bg-leaf-50 px-3 py-2 text-sm font-bold text-leaf-700">
+                {exportMessage}
+              </p>
+            )}
             {error && (
               <p role="alert" className="rounded-xl bg-red-50 px-3 py-2 text-sm font-bold text-red-700">
                 {error}
               </p>
             )}
+
+            <Button
+              variant="secondary"
+              full
+              loading={exporting}
+              onClick={() => void downloadExport()}
+            >
+              Exportar dados (LGPD)
+            </Button>
 
             {isSelf ? (
               <p className="rounded-xl bg-sand-100 px-3 py-2 text-sm font-semibold text-sand-600">

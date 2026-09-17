@@ -8,42 +8,31 @@ import { Modal } from '@/components/ui/Modal'
 import { useAuth } from '@/features/auth/AuthContext'
 import { LEGAL_CONTACT_EMAIL } from '@/features/legal/legal'
 
+// Typed word required alongside the password before the delete button
+// unlocks — a second, deliberate barrier against an accidental click.
+const CONFIRM_WORD = 'APAGAR'
+
 export function AccountRights() {
   const { logout } = useAuth()
   const navigate = useNavigate()
   const [confirmOpen, setConfirmOpen] = useState(false)
   const [password, setPassword] = useState('')
-  const [exporting, setExporting] = useState(false)
+  const [confirmText, setConfirmText] = useState('')
   const [deleting, setDeleting] = useState(false)
-  const [message, setMessage] = useState('')
   const [error, setError] = useState('')
 
-  async function downloadExport() {
-    setExporting(true)
+  const canDelete = confirmText.trim().toUpperCase() === CONFIRM_WORD && password.length > 0
+
+  function closeModal() {
+    if (deleting) return
+    setConfirmOpen(false)
+    setPassword('')
+    setConfirmText('')
     setError('')
-    setMessage('')
-    try {
-      const data = await api.get<Record<string, unknown>>('/users/me/export')
-      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' })
-      const url = URL.createObjectURL(blob)
-      const link = document.createElement('a')
-      link.href = url
-      link.download = 'mavva-dados.json'
-      link.click()
-      URL.revokeObjectURL(url)
-      setMessage('Cópia dos seus dados baixada.')
-    } catch (err) {
-      setError(err instanceof ApiError ? err.message : 'Não foi possível baixar seus dados.')
-    } finally {
-      setExporting(false)
-    }
   }
 
   async function confirmDelete() {
-    if (!password) {
-      setError('Digite sua senha para apagar a conta.')
-      return
-    }
+    if (!canDelete) return
     setDeleting(true)
     setError('')
     try {
@@ -58,21 +47,11 @@ export function AccountRights() {
 
   return (
     <Card className="space-y-4">
-      <CardTitle>Seus direitos</CardTitle>
+      <CardTitle>Sua conta</CardTitle>
       <p className="text-sm font-semibold text-sand-600">
-        Baixe uma cópia do que o Mavva guarda sobre você ou apague a conta. A exclusão remove
-        quizzes, duelos, amigos e o cadastro, e não dá para desfazer. A cópia pode ser pedida de
-        novo depois de algumas horas.
+        Apagar a conta remove quizzes, duelos, amigos e o cadastro, e não dá para desfazer. Para
+        pedir uma cópia dos seus dados, escreva para o encarregado.
       </p>
-      {message && <p className="text-sm font-bold text-leaf-700">{message}</p>}
-      {error && (
-        <p role="alert" className="text-sm font-bold text-red-600">
-          {error}
-        </p>
-      )}
-      <Button variant="secondary" full loading={exporting} onClick={() => void downloadExport()}>
-        Baixar meus dados
-      </Button>
       <Button variant="danger" full onClick={() => setConfirmOpen(true)}>
         Apagar conta
       </Button>
@@ -84,11 +63,19 @@ export function AccountRights() {
         .
       </p>
 
-      <Modal open={confirmOpen} onClose={() => !deleting && setConfirmOpen(false)} label="Apagar conta">
+      <Modal open={confirmOpen} onClose={closeModal} label="Apagar conta">
         <h2 className="text-lg font-extrabold">Apagar a conta de vez?</h2>
         <p className="text-sm font-semibold text-sand-600">
-          Isso remove seus dados pessoais do Mavva. Confirme com a senha.
+          Isso remove seus dados pessoais do Mavva e não pode ser desfeito. Digite{' '}
+          <strong className="font-extrabold text-ink">{CONFIRM_WORD}</strong> e confirme com a
+          senha.
         </p>
+        <Input
+          label={`Digite ${CONFIRM_WORD} para confirmar`}
+          value={confirmText}
+          onChange={(event) => setConfirmText(event.target.value)}
+          autoComplete="off"
+        />
         <Input
           label="Senha"
           type="password"
@@ -96,11 +83,22 @@ export function AccountRights() {
           value={password}
           onChange={(event) => setPassword(event.target.value)}
         />
+        {error && (
+          <p role="alert" className="text-sm font-bold text-red-600">
+            {error}
+          </p>
+        )}
         <div className="flex flex-col gap-2">
-          <Button variant="danger" full loading={deleting} onClick={() => void confirmDelete()}>
+          <Button
+            variant="danger"
+            full
+            disabled={!canDelete}
+            loading={deleting}
+            onClick={() => void confirmDelete()}
+          >
             Apagar definitivamente
           </Button>
-          <Button variant="ghost" full disabled={deleting} onClick={() => setConfirmOpen(false)}>
+          <Button variant="ghost" full disabled={deleting} onClick={closeModal}>
             Cancelar
           </Button>
         </div>

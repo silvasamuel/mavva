@@ -1,7 +1,8 @@
-from datetime import datetime
+from datetime import UTC, datetime, timedelta
 from zoneinfo import ZoneInfo
 
 from fastapi.testclient import TestClient
+from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.models import DailyActivity, User, UserStats
@@ -310,6 +311,67 @@ class TestAdminUsersSorting:
         response = auth_client.get("/api/v1/admin/users?sort=not_a_real_field")
         assert response.status_code == 200
         assert len(response.json()["items"]) == 2
+
+
+class TestAdminUserExport:
+    """Data-portability export moved here while /users/me/export is off."""
+
+    def _register_and_verify(self, client: TestClient, email: str, name: str = "Jogador") -> str:
+        register_user(client, name=name, email=email)
+        verified = client.post(
+            "/api/v1/auth/verify-email", json={"token": verification_tokens[email]}
+        )
+        assert verified.status_code == 200, verified.text
+        return str(verified.json()["user"]["id"])
+
+    def test_admin_can_export_any_user(
+        self, auth_client: TestClient, client: TestClient, db: Session
+    ):
+        _promote_to_admin(db, "samuel@teste.com")
+        user_id = self._register_and_verify(client, "maria@teste.com", "Maria")
+
+        response = auth_client.get(f"/api/v1/admin/users/{user_id}/export")
+        assert response.status_code == 200, response.text
+        data = response.json()
+        assert data["user"]["email"] == "maria@teste.com"
+        assert "hashed_password" not in data["user"]
+        assert "password" not in data["user"]
+        assert "exported_at" in data
+
+    def test_regular_user_cannot_export(
+        self, auth_client: TestClient, client: TestClient, db: Session
+    ):
+        user_id = self._register_and_verify(client, "maria@teste.com", "Maria")
+        # samuel@teste.com is not an admin here.
+        assert auth_client.get(f"/api/v1/admin/users/{user_id}/export").status_code == 403
+
+    def test_requires_auth(self, client: TestClient):
+        user_id = self._register_and_verify(client, "maria@teste.com", "Maria")
+        # No admin promotion needed: an unauthenticated request is rejected
+        # before role is even checked.
+        assert client.get(f"/api/v1/admin/users/{user_id}/export").status_code == 401
+
+    def test_self_service_route_is_gone(self, auth_client: TestClient, db: Session):
+        _promote_to_admin(db, "samuel@teste.com")
+        assert auth_client.get("/api/v1/users/me/export").status_code == 404
+
+    def test_waits_before_exporting_the_same_user_again(
+        self, auth_client: TestClient, client: TestClient, db: Session
+    ):
+        _promote_to_admin(db, "samuel@teste.com")
+        user_id = self._register_and_verify(client, "maria@teste.com", "Maria")
+
+        assert auth_client.get(f"/api/v1/admin/users/{user_id}/export").status_code == 200
+        blocked = auth_client.get(f"/api/v1/admin/users/{user_id}/export")
+        assert blocked.status_code == 429
+        assert blocked.headers.get("retry-after")
+        assert "tente de novo" in blocked.json()["detail"].lower()
+
+        user = db.scalar(select(User).where(User.email == "maria@teste.com"))
+        assert user is not None
+        user.last_data_export_at = datetime.now(UTC) - timedelta(hours=7)
+        db.flush()
+        assert auth_client.get(f"/api/v1/admin/users/{user_id}/export").status_code == 200
 
 
 class TestAdminDashboard:
