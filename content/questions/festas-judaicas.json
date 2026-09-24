@@ -672,13 +672,13 @@
     {
       "external_id": "festas-judaicas-0022",
       "type": "open_answer",
-      "text": "Em que mês do calendário hebraico, chamado Abibe, era celebrada a Páscoa?",
+      "text": "Em que mês do calendário hebraico era celebrada a Páscoa?",
       "options": null,
       "accepted_answers": [
         "Abibe",
-        "Nisã",
-        "Nisa",
-        "Abibe (Nisã)"
+        "Sivan",
+        "Iyar",
+        "Kislev"
       ],
       "explanation": "'Hoje, no mês de Abibe, vós saís' (Êx 13:4); o mês (mais tarde Nisã) marca a libertação do Egito.",
       "divergence_note": null,
