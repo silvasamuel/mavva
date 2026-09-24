@@ -22,7 +22,7 @@ const CHOICES: { kind: SuggestionKind; title: string; description: string; icon:
   {
     kind: 'question',
     title: 'Pergunta',
-    description: 'Uma questão nova para o banco, depois da revisão.',
+    description: 'Uma questão nova',
     icon: AppIcons.suggest,
   },
   {
@@ -187,14 +187,10 @@ export function SuggestQuestionPage() {
 
   return (
     <div className="animate-float-up mx-auto max-w-2xl space-y-6">
-      <header className="space-y-2">
-        <button
-          type="button"
-          onClick={back}
-          className="text-sm font-extrabold text-leaf-700 hover:text-leaf-600"
-        >
+      <header className="space-y-3">
+        <Button variant="secondary" onClick={back}>
           Voltar
-        </button>
+        </Button>
         <h1 className="text-2xl font-extrabold">{choice.title}</h1>
         <p className="text-sm font-semibold text-sand-500">{choice.description}</p>
       </header>

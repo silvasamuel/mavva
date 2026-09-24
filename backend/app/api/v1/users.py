@@ -8,6 +8,9 @@ from app.models import User
 from app.schemas.user import AccountDeleteRequest, UserOut, UserUpdate
 from app.services.user_service import UserServiceError, delete_account
 
+REVIEW_SESSION_SIZES = {5, 10, 15, 20}
+REVIEW_MAX_INTERVALS = {30, 90, 365}
+
 router = APIRouter(prefix="/users", tags=["users"])
 REFRESH_COOKIE = "refresh_token"
 
@@ -53,5 +56,20 @@ def update_me(body: UserUpdate, user: CurrentUser, db: DbDep) -> UserOut:
         user.username = body.username
     if body.daily_goal_xp is not None:
         user.daily_goal_xp = body.daily_goal_xp
+    if body.review_spacing is not None:
+        user.review_spacing = body.review_spacing
+    if body.review_scope is not None:
+        user.review_scope = body.review_scope
+    if body.review_order is not None:
+        user.review_order = body.review_order
+    if body.review_session_size is not None:
+        if body.review_session_size not in REVIEW_SESSION_SIZES:
+            raise HTTPException(status.HTTP_400_BAD_REQUEST, "Tamanho de sessão inválido")
+        user.review_session_size = body.review_session_size
+    if "review_max_interval_days" in body.model_fields_set:
+        days = body.review_max_interval_days
+        if days is not None and days not in REVIEW_MAX_INTERVALS:
+            raise HTTPException(status.HTTP_400_BAD_REQUEST, "Intervalo máximo inválido")
+        user.review_max_interval_days = days
     db.commit()
     return UserOut.model_validate(user)

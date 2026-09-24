@@ -10,6 +10,41 @@ def _register(client: TestClient, email: str, name: str = "Jogador") -> dict:
     return register_and_login(client, name=name, email=email)
 
 
+class TestReviewPreferences:
+    def test_defaults_and_patch(self, auth_client: TestClient):
+        me = auth_client.get("/api/v1/users/me").json()
+        assert me["review_spacing"] == "balanced"
+        assert me["review_scope"] == "all"
+        assert me["review_order"] == "oldest"
+        assert me["review_session_size"] == 10
+        assert me["review_max_interval_days"] is None
+
+        saved = auth_client.patch(
+            "/api/v1/users/me",
+            json={
+                "review_spacing": "intensive",
+                "review_scope": "mistakes",
+                "review_order": "lapses",
+                "review_session_size": 5,
+                "review_max_interval_days": 30,
+            },
+        )
+        assert saved.status_code == 200, saved.text
+        body = saved.json()
+        assert body["review_spacing"] == "intensive"
+        assert body["review_session_size"] == 5
+        assert body["review_max_interval_days"] == 30
+
+        cleared = auth_client.patch("/api/v1/users/me", json={"review_max_interval_days": None})
+        assert cleared.status_code == 200
+        assert cleared.json()["review_max_interval_days"] is None
+        assert cleared.json()["review_spacing"] == "intensive"
+
+    def test_rejects_unknown_session_size(self, auth_client: TestClient):
+        response = auth_client.patch("/api/v1/users/me", json={"review_session_size": 7})
+        assert response.status_code == 400
+
+
 class TestAccountExportRemoved:
     """Self-service export moved to the admin panel — see test_admin.py's
     TestAdminUserExport. The route should no longer answer here at all."""

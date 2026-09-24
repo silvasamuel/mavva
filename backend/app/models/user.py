@@ -5,7 +5,7 @@ from sqlalchemy import Date, Enum, ForeignKey, String, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.base import Base, TimestampMixin
-from app.models.enums import UserRole
+from app.models.enums import ReviewOrder, ReviewScope, ReviewSpacing, UserRole
 
 
 class User(TimestampMixin, Base):
@@ -25,6 +25,21 @@ class User(TimestampMixin, Base):
     )
     timezone: Mapped[str] = mapped_column(String(64), default="America/Sao_Paulo")
     daily_goal_xp: Mapped[int] = mapped_column(default=50)
+    review_spacing: Mapped[ReviewSpacing] = mapped_column(
+        Enum(ReviewSpacing, name="review_spacing", values_callable=lambda e: [m.value for m in e]),
+        default=ReviewSpacing.BALANCED,
+    )
+    review_scope: Mapped[ReviewScope] = mapped_column(
+        Enum(ReviewScope, name="review_scope", values_callable=lambda e: [m.value for m in e]),
+        default=ReviewScope.ALL,
+    )
+    review_order: Mapped[ReviewOrder] = mapped_column(
+        Enum(ReviewOrder, name="review_order", values_callable=lambda e: [m.value for m in e]),
+        default=ReviewOrder.OLDEST,
+    )
+    review_session_size: Mapped[int] = mapped_column(default=10)
+    # Null means the interval may grow without a cap.
+    review_max_interval_days: Mapped[int | None] = mapped_column(default=None)
     # Proof of informed consent (LGPD art. 8) — set only when the player accepts.
     terms_accepted_at: Mapped[datetime | None] = mapped_column(default=None)
     terms_version: Mapped[str | None] = mapped_column(String(20), default=None)

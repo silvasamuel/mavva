@@ -6,6 +6,22 @@ class UserRole(StrEnum):
     ADMIN = "admin"
 
 
+class ReviewSpacing(StrEnum):
+    INTENSIVE = "intensive"
+    BALANCED = "balanced"
+    RELAXED = "relaxed"
+
+
+class ReviewScope(StrEnum):
+    ALL = "all"
+    MISTAKES = "mistakes"
+
+
+class ReviewOrder(StrEnum):
+    OLDEST = "oldest"
+    LAPSES = "lapses"
+
+
 class QuestionType(StrEnum):
     MULTIPLE_CHOICE = "multiple_choice"
     OPEN_ANSWER = "open_answer"

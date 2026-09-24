@@ -5,6 +5,10 @@ export type QuestionType = 'multiple_choice' | 'open_answer'
 export type Testament = 'old' | 'new'
 export type QuizMode = 'practice' | 'review' | 'duel'
 
+export type ReviewSpacing = 'intensive' | 'balanced' | 'relaxed'
+export type ReviewScope = 'all' | 'mistakes'
+export type ReviewOrder = 'oldest' | 'lapses'
+
 export interface User {
   id: string
   name: string
@@ -13,6 +17,11 @@ export interface User {
   role: 'user' | 'admin'
   timezone: string
   daily_goal_xp: number
+  review_spacing: ReviewSpacing
+  review_scope: ReviewScope
+  review_order: ReviewOrder
+  review_session_size: number
+  review_max_interval_days: number | null
 }
 
 // --- Social: friends and duels ---
