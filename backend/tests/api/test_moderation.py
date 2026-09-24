@@ -187,6 +187,42 @@ class TestAdminReviewFlags:
         assert auth_client.get("/api/v1/admin/review").status_code == 403
 
 
+class TestAppSuggestions:
+    def test_submit_and_admin_review(self, auth_client: TestClient, db: Session):
+        created = auth_client.post(
+            "/api/v1/suggestions",
+            json={"kind": "feature", "body": "Quero um modo escuro para estudar à noite."},
+        )
+        assert created.status_code == 201, created.text
+        assert created.json()["status"] == "open"
+
+        assert auth_client.get("/api/v1/admin/review").status_code == 403
+        _promote_to_admin(db)
+        inbox = auth_client.get("/api/v1/admin/review").json()
+        assert inbox["open_suggestions"] == 1
+        suggestion = inbox["suggestions"][0]
+        assert suggestion["kind"] == "feature"
+        assert suggestion["body"] == "Quero um modo escuro para estudar à noite."
+        assert suggestion["author_username"]
+
+        reviewed = auth_client.post(f"/api/v1/admin/review/suggestions/{suggestion['id']}/review")
+        assert reviewed.status_code == 204
+        assert auth_client.get("/api/v1/admin/review").json()["open_suggestions"] == 0
+
+    def test_rejects_a_short_note(self, auth_client: TestClient):
+        response = auth_client.post(
+            "/api/v1/suggestions", json={"kind": "correction", "body": "curto"}
+        )
+        assert response.status_code == 422
+
+    def test_caps_open_suggestions(self, auth_client: TestClient):
+        payload = {"kind": "correction", "body": "O botão de duelo some no celular pequeno."}
+        for _ in range(5):
+            assert auth_client.post("/api/v1/suggestions", json=payload).status_code == 201
+        sixth = auth_client.post("/api/v1/suggestions", json=payload)
+        assert sixth.status_code == 400
+
+
 class TestCatalogBooks:
     def test_lists_bible_books(self, auth_client: TestClient):
         response = auth_client.get("/api/v1/books")

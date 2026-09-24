@@ -10,6 +10,7 @@ from sqlalchemy.orm import selectinload
 from app.core.deps import AdminUser, DbDep
 from app.data.books import BOOKS
 from app.models import (
+    AppSuggestion,
     Category,
     Question,
     QuestionFlag,
@@ -34,7 +35,13 @@ from app.schemas.admin import (
     ContentPublishOut,
     ContentStatusOut,
 )
-from app.schemas.moderation import AdminFlagOut, AdminProposalOut, AdminReviewInbox, QuestionDraft
+from app.schemas.moderation import (
+    AdminFlagOut,
+    AdminProposalOut,
+    AdminReviewInbox,
+    AdminSuggestionOut,
+    QuestionDraft,
+)
 from app.seeds.questions import OptionIn, sync_accepted_answers, sync_options
 from app.services import admin_stats, auth_service, content_sync, moderation_service, user_service
 from app.services.content_sync import ContentSyncError
@@ -377,6 +384,18 @@ def _flag_out(flag: QuestionFlag) -> AdminFlagOut:
     )
 
 
+def _suggestion_out(suggestion: AppSuggestion) -> AdminSuggestionOut:
+    return AdminSuggestionOut(
+        id=suggestion.id,
+        created_at=suggestion.created_at,
+        kind=suggestion.kind,
+        body=suggestion.body,
+        status=suggestion.status,
+        author_name=suggestion.user.name,
+        author_username=suggestion.user.username,
+    )
+
+
 def _proposal_out(proposal: QuestionProposal) -> AdminProposalOut:
     return AdminProposalOut(
         id=proposal.id,
@@ -393,11 +412,14 @@ def _proposal_out(proposal: QuestionProposal) -> AdminProposalOut:
 def review_inbox(_admin: AdminUser, db: DbDep) -> AdminReviewInbox:
     flags = moderation_service.list_open_flags(db)
     proposals = moderation_service.list_pending_proposals(db)
+    suggestions = moderation_service.list_open_suggestions(db)
     return AdminReviewInbox(
         open_flags=len(flags),
         pending_proposals=len(proposals),
+        open_suggestions=len(suggestions),
         flags=[_flag_out(flag) for flag in flags],
         proposals=[_proposal_out(proposal) for proposal in proposals],
+        suggestions=[_suggestion_out(suggestion) for suggestion in suggestions],
     )
 
 
@@ -446,6 +468,15 @@ def approve_proposal(
 def reject_proposal(proposal_id: uuid.UUID, _admin: AdminUser, db: DbDep) -> None:
     try:
         moderation_service.reject_proposal(db, proposal_id)
+    except ModerationError as error:
+        raise HTTPException(error.status_code, error.message) from error
+    db.commit()
+
+
+@router.post("/review/suggestions/{suggestion_id}/review", status_code=status.HTTP_204_NO_CONTENT)
+def review_suggestion(suggestion_id: uuid.UUID, _admin: AdminUser, db: DbDep) -> None:
+    try:
+        moderation_service.review_suggestion(db, suggestion_id)
     except ModerationError as error:
         raise HTTPException(error.status_code, error.message) from error
     db.commit()

@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { Spinner } from '@/components/ui/Spinner'
-import { FLAG_REASON_LABELS, formatRelativeDate } from '@/lib/format'
+import { FLAG_REASON_LABELS, SUGGESTION_KIND_LABELS, formatRelativeDate } from '@/lib/format'
 import { QuestionDraftForm } from '@/features/moderation/QuestionDraftForm'
 import {
   draftFromPayload,
@@ -67,6 +67,13 @@ export function ReviewPanel() {
       setError(err instanceof ApiError ? err.message : 'Não foi possível recusar a sugestão.'),
   })
 
+  const reviewSuggestion = useMutation({
+    mutationFn: (id: string) => api.post<void>(`/admin/review/suggestions/${id}/review`),
+    onSuccess: refresh,
+    onError: (err) =>
+      setError(err instanceof ApiError ? err.message : 'Não foi possível concluir a sugestão.'),
+  })
+
   if (isLoading || !inbox) {
     return (
       <div className="flex justify-center py-16">
@@ -75,7 +82,8 @@ export function ReviewPanel() {
     )
   }
 
-  const empty = inbox.flags.length === 0 && inbox.proposals.length === 0
+  const empty =
+    inbox.flags.length === 0 && inbox.proposals.length === 0 && inbox.suggestions.length === 0
 
   return (
     <div className="space-y-8">
@@ -89,7 +97,7 @@ export function ReviewPanel() {
         <EmptyState
           icon={<Glyph as={AppIcons.check} className="h-10 w-10" />}
           title="Fila vazia"
-          description="Nenhum report aberto nem sugestão pendente."
+          description="Nenhum report aberto, pergunta pendente ou melhoria."
         />
       )}
 
@@ -145,7 +153,7 @@ export function ReviewPanel() {
       {inbox.proposals.length > 0 && (
         <section className="space-y-3">
           <h2 className="text-sm font-extrabold uppercase tracking-wider text-sand-600">
-            Sugestões ({inbox.pending_proposals})
+            Perguntas ({inbox.pending_proposals})
           </h2>
           {inbox.proposals.map((proposal) => (
             <Card key={proposal.id} className="space-y-3">
@@ -164,6 +172,32 @@ export function ReviewPanel() {
                   Recusar
                 </Button>
               </div>
+            </Card>
+          ))}
+        </section>
+      )}
+
+      {inbox.suggestions.length > 0 && (
+        <section className="space-y-3">
+          <h2 className="text-sm font-extrabold uppercase tracking-wider text-sand-600">
+            Melhorias ({inbox.open_suggestions})
+          </h2>
+          {inbox.suggestions.map((suggestion) => (
+            <Card key={suggestion.id} className="space-y-3">
+              <span className="inline-flex rounded-full bg-sand-100 px-2.5 py-1 text-xs font-extrabold text-sand-600">
+                {SUGGESTION_KIND_LABELS[suggestion.kind]}
+              </span>
+              <p className="whitespace-pre-wrap font-semibold text-ink">{suggestion.body}</p>
+              <p className="text-xs font-semibold text-sand-400">
+                @{suggestion.author_username} · {formatRelativeDate(suggestion.created_at)}
+              </p>
+              <Button
+                variant="secondary"
+                loading={reviewSuggestion.isPending}
+                onClick={() => reviewSuggestion.mutate(suggestion.id)}
+              >
+                Concluir
+              </Button>
             </Card>
           ))}
         </section>

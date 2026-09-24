@@ -29,7 +29,7 @@ export function PrivacyPage() {
         </li>
         <li>
           <strong>Uso do app:</strong> respostas de quizzes e duelos, tempo de estudo, revisões,
-          amizades, denúncias e sugestões de perguntas.
+          amizades, denúncias, sugestões de perguntas e de melhorias do aplicativo.
         </li>
         <li>
           <strong>Técnicos:</strong> cookie httpOnly de sessão e endereço IP para limitar abuso.

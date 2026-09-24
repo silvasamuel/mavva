@@ -8,6 +8,7 @@ from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from app.models import (
+    AppSuggestion,
     DailyActivity,
     Duel,
     Friendship,
@@ -18,6 +19,7 @@ from app.models import (
     UserStats,
 )
 from app.models.enums import (
+    AppSuggestionStatus,
     Difficulty,
     DuelStatus,
     FriendshipStatus,
@@ -86,6 +88,9 @@ def dashboard(db: Session) -> AdminDashboardOut:
             select(func.count()).where(QuestionProposal.status == QuestionProposalStatus.PENDING)
         )
     )
+    suggestions_open = _n(
+        db.scalar(select(func.count()).where(AppSuggestion.status == AppSuggestionStatus.OPEN))
+    )
 
     answered, correct, total_xp, longest_streak, max_level = db.execute(
         select(
@@ -121,6 +126,7 @@ def dashboard(db: Session) -> AdminDashboardOut:
     questions_active_n = _n(questions_active)
     flags_n = _n(flags_open)
     proposals_n = _n(proposals_pending)
+    suggestions_n = _n(suggestions_open)
 
     return AdminDashboardOut(
         users=AdminDashboardUsers(
@@ -143,7 +149,8 @@ def dashboard(db: Session) -> AdminDashboardOut:
         review=AdminDashboardReview(
             flags_open=flags_n,
             proposals_pending=proposals_n,
-            pending=flags_n + proposals_n,
+            suggestions_open=suggestions_n,
+            pending=flags_n + proposals_n + suggestions_n,
         ),
         activity=AdminDashboardActivity(
             studied_today=_n(studied_today),

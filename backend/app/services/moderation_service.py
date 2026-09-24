@@ -4,8 +4,18 @@ from sqlalchemy import func, select
 from sqlalchemy.orm import Session, selectinload
 
 from app.data.books import BOOKS
-from app.models import Category, Question, QuestionFlag, QuestionProposal, QuizSession, User
+from app.models import (
+    AppSuggestion,
+    Category,
+    Question,
+    QuestionFlag,
+    QuestionProposal,
+    QuizSession,
+    User,
+)
 from app.models.enums import (
+    AppSuggestionKind,
+    AppSuggestionStatus,
     QuestionFlagReason,
     QuestionFlagStatus,
     QuestionProposalStatus,
@@ -15,6 +25,7 @@ from app.schemas.moderation import QuestionDraft
 from app.seeds.questions import sync_accepted_answers, sync_options
 
 MAX_PENDING_PROPOSALS = 5
+MAX_OPEN_SUGGESTIONS = 5
 
 
 class ModerationError(Exception):
@@ -95,6 +106,49 @@ def list_open_flags(db: Session) -> list[QuestionFlag]:
             .limit(100)
         )
     )
+
+
+def create_suggestion(db: Session, user: User, kind: AppSuggestionKind, body: str) -> AppSuggestion:
+    open_count = (
+        db.scalar(
+            select(func.count())
+            .select_from(AppSuggestion)
+            .where(
+                AppSuggestion.user_id == user.id,
+                AppSuggestion.status == AppSuggestionStatus.OPEN,
+            )
+        )
+        or 0
+    )
+    if open_count >= MAX_OPEN_SUGGESTIONS:
+        raise ModerationError(f"Você já tem {MAX_OPEN_SUGGESTIONS} sugestões aguardando revisão")
+    suggestion = AppSuggestion(user_id=user.id, kind=kind, body=body)
+    db.add(suggestion)
+    db.flush()
+    return suggestion
+
+
+def list_open_suggestions(db: Session) -> list[AppSuggestion]:
+    return list(
+        db.scalars(
+            select(AppSuggestion)
+            .where(AppSuggestion.status == AppSuggestionStatus.OPEN)
+            .options(selectinload(AppSuggestion.user))
+            .order_by(AppSuggestion.created_at.desc())
+            .limit(100)
+        )
+    )
+
+
+def review_suggestion(db: Session, suggestion_id: uuid.UUID) -> AppSuggestion:
+    suggestion = db.get(AppSuggestion, suggestion_id)
+    if suggestion is None:
+        raise ModerationError("Sugestão não encontrada", status_code=404)
+    if suggestion.status != AppSuggestionStatus.OPEN:
+        raise ModerationError("Esta sugestão já foi tratada")
+    suggestion.status = AppSuggestionStatus.REVIEWED
+    db.flush()
+    return suggestion
 
 
 def list_pending_proposals(db: Session) -> list[QuestionProposal]:

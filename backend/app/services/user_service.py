@@ -9,6 +9,7 @@ from sqlalchemy.orm import Session
 from app.core.config import get_settings
 from app.core.security import verify_password
 from app.models import (
+    AppSuggestion,
     DailyActivity,
     Duel,
     Friendship,
@@ -79,6 +80,7 @@ def export_account(db: Session, user: User) -> dict[str, Any]:
     proposals = db.scalars(
         select(QuestionProposal).where(QuestionProposal.user_id == user.id)
     ).all()
+    suggestions = db.scalars(select(AppSuggestion).where(AppSuggestion.user_id == user.id)).all()
     friendships = db.scalars(
         select(Friendship).where(
             or_(Friendship.requester_id == user.id, Friendship.addressee_id == user.id)
@@ -200,6 +202,15 @@ def export_account(db: Session, user: User) -> dict[str, Any]:
         "question_proposals": [
             {"id": str(row.id), "status": row.status.value, "payload": row.payload}
             for row in proposals
+        ],
+        "app_suggestions": [
+            {
+                "id": str(row.id),
+                "kind": row.kind.value,
+                "body": row.body,
+                "status": row.status.value,
+            }
+            for row in suggestions
         ],
     }
     user.last_data_export_at = now

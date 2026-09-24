@@ -54,3 +54,8 @@ export const FLAG_REASON_LABELS: Record<string, string> = {
   wrong_reference: 'Referência bíblica errada',
   other: 'Outro',
 }
+
+export const SUGGESTION_KIND_LABELS = {
+  feature: 'Nova funcionalidade',
+  correction: 'Correção',
+} as const

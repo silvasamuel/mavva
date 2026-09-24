@@ -15,9 +15,9 @@ export function TermsPage() {
 
       <h2>2. O que o Mavva faz</h2>
       <p>
-        O Mavva oferece quizzes, revisão espaçada, duelos, ranking e sugestão de perguntas sobre a
-        Bíblia. O conteúdo é educativo e de entretenimento. Não substitui aconselhamento pastoral,
-        teológico ou jurídico.
+        O Mavva oferece quizzes, revisão espaçada, duelos, ranking, sugestão de perguntas sobre a
+        Bíblia e sugestão de melhorias do aplicativo. O conteúdo é educativo e de entretenimento.
+        Não substitui aconselhamento pastoral, teológico ou jurídico.
       </p>
 
       <h2>3. Idade e conta</h2>
@@ -51,7 +51,8 @@ export function TermsPage() {
 
       <h2>5. Conteúdo que você envia</h2>
       <p>
-        Relatos de erro em perguntas e sugestões de novas questões podem ser revisados, editados ou
+        Relatos de erro em perguntas, sugestões de novas questões e ideias de melhoria ou correção
+        do aplicativo podem ser revisados, editados ou
         recusados. Ao enviar, você autoriza o Mavva a usar esse material no próprio serviço.
       </p>
 

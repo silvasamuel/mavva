@@ -65,3 +65,13 @@ class QuestionProposalStatus(StrEnum):
     PENDING = "pending"
     APPROVED = "approved"
     REJECTED = "rejected"
+
+
+class AppSuggestionKind(StrEnum):
+    FEATURE = "feature"
+    CORRECTION = "correction"
+
+
+class AppSuggestionStatus(StrEnum):
+    OPEN = "open"
+    REVIEWED = "reviewed"

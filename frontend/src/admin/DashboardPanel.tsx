@@ -49,7 +49,7 @@ export function DashboardPanel({
           icon={AppIcons.search}
           label="Fila de revisão"
           value={review.pending}
-          hint={`${fmt(review.flags_open)} denúncias · ${fmt(review.proposals_pending)} sugestões`}
+          hint={`${fmt(review.flags_open)} denúncias · ${fmt(review.proposals_pending)} perguntas · ${fmt(review.suggestions_open)} melhorias`}
           highlight={review.pending > 0}
           onClick={() => onNavigate('review')}
         />

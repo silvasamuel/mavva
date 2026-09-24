@@ -412,6 +412,7 @@ class TestAdminDashboard:
         assert body["questions"]["old_testament"] == 2
         assert body["review"]["flags_open"] == 0
         assert body["review"]["proposals_pending"] == 0
+        assert body["review"]["suggestions_open"] == 0
         assert body["review"]["pending"] == 0
         assert body["activity"]["studied_today"] == 1
         assert body["activity"]["xp_today"] == 40

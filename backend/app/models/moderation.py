@@ -6,7 +6,13 @@ from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.base import Base, TimestampMixin
-from app.models.enums import QuestionFlagReason, QuestionFlagStatus, QuestionProposalStatus
+from app.models.enums import (
+    AppSuggestionKind,
+    AppSuggestionStatus,
+    QuestionFlagReason,
+    QuestionFlagStatus,
+    QuestionProposalStatus,
+)
 from app.models.question import Question
 from app.models.user import User
 
@@ -67,3 +73,23 @@ class QuestionProposal(TimestampMixin, Base):
 
     user: Mapped[User] = relationship()
     question: Mapped[Question | None] = relationship()
+
+
+class AppSuggestion(TimestampMixin, Base):
+    """A player note suggesting a new feature or a correction in the app."""
+
+    __tablename__ = "app_suggestions"
+    __table_args__ = (Index("ix_app_suggestions_status", "status"),)
+
+    id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
+    user_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("users.id", ondelete="CASCADE"), index=True
+    )
+    kind: Mapped[AppSuggestionKind] = mapped_column(_enum(AppSuggestionKind, "app_suggestion_kind"))
+    body: Mapped[str] = mapped_column(Text)
+    status: Mapped[AppSuggestionStatus] = mapped_column(
+        _enum(AppSuggestionStatus, "app_suggestion_status"),
+        default=AppSuggestionStatus.OPEN,
+    )
+
+    user: Mapped[User] = relationship()
