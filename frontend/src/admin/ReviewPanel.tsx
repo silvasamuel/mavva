@@ -193,7 +193,9 @@ export function ReviewPanel() {
               </p>
               <Button
                 variant="secondary"
-                loading={reviewSuggestion.isPending}
+                loading={
+                  reviewSuggestion.isPending && reviewSuggestion.variables === suggestion.id
+                }
                 onClick={() => reviewSuggestion.mutate(suggestion.id)}
               >
                 Concluir
