@@ -55,7 +55,9 @@ def create_session(
 ) -> QuizSession:
     if mode == QuizMode.REVIEW:
         today = today_for_user(user)
-        question_ids = srs.due_question_ids(db, user.id, today, question_count)
+        question_ids = srs.due_question_ids(
+            db, user.id, today, question_count, order=user.review_order
+        )
         if not question_ids:
             raise QuizError("Você não tem revisões pendentes hoje")
     else:
@@ -255,7 +257,14 @@ def submit_answer(
     session.xp_earned += xp
 
     # SRS updates immediately (survives abandoned sessions).
-    srs.record_answer(db, user.id, question.id, is_correct, today_for_user(user))
+    srs.record_answer(
+        db,
+        user.id,
+        question.id,
+        is_correct,
+        today_for_user(user),
+        settings=srs.settings_for(user),
+    )
     db.flush()
 
     canonical_answer = (
