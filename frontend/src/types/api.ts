@@ -299,3 +299,10 @@ export interface ProposalCreateResponse {
   id: string
   status: 'pending' | 'approved' | 'rejected'
 }
+
+export type AppSuggestionKind = 'feature' | 'correction'
+
+export interface SuggestionCreateResponse {
+  id: string
+  status: 'open' | 'reviewed'
+}

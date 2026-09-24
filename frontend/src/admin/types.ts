@@ -23,6 +23,7 @@ export interface AdminDashboard {
   review: {
     flags_open: number
     proposals_pending: number
+    suggestions_open: number
     pending: number
   }
   activity: {
@@ -182,9 +183,21 @@ export interface AdminProposal {
   question_id: string | null
 }
 
+export interface AdminSuggestion {
+  id: string
+  created_at: string
+  kind: 'feature' | 'correction'
+  body: string
+  status: 'open' | 'reviewed'
+  author_name: string
+  author_username: string
+}
+
 export interface AdminReviewInbox {
   open_flags: number
   pending_proposals: number
+  open_suggestions: number
   flags: AdminFlag[]
   proposals: AdminProposal[]
+  suggestions: AdminSuggestion[]
 }

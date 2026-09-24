@@ -31,6 +31,7 @@ class AdminDashboardQuestions(BaseModel):
 class AdminDashboardReview(BaseModel):
     flags_open: int
     proposals_pending: int
+    suggestions_open: int
     pending: int
 
 

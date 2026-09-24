@@ -4,7 +4,7 @@ from app.models.gamification import (
     ReviewItem,
     UserAchievement,
 )
-from app.models.moderation import QuestionFlag, QuestionProposal
+from app.models.moderation import AppSuggestion, QuestionFlag, QuestionProposal
 from app.models.question import Category, Question, QuestionAnswer, QuestionOption
 from app.models.quiz import QuizAnswer, QuizSession, QuizSessionQuestion
 from app.models.rate_limit import RateLimitBucket
@@ -19,6 +19,7 @@ from app.models.user import (
 
 __all__ = [
     "Achievement",
+    "AppSuggestion",
     "Category",
     "DailyActivity",
     "Duel",

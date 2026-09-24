@@ -2,9 +2,11 @@ import uuid
 from datetime import datetime
 from typing import Any
 
-from pydantic import BaseModel, Field, model_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
 
 from app.models.enums import (
+    AppSuggestionKind,
+    AppSuggestionStatus,
     Difficulty,
     QuestionFlagReason,
     QuestionFlagStatus,
@@ -64,6 +66,24 @@ class ProposalCreateResponse(BaseModel):
     status: QuestionProposalStatus
 
 
+class SuggestionCreateRequest(BaseModel):
+    kind: AppSuggestionKind
+    body: str = Field(max_length=2000)
+
+    @field_validator("body")
+    @classmethod
+    def normalize_body(cls, value: str) -> str:
+        text = value.strip()
+        if len(text) < 10:
+            raise ValueError("Escreva pelo menos 10 caracteres")
+        return text
+
+
+class SuggestionCreateResponse(BaseModel):
+    id: uuid.UUID
+    status: AppSuggestionStatus
+
+
 class AdminFlagOut(BaseModel):
     id: uuid.UUID
     created_at: datetime
@@ -88,8 +108,20 @@ class AdminProposalOut(BaseModel):
     question_id: uuid.UUID | None = None
 
 
+class AdminSuggestionOut(BaseModel):
+    id: uuid.UUID
+    created_at: datetime
+    kind: AppSuggestionKind
+    body: str
+    status: AppSuggestionStatus
+    author_name: str
+    author_username: str
+
+
 class AdminReviewInbox(BaseModel):
     open_flags: int
     pending_proposals: int
+    open_suggestions: int
     flags: list[AdminFlagOut]
     proposals: list[AdminProposalOut]
+    suggestions: list[AdminSuggestionOut]
