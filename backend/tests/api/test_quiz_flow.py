@@ -180,6 +180,23 @@ class TestQuizFlow:
         response = auth_client.post("/api/v1/quizzes", json={"mode": "review"})
         assert response.status_code == 400
 
+    def test_mistakes_only_ignores_a_correct_first_answer(
+        self, auth_client: TestClient, db: Session
+    ):
+        saved = auth_client.patch("/api/v1/users/me", json={"review_scope": "mistakes"})
+        assert saved.status_code == 200, saved.text
+        make_mc_question(db, make_category(db))
+        quiz = _start_quiz(auth_client, question_count=1)
+        answered = auth_client.post(
+            f"/api/v1/quizzes/{quiz['id']}/answers",
+            json={
+                "question_id": quiz["questions"][0]["id"],
+                "selected_option_id": _correct_option_id(db, quiz["questions"][0]),
+            },
+        )
+        assert answered.status_code == 200, answered.text
+        assert db.scalars(select(ReviewItem)).all() == []
+
     def test_session_isolation_between_users(self, auth_client: TestClient, db: Session):
         category = make_category(db)
         make_mc_question(db, category)

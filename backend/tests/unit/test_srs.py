@@ -1,7 +1,8 @@
 from datetime import date, timedelta
 
 from app.models import ReviewItem
-from app.services.srs import EASE_MIN, EASE_START, apply_review
+from app.models.enums import ReviewSpacing
+from app.services.srs import EASE_MIN, EASE_START, ReviewSettings, apply_review
 
 TODAY = date(2026, 7, 14)
 
@@ -52,3 +53,24 @@ class TestSm2:
         for _ in range(20):
             item = apply_review(item, False, TODAY)
         assert item.ease_factor >= EASE_MIN
+
+    def test_intensive_spacing_grows_more_slowly(self):
+        item = _item()
+        settings = ReviewSettings(spacing=ReviewSpacing.INTENSIVE)
+        item = apply_review(item, True, TODAY, settings)
+        assert item.interval_days == 1
+        item = apply_review(item, True, TODAY, settings)
+        assert item.interval_days == 2
+
+    def test_relaxed_spacing_starts_further_out(self):
+        item = apply_review(_item(), True, TODAY, ReviewSettings(spacing=ReviewSpacing.RELAXED))
+        assert item.interval_days == 3
+        item = apply_review(item, True, TODAY, ReviewSettings(spacing=ReviewSpacing.RELAXED))
+        assert item.interval_days == 7
+
+    def test_max_interval_caps_growth(self):
+        item = _item()
+        settings = ReviewSettings(max_interval_days=30)
+        for _ in range(8):
+            item = apply_review(item, True, TODAY, settings)
+        assert item.interval_days == 30

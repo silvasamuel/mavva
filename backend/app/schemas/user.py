@@ -3,7 +3,7 @@ from typing import Annotated
 
 from pydantic import BaseModel, ConfigDict, Field, StringConstraints
 
-from app.models.enums import UserRole
+from app.models.enums import ReviewOrder, ReviewScope, ReviewSpacing, UserRole
 
 Name = Annotated[str, StringConstraints(min_length=2, max_length=120, strip_whitespace=True)]
 Username = Annotated[
@@ -24,6 +24,11 @@ class UserOut(BaseModel):
     role: UserRole
     timezone: str
     daily_goal_xp: int
+    review_spacing: ReviewSpacing
+    review_scope: ReviewScope
+    review_order: ReviewOrder
+    review_session_size: int
+    review_max_interval_days: int | None
 
 
 class RankOut(BaseModel):
@@ -36,6 +41,11 @@ class UserUpdate(BaseModel):
     username: Username | None = None
     daily_goal_xp: int | None = Field(default=None, ge=10, le=500)
     timezone: str | None = Field(default=None, max_length=64)
+    review_spacing: ReviewSpacing | None = None
+    review_scope: ReviewScope | None = None
+    review_order: ReviewOrder | None = None
+    review_session_size: int | None = None
+    review_max_interval_days: int | None = None
 
 
 class AccountDeleteRequest(BaseModel):
