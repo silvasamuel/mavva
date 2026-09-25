@@ -99,6 +99,25 @@ describe('PlayerProfileModal', () => {
     expect(view.getByText('Joga desde setembro de 2026')).toBeInTheDocument()
   })
 
+  it('shows what the tapped row knows while the profile loads', async () => {
+    get.mockReturnValue(new Promise(() => {}))
+    const client = new QueryClient({ defaultOptions: { queries: { retry: false } } })
+    render(
+      <QueryClientProvider client={client}>
+        <PlayerProfileModal userId="p1" preview={profile().user} onClose={vi.fn()} />
+      </QueryClientProvider>
+    )
+
+    const dialog = await screen.findByRole('dialog', { name: 'Perfil do jogador' })
+    const view = within(dialog)
+    expect(view.getByText('Maria Souza')).toBeInTheDocument()
+    expect(view.getByText('@maria')).toBeInTheDocument()
+    expect(view.getByText('Videira · Nível 12')).toBeInTheDocument()
+    // Stats wait for the request: placeholders, not made-up numbers.
+    expect(dialog.querySelector('[aria-busy="true"]')).not.toBeNull()
+    expect(view.queryByText('Sequência')).not.toBeInTheDocument()
+  })
+
   it('never renders personal data, even if the payload carried some', async () => {
     get.mockResolvedValue({ ...profile(), email: 'maria.privada@teste.com', timezone: 'Europe/Lisbon' })
     renderModal()

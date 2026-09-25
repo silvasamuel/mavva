@@ -2,7 +2,12 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { api } from '@/lib/api'
-import type { FriendsLeaderboard, GlobalLeaderboard, LeaderboardEntry } from '@/types/api'
+import type {
+  FriendsLeaderboard,
+  GlobalLeaderboard,
+  LeaderboardEntry,
+  PublicUser,
+} from '@/types/api'
 import { PlayerProfileModal } from '@/components/PlayerProfileModal'
 import { RankBadge } from '@/components/RankBadge'
 import { Button } from '@/components/ui/Button'
@@ -15,7 +20,7 @@ function formatXp(xp: number): string {
   return `${xp.toLocaleString('pt-BR')} XP`
 }
 
-type OpenPlayer = (userId: string) => void
+type OpenPlayer = (user: PublicUser) => void
 
 function RankRow({ entry, onOpen }: { entry: LeaderboardEntry; onOpen: OpenPlayer }) {
   return (
@@ -23,7 +28,7 @@ function RankRow({ entry, onOpen }: { entry: LeaderboardEntry; onOpen: OpenPlaye
       <button
         type="button"
         aria-haspopup="dialog"
-        onClick={() => onOpen(entry.user.id)}
+        onClick={() => onOpen(entry.user)}
         className={`flex w-full items-center gap-3 rounded-2xl py-3 text-left transition-colors hover:bg-sand-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-leaf-500 ${
           entry.is_me ? 'px-3 hover:bg-grain-100' : 'px-1'
         }`}
@@ -101,7 +106,7 @@ function FriendsBoard({ data, onOpen }: { data: FriendsLeaderboard; onOpen: Open
 
 export function RankingPage() {
   const [tab, setTab] = useState<Tab>('global')
-  const [openPlayer, setOpenPlayer] = useState<string | null>(null)
+  const [openPlayer, setOpenPlayer] = useState<PublicUser | null>(null)
 
   const global = useQuery({
     queryKey: ['ranking', 'global'],
@@ -159,7 +164,11 @@ export function RankingPage() {
         </Card>
       )}
 
-      <PlayerProfileModal userId={openPlayer} onClose={() => setOpenPlayer(null)} />
+      <PlayerProfileModal
+        userId={openPlayer?.id ?? null}
+        preview={openPlayer}
+        onClose={() => setOpenPlayer(null)}
+      />
     </div>
   )
 }

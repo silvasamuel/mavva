@@ -1,11 +1,10 @@
 import { useState, type ReactNode } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { api, ApiError } from '@/lib/api'
-import type { PlayerProfile } from '@/types/api'
+import type { PlayerProfile, PublicUser } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { ProgressBar } from '@/components/ui/ProgressBar'
-import { Spinner } from '@/components/ui/Spinner'
 import { RankBadge } from '@/components/RankBadge'
 import { formatPercent } from '@/lib/format'
 import { AchievementGlyph, AppIcons, CategoryGlyph, Glyph, type Icon } from '@/lib/icons'
@@ -180,20 +179,100 @@ function ProfileBody({ profile }: { profile: PlayerProfile }) {
   )
 }
 
+function Bone({ className }: { className: string }) {
+  return <span className={`block animate-pulse rounded-full bg-sand-100 ${className}`} />
+}
+
+/**
+ * Same layout and heights as ProfileBody, so the card doesn't jump from a
+ * small spinner box to a full-screen profile when the data lands. What the
+ * tapped row already knows (name, handle, rank, level) shows right away.
+ */
+function ProfileSkeleton({ user }: { user?: PublicUser }) {
+  return (
+    <div className="space-y-5" aria-busy="true">
+      <header className="flex flex-col items-center gap-2">
+        {user ? (
+          <>
+            <RankBadge code={user.rank.code} size="lg" />
+            <div>
+              <h2 className="text-xl font-extrabold text-ink">{user.name}</h2>
+              <p className="text-sm font-semibold text-sand-500">@{user.username}</p>
+            </div>
+          </>
+        ) : (
+          <>
+            <Bone className="h-16 w-16 rounded-2xl" />
+            <div className="space-y-1.5 py-0.5">
+              <Bone className="h-6 w-36" />
+              <Bone className="mx-auto h-4 w-20" />
+            </div>
+          </>
+        )}
+      </header>
+
+      <div>
+        {user ? (
+          <p className="text-sm font-extrabold text-ink">
+            {user.rank.name} · Nível {user.level}
+          </p>
+        ) : (
+          <Bone className="mx-auto h-5 w-32" />
+        )}
+        <Bone className="mt-2 h-2.5 w-full" />
+        <Bone className="mx-auto mt-1 h-4 w-48" />
+      </div>
+
+      <div className="grid grid-cols-2 gap-2">
+        {[0, 1, 2, 3].map((index) => (
+          <span key={index} className="block h-[6.5rem] animate-pulse rounded-2xl bg-sand-50" />
+        ))}
+      </div>
+
+      <div>
+        <Bone className="mx-auto mb-2 h-4 w-40" />
+        <div className="grid grid-cols-2 gap-2">
+          {[0, 1, 2, 3].map((index) => (
+            <span key={index} className="block h-9 animate-pulse rounded-2xl bg-grain-50" />
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <Bone className="mx-auto mb-2 h-4 w-28" />
+        <div className="space-y-1.5">
+          {[0, 1, 2].map((index) => (
+            <span key={index} className="block h-9 animate-pulse rounded-2xl bg-sand-50" />
+          ))}
+        </div>
+      </div>
+
+      <Bone className="mx-auto h-4 w-44" />
+    </div>
+  )
+}
+
 /**
  * Another player's public profile, opened from the ranking and the friends
  * list. Shows only game stats — the API never sends e-mail or activity dates.
  */
 export function PlayerProfileModal({
   userId,
+  preview,
   onClose,
 }: {
   userId: string | null
+  /** The tapped row's player, shown while the full profile loads. */
+  preview?: PublicUser | null
   onClose: () => void
 }) {
   // Keep showing the last player while the modal animates closed.
   const [shownId, setShownId] = useState(userId)
-  if (userId != null && userId !== shownId) setShownId(userId)
+  const [shownPreview, setShownPreview] = useState(preview)
+  if (userId != null && userId !== shownId) {
+    setShownId(userId)
+    setShownPreview(preview)
+  }
 
   const { data, isPending, isError, error, refetch } = useQuery({
     queryKey: ['player', shownId],
@@ -219,9 +298,7 @@ export function PlayerProfileModal({
             </Button>
           </div>
         ) : isPending || !data ? (
-          <div className="flex justify-center py-12">
-            <Spinner className="h-8 w-8 text-leaf-500" />
-          </div>
+          <ProfileSkeleton user={shownPreview?.id === shownId ? shownPreview : undefined} />
         ) : (
           <ProfileBody profile={data} />
         )}
