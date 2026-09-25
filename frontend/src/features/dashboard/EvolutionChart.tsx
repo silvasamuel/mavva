@@ -24,7 +24,12 @@ function fillWindow(data: Point[]): Point[] {
   for (let offset = 29; offset >= 0; offset--) {
     const day = new Date(today)
     day.setDate(today.getDate() - offset)
-    const iso = day.toISOString().slice(0, 10)
+    // The player's calendar day: toISOString() is UTC, already tomorrow after 21:00 in Brazil.
+    const iso = [
+      day.getFullYear(),
+      String(day.getMonth() + 1).padStart(2, '0'),
+      String(day.getDate()).padStart(2, '0'),
+    ].join('-')
     points.push(byDate.get(iso) ?? { date: iso, xp: 0, questions: 0 })
   }
   return points
