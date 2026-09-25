@@ -36,6 +36,48 @@ class UserSearchResult(BaseModel):
     relation: RelationStatus
 
 
+class PlayerStatsOut(BaseModel):
+    total_xp: int
+    xp_into_level: int
+    xp_for_next_level: int
+    current_streak: int
+    longest_streak: int
+    questions_answered: int
+    accuracy: float | None
+    perfect_sessions: int
+
+
+class PlayerAchievementOut(BaseModel):
+    code: str
+    name: str
+
+
+class PlayerCategoryOut(BaseModel):
+    slug: str
+    name: str
+    icon: str
+    accuracy: float
+    answered: int
+
+
+class PlayerProfileOut(BaseModel):
+    """Another player's public profile — game stats only.
+
+    No e-mail, timezone, daily goal, activity dates or unlock timestamps, and the
+    signup date only to the month: nothing beyond the name and handle the ranking
+    already shows identifies or locates the person.
+    """
+
+    user: PublicUser
+    relation: Literal["self", "none", "pending_sent", "pending_received", "friends"]
+    member_since: str  # "YYYY-MM"
+    stats: PlayerStatsOut
+    achievements_unlocked: int
+    achievements_total: int
+    recent_achievements: list[PlayerAchievementOut]  # newest first
+    strongest_categories: list[PlayerCategoryOut]  # best accuracy first
+
+
 class FriendRequestIn(BaseModel):
     username: Username
 

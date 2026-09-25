@@ -44,6 +44,34 @@ export interface UserSearchResult {
   relation: RelationStatus
 }
 
+/** Another player's public profile — game stats only, never e-mail or activity dates. */
+export interface PlayerProfile {
+  user: PublicUser
+  relation: RelationStatus | 'self'
+  /** "YYYY-MM" — only the month, on purpose. */
+  member_since: string
+  stats: {
+    total_xp: number
+    xp_into_level: number
+    xp_for_next_level: number
+    current_streak: number
+    longest_streak: number
+    questions_answered: number
+    accuracy: number | null
+    perfect_sessions: number
+  }
+  achievements_unlocked: number
+  achievements_total: number
+  recent_achievements: { code: string; name: string }[]
+  strongest_categories: {
+    slug: string
+    name: string
+    icon: string
+    accuracy: number
+    answered: number
+  }[]
+}
+
 export interface FriendRequest {
   id: string
   user: PublicUser

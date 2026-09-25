@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { api } from '@/lib/api'
 import type { FriendsLeaderboard, GlobalLeaderboard, LeaderboardEntry } from '@/types/api'
+import { PlayerProfileModal } from '@/components/PlayerProfileModal'
 import { RankBadge } from '@/components/RankBadge'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
@@ -14,40 +15,47 @@ function formatXp(xp: number): string {
   return `${xp.toLocaleString('pt-BR')} XP`
 }
 
-function RankRow({ entry }: { entry: LeaderboardEntry }) {
+type OpenPlayer = (userId: string) => void
+
+function RankRow({ entry, onOpen }: { entry: LeaderboardEntry; onOpen: OpenPlayer }) {
   return (
-    <li
-      className={`flex items-center gap-3 py-3 ${
-        entry.is_me ? 'rounded-2xl bg-grain-50 px-3 ring-1 ring-grain-200' : 'px-1'
-      }`}
-    >
-      <span
-        className={`w-8 shrink-0 text-right text-sm font-extrabold tabular-nums ${
-          entry.position <= 3 ? 'text-grain-700' : 'text-sand-400'
+    <li className={entry.is_me ? 'rounded-2xl bg-grain-50 ring-1 ring-grain-200' : ''}>
+      <button
+        type="button"
+        aria-haspopup="dialog"
+        onClick={() => onOpen(entry.user.id)}
+        className={`flex w-full items-center gap-3 rounded-2xl py-3 text-left transition-colors hover:bg-sand-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-leaf-500 ${
+          entry.is_me ? 'px-3 hover:bg-grain-100' : 'px-1'
         }`}
       >
-        {entry.position}º
-      </span>
-      <RankBadge code={entry.user.rank.code} size="sm" />
-      <div className="min-w-0 flex-1">
-        <p className="truncate font-extrabold text-ink">
-          {entry.is_me ? `Você · @${entry.user.username}` : `@${entry.user.username}`}
-        </p>
-        <p className="truncate text-xs font-semibold text-sand-500">
-          {entry.user.rank.name} · {formatXp(entry.total_xp)}
-        </p>
-      </div>
+        <span
+          className={`w-8 shrink-0 text-right text-sm font-extrabold tabular-nums ${
+            entry.position <= 3 ? 'text-grain-700' : 'text-sand-400'
+          }`}
+        >
+          {entry.position}º
+        </span>
+        <RankBadge code={entry.user.rank.code} size="sm" />
+        <div className="min-w-0 flex-1">
+          <p className="truncate font-extrabold text-ink">
+            {entry.is_me ? `Você · @${entry.user.username}` : `@${entry.user.username}`}
+          </p>
+          <p className="truncate text-xs font-semibold text-sand-500">
+            {entry.user.rank.name} · {formatXp(entry.total_xp)}
+          </p>
+        </div>
+      </button>
     </li>
   )
 }
 
-function GlobalBoard({ data }: { data: GlobalLeaderboard }) {
+function GlobalBoard({ data, onOpen }: { data: GlobalLeaderboard; onOpen: OpenPlayer }) {
   const inTop = data.top.some((row) => row.is_me)
   return (
     <Card>
       <ol className="divide-y divide-sand-100">
         {data.top.map((entry) => (
-          <RankRow key={entry.user.id} entry={entry} />
+          <RankRow key={entry.user.id} entry={entry} onOpen={onOpen} />
         ))}
       </ol>
       {!inTop && (
@@ -56,7 +64,7 @@ function GlobalBoard({ data }: { data: GlobalLeaderboard }) {
             Sua posição · {data.me.position}º de {data.total_players}
           </p>
           <ol>
-            <RankRow entry={data.me} />
+            <RankRow entry={data.me} onOpen={onOpen} />
           </ol>
         </div>
       )}
@@ -64,7 +72,7 @@ function GlobalBoard({ data }: { data: GlobalLeaderboard }) {
   )
 }
 
-function FriendsBoard({ data }: { data: FriendsLeaderboard }) {
+function FriendsBoard({ data, onOpen }: { data: FriendsLeaderboard; onOpen: OpenPlayer }) {
   const navigate = useNavigate()
   const onlyMe = data.entries.length === 1 && data.entries[0].is_me
 
@@ -84,7 +92,7 @@ function FriendsBoard({ data }: { data: FriendsLeaderboard }) {
       )}
       <ol className="divide-y divide-sand-100">
         {data.entries.map((entry) => (
-          <RankRow key={entry.user.id} entry={entry} />
+          <RankRow key={entry.user.id} entry={entry} onOpen={onOpen} />
         ))}
       </ol>
     </Card>
@@ -93,6 +101,7 @@ function FriendsBoard({ data }: { data: FriendsLeaderboard }) {
 
 export function RankingPage() {
   const [tab, setTab] = useState<Tab>('global')
+  const [openPlayer, setOpenPlayer] = useState<string | null>(null)
 
   const global = useQuery({
     queryKey: ['ranking', 'global'],
@@ -138,9 +147,9 @@ export function RankingPage() {
           <Spinner className="h-8 w-8 text-leaf-500" />
         </div>
       ) : tab === 'global' && global.data ? (
-        <GlobalBoard data={global.data} />
+        <GlobalBoard data={global.data} onOpen={setOpenPlayer} />
       ) : friends.data ? (
-        <FriendsBoard data={friends.data} />
+        <FriendsBoard data={friends.data} onOpen={setOpenPlayer} />
       ) : (
         <Card>
           <p className="text-sm font-semibold text-sand-500">Não foi possível carregar o ranking.</p>
@@ -149,6 +158,8 @@ export function RankingPage() {
           </Button>
         </Card>
       )}
+
+      <PlayerProfileModal userId={openPlayer} onClose={() => setOpenPlayer(null)} />
     </div>
   )
 }

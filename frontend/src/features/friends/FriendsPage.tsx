@@ -8,22 +8,39 @@ import { Card, CardTitle } from '@/components/ui/Card'
 import { Input } from '@/components/ui/Input'
 import { Spinner } from '@/components/ui/Spinner'
 import { EmptyState } from '@/components/ui/EmptyState'
+import { PlayerProfileModal } from '@/components/PlayerProfileModal'
 import { RankBadge } from '@/components/RankBadge'
 import { Modal } from '@/components/ui/Modal'
 import { useAuth } from '@/features/auth/AuthContext'
 import { AppIcons, Glyph } from '@/lib/icons'
 
-function PlayerRow({ user, children }: { user: PublicUser; children?: React.ReactNode }) {
+function PlayerRow({
+  user,
+  onOpen,
+  children,
+}: {
+  user: PublicUser
+  onOpen: (userId: string) => void
+  children?: React.ReactNode
+}) {
+  // The player block opens the profile; actions stay beside it, never nested inside.
   return (
     <li className="flex items-center gap-3 py-3">
-      <RankBadge code={user.rank.code} size="sm" />
-      <div className="min-w-0 flex-1">
-        <p className="truncate font-extrabold text-ink">{user.name}</p>
-        <p className="truncate text-xs font-semibold text-sand-500">@{user.username}</p>
-        <p className="text-xs font-semibold text-sand-400">
-          {user.rank.name} · {user.duel_wins}V {user.duel_losses}D {user.duel_draws}E
-        </p>
-      </div>
+      <button
+        type="button"
+        aria-haspopup="dialog"
+        onClick={() => onOpen(user.id)}
+        className="-mx-2 flex min-w-0 flex-1 items-center gap-3 rounded-2xl px-2 py-1 text-left transition-colors hover:bg-sand-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-leaf-500"
+      >
+        <RankBadge code={user.rank.code} size="sm" />
+        <div className="min-w-0 flex-1">
+          <p className="truncate font-extrabold text-ink">{user.name}</p>
+          <p className="truncate text-xs font-semibold text-sand-500">@{user.username}</p>
+          <p className="text-xs font-semibold text-sand-400">
+            {user.rank.name} · {user.duel_wins}V {user.duel_losses}D {user.duel_draws}E
+          </p>
+        </div>
+      </button>
       {children}
     </li>
   )
@@ -36,6 +53,7 @@ export function FriendsPage() {
   const [feedback, setFeedback] = useState('')
   const [error, setError] = useState('')
   const [removing, setRemoving] = useState<PublicUser | null>(null)
+  const [openPlayer, setOpenPlayer] = useState<string | null>(null)
   const debouncedSearch = useDebouncedValue(search)
 
   const { data, isLoading } = useQuery({
@@ -129,7 +147,7 @@ export function FriendsPage() {
             ) : results && results.length > 0 ? (
               <ul className="divide-y divide-sand-100">
                 {results.map(({ user: found, relation }) => (
-                  <PlayerRow key={found.id} user={found}>
+                  <PlayerRow key={found.id} user={found} onOpen={setOpenPlayer}>
                     {relation === 'none' ? (
                       <Button
                         variant="secondary"
@@ -164,7 +182,7 @@ export function FriendsPage() {
           <CardTitle>Pedidos recebidos</CardTitle>
           <ul className="divide-y divide-sand-100">
             {data.incoming.map((request) => (
-              <PlayerRow key={request.id} user={request.user}>
+              <PlayerRow key={request.id} user={request.user} onOpen={setOpenPlayer}>
                 <div className="flex gap-2">
                   <Button
                     onClick={() => respond.mutate({ id: request.id, accept: true })}
@@ -196,7 +214,7 @@ export function FriendsPage() {
         ) : (
           <ul className="divide-y divide-sand-100">
             {data.friends.map((friend) => (
-              <PlayerRow key={friend.id} user={friend}>
+              <PlayerRow key={friend.id} user={friend} onOpen={setOpenPlayer}>
                 <button
                   onClick={() => setRemoving(friend)}
                   className="text-xs font-extrabold uppercase text-sand-400 hover:text-red-600"
@@ -214,13 +232,15 @@ export function FriendsPage() {
           <CardTitle>Pedidos enviados</CardTitle>
           <ul className="divide-y divide-sand-100">
             {data.sent.map((request) => (
-              <PlayerRow key={request.id} user={request.user}>
+              <PlayerRow key={request.id} user={request.user} onOpen={setOpenPlayer}>
                 <span className="text-xs font-extrabold uppercase text-sand-400">Aguardando</span>
               </PlayerRow>
             ))}
           </ul>
         </Card>
       )}
+
+      <PlayerProfileModal userId={openPlayer} onClose={() => setOpenPlayer(null)} />
 
       <Modal
         open={removing != null}
