@@ -27,6 +27,8 @@ class ReviewSummaryOut(BaseModel):
     due_today: int
     due_this_week: int
     total_items: int
+    # spacing value -> days until a fresh question returns after each consecutive hit
+    spacing_preview: dict[str, list[int]]
 
 
 class BookOut(BaseModel):

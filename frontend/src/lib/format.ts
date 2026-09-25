@@ -6,6 +6,14 @@ export function formatStudyTime(totalSeconds: number): string {
   return `${hours}h ${minutes.toString().padStart(2, '0')}min`
 }
 
+/** A review interval in words: days under two months, then rough months/years. */
+export function formatDays(days: number): string {
+  if (days < 60) return days === 1 ? '1 dia' : `${days} dias`
+  if (days < 365) return `~${Math.round(days / 30)} meses`
+  const years = Math.round(days / 365)
+  return years === 1 ? '~1 ano' : `~${years} anos`
+}
+
 export function formatPercent(ratio: number | null): string {
   if (ratio == null) return '—'
   return `${Math.round(ratio * 100)}%`

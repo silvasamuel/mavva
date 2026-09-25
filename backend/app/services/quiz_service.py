@@ -56,7 +56,7 @@ def create_session(
     if mode == QuizMode.REVIEW:
         today = today_for_user(user)
         question_ids = srs.due_question_ids(
-            db, user.id, today, question_count, order=user.review_order
+            db, user.id, today, question_count, srs.settings_for(user)
         )
         if not question_ids:
             raise QuizError("Você não tem revisões pendentes hoje")

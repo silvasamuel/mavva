@@ -274,6 +274,8 @@ export interface ReviewSummary {
   due_today: number
   due_this_week: number
   total_items: number
+  /** Days until a fresh question returns after each consecutive hit, per spacing option. */
+  spacing_preview: Record<ReviewSpacing, number[]>
 }
 
 export interface BibleBook {

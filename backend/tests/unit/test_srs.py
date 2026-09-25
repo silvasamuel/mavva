@@ -2,7 +2,14 @@ from datetime import date, timedelta
 
 from app.models import ReviewItem
 from app.models.enums import ReviewSpacing
-from app.services.srs import EASE_MIN, EASE_START, ReviewSettings, apply_review
+from app.services.srs import (
+    EASE_MIN,
+    EASE_START,
+    PREVIEW_HITS,
+    ReviewSettings,
+    apply_review,
+    spacing_preview,
+)
 
 TODAY = date(2026, 7, 14)
 
@@ -74,3 +81,37 @@ class TestSm2:
         for _ in range(8):
             item = apply_review(item, True, TODAY, settings)
         assert item.interval_days == 30
+
+
+class TestSpacingPreview:
+    """The review screen explains each spacing with these numbers, so they must
+    be exactly what the scheduler does — not a copy that can drift."""
+
+    def test_matches_the_scheduler_for_every_option(self):
+        preview = spacing_preview(ReviewSettings())
+        assert preview == {
+            "intensive": [1, 2, 3, 4, 6],
+            "balanced": [1, 3, 8, 21, 57],
+            "relaxed": [3, 7, 18, 48, 130],
+        }
+
+    def test_agrees_with_applying_reviews_one_by_one(self):
+        for spacing in ReviewSpacing:
+            item = _item()
+            expected = []
+            for _ in range(PREVIEW_HITS):
+                item = apply_review(item, True, TODAY, ReviewSettings(spacing=spacing))
+                expected.append(item.interval_days)
+            assert spacing_preview(ReviewSettings())[spacing.value] == expected
+
+    def test_applies_the_max_interval(self):
+        preview = spacing_preview(ReviewSettings(max_interval_days=30))
+        assert preview["balanced"] == [1, 3, 8, 21, 30]
+        assert preview["relaxed"] == [3, 7, 18, 30, 30]
+        assert max(max(steps) for steps in preview.values()) <= 30
+
+    def test_ignores_the_selected_spacing(self):
+        # Every option is previewed so the player can compare before switching.
+        assert spacing_preview(ReviewSettings(spacing=ReviewSpacing.RELAXED)) == spacing_preview(
+            ReviewSettings(spacing=ReviewSpacing.INTENSIVE)
+        )
