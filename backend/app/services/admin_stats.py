@@ -144,10 +144,6 @@ def dashboard(db: Session) -> AdminDashboardOut:
         ).select_from(Duel)
     ).one()
 
-    friendships = _n(
-        db.scalar(select(func.count()).where(Friendship.status == FriendshipStatus.ACCEPTED))
-    )
-
     answered_n = _n(answered)
     questions_total_n = _n(questions_total)
     questions_active_n = _n(questions_active)
@@ -190,7 +186,6 @@ def dashboard(db: Session) -> AdminDashboardOut:
             duels_open=_n(duels_open),
             duels_active=_n(duels_active),
             duels_finished=_n(duels_finished),
-            friendships=friendships,
         ),
     )
 

@@ -432,5 +432,4 @@ class TestAdminDashboard:
         assert body["activity"]["studied_today"] == 1
         assert body["activity"]["xp_today"] == 55
         assert body["activity"]["duels_finished"] == 0
-        assert body["activity"]["friendships"] == 0
         assert "accuracy" in body["activity"]

@@ -46,7 +46,6 @@ class AdminDashboardActivity(BaseModel):
     duels_open: int
     duels_active: int
     duels_finished: int
-    friendships: int
 
 
 class AdminActivityRange(BaseModel):

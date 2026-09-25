@@ -113,7 +113,6 @@ export interface AdminDashboard {
     duels_open: number
     duels_active: number
     duels_finished: number
-    friendships: number
   }
 }
 

@@ -29,7 +29,6 @@ const dashboard: AdminDashboard = {
     duels_open: 1,
     duels_active: 2,
     duels_finished: 30,
-    friendships: 12,
   },
 }
 
@@ -49,5 +48,6 @@ describe('DashboardPanel', () => {
 
     expect(screen.getByRole('heading', { name: 'Totais gerais' })).toBeInTheDocument()
     expect(screen.getByText('XP acumulado').parentElement).toHaveTextContent('150.000')
+    expect(screen.queryByText('Amizades')).not.toBeInTheDocument()
   })
 })
