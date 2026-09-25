@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
-import { motion, useReducedMotion } from 'framer-motion'
+import { motion, useReducedMotion, type Variants } from 'framer-motion'
 import { api } from '@/lib/api'
 import type { DashboardData } from '@/types/api'
 import { Button } from '@/components/ui/Button'
@@ -40,7 +40,7 @@ export function DashboardPage() {
   const hour = new Date().getHours()
   const greeting = hour < 12 ? 'Bom dia' : hour < 18 ? 'Boa tarde' : 'Boa noite'
 
-  const enter = reduceMotion
+  const enter: Variants | undefined = reduceMotion
     ? undefined
     : {
         hidden: { opacity: 0, y: 16 },
