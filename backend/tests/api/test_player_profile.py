@@ -67,6 +67,9 @@ class TestPrivacy:
             "unlocked_at",
             "role",
             "is_active",
+            # How much XP is left for the next level is the player's own business.
+            "xp_into_level",
+            "xp_for_next_level",
         }
         assert _keys(response.json()) & forbidden == set()
 
@@ -152,7 +155,7 @@ class TestStats:
             2,
         )
         s = body["stats"]
-        assert (s["total_xp"], s["xp_into_level"], s["xp_for_next_level"]) == (400, 150, 200)
+        assert s["total_xp"] == 400
         assert (s["current_streak"], s["longest_streak"]) == (5, 12)
         assert s["questions_answered"] == 40
         assert s["accuracy"] == 0.75

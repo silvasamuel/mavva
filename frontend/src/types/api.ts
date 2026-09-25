@@ -50,10 +50,9 @@ export interface PlayerProfile {
   relation: RelationStatus | 'self'
   /** "YYYY-MM" — only the month, on purpose. */
   member_since: string
+  /** No progress inside the level: how much XP is left is the player's own. */
   stats: {
     total_xp: number
-    xp_into_level: number
-    xp_for_next_level: number
     current_streak: number
     longest_streak: number
     questions_answered: number

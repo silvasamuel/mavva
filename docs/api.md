@@ -156,7 +156,7 @@ pergunta — o agendamento já feito não muda, como no Anki. O badge do dashboa
 
 | Método | Rota | Descrição |
 |---|---|---|
-| GET | `/players/{id}` | Perfil público de outro jogador — aberto pelo ranking e pela lista de amigos. Qualquer jogador logado pode ver (o ranking global já mostra desconhecidos). Devolve `user` (`PublicUser`), `relation` (`self`/`friends`/`pending_sent`/`pending_received`/`none`), `member_since` (`"YYYY-MM"`, só o mês), `stats` (XP, progresso no nível, sequência atual/recorde, respondidas, precisão, sessões perfeitas), `achievements_unlocked`/`achievements_total`, `recent_achievements` (até 4, mais recentes primeiro, sem data) e `strongest_categories` (até 3, só com ≥ 5 respostas). **Nunca** inclui e-mail, fuso, meta diária, papel, datas de atividade ou de desbloqueio. 404 para id desconhecido ou conta inativa (igual ao ranking). |
+| GET | `/players/{id}` | Perfil público de outro jogador — aberto pelo ranking e pela lista de amigos. Qualquer jogador logado pode ver (o ranking global já mostra desconhecidos). Devolve `user` (`PublicUser`), `relation` (`self`/`friends`/`pending_sent`/`pending_received`/`none`), `member_since` (`"YYYY-MM"`, só o mês), `stats` (XP total, sequência atual/recorde, respondidas, precisão, sessões perfeitas), `achievements_unlocked`/`achievements_total`, `recent_achievements` (até 4, mais recentes primeiro, sem data) e `strongest_categories` (até 3, só com ≥ 5 respostas). **Nunca** inclui e-mail, fuso, meta diária, papel, datas de atividade ou de desbloqueio, nem quanto falta para o próximo nível. 404 para id desconhecido ou conta inativa (igual ao ranking). |
 
 ## Duelos
 

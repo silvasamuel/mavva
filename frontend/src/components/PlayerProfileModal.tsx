@@ -4,7 +4,6 @@ import { api, ApiError } from '@/lib/api'
 import type { PlayerProfile, PublicUser } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
-import { ProgressBar } from '@/components/ui/ProgressBar'
 import { RankBadge } from '@/components/RankBadge'
 import { formatPercent } from '@/lib/format'
 import { AchievementGlyph, AppIcons, CategoryGlyph, Glyph, type Icon } from '@/lib/icons'
@@ -72,7 +71,6 @@ function ProfileBody({ profile }: { profile: PlayerProfile }) {
   const { user, stats } = profile
   const relation = RELATION_LABEL[profile.relation]
   const duels = user.duel_wins + user.duel_losses + user.duel_draws
-  const toNext = Math.max(0, stats.xp_for_next_level - stats.xp_into_level)
 
   return (
     <div className="space-y-5">
@@ -89,19 +87,14 @@ function ProfileBody({ profile }: { profile: PlayerProfile }) {
         )}
       </header>
 
+      {/* Rank, level and total XP are on the leaderboard already; how far the
+          player is from the next level isn't shown to others. */}
       <section aria-label="Nível">
         <p className="text-sm font-extrabold text-ink">
           {user.rank.name} · Nível {user.level}
         </p>
-        <ProgressBar
-          value={stats.xp_into_level}
-          max={stats.xp_for_next_level}
-          color="bg-grain-400"
-          className="mx-auto mt-2 h-2.5"
-        />
         <p className="mt-1 text-xs font-semibold text-sand-500">
-          {stats.total_xp.toLocaleString('pt-BR')} XP · faltam {toNext.toLocaleString('pt-BR')} para
-          o nível {user.level + 1}
+          {stats.total_xp.toLocaleString('pt-BR')} XP
         </p>
       </section>
 
@@ -219,8 +212,7 @@ function ProfileSkeleton({ user }: { user?: PublicUser }) {
         ) : (
           <Bone className="mx-auto h-5 w-32" />
         )}
-        <Bone className="mt-2 h-2.5 w-full" />
-        <Bone className="mx-auto mt-1 h-4 w-48" />
+        <Bone className="mx-auto mt-1 h-4 w-20" />
       </div>
 
       <div className="grid grid-cols-2 gap-2">

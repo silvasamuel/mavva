@@ -39,8 +39,6 @@ const joaoProfile: PlayerProfile = {
   member_since: '2026-03',
   stats: {
     total_xp: 1800,
-    xp_into_level: 100,
-    xp_for_next_level: 450,
     current_streak: 3,
     longest_streak: 9,
     questions_answered: 150,

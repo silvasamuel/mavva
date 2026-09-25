@@ -25,7 +25,7 @@ from app.schemas.user import RankOut
 from app.services import duel_service, friendship_service, player_profile
 from app.services.duel_service import DUEL_XP, DuelError
 from app.services.friendship_service import FriendshipError
-from app.services.gamification import level_from_total_xp, rank_from_level
+from app.services.gamification import rank_from_level
 from app.services.rate_limit_service import enforce_user_limit
 
 friends_router = APIRouter(prefix="/friends", tags=["friends"])
@@ -149,7 +149,6 @@ def player_profile_view(user_id: uuid.UUID, user: CurrentUser, db: DbDep) -> Pla
     stats = player.stats
     total_xp = stats.total_xp if stats else 0
     answered = stats.questions_answered if stats else 0
-    _, xp_into_level, xp_for_next = level_from_total_xp(total_xp)
     unlocked, total, recent = player_profile.achievements_of(db, player.id)
     return PlayerProfileOut(
         user=_require_public(player),
@@ -157,8 +156,6 @@ def player_profile_view(user_id: uuid.UUID, user: CurrentUser, db: DbDep) -> Pla
         member_since=player.created_at.strftime("%Y-%m"),
         stats=PlayerStatsOut(
             total_xp=total_xp,
-            xp_into_level=xp_into_level,
-            xp_for_next_level=xp_for_next,
             current_streak=stats.current_streak if stats else 0,
             longest_streak=stats.longest_streak if stats else 0,
             questions_answered=answered,
