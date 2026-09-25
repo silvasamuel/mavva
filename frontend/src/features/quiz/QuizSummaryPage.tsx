@@ -221,7 +221,8 @@ export function QuizSummaryPage() {
                   {totalXp >= 0 ? `+${totalXp}` : totalXp} XP
                 </p>
               </div>
-              <div className="flex gap-3">
+              {/* Side by side "Jogar de novo" wraps under ~370px wide; stack there. */}
+              <div className="flex flex-col gap-3 min-[370px]:flex-row">
                 <Link to="/quiz/new" className="flex-1">
                   <Button variant="secondary" full>
                     Jogar de novo

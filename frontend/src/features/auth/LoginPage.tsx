@@ -102,12 +102,12 @@ export function LoginPage() {
         </Button>
       </form>
       <div className="mt-5 flex flex-col items-center gap-2 text-sm font-bold">
-        <Link to="/forgot-password" className="text-leaf-600 hover:underline">
+        <Link to="/forgot-password" className="py-2 text-leaf-600 hover:underline">
           Esqueci minha senha
         </Link>
         <p className="text-sand-500">
           Ainda não tem conta?{' '}
-          <Link to="/register" className="text-leaf-600 hover:underline">
+          <Link to="/register" className="py-2 text-leaf-600 hover:underline">
             Cadastre-se
           </Link>
         </p>

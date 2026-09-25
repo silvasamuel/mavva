@@ -45,7 +45,7 @@ export function ForgotPasswordPage() {
           >
             {cooldown.remaining > 0 ? `Reenviar em ${cooldown.remaining}s` : 'Enviar de novo'}
           </Button>
-          <Link to="/login" className="inline-block text-sm font-bold text-leaf-600 hover:underline">
+          <Link to="/login" className="inline-block py-2 text-sm font-bold text-leaf-600 hover:underline">
             Voltar para o login
           </Link>
         </div>
@@ -74,7 +74,7 @@ export function ForgotPasswordPage() {
             {cooldown.remaining > 0 ? `Reenviar em ${cooldown.remaining}s` : 'Enviar link'}
           </Button>
           <p className="text-center">
-            <Link to="/login" className="text-sm font-bold text-leaf-600 hover:underline">
+            <Link to="/login" className="py-2 text-sm font-bold text-leaf-600 hover:underline">
               Voltar para o login
             </Link>
           </p>

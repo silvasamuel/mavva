@@ -155,7 +155,10 @@ export function DuelsPage() {
         </Card>
         <Card className="text-center">
           <p className="text-2xl font-extrabold">{formatPercent(record.win_rate)}</p>
-          <p className="text-xs font-bold uppercase text-sand-500">aproveitamento</p>
+          {/* Hyphenates on the narrowest phones instead of spilling out. */}
+          <p className="hyphens-auto break-words text-xs font-bold uppercase text-sand-500">
+            aproveitamento
+          </p>
         </Card>
         <Card className="text-center">
           <p className="text-2xl font-extrabold text-grain-600">

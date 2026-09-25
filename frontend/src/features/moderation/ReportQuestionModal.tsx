@@ -73,10 +73,10 @@ export function ReportQuestionModal({
         ) : (
           <>
             <p className="text-center font-extrabold">Há um problema nesta pergunta?</p>
-            <fieldset className="space-y-2">
-              <legend className="text-sm font-bold text-sand-700">Motivo</legend>
+            <fieldset className="space-y-1">
+              <legend className="mb-1 text-sm font-bold text-sand-700">Motivo</legend>
               {REASONS.map((value) => (
-                <label key={value} className="flex items-center gap-2 text-sm font-semibold">
+                <label key={value} className="flex items-center gap-2 py-1.5 text-sm font-semibold">
                   <input
                     type="radio"
                     name="flag-reason"
@@ -98,7 +98,8 @@ export function ReportQuestionModal({
                 maxLength={500}
                 rows={3}
                 onChange={(event) => setComment(event.target.value)}
-                className="w-full rounded-2xl border-2 border-sand-200 bg-white px-4 py-3 text-sm font-semibold focus:border-leaf-500 focus-visible:ring-0"
+                // 16px on touchscreens so iOS doesn't zoom in on focus.
+                className="w-full rounded-2xl border-2 border-sand-200 bg-white px-4 py-3 text-base font-semibold focus:border-leaf-500 focus-visible:ring-0 [@media(pointer:fine)]:text-sm"
               />
               <p className="text-right text-xs font-semibold text-sand-400">{comment.length}/500</p>
             </div>

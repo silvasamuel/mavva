@@ -1,3 +1,4 @@
+import { useLayoutEffect, useRef } from 'react'
 import { RankBadge } from '@/components/RankBadge'
 import { ProgressBar } from '@/components/ui/ProgressBar'
 import {
@@ -20,13 +21,24 @@ export function RankLadder({
   const band = rankFromLevel(level)
   const next = band.maxLevel != null ? rankFromLevel(band.maxLevel + 1) : null
   const progress = rankProgress(level, band.minLevel, next?.minLevel ?? null)
+  const listRef = useRef<HTMLOListElement>(null)
+
+  // On a phone only ~4 of the ranks fit, so bring the player's own into view.
+  // Setting scrollLeft moves just this strip (scrollIntoView could move the page).
+  useLayoutEffect(() => {
+    const list = listRef.current
+    const item = list?.children[current] as HTMLElement | undefined
+    if (!list || !item) return
+    list.scrollLeft = item.offsetLeft - (list.clientWidth - item.offsetWidth) / 2
+  }, [current])
 
   return (
     <section className="rounded-3xl bg-white/75 px-4 py-4 shadow-card backdrop-blur-sm sm:px-5">
       <h2 className="mb-3 text-xs font-extrabold uppercase tracking-wider text-sand-600">
         Elo
       </h2>
-      <ol className="flex gap-2 overflow-x-auto pb-1">
+      {/* pt-1: the current rank's ring would be clipped by the scroll box. */}
+      <ol ref={listRef} className="relative flex gap-2 overflow-x-auto pb-1 pt-1">
         {RANK_CODES.map((code, index) => {
           const rank = rankFromLevel(index * 5 + 1)
           const state =

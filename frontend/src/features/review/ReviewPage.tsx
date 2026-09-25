@@ -114,8 +114,11 @@ function Counter({
   highlight?: boolean
   busy: boolean
 }) {
+  // Three of these share a phone's width (~100px each at 360px): less side
+  // padding, the number starts below the "i", and a long label hyphenates
+  // ("acompa-nhadas") instead of spilling out of the card.
   return (
-    <Card className="relative text-center">
+    <Card className="relative px-2 pb-4 pt-7 text-center sm:p-5">
       <span className="absolute right-2 top-2">
         <InfoTip label={tipLabel}>{tip}</InfoTip>
       </span>
@@ -127,7 +130,7 @@ function Counter({
       >
         {value}
       </p>
-      <p className="text-xs font-bold uppercase text-sand-500">{label}</p>
+      <p className="hyphens-auto break-words text-xs font-bold uppercase text-sand-500">{label}</p>
     </Card>
   )
 }

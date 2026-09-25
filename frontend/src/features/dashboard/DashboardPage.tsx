@@ -78,9 +78,9 @@ export function DashboardPage() {
             barClass={daily_goal.achieved ? 'stroke-grain-300' : 'stroke-grain-200'}
           >
             <div className="text-center">
-              <p className="text-[10px] font-extrabold uppercase tracking-wider text-white/70">Maná</p>
+              <p className="text-xs font-extrabold uppercase tracking-wider text-white/70">Maná</p>
               <p className="text-2xl font-extrabold leading-none">{daily_goal.earned_today}</p>
-              <p className="text-[10px] font-bold text-white/70">de {daily_goal.target}</p>
+              <p className="text-xs font-bold text-white/70">de {daily_goal.target}</p>
             </div>
           </ProgressRing>
 
@@ -180,7 +180,7 @@ export function DashboardPage() {
           <h2 className="text-xs font-extrabold uppercase tracking-wider text-sand-600">
             Semana
           </h2>
-          <p className="text-[11px] font-bold text-sand-400">
+          <p className="text-xs font-bold text-sand-400">
             {week.filter((day) => day.xp > 0).length}/7 dias
           </p>
         </div>
@@ -188,7 +188,8 @@ export function DashboardPage() {
           {week.map((day) => (
             <li key={day.iso} className="flex flex-col items-center gap-1.5">
               <span
-                className={`flex h-10 w-10 items-center justify-center rounded-2xl text-sm font-extrabold ${
+                // Fills its seventh of the row, up to 40px: never wider than the column.
+                className={`flex aspect-square w-full max-w-[2.5rem] items-center justify-center rounded-2xl text-sm font-extrabold ${
                   day.xp > 0
                     ? day.isToday
                       ? 'bg-grain-400 text-grain-900 shadow-[0_3px_0_0_#aa5012]'
@@ -216,7 +217,7 @@ export function DashboardPage() {
             Complete um quiz para abrir o mapa de categorias.
           </p>
         ) : (
-          <ul className="grid grid-cols-4 gap-3">
+          <ul className="grid grid-cols-3 gap-3 sm:grid-cols-4">
             {practiced.map((category) => (
               <li key={category.id}>
                 <button
@@ -229,7 +230,7 @@ export function DashboardPage() {
                   <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-leaf-50 text-leaf-700 ring-2 ring-leaf-100">
                     <CategoryGlyph slug={category.slug} emoji={category.icon} className="h-7 w-7" />
                   </span>
-                  <span className="line-clamp-2 w-full text-center text-xs font-extrabold leading-tight text-ink">
+                  <span className="line-clamp-2 w-full hyphens-auto break-words text-center text-xs font-extrabold leading-tight text-ink">
                     {category.name}
                   </span>
                   <span className="text-xs font-bold text-sand-500">
@@ -277,13 +278,13 @@ export function DashboardPage() {
                       <p className="text-sm font-extrabold">
                         {session.correct_count}/{session.question_count} acertos
                       </p>
-                      <p className="text-[11px] font-bold text-sand-500">
+                      <p className="text-xs font-bold text-sand-500">
                         {session.mode === 'duel' ? 'Duelo · ' : ''}
                         {session.completed_at ? formatRelativeDate(session.completed_at) : ''}
                       </p>
                     </div>
                   </div>
-                  <span className={`rounded-full px-2.5 py-1 text-[11px] font-extrabold ${xpClass}`}>
+                  <span className={`rounded-full px-2.5 py-1 text-xs font-extrabold ${xpClass}`}>
                     {pendingDuel
                       ? 'aguardando'
                       : session.xp_earned > 0

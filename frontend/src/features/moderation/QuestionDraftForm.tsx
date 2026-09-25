@@ -4,7 +4,8 @@ import { DIFFICULTY_LABELS } from '@/lib/format'
 import { EMPTY_OPTIONS } from './questionDraft'
 
 const FIELD =
-  'w-full rounded-2xl border-2 border-sand-200 bg-white px-4 py-3 text-sm font-semibold focus:border-leaf-500 focus-visible:ring-0'
+  // 16px on touchscreens so iOS doesn't zoom in on focus; 14px with a mouse.
+  'w-full rounded-2xl border-2 border-sand-200 bg-white px-4 py-3 text-base font-semibold focus:border-leaf-500 focus-visible:ring-0 [@media(pointer:fine)]:text-sm'
 
 export function QuestionDraftForm({
   draft,
@@ -77,22 +78,25 @@ export function QuestionDraftForm({
           </label>
           {(draft.options ?? EMPTY_OPTIONS).map((option, index) => (
             <div key={index} className="flex items-center gap-2">
-              <input
-                type="radio"
-                name="correct"
-                checked={option.correct}
-                aria-label={`Alternativa ${index + 1} correta`}
-                onChange={() =>
-                  onChange({
-                    ...draft,
-                    options: (draft.options ?? []).map((item, itemIndex) => ({
-                      ...item,
-                      correct: itemIndex === index,
-                    })),
-                  })
-                }
-                className="h-5 w-5 accent-leaf-500"
-              />
+              {/* Padding around the 20px radio makes a finger-sized target. */}
+              <label className="-m-2.5 shrink-0 cursor-pointer p-2.5">
+                <input
+                  type="radio"
+                  name="correct"
+                  checked={option.correct}
+                  aria-label={`Alternativa ${index + 1} correta`}
+                  onChange={() =>
+                    onChange({
+                      ...draft,
+                      options: (draft.options ?? []).map((item, itemIndex) => ({
+                        ...item,
+                        correct: itemIndex === index,
+                      })),
+                    })
+                  }
+                  className="h-5 w-5 accent-leaf-500"
+                />
+              </label>
               <input
                 value={option.text}
                 onChange={(event) =>
@@ -138,7 +142,7 @@ export function QuestionDraftForm({
                     ),
                   })
                 }
-                className="rounded-xl bg-red-50 px-3 py-2 text-sm font-bold text-red-600"
+                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-red-50 text-sm font-bold text-red-600"
               >
                 ✕
               </button>
@@ -152,7 +156,7 @@ export function QuestionDraftForm({
                 accepted_answers: [...(draft.accepted_answers ?? []), ''],
               })
             }
-            className="text-sm font-bold text-leaf-600 hover:underline"
+            className="py-2 text-sm font-bold text-leaf-600 hover:underline"
           >
             + Adicionar resposta
           </button>

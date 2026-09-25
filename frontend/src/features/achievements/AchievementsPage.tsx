@@ -48,7 +48,7 @@ export function AchievementsPage() {
                 <div className="min-w-0 flex-1">
                   <div className="flex items-start justify-between gap-2">
                     <p className="font-extrabold">{achievement.name}</p>
-                    <span className="shrink-0 rounded-full bg-grain-100 px-2 py-0.5 text-[10px] font-extrabold text-grain-700">
+                    <span className="shrink-0 rounded-full bg-grain-100 px-2 py-0.5 text-xs font-extrabold text-grain-700">
                       +{achievement.xp_reward} XP
                     </span>
                   </div>
@@ -61,13 +61,13 @@ export function AchievementsPage() {
                         className="h-2 flex-1"
                         color="bg-grain-400"
                       />
-                      <span className="text-[10px] font-extrabold text-sand-500">
+                      <span className="text-xs font-extrabold text-sand-500">
                         {achievement.progress_current}/{achievement.progress_target}
                       </span>
                     </div>
                   )}
                   {unlocked && (
-                    <p className="mt-1 inline-flex items-center gap-1 text-[10px] font-extrabold uppercase tracking-wide text-grain-600">
+                    <p className="mt-1 inline-flex items-center gap-1 text-xs font-extrabold uppercase tracking-wide text-grain-600">
                       <Glyph as={AppIcons.confetti} className="h-3.5 w-3.5" />
                       Desbloqueada
                     </p>

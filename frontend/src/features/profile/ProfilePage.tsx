@@ -72,16 +72,16 @@ export function ProfilePage() {
             <Spinner className="h-8 w-8 text-leaf-500" />
           </div>
         )}
-        <div>
+        <div className="min-w-0">
           <h1 className="text-2xl font-extrabold">Perfil</h1>
-          <p className="text-sm font-semibold text-sand-500">
+          <p className="truncate text-sm font-semibold text-sand-500">
             {dashboard
               ? `${dashboard.stats.rank.name} · nível ${dashboard.stats.level}`
               : user?.email}
           </p>
           {eloHint && <p className="text-xs font-extrabold text-leaf-700">{eloHint}</p>}
           {dashboard && (
-            <p className="text-xs font-semibold text-sand-400">{user?.email}</p>
+            <p className="truncate text-xs font-semibold text-sand-400">{user?.email}</p>
           )}
         </div>
       </header>

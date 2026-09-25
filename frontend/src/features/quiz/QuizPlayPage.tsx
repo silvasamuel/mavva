@@ -317,7 +317,7 @@ export function QuizPlayPage() {
         <button
           onClick={() => setExitConfirm(true)}
           aria-label="Sair do quiz"
-          className="text-2xl text-sand-400 transition-colors hover:text-sand-600"
+          className="-ml-2 flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-2xl text-sand-400 transition-colors hover:text-sand-600"
         >
           ✕
         </button>
@@ -424,6 +424,12 @@ export function QuizPlayPage() {
               onKeyDown={(e) => e.key === 'Enter' && !feedback && handleSubmit()}
               placeholder="Digite sua resposta…"
               aria-label="Sua resposta"
+              // The keyboard covers "Responder" on phones, so its return key
+              // submits; no autocorrect rewriting Bible names.
+              enterKeyHint="send"
+              autoComplete="off"
+              autoCorrect="off"
+              spellCheck={false}
               className={`rounded-2xl border-2 bg-white px-4 py-4 text-lg font-bold focus-visible:ring-0 ${
                 feedback
                   ? feedback.is_correct
@@ -453,7 +459,8 @@ export function QuizPlayPage() {
               disabled={question.type === 'multiple_choice' ? !selectedOption : !answerText.trim()}
             >
               Responder
-              <span className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-[#f4efe0] px-2 py-0.5 text-[10px] font-extrabold tracking-wider text-leaf-700">
+              {/* Keyboard hint: meaningless on a touchscreen. */}
+              <span className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-[#f4efe0] px-2 py-0.5 text-[10px] font-extrabold tracking-wider text-leaf-700 [@media(pointer:coarse)]:hidden">
                 ENTER
               </span>
             </Button>
@@ -477,7 +484,10 @@ export function QuizPlayPage() {
                 : 'bg-red-600 text-white'
             }`}
           >
-            <div className="mx-auto flex min-h-full w-full max-w-lg flex-1 flex-col justify-center gap-5">
+            {/* m-auto centers while it fits; when a long explanation doesn't,
+                it starts at the top and scrolls (justify-center would push the
+                headline above the top, out of reach). */}
+            <div className="m-auto flex w-full max-w-lg flex-col gap-5">
               <motion.p
                 initial={{ scale: 0.6, y: 24 }}
                 animate={{ scale: 1, y: 0 }}
@@ -518,7 +528,7 @@ export function QuizPlayPage() {
                 <button
                   type="button"
                   onClick={() => setReportOpen(true)}
-                  className="mx-auto text-xs font-semibold text-white/70 underline-offset-2 hover:text-white hover:underline"
+                  className="mx-auto -my-2 px-3 py-3 text-xs font-semibold text-white/70 underline-offset-2 hover:text-white hover:underline"
                 >
                   Há um problema nesta pergunta?
                 </button>
@@ -543,7 +553,7 @@ export function QuizPlayPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-30 flex items-center justify-center bg-ink/40 px-4"
+            className="fixed inset-0 z-30 flex overflow-y-auto bg-ink/40 p-4"
             role="dialog"
             aria-modal="true"
             aria-label="Confirmar saída"
@@ -551,7 +561,7 @@ export function QuizPlayPage() {
             <motion.div
               initial={{ scale: 0.92, y: 8 }}
               animate={{ scale: 1, y: 0 }}
-              className="w-full max-w-sm space-y-4 rounded-3xl bg-white p-6 text-center shadow-card"
+              className="m-auto w-full max-w-sm space-y-4 rounded-3xl bg-white p-6 text-center shadow-card"
             >
               <span className="mx-auto flex justify-center text-red-600">
                 <Glyph
