@@ -202,7 +202,7 @@ def get_dashboard(db: Session, user: User) -> dict[str, Any]:
     today_activity = next((a for a in activities if a.date == today), None)
 
     categories = category_performance(db, user)
-    reviews_due = srs.review_summary(db, user.id, today)["due_today"]
+    reviews_due = srs.review_summary(db, user.id, today, srs.settings_for(user))["due_today"]
     sessions = recent_sessions(db, user, limit=5)
     duel_stakes = _duel_stakes_for(db, user, sessions)
     duels_awaiting = _duels_awaiting(db, user)

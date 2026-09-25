@@ -39,8 +39,9 @@ def list_categories(user: CurrentUser, db: DbDep) -> list[CategoryOut]:
 
 @router.get("/reviews/summary", response_model=ReviewSummaryOut)
 def reviews_summary(user: CurrentUser, db: DbDep) -> ReviewSummaryOut:
-    summary = srs.review_summary(db, user.id, today_for_user(user))
-    return ReviewSummaryOut(**summary)
+    settings = srs.settings_for(user)
+    summary = srs.review_summary(db, user.id, today_for_user(user), settings)
+    return ReviewSummaryOut(**summary, spacing_preview=srs.spacing_preview(settings))
 
 
 @router.get("/books", response_model=list[BookOut])

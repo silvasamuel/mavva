@@ -27,6 +27,7 @@ import {
   Handshake,
   Hourglass,
   House,
+  Info,
   Lightning,
   List,
   LockSimple,
@@ -114,6 +115,7 @@ export const AppIcons = {
   dice: DiceFive,
   scroll: Scroll,
   cross: Cross,
+  info: Info,
 } as const
 
 const CATEGORY_BY_SLUG: Record<string, Icon> = {

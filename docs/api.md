@@ -109,9 +109,31 @@ resposta correta não pode ser inferida chamando a API diretamente.
 
 | Método | Rota | Descrição |
 |---|---|---|
-| GET | `/reviews/summary` | `{due_today, due_this_week, total_items}`. |
+| GET | `/reviews/summary` | `{due_today, due_this_week, total_items, spacing_preview}` — ver abaixo. |
 
 *(A sessão de revisão é criada via `POST /quizzes` com `mode=review`.)*
+
+As contagens descrevem **exatamente o baralho de onde a sessão sorteia**, com as
+configurações atuais do jogador — a contagem e o sorteio usam o mesmo filtro
+(`srs._in_deck` + `srs._effective_due`), então "para hoje" nunca promete uma
+pergunta que "Revisar" não entrega:
+
+- Perguntas desativadas não contam nem são sorteadas.
+- `review_scope = mistakes` mantém só itens já errados alguma vez (`lapses > 0`); os
+  demais continuam guardados e voltam se o jogador trocar para `all`.
+- `review_max_interval_days` vale na hora: um item agendado além do limite vence no
+  máximo N dias depois da última revisão (`due_date − interval_days + N`), calculado
+  na leitura — o agendamento salvo não é reescrito, então tirar o limite o restaura.
+- `due_today`: vencidas até hoje (inclui atrasadas), no fuso do jogador.
+- `due_this_week`: vencem de hoje até daqui a 6 dias (7 dias corridos, inclui atrasadas).
+- `total_items`: itens no baralho com as configurações atuais.
+- `spacing_preview`: `{intensive|balanced|relaxed: [dias]}` — em quantos dias uma
+  pergunta nova volta após cada acerto seguido (5 passos), rodando o próprio
+  agendador com o limite do jogador. A tela usa isso em vez de manter uma cópia.
+
+O espaçamento (`review_spacing`) só vale a partir da próxima resposta de cada
+pergunta — o agendamento já feito não muda, como no Anki. O badge do dashboard
+(`reviews_due`) usa a mesma contagem de `due_today`.
 
 ## Amigos
 

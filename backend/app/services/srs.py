@@ -3,8 +3,9 @@
 import uuid
 from dataclasses import dataclass
 from datetime import date, timedelta
+from typing import Any
 
-from sqlalchemy import func, select
+from sqlalchemy import ColumnElement, func, select
 from sqlalchemy.orm import Session
 
 from app.models import Question, ReviewItem, User
@@ -16,6 +17,10 @@ EASE_MAX = 2.8
 EASE_GAIN = 0.05
 EASE_LOSS = 0.2
 INTENSIVE_GROWTH = 1.4
+# "Nesta semana" is today plus the next six days — seven calendar days.
+WEEK_DAYS = 7
+# How many consecutive hits the spacing preview on the review screen shows.
+PREVIEW_HITS = 5
 
 
 @dataclass(frozen=True)
@@ -111,41 +116,90 @@ def record_answer(
     return apply_review(item, is_correct, today, settings)
 
 
+def _in_deck(user_id: uuid.UUID, settings: ReviewSettings) -> list[ColumnElement[bool]]:
+    """Which review items are in play under the player's current settings.
+
+    Shared by the counts and by the session draw so the two can never disagree
+    again: counting an item the draw would never serve (a deactivated question)
+    inflated "para hoje" forever, since an item that is never served never
+    moves its due date. "Só o que eu erro" keeps only items missed at least
+    once; the rest stay tracked and come back if the player switches back.
+    Callers must join Question.
+    """
+    conditions: list[ColumnElement[bool]] = [
+        ReviewItem.user_id == user_id,
+        Question.is_active.is_(True),
+    ]
+    if settings.scope == ReviewScope.MISTAKES:
+        conditions.append(ReviewItem.lapses > 0)
+    return conditions
+
+
+def _effective_due(settings: ReviewSettings) -> Any:
+    """Due date as the current settings see it.
+
+    A max interval chosen after an item was scheduled pulls it back in: it
+    comes due at most max_interval_days after its last review (stored due date
+    minus its interval). Computed at read time — the stored schedule is left
+    alone, so removing the cap restores it.
+    """
+    if settings.max_interval_days is None:
+        return ReviewItem.due_date
+    last_review = ReviewItem.due_date - ReviewItem.interval_days
+    return func.least(ReviewItem.due_date, last_review + settings.max_interval_days)
+
+
 def due_question_ids(
     db: Session,
     user_id: uuid.UUID,
     today: date,
     limit: int,
-    order: ReviewOrder = ReviewOrder.OLDEST,
+    settings: ReviewSettings,
 ) -> list[uuid.UUID]:
     """Due items only. Oldest-due first, unless the player asked for the most lapsed."""
-    ordering = (
-        (ReviewItem.lapses.desc(), ReviewItem.due_date)
-        if order == ReviewOrder.LAPSES
-        else (ReviewItem.due_date,)
-    )
+    due = _effective_due(settings)
+    ordering = (ReviewItem.lapses.desc(), due) if settings.order == ReviewOrder.LAPSES else (due,)
     rows = db.scalars(
         select(ReviewItem.question_id)
         .join(Question, Question.id == ReviewItem.question_id)
-        .where(ReviewItem.user_id == user_id, ReviewItem.due_date <= today, Question.is_active)
+        .where(*_in_deck(user_id, settings), due <= today)
         .order_by(*ordering)
         .limit(limit)
     )
     return list(rows)
 
 
-def review_summary(db: Session, user_id: uuid.UUID, today: date) -> dict[str, int]:
-    due_today = db.scalar(
-        select(func.count())
+def review_summary(
+    db: Session, user_id: uuid.UUID, today: date, settings: ReviewSettings
+) -> dict[str, int]:
+    due = _effective_due(settings)
+    due_today, due_week, total = db.execute(
+        select(
+            func.count().filter(due <= today),
+            func.count().filter(due < today + timedelta(days=WEEK_DAYS)),
+            func.count(),
+        )
         .select_from(ReviewItem)
-        .where(ReviewItem.user_id == user_id, ReviewItem.due_date <= today)
-    )
-    due_week = db.scalar(
-        select(func.count())
-        .select_from(ReviewItem)
-        .where(ReviewItem.user_id == user_id, ReviewItem.due_date <= today + timedelta(days=7))
-    )
-    total = db.scalar(
-        select(func.count()).select_from(ReviewItem).where(ReviewItem.user_id == user_id)
-    )
-    return {"due_today": due_today or 0, "due_this_week": due_week or 0, "total_items": total or 0}
+        .join(Question, Question.id == ReviewItem.question_id)
+        .where(*_in_deck(user_id, settings))
+    ).one()
+    return {"due_today": due_today, "due_this_week": due_week, "total_items": total}
+
+
+def spacing_preview(settings: ReviewSettings) -> dict[str, list[int]]:
+    """Days until a fresh question comes back after each consecutive hit.
+
+    Runs the real scheduler on a throwaway item for every spacing option (with
+    the player's max interval applied), so the review screen explains the
+    schedule without keeping its own copy of the numbers.
+    """
+    preview: dict[str, list[int]] = {}
+    for spacing in ReviewSpacing:
+        item = ReviewItem(repetitions=0, ease_factor=EASE_START, interval_days=1, lapses=0)
+        as_if = ReviewSettings(spacing=spacing, max_interval_days=settings.max_interval_days)
+        steps = []
+        for _ in range(PREVIEW_HITS):
+            apply_review(item, True, date.min, as_if)
+            steps.append(item.interval_days)
+        preview[spacing.value] = steps
+    return preview
