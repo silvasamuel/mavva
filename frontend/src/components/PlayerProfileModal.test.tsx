@@ -34,8 +34,6 @@ function profile(overrides: Partial<PlayerProfile> = {}): PlayerProfile {
     member_since: '2026-09',
     stats: {
       total_xp: 3400,
-      xp_into_level: 350,
-      xp_for_next_level: 650,
       current_streak: 5,
       longest_streak: 12,
       questions_answered: 420,
@@ -85,7 +83,7 @@ describe('PlayerProfileModal', () => {
     expect(view.getByText('@maria')).toBeInTheDocument()
     expect(view.getByText('Amigo')).toBeInTheDocument()
     expect(view.getByText('Videira · Nível 12')).toBeInTheDocument()
-    expect(view.getByText(/3\.400 XP · faltam 300 para o nível 13/)).toBeInTheDocument()
+    expect(view.getByText('3.400 XP')).toBeInTheDocument()
     expect(view.getByText('5 dias')).toBeInTheDocument()
     expect(view.getByText('recorde 12')).toBeInTheDocument()
     expect(view.getByText('87%')).toBeInTheDocument()
@@ -99,12 +97,39 @@ describe('PlayerProfileModal', () => {
     expect(view.getByText('Joga desde setembro de 2026')).toBeInTheDocument()
   })
 
+  it('shows what the tapped row knows while the profile loads', async () => {
+    get.mockReturnValue(new Promise(() => {}))
+    const client = new QueryClient({ defaultOptions: { queries: { retry: false } } })
+    render(
+      <QueryClientProvider client={client}>
+        <PlayerProfileModal userId="p1" preview={profile().user} onClose={vi.fn()} />
+      </QueryClientProvider>
+    )
+
+    const dialog = await screen.findByRole('dialog', { name: 'Perfil do jogador' })
+    const view = within(dialog)
+    expect(view.getByText('Maria Souza')).toBeInTheDocument()
+    expect(view.getByText('@maria')).toBeInTheDocument()
+    expect(view.getByText('Videira · Nível 12')).toBeInTheDocument()
+    // Stats wait for the request: placeholders, not made-up numbers.
+    expect(dialog.querySelector('[aria-busy="true"]')).not.toBeNull()
+    expect(view.queryByText('Sequência')).not.toBeInTheDocument()
+  })
+
   it('never renders personal data, even if the payload carried some', async () => {
-    get.mockResolvedValue({ ...profile(), email: 'maria.privada@teste.com', timezone: 'Europe/Lisbon' })
+    get.mockResolvedValue({
+      ...profile(),
+      email: 'maria.privada@teste.com',
+      timezone: 'Europe/Lisbon',
+      stats: { ...profile().stats, xp_into_level: 350, xp_for_next_level: 650 },
+    })
     renderModal()
     const dialog = await screen.findByRole('dialog', { name: 'Perfil de Maria Souza' })
     expect(dialog).not.toHaveTextContent('maria.privada@teste.com')
     expect(dialog).not.toHaveTextContent('Europe/Lisbon')
+    // Progress toward the next level stays private: no bar, no "faltam".
+    expect(within(dialog).queryByRole('progressbar')).not.toBeInTheDocument()
+    expect(dialog).not.toHaveTextContent(/faltam/i)
   })
 
   it('handles a brand-new player gracefully', async () => {

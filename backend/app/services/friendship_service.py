@@ -2,6 +2,8 @@
 
 A friendship is stored once, from the requester's side; both directions are
 considered when looking one up, so `a -> b` and `b -> a` are the same relation.
+Deactivated accounts never show up in the lists, same as on the leaderboards;
+reactivating the account brings the friendship back.
 """
 
 import uuid
@@ -121,14 +123,19 @@ def list_friends(db: Session, me: User) -> list[User]:
         )
     ).all()
     friends = [f.addressee if f.requester_id == me.id else f.requester for f in rows]
-    return sorted(friends, key=lambda u: u.username)
+    return sorted((friend for friend in friends if friend.is_active), key=lambda u: u.username)
 
 
 def list_incoming_requests(db: Session, me: User) -> list[Friendship]:
     return list(
         db.scalars(
             select(Friendship)
-            .where(Friendship.addressee_id == me.id, Friendship.status == FriendshipStatus.PENDING)
+            .join(User, User.id == Friendship.requester_id)
+            .where(
+                Friendship.addressee_id == me.id,
+                Friendship.status == FriendshipStatus.PENDING,
+                User.is_active.is_(True),
+            )
             .options(selectinload(Friendship.requester).selectinload(User.stats))
             .order_by(Friendship.created_at.desc())
         ).all()
@@ -139,7 +146,12 @@ def list_sent_requests(db: Session, me: User) -> list[Friendship]:
     return list(
         db.scalars(
             select(Friendship)
-            .where(Friendship.requester_id == me.id, Friendship.status == FriendshipStatus.PENDING)
+            .join(User, User.id == Friendship.addressee_id)
+            .where(
+                Friendship.requester_id == me.id,
+                Friendship.status == FriendshipStatus.PENDING,
+                User.is_active.is_(True),
+            )
             .options(selectinload(Friendship.addressee).selectinload(User.stats))
             .order_by(Friendship.created_at.desc())
         ).all()

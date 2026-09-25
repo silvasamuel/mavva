@@ -20,7 +20,7 @@ function PlayerRow({
   children,
 }: {
   user: PublicUser
-  onOpen: (userId: string) => void
+  onOpen: (user: PublicUser) => void
   children?: React.ReactNode
 }) {
   // The player block opens the profile; actions stay beside it, never nested inside.
@@ -31,7 +31,7 @@ function PlayerRow({
       <button
         type="button"
         aria-haspopup="dialog"
-        onClick={() => onOpen(user.id)}
+        onClick={() => onOpen(user)}
         className="-mx-2 flex min-w-0 flex-1 basis-40 items-center gap-3 rounded-2xl px-2 py-1 text-left transition-colors hover:bg-sand-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-leaf-500"
       >
         <RankBadge code={user.rank.code} size="sm" />
@@ -55,7 +55,7 @@ export function FriendsPage() {
   const [feedback, setFeedback] = useState('')
   const [error, setError] = useState('')
   const [removing, setRemoving] = useState<PublicUser | null>(null)
-  const [openPlayer, setOpenPlayer] = useState<string | null>(null)
+  const [openPlayer, setOpenPlayer] = useState<PublicUser | null>(null)
   const debouncedSearch = useDebouncedValue(search)
 
   const { data, isLoading } = useQuery({
@@ -242,7 +242,11 @@ export function FriendsPage() {
         </Card>
       )}
 
-      <PlayerProfileModal userId={openPlayer} onClose={() => setOpenPlayer(null)} />
+      <PlayerProfileModal
+        userId={openPlayer?.id ?? null}
+        preview={openPlayer}
+        onClose={() => setOpenPlayer(null)}
+      />
 
       <Modal
         open={removing != null}

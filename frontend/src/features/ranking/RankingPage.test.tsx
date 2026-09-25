@@ -40,8 +40,6 @@ function profileOf(user: PublicUser): PlayerProfile {
     member_since: '2026-01',
     stats: {
       total_xp: 900,
-      xp_into_level: 10,
-      xp_for_next_level: 200,
       current_streak: 0,
       longest_streak: 0,
       questions_answered: 0,

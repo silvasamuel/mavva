@@ -4,7 +4,7 @@ from fastapi.testclient import TestClient
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.models import Duel, QuestionOption
+from app.models import Duel, QuestionOption, User
 from app.services import duel_service
 from tests.factories import make_category, make_mc_question, make_open_question
 from tests.helpers import register_and_login
@@ -630,6 +630,79 @@ class TestDuelAchievements:
         assert by_code["duel_win_10"]["progress_current"] == 0
         assert by_code["duel_streak_3"]["progress_target"] == 3
         assert by_code["duel_played_25"]["progress_target"] == 25
+
+
+def _set_active(db: Session, username: str, active: bool) -> None:
+    user = db.scalars(select(User).where(User.username == username)).one()
+    user.is_active = active
+    db.flush()
+
+
+class TestDeactivatedAccounts:
+    """An account the admin deactivated drops out of every social list."""
+
+    def _circle(self, auth_client: TestClient, client: TestClient) -> None:
+        # maria: friend · joao: asked me · ana: I asked her
+        maria = _register(client, "maria@teste.com", "Maria")
+        auth_client.post("/api/v1/friends/requests", json={"username": "maria"})
+        request_id = client.get("/api/v1/friends", headers=_auth(maria["access_token"])).json()[
+            "incoming"
+        ][0]["id"]
+        client.post(
+            f"/api/v1/friends/requests/{request_id}/accept",
+            headers=_auth(maria["access_token"]),
+        )
+        joao = _register(client, "joao@teste.com", "João")
+        client.post(
+            "/api/v1/friends/requests",
+            json={"username": "samuel"},
+            headers=_auth(joao["access_token"]),
+        )
+        _register(client, "ana@teste.com", "Ana")
+        auth_client.post("/api/v1/friends/requests", json={"username": "ana"})
+
+    def test_they_leave_the_friends_page(
+        self, auth_client: TestClient, client: TestClient, db: Session
+    ):
+        self._circle(auth_client, client)
+        for username in ("maria", "joao", "ana"):
+            _set_active(db, username, False)
+
+        body = auth_client.get("/api/v1/friends").json()
+
+        assert body == {"friends": [], "incoming": [], "sent": []}
+
+    def test_reactivating_brings_the_friendship_back(
+        self, auth_client: TestClient, client: TestClient, db: Session
+    ):
+        self._circle(auth_client, client)
+        _set_active(db, "maria", False)
+        _set_active(db, "maria", True)
+
+        friends = auth_client.get("/api/v1/friends").json()["friends"]
+
+        assert [friend["username"] for friend in friends] == ["maria"]
+
+    def test_their_request_stops_counting_in_the_badge(
+        self, auth_client: TestClient, client: TestClient, db: Session
+    ):
+        self._circle(auth_client, client)
+        assert auth_client.get("/api/v1/dashboard").json()["friend_requests"] == 1
+
+        _set_active(db, "joao", False)
+
+        assert auth_client.get("/api/v1/dashboard").json()["friend_requests"] == 0
+
+    def test_they_cannot_be_challenged(
+        self, auth_client: TestClient, client: TestClient, db: Session
+    ):
+        _seed_questions(db)
+        self._circle(auth_client, client)
+        _set_active(db, "maria", False)
+
+        response = auth_client.post("/api/v1/duels", json={"opponent_username": "maria"})
+
+        assert response.status_code == 404
 
 
 class TestPendingRequestBadge:

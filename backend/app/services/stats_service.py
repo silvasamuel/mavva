@@ -143,13 +143,16 @@ def _duels_awaiting(db: Session, user: User) -> int:
 
 
 def _pending_friend_requests(db: Session, user: User) -> int:
+    # Matches the incoming list: a deactivated requester isn't shown, so no badge.
     return (
         db.scalar(
             select(func.count())
             .select_from(Friendship)
+            .join(User, User.id == Friendship.requester_id)
             .where(
                 Friendship.addressee_id == user.id,
                 Friendship.status == FriendshipStatus.PENDING,
+                User.is_active.is_(True),
             )
         )
         or 0

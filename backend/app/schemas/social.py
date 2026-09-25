@@ -37,9 +37,7 @@ class UserSearchResult(BaseModel):
 
 
 class PlayerStatsOut(BaseModel):
-    total_xp: int
-    xp_into_level: int
-    xp_for_next_level: int
+    total_xp: int  # the ranking already shows it
     current_streak: int
     longest_streak: int
     questions_answered: int
@@ -65,7 +63,8 @@ class PlayerProfileOut(BaseModel):
 
     No e-mail, timezone, daily goal, activity dates or unlock timestamps, and the
     signup date only to the month: nothing beyond the name and handle the ranking
-    already shows identifies or locates the person.
+    already shows identifies or locates the person. Progress inside the current
+    level (how much XP is left for the next one) stays private too.
     """
 
     user: PublicUser

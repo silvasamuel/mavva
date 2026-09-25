@@ -80,8 +80,8 @@ def global_board(db: Session, me: User) -> GlobalBoard:
 
 def friends_board(db: Session, me: User) -> list[RankedPlayer]:
     me = _with_stats(db, me)
-    friends = [friend for friend in friendship_service.list_friends(db, me) if friend.is_active]
-    circle = [me, *friends]
+    # list_friends already leaves deactivated accounts out.
+    circle = [me, *friendship_service.list_friends(db, me)]
     circle.sort(key=lambda user: (-_xp(user), user.username))
     return [
         RankedPlayer(position=index + 1, user=user, total_xp=_xp(user), is_me=user.id == me.id)
