@@ -1,6 +1,82 @@
 import type { Difficulty, FlagReason, QuestionDraft, QuestionType, Testament } from '@/types/api'
 
-export type AdminTab = 'home' | 'review' | 'questions' | 'users'
+export type AdminTab = 'home' | 'activity' | 'review' | 'questions' | 'users'
+
+export type ActivityGranularity = 'day' | 'week' | 'month'
+
+export interface AdminActivityPoint {
+  /** First day (YYYY-MM-DD) of the day, week (Monday) or month. */
+  bucket: string
+  active_users: number
+  new_users: number
+  questions_answered: number
+  xp: number
+  study_seconds: number
+}
+
+export interface AdminActivity {
+  range: {
+    /** null = desde o início */
+    start: string | null
+    end: string
+    /** Where the chart starts: the start, or the first day with data if later. */
+    first_day: string
+    granularity: ActivityGranularity
+  }
+  totals: {
+    active_users: number
+    new_users: number
+    questions_answered: number
+    correct_answers: number
+    accuracy: number | null
+    xp: number
+    study_seconds: number
+    quizzes_completed: number
+    practice_completed: number
+    review_completed: number
+    duel_rounds_completed: number
+    quizzes_abandoned: number
+    perfect_sessions: number
+    duels_started: number
+    duels_finished: number
+    friendships: number
+    achievements_unlocked: number
+    reports: number
+    question_proposals: number
+    suggestions: number
+  }
+  /** Same-length window right before the range; null for "desde o início". */
+  previous: AdminActivityPrevious | null
+  series: AdminActivityPoint[]
+  top_categories: AdminActivityCategory[]
+  top_players: AdminActivityPlayer[]
+}
+
+export interface AdminActivityPrevious {
+  start: string
+  end: string
+  active_users: number
+  new_users: number
+  questions_answered: number
+  xp: number
+  study_seconds: number
+}
+
+export interface AdminActivityCategory {
+  slug: string
+  name: string
+  icon: string
+  answered: number
+  accuracy: number
+}
+
+export interface AdminActivityPlayer {
+  id: string
+  username: string
+  name: string
+  xp: number
+  questions_answered: number
+}
 
 export interface AdminDashboard {
   users: {
@@ -37,7 +113,6 @@ export interface AdminDashboard {
     duels_open: number
     duels_active: number
     duels_finished: number
-    friendships: number
   }
 }
 

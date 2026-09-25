@@ -58,6 +58,7 @@ export function DashboardPanel({
           label="Estudaram hoje"
           value={activity.studied_today}
           hint={`${fmt(activity.xp_today)} XP hoje`}
+          onClick={() => onNavigate('activity')}
         />
       </div>
 
@@ -95,8 +96,8 @@ export function DashboardPanel({
       </Card>
 
       <Card>
-        <CardTitle>Atividade</CardTitle>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <CardTitle>Totais gerais</CardTitle>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           <MiniStat label="Perguntas respondidas" value={activity.questions_answered} nested />
           <MiniStat label="Precisão geral" value={formatPercent(activity.accuracy)} nested />
           <MiniStat label="XP acumulado" value={activity.total_xp} nested />
@@ -108,7 +109,6 @@ export function DashboardPanel({
             hint={`${fmt(activity.duels_open)} na fila · ${fmt(activity.duels_active)} ativos`}
             nested
           />
-          <MiniStat label="Amizades" value={activity.friendships} nested />
         </div>
       </Card>
     </div>
