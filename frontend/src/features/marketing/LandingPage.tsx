@@ -116,19 +116,19 @@ export function LandingPage() {
       <footer className="mt-12 text-center text-xs font-semibold text-[#fefaec]">
         <p>“O maná... era como semente de coentro” — Êxodo 16:31</p>
         <p className="mt-2">
-          <Link to="/login" className="text-grain-200 underline-offset-2 hover:text-white hover:underline">
+          <Link to="/login" className="py-2 text-grain-200 underline-offset-2 hover:text-white hover:underline">
             Entrar
           </Link>
           <span className="text-white/50"> · </span>
-          <Link to="/register" className="text-grain-200 underline-offset-2 hover:text-white hover:underline">
+          <Link to="/register" className="py-2 text-grain-200 underline-offset-2 hover:text-white hover:underline">
             Cadastrar
           </Link>
           <span className="text-white/50"> · </span>
-          <Link to="/termos" className="text-grain-200 underline-offset-2 hover:text-white hover:underline">
+          <Link to="/termos" className="py-2 text-grain-200 underline-offset-2 hover:text-white hover:underline">
             Termos
           </Link>
           <span className="text-white/50"> · </span>
-          <Link to="/privacidade" className="text-grain-200 underline-offset-2 hover:text-white hover:underline">
+          <Link to="/privacidade" className="py-2 text-grain-200 underline-offset-2 hover:text-white hover:underline">
             Privacidade
           </Link>
         </p>

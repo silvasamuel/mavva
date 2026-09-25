@@ -38,10 +38,10 @@ export function TrackingConsent() {
               </Link>
             </p>
             <div className="flex shrink-0 gap-2">
-              <Button variant="secondary" className="px-3 py-2 text-xs" onClick={() => decide('essential')}>
+              <Button variant="secondary" size="sm" onClick={() => decide('essential')}>
                 Só o essencial
               </Button>
-              <Button className="px-3 py-2 text-xs" onClick={() => decide('accepted')}>
+              <Button size="sm" onClick={() => decide('accepted')}>
                 Aceitar métricas
               </Button>
             </div>

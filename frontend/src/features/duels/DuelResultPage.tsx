@@ -37,7 +37,7 @@ export function DuelResultPage() {
 
   if (isLoading || !duel) {
     return (
-      <div className="flex min-h-screen items-center justify-center">
+      <div className="flex justify-center py-24">
         <Spinner className="h-8 w-8 text-leaf-500" />
       </div>
     )
@@ -71,7 +71,9 @@ export function DuelResultPage() {
 
       {/* Scoreboard */}
       <Card>
-        <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-4">
+        {/* minmax(0,1fr): a long @username truncates instead of pushing the
+            scoreboard off-center. */}
+        <div className="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-4">
           <div className="text-center">
             <p className="text-xs font-extrabold uppercase tracking-wide text-sand-500">Você</p>
             {duel.me.user && (

@@ -54,11 +54,11 @@ function Stat({
       <span className="order-1">
         <Glyph as={icon} className="h-5 w-5 text-grain-600" />
       </span>
-      <dt className="order-3 text-[10px] font-extrabold uppercase tracking-wide text-sand-500">
+      <dt className="order-3 text-xs font-extrabold uppercase tracking-wide text-sand-500">
         {label}
       </dt>
       <dd className="order-2 text-lg font-extrabold leading-tight text-ink">{value}</dd>
-      {hint && <dd className="order-4 text-[10px] font-semibold text-sand-400">{hint}</dd>}
+      {hint && <dd className="order-4 text-xs font-semibold text-sand-400">{hint}</dd>}
     </div>
   )
 }
@@ -207,7 +207,7 @@ export function PlayerProfileModal({
       onClose={onClose}
       label={data ? `Perfil de ${data.user.name}` : 'Perfil do jogador'}
     >
-      <div className="-mx-6 max-h-[calc(100vh-10rem)] overflow-y-auto px-6">
+      <div className="-mx-6 max-h-[calc(100dvh-10rem)] overflow-y-auto px-6">
         {isError ? (
           <div className="space-y-3 py-6">
             <Glyph as={AppIcons.warning} className="mx-auto h-8 w-8 text-sand-400" />

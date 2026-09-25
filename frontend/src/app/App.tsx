@@ -43,7 +43,9 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <WorldBackdrop />
       <IconContext.Provider value={{ weight: 'duotone', color: 'currentColor' }}>
-      <div className="relative z-10">
+      {/* Clip sideways overflow (slide-in animations, a word too long for its
+          cell) so phones never widen the page and make players zoom out. */}
+      <div className="relative z-10 overflow-x-clip">
       <BrowserRouter>
         <TrackingConsent />
         <AuthProvider>

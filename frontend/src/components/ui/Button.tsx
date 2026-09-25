@@ -12,8 +12,18 @@ const VARIANTS: Record<Variant, string> = {
   danger: 'btn-press bg-red-500 border-red-700 text-white hover:bg-red-600',
 }
 
+// Size is its own prop because px-3/py-2/text-xs passed in className lose to
+// the defaults (Tailwind emits the smaller values first).
+type Size = 'md' | 'sm'
+
+const SIZES: Record<Size, string> = {
+  md: 'px-5 py-3 text-sm',
+  sm: 'px-3 py-2 text-xs',
+}
+
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: Variant
+  size?: Size
   loading?: boolean
   full?: boolean
 }
@@ -21,6 +31,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   {
     variant = 'primary',
+    size = 'md',
     loading = false,
     full = false,
     className = '',
@@ -36,7 +47,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
       ref={ref}
       type={type}
       disabled={disabled || loading}
-      className={`inline-flex items-center justify-center gap-2 rounded-2xl px-5 py-3 text-sm font-extrabold uppercase tracking-wide disabled:cursor-not-allowed disabled:opacity-50 ${VARIANTS[variant]} ${full ? 'w-full' : ''} ${className}`}
+      className={`inline-flex items-center justify-center gap-2 rounded-2xl font-extrabold uppercase tracking-wide disabled:cursor-not-allowed disabled:opacity-50 ${SIZES[size]} ${VARIANTS[variant]} ${full ? 'w-full' : ''} ${className}`}
       {...rest}
     >
       {loading && <Spinner className="h-4 w-4" />}

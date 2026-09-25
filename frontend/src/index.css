@@ -7,6 +7,9 @@
 @layer base {
   html {
     @apply antialiased;
+    /* Tapping an answer and then "Responder" quickly must not zoom the page
+       on iOS; pinch-zoom keeps working. */
+    touch-action: manipulation;
   }
   body {
     @apply bg-[#f4efe0] font-sans text-ink;

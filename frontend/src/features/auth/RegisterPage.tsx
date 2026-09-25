@@ -93,7 +93,7 @@ export function RegisterPage() {
           >
             {cooldown.remaining > 0 ? `Reenviar em ${cooldown.remaining}s` : 'Reenviar e-mail'}
           </Button>
-          <Link to="/login" className="inline-block text-sm font-bold text-leaf-600 hover:underline">
+          <Link to="/login" className="inline-block py-2 text-sm font-bold text-leaf-600 hover:underline">
             Já confirmou? Entrar
           </Link>
         </div>
@@ -172,7 +172,7 @@ export function RegisterPage() {
       </form>
       <p className="mt-5 text-center text-sm font-bold text-sand-500">
         Já tem conta?{' '}
-        <Link to="/login" className="text-leaf-600 hover:underline">
+        <Link to="/login" className="py-2 text-leaf-600 hover:underline">
           Entrar
         </Link>
       </p>

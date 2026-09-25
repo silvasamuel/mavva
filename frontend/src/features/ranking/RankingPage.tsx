@@ -60,7 +60,7 @@ function GlobalBoard({ data, onOpen }: { data: GlobalLeaderboard; onOpen: OpenPl
       </ol>
       {!inTop && (
         <div className="mt-3 border-t border-dashed border-sand-200 pt-3">
-          <p className="mb-1 px-1 text-[10px] font-extrabold uppercase tracking-wide text-sand-400">
+          <p className="mb-1 px-1 text-xs font-extrabold uppercase tracking-wide text-sand-400">
             Sua posição · {data.me.position}º de {data.total_players}
           </p>
           <ol>
@@ -133,7 +133,7 @@ export function RankingPage() {
             type="button"
             onClick={() => setTab(value)}
             aria-pressed={tab === value}
-            className={`rounded-2xl px-4 py-2 text-sm font-extrabold transition-colors ${
+            className={`rounded-2xl px-4 py-3 text-sm font-extrabold transition-colors ${
               tab === value ? 'bg-leaf-500 text-white' : 'bg-white text-sand-600 shadow-card'
             }`}
           >

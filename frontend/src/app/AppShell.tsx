@@ -108,8 +108,9 @@ export function AppShell({ children }: { children?: ReactNode }) {
 
   return (
     <div className="relative mx-auto flex min-h-screen max-w-6xl">
-      {/* Desktop sidebar */}
-      <aside className="sticky top-0 hidden h-screen w-60 flex-col gap-6 border-r border-sand-200/60 bg-white/50 px-4 py-6 backdrop-blur-md md:flex">
+      {/* Desktop sidebar — also shown on big phones held sideways (768px+
+          wide but only ~400px tall), so it scrolls when it doesn't fit. */}
+      <aside className="sticky top-0 hidden h-screen w-60 flex-col gap-6 overflow-y-auto border-r border-sand-200/60 bg-white/50 px-4 py-6 backdrop-blur-md md:flex">
         <div className="px-2">
           <Logo />
         </div>
@@ -136,7 +137,9 @@ export function AppShell({ children }: { children?: ReactNode }) {
 
       {/* Content */}
       <main className="min-w-0 flex-1 px-4 pb-24 pt-4 md:px-8 md:pb-10">
-        <div className="sticky top-0 z-10 -mx-4 mb-4 bg-gradient-to-b from-[#f4efe0]/90 to-transparent px-4 pb-2 pt-2 backdrop-blur-[2px] md:-mx-8 md:px-8">
+        {/* On a phone held sideways the pinned HUD plus the tab bar would eat
+            half the screen, so short screens let it scroll away. */}
+        <div className="sticky top-0 z-10 -mx-4 mb-4 bg-gradient-to-b from-[#f4efe0]/90 to-transparent px-4 pb-2 pt-2 backdrop-blur-[2px] md:-mx-8 md:px-8 [@media(max-height:500px)]:static">
           <GameHud
             loading={isPending}
             rankCode={data?.stats.rank.code}
@@ -176,7 +179,7 @@ export function AppShell({ children }: { children?: ReactNode }) {
                 />
               ) : (
                 count > 0 && (
-                  <span className="absolute right-1 top-0 flex h-4 min-w-4 items-center justify-center rounded-full bg-grain-400 px-1 text-[9px] font-extrabold text-grain-900">
+                  <span className="absolute right-1 top-0 flex h-4 min-w-4 items-center justify-center rounded-full bg-grain-400 px-1 text-[10px] font-extrabold text-grain-900">
                     {count}
                   </span>
                 )
@@ -202,7 +205,7 @@ export function AppShell({ children }: { children?: ReactNode }) {
             />
           ) : (
             moreCount > 0 && (
-              <span className="absolute right-1 top-0 flex h-4 min-w-4 items-center justify-center rounded-full bg-grain-400 px-1 text-[9px] font-extrabold text-grain-900">
+              <span className="absolute right-1 top-0 flex h-4 min-w-4 items-center justify-center rounded-full bg-grain-400 px-1 text-[10px] font-extrabold text-grain-900">
                 {moreCount}
               </span>
             )
@@ -231,7 +234,7 @@ export function AppShell({ children }: { children?: ReactNode }) {
               animate={{ y: 0 }}
               exit={{ y: '100%' }}
               transition={{ type: 'spring', stiffness: 380, damping: 32 }}
-              className="fixed inset-x-0 bottom-0 z-40 rounded-t-3xl bg-white/90 px-4 pt-3 pb-[max(1.25rem,env(safe-area-inset-bottom))] shadow-card backdrop-blur-md md:hidden"
+              className="fixed inset-x-0 bottom-0 z-40 max-h-[85dvh] overflow-y-auto rounded-t-3xl bg-white/90 px-4 pt-3 pb-[max(1.25rem,env(safe-area-inset-bottom))] shadow-card backdrop-blur-md md:hidden"
             >
               <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-sand-200" />
               <nav className="flex flex-col gap-1" aria-label="Mais">

@@ -40,7 +40,8 @@ const CHOICES: { kind: SuggestionKind; title: string; description: string; icon:
 ]
 
 const FIELD =
-  'w-full rounded-2xl border-2 border-sand-200 bg-white px-4 py-3 text-sm font-semibold focus:border-leaf-500 focus-visible:ring-0'
+  // 16px on touchscreens so iOS doesn't zoom in on focus; 14px with a mouse.
+  'w-full rounded-2xl border-2 border-sand-200 bg-white px-4 py-3 text-base font-semibold focus:border-leaf-500 focus-visible:ring-0 [@media(pointer:fine)]:text-sm'
 
 export function SuggestQuestionPage() {
   const [kind, setKind] = useState<SuggestionKind | null>(null)

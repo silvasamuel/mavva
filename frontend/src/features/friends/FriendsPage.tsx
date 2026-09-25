@@ -24,13 +24,15 @@ function PlayerRow({
   children?: React.ReactNode
 }) {
   // The player block opens the profile; actions stay beside it, never nested inside.
+  // On a narrow phone, actions too wide to share the row (Aceitar + Recusar)
+  // wrap below instead of squeezing the name down to "…".
   return (
-    <li className="flex items-center gap-3 py-3">
+    <li className="flex flex-wrap items-center gap-x-3 gap-y-2 py-3">
       <button
         type="button"
         aria-haspopup="dialog"
         onClick={() => onOpen(user.id)}
-        className="-mx-2 flex min-w-0 flex-1 items-center gap-3 rounded-2xl px-2 py-1 text-left transition-colors hover:bg-sand-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-leaf-500"
+        className="-mx-2 flex min-w-0 flex-1 basis-40 items-center gap-3 rounded-2xl px-2 py-1 text-left transition-colors hover:bg-sand-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-leaf-500"
       >
         <RankBadge code={user.rank.code} size="sm" />
         <div className="min-w-0 flex-1">
@@ -41,7 +43,7 @@ function PlayerRow({
           </p>
         </div>
       </button>
-      {children}
+      {children && <div className="ml-auto flex shrink-0 items-center gap-2">{children}</div>}
     </li>
   )
 }
@@ -217,7 +219,7 @@ export function FriendsPage() {
               <PlayerRow key={friend.id} user={friend} onOpen={setOpenPlayer}>
                 <button
                   onClick={() => setRemoving(friend)}
-                  className="text-xs font-extrabold uppercase text-sand-400 hover:text-red-600"
+                  className="-my-3 px-3 py-3 text-xs font-extrabold uppercase text-sand-400 hover:text-red-600"
                 >
                   Remover
                 </button>

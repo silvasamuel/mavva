@@ -91,7 +91,9 @@ export function InfoTip({ label, children }: { label: string; children: ReactNod
           if (event.detail !== 0 && lastPointer.current === 'mouse') return
           setOpen((current) => !current)
         }}
-        className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-sand-400 transition-colors hover:text-leaf-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-leaf-500"
+        // The ::after pad turns the 20px icon into a 40px touch target
+        // without changing how it looks.
+        className="relative inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-sand-400 transition-colors after:absolute after:-inset-2.5 hover:text-leaf-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-leaf-500"
       >
         <Glyph as={AppIcons.info} className="h-4 w-4" />
       </button>

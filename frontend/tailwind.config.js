@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
+  // hover: styles only on devices that really hover. On phones a tap left
+  // them stuck on (a tile stayed scaled up until you touched elsewhere).
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   theme: {
     extend: {
       colors: {
@@ -52,6 +57,16 @@ export default {
       borderRadius: {
         '2xl': '1rem',
         '3xl': '1.5rem',
+      },
+      // On phones 100vh is the height with the browser bars hidden, so a
+      // min-h-screen page came out taller than what's visible. svh is the
+      // height with the bars shown; 100vh stays as the fallback.
+      minHeight: {
+        screen: ['100vh', '100svh'],
+      },
+      // h-screen tracks the visible height as those bars come and go.
+      height: {
+        screen: ['100vh', '100dvh'],
       },
       boxShadow: {
         card: '0 1px 2px rgba(43, 50, 41, 0.05), 0 0 0 1px rgba(43, 50, 41, 0.06)',
