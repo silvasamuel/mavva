@@ -114,6 +114,20 @@ class TestFriendsRanking:
         assert body["entries"][1]["is_me"] is True
         assert "estranho" not in names
 
+    def test_deactivated_friends_leave_the_circle(self, auth_client: TestClient, db: Session):
+        me = _me(auth_client, db)
+        _set_xp(db, me, 50)
+        maria = _player(db, "maria", 80)
+        joao = _player(db, "joao", 20)
+        _befriend(db, me, maria)
+        _befriend(db, joao, me)
+        maria.is_active = False
+        db.flush()
+
+        body = auth_client.get("/api/v1/ranking/friends").json()
+
+        assert [row["user"]["username"] for row in body["entries"]] == ["samuel", "joao"]
+
     def test_solo_circle_is_just_me(self, auth_client: TestClient, db: Session):
         me = _me(auth_client, db)
         _set_xp(db, me, 40)

@@ -139,11 +139,18 @@ pergunta — o agendamento já feito não muda, como no Anki. O badge do dashboa
 
 | Método | Rota | Descrição |
 |---|---|---|
-| GET | `/friends` | `{friends, incoming, sent}` — amigos e pedidos pendentes (nunca expõe e-mail). |
+| GET | `/friends` | `{friends, incoming, sent}` — amigos e pedidos pendentes (nunca expõe e-mail). Contas inativas ficam de fora das três listas e do contador `friend_requests` do dashboard; se a conta for reativada, a amizade volta. |
 | GET | `/friends/search?q=` | Busca por **prefixo de username** (mín. 2 caracteres), com a relação atual (`none`, `pending_sent`, `pending_received`, `friends`). |
 | POST | `/friends/requests` | Body: `{username}`. Se a outra pessoa já havia convidado, a amizade é aceita direto. |
 | POST | `/friends/requests/{id}/accept` · `/decline` | Responde um pedido recebido. |
 | DELETE | `/friends/{user_id}` | Desfaz a amizade. |
+
+## Ranking
+
+| Método | Rota | Descrição |
+|---|---|---|
+| GET | `/ranking/global` | `{top, me, total_players}`: top 10 por XP (empate desempata pelo username), a posição de quem pede (`me`, mesmo fora do top) e o total de jogadores. Contas inativas não entram no top, na posição nem no total. |
+| GET | `/ranking/friends` | `{entries}`: você e seus amigos ordenados por XP. Amigos com conta inativa ficam de fora. |
 
 ## Jogadores
 
@@ -161,7 +168,7 @@ por categoria, revisão espaçada e streak como qualquer estudo.
 
 | Método | Rota | Descrição |
 |---|---|---|
-| POST | `/duels` | Body: `{opponent_username?}`. Com username → desafia um amigo. Sem → entra na fila aleatória (assume o duelo `open` mais antigo, ou abre um). |
+| POST | `/duels` | Body: `{opponent_username?}`. Com username → desafia um amigo (404 se a conta estiver inativa). Sem → entra na fila aleatória (assume o duelo `open` mais antigo, ou abre um). |
 | GET | `/duels` | Meus duelos + `record` (V/D/E, sequência, aproveitamento) + `awaiting_me`. |
 | GET | `/duels/{id}` | Placar do duelo (404 para quem não joga nele). Resolve preguiçosamente vencidos. |
 

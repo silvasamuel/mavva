@@ -92,7 +92,8 @@ def create_duel(db: Session, me: User, *, opponent_username: str | None = None) 
 
 def _create_friend_duel(db: Session, me: User, opponent_username: str) -> Duel:
     opponent = friendship_service.find_by_username(db, opponent_username)
-    if opponent is None:
+    # A deactivated friend is hidden from the friends list and could never play.
+    if opponent is None or not opponent.is_active:
         raise DuelError("Usuário não encontrado", status_code=404)
     if opponent.id == me.id:
         raise DuelError("Você não pode duelar consigo mesmo")
