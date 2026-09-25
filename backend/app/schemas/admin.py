@@ -1,6 +1,6 @@
 import uuid
 from datetime import date, datetime
-from typing import Annotated
+from typing import Annotated, Literal
 
 from pydantic import BaseModel, Field, StringConstraints, model_validator
 
@@ -47,6 +47,93 @@ class AdminDashboardActivity(BaseModel):
     duels_active: int
     duels_finished: int
     friendships: int
+
+
+class AdminActivityRange(BaseModel):
+    """Inclusive calendar days in Brasília time."""
+
+    start: date | None  # None = desde o início
+    end: date
+    # Where the series starts: the requested start, or the first day with any
+    # data when that is later (so "desde o início" never plots empty years).
+    first_day: date
+    granularity: Literal["day", "week", "month"]
+
+
+class AdminActivityTotals(BaseModel):
+    """Everything that happened inside the range.
+
+    Player metrics (active users, answers, XP, study time) come from
+    DailyActivity, dated in each player's own timezone; event counts use
+    timestamps read as Brasília calendar days.
+    """
+
+    active_users: int  # answered at least one question in the range
+    new_users: int
+    questions_answered: int
+    correct_answers: int
+    accuracy: float | None
+    xp: int
+    study_seconds: int
+    quizzes_completed: int
+    practice_completed: int
+    review_completed: int
+    duel_rounds_completed: int
+    quizzes_abandoned: int
+    perfect_sessions: int
+    duels_started: int
+    duels_finished: int
+    friendships: int
+    achievements_unlocked: int
+    reports: int
+    question_proposals: int
+    suggestions: int
+
+
+class AdminActivityPrevious(BaseModel):
+    """Same-length window right before the range, for the KPI deltas."""
+
+    start: date
+    end: date
+    active_users: int
+    new_users: int
+    questions_answered: int
+    xp: int
+    study_seconds: int
+
+
+class AdminActivityPoint(BaseModel):
+    bucket: date  # first day of the day/week/month
+    active_users: int  # distinct players in the bucket (DAU/WAU/MAU)
+    new_users: int
+    questions_answered: int
+    xp: int
+    study_seconds: int
+
+
+class AdminActivityCategory(BaseModel):
+    slug: str
+    name: str
+    icon: str
+    answered: int
+    accuracy: float
+
+
+class AdminActivityPlayer(BaseModel):
+    id: uuid.UUID
+    username: str
+    name: str
+    xp: int
+    questions_answered: int
+
+
+class AdminActivityOut(BaseModel):
+    range: AdminActivityRange
+    totals: AdminActivityTotals
+    previous: AdminActivityPrevious | None  # None when the range starts at the beginning
+    series: list[AdminActivityPoint]
+    top_categories: list[AdminActivityCategory]
+    top_players: list[AdminActivityPlayer]
 
 
 class AdminDashboardOut(BaseModel):

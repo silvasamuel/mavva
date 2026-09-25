@@ -1,6 +1,7 @@
 """Admin-only API. Every route depends on AdminUser (403 for non-admins)."""
 
 import uuid
+from datetime import date
 from typing import Any
 
 from fastapi import APIRouter, HTTPException, Query, status
@@ -20,6 +21,7 @@ from app.models import (
 )
 from app.models.enums import Difficulty, QuestionFlagStatus, QuestionType
 from app.schemas.admin import (
+    AdminActivityOut,
     AdminAnswer,
     AdminCategoryOut,
     AdminDashboardOut,
@@ -55,6 +57,24 @@ router = APIRouter(prefix="/admin", tags=["admin"])
 @router.get("/dashboard", response_model=AdminDashboardOut)
 def admin_dashboard(_admin: AdminUser, db: DbDep) -> AdminDashboardOut:
     return admin_stats.dashboard(db)
+
+
+@router.get("/activity", response_model=AdminActivityOut)
+def admin_activity(
+    _admin: AdminUser,
+    db: DbDep,
+    start: date | None = None,
+    end: date | None = None,
+) -> AdminActivityOut:
+    """Activity between two Brasília calendar days, inclusive. No start means
+    since the beginning; no end (or one in the future) means today."""
+    today = admin_stats.app_today()
+    end = min(end or today, today)
+    if start is not None and start > end:
+        raise HTTPException(
+            status.HTTP_400_BAD_REQUEST, "A data inicial precisa ser anterior à final"
+        )
+    return admin_stats.activity(db, start, end)
 
 
 # Column key -> sortable expression, for the admin users table headers.

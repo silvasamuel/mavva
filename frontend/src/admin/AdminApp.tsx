@@ -5,6 +5,7 @@ import { Spinner } from '@/components/ui/Spinner'
 import { useAdminAuth } from './useAdminAuth'
 import { AdminLogin } from './AdminLogin'
 import { DashboardPanel } from './DashboardPanel'
+import { ActivityPanel } from './ActivityPanel'
 import { UsersPanel } from './UsersPanel'
 import { QuestionsPanel } from './QuestionsPanel'
 import { ReviewPanel } from './ReviewPanel'
@@ -14,6 +15,7 @@ import { AppIcons, Glyph } from '@/lib/icons'
 
 const TABS: { value: AdminTab; label: string; icon: typeof AppIcons.home }[] = [
   { value: 'home', label: 'Início', icon: AppIcons.home },
+  { value: 'activity', label: 'Atividade', icon: AppIcons.chart },
   { value: 'review', label: 'Revisão', icon: AppIcons.search },
   { value: 'questions', label: 'Perguntas', icon: AppIcons.study },
   { value: 'users', label: 'Usuários', icon: AppIcons.users },
@@ -92,6 +94,8 @@ export function AdminApp() {
               <Spinner className="h-7 w-7 text-leaf-500" />
             </div>
           )
+        ) : tab === 'activity' ? (
+          user ? <ActivityPanel adminId={user.id} /> : null
         ) : tab === 'review' ? (
           <ReviewPanel />
         ) : tab === 'questions' ? (

@@ -25,6 +25,7 @@ class TestAdminAccessControl:
         question = make_mc_question(db, category)
         for method, path in [
             ("get", "/api/v1/admin/dashboard"),
+            ("get", "/api/v1/admin/activity"),
             ("get", "/api/v1/admin/users"),
             ("get", "/api/v1/admin/questions"),
             ("get", "/api/v1/admin/categories"),
@@ -47,6 +48,7 @@ class TestAdminAccessControl:
 
     def test_unauthenticated_is_401(self, client: TestClient, db: Session):
         assert client.get("/api/v1/admin/dashboard").status_code == 401
+        assert client.get("/api/v1/admin/activity").status_code == 401
         assert client.get("/api/v1/admin/users").status_code == 401
 
     def test_admin_can_list_users_and_questions(self, auth_client: TestClient, db: Session):
@@ -397,6 +399,19 @@ class TestAdminDashboard:
         )
         db.flush()
         register_user(client, name="Pendente", email="pendente@teste.com")
+        # A duel settling today pays XP without the player studying today.
+        pending = db.query(User).filter(User.email == "pendente@teste.com").one()
+        db.add(
+            DailyActivity(
+                user_id=pending.id,
+                date=datetime.now(ZoneInfo("America/Sao_Paulo")).date(),
+                xp=15,
+                questions=0,
+                correct=0,
+                time_seconds=0,
+            )
+        )
+        db.flush()
 
         response = auth_client.get("/api/v1/admin/dashboard")
         assert response.status_code == 200
@@ -415,7 +430,7 @@ class TestAdminDashboard:
         assert body["review"]["suggestions_open"] == 0
         assert body["review"]["pending"] == 0
         assert body["activity"]["studied_today"] == 1
-        assert body["activity"]["xp_today"] == 40
+        assert body["activity"]["xp_today"] == 55
         assert body["activity"]["duels_finished"] == 0
         assert body["activity"]["friendships"] == 0
         assert "accuracy" in body["activity"]
