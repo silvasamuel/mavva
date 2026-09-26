@@ -1304,6 +1304,161 @@
         "verse_end": 6
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "costumes-judaicos-0043",
+      "type": "multiple_choice",
+      "text": "A quem Deus mandou pronunciar sobre Israel a bênção \"O Senhor te abençoe e te guarde\"?",
+      "options": [
+        {
+          "text": "Aos anciãos de cada tribo",
+          "correct": false
+        },
+        {
+          "text": "A Arão e a seus filhos, os sacerdotes",
+          "correct": true
+        },
+        {
+          "text": "Aos reis de Israel, no dia da coroação",
+          "correct": false
+        },
+        {
+          "text": "Aos profetas, antes das batalhas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Deus mandou Moisés dizer a Arão e a seus filhos: \"Assim abençoareis os filhos de Israel\" (Nm 6:23). A bênção sacerdotal pede proteção, misericórdia e paz, e Deus promete: \"Assim porão o meu nome sobre os filhos de Israel, e eu os abençoarei\" (Nm 6:27). Jesus, o nosso grande Sumo Sacerdote (Hb 4:14), despediu-se dos discípulos levantando as mãos e abençoando-os (Lc 24:50).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 6,
+        "verse_start": 22,
+        "verse_end": 27
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "costumes-judaicos-0044",
+      "type": "multiple_choice",
+      "text": "Que costume Labão alegou para justificar ter dado Leia (Lia), e não Raquel, como esposa a Jacó?",
+      "options": [
+        {
+          "text": "A filha mais velha herdava os bens do pai",
+          "correct": false
+        },
+        {
+          "text": "O pai escolhia a noiva por sorteio entre as filhas",
+          "correct": false
+        },
+        {
+          "text": "A noiva só podia casar depois de sete anos de noivado",
+          "correct": false
+        },
+        {
+          "text": "Não se dava a filha mais nova em casamento antes da primogênita",
+          "correct": true
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Depois de servir sete anos por Raquel, Jacó recebeu Leia e protestou; Labão respondeu: \"Não se faz assim no nosso lugar, que a menor se dê antes da primogênita\" (Gn 29:26). Jacó \"cumpriu a semana desta\", recebeu também Raquel e serviu por ela outros sete anos (Gn 29:27-30). Ironia do texto: quem enganara o pai fazendo-se passar pelo primogênito (Gn 27) foi enganado com a primogênita.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 29,
+        "verse_start": 25,
+        "verse_end": 27
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "costumes-judaicos-0045",
+      "type": "multiple_choice",
+      "text": "Segundo Deuteronômio 21, que gesto os anciãos faziam para se declararem inocentes de um sangue derramado — o mesmo que Pilatos fez diante da multidão?",
+      "options": [
+        {
+          "text": "Lavavam as mãos",
+          "correct": true
+        },
+        {
+          "text": "Rasgavam as vestes",
+          "correct": false
+        },
+        {
+          "text": "Cobriam a cabeça de cinza",
+          "correct": false
+        },
+        {
+          "text": "Tiravam as sandálias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Quando se achava um morto sem saber quem o matara, os anciãos da cidade mais próxima lavavam as mãos sobre uma bezerra degolada e diziam: \"As nossas mãos não derramaram este sangue\" (Dt 21:6-7). Pilatos, \"tomando água, lavou as mãos diante da multidão, dizendo: Estou inocente do sangue deste justo\" (Mt 27:24). O gesto, porém, não o isentou: Atos 4:27 o inclui entre os que se ajuntaram contra Jesus.",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 21,
+        "verse_start": 6,
+        "verse_end": 7
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "costumes-judaicos-0046",
+      "type": "open_answer",
+      "text": "Por quantos dias os filhos de Israel prantearam a morte de Moisés nas campinas de Moabe?",
+      "options": null,
+      "accepted_answers": [
+        "30",
+        "Trinta",
+        "30 dias",
+        "Trinta dias",
+        "Por 30 dias",
+        "Por trinta dias"
+      ],
+      "explanation": "\"E os filhos de Israel prantearam a Moisés trinta dias, nas campinas de Moabe; e os dias do pranto do luto de Moisés se cumpriram\" (Dt 34:8). O mesmo luto de trinta dias fora guardado por toda a congregação na morte de Arão (Nm 20:29). Terminado o pranto, o povo passou a ouvir Josué, sobre quem Moisés havia imposto as mãos (Dt 34:9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 34,
+        "verse_start": 8,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "costumes-judaicos-0047",
+      "type": "multiple_choice",
+      "text": "Segundo a Lei, quando o patrão devia pagar o salário do trabalhador pobre contratado por dia?",
+      "options": [
+        {
+          "text": "No fim da semana, antes do sábado",
+          "correct": false
+        },
+        {
+          "text": "No fim da colheita, com parte da safra",
+          "correct": false
+        },
+        {
+          "text": "No mesmo dia, antes do pôr do sol",
+          "correct": true
+        },
+        {
+          "text": "Uma vez por mês, na lua nova",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "A Lei mandava pagar o diarista pobre no mesmo dia: \"o sol se não porá sobre isso; porquanto pobre é, e sua alma se atém a isso\" (Dt 24:15). Levítico reforça: \"a paga do jornaleiro não ficará contigo até à manhã\" (Lv 19:13). O diarista vivia do pagamento de cada dia — por isso, na parábola dos trabalhadores da vinha, o senhor manda pagar a todos ao anoitecer (Mt 20:8).",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 24,
+        "verse_start": 14,
+        "verse_end": 15
+      },
+      "difficulty": "medium"
     }
   ]
 }

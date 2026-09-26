@@ -1278,6 +1278,185 @@
         "verse_end": null
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "escatologia-0044",
+      "type": "open_answer",
+      "text": "Complete a declaração de Jó em meio ao sofrimento: \"Porque eu sei que o meu ___ vive, e que por fim se levantará sobre a terra\" (Jó 19:25).",
+      "options": null,
+      "accepted_answers": [
+        "Redentor",
+        "O meu Redentor",
+        "Meu Redentor",
+        "Defensor",
+        "O meu Defensor",
+        "Meu Defensor"
+      ],
+      "explanation": "Rejeitado até pelos mais próximos (Jó 19:13-19), Jó declara que o seu Redentor vive e que, \"ainda em minha carne\", verá a Deus (Jó 19:25-26). \"Redentor\" traduz o hebraico goel, o parente próximo que resgatava e defendia o familiar, papel que Boaz assume em Rute 4 (onde a ARC diz \"remidor\").",
+      "divergence_note": "Muitos cristãos, desde os primeiros séculos, leem estes versículos como esperança na ressurreição e aplicam o título de Redentor a Cristo; outros intérpretes entendem que Jó espera ser vindicado por Deus, nesta vida ou depois da morte, sem referência direta à ressurreição (a expressão hebraica traduzida por \"em minha carne\" também pode ser lida no sentido de ver a Deus já sem o corpo). A pergunta trata apenas das palavras do texto.",
+      "reference": {
+        "book": "jo",
+        "chapter": 19,
+        "verse_start": 25,
+        "verse_end": 27
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "escatologia-0045",
+      "type": "multiple_choice",
+      "text": "Em Mateus 24:27, Jesus compara a vinda do Filho do Homem a algo que \"sai do oriente e se mostra até ao ocidente\". A quê?",
+      "options": [
+        {
+          "text": "Ao trovão",
+          "correct": false
+        },
+        {
+          "text": "Ao vento oriental",
+          "correct": false
+        },
+        {
+          "text": "Ao arco-íris",
+          "correct": false
+        },
+        {
+          "text": "Ao relâmpago",
+          "correct": true
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jesus adverte: se disserem que o Cristo está \"no deserto\", \"não saiais\"; se disserem que está \"no interior da casa\", \"não acrediteis\" (Mt 24:26), \"porque, assim como o relâmpago sai do oriente e se mostra até ao ocidente, assim será também a vinda do Filho do Homem\" (Mt 24:27). Ao contrário de um Cristo escondido, a vinda será como o relâmpago que ilumina o céu de uma extremidade à outra (cf. Lc 17:24) — por isso não se deve dar crédito a falsos cristos (Mt 24:23-24).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 24,
+        "verse_start": 26,
+        "verse_end": 27
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "escatologia-0046",
+      "type": "multiple_choice",
+      "text": "Segundo Apocalipse 19:16, que nome está escrito na veste e na coxa do cavaleiro do cavalo branco?",
+      "options": [
+        {
+          "text": "Alfa e Ômega",
+          "correct": false
+        },
+        {
+          "text": "Rei dos Reis e Senhor dos Senhores",
+          "correct": true
+        },
+        {
+          "text": "A Raiz e a Geração de Davi",
+          "correct": false
+        },
+        {
+          "text": "Filho do Homem",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O cavaleiro que surge do céu aberto chama-se \"Fiel e Verdadeiro\" e \"a Palavra de Deus\" (Ap 19:11,13), e na sua veste e na sua coxa está escrito: \"Rei dos Reis e Senhor dos Senhores\" (Ap 19:16). O mesmo título, em ordem inversa, é dado ao Cordeiro que vence os dez reis aliados da besta (Ap 17:12-14).",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 19,
+        "verse_start": 11,
+        "verse_end": 16
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "escatologia-0047",
+      "type": "multiple_choice",
+      "text": "Segundo 2 Coríntios 5:10, diante de que todos devemos comparecer, para que cada um receba segundo o que tiver feito por meio do corpo?",
+      "options": [
+        {
+          "text": "O tribunal de Cristo",
+          "correct": true
+        },
+        {
+          "text": "O tribunal de César",
+          "correct": false
+        },
+        {
+          "text": "O Sinédrio",
+          "correct": false
+        },
+        {
+          "text": "O tribunal de Pilatos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Porque todos devemos comparecer ante o tribunal de Cristo, para que cada um receba segundo o que tiver feito por meio do corpo, ou bem ou mal\" (2Co 5:10). Paulo se inclui nesse \"todos\" e tira daí o desejo de agradar ao Senhor (2Co 5:9); e em Romanos 14:12 afirma que \"cada um de nós dará conta de si mesmo a Deus\".",
+      "divergence_note": "Há divergência sobre se o tribunal de Cristo é um julgamento distinto, só dos crentes e voltado a galardões (leitura comum no dispensacionalismo), ou o mesmo juízo final descrito em Mateus 25 e Apocalipse 20. A pergunta trata apenas do que o texto afirma.",
+      "reference": {
+        "book": "2corintios",
+        "chapter": 5,
+        "verse_start": 9,
+        "verse_end": 10
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "escatologia-0048",
+      "type": "open_answer",
+      "text": "Complete o desafio de Paulo à morte em 1 Coríntios 15:55: \"Onde está, ó morte, o teu ___?\"",
+      "options": null,
+      "accepted_answers": [
+        "Aguilhão",
+        "O teu aguilhão",
+        "O seu aguilhão",
+        "Ferrão",
+        "O teu ferrão",
+        "Poder de ferir",
+        "O seu poder de ferir"
+      ],
+      "explanation": "Paulo celebra a ressurreição com palavras dos profetas: \"Tragada foi a morte na vitória\" (1Co 15:54; cf. Is 25:8) e o desafio à morte inspirado em Oseias 13:14. Em seguida explica que \"o aguilhão da morte é o pecado\", mas \"graças a Deus que nos dá a vitória por nosso Senhor Jesus Cristo\" (1Co 15:56-57). \"Aguilhão\", aqui, tem o sentido de ferrão.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1corintios",
+        "chapter": 15,
+        "verse_start": 54,
+        "verse_end": 57
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0049",
+      "type": "multiple_choice",
+      "text": "Na visão de Isaías 2:2-4 sobre \"os últimos dias\", o que os povos farão com as suas espadas e lanças?",
+      "options": [
+        {
+          "text": "Converterão os enxadões em espadas e as foices em lanças",
+          "correct": false
+        },
+        {
+          "text": "Entregarão as armas como tributo ao rei de Sião",
+          "correct": false
+        },
+        {
+          "text": "Depositarão as armas no templo como oferta",
+          "correct": false
+        },
+        {
+          "text": "Converterão as espadas em enxadões e as lanças em foices",
+          "correct": true
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Isaías vê as nações subindo ao monte do SENHOR para aprender os seus caminhos; ele julgará entre elas, \"e estes converterão as suas espadas em enxadões e as suas lanças em foices; não levantará espada nação contra nação, nem aprenderão mais a guerrear\" (Is 2:4). Miqueias 4:3 traz a mesma profecia, e Joel 3:10 usa a imagem ao contrário, num chamado à guerra: \"Forjai espadas das vossas enxadas\".",
+      "divergence_note": "Cristãos divergem sobre quando e como essa paz se cumpre: pré-milenistas esperam o cumprimento literal no reino milenar de Cristo na terra; amilenistas costumam vê-lo em parte na reunião das nações pelo evangelho e plenamente na nova criação; pós-milenistas, no avanço progressivo do Reino na história antes da volta de Cristo. A pergunta trata apenas do que o texto diz.",
+      "reference": {
+        "book": "isaias",
+        "chapter": 2,
+        "verse_start": 2,
+        "verse_end": 4
+      },
+      "difficulty": "medium"
     }
   ]
 }

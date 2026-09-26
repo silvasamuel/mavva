@@ -1344,6 +1344,180 @@
         "verse_end": 6
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "historia-de-israel-0044",
+      "type": "multiple_choice",
+      "text": "Como o SENHOR guiava o povo de Israel pelo deserto, de dia e de noite, depois da saída do Egito?",
+      "options": [
+        {
+          "text": "Por uma estrela que ia adiante do povo",
+          "correct": false
+        },
+        {
+          "text": "Numa coluna de nuvem de dia e numa coluna de fogo de noite",
+          "correct": true
+        },
+        {
+          "text": "Por um arco-íris estendido sobre o caminho",
+          "correct": false
+        },
+        {
+          "text": "Por relâmpagos que apontavam a direção a cada manhã",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Logo após a saída do Egito, \"o SENHOR ia adiante deles, de dia numa coluna de nuvem, para os guiar pelo caminho, e de noite numa coluna de fogo, para os alumiar\" (Êx 13:21). No mar Vermelho, a mesma coluna se pôs entre Israel e os egípcios: escuridão para uns, luz para os outros (Êx 14:19-20). Paulo recorda que os pais \"estiveram todos debaixo da nuvem\" (1Co 10:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 13,
+        "verse_start": 21,
+        "verse_end": 22
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "historia-de-israel-0045",
+      "type": "open_answer",
+      "text": "Que fruta os espias enviados por Moisés trouxeram do vale de Escol, num cacho tão grande que dois homens o carregaram?",
+      "options": null,
+      "accepted_answers": [
+        "Uvas",
+        "Uva",
+        "Cacho de uvas",
+        "Um cacho de uvas"
+      ],
+      "explanation": "Os espias \"cortaram um ramo de vide com um cacho de uvas, o qual trouxeram dois homens sobre uma verga\", além de romãs e figos, e o lugar foi chamado vale de Escol \"por causa do cacho\" (Nm 13:23-24) — em hebraico, escol significa cacho. Mesmo com essa prova da boa terra, só Josué e Calebe animaram o povo; os outros dez espias infamaram a terra (Nm 13:30-33; 14:6-9). Moisés lembraria depois que, ao chegar ao vale de Escol, eles \"descorajaram o coração dos filhos de Israel\" (Nm 32:9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 13,
+        "verse_start": 23,
+        "verse_end": 24
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "historia-de-israel-0046",
+      "type": "open_answer",
+      "text": "Além do maná, que aves Deus fez cobrir o arraial de Israel no deserto, para que o povo comesse carne?",
+      "options": null,
+      "accepted_answers": [
+        "Codornizes",
+        "Codorniz",
+        "Codornas",
+        "Codorna"
+      ],
+      "explanation": "Quando o povo murmurou com saudade das panelas de carne do Egito, o SENHOR prometeu: \"Entre as duas tardes, comereis carne, e, pela manhã, vos fartareis de pão\" (Êx 16:3,12). \"E aconteceu que, à tarde, subiram codornizes e cobriram o arraial\", e na manhã seguinte apareceu o maná (Êx 16:13-15). Em Números 11, as codornizes voltam num episódio de juízo contra a cobiça do povo (Nm 11:31-34).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 16,
+        "verse_start": 12,
+        "verse_end": 13
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "historia-de-israel-0047",
+      "type": "multiple_choice",
+      "text": "Como os judeus passaram a trabalhar na reconstrução dos muros de Jerusalém, diante das ameaças dos inimigos nos dias de Neemias?",
+      "options": [
+        {
+          "text": "Trabalhavam somente de noite, escondidos dos inimigos",
+          "correct": false
+        },
+        {
+          "text": "Pagaram tributo a Sambalate em troca de paz",
+          "correct": false
+        },
+        {
+          "text": "Contrataram guardas estrangeiros para vigiar a obra",
+          "correct": false
+        },
+        {
+          "text": "Com uma mão faziam a obra e com a outra seguravam as armas",
+          "correct": true
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Diante das ameaças de Sambalate e seus aliados, o povo orou e pôs guarda de dia e de noite (Ne 4:9). Desde então, metade dos moços de Neemias trabalhava e a outra metade ficava armada (Ne 4:16); os que edificavam o muro e os que carregavam as cargas trabalhavam de modo que \"cada um com uma mão fazia a obra e na outra tinha as armas\", e cada edificador trazia a sua espada cingida aos lombos (Ne 4:17-18). Oração e vigilância andaram juntas até a conclusão do muro (Ne 6:15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "neemias",
+        "chapter": 4,
+        "verse_start": 17,
+        "verse_end": 18
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-de-israel-0048",
+      "type": "multiple_choice",
+      "text": "Quando o maná, que sustentou Israel durante os quarenta anos no deserto, deixou de cair?",
+      "options": [
+        {
+          "text": "No dia em que Moisés morreu no monte Nebo",
+          "correct": false
+        },
+        {
+          "text": "Logo depois da travessia do mar Vermelho",
+          "correct": false
+        },
+        {
+          "text": "Depois que o povo comeu do trigo da terra de Canaã, em Gilgal",
+          "correct": true
+        },
+        {
+          "text": "Quando os muros de Jericó caíram",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Acampados em Gilgal, os israelitas celebraram a Páscoa e comeram do trigo da terra; \"e cessou o maná no dia seguinte, depois que comeram do trigo da terra\" (Js 5:10-12). Deus, que por quarenta anos dera o pão do céu \"até que chegaram aos termos da terra de Canaã\" (Êx 16:35), passou a sustentar o povo com os frutos da terra prometida: a peregrinação havia terminado.",
+      "divergence_note": null,
+      "reference": {
+        "book": "josue",
+        "chapter": 5,
+        "verse_start": 10,
+        "verse_end": 12
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-de-israel-0049",
+      "type": "multiple_choice",
+      "text": "Quais cidades de tesouros (armazéns) os israelitas escravizados edificaram para Faraó, segundo Êxodo 1?",
+      "options": [
+        {
+          "text": "Pitom e Ramessés",
+          "correct": true
+        },
+        {
+          "text": "Sucote e Etã",
+          "correct": false
+        },
+        {
+          "text": "Om e Zoã",
+          "correct": false
+        },
+        {
+          "text": "Tafnes e Migdol",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Um novo rei, \"que não conhecera a José\", temeu o crescimento de Israel, e os egípcios puseram sobre o povo maiorais de tributos; os israelitas \"edificaram a Faraó cidades de tesouros, Pitom e Ramessés\" (Êx 1:8-11). Foi justamente de Ramessés que os filhos de Israel partiram para Sucote no êxodo (Êx 12:37): o lugar erguido com trabalho escravo virou ponto de partida da liberdade.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 1,
+        "verse_start": 8,
+        "verse_end": 11
+      },
+      "difficulty": "hard"
     }
   ]
 }

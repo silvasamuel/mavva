@@ -1272,6 +1272,113 @@
         "verse_end": null
       },
       "difficulty": "easy"
+    },
+    {
+      "external_id": "cultura-biblica-0042",
+      "type": "open_answer",
+      "text": "Que unidade de medida, baseada no antebraço, Deus usou para dar a Noé as dimensões da arca?",
+      "options": null,
+      "accepted_answers": [
+        "Côvado",
+        "Côvados",
+        "Cúbito"
+      ],
+      "explanation": "\"De trezentos côvados o comprimento da arca, e de cinquenta côvados a sua largura, e de trinta côvados a sua altura\" (Gn 6:15). O côvado ia do cotovelo à ponta dos dedos e media aproximadamente 45 centímetros (o valor exato variava), o que dá uma arca de uns 135 metros de comprimento. A mesma unidade mede o tabernáculo, o templo e até a altura de Golias (1Sm 17:4).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 6,
+        "verse_start": 14,
+        "verse_end": 16
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cultura-biblica-0043",
+      "type": "multiple_choice",
+      "text": "O que Faraó tirou da própria mão e pôs na mão de José, como sinal da autoridade que lhe dava sobre o Egito?",
+      "options": [
+        {
+          "text": "O seu anel",
+          "correct": true
+        },
+        {
+          "text": "O seu cetro",
+          "correct": false
+        },
+        {
+          "text": "Um bracelete de ouro",
+          "correct": false
+        },
+        {
+          "text": "A sua espada",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"E tirou Faraó o anel da sua mão, e o pôs na mão de José\" (Gn 41:42), além de vesti-lo de linho fino e pôr-lhe um colar de ouro. O anel de sinete servia para selar documentos em nome do dono — quem o usava falava pelo rei. Assuero fez o mesmo, primeiro com Hamã e depois com Mardoqueu (Et 3:10; 8:2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 41,
+        "verse_start": 41,
+        "verse_end": 43
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0044",
+      "type": "multiple_choice",
+      "text": "Deus mandou Jeremias à casa de um artesão para ensinar que Israel estava em suas mãos. Qual era o ofício desse artesão?",
+      "options": [
+        {
+          "text": "Ferreiro",
+          "correct": false
+        },
+        {
+          "text": "Carpinteiro",
+          "correct": false
+        },
+        {
+          "text": "Tecelão",
+          "correct": false
+        },
+        {
+          "text": "Oleiro",
+          "correct": true
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jeremias desceu à casa do oleiro e o viu trabalhando \"sobre as rodas\": quando o vaso de barro se quebrou em sua mão, ele \"tornou a fazer dele outro vaso\" (Jr 18:3-4). Então veio a palavra: \"como o barro na mão do oleiro, assim sois vós na minha mão, ó casa de Israel\" (Jr 18:6). Paulo retoma a imagem do oleiro e do barro ao falar da soberania de Deus (Rm 9:20-21).",
+      "divergence_note": null,
+      "reference": {
+        "book": "jeremias",
+        "chapter": 18,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cultura-biblica-0045",
+      "type": "open_answer",
+      "text": "Onde Maria deitou o menino Jesus logo após o nascimento, porque não havia lugar para eles na estalagem?",
+      "options": null,
+      "accepted_answers": [
+        "Manjedoura",
+        "Numa manjedoura",
+        "Uma manjedoura",
+        "Cocho"
+      ],
+      "explanation": "Maria \"envolveu-o em panos, e deitou-o numa manjedoura, porque não havia lugar para eles na estalagem\" (Lc 2:7). A manjedoura era o cocho onde se punha a comida dos animais — e esse detalhe humilde foi o sinal dado aos pastores para encontrarem o Salvador (Lc 2:12). A palavra grega traduzida por \"estalagem\" é a mesma que Lucas usa para o \"aposento\" da última ceia (Lc 22:11).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 2,
+        "verse_start": 6,
+        "verse_end": 7
+      },
+      "difficulty": "easy"
     }
   ]
 }

@@ -1287,6 +1287,256 @@
         "verse_end": 13
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "teologia-biblica-0041",
+      "type": "multiple_choice",
+      "text": "Gênesis 15:6 diz de Abrão: \"E creu ele no SENHOR\". O que o mesmo versículo afirma logo em seguida?",
+      "options": [
+        {
+          "text": "Recebeu pão e vinho de Melquisedeque",
+          "correct": false
+        },
+        {
+          "text": "Foi-lhe imputado isto por justiça",
+          "correct": true
+        },
+        {
+          "text": "Foi circuncidado com toda a sua casa",
+          "correct": false
+        },
+        {
+          "text": "Recebeu o novo nome de Abraão",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"E creu ele no SENHOR, e foi-lhe imputado isto por justiça\" (Gn 15:6). Abrão creu na promessa de uma descendência incontável como as estrelas (Gn 15:5), anos antes da circuncisão e do novo nome (Gn 17). Paulo cita o versículo para mostrar que a fé foi imputada a Abraão como justiça quando ele ainda era incircunciso (Rm 4:3,9-11), e Tiago também o cita (Tg 2:23).",
+      "divergence_note": "Tradições cristãs leem de modos diferentes o uso que Paulo (Rm 4) e Tiago (Tg 2:21-24) fazem deste versículo: na leitura protestante, Deus declara justo o crente somente pela fé, e as obras demonstram essa fé; na católica e na ortodoxa, a justificação pela graça inclui também a renovação interior, e a fé coopera com as obras (Tg 2:22). A pergunta trata apenas do que Gênesis 15:6 diz.",
+      "reference": {
+        "book": "genesis",
+        "chapter": 15,
+        "verse_start": 5,
+        "verse_end": 6
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "teologia-biblica-0042",
+      "type": "multiple_choice",
+      "text": "Em Êxodo 24, depois que o povo prometeu obedecer a tudo o que o SENHOR havia falado, como Moisés confirmou a aliança do Sinai?",
+      "options": [
+        {
+          "text": "Espargiu sobre o povo o sangue dos sacrifícios",
+          "correct": true
+        },
+        {
+          "text": "Ungiu com azeite os anciãos das doze tribos",
+          "correct": false
+        },
+        {
+          "text": "Quebrou as tábuas da Lei diante do povo",
+          "correct": false
+        },
+        {
+          "text": "Circuncidou todos os homens ao pé do monte",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Moisés espargiu metade do sangue sobre o altar, leu o livro do concerto ao povo e, depois que este prometeu obedecer, espargiu o restante sobre o povo, dizendo: \"Eis aqui o sangue do concerto que o SENHOR tem feito convosco\" (Êx 24:6-8) — \"concerto\" é aliança, na linguagem da ARC. Na última ceia, Jesus ecoa essa fórmula: \"isto é o meu sangue, o sangue do Novo Testamento\" (Mt 26:28), ou seja, da nova aliança; Hebreus 9:19-20 relembra a cena do Sinai.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 24,
+        "verse_start": 6,
+        "verse_end": 8
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "teologia-biblica-0043",
+      "type": "multiple_choice",
+      "text": "No tabernáculo, o que era o propiciatório?",
+      "options": [
+        {
+          "text": "O altar dos holocaustos, no átrio",
+          "correct": false
+        },
+        {
+          "text": "A mesa dos pães da proposição",
+          "correct": false
+        },
+        {
+          "text": "A tampa de ouro puro da arca, com dois querubins",
+          "correct": true
+        },
+        {
+          "text": "O véu que separava o santuário do Santo dos Santos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Também farás um propiciatório de ouro puro... E porás o propiciatório em cima da arca\" (Êx 25:17,21), com um querubim de ouro em cada extremidade (Êx 25:18-19). Dali, \"do meio dos dois querubins\", Deus falaria com Moisés (Êx 25:22), e sobre o propiciatório o sumo sacerdote espargia o sangue no Dia da Expiação (Lv 16:14-15). No grego do Novo Testamento, a palavra traduzida por \"propiciação\" em Romanos 3:25 é hilasterion, a mesma que Hebreus 9:5 usa para o propiciatório.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 25,
+        "verse_start": 17,
+        "verse_end": 22
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "teologia-biblica-0044",
+      "type": "multiple_choice",
+      "text": "Em Levítico 19:2, que razão Deus dá para a ordem \"Santos sereis\"?",
+      "options": [
+        {
+          "text": "Porque Israel era o maior de todos os povos",
+          "correct": false
+        },
+        {
+          "text": "Para que tivessem vida longa na terra",
+          "correct": false
+        },
+        {
+          "text": "Para que as nações temessem o seu exército",
+          "correct": false
+        },
+        {
+          "text": "Porque o SENHOR, seu Deus, é santo",
+          "correct": true
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Santos sereis, porque eu, o SENHOR, vosso Deus, sou santo\" (Lv 19:2). A santidade do povo nasce do caráter de Deus e se mostra no cotidiano: o capítulo trata de colheita, salários, justiça nos julgamentos e amor ao próximo (Lv 19:9-18). Pedro repete a ordem aos cristãos: \"Sede santos, porque eu sou santo\" (1Pe 1:16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 19,
+        "verse_start": 2,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "teologia-biblica-0045",
+      "type": "multiple_choice",
+      "text": "Qual promessa de Deuteronômio 18:15 o apóstolo Pedro aplica a Jesus em Atos 3:22?",
+      "options": [
+        {
+          "text": "Deus levantaria um sacerdote semelhante a Arão",
+          "correct": false
+        },
+        {
+          "text": "Deus levantaria um profeta semelhante a Moisés",
+          "correct": true
+        },
+        {
+          "text": "Deus enviaria outra vez o profeta Elias",
+          "correct": false
+        },
+        {
+          "text": "Deus levantaria um rei semelhante a Saul",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Moisés anunciou: \"O SENHOR, teu Deus, te despertará um profeta do meio de ti, de teus irmãos, como eu; a ele ouvireis\" (Dt 18:15). Essa expectativa aparece quando os enviados questionam João Batista por que batizava, se não era \"o Cristo, nem Elias, nem o profeta\" (Jo 1:25), e quando a multidão diz de Jesus: \"Este é verdadeiramente o profeta que devia vir ao mundo\" (Jo 6:14). Pedro aplica a promessa a Cristo (At 3:22-23).",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 18,
+        "verse_start": 15,
+        "verse_end": 18
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "teologia-biblica-0046",
+      "type": "multiple_choice",
+      "text": "Em Isaías 9:6, qual destes títulos aparece no nome dado ao menino que \"nos nasceu\"?",
+      "options": [
+        {
+          "text": "Emanuel",
+          "correct": false
+        },
+        {
+          "text": "Filho do Altíssimo",
+          "correct": false
+        },
+        {
+          "text": "Príncipe da Paz",
+          "correct": true
+        },
+        {
+          "text": "Leão da tribo de Judá",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Porque um menino nos nasceu, um filho se nos deu; e o principado está sobre os seus ombros\"; entre os títulos do seu nome estão \"Deus Forte\" e \"Príncipe da Paz\" (Is 9:6), e \"do incremento deste principado e da paz não haverá fim, sobre o trono de Davi\" (Is 9:7). O anjo ecoa essa promessa ao anunciar que o filho de Maria \"será chamado Filho do Altíssimo\" e receberá \"o trono de Davi\" (Lc 1:32); já \"Emanuel\" vem do sinal de Isaías 7:14.",
+      "divergence_note": null,
+      "reference": {
+        "book": "isaias",
+        "chapter": 9,
+        "verse_start": 6,
+        "verse_end": 7
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "teologia-biblica-0047",
+      "type": "open_answer",
+      "text": "Complete a promessa de Deus em Ezequiel 36:26: \"tirarei o coração de pedra da vossa carne e vos darei um coração de ___\".",
+      "options": null,
+      "accepted_answers": [
+        "Carne",
+        "De carne",
+        "Coração de carne",
+        "Um coração de carne"
+      ],
+      "explanation": "Deus promete uma transformação interior: \"vos darei um coração novo e porei dentro de vós um espírito novo\" e \"porei dentro de vós o meu espírito\" (Ez 36:26-27). A promessa ecoa a nova aliança anunciada em Jeremias 31:31-33, com a lei escrita no coração, e Paulo retoma a imagem ao dizer que os coríntios são \"a carta de Cristo\", escrita \"não em tábuas de pedra, mas nas tábuas de carne do coração\" (2Co 3:3).",
+      "divergence_note": null,
+      "reference": {
+        "book": "ezequiel",
+        "chapter": 36,
+        "verse_start": 26,
+        "verse_end": 27
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "teologia-biblica-0048",
+      "type": "open_answer",
+      "text": "Em Mateus 5:17, Jesus diz que não veio destruir a lei ou os profetas. Para que ele diz ter vindo?",
+      "options": null,
+      "accepted_answers": [
+        "Cumprir",
+        "Para cumprir",
+        "Cumpri-los",
+        "Para cumpri-los",
+        "Cumpri-la",
+        "Para cumpri-la",
+        "Cumprir a lei",
+        "Para cumprir a lei",
+        "Cumprir a lei e os profetas",
+        "Para cumprir a lei e os profetas",
+        "Dar-lhes pleno cumprimento",
+        "Para dar-lhes pleno cumprimento",
+        "Dar o seu sentido completo",
+        "Para dar o seu sentido completo"
+      ],
+      "explanation": "\"Não cuideis que vim destruir a lei ou os profetas; não vim ab-rogar, mas cumprir\" (Mt 5:17) — ab-rogar é anular. Em seguida, Jesus afirma que \"nem um jota ou um til se omitirá da lei sem que tudo seja cumprido\" (Mt 5:18). Depois de ressuscitar, \"começando por Moisés e por todos os profetas\", explicou aos discípulos de Emaús \"o que dele se achava em todas as Escrituras\" (Lc 24:27).",
+      "divergence_note": "Intérpretes divergem sobre o sentido de \"cumprir\" aqui (realizar o que a Lei e os Profetas anunciavam, obedecer-lhes plenamente ou revelar o seu sentido pleno) e, daí, sobre como a Lei de Moisés se aplica aos cristãos, por exemplo quanto ao sábado. A pergunta trata apenas da palavra que o texto usa.",
+      "reference": {
+        "book": "mateus",
+        "chapter": 5,
+        "verse_start": 17,
+        "verse_end": 18
+      },
+      "difficulty": "easy"
     }
   ]
 }

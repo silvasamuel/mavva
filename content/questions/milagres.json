@@ -1293,6 +1293,140 @@
         "verse_end": 10
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "milagres-0043",
+      "type": "multiple_choice",
+      "text": "O que havia de extraordinário na sarça que Moisés viu junto ao monte Horebe?",
+      "options": [
+        {
+          "text": "Florescia e dava frutos fora de época",
+          "correct": false
+        },
+        {
+          "text": "Estava coberta de orvalho no meio do deserto seco",
+          "correct": false
+        },
+        {
+          "text": "Ardia no fogo, mas não se consumia",
+          "correct": true
+        },
+        {
+          "text": "Brilhava como ouro, sem nenhuma chama",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O Anjo do Senhor apareceu a Moisés numa chama de fogo no meio de uma sarça, \"e eis que a sarça ardia no fogo, e a sarça não se consumia\" (Êx 3:2). Quando Moisés se aproximou para ver \"esta grande visão\", Deus o chamou do meio da sarça e o enviou a Faraó para tirar Israel do Egito (Êx 3:3-10).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 3,
+        "verse_start": 2,
+        "verse_end": 3
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "milagres-0044",
+      "type": "multiple_choice",
+      "text": "O que não se acabou na casa da viúva de Sarepta durante a seca, conforme a palavra de Elias?",
+      "options": [
+        {
+          "text": "O pão e o vinho da mesa",
+          "correct": false
+        },
+        {
+          "text": "A farinha da panela e o azeite da botija",
+          "correct": true
+        },
+        {
+          "text": "A água do poço e o trigo do celeiro",
+          "correct": false
+        },
+        {
+          "text": "O leite e o mel da despensa",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "A viúva tinha apenas \"um punhado de farinha numa panela, e um pouco de azeite numa botija\", mas, conforme a palavra de Elias, fez primeiro um bolo para o profeta (1Rs 17:12-15). E assim foi: \"Da panela a farinha se não acabou, e da botija o azeite não faltou\", como o Senhor dissera por meio de Elias (1Rs 17:16). Jesus lembrou essa estrangeira de Sidom como exemplo da graça de Deus alcançando os de fora (Lc 4:25-26).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 17,
+        "verse_start": 12,
+        "verse_end": 16
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "milagres-0045",
+      "type": "open_answer",
+      "text": "Com que Elias feriu as águas do Jordão, que se dividiram para ele e Eliseu passarem em seco?",
+      "options": null,
+      "accepted_answers": [
+        "Capa",
+        "A capa",
+        "Sua capa",
+        "A sua capa",
+        "Com a capa",
+        "Com sua capa",
+        "Com a sua capa",
+        "Capa de Elias",
+        "A capa de Elias",
+        "Manto",
+        "O manto",
+        "Seu manto",
+        "O seu manto",
+        "Com o manto",
+        "Com seu manto",
+        "Com o seu manto",
+        "Manto de Elias",
+        "O manto de Elias"
+      ],
+      "explanation": "\"Então Elias tomou a sua capa, e a dobrou, e feriu as águas, as quais se dividiram para as duas bandas; e passaram ambos em seco\" (2Rs 2:8). Depois que Elias subiu ao céu, Eliseu tomou a capa que lhe caíra, feriu o Jordão perguntando \"Onde está o Senhor, Deus de Elias?\", e as águas se dividiram de novo (2Rs 2:13-14).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 2,
+        "verse_start": 8,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "milagres-0046",
+      "type": "multiple_choice",
+      "text": "O que aconteceu com a estátua de Dagom quando os filisteus puseram a arca de Deus no templo desse deus, em Asdode?",
+      "options": [
+        {
+          "text": "Foi consumida por um fogo que saiu da arca",
+          "correct": false
+        },
+        {
+          "text": "Rachou-se ao meio durante um trovão",
+          "correct": false
+        },
+        {
+          "text": "Foi levada pelos sacerdotes para longe da arca",
+          "correct": false
+        },
+        {
+          "text": "Amanheceu caída com o rosto em terra diante da arca",
+          "correct": true
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Na manhã seguinte, \"Dagom estava caído com o rosto em terra, diante da arca do Senhor\"; posto de volta no lugar, no outro dia apareceu caído de novo, com a cabeça e as palmas das mãos cortadas sobre o limiar (1Sm 5:3-4). O ídolo prostrado mostrava que o Deus de Israel não fora derrotado, embora a arca tivesse sido capturada.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 5,
+        "verse_start": 1,
+        "verse_end": 4
+      },
+      "difficulty": "medium"
     }
   ]
 }

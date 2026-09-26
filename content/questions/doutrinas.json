@@ -1361,6 +1361,62 @@
         "verse_end": null
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "doutrinas-0045",
+      "type": "open_answer",
+      "text": "Segundo Jeremias 17:9, o que é enganoso \"mais do que todas as coisas, e perverso\"?",
+      "options": null,
+      "accepted_answers": [
+        "Coração",
+        "O coração",
+        "Coração humano",
+        "O coração humano",
+        "Coração do homem",
+        "O coração do homem"
+      ],
+      "explanation": "\"Enganoso é o coração, mais do que todas as coisas, e perverso; quem o conhecerá?\" (Jr 17:9). A resposta vem no versículo seguinte: \"Eu, o SENHOR, esquadrinho o coração\" (Jr 17:10) — só Deus conhece o homem por dentro. Jesus ensina algo semelhante: \"do interior do coração dos homens saem os maus pensamentos\" (Mc 7:21).",
+      "divergence_note": null,
+      "reference": {
+        "book": "jeremias",
+        "chapter": 17,
+        "verse_start": 9,
+        "verse_end": 10
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "doutrinas-0046",
+      "type": "multiple_choice",
+      "text": "Segundo Romanos 8:26, o que o Espírito faz quando não sabemos o que havemos de pedir como convém?",
+      "options": [
+        {
+          "text": "Espera até que aprendamos a pedir como convém",
+          "correct": false
+        },
+        {
+          "text": "Revela o dia e a hora da volta de Cristo",
+          "correct": false
+        },
+        {
+          "text": "Intercede por nós com gemidos inexprimíveis",
+          "correct": true
+        },
+        {
+          "text": "Envia anjos para orarem em nosso lugar",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"O Espírito ajuda as nossas fraquezas; porque não sabemos o que havemos de pedir como convém, mas o mesmo Espírito intercede por nós com gemidos inexprimíveis\" (Rm 8:26). Ele intercede \"segundo Deus\" (Rm 8:27), e no mesmo capítulo Cristo, à direita de Deus, \"também intercede por nós\" (Rm 8:34) — o crente fraco na oração não ora sozinho.",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 8,
+        "verse_start": 26,
+        "verse_end": 27
+      },
+      "difficulty": "medium"
     }
   ]
 }

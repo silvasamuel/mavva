@@ -1317,6 +1317,124 @@
         "verse_end": 9
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0043",
+      "type": "multiple_choice",
+      "text": "O que Pedro disse ao coxo que pedia esmola à porta do templo chamada Formosa?",
+      "options": [
+        {
+          "text": "Toma esta esmola, e Deus te abençoe",
+          "correct": false
+        },
+        {
+          "text": "Não tenho prata nem ouro; mas o que tenho isso te dou",
+          "correct": true
+        },
+        {
+          "text": "Vai e mostra-te ao sacerdote",
+          "correct": false
+        },
+        {
+          "text": "Espera por nós até o fim da oração",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Pedro e João subiam ao templo \"à hora da oração, a nona\" (At 3:1), quando o coxo de nascença lhes pediu esmola. \"E disse Pedro: Não tenho prata nem ouro; mas o que tenho isso te dou. Em nome de Jesus Cristo o Nazareno, levanta-te e anda\" (At 3:6). O homem entrou no templo \"andando, e saltando, e louvando a Deus\" (At 3:8), e a multidão que se ajuntou no alpendre de Salomão ouviu Pedro pregar a Cristo (At 3:11-12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 3,
+        "verse_start": 2,
+        "verse_end": 6
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "historia-da-igreja-0044",
+      "type": "multiple_choice",
+      "text": "Como Saulo escapou dos judeus que vigiavam dia e noite as portas de Damasco para matá-lo?",
+      "options": [
+        {
+          "text": "Os discípulos o desceram pelo muro, dentro de um cesto",
+          "correct": true
+        },
+        {
+          "text": "Um anjo abriu as portas da cidade durante a noite",
+          "correct": false
+        },
+        {
+          "text": "Saiu disfarçado numa caravana de mercadores",
+          "correct": false
+        },
+        {
+          "text": "Foi escoltado por soldados romanos até Jerusalém",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Logo depois de convertido, Saulo pregava nas sinagogas de Damasco que Jesus era o Filho de Deus; passados muitos dias, os judeus tramaram matá-lo, vigiando as portas \"tanto de dia como de noite\" (At 9:20-24). Então os discípulos, de noite, o desceram pelo muro dentro de um cesto (At 9:25). Anos depois, Paulo contou o episódio entre as suas fraquezas: \"fui descido num cesto por uma janela da muralha; e assim escapei das suas mãos\" (2Co 11:30-33).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 9,
+        "verse_start": 23,
+        "verse_end": 25
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "historia-da-igreja-0045",
+      "type": "multiple_choice",
+      "text": "Em Atos 5, quando o sumo sacerdote lembrou aos apóstolos que estavam proibidos de ensinar no nome de Jesus, o que Pedro e os apóstolos responderam?",
+      "options": [
+        {
+          "text": "Dai pois a César o que é de César, e a Deus o que é de Deus",
+          "correct": false
+        },
+        {
+          "text": "Eu e a minha casa serviremos ao Senhor",
+          "correct": false
+        },
+        {
+          "text": "Mais importa obedecer a Deus do que aos homens",
+          "correct": true
+        },
+        {
+          "text": "Eis-me aqui, envia-me a mim",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O sumo sacerdote e os saduceus, cheios de inveja, prenderam os apóstolos, mas um anjo os libertou de noite e eles voltaram a ensinar no templo; levados ao conselho, ouviram do sumo sacerdote: \"Não vos admoestamos nós expressamente que não ensinásseis nesse nome?\" (At 5:17-28). A resposta foi: \"Mais importa obedecer a Deus do que aos homens\" (At 5:29). Mesmo açoitados, saíram \"regozijando-se de terem sido julgados dignos de padecer afronta pelo nome de Jesus\" (At 5:41).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 5,
+        "verse_start": 27,
+        "verse_end": 29
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "historia-da-igreja-0046",
+      "type": "open_answer",
+      "text": "Os judeus de qual cidade \"foram mais nobres do que os que estavam em Tessalônica\", examinando cada dia nas Escrituras se o que Paulo ensinava era assim?",
+      "options": null,
+      "accepted_answers": [
+        "Bereia",
+        "Berea"
+      ],
+      "explanation": "Depois do tumulto em Tessalônica, os irmãos enviaram Paulo e Silas de noite a Bereia (At 17:10). Ali os judeus \"de bom grado receberam a palavra, examinando cada dia nas Escrituras se estas coisas eram assim\", e muitos creram (At 17:11-12). Por isso, os cristãos que conferem todo ensino com a Bíblia costumam ser chamados de bereanos.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 17,
+        "verse_start": 10,
+        "verse_end": 11
+      },
+      "difficulty": "medium"
     }
   ]
 }

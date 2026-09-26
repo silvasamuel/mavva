@@ -1336,6 +1336,92 @@
         "verse_end": 51
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "evangelhos-0045",
+      "type": "multiple_choice",
+      "text": "Que presentes os magos do Oriente ofereceram ao menino Jesus?",
+      "options": [
+        {
+          "text": "Ouro, prata e pedras preciosas",
+          "correct": false
+        },
+        {
+          "text": "Incenso, mirra e aloés",
+          "correct": false
+        },
+        {
+          "text": "Ouro, incenso e mirra",
+          "correct": true
+        },
+        {
+          "text": "Ouro, azeite e vinho",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Guiados pela estrela, os magos encontraram o menino \"na casa\", com Maria, \"e prostrando-se, o adoraram; e, abrindo os seus tesouros, lhe ofertaram dádivas: ouro, incenso e mirra\" (Mt 2:11). Muitos intérpretes veem nos presentes sinais de realeza, de adoração e de morte — a mirra reaparece no sepultamento de Jesus (Jo 19:39). O texto não diz quantos eram os magos nem os chama de reis: a ideia de três reis vem da tradição, e o número provavelmente se inspira nos três presentes.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 2,
+        "verse_start": 11,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "evangelhos-0046",
+      "type": "open_answer",
+      "text": "Qual anjo Deus enviou a Nazaré para anunciar a Maria que ela seria a mãe de Jesus?",
+      "options": null,
+      "accepted_answers": [
+        "Gabriel",
+        "Anjo Gabriel",
+        "O anjo Gabriel"
+      ],
+      "explanation": "\"No sexto mês, foi o anjo Gabriel enviado por Deus a uma cidade da Galileia, chamada Nazaré\" (Lc 1:26), a uma virgem desposada com José. Ele anunciou que Maria conceberia pelo poder do Espírito Santo e daria à luz um filho chamado Jesus (Lc 1:31,35), e ela respondeu: \"Eis aqui a serva do Senhor; cumpra-se em mim segundo a tua palavra\" (Lc 1:38). Meses antes, o mesmo Gabriel havia anunciado a Zacarias o nascimento de João Batista (Lc 1:19).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 1,
+        "verse_start": 26,
+        "verse_end": 31
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "evangelhos-0047",
+      "type": "multiple_choice",
+      "text": "De que se alimentava João Batista no deserto da Judeia?",
+      "options": [
+        {
+          "text": "Maná e codornizes",
+          "correct": false
+        },
+        {
+          "text": "Pão de cevada e peixes",
+          "correct": false
+        },
+        {
+          "text": "Tâmaras e leite de cabra",
+          "correct": false
+        },
+        {
+          "text": "Gafanhotos e mel silvestre",
+          "correct": true
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "João vestia-se de pelos de camelo, com um cinto de couro em torno dos lombos, e \"alimentava-se de gafanhotos e de mel silvestre\" (Mt 3:4). A roupa lembrava a do profeta Elias (2Rs 1:8), e o gafanhoto estava entre os insetos que a Lei permitia comer (Lv 11:22). A vida austera combinava com a mensagem que ele pregava: \"Arrependei-vos, porque é chegado o reino dos céus\" (Mt 3:2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 3,
+        "verse_start": 4,
+        "verse_end": null
+      },
+      "difficulty": "easy"
     }
   ]
 }

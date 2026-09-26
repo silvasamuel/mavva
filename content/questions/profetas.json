@@ -1253,6 +1253,143 @@
         "verse_end": 31
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "profetas-0042",
+      "type": "open_answer",
+      "text": "Qual profeta anunciou que \"os que esperam no Senhor renovarão as suas forças, subirão com asas como águias\"?",
+      "options": null,
+      "accepted_answers": [
+        "Isaías",
+        "Profeta Isaías"
+      ],
+      "explanation": "A promessa está em Isaías 40, capítulo que abre com \"Consolai, consolai o meu povo\" (Is 40:1). Ao povo cansado, que dizia que o seu caminho estava encoberto ao Senhor, Deus responde que ele \"nem se cansa nem se fatiga\" e dá forças ao cansado (Is 40:27-29) — e os que nele esperam \"correrão e não se cansarão; caminharão, e não se fatigarão\" (Is 40:31).",
+      "divergence_note": null,
+      "reference": {
+        "book": "isaias",
+        "chapter": 40,
+        "verse_start": 28,
+        "verse_end": 31
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "profetas-0043",
+      "type": "open_answer",
+      "text": "Qual profeta disse ao rei Saul: \"Eis que o obedecer é melhor do que o sacrificar\"?",
+      "options": null,
+      "accepted_answers": [
+        "Samuel",
+        "Profeta Samuel"
+      ],
+      "explanation": "Saul e o povo pouparam o rei Agague e o melhor das ovelhas e das vacas de Amaleque, contra a ordem de Deus, e Saul alegou que os animais seriam oferecidos ao Senhor (1Sm 15:9,15). Samuel respondeu: \"Eis que o obedecer é melhor do que o sacrificar; e o atender melhor é do que a gordura de carneiros\" (1Sm 15:22). Por ter rejeitado a palavra do Senhor, Saul foi rejeitado como rei (1Sm 15:23,26).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 15,
+        "verse_start": 22,
+        "verse_end": 23
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "profetas-0044",
+      "type": "multiple_choice",
+      "text": "O que Jonas fazia enquanto a grande tempestade ameaçava despedaçar o navio que ia para Társis?",
+      "options": [
+        {
+          "text": "Clamava ao seu Deus junto com os marinheiros",
+          "correct": false
+        },
+        {
+          "text": "Dormia um profundo sono no porão do navio",
+          "correct": true
+        },
+        {
+          "text": "Ajudava a lançar a carga ao mar",
+          "correct": false
+        },
+        {
+          "text": "Segurava o leme junto com o mestre do navio",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Enquanto os marinheiros clamavam cada um ao seu deus e aliviavam o navio, \"Jonas, porém, desceu aos lugares do porão, e se deitou, e dormia um profundo sono\" (Jn 1:5). O mestre do navio precisou acordá-lo: \"Levanta-te, invoca o teu Deus\" (Jn 1:6) — o profeta em fuga dormia, enquanto os pagãos oravam.",
+      "divergence_note": null,
+      "reference": {
+        "book": "jonas",
+        "chapter": 1,
+        "verse_start": 4,
+        "verse_end": 6
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "profetas-0045",
+      "type": "multiple_choice",
+      "text": "A quem foi dirigida originalmente a promessa \"eu bem sei os pensamentos que penso de vós... pensamentos de paz e não de mal\"?",
+      "options": [
+        {
+          "text": "Ao rei Zedequias, durante o cerco de Jerusalém",
+          "correct": false
+        },
+        {
+          "text": "Aos judeus que haviam fugido para o Egito",
+          "correct": false
+        },
+        {
+          "text": "Aos que reconstruíam o templo após o exílio",
+          "correct": false
+        },
+        {
+          "text": "Aos judeus levados cativos para a Babilônia",
+          "correct": true
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Jeremias enviou essa carta de Jerusalém aos anciãos do cativeiro, aos sacerdotes, aos profetas e \"a todo o povo que Nabucodonosor havia transportado de Jerusalém\" para a Babilônia (Jr 29:1). Deus mandou os exilados edificarem casas e orarem pela paz da cidade, pois só depois de setenta anos na Babilônia os traria de volta (Jr 29:5-10). A famosa promessa de Jr 29:11 foi feita a um povo que ainda esperaria décadas no exílio.",
+      "divergence_note": null,
+      "reference": {
+        "book": "jeremias",
+        "chapter": 29,
+        "verse_start": 1,
+        "verse_end": 11
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "profetas-0046",
+      "type": "multiple_choice",
+      "text": "Debaixo de que árvore Elias se assentou e pediu a morte, ao fugir da ameaça de Jezabel?",
+      "options": [
+        {
+          "text": "Um zimbro",
+          "correct": true
+        },
+        {
+          "text": "Uma figueira",
+          "correct": false
+        },
+        {
+          "text": "Um carvalho",
+          "correct": false
+        },
+        {
+          "text": "Uma palmeira",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Ameaçado por Jezabel depois do Carmelo, Elias foi ao deserto, \"se assentou debaixo de um zimbro; e pediu em seu ânimo a morte\" (1Rs 19:4). Antes de lhe falar no Horebe, Deus o deixou dormir e mandou um anjo alimentá-lo duas vezes, dando-lhe forças para a longa caminhada (1Rs 19:5-8).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 19,
+        "verse_start": 3,
+        "verse_end": 5
+      },
+      "difficulty": "medium"
     }
   ]
 }

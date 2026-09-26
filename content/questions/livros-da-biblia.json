@@ -1306,6 +1306,190 @@
         "verse_end": 4
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "livros-da-biblia-0043",
+      "type": "open_answer",
+      "text": "Qual livro do Pentateuco deve o seu nome aos recenseamentos do povo de Israel no deserto?",
+      "options": null,
+      "accepted_answers": [
+        "Números",
+        "Livro de Números"
+      ],
+      "explanation": "Números começa com a ordem de contar todos os homens de vinte anos para cima aptos para a guerra (Nm 1:2-3) e registra um segundo censo, o da nova geração, no capítulo 26. O título remonta à Septuaginta, a antiga tradução grega; em hebraico o livro se chama Bemidbar, \"no deserto\", expressão do primeiro versículo que resume a peregrinação narrada no livro.",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "livros-da-biblia-0044",
+      "type": "multiple_choice",
+      "text": "Em qual livro está a ordem: \"Não to mandei eu? Esforça-te e tem bom ânimo; não pasmes, nem te espantes\"?",
+      "options": [
+        {
+          "text": "Juízes",
+          "correct": false
+        },
+        {
+          "text": "Josué",
+          "correct": true
+        },
+        {
+          "text": "Números",
+          "correct": false
+        },
+        {
+          "text": "1 Samuel",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "São palavras do Senhor a Josué depois da morte de Moisés, quando ele assumia a missão de levar Israel a Canaã (Js 1:1-2). A ordem de ser forte se repete no capítulo (Js 1:6,7,9) e se apoia numa promessa: \"o SENHOR, teu Deus, é contigo, por onde quer que andares\" (Js 1:9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "josue",
+        "chapter": 1,
+        "verse_start": 6,
+        "verse_end": 9
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "livros-da-biblia-0045",
+      "type": "multiple_choice",
+      "text": "Em qual livro Deus declara: \"Porque eu bem sei os pensamentos que penso de vós... pensamentos de paz e não de mal\"?",
+      "options": [
+        {
+          "text": "Jeremias",
+          "correct": true
+        },
+        {
+          "text": "Isaías",
+          "correct": false
+        },
+        {
+          "text": "Ezequiel",
+          "correct": false
+        },
+        {
+          "text": "Daniel",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "A promessa está em Jeremias 29:11. Jeremias profetizou nos últimos anos do reino de Judá, do reinado de Josias até a queda de Jerusalém (Jr 1:1-3), e o seu livro une avisos de juízo a promessas de esperança, como a de um novo concerto que Deus escreveria no coração do povo (Jr 31:31-33).",
+      "divergence_note": null,
+      "reference": {
+        "book": "jeremias",
+        "chapter": 29,
+        "verse_start": 10,
+        "verse_end": 11
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "livros-da-biblia-0046",
+      "type": "multiple_choice",
+      "text": "Em qual livro está a exortação: \"Trazei todos os dízimos à casa do tesouro, para que haja mantimento na minha casa\"?",
+      "options": [
+        {
+          "text": "Ageu",
+          "correct": false
+        },
+        {
+          "text": "Levítico",
+          "correct": false
+        },
+        {
+          "text": "Malaquias",
+          "correct": true
+        },
+        {
+          "text": "Zacarias",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O versículo é Malaquias 3:10, dirigido à comunidade de Judá depois do exílio, que negligenciava os dízimos e as ofertas — o que o profeta chama de roubar a Deus (Ml 3:8). Junto com a ordem vêm o desafio \"fazei prova de mim\" e a promessa de abrir \"as janelas do céu\" (Ml 3:10).",
+      "divergence_note": null,
+      "reference": {
+        "book": "malaquias",
+        "chapter": 3,
+        "verse_start": 8,
+        "verse_end": 10
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "livros-da-biblia-0047",
+      "type": "multiple_choice",
+      "text": "Qual evangelho registra o Sermão do Monte, que ocupa os capítulos 5 a 7 e começa com as bem-aventuranças?",
+      "options": [
+        {
+          "text": "Lucas",
+          "correct": false
+        },
+        {
+          "text": "Marcos",
+          "correct": false
+        },
+        {
+          "text": "João",
+          "correct": false
+        },
+        {
+          "text": "Mateus",
+          "correct": true
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Jesus, vendo a multidão, subiu a um monte\" (Mt 5:1): ali começa o Sermão do Monte, que reúne as bem-aventuranças, o Pai Nosso e a comparação da casa edificada sobre a rocha (Mt 7:24-27). Lucas registra um discurso paralelo e mais curto, pronunciado num lugar plano (Lc 6:17-49).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 5,
+        "verse_start": 1,
+        "verse_end": 12
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "livros-da-biblia-0048",
+      "type": "multiple_choice",
+      "text": "Qual é o único evangelho que registra as parábolas do bom samaritano e do filho pródigo?",
+      "options": [
+        {
+          "text": "Mateus",
+          "correct": false
+        },
+        {
+          "text": "Lucas",
+          "correct": true
+        },
+        {
+          "text": "Marcos",
+          "correct": false
+        },
+        {
+          "text": "João",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "As duas parábolas aparecem somente em Lucas (Lc 10:30-37; 15:11-32). O filho pródigo encerra o capítulo 15, que reúne três parábolas sobre o que estava perdido — a ovelha, a dracma e o filho —, contadas quando fariseus e escribas murmuravam porque Jesus recebia pecadores (Lc 15:1-2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 15,
+        "verse_start": 11,
+        "verse_end": 32
+      },
+      "difficulty": "medium"
     }
   ]
 }

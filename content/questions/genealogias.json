@@ -774,27 +774,27 @@
     {
       "external_id": "genealogias-0026",
       "type": "multiple_choice",
-      "text": "Quem era o avô de Davi, filho de Obede?",
+      "text": "Quem era o avô de Davi?",
       "options": [
         {
           "text": "Jessé",
-          "correct": true
+          "correct": false
         },
         {
           "text": "Boaz",
           "correct": false
         },
         {
-          "text": "Salmom",
-          "correct": false
+          "text": "Obede",
+          "correct": true
         },
         {
-          "text": "Naassom",
+          "text": "Salmom",
           "correct": false
         }
       ],
       "accepted_answers": null,
-      "explanation": "'Obede gerou a Jessé, e Jessé gerou a Davi' (Rt 4:22); Davi é chamado repetidamente 'filho de Jessé'.",
+      "explanation": "Rute 4 fecha com a linhagem: Boaz gerou a Obede, Obede gerou a Jessé, e Jessé gerou a Davi (Rt 4:21-22). Obede, o filho de Boaz e Rute, é portanto o avô de Davi; Jessé é o pai, e Boaz, o bisavô.",
       "divergence_note": null,
       "reference": {
         "book": "rute",
@@ -802,7 +802,7 @@
         "verse_start": 21,
         "verse_end": 22
       },
-      "difficulty": "expert"
+      "difficulty": "hard"
     },
     {
       "external_id": "genealogias-0027",
@@ -840,7 +840,7 @@
     {
       "external_id": "genealogias-0028",
       "type": "multiple_choice",
-      "text": "Quem foi o pai de Davi, filho de Obede?",
+      "text": "Quem era o pai de Abrão, que o levou de Ur dos caldeus rumo à terra de Canaã?",
       "options": [
         {
           "text": "Terá",
@@ -855,20 +855,20 @@
           "correct": false
         },
         {
-          "text": "Lote",
+          "text": "Ló",
           "correct": false
         }
       ],
       "accepted_answers": null,
-      "explanation": "'Obede gerou a Jessé, e Jessé gerou a Davi' (Rt 4:22); Davi é chamado repetidamente 'filho de Jessé' (1Sm 16:18).",
+      "explanation": "Terá gerou a Abrão, a Naor e a Harã (Gn 11:27). Ele saiu de Ur dos caldeus com Abrão, Sarai e o neto Ló, filho de Harã, para ir a Canaã, mas parou em Harã e morreu ali (Gn 11:31-32); o chamado de Deus a Abrão vem logo em seguida (Gn 12:1).",
       "divergence_note": null,
       "reference": {
         "book": "genesis",
         "chapter": 11,
-        "verse_start": 31,
+        "verse_start": 27,
         "verse_end": 32
       },
-      "difficulty": "expert"
+      "difficulty": "medium"
     },
     {
       "external_id": "genealogias-0029",
@@ -1258,6 +1258,111 @@
         "verse_end": 21
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "genealogias-0042",
+      "type": "open_answer",
+      "text": "Qual sobrinho acompanhou Abrão quando ele saiu de Harã rumo à terra de Canaã?",
+      "options": null,
+      "accepted_answers": [
+        "Ló",
+        "Lot"
+      ],
+      "explanation": "Ló era filho de Harã, irmão de Abrão (Gn 11:27). Quando Deus chamou Abrão, \"foi Ló com ele\", e Abrão levou \"a Ló, filho de seu irmão\" para Canaã (Gn 12:4-5). Mais tarde, Ló escolheu a campina do Jordão e armou as suas tendas até Sodoma; quando foi levado cativo de lá, precisou ser resgatado pelo tio (Gn 13:11-12; 14:12-16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 12,
+        "verse_start": 4,
+        "verse_end": 5
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "genealogias-0043",
+      "type": "multiple_choice",
+      "text": "Qual filho de Jacó ficou com o pai quando os dez irmãos desceram ao Egito para comprar trigo, pois Jacó temia que lhe acontecesse algum desastre?",
+      "options": [
+        {
+          "text": "Rúben",
+          "correct": false
+        },
+        {
+          "text": "Simeão",
+          "correct": false
+        },
+        {
+          "text": "Judá",
+          "correct": false
+        },
+        {
+          "text": "Benjamim",
+          "correct": true
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"A Benjamim, porém, irmão de José, não enviou Jacó com os seus irmãos, porque dizia: Para que lhe não suceda, porventura, algum desastre\" (Gn 42:4). Diante de José, a quem não reconheceram, os irmãos explicaram que \"o mais novo está com nosso pai\" (Gn 42:13). Caçula e último filho de Raquel (Gn 35:18), Benjamim era, aos olhos de Jacó, o único que lhe restava da esposa amada — como Judá diria a José, \"seu pai o ama\" (Gn 44:20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 42,
+        "verse_start": 3,
+        "verse_end": 4
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "genealogias-0044",
+      "type": "multiple_choice",
+      "text": "Qual filha do rei Saul amava Davi e lhe foi dada por mulher?",
+      "options": [
+        {
+          "text": "Merabe",
+          "correct": false
+        },
+        {
+          "text": "Mical",
+          "correct": true
+        },
+        {
+          "text": "Rispa",
+          "correct": false
+        },
+        {
+          "text": "Abigail",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Saul chegou a prometer a Davi a filha mais velha, Merabe, mas ela foi dada por mulher a Adriel; já \"Mical, a outra filha de Saul, amava a Davi\" (1Sm 18:17-20). Como dote, Saul pediu a prova da morte de cem filisteus, esperando que Davi caísse na batalha; Davi e os seus homens feriram duzentos, e Saul lhe deu Mical por mulher (1Sm 18:25-27). Mais tarde, ela salvou o marido da fúria do pai, fazendo-o descer por uma janela (1Sm 19:11-12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 18,
+        "verse_start": 20,
+        "verse_end": 27
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "genealogias-0045",
+      "type": "open_answer",
+      "text": "Qual filho de Jônatas, aleijado de ambos os pés, Davi acolheu para comer sempre à sua mesa?",
+      "options": null,
+      "accepted_answers": [
+        "Mefibosete",
+        "Meribe-Baal",
+        "Meribaal"
+      ],
+      "explanation": "Ainda menino de cinco anos, ele caiu e ficou coxo quando a ama fugiu às pressas ao chegar a notícia da morte de Saul e Jônatas (2Sm 4:4). Já rei, Davi procurou alguém da casa de Saul para lhe fazer bem \"por amor de Jônatas\" e disse a Mefibosete: \"tu de contínuo comerás pão à minha mesa\" (2Sm 9:1-7). Era a fidelidade de Davi à aliança com Jônatas (1Sm 20:14-17); em 1 Crônicas, o mesmo filho é chamado Meribe-Baal, ou Meribaal (1Cr 8:34).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 9,
+        "verse_start": 3,
+        "verse_end": 7
+      },
+      "difficulty": "medium"
     }
   ]
 }

@@ -1325,6 +1325,138 @@
         "verse_end": 15
       },
       "difficulty": "easy"
+    },
+    {
+      "external_id": "eventos-biblicos-0043",
+      "type": "multiple_choice",
+      "text": "Na batalha contra os amalequitas em Refidim, quem sustentou as mãos de Moisés até o pôr do sol, para que Israel prevalecesse?",
+      "options": [
+        {
+          "text": "Josué e Calebe",
+          "correct": false
+        },
+        {
+          "text": "Eleazar e Itamar",
+          "correct": false
+        },
+        {
+          "text": "Arão e Hur",
+          "correct": true
+        },
+        {
+          "text": "Nadabe e Abiú",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Enquanto Josué pelejava, Moisés subiu ao cume do outeiro com a vara de Deus: \"quando Moisés levantava a sua mão, Israel prevalecia; mas, quando ele abaixava a sua mão, Amaleque prevalecia\" (Êx 17:11). Quando as mãos de Moisés ficaram pesadas, puseram-lhe uma pedra para se assentar, e Arão e Hur sustentaram as suas mãos, um de cada lado, até que o sol se pôs (Êx 17:12). Depois da vitória, Moisés ergueu um altar e o chamou \"O SENHOR é minha bandeira\" (Êx 17:15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 17,
+        "verse_start": 10,
+        "verse_end": 13
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "eventos-biblicos-0044",
+      "type": "multiple_choice",
+      "text": "O que Daniel pediu para comer e beber na corte da Babilônia, para não se contaminar com a porção do manjar do rei?",
+      "options": [
+        {
+          "text": "Legumes e água",
+          "correct": true
+        },
+        {
+          "text": "Pão asmo e vinho",
+          "correct": false
+        },
+        {
+          "text": "Frutas e leite",
+          "correct": false
+        },
+        {
+          "text": "Peixe e mel",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Daniel \"assentou no seu coração não se contaminar com a porção do manjar do rei\" e propôs ao despenseiro um teste de dez dias, pedindo que lhes dessem legumes a comer e água a beber (Dn 1:8-12). Ao fim do prazo, ele e seus três companheiros pareciam mais saudáveis e nutridos que todos os jovens que comiam do manjar do rei (Dn 1:15). A fidelidade nas pequenas escolhas preparou Daniel para as grandes provas que viriam.",
+      "divergence_note": null,
+      "reference": {
+        "book": "daniel",
+        "chapter": 1,
+        "verse_start": 8,
+        "verse_end": 16
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "eventos-biblicos-0045",
+      "type": "multiple_choice",
+      "text": "Como Jacó conseguiu enganar o pai, Isaque, que já não enxergava, para receber a bênção destinada a Esaú?",
+      "options": [
+        {
+          "text": "Imitou a voz de Esaú, e Isaque não percebeu",
+          "correct": false
+        },
+        {
+          "text": "Usou as roupas de Esaú e peles de cabrito nas mãos e no pescoço",
+          "correct": true
+        },
+        {
+          "text": "Entrou na tenda à noite, enquanto Isaque dormia",
+          "correct": false
+        },
+        {
+          "text": "Mandou um servo levar a caça em seu lugar",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Foi Rebeca quem armou o plano: ela vestiu Jacó com as roupas de gala de Esaú e, \"com as peles dos cabritos\", cobriu-lhe as mãos e a lisura do pescoço (Gn 27:6-16). Isaque desconfiou — \"A voz é a voz de Jacó, porém as mãos são as mãos de Esaú\" —, mas, apalpando as mãos cabeludas, o abençoou (Gn 27:22-23). O engano custou caro: Jacó teve de fugir da ira do irmão e, anos depois, foi ele o enganado por Labão (Gn 27:41-43; 29:25).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 27,
+        "verse_start": 15,
+        "verse_end": 23
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "eventos-biblicos-0046",
+      "type": "multiple_choice",
+      "text": "O que Deus pôs ao oriente do jardim do Éden, depois de lançar fora o homem, para guardar o caminho da árvore da vida?",
+      "options": [
+        {
+          "text": "Serafins com brasas vivas",
+          "correct": false
+        },
+        {
+          "text": "Um rio de fogo ao redor do jardim",
+          "correct": false
+        },
+        {
+          "text": "Um muro de pedra guardado por leões",
+          "correct": false
+        },
+        {
+          "text": "Querubins e uma espada inflamada",
+          "correct": true
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Depois da queda, o SENHOR Deus lançou o homem fora do jardim e \"pôs querubins ao oriente do jardim do Éden e uma espada inflamada que andava ao redor, para guardar o caminho da árvore da vida\" (Gn 3:23-24). O acesso perdido no Éden reaparece restaurado no fim da Escritura: na nova Jerusalém, a árvore da vida está no meio da praça, junto ao rio (Ap 22:2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 3,
+        "verse_start": 23,
+        "verse_end": 24
+      },
+      "difficulty": "medium"
     }
   ]
 }
