@@ -1322,6 +1322,223 @@
         "verse_end": null
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "reis-0043",
+      "type": "open_answer",
+      "text": "Qual rei mandou trazer uma espada e ordenou dividir ao meio um menino vivo para descobrir qual de duas mulheres era a verdadeira mãe?",
+      "options": null,
+      "accepted_answers": [
+        "Salomão",
+        "Rei Salomão"
+      ],
+      "explanation": "Duas mulheres disputavam o mesmo bebê, e o rei ordenou: \"Dividi em duas partes o menino vivo\" (1Rs 3:25). A verdadeira mãe, com o coração enternecido, preferiu entregar o filho a vê-lo morrer, e Salomão sentenciou: \"Dai a esta o menino vivo... porque esta é sua mãe\" (1Rs 3:26-27). Todo o Israel reconheceu \"que havia nele a sabedoria de Deus, para fazer justiça\" (1Rs 3:28).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 3,
+        "verse_start": 16,
+        "verse_end": 28
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "reis-0044",
+      "type": "multiple_choice",
+      "text": "O que o jovem Saul estava procurando quando foi ao encontro do profeta Samuel pela primeira vez?",
+      "options": [
+        {
+          "text": "Ovelhas desgarradas do rebanho da família",
+          "correct": false
+        },
+        {
+          "text": "As jumentas perdidas de seu pai",
+          "correct": true
+        },
+        {
+          "text": "Um lugar para oferecer sacrifício ao SENHOR",
+          "correct": false
+        },
+        {
+          "text": "Refúgio contra os filisteus que atacavam Benjamim",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Perderam-se as jumentas de Quis, pai de Saul\", e o pai mandou o filho buscá-las (1Sm 9:3). Depois de percorrerem várias terras sem achá-las, o moço sugeriu consultar o homem de Deus que havia na cidade (1Sm 9:4-6). Samuel, a quem o SENHOR revelara na véspera a vinda do homem que ele ungiria (1Sm 9:15-16), avisou que as jumentas, perdidas havia três dias, já tinham sido achadas (1Sm 9:20) — uma busca comum virou o caminho para o trono.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 9,
+        "verse_start": 3,
+        "verse_end": 20
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "reis-0045",
+      "type": "multiple_choice",
+      "text": "O que Davi fez quando Saul entrou, sem saber, na caverna onde ele e seus homens estavam escondidos, no deserto de En-Gedi?",
+      "options": [
+        {
+          "text": "Feriu-o com a espada, vingando-se da perseguição",
+          "correct": false
+        },
+        {
+          "text": "Amarrou-o e o entregou aos seus homens",
+          "correct": false
+        },
+        {
+          "text": "Cortou-lhe a orla do manto, mas poupou a sua vida",
+          "correct": true
+        },
+        {
+          "text": "Fugiu da caverna sem ser notado",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Os homens de Davi viram ali o dia em que Deus lhe entregava o inimigo, mas ele apenas \"cortou a orla do manto de Saul\" — e ainda assim o coração lhe doeu (1Sm 24:4-5). Davi se recusou a estender a mão contra \"o ungido do SENHOR\" (1Sm 24:6) e deixou a causa com Deus. Diante da prova, Saul chorou e reconheceu: \"Mais justo és do que eu\" (1Sm 24:17).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 24,
+        "verse_start": 3,
+        "verse_end": 7
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "reis-0046",
+      "type": "multiple_choice",
+      "text": "Segundo o discurso de Paulo em Atos 13, a qual rei Deus se referiu como \"varão conforme o meu coração\"?",
+      "options": [
+        {
+          "text": "Saul",
+          "correct": false
+        },
+        {
+          "text": "Salomão",
+          "correct": false
+        },
+        {
+          "text": "Ezequias",
+          "correct": false
+        },
+        {
+          "text": "Davi",
+          "correct": true
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Pregando na sinagoga de Antioquia da Pisídia, Paulo resumiu a história de Israel: depois de retirar Saul, Deus levantou Davi, de quem testemunhou: \"Achei a Davi, filho de Jessé, varão conforme o meu coração\" (At 13:22). A frase retoma o aviso de Samuel a Saul, de que o SENHOR já buscara \"um homem segundo o seu coração\" (1Sm 13:14). E Paulo acrescenta que da descendência de Davi Deus levantou Jesus como Salvador (At 13:23).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 13,
+        "verse_start": 21,
+        "verse_end": 22
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "reis-0047",
+      "type": "multiple_choice",
+      "text": "Quando Davi voltava de ferir os filisteus, que refrão as mulheres de Israel cantavam, despertando o ciúme do rei Saul?",
+      "options": [
+        {
+          "text": "Saul feriu os seus milhares, porém Davi, os seus dez milhares",
+          "correct": true
+        },
+        {
+          "text": "Davi é o ungido, e Saul foi rejeitado pelo SENHOR",
+          "correct": false
+        },
+        {
+          "text": "O pastor de Belém venceu o gigante de Gate",
+          "correct": false
+        },
+        {
+          "text": "Viva o rei Davi, o filho de Jessé",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "As mulheres saíram de todas as cidades de Israel cantando e dançando: \"Saul feriu os seus milhares, porém Davi, os seus dez milhares\" (1Sm 18:6-7). \"Então, Saul se indignou muito\", e \"desde aquele dia em diante, Saul tinha Davi em suspeita\" (1Sm 18:8-9). A inveja logo virou perseguição: no dia seguinte, Saul atirou a lança para encravar Davi na parede (1Sm 18:10-11).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 18,
+        "verse_start": 6,
+        "verse_end": 9
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "reis-0048",
+      "type": "multiple_choice",
+      "text": "Segundo 1 Reis 11, quantas mulheres e concubinas teve o rei Salomão, que lhe perverteram o coração na velhice?",
+      "options": [
+        {
+          "text": "Setenta mulheres e trinta concubinas",
+          "correct": false
+        },
+        {
+          "text": "Setecentas mulheres e trezentas concubinas",
+          "correct": true
+        },
+        {
+          "text": "Cem mulheres e cinquenta concubinas",
+          "correct": false
+        },
+        {
+          "text": "Doze mulheres e sete concubinas",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"E tinha setecentas mulheres, princesas, e trezentas concubinas\", e as suas mulheres lhe perverteram o coração (1Rs 11:3). Muitas vinham de nações das quais o SENHOR dissera que desviariam o coração de Israel para outros deuses — e foi o que aconteceu na velhice do rei (1Rs 11:2,4). Por isso Deus anunciou que rasgaria o reino da mão do seu filho, origem da divisão entre Israel e Judá (1Rs 11:11-13).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 11,
+        "verse_start": 1,
+        "verse_end": 4
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "reis-0049",
+      "type": "multiple_choice",
+      "text": "Que objeto feito por Moisés o rei Ezequias despedaçou, porque os israelitas lhe queimavam incenso?",
+      "options": [
+        {
+          "text": "O bezerro de ouro do deserto",
+          "correct": false
+        },
+        {
+          "text": "A vara de Arão que florescera",
+          "correct": false
+        },
+        {
+          "text": "A serpente de metal, chamada Neustã",
+          "correct": true
+        },
+        {
+          "text": "O candelabro de ouro do tabernáculo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Ezequias \"fez em pedaços a serpente de metal que Moisés fizera, porquanto até àquele dia os filhos de Israel lhe queimavam incenso\", e o objeto era chamado Neustã (2Rs 18:4). A serpente que um dia fora instrumento de cura no deserto (Nm 21:8-9) tinha virado ídolo. Elogiado por confiar no SENHOR como nenhum outro rei de Judá (2Rs 18:5), Ezequias não poupou nem mesmo um objeto venerável que passara a roubar a glória devida a Deus.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 18,
+        "verse_start": 3,
+        "verse_end": 4
+      },
+      "difficulty": "medium"
     }
   ]
 }

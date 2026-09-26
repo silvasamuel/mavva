@@ -1344,6 +1344,78 @@
         "verse_end": null
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "idiomas-biblicos-0046",
+      "type": "open_answer",
+      "text": "Depois de uma vitória sobre os filisteus, Samuel ergueu uma pedra e lhe deu um nome hebraico que significa \"pedra de ajuda\". Que nome foi esse?",
+      "options": null,
+      "accepted_answers": [
+        "Ebenézer",
+        "Eben-Ezer"
+      ],
+      "explanation": "Depois que o SENHOR trovejou com grande trovoada sobre os filisteus e eles foram derrotados diante de Israel (1Sm 7:10), Samuel colocou uma pedra entre Mispa e Sem, chamou-a Ebenézer e disse: \"Até aqui nos ajudou o SENHOR\" (1Sm 7:12). O nome fazia da pedra um memorial de que a vitória viera de Deus, e não da força de Israel.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 7,
+        "verse_start": 10,
+        "verse_end": 12
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "idiomas-biblicos-0047",
+      "type": "multiple_choice",
+      "text": "Segundo Êxodo 2:10, por que a filha de Faraó deu ao menino hebreu o nome de Moisés?",
+      "options": [
+        {
+          "text": "Porque ele seria um príncipe no Egito",
+          "correct": false
+        },
+        {
+          "text": "Porque Deus ouvira o clamor dos hebreus",
+          "correct": false
+        },
+        {
+          "text": "Porque ela o havia tirado das águas",
+          "correct": true
+        },
+        {
+          "text": "Porque ele nascera da tribo de Levi",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Ela o chamou Moisés e explicou: \"Porque das águas o tenho tirado\" (Êx 2:10) — em hebraico, o nome soa como o verbo mashah, \"tirar\". O menino que Faraó mandara lançar ao rio (Êx 1:22) foi tirado dele e, anos depois, conduziria Israel em seco pelo meio do mar (Êx 14:21-22).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 2,
+        "verse_start": 5,
+        "verse_end": 10
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "idiomas-biblicos-0048",
+      "type": "open_answer",
+      "text": "Que expressão, formada pela primeira e pela última letra do alfabeto grego, o Senhor usa no Apocalipse para se apresentar como o princípio e o fim?",
+      "options": null,
+      "accepted_answers": [
+        "Alfa e Ômega",
+        "O Alfa e o Ômega",
+        "Alfa e o Ômega"
+      ],
+      "explanation": "\"Eu sou o Alfa e o Ômega, o princípio e o fim, o primeiro e o derradeiro\" (Ap 22:13). Como o Novo Testamento foi escrito em grego, as letras extremas do alfabeto dizem que tudo começa e termina nele. O título ecoa a declaração de Deus em Isaías — \"Eu sou o primeiro e eu sou o último\" (Is 44:6) — e, no fim do livro, quem o pronuncia é o mesmo que declara: \"Eu, Jesus, enviei o meu anjo\" (Ap 22:16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 22,
+        "verse_start": 12,
+        "verse_end": 13
+      },
+      "difficulty": "easy"
     }
   ]
 }

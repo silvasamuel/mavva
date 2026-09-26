@@ -1308,6 +1308,125 @@
         "verse_end": 36
       },
       "difficulty": "easy"
+    },
+    {
+      "external_id": "geografia-biblica-0043",
+      "type": "open_answer",
+      "text": "Segundo Gênesis 2:8, onde Deus plantou um jardim, \"da banda do Oriente\", e pôs ali o homem que tinha formado?",
+      "options": null,
+      "accepted_answers": [
+        "Éden",
+        "No Éden",
+        "Jardim do Éden"
+      ],
+      "explanation": "\"E plantou o SENHOR Deus um jardim no Éden, da banda do Oriente, e pôs ali o homem que tinha formado\" (Gn 2:8). O texto distingue a região, Éden, do jardim plantado nela, que um rio saído do Éden regava (Gn 2:10). A Septuaginta, antiga tradução grega, chamou o jardim de paradeisos, origem da palavra \"paraíso\", que aparece na promessa de Jesus na cruz (Lc 23:43).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 2,
+        "verse_start": 8,
+        "verse_end": 10
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "geografia-biblica-0044",
+      "type": "multiple_choice",
+      "text": "De que região vieram os cedros usados por Salomão na construção do templo, graças a um acordo com Hirão, rei de Tiro?",
+      "options": [
+        {
+          "text": "Líbano",
+          "correct": true
+        },
+        {
+          "text": "Basã",
+          "correct": false
+        },
+        {
+          "text": "Gileade",
+          "correct": false
+        },
+        {
+          "text": "Carmelo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Salomão pediu a Hirão que mandasse cortar cedros do Líbano, pois ninguém sabia cortar madeira como os sidônios (1Rs 5:6); as toras desciam até o mar e seguiam em jangadas até o lugar combinado (1Rs 5:9). Alto, aromático e resistente, o cedro do Líbano era uma das madeiras mais valorizadas do antigo Oriente — \"crescerá como o cedro no Líbano\", diz o salmo sobre o justo (Sl 92:12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 5,
+        "verse_start": 6,
+        "verse_end": 10
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "geografia-biblica-0045",
+      "type": "multiple_choice",
+      "text": "Em que região do Egito Faraó permitiu que Jacó e sua família habitassem, quando vieram de Canaã fugindo da fome?",
+      "options": [
+        {
+          "text": "Om",
+          "correct": false
+        },
+        {
+          "text": "Patros",
+          "correct": false
+        },
+        {
+          "text": "Mênfis",
+          "correct": false
+        },
+        {
+          "text": "Gósen",
+          "correct": true
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "José mandou dizer ao pai: \"habitarás na terra de Gósen, e estarás perto de mim\" (Gn 45:10), e Faraó confirmou: \"no melhor da terra faze habitar teu pai e teus irmãos; habitem na terra de Gósen\" (Gn 47:6). Como pastores, ficavam ali à parte dos egípcios, pois \"todo o pastor de ovelhas é abominação para os egípcios\" (Gn 46:34). Séculos depois, Deus poupou Gósen durante as pragas: lá \"não havia saraiva\" (Êx 9:26).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 47,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "geografia-biblica-0046",
+      "type": "multiple_choice",
+      "text": "Qual das sete igrejas do Apocalipse foi repreendida por não ser nem fria nem quente, mas morna?",
+      "options": [
+        {
+          "text": "Sardes",
+          "correct": false
+        },
+        {
+          "text": "Laodiceia",
+          "correct": true
+        },
+        {
+          "text": "Éfeso",
+          "correct": false
+        },
+        {
+          "text": "Pérgamo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "A carta \"ao anjo da igreja que está em Laodiceia\" (Ap 3:14) declara: \"Assim, porque és morno e não és frio nem quente, vomitar-te-ei da minha boca\" (Ap 3:16). A igreja daquela cidade próspera da Ásia Menor julgava-se rica e sem falta de nada (Ap 3:17). Segundo muitos estudiosos, a imagem alude à água da cidade, que chegava morna por aqueduto, em contraste com as fontes quentes de Hierápolis e a água fria de Colossos, cidades vizinhas (cf. Cl 4:13).",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 3,
+        "verse_start": 14,
+        "verse_end": 17
+      },
+      "difficulty": "easy"
     }
   ]
 }

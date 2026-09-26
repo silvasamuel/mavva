@@ -1375,6 +1375,246 @@
         "verse_end": null
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "contexto-historico-0044",
+      "type": "open_answer",
+      "text": "No Sermão do Monte, se alguém te obrigar a caminhar uma milha, quantas milhas Jesus manda caminhar com ele?",
+      "options": null,
+      "accepted_answers": [
+        "2",
+        "duas",
+        "2 milhas",
+        "duas milhas"
+      ],
+      "explanation": "\"E, se qualquer te obrigar a caminhar uma milha, vai com ele duas\" (Mt 5:41). Segundo os historiadores, soldados e oficiais romanos podiam obrigar civis a carregar cargas por certa distância — e a milha romana tinha cerca de 1,5 km. No grego, o verbo traduzido por \"obrigar\" (angareuō) é o mesmo usado para Simão Cireneu, \"a quem constrangeram a levar a sua cruz\" (Mt 27:32); Jesus ensina a transformar a imposição em serviço voluntário.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 5,
+        "verse_start": 41,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "contexto-historico-0045",
+      "type": "multiple_choice",
+      "text": "Segundo os Evangelhos, que costume da festa da Páscoa Pilatos tentou usar para libertar Jesus?",
+      "options": [
+        {
+          "text": "Perdoar todos os condenados à morte",
+          "correct": false
+        },
+        {
+          "text": "Enviar os presos para serem julgados em Roma",
+          "correct": false
+        },
+        {
+          "text": "Adiar as execuções até o fim da festa",
+          "correct": false
+        },
+        {
+          "text": "Soltar um preso escolhido pelo povo",
+          "correct": true
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Mateus registra que, por ocasião da festa, o governador romano costumava soltar um preso, \"escolhendo o povo aquele que quisesse\" (Mt 27:15), e João liga o costume à Páscoa (Jo 18:39). Sabendo que Jesus lhe fora entregue \"por inveja\", Pilatos ofereceu à multidão Jesus ou Barrabás, \"um preso bem-conhecido\" (Mt 27:16-18). Persuadida pelos príncipes dos sacerdotes e pelos anciãos, a multidão pediu Barrabás, e Jesus foi entregue para ser crucificado (Mt 27:20-26).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 27,
+        "verse_start": 15,
+        "verse_end": 17
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "contexto-historico-0046",
+      "type": "multiple_choice",
+      "text": "Que nome, o mesmo da maior unidade do exército romano, deu a si mesmo o endemoninhado que morava nos sepulcros, \"porque somos muitos\"?",
+      "options": [
+        {
+          "text": "Coorte",
+          "correct": false
+        },
+        {
+          "text": "Legião",
+          "correct": true
+        },
+        {
+          "text": "Centúria",
+          "correct": false
+        },
+        {
+          "text": "Batalhão",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Legião é o meu nome, porque somos muitos\" (Mc 5:9); Lucas explica que \"tinham entrado nele muitos demônios\" (Lc 8:30). A legião era a maior unidade do exército romano — segundo os historiadores, com cerca de cinco a seis mil soldados —, nome que sugeria uma força numerosa e poderosa. Ainda assim, bastou a palavra de Jesus para libertar o homem, que foi anunciar em Decápolis \"quão grandes coisas Jesus lhe fizera\" (Mc 5:20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 5,
+        "verse_start": 9,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "contexto-historico-0047",
+      "type": "multiple_choice",
+      "text": "Que cargo tinha Jairo, o pai da menina que Jesus ressuscitou?",
+      "options": [
+        {
+          "text": "Centurião romano",
+          "correct": false
+        },
+        {
+          "text": "Sumo sacerdote",
+          "correct": false
+        },
+        {
+          "text": "Principal da sinagoga",
+          "correct": true
+        },
+        {
+          "text": "Cobrador de impostos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Marcos o apresenta como \"um dos principais da sinagoga\" (Mc 5:22), e Lucas, como \"príncipe da sinagoga\" (Lc 8:41). Os principais da sinagoga cuidavam do culto local: em Antioquia da Pisídia, por exemplo, \"depois da lição da lei e dos profetas\", foram eles que convidaram Paulo e seus companheiros a falar ao povo (At 13:15). Outro deles, Crispo, \"creu no Senhor com toda a sua casa\" em Corinto (At 18:8).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 5,
+        "verse_start": 22,
+        "verse_end": 23
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "contexto-historico-0048",
+      "type": "multiple_choice",
+      "text": "Segundo Mateus 26:73, o que denunciou Pedro como seguidor de Jesus no pátio do sumo sacerdote?",
+      "options": [
+        {
+          "text": "O seu modo de falar",
+          "correct": true
+        },
+        {
+          "text": "As suas vestes de pescador",
+          "correct": false
+        },
+        {
+          "text": "A espada que ainda trazia consigo",
+          "correct": false
+        },
+        {
+          "text": "O seu nome, conhecido dos servos",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Verdadeiramente também tu és deles, pois a tua fala te denuncia\" (Mt 26:73); no relato de Marcos, eles dizem: \"porque és também galileu\" (Mc 14:70). Jesus e a maior parte dos discípulos vinham da Galileia, e o modo de falar da região se distinguia do de Jerusalém — fora da Bíblia, textos rabínicos bem posteriores, como o Talmude, comentam a pronúncia característica dos galileus. No Pentecostes, a multidão também reconheceu os discípulos como galileus: \"não são galileus todos esses homens que estão falando?\" (At 2:7).",
+      "divergence_note": "O texto bíblico diz apenas que a fala de Pedro o denunciava (Mt 26:73) e que ele era galileu (Mc 14:70); o comentário sobre a pronúncia dos galileus vem do Talmude babilônico (Eruvin 53b), obra rabínica bem posterior ao Novo Testamento.",
+      "reference": {
+        "book": "mateus",
+        "chapter": 26,
+        "verse_start": 73,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0049",
+      "type": "open_answer",
+      "text": "Segundo João 2:20, em quantos anos os judeus disseram que \"foi edificado este templo\"?",
+      "options": null,
+      "accepted_answers": [
+        "46",
+        "quarenta e seis",
+        "46 anos",
+        "quarenta e seis anos"
+      ],
+      "explanation": "Quando Jesus disse \"Derribai este templo, e em três dias o levantarei\", os judeus retrucaram: \"Em quarenta e seis anos foi edificado este templo, e tu o levantarás em três dias?\" (Jo 2:19-20). Segundo o historiador judeu Flávio Josefo, Herodes, o Grande, começou uma grande reforma do templo no 18º ano do seu reinado — por volta de 20-19 a.C., pelo cálculo dos historiadores —, e as obras continuaram por décadas depois da sua morte. Mas Jesus \"falava do templo do seu corpo\", e, depois que ele ressuscitou, os discípulos se lembraram dessas palavras e creram (Jo 2:21-22).",
+      "divergence_note": "O número 46 está no próprio texto (Jo 2:20). A data de início da reforma vem de Flávio Josefo, fonte extrabíblica: nas Antiguidades Judaicas ele fala do 18º ano de Herodes (c. 20-19 a.C.), mas na Guerra dos Judeus, do 15º ano — por isso a data é aproximada.",
+      "reference": {
+        "book": "joao",
+        "chapter": 2,
+        "verse_start": 20,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0050",
+      "type": "multiple_choice",
+      "text": "Em Listra, depois que Paulo curou um homem coxo de nascença, com que nomes de deuses a multidão chamou Barnabé e Paulo?",
+      "options": [
+        {
+          "text": "Apolo e Baco",
+          "correct": false
+        },
+        {
+          "text": "Marte e Netuno",
+          "correct": false
+        },
+        {
+          "text": "Júpiter e Mercúrio",
+          "correct": true
+        },
+        {
+          "text": "Saturno e Vulcano",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "A multidão gritou em língua licaônica: \"Fizeram-se os deuses semelhantes aos homens, e desceram até nós\", e \"chamavam Júpiter a Barnabé, e Mercúrio a Paulo; porque este era o que falava\" (At 14:11-12). No original grego, os nomes são Zeus e Hermes, e Hermes era tido como o mensageiro dos deuses. Estudiosos lembram uma lenda ambientada na vizinha Frígia e registrada pelo poeta romano Ovídio, em que esses dois deuses visitaram a terra disfarçados de homens e só um casal de idosos, Filêmon e Báucis, os acolheu. Paulo e Barnabé rasgaram as vestes e chamaram o povo a se converter \"ao Deus vivo, que fez o céu, e a terra, e o mar\" (At 14:14-15).",
+      "divergence_note": "A lenda de Filêmon e Báucis (Ovídio, Metamorfoses, livro 8), ambientada na Frígia, região vizinha à Licaônia, é contexto extrabíblico citado por estudiosos para explicar a reação da multidão; o texto de Atos não a menciona.",
+      "reference": {
+        "book": "atos",
+        "chapter": 14,
+        "verse_start": 11,
+        "verse_end": 12
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0051",
+      "type": "multiple_choice",
+      "text": "Ao voltar do Egito, José teve receio de ir para a Judeia porque um filho de Herodes reinava ali em lugar do pai. Quem era ele?",
+      "options": [
+        {
+          "text": "Herodes Antipas",
+          "correct": false
+        },
+        {
+          "text": "Herodes Agripa",
+          "correct": false
+        },
+        {
+          "text": "Filipe, o tetrarca",
+          "correct": false
+        },
+        {
+          "text": "Arquelau",
+          "correct": true
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Ouvindo que Arquelau reinava na Judeia em lugar de Herodes, seu pai, receou ir para lá\"; avisado em sonhos, José foi para a Galileia e morou em Nazaré (Mt 2:22-23). Segundo o historiador Flávio Josefo, com a morte de Herodes, o Grande, o reino foi dividido entre três filhos: Arquelau ficou com a Judeia, a Samaria e a Idumeia, com o título de etnarca; Antipas, com a Galileia e a Pereia; e Filipe, com regiões a nordeste — os dois últimos aparecem como tetrarcas em Lucas 3:1. Ainda segundo Josefo, Arquelau foi acusado diante de César por sua crueldade e tirania e acabou deposto e exilado (em 6 d.C., pelo cálculo dos historiadores); a Judeia passou então a ser uma província governada por Roma, como no tempo de Pôncio Pilatos (Lc 3:1).",
+      "divergence_note": "Mateus registra apenas que Arquelau reinava na Judeia (Mt 2:22); a divisão do reino de Herodes e a deposição de Arquelau vêm de Flávio Josefo, fonte extrabíblica.",
+      "reference": {
+        "book": "mateus",
+        "chapter": 2,
+        "verse_start": 22,
+        "verse_end": null
+      },
+      "difficulty": "hard"
     }
   ]
 }

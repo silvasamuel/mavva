@@ -1258,6 +1258,175 @@
         "verse_end": 25
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "cartas-0042",
+      "type": "open_answer",
+      "text": "Na carta de Tiago, qual personagem do Antigo Testamento é lembrado como exemplo de paciência no sofrimento: \"Ouvistes qual foi a paciência de ___\"?",
+      "options": null,
+      "accepted_answers": [
+        "Jó"
+      ],
+      "explanation": "Tiago exorta irmãos que sofriam a ser pacientes \"até a vinda do Senhor\" (Tg 5:7) e, além dos profetas, aponta o exemplo de Jó: \"Ouvistes qual foi a paciência de Jó, e vistes o fim que o Senhor lhe deu; porque o Senhor é muito misericordioso e piedoso\" (Tg 5:11). O fim da história — o Senhor lhe acrescentou \"outro tanto em dobro a tudo quanto dantes possuía\" (Jó 42:10) — mostra que o sofrimento do justo não tem a última palavra.",
+      "divergence_note": null,
+      "reference": {
+        "book": "tiago",
+        "chapter": 5,
+        "verse_start": 11,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cartas-0043",
+      "type": "multiple_choice",
+      "text": "Segundo 1 Timóteo 6:10, o que é a raiz de toda espécie de males?",
+      "options": [
+        {
+          "text": "A soberba",
+          "correct": false
+        },
+        {
+          "text": "A inveja",
+          "correct": false
+        },
+        {
+          "text": "O amor do dinheiro",
+          "correct": true
+        },
+        {
+          "text": "A preguiça",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Paulo aponta \"o amor do dinheiro\" como a raiz de toda espécie de males — cobiça pela qual alguns \"se desviaram da fé\" (1Tm 6:10). Ele não condena o dinheiro em si, mas a cobiça que domina o coração; a ideia popular de que o dinheiro é a raiz de todos os males distorce o versículo. O antídoto vem pouco antes: \"é grande ganho a piedade com contentamento\" (1Tm 6:6).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1timoteo",
+        "chapter": 6,
+        "verse_start": 10,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cartas-0044",
+      "type": "multiple_choice",
+      "text": "Qual mandamento Paulo chama, em Efésios 6, de \"o primeiro mandamento com promessa\"?",
+      "options": [
+        {
+          "text": "Honra a teu pai e a tua mãe",
+          "correct": true
+        },
+        {
+          "text": "Não furtarás",
+          "correct": false
+        },
+        {
+          "text": "Lembra-te do dia do sábado",
+          "correct": false
+        },
+        {
+          "text": "Não dirás falso testemunho",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Ao ensinar os filhos a obedecer aos pais \"no Senhor, porque isto é justo\" (Ef 6:1), Paulo retoma o mandamento de Êxodo 20:12 e destaca a sua promessa: \"Honra a teu pai e a tua mãe que é o primeiro mandamento com promessa; para que te vá bem, e vivas muito tempo sobre a terra\" (Ef 6:2-3). Logo em seguida, equilibra a relação: \"E vós, pais, não provoqueis a ira a vossos filhos\" (Ef 6:4).",
+      "divergence_note": null,
+      "reference": {
+        "book": "efesios",
+        "chapter": 6,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cartas-0045",
+      "type": "multiple_choice",
+      "text": "Em qual carta está escrito: \"Jesus Cristo é o mesmo ontem, e hoje, e eternamente\"?",
+      "options": [
+        {
+          "text": "Colossenses",
+          "correct": false
+        },
+        {
+          "text": "1 Pedro",
+          "correct": false
+        },
+        {
+          "text": "Filipenses",
+          "correct": false
+        },
+        {
+          "text": "Hebreus",
+          "correct": true
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O versículo (Hb 13:8) aparece entre duas exortações: lembrar-se dos pastores que anunciaram a palavra de Deus e imitar a sua fé (Hb 13:7) e não se deixar levar \"por doutrinas várias e estranhas\" (Hb 13:9). Os líderes passam, mas Cristo permanece — o mesmo Filho de quem a carta já dissera: \"tu és o mesmo, e os teus anos não acabarão\" (Hb 1:12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "hebreus",
+        "chapter": 13,
+        "verse_start": 8,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cartas-0046",
+      "type": "open_answer",
+      "text": "Qual pregador Paulo menciona em 1 Coríntios 3:6: \"Eu plantei; ___ regou; mas Deus deu o crescimento\"?",
+      "options": null,
+      "accepted_answers": [
+        "Apolo",
+        "Apolos"
+      ],
+      "explanation": "Os coríntios se dividiam em partidos, uns dizendo ser de Paulo e outros de Apolo (1Co 1:12; 3:4), e Paulo responde que ambos eram apenas servos: um plantou, o outro regou, \"mas Deus deu o crescimento\" (1Co 3:6). Apolo, judeu de Alexandria \"eloquente e poderoso nas Escrituras\", havia ministrado em Corinto depois de Paulo (At 18:24,27-28; 19:1). O ponto é que quem planta e quem rega nada são sem Deus, \"que dá o crescimento\" (1Co 3:7).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1corintios",
+        "chapter": 3,
+        "verse_start": 6,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cartas-0047",
+      "type": "multiple_choice",
+      "text": "Em qual carta Paulo escreve que \"Deus ama ao que dá com alegria\"?",
+      "options": [
+        {
+          "text": "Romanos",
+          "correct": false
+        },
+        {
+          "text": "2 Coríntios",
+          "correct": true
+        },
+        {
+          "text": "Filipenses",
+          "correct": false
+        },
+        {
+          "text": "1 Timóteo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Nos capítulos 8 e 9 de 2 Coríntios, Paulo organiza uma coleta para os santos — os cristãos pobres de Jerusalém (Rm 15:26). Com a imagem da semeadura (\"o que semeia pouco, pouco também ceifará\", 2Co 9:6), ensina que a oferta deve ser voluntária: \"não com tristeza ou por necessidade; porque Deus ama ao que dá com alegria\" (2Co 9:7). E conclui apontando a maior dádiva: \"Graças a Deus pois pelo seu dom inefável\" (2Co 9:15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2corintios",
+        "chapter": 9,
+        "verse_start": 6,
+        "verse_end": 7
+      },
+      "difficulty": "medium"
     }
   ]
 }

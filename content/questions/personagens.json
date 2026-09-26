@@ -1456,6 +1456,143 @@
         "verse_end": 3
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "personagens-0049",
+      "type": "multiple_choice",
+      "text": "Quem encontrou o menino Moisés numa arca de juncos, à beira do rio, e mais tarde o adotou como filho?",
+      "options": [
+        {
+          "text": "A filha de Faraó",
+          "correct": true
+        },
+        {
+          "text": "Miriã, sua irmã",
+          "correct": false
+        },
+        {
+          "text": "Sifrá, a parteira hebreia",
+          "correct": false
+        },
+        {
+          "text": "Zípora, filha do sacerdote de Midiã",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "A filha de Faraó desceu a lavar-se no rio, viu a arca no meio dos juncos e, ao abri-la, \"moveu-se de compaixão dele\" (Êx 2:5-6). Por sugestão da irmã do menino, a própria mãe foi chamada para criá-lo (Êx 2:7-9). Já crescido, ele foi levado à princesa, que o adotou e lhe deu o nome de Moisés (Êx 2:10); anos depois, porém, pela fé, ele \"recusou ser chamado filho da filha de Faraó\" (Hb 11:24).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 2,
+        "verse_start": 5,
+        "verse_end": 10
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "personagens-0050",
+      "type": "open_answer",
+      "text": "Qual oficial de Faraó, capitão da guarda, comprou José como escravo no Egito?",
+      "options": null,
+      "accepted_answers": [
+        "Potifar",
+        "Putifar"
+      ],
+      "explanation": "José foi levado ao Egito e comprado por \"Potifar, eunuco de Faraó, capitão da guarda\" (Gn 39:1). Como o SENHOR fazia prosperar tudo o que José fazia, Potifar o pôs sobre toda a sua casa (Gn 39:2-4). Falsamente acusado pela mulher do seu senhor, José foi lançado no cárcere; ainda assim, o SENHOR estava com ele e lhe deu graça aos olhos do carcereiro-mor (Gn 39:19-21).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 39,
+        "verse_start": 1,
+        "verse_end": 4
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "personagens-0051",
+      "type": "open_answer",
+      "text": "Qual patriarca o próprio Deus chama de \"meu amigo\" nas Escrituras?",
+      "options": null,
+      "accepted_answers": [
+        "Abraão",
+        "Abrão"
+      ],
+      "explanation": "Pela boca de Isaías, o SENHOR fala da \"semente de Abraão, meu amigo\" (Is 41:8), e o rei Josafá também ora lembrando \"Abraão, teu amigo\" (2Cr 20:7). Tiago liga o título à fé do patriarca, que creu em Deus e \"foi chamado o amigo de Deus\" (Tg 2:23).",
+      "divergence_note": null,
+      "reference": {
+        "book": "isaias",
+        "chapter": 41,
+        "verse_start": 8,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "personagens-0052",
+      "type": "multiple_choice",
+      "text": "Quem deu nome a todo o gado, às aves dos céus e a todos os animais do campo, antes mesmo da criação da mulher?",
+      "options": [
+        {
+          "text": "Noé",
+          "correct": false
+        },
+        {
+          "text": "Abel",
+          "correct": false
+        },
+        {
+          "text": "Adão",
+          "correct": true
+        },
+        {
+          "text": "Sete",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "O SENHOR Deus trouxe os animais \"a Adão, para este ver como lhes chamaria; e tudo o que Adão chamou a toda a alma vivente, isso foi o seu nome\" (Gn 2:19). Ao nomeá-los, o homem exercia o domínio que Deus lhe confiara (Gn 1:28); mas, entre todos eles, \"não se achava adjutora que estivesse como diante dele\" (Gn 2:20), o que prepara a criação da mulher (Gn 2:21-22).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 2,
+        "verse_start": 19,
+        "verse_end": 20
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "personagens-0053",
+      "type": "multiple_choice",
+      "text": "Qual juiz canhoto, da tribo de Benjamim, livrou Israel matando Eglom, o rei dos moabitas?",
+      "options": [
+        {
+          "text": "Otniel",
+          "correct": false
+        },
+        {
+          "text": "Sangar",
+          "correct": false
+        },
+        {
+          "text": "Tola",
+          "correct": false
+        },
+        {
+          "text": "Eúde",
+          "correct": true
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Depois de dezoito anos servindo a Eglom, rei dos moabitas, Israel clamou, e o SENHOR levantou como libertador Eúde, filho de Gera, benjamita e canhoto (Jz 3:14-15). Ao levar um presente a Eglom, ele escondeu uma espada de dois fios sob as vestes, na coxa direita, e matou o rei a sós no seu cenáculo (Jz 3:16-22). Em seguida convocou Israel à batalha, e a terra sossegou oitenta anos (Jz 3:27-30).",
+      "divergence_note": null,
+      "reference": {
+        "book": "juizes",
+        "chapter": 3,
+        "verse_start": 15,
+        "verse_end": 22
+      },
+      "difficulty": "hard"
     }
   ]
 }

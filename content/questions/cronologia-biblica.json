@@ -1359,6 +1359,67 @@
         "verse_end": 29
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "cronologia-biblica-0044",
+      "type": "multiple_choice",
+      "text": "Qual destes acontecimentos da saída do Egito ocorreu primeiro?",
+      "options": [
+        {
+          "text": "A travessia do mar Vermelho",
+          "correct": true
+        },
+        {
+          "text": "A entrega dos Dez Mandamentos no Sinai",
+          "correct": false
+        },
+        {
+          "text": "A adoração do bezerro de ouro",
+          "correct": false
+        },
+        {
+          "text": "O envio dos doze espias a Canaã",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Israel atravessou o mar Vermelho logo depois de sair do Egito (Êx 14); só \"ao terceiro mês\" chegou ao deserto do Sinai (Êx 19:1), onde recebeu os Dez Mandamentos (Êx 20). O bezerro de ouro foi feito enquanto Moisés estava no monte (Êx 32), e os espias foram enviados depois da partida do Sinai, já no deserto de Parã (Nm 10:11-12; 13:1-3).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 19,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cronologia-biblica-0045",
+      "type": "open_answer",
+      "text": "Em que dia da criação Deus fez o homem, segundo Gênesis 1?",
+      "options": null,
+      "accepted_answers": [
+        "6",
+        "Seis",
+        "Sexto",
+        "O sexto",
+        "Sexto dia",
+        "O sexto dia",
+        "No sexto dia",
+        "6º",
+        "6º dia",
+        "Dia 6",
+        "Dia seis"
+      ],
+      "explanation": "No sexto dia Deus fez os animais da terra e, por fim, disse: \"Façamos o homem à nossa imagem\" (Gn 1:24-26). Criados o homem e a mulher, \"viu Deus tudo quanto tinha feito, e eis que era muito bom; e foi a tarde e a manhã: o dia sexto\" (Gn 1:31). O ser humano foi a última obra da criação antes do descanso do sétimo dia (Gn 2:2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 1,
+        "verse_start": 26,
+        "verse_end": 31
+      },
+      "difficulty": "easy"
     }
   ]
 }

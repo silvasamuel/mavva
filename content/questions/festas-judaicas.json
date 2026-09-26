@@ -593,7 +593,7 @@
           "correct": true
         },
         {
-          "text": "O bode",
+          "text": "A novilha",
           "correct": false
         },
         {
@@ -606,7 +606,7 @@
         }
       ],
       "accepted_answers": null,
-      "explanation": "Cada família tomava um cordeiro sem defeito, e o sangue nos umbrais livrava do anjo destruidor (Êx 12:5-13).",
+      "explanation": "Cada família tomava um cordeiro sem defeito (a lei também permitia um cabrito, Êx 12:5), e o sangue passado nos umbrais livrava do destruidor que feriu os primogênitos do Egito (Êx 12:5-13).",
       "divergence_note": null,
       "reference": {
         "book": "exodo",
@@ -676,11 +676,11 @@
       "options": null,
       "accepted_answers": [
         "Abibe",
-        "Sivan",
-        "Iyar",
-        "Kislev"
+        "Abib",
+        "Nisã",
+        "Nisan"
       ],
-      "explanation": "'Hoje, no mês de Abibe, vós saís' (Êx 13:4); o mês (mais tarde Nisã) marca a libertação do Egito.",
+      "explanation": "'Hoje, no mês de Abibe, vós saís' (Êx 13:4). Depois do exílio o mesmo mês passou a se chamar Nisã (Et 3:7): é o primeiro mês do ano religioso, o da libertação do Egito.",
       "divergence_note": null,
       "reference": {
         "book": "exodo",
@@ -1312,6 +1312,212 @@
         "chapter": 28,
         "verse_start": 11,
         "verse_end": 15
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "festas-judaicas-0043",
+      "type": "multiple_choice",
+      "text": "Como os israelitas deviam comer a primeira Páscoa, na noite da saída do Egito?",
+      "options": [
+        {
+          "text": "Reclinados, numa longa refeição festiva sem hora para acabar",
+          "correct": false
+        },
+        {
+          "text": "No pátio do tabernáculo, depois de o sacerdote oferecer o cordeiro",
+          "correct": false
+        },
+        {
+          "text": "Às pressas, com os lombos cingidos, sapatos nos pés e cajado na mão",
+          "correct": true
+        },
+        {
+          "text": "Sentados em silêncio, depois de um dia inteiro de jejum",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"Assim, pois, o comereis: os vossos lombos cingidos, os vossos sapatos nos pés, e o vosso cajado na mão; e o comereis apressadamente; esta é a Páscoa do Senhor\" (Êx 12:11). Era a refeição de um povo pronto para partir: naquela mesma noite o Senhor feriu os primogênitos do Egito, e Faraó mandou Israel sair (Êx 12:29-31).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 12,
+        "verse_start": 11,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "festas-judaicas-0044",
+      "type": "multiple_choice",
+      "text": "O que Jesus e os discípulos fizeram ao terminar a ceia da Páscoa, antes de saírem para o monte das Oliveiras?",
+      "options": [
+        {
+          "text": "Cantaram um hino",
+          "correct": true
+        },
+        {
+          "text": "Ofereceram um cordeiro no templo",
+          "correct": false
+        },
+        {
+          "text": "Ungiram os pés de Jesus com perfume",
+          "correct": false
+        },
+        {
+          "text": "Dormiram no cenáculo até o amanhecer",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Depois de instituir a ceia com o pão e o cálice, \"tendo cantado o hino, saíram para o monte das Oliveiras\" (Mt 26:30; Mc 14:26). Os evangelhos não dizem qual hino foi cantado. Segundo a tradição judaica registrada mais tarde na Mishná, a ceia pascal era acompanhada pelos Salmos do Hallel (113 a 118), entre eles o Sl 114, que canta a saída do Egito.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 26,
+        "verse_start": 30,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "festas-judaicas-0045",
+      "type": "multiple_choice",
+      "text": "Como devia ser o cordeiro escolhido para a Páscoa, segundo Êxodo 12?",
+      "options": [
+        {
+          "text": "Uma fêmea, a primeira cria do rebanho",
+          "correct": false
+        },
+        {
+          "text": "O mais gordo do rebanho, de qualquer idade",
+          "correct": false
+        },
+        {
+          "text": "Um macho de três anos, já adulto",
+          "correct": false
+        },
+        {
+          "text": "Sem mácula, macho e de um ano",
+          "correct": true
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "\"O cordeiro, ou cabrito, será sem mácula, um macho de um ano\" (Êx 12:5). A exigência de um animal perfeito aponta para Cristo: fomos resgatados \"com o precioso sangue de Cristo, como de um cordeiro imaculado e incontaminado\" (1Pe 1:19).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 12,
+        "verse_start": 5,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "festas-judaicas-0046",
+      "type": "open_answer",
+      "text": "Para qual festa José e Maria subiam a Jerusalém todos os anos, segundo o Evangelho de Lucas?",
+      "options": null,
+      "accepted_answers": [
+        "Páscoa",
+        "A Páscoa",
+        "Festa da Páscoa",
+        "Pessach",
+        "Pesach"
+      ],
+      "explanation": "\"Ora, todos os anos, iam seus pais a Jerusalém, à Festa da Páscoa\" (Lc 2:41). A Páscoa, unida à Festa dos Pães Asmos, era uma das três festas anuais em que todo varão israelita devia comparecer perante o Senhor (Dt 16:16). Foi numa dessas viagens, quando Jesus tinha doze anos, que ele ficou no templo, ouvindo e interrogando os doutores (Lc 2:42-46).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 2,
+        "verse_start": 41,
+        "verse_end": 42
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "festas-judaicas-0047",
+      "type": "multiple_choice",
+      "text": "Sobre o cordeiro pascal, a Lei mandava fazer três destas coisas e proibia uma — proibição que João viu cumprida em Jesus na cruz. Qual era a coisa proibida?",
+      "options": [
+        {
+          "text": "Assá-lo no fogo",
+          "correct": false
+        },
+        {
+          "text": "Quebrar algum dos seus ossos",
+          "correct": true
+        },
+        {
+          "text": "Comê-lo com pães asmos",
+          "correct": false
+        },
+        {
+          "text": "Separá-lo no décimo dia do mês",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "A Lei mandava comer o cordeiro numa só casa, \"nem dela quebrareis osso\" (Êx 12:46; cf. Nm 9:12). Na cruz, os soldados quebraram as pernas dos dois crucificados com Jesus, mas não as dele, que já estava morto — \"para que se cumprisse a Escritura, que diz: Nenhum dos seus ossos será quebrado\" (Jo 19:32-36; cf. Sl 34:20). Assar o cordeiro, comê-lo com pães asmos e separá-lo no dia dez eram ordens, não proibições (Êx 12:3,8).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 12,
+        "verse_start": 46,
+        "verse_end": null
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "festas-judaicas-0048",
+      "type": "open_answer",
+      "text": "Qual rei de Judá celebrou uma Páscoa como nunca se havia celebrado desde os dias dos juízes?",
+      "options": null,
+      "accepted_answers": [
+        "Josias",
+        "Rei Josias"
+      ],
+      "explanation": "Depois que o livro da Lei foi achado no templo, Josias ordenou: \"Celebrai a Páscoa ao Senhor, vosso Deus, como está escrito no livro do concerto\" (2Rs 23:21). O texto afirma que \"nunca se celebrou tal Páscoa como esta desde os dias dos juízes\" (2Rs 23:22), e Crônicas diz o mesmo: \"desde os dias do profeta Samuel\" (2Cr 35:18). A reforma de Josias levou o povo de volta à Palavra e às festas que ela ordenava.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 23,
+        "verse_start": 21,
+        "verse_end": 23
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "festas-judaicas-0049",
+      "type": "multiple_choice",
+      "text": "O que a Lei previa para quem estivesse impuro por causa de um morto, ou em viagem distante, na data da Páscoa?",
+      "options": [
+        {
+          "text": "Ficar sem a Páscoa naquele ano, sem outra chance",
+          "correct": false
+        },
+        {
+          "text": "Oferecer uma rola no lugar do cordeiro",
+          "correct": false
+        },
+        {
+          "text": "Celebrá-la um mês depois, no dia catorze do segundo mês",
+          "correct": true
+        },
+        {
+          "text": "Celebrá-la sozinho, fora do arraial",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Homens impuros por causa de um morto perguntaram a Moisés por que seriam privados da Páscoa (Nm 9:6-7). Deus respondeu com uma provisão: quem estivesse impuro ou em viagem distante a celebraria no segundo mês, \"no dia catorze, de tarde\" (Nm 9:10-11). Já quem estava limpo, não estava de viagem e deixava de celebrá-la era extirpado do seu povo (Nm 9:13).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 9,
+        "verse_start": 10,
+        "verse_end": 11
       },
       "difficulty": "hard"
     }

@@ -1308,6 +1308,93 @@
         "verse_end": 14
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "parabolas-0043",
+      "type": "multiple_choice",
+      "text": "Na parábola do filho pródigo, que trabalho o filho mais novo conseguiu quando veio uma grande fome sobre aquela terra?",
+      "options": [
+        {
+          "text": "Guardar ovelhas",
+          "correct": false
+        },
+        {
+          "text": "Apascentar porcos",
+          "correct": true
+        },
+        {
+          "text": "Colher uvas numa vinha",
+          "correct": false
+        },
+        {
+          "text": "Tirar água de um poço",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Depois de desperdiçar tudo \"vivendo dissolutamente\", o filho mais novo passou necessidade e foi mandado para os campos \"a apascentar porcos\" — e desejava comer das bolotas que os porcos comiam (Lc 15:13-16). Para um judeu, o porco era animal imundo (Lv 11:7), sinal do fundo do poço a que ele chegara. Foi ali que ele caiu em si e decidiu voltar para o pai (Lc 15:17-18).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 15,
+        "verse_start": 14,
+        "verse_end": 15
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "parabolas-0044",
+      "type": "open_answer",
+      "text": "Na parábola da dracma perdida, quantas dracmas a mulher tinha antes de perder uma?",
+      "options": null,
+      "accepted_answers": [
+        "10",
+        "dez",
+        "10 dracmas",
+        "dez dracmas"
+      ],
+      "explanation": "\"Qual a mulher que, tendo dez dracmas, se perder uma dracma, não acende a candeia, e varre a casa, e busca com diligência até a achar?\" (Lc 15:8). A dracma era uma moeda grega de prata que, segundo os historiadores, valia mais ou menos o salário de um dia, como o denário. A parábola faz parte da resposta de Jesus aos fariseus e escribas que murmuravam porque ele recebia pecadores e comia com eles (Lc 15:1-2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 15,
+        "verse_start": 8,
+        "verse_end": null
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "parabolas-0045",
+      "type": "multiple_choice",
+      "text": "De onde Jesus contou a parábola do semeador à grande multidão reunida junto ao mar?",
+      "options": [
+        {
+          "text": "De dentro de um barco",
+          "correct": true
+        },
+        {
+          "text": "Do alto de um monte",
+          "correct": false
+        },
+        {
+          "text": "Da sinagoga de Cafarnaum",
+          "correct": false
+        },
+        {
+          "text": "Do pátio do templo",
+          "correct": false
+        }
+      ],
+      "accepted_answers": null,
+      "explanation": "Ajuntou-se tanta gente que Jesus, \"entrando num barco, se assentou; e toda a multidão estava em pé na praia\" (Mt 13:2). Dali \"falou-lhe de muitas coisas por parábolas\", a começar pela do semeador (Mt 13:3). Marcos registra a mesma cena (Mc 4:1), e, em outra ocasião, Jesus também ensinou a multidão do barco de Simão (Lc 5:3).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 13,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "medium"
     }
   ]
 }
