@@ -94,7 +94,7 @@ describe('RankingPage', () => {
     renderPage()
     const season = await screen.findByRole('region', { name: 'Temporada' })
     expect(season).toHaveTextContent('Temporada de outubro de 2026 · termina em 23 dias')
-    expect(season).toHaveTextContent(/XP, nível e ranking recomeçam/)
+    expect(season).toHaveTextContent(/XP, nível e o ranking de XP recomeçam/)
   })
 
   it('opens the profile of the player tapped in the ranking', async () => {

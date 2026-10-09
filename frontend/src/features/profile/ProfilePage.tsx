@@ -93,7 +93,7 @@ export function ProfilePage() {
           <CardTitle>Temporadas</CardTitle>
           <p className="text-sm font-semibold text-sand-500">
             Temporada de {dashboard.season.name} · {formatSeasonEnd(dashboard.season.days_left)}.
-            No dia 1º, XP, nível e ranking recomeçam — seus elos ficam aqui.
+            No dia 1º, XP, nível e o ranking de XP recomeçam — seus elos ficam aqui.
           </p>
           <dl className="grid grid-cols-2 gap-2">
             <EloTile label="Maior elo" rank={dashboard.stats.best_rank} />

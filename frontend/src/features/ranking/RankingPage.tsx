@@ -37,7 +37,7 @@ function SeasonBanner({ season }: { season: Season }) {
           Temporada de {season.name} · {formatSeasonEnd(season.days_left)}
         </p>
         <p className="text-xs font-semibold text-sand-500">
-          No dia 1º, XP, nível e ranking recomeçam. Seu elo da temporada fica no perfil.
+          No dia 1º, XP, nível e o ranking de XP recomeçam. Seu elo da temporada fica no perfil.
         </p>
       </div>
     </section>

@@ -59,7 +59,7 @@ export function NewSeasonBanner({ data }: { data: DashboardData }) {
           Você terminou a última temporada como {last.name}.
         </p>
         <p className="text-sm font-semibold text-sand-500">
-          XP, nível e ranking recomeçaram para todos. Seu maior elo, {stats.best_rank.name}, fica
+          XP, nível e o ranking de XP recomeçaram para todos. Seu maior elo, {stats.best_rank.name}, fica
           no perfil.
         </p>
       </div>
