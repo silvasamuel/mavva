@@ -8,6 +8,7 @@ from app.core.security import decode_access_token
 from app.db.session import get_db
 from app.models import User
 from app.models.enums import UserRole
+from app.services import season_service
 
 _bearer = HTTPBearer(auto_error=False)
 
@@ -28,6 +29,11 @@ def get_current_user(
         raise HTTPException(status.HTTP_403_FORBIDDEN, "Esta conta está inativa.")
     if user.email_verified_at is None:
         raise HTTPException(status.HTTP_403_FORBIDDEN, "Confirme seu e-mail antes de continuar.")
+    # Before anything counts XP: if the month turned, close the old season now
+    # (committed on its own, so it doesn't depend on this request succeeding).
+    _, changed = season_service.ensure_current_season(db, season_service.season_today())
+    if changed:
+        db.commit()
     return user
 
 

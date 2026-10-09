@@ -11,6 +11,7 @@ import { AppIcons, CategoryGlyph, Glyph, type Icon } from '@/lib/icons'
 import { formatPercent, formatRelativeDate } from '@/lib/format'
 import { useAuth } from '@/features/auth/AuthContext'
 import { EvolutionChart } from './EvolutionChart'
+import { NewSeasonBanner } from './NewSeasonBanner'
 
 export function DashboardPage() {
   const { user } = useAuth()
@@ -58,6 +59,8 @@ export function DashboardPage() {
           : { show: { transition: { staggerChildren: 0.07 } } }
       }
     >
+      <NewSeasonBanner data={data} />
+
       <motion.section
         variants={enter}
         className="relative overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-leaf-800 via-leaf-600 to-leaf-700 p-5 text-white shadow-[0_8px_0_0_#184220] sm:p-6"

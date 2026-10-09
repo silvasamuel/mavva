@@ -54,8 +54,12 @@ class UserStats(Base):
     user_id: Mapped[uuid.UUID] = mapped_column(
         ForeignKey("users.id", ondelete="CASCADE"), primary_key=True
     )
+    # Both restart every season (see season_service); best_level and
+    # last_season_level keep what the player reached before.
     total_xp: Mapped[int] = mapped_column(default=0)
     level: Mapped[int] = mapped_column(default=1)
+    best_level: Mapped[int] = mapped_column(default=1)
+    last_season_level: Mapped[int | None] = mapped_column(default=None)
     current_streak: Mapped[int] = mapped_column(default=0)
     longest_streak: Mapped[int] = mapped_column(default=0)
     last_activity_date: Mapped[date | None] = mapped_column(Date, default=None)

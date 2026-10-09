@@ -40,6 +40,8 @@ function profile(overrides: Partial<PlayerProfile> = {}): PlayerProfile {
       accuracy: 0.87,
       perfect_sessions: 9,
     },
+    best_rank: { code: 'cedro', name: 'Cedro' },
+    last_season_rank: { code: 'oliveira', name: 'Oliveira' },
     achievements_unlocked: 8,
     achievements_total: 32,
     recent_achievements: [
@@ -83,7 +85,10 @@ describe('PlayerProfileModal', () => {
     expect(view.getByText('@maria')).toBeInTheDocument()
     expect(view.getByText('Amigo')).toBeInTheDocument()
     expect(view.getByText('Videira · Nível 12')).toBeInTheDocument()
-    expect(view.getByText('3.400 XP')).toBeInTheDocument()
+    expect(view.getByText('3.400 XP na temporada')).toBeInTheDocument()
+    const elos = view.getByLabelText('Elos')
+    expect(within(elos).getByText('Maior elo').parentElement).toHaveTextContent('Cedro')
+    expect(within(elos).getByText('Temporada passada').parentElement).toHaveTextContent('Oliveira')
     expect(view.getByText('5 dias')).toBeInTheDocument()
     expect(view.getByText('recorde 12')).toBeInTheDocument()
     expect(view.getByText('87%')).toBeInTheDocument()
@@ -138,6 +143,8 @@ describe('PlayerProfileModal', () => {
         relation: 'none',
         user: { ...profile().user, duel_wins: 0, duel_losses: 0, duel_draws: 0 },
         stats: { ...profile().stats, accuracy: null, current_streak: 1, questions_answered: 0 },
+        best_rank: { code: 'semente', name: 'Semente' },
+        last_season_rank: null,
         achievements_unlocked: 0,
         recent_achievements: [],
         strongest_categories: [],
@@ -147,6 +154,7 @@ describe('PlayerProfileModal', () => {
     const view = within(await screen.findByRole('dialog', { name: 'Perfil de Maria Souza' }))
     expect(view.getByText('—')).toBeInTheDocument()
     expect(view.getByText('1 dia')).toBeInTheDocument()
+    expect(view.getByText('Temporada passada').parentElement).toHaveTextContent('Não jogou')
     expect(view.getByText('nenhum ainda')).toBeInTheDocument()
     expect(view.getByText('Nenhuma ainda.')).toBeInTheDocument()
     expect(view.queryByText('Mais forte em')).not.toBeInTheDocument()

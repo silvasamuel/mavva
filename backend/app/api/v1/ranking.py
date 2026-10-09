@@ -2,10 +2,15 @@ from fastapi import APIRouter
 
 from app.core.deps import CurrentUser, DbDep
 from app.models import User
-from app.schemas.ranking import FriendsLeaderboardOut, GlobalLeaderboardOut, LeaderboardEntry
+from app.schemas.ranking import (
+    FriendsLeaderboardOut,
+    GlobalLeaderboardOut,
+    LeaderboardEntry,
+    SeasonOut,
+)
 from app.schemas.social import PublicUser
 from app.schemas.user import RankOut
-from app.services import ranking_service
+from app.services import ranking_service, season_service
 from app.services.gamification import level_from_total_xp, rank_from_level
 from app.services.ranking_service import RankedPlayer
 
@@ -41,7 +46,11 @@ def _entry(row: RankedPlayer) -> LeaderboardEntry:
 @router.get("/global", response_model=GlobalLeaderboardOut)
 def global_ranking(user: CurrentUser, db: DbDep) -> GlobalLeaderboardOut:
     board = ranking_service.global_board(db, user)
+    season, _ = season_service.ensure_current_season(db, season_service.season_today())
     return GlobalLeaderboardOut(
+        season=SeasonOut.model_validate(
+            season_service.season_payload(season, season_service.season_today())
+        ),
         top=[_entry(row) for row in board.top],
         me=_entry(board.me),
         total_players=board.total_players,

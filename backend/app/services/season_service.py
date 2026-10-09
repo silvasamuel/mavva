@@ -1,0 +1,163 @@
+"""Monthly seasons: XP, level and both leaderboards restart on the 1st.
+
+There is no scheduler, so the rollover is lazy: the first authenticated
+request after a season ends closes it (see deps.get_current_user). A
+Postgres advisory lock makes sure only one request does it; the others wait
+and then find the new season already open.
+
+Closing a season archives where each player finished (SeasonResult), keeps
+the best level ever reached and the level the season ended at, then zeroes
+XP and level for everyone — all in set-based statements, no per-user loop.
+Achievements, streaks, duel records and accuracy are lifetime and untouched.
+"""
+
+from dataclasses import dataclass
+from datetime import UTC, date, datetime
+from zoneinfo import ZoneInfo
+
+from sqlalchemy import ColumnElement, case, func, insert, literal, select, update
+from sqlalchemy.orm import Session
+from sqlalchemy.sql.elements import SQLCoreOperations
+
+from app.models import Season, SeasonResult, User, UserStats
+from app.services.gamification import LEVELS_PER_RANK, RANKS, Rank, rank_from_level
+
+# Seasons follow Brazil's calendar, like the rest of the product.
+_APP_TZ = ZoneInfo("America/Sao_Paulo")
+# Any constant works; it only has to be the same for every process.
+_ROLLOVER_LOCK = 20_261_009
+
+MONTHS = (
+    "janeiro",
+    "fevereiro",
+    "março",
+    "abril",
+    "maio",
+    "junho",
+    "julho",
+    "agosto",
+    "setembro",
+    "outubro",
+    "novembro",
+    "dezembro",
+)
+
+
+def season_today() -> date:
+    return datetime.now(UTC).astimezone(_APP_TZ).date()
+
+
+def month_start(day: date) -> date:
+    return day.replace(day=1)
+
+
+def next_month_start(day: date) -> date:
+    return date(day.year + 1, 1, 1) if day.month == 12 else date(day.year, day.month + 1, 1)
+
+
+def season_name(season: Season) -> str:
+    return f"{MONTHS[season.starts_on.month - 1]} de {season.starts_on.year}"
+
+
+def _rank_code_sql(level: SQLCoreOperations[int]) -> ColumnElement[str]:
+    """SQL twin of rank_from_level(level).code, for the archive INSERT."""
+    whens = [
+        (level <= (index + 1) * LEVELS_PER_RANK, code) for index, (code, _) in enumerate(RANKS[:-1])
+    ]
+    return case(*whens, else_=RANKS[-1][0])
+
+
+def _close(db: Session, season: Season) -> None:
+    active_first = func.row_number().over(
+        partition_by=User.is_active,
+        order_by=(UserStats.total_xp.desc(), User.username.asc()),
+    )
+    db.execute(
+        insert(SeasonResult).from_select(
+            ["season_id", "user_id", "final_xp", "final_level", "rank_code", "position"],
+            select(
+                literal(season.id),
+                UserStats.user_id,
+                UserStats.total_xp,
+                UserStats.level,
+                _rank_code_sql(UserStats.level),
+                # Same order as the global leaderboard, which only lists active accounts.
+                case((User.is_active, active_first), else_=None),
+            )
+            .join(User, User.id == UserStats.user_id)
+            .where(UserStats.total_xp > 0),
+        )
+    )
+    db.execute(
+        update(UserStats).values(
+            best_level=func.greatest(UserStats.best_level, UserStats.level),
+            # Who didn't play the season has no rank to show for it.
+            last_season_level=case((UserStats.total_xp > 0, UserStats.level), else_=None),
+            total_xp=0,
+            level=1,
+        )
+    )
+    season.closed_at = datetime.now(UTC)
+
+
+def _latest(db: Session) -> Season | None:
+    return db.scalar(
+        select(Season)
+        .order_by(Season.number.desc())
+        .limit(1)
+        .execution_options(populate_existing=True)
+    )
+
+
+def ensure_current_season(db: Session, today: date) -> tuple[Season, bool]:
+    """The season that contains `today`, opening it (and closing the last one)
+    if needed. Returns (season, changed); the caller commits when changed."""
+    latest = _latest(db)
+    if latest is not None and latest.starts_on <= today < latest.ends_on:
+        return latest, False
+
+    db.execute(select(func.pg_advisory_xact_lock(_ROLLOVER_LOCK)))
+    latest = _latest(db)  # another request may have rolled over while we waited
+    if latest is not None and today < latest.ends_on:
+        return latest, False
+    if latest is not None and latest.closed_at is None:
+        _close(db, latest)
+    # A month with no traffic at all gets no season of its own.
+    season = Season(
+        number=(latest.number + 1) if latest else 1,
+        starts_on=month_start(today),
+        ends_on=next_month_start(today),
+    )
+    db.add(season)
+    db.flush()
+    # The bulk UPDATE bypassed the identity map; reload anything already loaded.
+    db.expire_all()
+    return season, True
+
+
+@dataclass(frozen=True)
+class SeasonRanks:
+    best: Rank
+    last_season: Rank | None
+
+
+def ranks_for(stats: UserStats | None) -> SeasonRanks:
+    """Best rank ever (closed seasons or the current one) and last season's."""
+    if stats is None:
+        return SeasonRanks(best=rank_from_level(1), last_season=None)
+    best_level = max(stats.best_level, stats.level)
+    last = stats.last_season_level
+    return SeasonRanks(
+        best=rank_from_level(best_level),
+        last_season=rank_from_level(last) if last is not None else None,
+    )
+
+
+def season_payload(season: Season, today: date) -> dict[str, object]:
+    return {
+        "number": season.number,
+        "name": season_name(season),
+        "starts_on": season.starts_on.isoformat(),
+        "ends_on": season.ends_on.isoformat(),
+        "days_left": max(0, (season.ends_on - today).days),
+    }

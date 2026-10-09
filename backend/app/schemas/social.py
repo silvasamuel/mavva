@@ -71,6 +71,9 @@ class PlayerProfileOut(BaseModel):
     relation: Literal["self", "none", "pending_sent", "pending_received", "friends"]
     member_since: str  # "YYYY-MM"
     stats: PlayerStatsOut
+    # Level resets every season; these carry the player's standing across them.
+    best_rank: RankOut  # highest ever, this season included
+    last_season_rank: RankOut | None  # None if they didn't play last season
     achievements_unlocked: int
     achievements_total: int
     recent_achievements: list[PlayerAchievementOut]  # newest first

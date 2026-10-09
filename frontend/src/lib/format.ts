@@ -14,6 +14,12 @@ export function formatDays(days: number): string {
   return years === 1 ? '~1 ano' : `~${years} anos`
 }
 
+/** Countdown to the season's end; `daysLeft` counts up to the next season's first day. */
+export function formatSeasonEnd(daysLeft: number): string {
+  if (daysLeft <= 1) return 'último dia'
+  return `termina em ${daysLeft} dias`
+}
+
 export function formatPercent(ratio: number | null): string {
   if (ratio == null) return '—'
   return `${Math.round(ratio * 100)}%`

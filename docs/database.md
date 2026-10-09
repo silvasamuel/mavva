@@ -11,6 +11,8 @@ erDiagram
     users ||--o{ refresh_tokens : has
     users ||--o{ password_reset_tokens : has
     users ||--|| user_stats : has
+    users ||--o{ season_results : finished
+    seasons ||--o{ season_results : archives
     users ||--o{ daily_activities : logs
     users ||--o{ quiz_sessions : plays
     users ||--o{ review_items : reviews
@@ -126,7 +128,9 @@ UNIQUE `(session_id, question_id)` — impede responder duas vezes.
 | Coluna | Tipo |
 |---|---|
 | user_id | UUID PK FK |
-| total_xp / level | INT / INT |
+| total_xp / level | INT / INT *(da temporada atual — zeram no dia 1º)* |
+| best_level | INT *(maior nível já alcançado ao fechar uma temporada)* |
+| last_season_level | INT NULL *(nível ao fim da temporada passada; NULL se não jogou)* |
 | current_streak / longest_streak | INT / INT |
 | last_activity_date | DATE NULL *(no fuso do usuário)* |
 | questions_answered / correct_answers | INT / INT |
@@ -136,6 +140,18 @@ UNIQUE `(session_id, question_id)` — impede responder duas vezes.
 
 > Atualizada transacionalmente pelo serviço de gamificação ao completar sessões.
 > Fonte da verdade recuperável: pode ser recalculada de `quiz_answers`/`daily_activities`.
+
+### seasons *(um mês do calendário, horário de Brasília)*
+`id INT PK, number INT UNIQUE, starts_on DATE, ends_on DATE, closed_at TIMESTAMPTZ NULL`
+`ends_on` é o primeiro dia da próxima temporada (exclusivo). Criada e fechada sob demanda
+pela primeira requisição autenticada do mês (`season_service.ensure_current_season`).
+
+### season_results *(onde cada jogador terminou uma temporada)*
+`id INT PK, season_id FK, user_id FK, final_xp INT, final_level INT, rank_code VARCHAR(20),
+position INT NULL, created_at` — UNIQUE `(season_id, user_id)`, índice em `user_id`.
+Só jogadores que ganharam XP na temporada. `position` segue a ordem do ranking global
+(XP, depois username) e é NULL para contas inativas. Id inteiro gerado pelo banco porque
+as linhas entram num único `INSERT … SELECT`.
 
 ### daily_activities *(série temporal do gráfico de evolução + cálculo de streak)*
 `id UUID PK, user_id FK, date DATE, xp INT, questions INT, correct INT, time_seconds INT`
