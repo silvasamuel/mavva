@@ -120,6 +120,12 @@ export function QuizSummaryPage() {
               <p className="mt-2 text-lg font-extrabold text-sand-600">
                 {summary.correct_count}/{summary.question_count} acertos
               </p>
+              {summary.best_combo >= 2 && (
+                <p className="mt-1 flex items-center justify-center gap-1 text-sm font-extrabold text-grain-700">
+                  <Glyph as={AppIcons.streak} className="h-4 w-4" />
+                  {`Maior combo: ${summary.best_combo}`}
+                </p>
+              )}
               <p className="mt-6 text-sm font-bold text-sand-400">Toque para continuar</p>
             </>
           )}

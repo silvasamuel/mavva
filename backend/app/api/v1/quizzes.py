@@ -56,6 +56,7 @@ def _session_out(session: QuizSession, duel_id: uuid.UUID | None = None) -> Quiz
         answered_count=len(answered_ids),
         completed=session.completed_at is not None,
         timer_seconds=(session.filters or {}).get("timer_seconds"),
+        combo=quiz_service.current_combo(session),
         filters=quiz_service.session_filters(session),
         questions=[
             QuestionOut(
@@ -178,6 +179,8 @@ def submit_answer(
         divergence_note=result.divergence_note,
         reference=_reference(result.question),
         xp_earned=result.xp_earned,
+        combo=result.combo,
+        combo_bonus_xp=result.combo_bonus_xp,
     )
 
 
@@ -234,6 +237,7 @@ def complete_quiz(session_id: uuid.UUID, user: CurrentUser, db: DbDep) -> QuizCo
             earned_today=result.daily_goal_earned,
             achieved=result.daily_goal_earned >= result.daily_goal_target,
         ),
+        best_combo=result.best_combo,
         unlocked_achievements=[
             UnlockedAchievement(
                 code=a.code,

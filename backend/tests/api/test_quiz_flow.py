@@ -44,6 +44,23 @@ def _correct_option_id(db: Session, question_payload: dict) -> str:
     return str(correct.id)
 
 
+def _answer(
+    client: TestClient, db: Session, session_id: str, question: dict, *, correct: bool
+) -> dict:
+    correct_id = _correct_option_id(db, question)
+    option_id = (
+        correct_id
+        if correct
+        else next(o["id"] for o in question["options"] if o["id"] != correct_id)
+    )
+    response = client.post(
+        f"/api/v1/quizzes/{session_id}/answers",
+        json={"question_id": question["id"], "selected_option_id": option_id},
+    )
+    assert response.status_code == 200, response.text
+    return response.json()
+
+
 class TestQuizFlow:
     def _seed_bank(self, db: Session) -> None:
         category = make_category(db)
@@ -86,8 +103,8 @@ class TestQuizFlow:
         summary = complete.json()
         assert summary["correct_count"] == 3
         assert summary["accuracy"] == 1.0
-        # 3 medium answers (20 XP) + completion (5) + perfect (10)
-        assert summary["xp_earned"] == 75
+        # 3 medium answers (20 XP) + combo at the 3rd hit (1) + completion (5) + perfect (10)
+        assert summary["xp_earned"] == 76
         assert summary["rank"]["code"] == "semente"
         assert summary["rank"]["rank_up"] is False
         assert summary["streak"]["current"] == 1
@@ -98,7 +115,7 @@ class TestQuizFlow:
         assert perfect["xp_reward"] == xp_reward_for("perfect_1")
 
         dashboard = auth_client.get("/api/v1/dashboard").json()
-        assert dashboard["stats"]["total_xp"] == 75 + _badge_xp(auth_client)
+        assert dashboard["stats"]["total_xp"] == 76 + _badge_xp(auth_client)
         assert dashboard["stats"]["rank"]["code"] == "semente"
         assert dashboard["stats"]["rank"]["next_code"] == "broto"
         assert dashboard["stats"]["current_streak"] == 1
@@ -363,6 +380,104 @@ class TestTimer:
         assert feedback["xp_earned"] == -10
         assert feedback["correct_option_id"] == _correct_option_id(db, question)
         assert feedback["explanation"]
+
+
+class TestCombo:
+    def _quiz(self, client: TestClient, db: Session, size: int) -> dict:
+        category = make_category(db)
+        for _ in range(size):
+            make_mc_question(db, category)
+        return _start_quiz(client, question_count=size)
+
+    def test_hits_in_a_row_build_the_combo_and_pay_from_the_third(
+        self, auth_client: TestClient, db: Session
+    ):
+        quiz = self._quiz(auth_client, db, 5)
+        feedbacks = [
+            _answer(auth_client, db, quiz["id"], question, correct=True)
+            for question in quiz["questions"]
+        ]
+        assert [f["combo"] for f in feedbacks] == [1, 2, 3, 4, 5]
+        assert [f["combo_bonus_xp"] for f in feedbacks] == [0, 0, 1, 2, 3]
+        # Medium hits pay 20; the combo bonus rides on top of the answer's XP.
+        assert [f["xp_earned"] for f in feedbacks] == [20, 20, 21, 22, 23]
+
+        summary = auth_client.post(f"/api/v1/quizzes/{quiz['id']}/complete").json()
+        # 5 * 20 + combos (1 + 2 + 3) + completion (5) + perfect (10), counted once.
+        assert summary["xp_earned"] == 121
+        assert summary["bonus_xp"] == 15
+        assert summary["best_combo"] == 5
+
+        dashboard = auth_client.get("/api/v1/dashboard").json()
+        badges = _badge_xp(auth_client)
+        assert dashboard["stats"]["total_xp"] == 121 + badges
+        assert dashboard["daily_goal"]["earned_today"] == 121 + badges
+        assert dashboard["recent_sessions"][0]["xp_earned"] == 121
+
+    def test_a_wrong_answer_resets_the_combo(self, auth_client: TestClient, db: Session):
+        quiz = self._quiz(auth_client, db, 7)
+        pattern = [True, True, True, False, True, True, True]
+        feedbacks = [
+            _answer(auth_client, db, quiz["id"], question, correct=correct)
+            for question, correct in zip(quiz["questions"], pattern, strict=True)
+        ]
+        assert [f["combo"] for f in feedbacks] == [1, 2, 3, 0, 1, 2, 3]
+        assert [f["combo_bonus_xp"] for f in feedbacks] == [0, 0, 1, 0, 0, 0, 1]
+        assert feedbacks[3]["xp_earned"] == -10  # a miss only costs, never pays a bonus
+
+        summary = auth_client.post(f"/api/v1/quizzes/{quiz['id']}/complete").json()
+        # 6 * 20 - 10 + combos (1 + 1) + completion (5).
+        assert summary["xp_earned"] == 117
+        assert summary["best_combo"] == 3
+        dashboard = auth_client.get("/api/v1/dashboard").json()
+        assert dashboard["recent_sessions"][0]["xp_earned"] == 117
+
+    def test_a_timeout_resets_the_combo(self, auth_client: TestClient, db: Session):
+        quiz = self._quiz(auth_client, db, 5)
+        questions = quiz["questions"]
+        for question in questions[:3]:
+            _answer(auth_client, db, quiz["id"], question, correct=True)
+        response = auth_client.post(
+            f"/api/v1/quizzes/{quiz['id']}/answers",
+            json={"question_id": questions[3]["id"], "timed_out": True},
+        )
+        assert response.status_code == 200, response.text
+        assert response.json()["combo"] == 0
+        assert response.json()["combo_bonus_xp"] == 0
+        assert _answer(auth_client, db, quiz["id"], questions[4], correct=True)["combo"] == 1
+
+    def test_reloading_the_session_keeps_the_combo(self, auth_client: TestClient, db: Session):
+        quiz = self._quiz(auth_client, db, 4)
+        assert quiz["combo"] == 0
+        for question in quiz["questions"][:3]:
+            _answer(auth_client, db, quiz["id"], question, correct=True)
+        assert auth_client.get(f"/api/v1/quizzes/{quiz['id']}").json()["combo"] == 3
+
+    def test_abandoning_forfeits_combo_bonuses(self, auth_client: TestClient, db: Session):
+        quiz = self._quiz(auth_client, db, 6)
+        pattern = [True, True, True, True, False]
+        for question, correct in zip(quiz["questions"][:5], pattern, strict=True):
+            _answer(auth_client, db, quiz["id"], question, correct=correct)
+        body = auth_client.post(f"/api/v1/quizzes/{quiz['id']}/abandon").json()
+        # Only the miss is consolidated; the hits and their combo bonuses are forfeited.
+        assert body["xp_penalty"] == -10
+        session = db.get(QuizSession, UUID(quiz["id"]))
+        assert session is not None
+        assert session.xp_earned == -10
+
+    def test_duels_count_the_combo_but_pay_no_bonus(self, auth_client: TestClient, db: Session):
+        category = make_category(db)
+        for _ in range(10):
+            make_mc_question(db, category)
+        duel = auth_client.post("/api/v1/duels", json={}).json()
+        quiz = auth_client.get(f"/api/v1/quizzes/{duel['my_session_id']}").json()
+        feedbacks = [
+            _answer(auth_client, db, quiz["id"], question, correct=True)
+            for question in quiz["questions"][:4]
+        ]
+        assert [f["combo"] for f in feedbacks] == [1, 2, 3, 4]
+        assert [f["combo_bonus_xp"] for f in feedbacks] == [0, 0, 0, 0]
+        assert [f["xp_earned"] for f in feedbacks] == [0, 0, 0, 0]
 
 
 class TestHistoryLimit:

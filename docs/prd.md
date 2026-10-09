@@ -139,6 +139,9 @@ Festas Judaicas · Idiomas Bíblicos · Cultura Bíblica
   da pergunta**; sessão perfeita = +10; completar sessão = +5. O saldo de uma sessão pode
   ser negativo (errar mais do que acertar reduz o XP total), mas o XP acumulado do
   usuário nunca cai abaixo de zero.
+- **Combo:** acertos seguidos na sessão (erro ou tempo estourado zera). A partir do 3º
+  acerto seguido, cada acerto paga `min(combo − 2, 5)` XP extra (+1, +2, … até +5) —
+  no máximo +30 XP numa sessão perfeita de 10. Em duelos o combo aparece, mas não paga.
 - **Nível:** curva de custo crescente — para subir do nível *n* para *n+1* são necessários
   `100 + (n − 1) × 50` XP (nível 1→2: 100 XP; 2→3: 150 XP; 3→4: 200 XP; …). Sem teto.
 - **Fila inteligente de perguntas:** perguntas nunca respondidas vêm primeiro (em ordem

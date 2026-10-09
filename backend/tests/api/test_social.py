@@ -581,9 +581,10 @@ class TestDuelXpComesFromTheResult:
         _seed_questions(db)
         quiz = auth_client.post("/api/v1/quizzes", json={"question_count": 3}).json()
         helper._answer_all(auth_client, None, quiz["id"], db, correct=True)
-        # 3 medium answers (20) + completion (5) + perfect (10) + badges
+        # 3 medium answers (20) + combo at the 3rd hit (1) + completion (5) + perfect (10)
+        # + badges
         assert auth_client.get("/api/v1/dashboard").json()["stats"]["total_xp"] == (
-            75 + _badge_xp(auth_client)
+            76 + _badge_xp(auth_client)
         )
 
 

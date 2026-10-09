@@ -193,6 +193,8 @@ export interface QuizSession {
   completed: boolean
   timer_seconds: number | null
   duel_id: string | null
+  /** Hits in a row so far (server-computed), so a reload keeps the badge. */
+  combo: number
   filters: Record<string, unknown>
   questions: QuizQuestion[]
 }
@@ -210,7 +212,12 @@ export interface AnswerFeedback {
   explanation: string
   divergence_note: string | null
   reference: BibleReference
+  /** Includes combo_bonus_xp. */
   xp_earned: number
+  /** Hits in a row in this session, this answer included; a miss resets it to 0. */
+  combo: number
+  /** Always 0 in duels. */
+  combo_bonus_xp: number
 }
 
 export interface QuizComplete {
@@ -225,6 +232,7 @@ export interface QuizComplete {
   rank: { code: string; name: string; rank_up: boolean }
   streak: { current: number; extended_today: boolean }
   daily_goal: { target: number; earned_today: number; achieved: boolean }
+  best_combo: number
   unlocked_achievements: Achievement[]
 }
 

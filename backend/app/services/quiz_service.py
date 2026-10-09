@@ -25,6 +25,8 @@ from app.services.gamification import (
     PERFECT_SESSION_BONUS,
     SESSION_COMPLETE_BONUS,
     StreakUpdate,
+    combo_bonus_xp,
+    combo_counts,
     level_from_total_xp,
     rank_from_level,
     register_streak_activity,
@@ -189,7 +191,18 @@ class AnswerResult:
     explanation: str
     divergence_note: str | None
     question: Question
-    xp_earned: int
+    xp_earned: int  # combo_bonus_xp included
+    combo: int
+    combo_bonus_xp: int
+
+
+def current_combo(session: QuizSession) -> int:
+    counts = combo_counts(a.is_correct for a in session.answers)
+    return counts[-1] if counts else 0
+
+
+def best_combo(session: QuizSession) -> int:
+    return max(combo_counts(a.is_correct for a in session.answers), default=0)
 
 
 def submit_answer(
@@ -239,9 +252,18 @@ def submit_answer(
         accepted = [a.text for a in question.accepted_answers]
         is_correct = answer_checker.is_answer_correct(answer_text, accepted)
 
+    # Hits in a row in this session, this answer included — rebuilt from the
+    # stored answers (in answer order), never taken from the client.
+    combo = current_combo(session) + 1 if is_correct else 0
     # In duels the whole XP swing is the result (win/draw/loss), so individual
     # answers pay nothing — otherwise a good loser would still out-earn a winner.
-    xp = 0 if session.mode == QuizMode.DUEL else xp_for_answer(question.difficulty, is_correct)
+    # The combo is still counted there; it just pays no bonus.
+    if session.mode == QuizMode.DUEL:
+        combo_bonus = 0
+        xp = 0
+    else:
+        combo_bonus = combo_bonus_xp(combo)
+        xp = xp_for_answer(question.difficulty, is_correct) + combo_bonus
     db.add(
         QuizAnswer(
             session_id=session.id,
@@ -250,6 +272,9 @@ def submit_answer(
             answer_text=answer_text,
             is_correct=is_correct,
             time_spent_seconds=time_spent_seconds,
+            # The column default, now(), is the transaction start: answers sharing
+            # a transaction would tie. clock_timestamp() keeps the answer order.
+            answered_at=func.clock_timestamp(),
         )
     )
     if is_correct:
@@ -280,6 +305,8 @@ def submit_answer(
         divergence_note=question.divergence_note,
         question=question,
         xp_earned=xp,
+        combo=combo,
+        combo_bonus_xp=combo_bonus,
     )
 
 
@@ -298,6 +325,7 @@ class CompleteResult:
     streak: StreakUpdate
     daily_goal_target: int
     daily_goal_earned: int
+    best_combo: int
     unlocked_achievements: list[Achievement] = field(default_factory=list)
 
 
@@ -378,6 +406,7 @@ def complete_session(db: Session, user: User, session_id: uuid.UUID) -> Complete
         streak=streak,
         daily_goal_target=user.daily_goal_xp,
         daily_goal_earned=max(0, activity.xp),
+        best_combo=best_combo(session),
         unlocked_achievements=unlocked,
     )
 
@@ -393,7 +422,8 @@ def abandon_session(db: Session, user: User, session_id: uuid.UUID) -> AbandonRe
     """Quitting mid-session forfeits the XP earned but keeps the error penalties.
 
     Wrong answers are consolidated into stats and the daily activity; correct
-    answers count for accuracy/SRS but pay nothing — finishing is what pays.
+    answers count for accuracy/SRS but pay nothing, combo bonuses included —
+    finishing is what pays.
     The streak is NOT extended (only completed sessions count).
     """
     session = get_session_for_user(db, user, session_id)
@@ -458,7 +488,7 @@ def recent_sessions(db: Session, user: User, limit: int = 5) -> list[QuizSession
 def list_xp(session: QuizSession) -> int:
     """XP on Últimos quizzes.
 
-    Study/review: hits minus misses, plus completion/perfect bonuses.
+    Study/review: hits minus misses, plus combo and completion/perfect bonuses.
     Duels: session.xp_earned is 0 until settled; the dashboard overlays the
     win/draw/loss stake so the pill never shows per-answer XP.
     """
@@ -472,6 +502,7 @@ def list_xp(session: QuizSession) -> int:
             gains += delta
         else:
             losses += -delta
+    gains += sum(combo_bonus_xp(c) for c in combo_counts(a.is_correct for a in session.answers))
     if len(session.answers) == session.question_count:
         gains += SESSION_COMPLETE_BONUS
         if session.correct_count == session.question_count:

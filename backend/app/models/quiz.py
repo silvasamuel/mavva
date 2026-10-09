@@ -36,8 +36,12 @@ class QuizSession(Base):
         cascade="all, delete-orphan",
         order_by="QuizSessionQuestion.position",
     )
+    # Answer order — the combo depends on it (see quiz_service.submit_answer);
+    # id only makes exact-timestamp ties deterministic.
     answers: Mapped[list["QuizAnswer"]] = relationship(
-        back_populates="session", cascade="all, delete-orphan"
+        back_populates="session",
+        cascade="all, delete-orphan",
+        order_by="(QuizAnswer.answered_at, QuizAnswer.id)",
     )
 
 
