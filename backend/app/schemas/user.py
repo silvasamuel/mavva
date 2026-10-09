@@ -29,6 +29,7 @@ class UserOut(BaseModel):
     review_order: ReviewOrder
     review_session_size: int
     review_max_interval_days: int | None
+    tutorial_completed: bool
 
 
 class RankOut(BaseModel):

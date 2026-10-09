@@ -38,6 +38,7 @@ erDiagram
 | role | ENUM(user, admin) | admin para o futuro painel |
 | timezone | VARCHAR(64) | default `America/Sao_Paulo`; base do streak |
 | daily_goal_xp | INT | default 50 |
+| tutorial_completed_at | TIMESTAMPTZ NULL | quando o jogador terminou ou pulou o tutorial do primeiro login; null = ainda não viu |
 | created_at / updated_at | TIMESTAMPTZ | |
 
 ### refresh_tokens
@@ -179,3 +180,8 @@ UNIQUE `(user_id, date)`. `date` já convertida para o fuso do usuário.
    edições no JSON atualizam a pergunta sem duplicar nem perder histórico de respostas.
 5. **Enums nativos do Postgres** para `difficulty`, `type`, `testament`, `role` —
    integridade no banco, não só na aplicação.
+6. **`users.tutorial_completed_at` com backfill** — a migration `c1d2e3f4a5b6` cria a
+   coluna nula e preenche `now()` em todas as contas existentes: só quem se cadastra
+   depois do deploy vê o tutorial. Cadastros novos nascem com null; o
+   `POST /users/me/tutorial` grava a data uma única vez (idempotente). Timestamp em
+   vez de booleano para saber quando foi visto, se um dia o tutorial mudar.

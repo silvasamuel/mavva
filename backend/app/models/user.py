@@ -44,8 +44,15 @@ class User(TimestampMixin, Base):
     terms_accepted_at: Mapped[datetime | None] = mapped_column(default=None)
     terms_version: Mapped[str | None] = mapped_column(String(20), default=None)
     last_data_export_at: Mapped[datetime | None] = mapped_column(default=None)
+    # Set when the player finishes or skips the first-login tutorial. Accounts
+    # older than the tutorial were backfilled, so null = new player, not seen yet.
+    tutorial_completed_at: Mapped[datetime | None] = mapped_column(default=None)
 
     stats: Mapped["UserStats"] = relationship(back_populates="user", cascade="all, delete-orphan")
+
+    @property
+    def tutorial_completed(self) -> bool:
+        return self.tutorial_completed_at is not None
 
 
 class UserStats(Base):

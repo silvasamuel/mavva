@@ -38,6 +38,12 @@ Regras de rota:
 - **Tela de quiz é fullscreen focado** (sem sidebar): barra de progresso no topo,
   botão de sair com confirmação — como o Duolingo.
 - Rotas públicas: layout centralizado com card único.
+- **Tutorial do primeiro login** (`features/tutorial`): diálogo de 6 passos montado no
+  AppShell enquanto `user.tutorial_completed` for `false` — nunca na tela de quiz nem
+  nas páginas de auth. Pular, Escape ou terminar fecha na hora e chama
+  `POST /users/me/tutorial`; se a chamada falhar, fica marcado no `localStorage` e é
+  reenviado em silêncio na próxima visita. "Rever tutorial" no Perfil reabre só no
+  cliente.
 
 ## 3. Árvore de componentes (principais)
 

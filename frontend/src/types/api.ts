@@ -22,6 +22,8 @@ export interface User {
   review_order: ReviewOrder
   review_session_size: number
   review_max_interval_days: number | null
+  /** False until the player finishes or skips the first-login tutorial. */
+  tutorial_completed: boolean
 }
 
 // --- Social: friends and duels ---

@@ -1,3 +1,4 @@
+from datetime import UTC, datetime
 from zoneinfo import ZoneInfo
 
 from fastapi import APIRouter, HTTPException, Response, status
@@ -17,6 +18,18 @@ REFRESH_COOKIE = "refresh_token"
 
 @router.get("/me", response_model=UserOut)
 def get_me(user: CurrentUser) -> UserOut:
+    return UserOut.model_validate(user)
+
+
+@router.post("/me/tutorial", response_model=UserOut)
+def complete_tutorial(user: CurrentUser, db: DbDep) -> UserOut:
+    """Marks the first-login tutorial as seen (finished or skipped).
+
+    Idempotent: a retry from another device keeps the first timestamp.
+    """
+    if user.tutorial_completed_at is None:
+        user.tutorial_completed_at = datetime.now(UTC)
+        db.commit()
     return UserOut.model_validate(user)
 
 
