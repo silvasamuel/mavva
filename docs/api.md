@@ -151,6 +151,7 @@ pergunta — o agendamento já feito não muda, como no Anki. O badge do dashboa
 |---|---|---|
 | GET | `/ranking/global` | `{top, me, total_players}`: top 10 por XP (empate desempata pelo username), a posição de quem pede (`me`, mesmo fora do top) e o total de jogadores. Contas inativas não entram no top, na posição nem no total. |
 | GET | `/ranking/friends` | `{entries}`: você e seus amigos ordenados por XP. Amigos com conta inativa ficam de fora. |
+| GET | `/ranking/accuracy` | `{top, me, my_answers, min_answers, total_players}`: top 10 por precisão geral (`correct_answers / questions_answered` de toda a vida, `accuracy` de 0 a 1). Só entra quem tem conta ativa e pelo menos `min_answers` (50) respostas — sem esse piso, 3 de 3 (100%) lideraria. Empate em precisão desempata por mais respostas e depois pelo username. `me` é a sua posição (mesmo fora do top) ou `null` enquanto você não chega às 50; `my_answers` diz quantas você já tem; `total_players` conta só quem já entrou. |
 
 ## Jogadores
 
