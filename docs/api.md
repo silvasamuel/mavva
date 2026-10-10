@@ -31,7 +31,8 @@ Erros seguem o formato `{"detail": "mensagem"}` (padrão FastAPI) com status HTT
 |---|---|---|
 | GET | `/users/me` | Perfil do usuário logado. Inclui `tutorial_completed` (bool). |
 | PATCH | `/users/me` | Atualiza `name`, `daily_goal_xp`, `timezone`. |
-| POST | `/users/me/tutorial` | Marca o tutorial do primeiro login como visto (concluído ou pulado). Sem body. Idempotente: mantém a primeira data. Retorna o usuário atualizado. |
+| POST | `/users/me/tutorial` | Marca o tutorial do primeiro login como visto (concluído ou pulado). Sem body. Idempotente: mantém a primeira data. Como o tutorial explica as temporadas, também dá como visto o aviso de início da temporada atual. Retorna o usuário atualizado. |
+| POST | `/users/me/season-notice` | Body `{notice: "start" \| "end"}`. Fecha de vez o modal de início ou de fim da temporada atual (em todos os aparelhos). Fechar o de fim também conta o de início. 204. |
 | DELETE | `/users/me` | Apaga a conta. Body: `{password}`. 403 se a senha estiver errada. 204 + limpa o cookie. Perfil confirma com senha + digitar "APAGAR". |
 
 `tutorial_completed` também vem no `user` de `/auth/login` e `/auth/verify-email`. É
@@ -120,6 +121,7 @@ resposta correta não pode ser inferida chamando a API diretamente.
              "last_season_rank": { "code": "broto", "name": "Broto" } },  // null se não jogou
   "season": { "number": 2, "name": "outubro de 2026", "starts_on": "2026-10-01",
               "ends_on": "2026-11-01", "days_left": 23 },
+  "season_notice": "start",  // "start" | "end" | null — ver "Avisos de temporada"
   "daily_goal": { "target": 50, "earned_today": 30, "achieved": false },
   "evolution": [ { "date": "2026-07-01", "xp": 60, "questions": 12 }, /* 30 dias */ ],
   "categories": [ { "id": 1, "slug": "personagens", "name": "Personagens", "icon": "👤",
@@ -199,6 +201,13 @@ da vida toda e não mudam.
   próxima temporada (exclusivo).
 - `best_rank` / `last_season_rank` aparecem no dashboard (`stats`) e no perfil público.
 - A primeira temporada é o mês em que o deploy entrou: o XP de antes conta para ela, e o
+
+**Avisos de temporada** (`season_notice` no dashboard), cada um uma vez por temporada, lembrados
+no servidor (`users.season_start_seen` / `season_end_seen`):
+
+- `start` — boas-vindas à temporada, na primeira visita depois da virada.
+- `end` — reta final, nos últimos 7 dias (`days_left <= 7`). Se os dois estiverem pendentes, vale o `end`.
+- Nenhum aparece antes do tutorial do primeiro login, e o tutorial já conta como o `start` da temporada em que foi visto.
   primeiro reset acontece no dia 1º do mês seguinte.
 
 ## Jogadores

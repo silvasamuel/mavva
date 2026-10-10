@@ -1,7 +1,7 @@
 """Monthly seasons: XP, level and the leaderboards restart; the elos stay."""
 
 import uuid
-from datetime import date
+from datetime import UTC, date, datetime
 
 import pytest
 from fastapi.testclient import TestClient
@@ -221,3 +221,71 @@ class TestApi:
         body = auth_client.get(f"/api/v1/players/{me['id']}").json()
         assert body["best_rank"]["code"] == "semente"
         assert body["last_season_rank"] is None
+
+
+def _skip_tutorial_long_ago(db: Session, user: User) -> None:
+    """A player from before seasons: tutorial done, no season notice seen."""
+    user.tutorial_completed_at = datetime(2026, 9, 1, tzinfo=UTC)
+    db.flush()
+
+
+def _notice(auth_client: TestClient) -> str | None:
+    return auth_client.get("/api/v1/dashboard").json()["season_notice"]
+
+
+class TestSeasonNotices:
+    def test_existing_player_sees_the_start_notice_once(self, auth_client: TestClient, db: Session):
+        _skip_tutorial_long_ago(db, _me(auth_client, db))
+        assert _notice(auth_client) == "start"
+
+        response = auth_client.post("/api/v1/users/me/season-notice", json={"notice": "start"})
+
+        assert response.status_code == 204
+        assert _notice(auth_client) is None
+
+    def test_next_season_brings_it_back(
+        self, auth_client: TestClient, db: Session, monkeypatch: pytest.MonkeyPatch
+    ):
+        _skip_tutorial_long_ago(db, _me(auth_client, db))
+        auth_client.post("/api/v1/users/me/season-notice", json={"notice": "start"})
+
+        monkeypatch.setattr(season_service, "season_today", lambda: date(2026, 11, 2))
+
+        assert _notice(auth_client) == "start"
+
+    def test_nothing_before_the_tutorial_and_the_tutorial_covers_the_start(
+        self, auth_client: TestClient
+    ):
+        assert _notice(auth_client) is None  # new player: the tutorial comes first
+
+        auth_client.post("/api/v1/users/me/tutorial")
+
+        assert _notice(auth_client) is None
+
+    def test_last_week_shows_the_end_notice_instead(
+        self, auth_client: TestClient, db: Session, monkeypatch: pytest.MonkeyPatch
+    ):
+        me = _me(auth_client, db)
+        _skip_tutorial_long_ago(db, me)
+        monkeypatch.setattr(season_service, "season_today", lambda: date(2026, 10, 24))
+        assert _notice(auth_client) == "start"  # 8 days left: not the last week yet
+
+        monkeypatch.setattr(season_service, "season_today", lambda: date(2026, 10, 25))
+        assert _notice(auth_client) == "end"  # 7 days left, start never seen: end wins
+
+        auth_client.post("/api/v1/users/me/season-notice", json={"notice": "end"})
+
+        assert _notice(auth_client) is None
+        db.refresh(me)
+        assert (me.season_start_seen, me.season_end_seen) == (1, 1)
+
+    def test_new_player_in_the_last_week_still_hears_the_season_is_ending(
+        self, auth_client: TestClient, monkeypatch: pytest.MonkeyPatch
+    ):
+        monkeypatch.setattr(season_service, "season_today", lambda: date(2026, 10, 30))
+        auth_client.post("/api/v1/users/me/tutorial")
+        assert _notice(auth_client) == "end"
+
+    def test_rejects_unknown_notices(self, auth_client: TestClient):
+        response = auth_client.post("/api/v1/users/me/season-notice", json={"notice": "middle"})
+        assert response.status_code == 422
