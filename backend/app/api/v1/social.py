@@ -22,7 +22,7 @@ from app.schemas.social import (
     UserSearchResult,
 )
 from app.schemas.user import RankOut
-from app.services import duel_service, friendship_service, player_profile
+from app.services import duel_service, friendship_service, player_profile, season_service
 from app.services.duel_service import DUEL_XP, DuelError
 from app.services.friendship_service import FriendshipError
 from app.services.gamification import rank_from_level
@@ -150,6 +150,7 @@ def player_profile_view(user_id: uuid.UUID, user: CurrentUser, db: DbDep) -> Pla
     total_xp = stats.total_xp if stats else 0
     answered = stats.questions_answered if stats else 0
     unlocked, total, recent = player_profile.achievements_of(db, player.id)
+    ranks = season_service.ranks_for(stats)
     return PlayerProfileOut(
         user=_require_public(player),
         relation=player_profile.relation_to(db, user, player),
@@ -161,6 +162,12 @@ def player_profile_view(user_id: uuid.UUID, user: CurrentUser, db: DbDep) -> Pla
             questions_answered=answered,
             accuracy=(stats.correct_answers / answered) if stats and answered else None,
             perfect_sessions=stats.perfect_sessions if stats else 0,
+        ),
+        best_rank=RankOut(code=ranks.best.code, name=ranks.best.name),
+        last_season_rank=(
+            RankOut(code=ranks.last_season.code, name=ranks.last_season.name)
+            if ranks.last_season
+            else None
         ),
         achievements_unlocked=unlocked,
         achievements_total=total,

@@ -4,6 +4,7 @@ import { api, ApiError } from '@/lib/api'
 import type { PlayerProfile, PublicUser } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
+import { EloTile } from '@/components/EloTile'
 import { RankBadge } from '@/components/RankBadge'
 import { formatPercent } from '@/lib/format'
 import { AchievementGlyph, AppIcons, CategoryGlyph, Glyph, type Icon } from '@/lib/icons'
@@ -94,9 +95,14 @@ function ProfileBody({ profile }: { profile: PlayerProfile }) {
           {user.rank.name} · Nível {user.level}
         </p>
         <p className="mt-1 text-xs font-semibold text-sand-500">
-          {stats.total_xp.toLocaleString('pt-BR')} XP
+          {stats.total_xp.toLocaleString('pt-BR')} XP na temporada
         </p>
       </section>
+
+      <dl aria-label="Elos" className="grid grid-cols-2 gap-2">
+        <EloTile label="Maior elo" rank={profile.best_rank} />
+        <EloTile label="Temporada passada" rank={profile.last_season_rank} />
+      </dl>
 
       <dl className="grid grid-cols-2 gap-2">
         <Stat
@@ -213,6 +219,12 @@ function ProfileSkeleton({ user }: { user?: PublicUser }) {
           <Bone className="mx-auto h-5 w-32" />
         )}
         <Bone className="mx-auto mt-1 h-4 w-20" />
+      </div>
+
+      <div className="grid grid-cols-2 gap-2">
+        {[0, 1].map((index) => (
+          <span key={index} className="block h-[3.25rem] animate-pulse rounded-2xl bg-sand-50" />
+        ))}
       </div>
 
       <div className="grid grid-cols-2 gap-2">

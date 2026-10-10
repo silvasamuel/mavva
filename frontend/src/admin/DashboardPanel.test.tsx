@@ -47,7 +47,7 @@ describe('DashboardPanel', () => {
     render(<DashboardPanel data={dashboard} onNavigate={vi.fn()} />)
 
     expect(screen.getByRole('heading', { name: 'Totais gerais' })).toBeInTheDocument()
-    expect(screen.getByText('XP acumulado').parentElement).toHaveTextContent('150.000')
+    expect(screen.getByText('XP na temporada').parentElement).toHaveTextContent('150.000')
     expect(screen.queryByText('Amizades')).not.toBeInTheDocument()
   })
 })

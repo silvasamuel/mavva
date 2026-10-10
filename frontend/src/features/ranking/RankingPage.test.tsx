@@ -71,6 +71,8 @@ function profileOf(user: PublicUser): PlayerProfile {
       accuracy: null,
       perfect_sessions: 0,
     },
+    best_rank: { code: 'semente', name: 'Semente' },
+    last_season_rank: null,
     achievements_unlocked: 0,
     achievements_total: 32,
     recent_achievements: [],
@@ -109,7 +111,18 @@ describe('RankingPage', () => {
     }
     get.mockReset().mockImplementation(async (path: string) => {
       if (path === '/ranking/global') {
-        return { top: [entry(1, ana)], me: entry(7, me, true), total_players: 20 }
+        return {
+          season: {
+            number: 2,
+            name: 'outubro de 2026',
+            starts_on: '2026-10-01',
+            ends_on: '2026-11-01',
+            days_left: 23,
+          },
+          top: [entry(1, ana)],
+          me: entry(7, me, true),
+          total_players: 20,
+        }
       }
       if (path === '/ranking/friends') return { entries: [entry(1, me, true)] }
       if (path.startsWith('/ranking/accuracy')) {
@@ -130,6 +143,13 @@ describe('RankingPage', () => {
       'Precisão',
       'Amigos',
     ])
+  })
+
+  it('shows the season and when it ends', async () => {
+    renderPage()
+    const season = await screen.findByRole('region', { name: 'Temporada' })
+    expect(season).toHaveTextContent('Temporada de outubro de 2026 · termina em 23 dias')
+    expect(season).toHaveTextContent(/XP, nível e o ranking de XP recomeçam/)
   })
 
   it('opens the profile of the player tapped in the ranking', async () => {

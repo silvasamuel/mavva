@@ -28,6 +28,22 @@ export interface User {
 
 // --- Social: friends and duels ---
 
+export interface RankRef {
+  code: string
+  name: string
+}
+
+/** A calendar month: XP, level and the leaderboards restart when it ends. */
+export interface Season {
+  number: number
+  /** "outubro de 2026" */
+  name: string
+  starts_on: string
+  /** First day of the next season (exclusive). */
+  ends_on: string
+  days_left: number
+}
+
 export interface PublicUser {
   id: string
   username: string
@@ -61,6 +77,10 @@ export interface PlayerProfile {
     accuracy: number | null
     perfect_sessions: number
   }
+  /** Highest rank ever reached, this season included. */
+  best_rank: RankRef
+  /** Where the player finished last season; null if they didn't play it. */
+  last_season_rank: RankRef | null
   achievements_unlocked: number
   achievements_total: number
   recent_achievements: { code: string; name: string }[]
@@ -93,6 +113,7 @@ export interface LeaderboardEntry {
 }
 
 export interface GlobalLeaderboard {
+  season: Season
   top: LeaderboardEntry[]
   me: LeaderboardEntry
   total_players: number
@@ -297,7 +318,10 @@ export interface DashboardData {
     accuracy: number | null
     perfect_sessions: number
     total_time_seconds: number
+    best_rank: RankRef
+    last_season_rank: RankRef | null
   }
+  season: Season
   daily_goal: { target: number; earned_today: number; achieved: boolean }
   evolution: { date: string; xp: number; questions: number; correct: number }[]
   categories: {

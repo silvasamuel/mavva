@@ -124,8 +124,8 @@ export function UserDetail({
             </Section>
 
             <Section title="Progresso">
-              <Row label="Nível" value={String(data.level)} />
-              <Row label="XP total" value={String(data.total_xp)} />
+              <Row label="Nível na temporada" value={String(data.level)} />
+              <Row label="XP na temporada" value={String(data.total_xp)} />
               <Row
                 label="Streak atual"
                 value={

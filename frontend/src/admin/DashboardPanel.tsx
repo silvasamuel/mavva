@@ -100,9 +100,9 @@ export function DashboardPanel({
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           <MiniStat label="Perguntas respondidas" value={activity.questions_answered} nested />
           <MiniStat label="Precisão geral" value={formatPercent(activity.accuracy)} nested />
-          <MiniStat label="XP acumulado" value={activity.total_xp} nested />
+          <MiniStat label="XP na temporada" value={activity.total_xp} nested />
           <MiniStat label="Recorde de streak" value={`${fmt(activity.longest_streak)} dias`} nested />
-          <MiniStat label="Nível mais alto" value={activity.max_level} nested />
+          <MiniStat label="Nível mais alto na temporada" value={activity.max_level} nested />
           <MiniStat
             label="Duelos"
             value={`${fmt(activity.duels_finished)} encerrados`}

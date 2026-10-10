@@ -115,7 +115,11 @@ resposta correta não pode ser inferida chamando a API diretamente.
 {
   "stats": { "total_xp": 1240, "level": 6, "xp_into_level": 40, "xp_for_next_level": 175,
              "current_streak": 12, "longest_streak": 21, "questions_answered": 342,
-             "accuracy": 0.87, "total_time_seconds": 15600 },
+             "accuracy": 0.87, "total_time_seconds": 15600,
+             "best_rank": { "code": "videira", "name": "Videira" },  // maior elo já conquistado
+             "last_season_rank": { "code": "broto", "name": "Broto" } },  // null se não jogou
+  "season": { "number": 2, "name": "outubro de 2026", "starts_on": "2026-10-01",
+              "ends_on": "2026-11-01", "days_left": 23 },
   "daily_goal": { "target": 50, "earned_today": 30, "achieved": false },
   "evolution": [ { "date": "2026-07-01", "xp": 60, "questions": 12 }, /* 30 dias */ ],
   "categories": [ { "id": 1, "slug": "personagens", "name": "Personagens", "icon": "👤",
@@ -174,15 +178,34 @@ pergunta — o agendamento já feito não muda, como no Anki. O badge do dashboa
 
 | Método | Rota | Descrição |
 |---|---|---|
-| GET | `/ranking/global` | `{top, me, total_players}`: top 10 por XP (empate desempata pelo username), a posição de quem pede (`me`, mesmo fora do top) e o total de jogadores. Contas inativas não entram no top, na posição nem no total. |
+| GET | `/ranking/global` | `{season, top, me, total_players}`: `season` é a temporada atual (ver abaixo); top 10 por XP (empate desempata pelo username), a posição de quem pede (`me`, mesmo fora do top) e o total de jogadores. Contas inativas não entram no top, na posição nem no total. |
 | GET | `/ranking/friends` | `{entries}`: você e seus amigos ordenados por XP. Amigos com conta inativa ficam de fora. |
 | GET | `/ranking/accuracy?elo=` | `{elo, elos, min_rank, min_level, eligible, top, me, total_players}`: top 10 por precisão geral (`correct_answers / questions_answered` de toda a vida, `accuracy` de 0 a 1). Só entra quem tem conta ativa e já chegou ao elo **Espiga** (nível 11, `min_rank`/`min_level`) — com 3.250 XP no mínimo, 3 de 3 (100%) não lidera. `elo` (opcional: `espiga`, `videira`, `oliveira`, `cedro`, `celeiro`, listados em `elos`) restringe a um elo pelo nível atual; sem ele, valem todos a partir do Espiga. Outro valor → 422. Empate em precisão desempata por mais respostas e depois pelo username. `me` é a sua posição no recorte (mesmo fora do top) ou `null` se você está abaixo do Espiga ou em outro elo; `eligible` diz se você já chegou ao Espiga; `total_players` conta só quem está no recorte. |
+
+### Temporadas
+
+Cada temporada é um mês do calendário (horário de Brasília). No dia 1º, **XP, nível e os
+dois rankings recomeçam do zero** para todos. Conquistas, sequências, duelos e precisão são
+da vida toda e não mudam.
+
+- Não há agendador: a primeira requisição autenticada depois da virada fecha a temporada
+  (`deps.get_current_user` → `season_service.ensure_current_season`). Um advisory lock do
+  Postgres garante que só uma requisição faz isso; as outras esperam e já encontram a nova.
+- Ao fechar, `season_results` guarda onde cada jogador que ganhou XP terminou (XP, nível,
+  elo e posição — `null` para contas inativas, que não aparecem no ranking), e `user_stats`
+  guarda `best_level` (maior nível já alcançado) e `last_season_level` (`null` se não jogou).
+  Tudo em `INSERT … SELECT` + `UPDATE` únicos, sem laço por jogador.
+- `season`: `{number, name, starts_on, ends_on, days_left}` — `ends_on` é o primeiro dia da
+  próxima temporada (exclusivo).
+- `best_rank` / `last_season_rank` aparecem no dashboard (`stats`) e no perfil público.
+- A primeira temporada é o mês em que o deploy entrou: o XP de antes conta para ela, e o
+  primeiro reset acontece no dia 1º do mês seguinte.
 
 ## Jogadores
 
 | Método | Rota | Descrição |
 |---|---|---|
-| GET | `/players/{id}` | Perfil público de outro jogador — aberto pelo ranking e pela lista de amigos. Qualquer jogador logado pode ver (o ranking global já mostra desconhecidos). Devolve `user` (`PublicUser`), `relation` (`self`/`friends`/`pending_sent`/`pending_received`/`none`), `member_since` (`"YYYY-MM"`, só o mês), `stats` (XP total, sequência atual/recorde, respondidas, precisão, sessões perfeitas), `achievements_unlocked`/`achievements_total`, `recent_achievements` (até 4, mais recentes primeiro, sem data) e `strongest_categories` (até 3, só com ≥ 5 respostas). **Nunca** inclui e-mail, fuso, meta diária, papel, datas de atividade ou de desbloqueio, nem quanto falta para o próximo nível. 404 para id desconhecido ou conta inativa (igual ao ranking). |
+| GET | `/players/{id}` | Perfil público de outro jogador — aberto pelo ranking e pela lista de amigos. Qualquer jogador logado pode ver (o ranking global já mostra desconhecidos). Devolve `user` (`PublicUser`), `relation` (`self`/`friends`/`pending_sent`/`pending_received`/`none`), `member_since` (`"YYYY-MM"`, só o mês), `stats` (XP total, sequência atual/recorde, respondidas, precisão, sessões perfeitas), `achievements_unlocked`/`achievements_total`, `recent_achievements` (até 4, mais recentes primeiro, sem data) e `strongest_categories` (até 3, só com ≥ 5 respostas), `best_rank` (maior elo já conquistado, temporada atual inclusa) e `last_season_rank` (elo em que terminou a temporada passada; `null` se não jogou). **Nunca** inclui e-mail, fuso, meta diária, papel, datas de atividade ou de desbloqueio, nem quanto falta para o próximo nível. 404 para id desconhecido ou conta inativa (igual ao ranking). |
 
 ## Duelos
 

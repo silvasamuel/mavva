@@ -6,7 +6,9 @@ import type { DashboardData, User } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Card, CardTitle } from '@/components/ui/Card'
 import { Input } from '@/components/ui/Input'
+import { EloTile } from '@/components/EloTile'
 import { RankBadge } from '@/components/RankBadge'
+import { formatSeasonEnd } from '@/lib/format'
 import { nextRankCopy, rankFromLevel, rankProgress } from '@/lib/ranks'
 import { Spinner } from '@/components/ui/Spinner'
 import { useAuth } from '@/features/auth/AuthContext'
@@ -87,6 +89,20 @@ export function ProfilePage() {
           )}
         </div>
       </header>
+
+      {dashboard && (
+        <Card className="space-y-3">
+          <CardTitle>Temporadas</CardTitle>
+          <p className="text-sm font-semibold text-sand-500">
+            Temporada de {dashboard.season.name} · {formatSeasonEnd(dashboard.season.days_left)}.
+            No dia 1º, XP, nível e o ranking de XP recomeçam — seus elos ficam aqui.
+          </p>
+          <dl className="grid grid-cols-2 gap-2">
+            <EloTile label="Maior elo" rank={dashboard.stats.best_rank} />
+            <EloTile label="Temporada passada" rank={dashboard.stats.last_season_rank} />
+          </dl>
+        </Card>
+      )}
 
       <Card className="space-y-4">
         <CardTitle>Seus dados</CardTitle>

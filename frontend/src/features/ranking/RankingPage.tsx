@@ -2,7 +2,7 @@ import { useState, type ReactNode } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { keepPreviousData, useQuery } from '@tanstack/react-query'
 import { api } from '@/lib/api'
-import { formatPercent } from '@/lib/format'
+import { formatPercent, formatSeasonEnd } from '@/lib/format'
 import type {
   AccuracyEntry,
   AccuracyLeaderboard,
@@ -10,12 +10,14 @@ import type {
   GlobalLeaderboard,
   LeaderboardEntry,
   PublicUser,
+  Season,
 } from '@/types/api'
 import { PlayerProfileModal } from '@/components/PlayerProfileModal'
 import { RankBadge } from '@/components/RankBadge'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
 import { Spinner } from '@/components/ui/Spinner'
+import { AppIcons, Glyph } from '@/lib/icons'
 
 type Tab = 'global' | 'friends' | 'accuracy'
 
@@ -24,6 +26,25 @@ function formatXp(xp: number): string {
 }
 
 type OpenPlayer = (user: PublicUser) => void
+
+function SeasonBanner({ season }: { season: Season }) {
+  return (
+    <section
+      aria-label="Temporada"
+      className="flex items-start gap-3 rounded-2xl bg-grain-50 px-4 py-3 ring-1 ring-grain-200"
+    >
+      <Glyph as={AppIcons.season} className="mt-0.5 h-5 w-5 shrink-0 text-grain-600" />
+      <div>
+        <p className="text-sm font-extrabold text-ink">
+          Temporada de {season.name} · {formatSeasonEnd(season.days_left)}
+        </p>
+        <p className="text-xs font-semibold text-sand-500">
+          No dia 1º, XP, nível e o ranking de XP recomeçam. Seu elo da temporada fica no perfil.
+        </p>
+      </div>
+    </section>
+  )
+}
 
 function PlayerRow({
   position,
@@ -288,6 +309,8 @@ export function RankingPage() {
           Quem lidera o Mavva em XP e em precisão.
         </p>
       </header>
+
+      {global.data && <SeasonBanner season={global.data.season} />}
 
       <nav className="flex gap-2" aria-label="Tipo de ranking">
         {(
