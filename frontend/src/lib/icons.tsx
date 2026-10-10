@@ -6,6 +6,7 @@ import {
   BookOpen,
   BookOpenText,
   Bread,
+  CalendarBlank,
   Campfire,
   ChartLineUp,
   CheckCircle,
@@ -116,6 +117,7 @@ export const AppIcons = {
   scroll: Scroll,
   cross: Cross,
   info: Info,
+  season: CalendarBlank,
 } as const
 
 const CATEGORY_BY_SLUG: Record<string, Icon> = {

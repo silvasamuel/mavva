@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { formatDays, formatPercent, formatStudyTime } from './format'
+import { formatDays, formatPercent, formatSeasonEnd, formatStudyTime } from './format'
 
 describe('formatStudyTime', () => {
   it('shows seconds under a minute', () => {
@@ -35,5 +35,14 @@ describe('formatDays', () => {
   it('rounds to years from a year on', () => {
     expect(formatDays(365)).toBe('~1 ano')
     expect(formatDays(800)).toBe('~2 anos')
+  })
+})
+
+describe('formatSeasonEnd', () => {
+  it('counts the days left and calls out the last one', () => {
+    expect(formatSeasonEnd(23)).toBe('termina em 23 dias')
+    expect(formatSeasonEnd(2)).toBe('termina em 2 dias')
+    expect(formatSeasonEnd(1)).toBe('último dia')
+    expect(formatSeasonEnd(0)).toBe('último dia')
   })
 })

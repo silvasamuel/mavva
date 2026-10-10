@@ -45,6 +45,8 @@ const joaoProfile: PlayerProfile = {
     accuracy: 0.8,
     perfect_sessions: 4,
   },
+  best_rank: { code: 'broto', name: 'Broto' },
+  last_season_rank: null,
   achievements_unlocked: 5,
   achievements_total: 32,
   recent_achievements: [],

@@ -19,7 +19,7 @@ from app.models import (
     UserStats,
 )
 from app.models.enums import DuelStatus, FriendshipStatus, QuizMode
-from app.services import srs
+from app.services import season_service, srs
 from app.services.duel_service import DUEL_XP
 from app.services.gamification import (
     effective_streak,
@@ -213,11 +213,22 @@ def get_dashboard(db: Session, user: User) -> dict[str, Any]:
     accuracy = (
         stats.correct_answers / stats.questions_answered if stats.questions_answered else None
     )
+    season_day = season_service.season_today()
+    season, _ = season_service.ensure_current_season(db, season_day)
+    season_ranks = season_service.ranks_for(stats)
     return {
+        "season": season_service.season_payload(season, season_day),
         "stats": {
             "total_xp": stats.total_xp,
             "level": level,
             "rank": rank_payload(level),
+            # Lifetime identity: the best rank ever and where last season ended.
+            "best_rank": {"code": season_ranks.best.code, "name": season_ranks.best.name},
+            "last_season_rank": (
+                {"code": season_ranks.last_season.code, "name": season_ranks.last_season.name}
+                if season_ranks.last_season
+                else None
+            ),
             "xp_into_level": xp_into_level,
             "xp_for_next_level": xp_for_next,
             "current_streak": effective_streak(stats, today),
