@@ -1,6 +1,7 @@
 import { isRankCode, type RankCode } from '@/lib/ranks'
 
 const SIZE = {
+  xs: 'h-5 w-5',
   sm: 'h-8 w-8',
   md: 'h-12 w-12',
   lg: 'h-16 w-16',

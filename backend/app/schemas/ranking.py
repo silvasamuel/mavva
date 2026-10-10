@@ -1,6 +1,7 @@
 from pydantic import BaseModel
 
 from app.schemas.social import PublicUser
+from app.schemas.user import RankOut
 
 
 class LeaderboardEntry(BaseModel):
@@ -30,8 +31,11 @@ class AccuracyEntry(BaseModel):
 
 
 class AccuracyLeaderboardOut(BaseModel):
+    elo: str | None  # the elo filter applied; null = every elo from min_rank up
+    elos: list[RankOut]  # the elos that can be picked, min_rank first
+    min_rank: RankOut  # below it (Espiga), players don't enter the board
+    min_level: int
+    eligible: bool  # the caller reached min_rank
     top: list[AccuracyEntry]
-    me: AccuracyEntry | None  # null until my_answers reaches min_answers
-    my_answers: int
-    min_answers: int
-    total_players: int  # only players who reached min_answers
+    me: AccuracyEntry | None  # null below min_rank or outside the chosen elo
+    total_players: int  # in the chosen elo
