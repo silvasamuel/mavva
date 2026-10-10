@@ -99,7 +99,7 @@ export function ProfilePage() {
           </p>
           <dl className="grid grid-cols-2 gap-2">
             <EloTile label="Maior elo" rank={dashboard.stats.best_rank} />
-            <EloTile label="Temporada passada" rank={dashboard.stats.last_season_rank} />
+            <EloTile label="Mês passado" rank={dashboard.stats.last_season_rank} />
           </dl>
         </Card>
       )}

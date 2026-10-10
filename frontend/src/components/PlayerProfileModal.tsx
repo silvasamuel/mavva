@@ -101,7 +101,7 @@ function ProfileBody({ profile }: { profile: PlayerProfile }) {
 
       <dl aria-label="Elos" className="grid grid-cols-2 gap-2">
         <EloTile label="Maior elo" rank={profile.best_rank} />
-        <EloTile label="Temporada passada" rank={profile.last_season_rank} />
+        <EloTile label="Mês passado" rank={profile.last_season_rank} />
       </dl>
 
       <dl className="grid grid-cols-2 gap-2">
@@ -223,7 +223,7 @@ function ProfileSkeleton({ user }: { user?: PublicUser }) {
 
       <div className="grid grid-cols-2 gap-2">
         {[0, 1].map((index) => (
-          <span key={index} className="block h-[3.25rem] animate-pulse rounded-2xl bg-sand-50" />
+          <span key={index} className="block h-[5.75rem] animate-pulse rounded-2xl bg-sand-50" />
         ))}
       </div>
 
