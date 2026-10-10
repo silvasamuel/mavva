@@ -49,6 +49,7 @@ function makeUser(overrides: Partial<User> = {}): User {
     review_order: 'oldest',
     review_session_size: 10,
     review_max_interval_days: null,
+    tutorial_completed: true,
     ...overrides,
   }
 }

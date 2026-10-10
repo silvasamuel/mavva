@@ -29,9 +29,16 @@ Erros seguem o formato `{"detail": "mensagem"}` (padrão FastAPI) com status HTT
 
 | Método | Rota | Descrição |
 |---|---|---|
-| GET | `/users/me` | Perfil do usuário logado. |
+| GET | `/users/me` | Perfil do usuário logado. Inclui `tutorial_completed` (bool). |
 | PATCH | `/users/me` | Atualiza `name`, `daily_goal_xp`, `timezone`. |
+| POST | `/users/me/tutorial` | Marca o tutorial do primeiro login como visto (concluído ou pulado). Sem body. Idempotente: mantém a primeira data. Retorna o usuário atualizado. |
 | DELETE | `/users/me` | Apaga a conta. Body: `{password}`. 403 se a senha estiver errada. 204 + limpa o cookie. Perfil confirma com senha + digitar "APAGAR". |
+
+`tutorial_completed` também vem no `user` de `/auth/login` e `/auth/verify-email`. É
+`false` só para quem se cadastrou depois do lançamento do tutorial (a migration marcou
+todas as contas existentes como concluídas). O app mostra o tutorial enquanto for
+`false`; pular ou terminar chama `POST /users/me/tutorial`, então ele não volta em
+nenhum aparelho. "Rever tutorial" no Perfil abre de novo só no cliente, sem chamar a API.
 
 ## Catálogo
 

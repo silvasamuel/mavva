@@ -45,6 +45,52 @@ class TestReviewPreferences:
         assert response.status_code == 400
 
 
+class TestTutorial:
+    def test_new_user_starts_without_the_tutorial(self, client: TestClient, db: Session):
+        session = _register(client, "novato@teste.com")
+        assert session["user"]["tutorial_completed"] is False
+
+        me = client.get(
+            "/api/v1/users/me", headers={"Authorization": f"Bearer {session['access_token']}"}
+        )
+        assert me.status_code == 200
+        assert me.json()["tutorial_completed"] is False
+        user = db.scalar(select(User).where(User.email == "novato@teste.com"))
+        assert user is not None
+        assert user.tutorial_completed_at is None
+
+    def test_complete_marks_it_and_is_idempotent(self, auth_client: TestClient, db: Session):
+        done = auth_client.post("/api/v1/users/me/tutorial")
+        assert done.status_code == 200, done.text
+        assert done.json()["tutorial_completed"] is True
+        assert done.json()["email"] == "samuel@teste.com"
+
+        user = db.scalar(select(User).where(User.email == "samuel@teste.com"))
+        assert user is not None
+        first = user.tutorial_completed_at
+        assert first is not None
+
+        again = auth_client.post("/api/v1/users/me/tutorial")
+        assert again.status_code == 200
+        assert again.json()["tutorial_completed"] is True
+        db.refresh(user)
+        assert user.tutorial_completed_at == first
+
+        assert auth_client.get("/api/v1/users/me").json()["tutorial_completed"] is True
+
+    def test_login_returns_the_flag(self, auth_client: TestClient, client: TestClient):
+        auth_client.post("/api/v1/users/me/tutorial")
+        login = client.post(
+            "/api/v1/auth/login",
+            json={"email": "samuel@teste.com", "password": "senha-forte-123"},
+        )
+        assert login.status_code == 200
+        assert login.json()["user"]["tutorial_completed"] is True
+
+    def test_complete_requires_auth(self, client: TestClient):
+        assert client.post("/api/v1/users/me/tutorial").status_code == 401
+
+
 class TestAccountExportRemoved:
     """Self-service export moved to the admin panel — see test_admin.py's
     TestAdminUserExport. The route should no longer answer here at all."""

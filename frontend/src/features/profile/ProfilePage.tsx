@@ -11,6 +11,7 @@ import { nextRankCopy, rankFromLevel, rankProgress } from '@/lib/ranks'
 import { Spinner } from '@/components/ui/Spinner'
 import { useAuth } from '@/features/auth/AuthContext'
 import { LegalLinks } from '@/features/legal/LegalLinks'
+import { TutorialDialog } from '@/features/tutorial/TutorialDialog'
 import { AccountRights } from './AccountRights'
 
 const GOAL_OPTIONS = [
@@ -32,6 +33,7 @@ export function ProfilePage() {
   const [dailyGoal, setDailyGoal] = useState(user?.daily_goal_xp ?? 50)
   const [message, setMessage] = useState('')
   const [error, setError] = useState('')
+  const [tutorialOpen, setTutorialOpen] = useState(false)
 
   const save = useMutation({
     mutationFn: () =>
@@ -128,6 +130,24 @@ export function ProfilePage() {
           Salvar
         </Button>
       </Card>
+
+      <Card className="space-y-4">
+        <CardTitle>Tutorial</CardTitle>
+        <p className="text-sm font-semibold text-sand-600">
+          Veja de novo, em poucos passos, como funcionam o maná do dia, os estudos, a revisão e os
+          duelos.
+        </p>
+        <Button variant="secondary" full onClick={() => setTutorialOpen(true)}>
+          Rever tutorial
+        </Button>
+      </Card>
+      {/* Replays locally only: the server already has it as done. */}
+      <TutorialDialog
+        open={tutorialOpen}
+        onClose={() => setTutorialOpen(false)}
+        firstName={user?.name.split(' ')[0]}
+        replay
+      />
 
       <AccountRights />
 
