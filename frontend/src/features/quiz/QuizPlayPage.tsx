@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { api, ApiError } from '@/lib/api'
 import type {
   AnswerFeedback,
@@ -16,7 +16,7 @@ import { Spinner } from '@/components/ui/Spinner'
 import { ProgressBar } from '@/components/ui/ProgressBar'
 import { GameHud } from '@/components/GameHud'
 import { DIFFICULTY_LABELS } from '@/lib/format'
-import { playCorrect, playWrong } from '@/lib/sfx'
+import { playCombo, playCorrect, playWrong } from '@/lib/sfx'
 import { AppIcons, CategoryGlyph, Glyph } from '@/lib/icons'
 import { ReportQuestionModal } from '@/features/moderation/ReportQuestionModal'
 
@@ -31,6 +31,7 @@ export function QuizPlayPage() {
   const { sessionId } = useParams<{ sessionId: string }>()
   const navigate = useNavigate()
   const queryClient = useQueryClient()
+  const reduceMotion = useReducedMotion()
 
   const { data: session, isLoading } = useQuery({
     queryKey: ['quiz', sessionId],
@@ -61,6 +62,8 @@ export function QuizPlayPage() {
   // Wrong/answered beyond what the session snapshot knew at load time.
   const [extraWrong, setExtraWrong] = useState(0)
   const [extraAnswered, setExtraAnswered] = useState(0)
+  // Combo on the top-bar badge; null = still the session snapshot's.
+  const [combo, setCombo] = useState<number | null>(null)
   const questionStartedAt = useRef(Date.now())
   const feedbackRef = useRef<AnswerFeedback | null>(null)
   const submittedIds = useRef(new Set<string>())
@@ -91,8 +94,10 @@ export function QuizPlayPage() {
         ),
       }),
     onSuccess: (result) => {
-      if (result.is_correct) playCorrect()
-      else playWrong()
+      if (!result.is_correct) playWrong()
+      // From the 3rd hit in a row a rising combo cue replaces the plain chime.
+      else if (result.combo >= 3) playCombo(result.combo)
+      else playCorrect()
       setFeedback(result)
       setExtraAnswered((count) => count + 1)
       if (!result.is_correct) setExtraWrong((count) => count + 1)
@@ -107,6 +112,7 @@ export function QuizPlayPage() {
         await queryClient.invalidateQueries({ queryKey: ['quiz', sessionId] })
         setIndex(null)
         setFeedback(null)
+        setCombo(null)
         setTimedOut(false)
         setSelectedOption(null)
         setAnswerText('')
@@ -207,6 +213,9 @@ export function QuizPlayPage() {
 
   const handleNext = useCallback(() => {
     if (completeQuiz.isPending) return
+    // The badge catches up only now, so its pop (or fade) happens in view
+    // instead of behind the splash.
+    if (feedback) setCombo(feedback.combo)
     setFeedback(null)
     setTimedOut(false)
     setSelectedOption(null)
@@ -219,7 +228,7 @@ export function QuizPlayPage() {
     } else {
       setIndex(currentIndex + 1)
     }
-  }, [completeQuiz, isLast, currentIndex])
+  }, [completeQuiz, isLast, currentIndex, feedback])
 
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
@@ -295,6 +304,9 @@ export function QuizPlayPage() {
   const answeredSoFar = session.answered_count + extraAnswered
   const timerUrgent = remaining !== null && remaining <= 5
   const questionNumber = Math.min(currentIndex + 1, session.question_count)
+  const comboShown = combo ?? session.combo ?? 0
+  const comboBonus = feedback?.combo_bonus_xp ?? 0
+  const baseXp = (feedback?.xp_earned ?? 0) - comboBonus
 
     return (
     <>
@@ -322,6 +334,33 @@ export function QuizPlayPage() {
           ✕
         </button>
         <ProgressBar value={answeredSoFar} max={session.question_count} className="h-5 flex-1" />
+        {/* Hits in a row: pops when it grows, fades out calmly when a miss resets it. */}
+        <AnimatePresence initial={false}>
+          {comboShown >= 2 && (
+            <motion.span
+              key="combo"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0, transition: { duration: reduceMotion ? 0 : 0.4 } }}
+              title="Acertos seguidos"
+              className="shrink-0 whitespace-nowrap rounded-full bg-grain-100 px-2 py-1 text-sm font-extrabold tabular-nums text-grain-700"
+            >
+              {/* Remounts on every new value, which replays the pop. */}
+              <motion.span
+                key={comboShown}
+                initial={reduceMotion ? false : { scale: 1.5 }}
+                animate={{ scale: 1 }}
+                transition={{ type: 'spring', stiffness: 500, damping: 14 }}
+                className="flex items-center gap-0.5"
+                aria-hidden
+              >
+                <Glyph as={AppIcons.streak} className="h-4 w-4" />
+                x{comboShown}
+              </motion.span>
+              <span className="sr-only">Combo de {comboShown} acertos seguidos</span>
+            </motion.span>
+          )}
+        </AnimatePresence>
         {timerSeconds != null && (
           <motion.span
             key={timerUrgent ? 'urgent' : 'calm'}
@@ -496,15 +535,37 @@ export function QuizPlayPage() {
               >
                 {feedback.is_correct ? 'Correto!' : timedOut ? 'Tempo!' : 'Errou'}
               </motion.p>
-              {feedback.xp_earned !== 0 && (
+              {feedback.combo >= 3 && (
                 <motion.p
-                  initial={{ opacity: 0, y: 8 }}
+                  initial={{ opacity: 0, scale: reduceMotion ? 1 : 0.7 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={
+                    reduceMotion
+                      ? { delay: 0.1 }
+                      : { delay: 0.1, type: 'spring', stiffness: 420, damping: 14 }
+                  }
+                  className="mx-auto flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-lg font-extrabold text-grain-200"
+                >
+                  <Glyph as={AppIcons.streak} className="h-5 w-5" />
+                  {`Combo x${feedback.combo}`}
+                </motion.p>
+              )}
+              {feedback.xp_earned !== 0 && (
+                <motion.div
+                  initial={{ opacity: 0, y: reduceMotion ? 0 : 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.15 }}
-                  className="text-center text-2xl font-extrabold text-grain-200"
+                  className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1"
                 >
-                  {feedback.xp_earned > 0 ? `+${feedback.xp_earned}` : feedback.xp_earned} XP
-                </motion.p>
+                  <p className="text-2xl font-extrabold text-grain-200">
+                    {baseXp > 0 ? `+${baseXp}` : baseXp} XP
+                  </p>
+                  {comboBonus > 0 && (
+                    <p className="rounded-full bg-grain-200 px-2.5 py-0.5 text-sm font-extrabold text-leaf-800">
+                      +{comboBonus} XP de combo
+                    </p>
+                  )}
+                </motion.div>
               )}
               {!feedback.is_correct && feedback.correct_answer && (
                 <p className="text-center text-lg font-extrabold">

@@ -51,8 +51,8 @@ nenhum aparelho. "Rever tutorial" no Perfil abre de novo só no cliente, sem cha
 | Método | Rota | Descrição |
 |---|---|---|
 | POST | `/quizzes` | Cria sessão. Body: `{mode, question_count, testament?, category_ids?: int[], difficulty?, timer_seconds?: 15\|30}`. Sorteia e congela as perguntas (fila inteligente). `mode=review` ignora filtros e puxa da fila SRS. |
-| GET | `/quizzes/{id}` | Estado da sessão + perguntas (**sem** gabarito: opções vêm sem `is_correct`; abertas vêm sem respostas aceitas). Inclui `timer_seconds`. |
-| POST | `/quizzes/{id}/answers` | Responde uma pergunta. Body: `{question_id, selected_option_id?, answer_text?, timed_out?, time_spent_seconds}`. `timed_out=true` (tempo estourado) conta como erro. Retorna correção + explicação + referência. |
+| GET | `/quizzes/{id}` | Estado da sessão + perguntas (**sem** gabarito: opções vêm sem `is_correct`; abertas vêm sem respostas aceitas). Inclui `timer_seconds` e `combo` (acertos seguidos até agora — retomar a sessão mantém o combo). |
+| POST | `/quizzes/{id}/answers` | Responde uma pergunta. Body: `{question_id, selected_option_id?, answer_text?, timed_out?, time_spent_seconds}`. `timed_out=true` (tempo estourado) conta como erro. Retorna correção + explicação + referência + `combo`/`combo_bonus_xp` (ver **Combo**). |
 | POST | `/quizzes/{id}/complete` | Fecha a sessão: consolida XP (+bônus), atualiza stats/streak/atividade diária, agenda SRS, avalia conquistas. Retorna o resumo. |
 | POST | `/quizzes/{id}/abandon` | Abandona a sessão sem terminar: aplica **apenas** as penalidades das respostas erradas e descarta o XP ganho (streak não conta). Retorna `{answered_count, wrong_count, xp_penalty}`. |
 | GET | `/quizzes?limit=5` | Histórico de sessões concluídas — **máximo de 5 itens** (teto da API). |
@@ -66,7 +66,9 @@ nenhum aparelho. "Rever tutorial" no Perfil abre de novo só no cliente, sem cha
   "explanation": "Melquisedeque, rei de Salém e sacerdote do Deus Altíssimo…",
   "reference": { "book": "genesis", "book_name": "Gênesis", "chapter": 14, "verse_start": 18, "verse_end": 20, "display": "Gênesis 14:18-20" },
   "divergence_note": null,
-  "xp_earned": 15
+  "xp_earned": 22,                     // já inclui combo_bonus_xp
+  "combo": 4,                          // acertos seguidos nesta sessão, contando esta
+  "combo_bonus_xp": 2
 }
 
 // 200 POST /quizzes/{id}/complete
@@ -76,9 +78,25 @@ nenhum aparelho. "Rever tutorial" no Perfil abre de novo só no cliente, sem cha
   "level": { "current": 4, "leveled_up": true, "xp_into_level": 30, "xp_for_next": 125 },
   "streak": { "current": 12, "extended_today": true },
   "daily_goal": { "target": 50, "earned_today": 145, "achieved": true },
+  "best_combo": 6,                     // maior sequência de acertos da sessão
   "unlocked_achievements": [ { "code": "streak_7", "name": "Uma semana no deserto", "icon": "🔥" } ]
 }
 ```
+
+**Combo:** acertos seguidos na sessão atual, contando a resposta atual. Erro ou
+tempo estourado zera. A partir do 3º acerto seguido, cada acerto paga um bônus de
+`min(combo − 2, 5)` XP além do XP normal (`gamification.combo_bonus_xp`):
+
+| Combo | 1–2 | 3 | 4 | 5 | 6 | 7+ |
+|---|---|---|---|---|---|---|
+| Bônus | 0 | +1 | +2 | +3 | +4 | +5 |
+
+O bônus entra no `xp_earned` da resposta (e por isso no XP da sessão, no total e na
+atividade do dia ao concluir — uma vez só); uma sessão perfeita de 10 perguntas ganha
+no máximo +30 XP de combo. Abandonar descarta o bônus junto com o resto do XP ganho.
+Em **duelos** o combo é contado e devolvido, mas o bônus é sempre 0 (respostas de
+duelo não pagam XP). O servidor calcula o combo a partir das respostas gravadas, em
+ordem de resposta — o cliente nunca informa o combo.
 
 **Regra anti-fraude:** o gabarito nunca trafega antes da resposta; a correção acontece
 exclusivamente no backend, que também valida que `question_id` pertence à sessão e

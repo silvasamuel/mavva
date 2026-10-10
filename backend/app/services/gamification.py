@@ -1,6 +1,7 @@
 """XP, level curve, streak and daily-activity rules. Every rule here has a unit test."""
 
 import uuid
+from collections.abc import Iterable
 from dataclasses import dataclass
 from datetime import UTC, date, datetime, timedelta
 from zoneinfo import ZoneInfo
@@ -30,6 +31,25 @@ def xp_for_answer(difficulty: Difficulty, is_correct: bool) -> int:
     """
     base = XP_BY_DIFFICULTY[difficulty]
     return base if is_correct else -(base // 2)
+
+
+def combo_counts(results: Iterable[bool]) -> list[int]:
+    """Combo after each answer, in answer order: a hit extends it, a miss resets it to 0."""
+    counts: list[int] = []
+    combo = 0
+    for is_correct in results:
+        combo = combo + 1 if is_correct else 0
+        counts.append(combo)
+    return counts
+
+
+def combo_bonus_xp(combo: int) -> int:
+    """Extra XP on top of a hit: +1 at 3 in a row, +2 at 4, … capped at +5.
+
+    Kept small on purpose: a perfect 10-question session earns at most +30 XP
+    from combos (1+2+3+4+5+5+5+5), next to 100-500 XP of base value.
+    """
+    return max(0, min(combo - 2, 5))
 
 
 def xp_to_advance(level: int) -> int:

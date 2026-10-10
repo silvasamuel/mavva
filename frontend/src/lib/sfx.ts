@@ -48,6 +48,16 @@ export function playCorrect() {
   beep(783.99, 0.14, 'triangle', 0.08, 0.07)
 }
 
+/** A hit on a combo (3+ in a row): the correct chime climbing a semitone per
+ *  extra hit (capped), with a high sparkle so the run is heard. */
+export function playCombo(combo: number) {
+  const lift = 2 ** (Math.min(Math.max(combo - 3, 0), 4) / 12)
+  haptic([10, 30, 14])
+  beep(523.25 * lift, 0.07, 'triangle', 0.07)
+  beep(783.99 * lift, 0.08, 'triangle', 0.08, 0.06)
+  beep(1046.5 * lift, 0.14, 'sine', 0.06, 0.12)
+}
+
 export function playWrong() {
   haptic([28, 40, 28])
   beep(196, 0.2, 'sawtooth', 0.045)

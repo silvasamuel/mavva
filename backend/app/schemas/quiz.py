@@ -54,6 +54,7 @@ class QuizSessionOut(BaseModel):
     completed: bool
     timer_seconds: int | None
     duel_id: uuid.UUID | None = None  # set when this round belongs to a duel
+    combo: int  # hits in a row so far, so a reload keeps the badge
     filters: dict[str, Any]
     questions: list[QuestionOut]
 
@@ -97,7 +98,9 @@ class AnswerFeedback(BaseModel):
     explanation: str
     divergence_note: str | None
     reference: BibleReference
-    xp_earned: int
+    xp_earned: int  # combo_bonus_xp included
+    combo: int  # hits in a row in this session, this answer included; a miss resets it to 0
+    combo_bonus_xp: int  # always 0 in duels
 
 
 class LevelInfo(BaseModel):
@@ -144,6 +147,7 @@ class QuizCompleteResponse(BaseModel):
     rank: RankInfo
     streak: StreakInfo
     daily_goal: DailyGoalInfo
+    best_combo: int  # longest run of hits in the session
     unlocked_achievements: list[UnlockedAchievement]
 
 
