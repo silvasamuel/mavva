@@ -44,6 +44,11 @@ class TestListXp:
         session = _session(correct=[Difficulty.EASY], wrong=[Difficulty.EXPERT])
         assert list_xp(session) == -10
 
+    def test_study_adds_combo_bonuses_in_answer_order(self):
+        # 4 medium hits in a row (+80, combos +1 +2) then a miss (-10), +5 completion → 78.
+        session = _session(correct=[Difficulty.MEDIUM] * 4, wrong=[Difficulty.MEDIUM])
+        assert list_xp(session) == 78
+
     def test_duel_uses_stored_xp_not_per_answer(self):
         session = _session(
             correct=[Difficulty.HARD],

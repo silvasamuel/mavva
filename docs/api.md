@@ -29,9 +29,16 @@ Erros seguem o formato `{"detail": "mensagem"}` (padrão FastAPI) com status HTT
 
 | Método | Rota | Descrição |
 |---|---|---|
-| GET | `/users/me` | Perfil do usuário logado. |
+| GET | `/users/me` | Perfil do usuário logado. Inclui `tutorial_completed` (bool). |
 | PATCH | `/users/me` | Atualiza `name`, `daily_goal_xp`, `timezone`. |
+| POST | `/users/me/tutorial` | Marca o tutorial do primeiro login como visto (concluído ou pulado). Sem body. Idempotente: mantém a primeira data. Retorna o usuário atualizado. |
 | DELETE | `/users/me` | Apaga a conta. Body: `{password}`. 403 se a senha estiver errada. 204 + limpa o cookie. Perfil confirma com senha + digitar "APAGAR". |
+
+`tutorial_completed` também vem no `user` de `/auth/login` e `/auth/verify-email`. É
+`false` só para quem se cadastrou depois do lançamento do tutorial (a migration marcou
+todas as contas existentes como concluídas). O app mostra o tutorial enquanto for
+`false`; pular ou terminar chama `POST /users/me/tutorial`, então ele não volta em
+nenhum aparelho. "Rever tutorial" no Perfil abre de novo só no cliente, sem chamar a API.
 
 ## Catálogo
 
@@ -44,8 +51,8 @@ Erros seguem o formato `{"detail": "mensagem"}` (padrão FastAPI) com status HTT
 | Método | Rota | Descrição |
 |---|---|---|
 | POST | `/quizzes` | Cria sessão. Body: `{mode, question_count, testament?, category_ids?: int[], difficulty?, timer_seconds?: 15\|30}`. Sorteia e congela as perguntas (fila inteligente). `mode=review` ignora filtros e puxa da fila SRS. |
-| GET | `/quizzes/{id}` | Estado da sessão + perguntas (**sem** gabarito: opções vêm sem `is_correct`; abertas vêm sem respostas aceitas). Inclui `timer_seconds`. |
-| POST | `/quizzes/{id}/answers` | Responde uma pergunta. Body: `{question_id, selected_option_id?, answer_text?, timed_out?, time_spent_seconds}`. `timed_out=true` (tempo estourado) conta como erro. Retorna correção + explicação + referência. |
+| GET | `/quizzes/{id}` | Estado da sessão + perguntas (**sem** gabarito: opções vêm sem `is_correct`; abertas vêm sem respostas aceitas). Inclui `timer_seconds` e `combo` (acertos seguidos até agora — retomar a sessão mantém o combo). |
+| POST | `/quizzes/{id}/answers` | Responde uma pergunta. Body: `{question_id, selected_option_id?, answer_text?, timed_out?, time_spent_seconds}`. `timed_out=true` (tempo estourado) conta como erro. Retorna correção + explicação + referência + `combo`/`combo_bonus_xp` (ver **Combo**). |
 | POST | `/quizzes/{id}/complete` | Fecha a sessão: consolida XP (+bônus), atualiza stats/streak/atividade diária, agenda SRS, avalia conquistas. Retorna o resumo. |
 | POST | `/quizzes/{id}/abandon` | Abandona a sessão sem terminar: aplica **apenas** as penalidades das respostas erradas e descarta o XP ganho (streak não conta). Retorna `{answered_count, wrong_count, xp_penalty}`. |
 | GET | `/quizzes?limit=5` | Histórico de sessões concluídas — **máximo de 5 itens** (teto da API). |
@@ -59,7 +66,9 @@ Erros seguem o formato `{"detail": "mensagem"}` (padrão FastAPI) com status HTT
   "explanation": "Melquisedeque, rei de Salém e sacerdote do Deus Altíssimo…",
   "reference": { "book": "genesis", "book_name": "Gênesis", "chapter": 14, "verse_start": 18, "verse_end": 20, "display": "Gênesis 14:18-20" },
   "divergence_note": null,
-  "xp_earned": 15
+  "xp_earned": 22,                     // já inclui combo_bonus_xp
+  "combo": 4,                          // acertos seguidos nesta sessão, contando esta
+  "combo_bonus_xp": 2
 }
 
 // 200 POST /quizzes/{id}/complete
@@ -69,9 +78,25 @@ Erros seguem o formato `{"detail": "mensagem"}` (padrão FastAPI) com status HTT
   "level": { "current": 4, "leveled_up": true, "xp_into_level": 30, "xp_for_next": 125 },
   "streak": { "current": 12, "extended_today": true },
   "daily_goal": { "target": 50, "earned_today": 145, "achieved": true },
+  "best_combo": 6,                     // maior sequência de acertos da sessão
   "unlocked_achievements": [ { "code": "streak_7", "name": "Uma semana no deserto", "icon": "🔥" } ]
 }
 ```
+
+**Combo:** acertos seguidos na sessão atual, contando a resposta atual. Erro ou
+tempo estourado zera. A partir do 3º acerto seguido, cada acerto paga um bônus de
+`min(combo − 2, 5)` XP além do XP normal (`gamification.combo_bonus_xp`):
+
+| Combo | 1–2 | 3 | 4 | 5 | 6 | 7+ |
+|---|---|---|---|---|---|---|
+| Bônus | 0 | +1 | +2 | +3 | +4 | +5 |
+
+O bônus entra no `xp_earned` da resposta (e por isso no XP da sessão, no total e na
+atividade do dia ao concluir — uma vez só); uma sessão perfeita de 10 perguntas ganha
+no máximo +30 XP de combo. Abandonar descarta o bônus junto com o resto do XP ganho.
+Em **duelos** o combo é contado e devolvido, mas o bônus é sempre 0 (respostas de
+duelo não pagam XP). O servidor calcula o combo a partir das respostas gravadas, em
+ordem de resposta — o cliente nunca informa o combo.
 
 **Regra anti-fraude:** o gabarito nunca trafega antes da resposta; a correção acontece
 exclusivamente no backend, que também valida que `question_id` pertence à sessão e
@@ -155,6 +180,7 @@ pergunta — o agendamento já feito não muda, como no Anki. O badge do dashboa
 |---|---|---|
 | GET | `/ranking/global` | `{season, top, me, total_players}`: `season` é a temporada atual (ver abaixo); top 10 por XP (empate desempata pelo username), a posição de quem pede (`me`, mesmo fora do top) e o total de jogadores. Contas inativas não entram no top, na posição nem no total. |
 | GET | `/ranking/friends` | `{entries}`: você e seus amigos ordenados por XP. Amigos com conta inativa ficam de fora. |
+| GET | `/ranking/accuracy` | `{top, me, my_answers, min_answers, total_players}`: top 10 por precisão geral (`correct_answers / questions_answered` de toda a vida, `accuracy` de 0 a 1). Só entra quem tem conta ativa e pelo menos `min_answers` (50) respostas — sem esse piso, 3 de 3 (100%) lideraria. Empate em precisão desempata por mais respostas e depois pelo username. `me` é a sua posição (mesmo fora do top) ou `null` enquanto você não chega às 50; `my_answers` diz quantas você já tem; `total_players` conta só quem já entrou. |
 
 ### Temporadas
 

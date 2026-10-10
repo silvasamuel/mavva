@@ -1,8 +1,11 @@
-import { useState } from 'react'
+import { useState, type ReactNode } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { api } from '@/lib/api'
+import { formatPercent, formatSeasonEnd } from '@/lib/format'
 import type {
+  AccuracyEntry,
+  AccuracyLeaderboard,
   FriendsLeaderboard,
   GlobalLeaderboard,
   LeaderboardEntry,
@@ -14,10 +17,9 @@ import { RankBadge } from '@/components/RankBadge'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
 import { Spinner } from '@/components/ui/Spinner'
-import { formatSeasonEnd } from '@/lib/format'
 import { AppIcons, Glyph } from '@/lib/icons'
 
-type Tab = 'global' | 'friends'
+type Tab = 'global' | 'friends' | 'accuracy'
 
 function formatXp(xp: number): string {
   return `${xp.toLocaleString('pt-BR')} XP`
@@ -44,35 +46,100 @@ function SeasonBanner({ season }: { season: Season }) {
   )
 }
 
-function RankRow({ entry, onOpen }: { entry: LeaderboardEntry; onOpen: OpenPlayer }) {
+function PlayerRow({
+  position,
+  user,
+  isMe,
+  detail,
+  aside,
+  onOpen,
+}: {
+  position: number
+  user: PublicUser
+  isMe: boolean
+  detail: string
+  /** Right-hand column, e.g. the accuracy — the name truncates to make room. */
+  aside?: ReactNode
+  onOpen: OpenPlayer
+}) {
   return (
-    <li className={entry.is_me ? 'rounded-2xl bg-grain-50 ring-1 ring-grain-200' : ''}>
+    <li className={isMe ? 'rounded-2xl bg-grain-50 ring-1 ring-grain-200' : ''}>
       <button
         type="button"
         aria-haspopup="dialog"
-        onClick={() => onOpen(entry.user)}
+        onClick={() => onOpen(user)}
         className={`flex w-full items-center gap-3 rounded-2xl py-3 text-left transition-colors hover:bg-sand-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-leaf-500 ${
-          entry.is_me ? 'px-3 hover:bg-grain-100' : 'px-1'
+          isMe ? 'px-3 hover:bg-grain-100' : 'px-1'
         }`}
       >
         <span
           className={`w-8 shrink-0 text-right text-sm font-extrabold tabular-nums ${
-            entry.position <= 3 ? 'text-grain-700' : 'text-sand-400'
+            position <= 3 ? 'text-grain-700' : 'text-sand-400'
           }`}
         >
-          {entry.position}º
+          {position}º
         </span>
-        <RankBadge code={entry.user.rank.code} size="sm" />
+        <RankBadge code={user.rank.code} size="sm" />
         <div className="min-w-0 flex-1">
           <p className="truncate font-extrabold text-ink">
-            {entry.is_me ? `Você · @${entry.user.username}` : `@${entry.user.username}`}
+            {isMe ? `Você · @${user.username}` : `@${user.username}`}
           </p>
-          <p className="truncate text-xs font-semibold text-sand-500">
-            {entry.user.rank.name} · {formatXp(entry.total_xp)}
-          </p>
+          <p className="truncate text-xs font-semibold text-sand-500">{detail}</p>
         </div>
+        {aside}
       </button>
     </li>
+  )
+}
+
+function RankRow({ entry, onOpen }: { entry: LeaderboardEntry; onOpen: OpenPlayer }) {
+  return (
+    <PlayerRow
+      position={entry.position}
+      user={entry.user}
+      isMe={entry.is_me}
+      detail={`${entry.user.rank.name} · ${formatXp(entry.total_xp)}`}
+      onOpen={onOpen}
+    />
+  )
+}
+
+function AccuracyRow({ entry, onOpen }: { entry: AccuracyEntry; onOpen: OpenPlayer }) {
+  return (
+    <PlayerRow
+      position={entry.position}
+      user={entry.user}
+      isMe={entry.is_me}
+      detail={entry.user.rank.name}
+      aside={
+        <div className="shrink-0 whitespace-nowrap text-right">
+          <p className="font-extrabold tabular-nums text-ink">{formatPercent(entry.accuracy)}</p>
+          <p className="text-xs font-semibold tabular-nums text-sand-500">
+            {entry.questions_answered.toLocaleString('pt-BR')} respondidas
+          </p>
+        </div>
+      }
+      onOpen={onOpen}
+    />
+  )
+}
+
+function OwnPosition({
+  position,
+  total,
+  children,
+}: {
+  position: number
+  total: number
+  children: ReactNode
+}) {
+  return (
+    <div className="mt-3 border-t border-dashed border-sand-200 pt-3">
+      <p className="mb-1 px-1 text-xs font-extrabold uppercase tracking-wide text-sand-400">
+        Sua posição · {position}º de {total}
+      </p>
+      <ol>{children}</ol>
+    </div>
   )
 }
 
@@ -86,14 +153,9 @@ function GlobalBoard({ data, onOpen }: { data: GlobalLeaderboard; onOpen: OpenPl
         ))}
       </ol>
       {!inTop && (
-        <div className="mt-3 border-t border-dashed border-sand-200 pt-3">
-          <p className="mb-1 px-1 text-xs font-extrabold uppercase tracking-wide text-sand-400">
-            Sua posição · {data.me.position}º de {data.total_players}
-          </p>
-          <ol>
-            <RankRow entry={data.me} onOpen={onOpen} />
-          </ol>
-        </div>
+        <OwnPosition position={data.me.position} total={data.total_players}>
+          <RankRow entry={data.me} onOpen={onOpen} />
+        </OwnPosition>
       )}
     </Card>
   )
@@ -126,6 +188,46 @@ function FriendsBoard({ data, onOpen }: { data: FriendsLeaderboard; onOpen: Open
   )
 }
 
+function missingAnswers(missing: number): string {
+  return missing === 1
+    ? 'Falta 1 resposta para você entrar neste ranking.'
+    : `Faltam ${missing.toLocaleString('pt-BR')} respostas para você entrar neste ranking.`
+}
+
+function AccuracyBoard({ data, onOpen }: { data: AccuracyLeaderboard; onOpen: OpenPlayer }) {
+  const me = data.me
+  const inTop = data.top.some((row) => row.is_me)
+
+  return (
+    <Card>
+      <p className="mb-3 text-sm font-semibold text-sand-500">
+        Entra quem já respondeu pelo menos {data.min_answers} perguntas.
+      </p>
+      {data.top.length === 0 ? (
+        <p className="py-6 text-center text-sm font-semibold text-sand-500">
+          Ninguém entrou neste ranking ainda.
+        </p>
+      ) : (
+        <ol className="divide-y divide-sand-100">
+          {data.top.map((entry) => (
+            <AccuracyRow key={entry.user.id} entry={entry} onOpen={onOpen} />
+          ))}
+        </ol>
+      )}
+      {me && !inTop && (
+        <OwnPosition position={me.position} total={data.total_players}>
+          <AccuracyRow entry={me} onOpen={onOpen} />
+        </OwnPosition>
+      )}
+      {!me && (
+        <p className="mt-3 border-t border-dashed border-sand-200 px-1 pt-3 text-sm font-bold text-ink">
+          {missingAnswers(data.min_answers - data.my_answers)}
+        </p>
+      )}
+    </Card>
+  )
+}
+
 export function RankingPage() {
   const [tab, setTab] = useState<Tab>('global')
   const [openPlayer, setOpenPlayer] = useState<PublicUser | null>(null)
@@ -138,14 +240,20 @@ export function RankingPage() {
     queryKey: ['ranking', 'friends'],
     queryFn: () => api.get<FriendsLeaderboard>('/ranking/friends'),
   })
+  const accuracy = useQuery({
+    queryKey: ['ranking', 'accuracy'],
+    queryFn: () => api.get<AccuracyLeaderboard>('/ranking/accuracy'),
+  })
 
-  const loading = tab === 'global' ? global.isLoading || !global.data : friends.isLoading || !friends.data
+  const active = { global, friends, accuracy }[tab]
 
   return (
     <div className="animate-float-up mx-auto max-w-2xl space-y-6">
       <header>
         <h1 className="text-2xl font-extrabold">Ranking</h1>
-        <p className="text-sm font-semibold text-sand-500">Quem tem mais XP no Mavva.</p>
+        <p className="text-sm font-semibold text-sand-500">
+          Quem lidera o Mavva em XP e em precisão.
+        </p>
       </header>
 
       {global.data && <SeasonBanner season={global.data.season} />}
@@ -155,6 +263,7 @@ export function RankingPage() {
           [
             ['global', 'Global'],
             ['friends', 'Amigos'],
+            ['accuracy', 'Precisão'],
           ] as [Tab, string][]
         ).map(([value, label]) => (
           <button
@@ -171,18 +280,20 @@ export function RankingPage() {
         ))}
       </nav>
 
-      {loading ? (
+      {active.isPending ? (
         <div className="flex justify-center py-16">
           <Spinner className="h-8 w-8 text-leaf-500" />
         </div>
       ) : tab === 'global' && global.data ? (
         <GlobalBoard data={global.data} onOpen={setOpenPlayer} />
-      ) : friends.data ? (
+      ) : tab === 'friends' && friends.data ? (
         <FriendsBoard data={friends.data} onOpen={setOpenPlayer} />
+      ) : tab === 'accuracy' && accuracy.data ? (
+        <AccuracyBoard data={accuracy.data} onOpen={setOpenPlayer} />
       ) : (
         <Card>
           <p className="text-sm font-semibold text-sand-500">Não foi possível carregar o ranking.</p>
-          <Button className="mt-3" variant="secondary" onClick={() => void global.refetch()}>
+          <Button className="mt-3" variant="secondary" onClick={() => void active.refetch()}>
             Tentar de novo
           </Button>
         </Card>

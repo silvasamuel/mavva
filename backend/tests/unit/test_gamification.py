@@ -3,6 +3,8 @@ from datetime import date
 from app.models import UserStats
 from app.models.enums import Difficulty
 from app.services.gamification import (
+    combo_bonus_xp,
+    combo_counts,
     effective_streak,
     level_from_total_xp,
     rank_from_level,
@@ -32,6 +34,20 @@ class TestXp:
             Difficulty.EASY, False
         )
         assert balance < 0
+
+
+class TestCombo:
+    def test_hits_extend_the_combo_and_a_miss_resets_it(self):
+        assert combo_counts([True, True, True, False, True]) == [1, 2, 3, 0, 1]
+        assert combo_counts([False, False]) == [0, 0]
+        assert combo_counts([]) == []
+
+    def test_bonus_starts_at_the_third_hit_and_caps_at_five(self):
+        assert [combo_bonus_xp(n) for n in range(10)] == [0, 0, 0, 1, 2, 3, 4, 5, 5, 5]
+        assert combo_bonus_xp(50) == 5
+
+    def test_perfect_ten_question_session_earns_at_most_30_from_combos(self):
+        assert sum(combo_bonus_xp(n) for n in combo_counts([True] * 10)) == 30
 
 
 class TestLevelCurve:

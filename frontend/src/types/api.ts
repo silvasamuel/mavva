@@ -22,6 +22,8 @@ export interface User {
   review_order: ReviewOrder
   review_session_size: number
   review_max_interval_days: number | null
+  /** False until the player finishes or skips the first-login tutorial. */
+  tutorial_completed: boolean
 }
 
 // --- Social: friends and duels ---
@@ -121,6 +123,26 @@ export interface FriendsLeaderboard {
   entries: LeaderboardEntry[]
 }
 
+export interface AccuracyEntry {
+  position: number
+  /** 0–1, lifetime correct / answered. */
+  accuracy: number
+  questions_answered: number
+  correct_answers: number
+  is_me: boolean
+  user: PublicUser
+}
+
+/** Only players with at least `min_answers` answers enter the board. */
+export interface AccuracyLeaderboard {
+  top: AccuracyEntry[]
+  /** Null until `my_answers` reaches `min_answers`. */
+  me: AccuracyEntry | null
+  my_answers: number
+  min_answers: number
+  total_players: number
+}
+
 export type DuelStatus = 'open' | 'active' | 'finished' | 'expired' | 'cancelled'
 
 export interface DuelSide {
@@ -214,6 +236,8 @@ export interface QuizSession {
   completed: boolean
   timer_seconds: number | null
   duel_id: string | null
+  /** Hits in a row so far (server-computed), so a reload keeps the badge. */
+  combo: number
   filters: Record<string, unknown>
   questions: QuizQuestion[]
 }
@@ -231,7 +255,12 @@ export interface AnswerFeedback {
   explanation: string
   divergence_note: string | null
   reference: BibleReference
+  /** Includes combo_bonus_xp. */
   xp_earned: number
+  /** Hits in a row in this session, this answer included; a miss resets it to 0. */
+  combo: number
+  /** Always 0 in duels. */
+  combo_bonus_xp: number
 }
 
 export interface QuizComplete {
@@ -246,6 +275,7 @@ export interface QuizComplete {
   rank: { code: string; name: string; rank_up: boolean }
   streak: { current: number; extended_today: boolean }
   daily_goal: { target: number; earned_today: number; achieved: boolean }
+  best_combo: number
   unlocked_achievements: Achievement[]
 }
 
