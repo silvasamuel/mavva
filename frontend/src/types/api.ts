@@ -100,6 +100,26 @@ export interface FriendsLeaderboard {
   entries: LeaderboardEntry[]
 }
 
+export interface AccuracyEntry {
+  position: number
+  /** 0–1, lifetime correct / answered. */
+  accuracy: number
+  questions_answered: number
+  correct_answers: number
+  is_me: boolean
+  user: PublicUser
+}
+
+/** Only players with at least `min_answers` answers enter the board. */
+export interface AccuracyLeaderboard {
+  top: AccuracyEntry[]
+  /** Null until `my_answers` reaches `min_answers`. */
+  me: AccuracyEntry | null
+  my_answers: number
+  min_answers: number
+  total_players: number
+}
+
 export type DuelStatus = 'open' | 'active' | 'finished' | 'expired' | 'cancelled'
 
 export interface DuelSide {

@@ -2,12 +2,18 @@ from fastapi import APIRouter
 
 from app.core.deps import CurrentUser, DbDep
 from app.models import User
-from app.schemas.ranking import FriendsLeaderboardOut, GlobalLeaderboardOut, LeaderboardEntry
+from app.schemas.ranking import (
+    AccuracyEntry,
+    AccuracyLeaderboardOut,
+    FriendsLeaderboardOut,
+    GlobalLeaderboardOut,
+    LeaderboardEntry,
+)
 from app.schemas.social import PublicUser
 from app.schemas.user import RankOut
 from app.services import ranking_service
 from app.services.gamification import level_from_total_xp, rank_from_level
-from app.services.ranking_service import RankedPlayer
+from app.services.ranking_service import MIN_ACCURACY_ANSWERS, AccuracyPlayer, RankedPlayer
 
 router = APIRouter(prefix="/ranking", tags=["ranking"])
 
@@ -38,6 +44,17 @@ def _entry(row: RankedPlayer) -> LeaderboardEntry:
     )
 
 
+def _accuracy_entry(row: AccuracyPlayer) -> AccuracyEntry:
+    return AccuracyEntry(
+        position=row.position,
+        accuracy=row.accuracy,
+        questions_answered=row.questions_answered,
+        correct_answers=row.correct_answers,
+        is_me=row.is_me,
+        user=_public(row.user),
+    )
+
+
 @router.get("/global", response_model=GlobalLeaderboardOut)
 def global_ranking(user: CurrentUser, db: DbDep) -> GlobalLeaderboardOut:
     board = ranking_service.global_board(db, user)
@@ -52,3 +69,15 @@ def global_ranking(user: CurrentUser, db: DbDep) -> GlobalLeaderboardOut:
 def friends_ranking(user: CurrentUser, db: DbDep) -> FriendsLeaderboardOut:
     rows = ranking_service.friends_board(db, user)
     return FriendsLeaderboardOut(entries=[_entry(row) for row in rows])
+
+
+@router.get("/accuracy", response_model=AccuracyLeaderboardOut)
+def accuracy_ranking(user: CurrentUser, db: DbDep) -> AccuracyLeaderboardOut:
+    board = ranking_service.accuracy_board(db, user)
+    return AccuracyLeaderboardOut(
+        top=[_accuracy_entry(row) for row in board.top],
+        me=_accuracy_entry(board.me) if board.me else None,
+        my_answers=board.my_answers,
+        min_answers=MIN_ACCURACY_ANSWERS,
+        total_players=board.total_players,
+    )
