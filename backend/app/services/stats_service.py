@@ -218,6 +218,8 @@ def get_dashboard(db: Session, user: User) -> dict[str, Any]:
     season_ranks = season_service.ranks_for(stats)
     return {
         "season": season_service.season_payload(season, season_day),
+        # "start" | "end" | null — the season modal to open on the home screen.
+        "season_notice": season_service.notice_for(user, season, season_day),
         "stats": {
             "total_xp": stats.total_xp,
             "level": level,

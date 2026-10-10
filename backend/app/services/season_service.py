@@ -13,6 +13,7 @@ Achievements, streaks, duel records and accuracy are lifetime and untouched.
 
 from dataclasses import dataclass
 from datetime import UTC, date, datetime
+from typing import Literal
 from zoneinfo import ZoneInfo
 
 from sqlalchemy import ColumnElement, case, func, insert, literal, select, update
@@ -133,6 +134,34 @@ def ensure_current_season(db: Session, today: date) -> tuple[Season, bool]:
     # The bulk UPDATE bypassed the identity map; reload anything already loaded.
     db.expire_all()
     return season, True
+
+
+# The end-of-season notice opens during the season's last week.
+END_NOTICE_DAYS = 7
+
+SeasonNotice = Literal["start", "end"]
+
+
+def notice_for(user: User, season: Season, today: date) -> SeasonNotice | None:
+    """Which season modal the player should see now, if any — each once per season.
+
+    Nothing until the first-login tutorial is done (it explains seasons itself).
+    In the last week the end notice wins: by then the start one is old news.
+    """
+    if not user.tutorial_completed:
+        return None
+    days_left = (season.ends_on - today).days
+    if days_left <= END_NOTICE_DAYS and (user.season_end_seen or 0) < season.number:
+        return "end"
+    if (user.season_start_seen or 0) < season.number:
+        return "start"
+    return None
+
+
+def mark_notice_seen(user: User, season: Season, notice: SeasonNotice) -> None:
+    user.season_start_seen = max(user.season_start_seen or 0, season.number)
+    if notice == "end":
+        user.season_end_seen = max(user.season_end_seen or 0, season.number)
 
 
 @dataclass(frozen=True)

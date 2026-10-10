@@ -71,9 +71,9 @@ function buildSteps(firstName: string | undefined, replay: boolean): Step[] {
       art: <IconTile icon={AppIcons.review} tone="leaf" />,
     },
     {
-      eyebrow: 'Duelos, ranking e elo',
+      eyebrow: 'Duelos, elo e temporadas',
       title: 'Desafie, suba e cresça',
-      body: 'Chame um amigo (ou alguém aleatório) para um duelo, suba no ranking e veja seu elo crescer de Semente até Celeiro.',
+      body: 'Duele com um amigo (ou alguém aleatório) e veja seu elo crescer de Semente até Celeiro. Cada mês é uma temporada: no dia 1º, XP, nível e o ranking de XP recomeçam, e seu maior elo fica no perfil.',
       art: (
         // The whole ladder, Semente to Celeiro — 7 small badges fit a 360px phone.
         <span className="flex items-center gap-1">

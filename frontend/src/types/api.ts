@@ -322,6 +322,8 @@ export interface DashboardData {
     last_season_rank: RankRef | null
   }
   season: Season
+  /** Season modal to open on the home screen, each once per season. */
+  season_notice: 'start' | 'end' | null
   daily_goal: { target: number; earned_today: number; achieved: boolean }
   evolution: { date: string; xp: number; questions: number; correct: number }[]
   categories: {

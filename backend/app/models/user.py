@@ -47,6 +47,10 @@ class User(TimestampMixin, Base):
     # Set when the player finishes or skips the first-login tutorial. Accounts
     # older than the tutorial were backfilled, so null = new player, not seen yet.
     tutorial_completed_at: Mapped[datetime | None] = mapped_column(default=None)
+    # Number of the last season whose start / end-of-season notice the player
+    # dismissed (see season_service.notice_for). Null = never.
+    season_start_seen: Mapped[int | None] = mapped_column(default=None)
+    season_end_seen: Mapped[int | None] = mapped_column(default=None)
 
     stats: Mapped["UserStats"] = relationship(back_populates="user", cascade="all, delete-orphan")
 

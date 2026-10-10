@@ -6,7 +6,8 @@ from sqlalchemy import select
 
 from app.core.deps import CurrentUser, DbDep
 from app.models import User
-from app.schemas.user import AccountDeleteRequest, UserOut, UserUpdate
+from app.schemas.user import AccountDeleteRequest, SeasonNoticeIn, UserOut, UserUpdate
+from app.services import season_service
 from app.services.user_service import UserServiceError, delete_account
 
 REVIEW_SESSION_SIZES = {5, 10, 15, 20}
@@ -29,8 +30,19 @@ def complete_tutorial(user: CurrentUser, db: DbDep) -> UserOut:
     """
     if user.tutorial_completed_at is None:
         user.tutorial_completed_at = datetime.now(UTC)
+        # The tutorial explains seasons, so the current one's welcome is covered.
+        season, _ = season_service.ensure_current_season(db, season_service.season_today())
+        season_service.mark_notice_seen(user, season, "start")
         db.commit()
     return UserOut.model_validate(user)
+
+
+@router.post("/me/season-notice", status_code=status.HTTP_204_NO_CONTENT)
+def dismiss_season_notice(body: SeasonNoticeIn, user: CurrentUser, db: DbDep) -> None:
+    """Closes the current season's start or end modal for good (on every device)."""
+    season, _ = season_service.ensure_current_season(db, season_service.season_today())
+    season_service.mark_notice_seen(user, season, body.notice)
+    db.commit()
 
 
 def _service_error(error: UserServiceError) -> HTTPException:

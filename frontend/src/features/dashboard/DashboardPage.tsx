@@ -11,7 +11,8 @@ import { AppIcons, CategoryGlyph, Glyph, type Icon } from '@/lib/icons'
 import { formatPercent, formatRelativeDate } from '@/lib/format'
 import { useAuth } from '@/features/auth/AuthContext'
 import { EvolutionChart } from './EvolutionChart'
-import { NewSeasonBanner } from './NewSeasonBanner'
+import { SeasonCard } from './SeasonCard'
+import { SeasonNoticeModal } from './SeasonNoticeModal'
 
 export function DashboardPage() {
   const { user } = useAuth()
@@ -59,8 +60,6 @@ export function DashboardPage() {
           : { show: { transition: { staggerChildren: 0.07 } } }
       }
     >
-      <NewSeasonBanner data={data} />
-
       <motion.section
         variants={enter}
         className="relative overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-leaf-800 via-leaf-600 to-leaf-700 p-5 text-white shadow-[0_8px_0_0_#184220] sm:p-6"
@@ -116,6 +115,10 @@ export function DashboardPage() {
           </div>
         </div>
       </motion.section>
+
+      <motion.div variants={enter}>
+        <SeasonCard data={data} />
+      </motion.div>
 
       <motion.div variants={enter}>
         <RankLadder currentCode={stats.rank.code} level={stats.level} />
@@ -314,6 +317,8 @@ export function DashboardPage() {
           <EvolutionChart data={data.evolution} />
         </div>
       </motion.details>
+
+      <SeasonNoticeModal data={data} />
     </motion.div>
   )
 }

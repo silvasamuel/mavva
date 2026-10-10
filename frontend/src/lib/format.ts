@@ -14,6 +14,13 @@ export function formatDays(days: number): string {
   return years === 1 ? '~1 ano' : `~${years} anos`
 }
 
+/** Whole days from one ISO date ("YYYY-MM-DD") to another. */
+export function daysBetween(fromIso: string, toIso: string): number {
+  const [fy, fm, fd] = fromIso.split('-').map(Number)
+  const [ty, tm, td] = toIso.split('-').map(Number)
+  return Math.round((Date.UTC(ty, tm - 1, td) - Date.UTC(fy, fm - 1, fd)) / 86_400_000)
+}
+
 /** Countdown to the season's end; `daysLeft` counts up to the next season's first day. */
 export function formatSeasonEnd(daysLeft: number): string {
   if (daysLeft <= 1) return 'último dia'
