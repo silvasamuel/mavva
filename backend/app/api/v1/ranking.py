@@ -1,4 +1,4 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException, Query, status
 
 from app.core.deps import CurrentUser, DbDep
 from app.models import User
@@ -13,8 +13,14 @@ from app.schemas.ranking import (
 from app.schemas.social import PublicUser
 from app.schemas.user import RankOut
 from app.services import ranking_service, season_service
-from app.services.gamification import level_from_total_xp, rank_from_level
-from app.services.ranking_service import MIN_ACCURACY_ANSWERS, AccuracyPlayer, RankedPlayer
+from app.services.gamification import Rank, level_from_total_xp, rank_from_level
+from app.services.ranking_service import (
+    ACCURACY_MIN_RANK,
+    ACCURACY_RANK_CODES,
+    AccuracyPlayer,
+    RankedPlayer,
+    rank_by_code,
+)
 
 router = APIRouter(prefix="/ranking", tags=["ranking"])
 
@@ -76,13 +82,29 @@ def friends_ranking(user: CurrentUser, db: DbDep) -> FriendsLeaderboardOut:
     return FriendsLeaderboardOut(entries=[_entry(row) for row in rows])
 
 
+def _rank_out(rank: Rank) -> RankOut:
+    return RankOut(code=rank.code, name=rank.name)
+
+
 @router.get("/accuracy", response_model=AccuracyLeaderboardOut)
-def accuracy_ranking(user: CurrentUser, db: DbDep) -> AccuracyLeaderboardOut:
-    board = ranking_service.accuracy_board(db, user)
+def accuracy_ranking(
+    user: CurrentUser,
+    db: DbDep,
+    elo: str | None = Query(None, description="One elo from Espiga up; omit for all of them."),
+) -> AccuracyLeaderboardOut:
+    if elo is not None and elo not in ACCURACY_RANK_CODES:
+        raise HTTPException(
+            status.HTTP_422_UNPROCESSABLE_ENTITY,
+            f"Elo inválido. Use um destes: {', '.join(ACCURACY_RANK_CODES)}.",
+        )
+    board = ranking_service.accuracy_board(db, user, rank_by_code(elo) if elo else None)
     return AccuracyLeaderboardOut(
+        elo=elo,
+        elos=[_rank_out(rank_by_code(code)) for code in ACCURACY_RANK_CODES],
+        min_rank=_rank_out(ACCURACY_MIN_RANK),
+        min_level=ACCURACY_MIN_RANK.min_level,
+        eligible=board.eligible,
         top=[_accuracy_entry(row) for row in board.top],
         me=_accuracy_entry(board.me) if board.me else None,
-        my_answers=board.my_answers,
-        min_answers=MIN_ACCURACY_ANSWERS,
         total_players=board.total_players,
     )

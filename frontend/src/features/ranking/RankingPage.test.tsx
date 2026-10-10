@@ -94,10 +94,19 @@ function renderPage() {
 describe('RankingPage', () => {
   beforeEach(() => {
     accuracyBoard = {
+      elo: null,
+      elos: [
+        { code: 'espiga', name: 'Espiga' },
+        { code: 'videira', name: 'Videira' },
+        { code: 'oliveira', name: 'Oliveira' },
+        { code: 'cedro', name: 'Cedro' },
+        { code: 'celeiro', name: 'Celeiro' },
+      ],
+      min_rank: { code: 'espiga', name: 'Espiga' },
+      min_level: 11,
+      eligible: false,
       top: [accuracyEntry(1, ana, 140, 160)],
       me: null,
-      my_answers: 12,
-      min_answers: 50,
       total_players: 1,
     }
     get.mockReset().mockImplementation(async (path: string) => {
@@ -116,11 +125,24 @@ describe('RankingPage', () => {
         }
       }
       if (path === '/ranking/friends') return { entries: [entry(1, me, true)] }
-      if (path === '/ranking/accuracy') return accuracyBoard
+      if (path.startsWith('/ranking/accuracy')) {
+        const elo = new URLSearchParams(path.split('?')[1]).get('elo')
+        return { ...accuracyBoard, elo }
+      }
       if (path === '/players/u-ana') return profileOf(ana)
       if (path === '/players/u-me') return profileOf(me)
       throw new Error(`unexpected ${path}`)
     })
+  })
+
+  it('lists the tabs as Global, Precisão, Amigos', async () => {
+    renderPage()
+    const nav = await screen.findByRole('navigation', { name: 'Tipo de ranking' })
+    expect(within(nav).getAllByRole('button').map((b) => b.textContent)).toEqual([
+      'Global',
+      'Precisão',
+      'Amigos',
+    ])
   })
 
   it('shows the season and when it ends', async () => {
@@ -156,7 +178,7 @@ describe('RankingPage', () => {
       const user = userEvent.setup()
       renderPage()
       await user.click(await screen.findByRole('button', { name: 'Precisão' }))
-      await screen.findByText('Entra quem já respondeu pelo menos 50 perguntas.')
+      await screen.findByText(/Só entra neste ranking quem já chegou ao elo Espiga \(nível 11\)/)
       return user
     }
 
@@ -174,22 +196,41 @@ describe('RankingPage', () => {
       expect(ranking.getByText('2.000 respondidas')).toBeInTheDocument()
     })
 
-    it('says how many answers are missing to enter the board', async () => {
+    it('tells players below Espiga when they will enter', async () => {
       await openAccuracyTab()
 
       expect(
-        screen.getByText('Faltam 38 respostas para você entrar neste ranking.')
+        screen.getByText('Você entra neste ranking ao chegar ao elo Espiga.')
       ).toBeInTheDocument()
       expect(screen.queryByText(/sua posição/i)).not.toBeInTheDocument()
     })
 
-    it('uses the singular when a single answer is missing', async () => {
-      accuracyBoard.my_answers = 49
-      await openAccuracyTab()
+    it('filters by elo, starting at Espiga', async () => {
+      accuracyBoard.eligible = true
+      const user = await openAccuracyTab()
 
-      expect(
-        screen.getByText('Falta 1 resposta para você entrar neste ranking.')
-      ).toBeInTheDocument()
+      const filter = screen.getByRole('group', { name: 'Filtrar por elo' })
+      expect(within(filter).getAllByRole('button').map((b) => b.textContent)).toEqual([
+        'Todos',
+        'Espiga',
+        'Videira',
+        'Oliveira',
+        'Cedro',
+        'Celeiro',
+      ])
+      expect(within(filter).getByRole('button', { name: 'Todos' })).toHaveAttribute(
+        'aria-pressed',
+        'true'
+      )
+
+      await user.click(within(filter).getByRole('button', { name: 'Videira' }))
+
+      expect(get).toHaveBeenCalledWith('/ranking/accuracy?elo=videira')
+      expect(within(filter).getByRole('button', { name: 'Videira' })).toHaveAttribute(
+        'aria-pressed',
+        'true'
+      )
+      expect(await screen.findByText('Você não está no elo Videira.')).toBeInTheDocument()
     })
 
     it('shows an empty state while nobody qualifies', async () => {
@@ -197,14 +238,13 @@ describe('RankingPage', () => {
       await openAccuracyTab()
 
       expect(screen.getByText('Ninguém entrou neste ranking ainda.')).toBeInTheDocument()
-      expect(screen.getByText(/faltam 38 respostas/i)).toBeInTheDocument()
     })
 
     it('shows your own position when you qualify outside the top 10', async () => {
       accuracyBoard = {
         ...accuracyBoard,
+        eligible: true,
         me: accuracyEntry(14, me, 61, 100, true),
-        my_answers: 100,
         total_players: 30,
       }
       await openAccuracyTab()
@@ -213,7 +253,7 @@ describe('RankingPage', () => {
       const mine = screen.getByRole('button', { name: /você · @samuel/i })
       expect(within(mine).getByText('61%')).toBeInTheDocument()
       expect(within(mine).getByText('100 respondidas')).toBeInTheDocument()
-      expect(screen.queryByText(/faltam/i)).not.toBeInTheDocument()
+      expect(screen.queryByText(/você entra neste ranking/i)).not.toBeInTheDocument()
     })
 
     it('opens the profile of the player tapped in the accuracy board', async () => {

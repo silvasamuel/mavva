@@ -1,5 +1,5 @@
 """Leaderboards: global XP top 10, the circle of you plus your friends, and
-lifetime accuracy among players with enough answers."""
+lifetime accuracy among players who reached Espiga, optionally one elo at a time."""
 
 from dataclasses import dataclass
 
@@ -8,11 +8,21 @@ from sqlalchemy.orm import Session, selectinload
 
 from app.models import User, UserStats
 from app.services import friendship_service
+from app.services.gamification import LEVELS_PER_RANK, RANKS, Rank, rank_from_level
 
 GLOBAL_LIMIT = 10
-# Answers a player needs before entering the accuracy board: without a floor,
-# someone who got 3 of 3 right (100%) would top it.
-MIN_ACCURACY_ANSWERS = 50
+# The accuracy board starts at Espiga (level 11, 3250 XP): reaching it takes
+# far more than a handful of answers, so 3 out of 3 (100%) can't top the board.
+ACCURACY_MIN_RANK_CODE = "espiga"
+_RANK_CODES = [code for code, _ in RANKS]
+ACCURACY_RANK_CODES = _RANK_CODES[_RANK_CODES.index(ACCURACY_MIN_RANK_CODE) :]
+
+
+def rank_by_code(code: str) -> Rank:
+    return rank_from_level(_RANK_CODES.index(code) * LEVELS_PER_RANK + 1)
+
+
+ACCURACY_MIN_RANK = rank_by_code(ACCURACY_MIN_RANK_CODE)
 
 
 @dataclass(frozen=True)
@@ -109,19 +119,34 @@ class AccuracyPlayer:
 @dataclass(frozen=True)
 class AccuracyBoard:
     top: list[AccuracyPlayer]
-    me: AccuracyPlayer | None  # None until you reach MIN_ACCURACY_ANSWERS
-    my_answers: int
-    total_players: int
+    me: AccuracyPlayer | None  # None below Espiga, or outside the chosen elo
+    eligible: bool  # the caller reached ACCURACY_MIN_RANK
+    total_players: int  # in the chosen elo (every elo from Espiga up if none)
 
 
-def _qualified() -> tuple[ColumnElement[bool], ...]:
-    return (
+def _qualified(elo: Rank | None) -> tuple[ColumnElement[bool], ...]:
+    band = elo or ACCURACY_MIN_RANK
+    conditions: list[ColumnElement[bool]] = [
         User.is_active.is_(True),
-        UserStats.questions_answered >= MIN_ACCURACY_ANSWERS,
-    )
+        UserStats.questions_answered > 0,
+        UserStats.level >= band.min_level,
+    ]
+    # No elo chosen: every elo from Espiga up, so no ceiling.
+    if elo is not None and elo.max_level is not None:
+        conditions.append(UserStats.level <= elo.max_level)
+    return tuple(conditions)
 
 
-def _accuracy_position_of(db: Session, me: User, correct: int, answered: int) -> int:
+def _in_band(level: int, elo: Rank | None) -> bool:
+    band = elo or ACCURACY_MIN_RANK
+    if level < band.min_level:
+        return False
+    return elo is None or elo.max_level is None or level <= elo.max_level
+
+
+def _accuracy_position_of(
+    db: Session, me: User, correct: int, answered: int, elo: Rank | None
+) -> int:
     """1-based place: higher accuracy, then more answers, then username.
 
     Ratios are compared by cross-multiplying (a/b > c/d <=> a*d > c*b) so equal
@@ -134,7 +159,7 @@ def _accuracy_position_of(db: Session, me: User, correct: int, answered: int) ->
         .select_from(User)
         .join(UserStats, UserStats.user_id == User.id)
         .where(
-            *_qualified(),
+            *_qualified(elo),
             or_(
                 theirs > mine,
                 and_(theirs == mine, UserStats.questions_answered > answered),
@@ -149,7 +174,8 @@ def _accuracy_position_of(db: Session, me: User, correct: int, answered: int) ->
     return (ahead or 0) + 1
 
 
-def accuracy_board(db: Session, me: User) -> AccuracyBoard:
+def accuracy_board(db: Session, me: User, elo: Rank | None = None) -> AccuracyBoard:
+    """`elo` narrows the board to one band (Espiga and up); None lists all of them."""
     me = _with_stats(db, me)
     # Dividing two exact integers in float8 is correctly rounded, so equal
     # ratios sort as ties and the order matches _accuracy_position_of.
@@ -158,7 +184,7 @@ def accuracy_board(db: Session, me: User) -> AccuracyBoard:
         db.scalars(
             select(User)
             .join(UserStats, UserStats.user_id == User.id)
-            .where(*_qualified())
+            .where(*_qualified(elo))
             .options(selectinload(User.stats))
             .order_by(accuracy.desc(), UserStats.questions_answered.desc(), User.username.asc())
             .limit(GLOBAL_LIMIT)
@@ -169,7 +195,7 @@ def accuracy_board(db: Session, me: User) -> AccuracyBoard:
             select(func.count())
             .select_from(User)
             .join(UserStats, UserStats.user_id == User.id)
-            .where(*_qualified())
+            .where(*_qualified(elo))
         )
         or 0
     )
@@ -185,13 +211,16 @@ def accuracy_board(db: Session, me: User) -> AccuracyBoard:
     ]
     answered = me.stats.questions_answered if me.stats else 0
     correct = me.stats.correct_answers if me.stats else 0
+    level = me.stats.level if me.stats else 1
     mine = next((row for row in top if row.is_me), None)
-    if mine is None and answered >= MIN_ACCURACY_ANSWERS:
+    if mine is None and answered > 0 and _in_band(level, elo):
         mine = AccuracyPlayer(
-            position=_accuracy_position_of(db, me, correct, answered),
+            position=_accuracy_position_of(db, me, correct, answered, elo),
             user=me,
             questions_answered=answered,
             correct_answers=correct,
             is_me=True,
         )
-    return AccuracyBoard(top=top, me=mine, my_answers=answered, total_players=total)
+    return AccuracyBoard(
+        top=top, me=mine, eligible=level >= ACCURACY_MIN_RANK.min_level, total_players=total
+    )

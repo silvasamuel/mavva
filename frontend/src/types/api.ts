@@ -133,13 +133,19 @@ export interface AccuracyEntry {
   user: PublicUser
 }
 
-/** Only players with at least `min_answers` answers enter the board. */
+/** Only players who reached `min_rank` (Espiga) enter the board. */
 export interface AccuracyLeaderboard {
+  /** Elo filter applied; null = every elo from `min_rank` up. */
+  elo: string | null
+  /** Elos that can be picked, `min_rank` first. */
+  elos: { code: string; name: string }[]
+  min_rank: { code: string; name: string }
+  min_level: number
+  /** Whether the caller reached `min_rank`. */
+  eligible: boolean
   top: AccuracyEntry[]
-  /** Null until `my_answers` reaches `min_answers`. */
+  /** Null below `min_rank` or outside the chosen elo. */
   me: AccuracyEntry | null
-  my_answers: number
-  min_answers: number
   total_players: number
 }
 

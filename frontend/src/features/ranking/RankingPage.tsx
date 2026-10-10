@@ -1,6 +1,6 @@
 import { useState, type ReactNode } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useQuery } from '@tanstack/react-query'
+import { keepPreviousData, useQuery } from '@tanstack/react-query'
 import { api } from '@/lib/api'
 import { formatPercent, formatSeasonEnd } from '@/lib/format'
 import type {
@@ -188,24 +188,70 @@ function FriendsBoard({ data, onOpen }: { data: FriendsLeaderboard; onOpen: Open
   )
 }
 
-function missingAnswers(missing: number): string {
-  return missing === 1
-    ? 'Falta 1 resposta para você entrar neste ranking.'
-    : `Faltam ${missing.toLocaleString('pt-BR')} respostas para você entrar neste ranking.`
+function EloFilter({
+  data,
+  elo,
+  onChange,
+}: {
+  data: AccuracyLeaderboard
+  elo: string | null
+  onChange: (elo: string | null) => void
+}) {
+  const options: [string | null, string][] = [
+    [null, 'Todos'],
+    ...data.elos.map((rank): [string, string] => [rank.code, rank.name]),
+  ]
+  return (
+    <div role="group" aria-label="Filtrar por elo" className="mb-3 flex flex-wrap gap-2">
+      {options.map(([code, label]) => (
+        <button
+          key={code ?? 'all'}
+          type="button"
+          onClick={() => onChange(code)}
+          aria-pressed={elo === code}
+          className={`flex items-center gap-1.5 rounded-full py-1.5 text-xs font-extrabold transition-colors ${
+            code ? 'pl-1.5 pr-3' : 'px-3'
+          } ${
+            elo === code
+              ? 'bg-leaf-500 text-white'
+              : 'bg-sand-50 text-sand-600 ring-1 ring-sand-100 hover:bg-sand-100'
+          }`}
+        >
+          {code && <RankBadge code={code} size="xs" />}
+          {label}
+        </button>
+      ))}
+    </div>
+  )
 }
 
-function AccuracyBoard({ data, onOpen }: { data: AccuracyLeaderboard; onOpen: OpenPlayer }) {
+function AccuracyBoard({
+  data,
+  elo,
+  onEloChange,
+  onOpen,
+}: {
+  data: AccuracyLeaderboard
+  elo: string | null
+  onEloChange: (elo: string | null) => void
+  onOpen: OpenPlayer
+}) {
   const me = data.me
   const inTop = data.top.some((row) => row.is_me)
+  const eloName = data.elos.find((rank) => rank.code === elo)?.name
 
   return (
     <Card>
       <p className="mb-3 text-sm font-semibold text-sand-500">
-        Entra quem já respondeu pelo menos {data.min_answers} perguntas.
+        Só entra neste ranking quem já chegou ao elo {data.min_rank.name} (nível{' '}
+        {data.min_level}). Escolha um elo para se comparar com quem está no mesmo estágio.
       </p>
+      <EloFilter data={data} elo={elo} onChange={onEloChange} />
       {data.top.length === 0 ? (
         <p className="py-6 text-center text-sm font-semibold text-sand-500">
-          Ninguém entrou neste ranking ainda.
+          {eloName
+            ? `Ninguém do elo ${eloName} entrou neste ranking ainda.`
+            : 'Ninguém entrou neste ranking ainda.'}
         </p>
       ) : (
         <ol className="divide-y divide-sand-100">
@@ -219,9 +265,11 @@ function AccuracyBoard({ data, onOpen }: { data: AccuracyLeaderboard; onOpen: Op
           <AccuracyRow entry={me} onOpen={onOpen} />
         </OwnPosition>
       )}
-      {!me && (
+      {!me && (!data.eligible || eloName) && (
         <p className="mt-3 border-t border-dashed border-sand-200 px-1 pt-3 text-sm font-bold text-ink">
-          {missingAnswers(data.min_answers - data.my_answers)}
+          {data.eligible
+            ? `Você não está no elo ${eloName}.`
+            : `Você entra neste ranking ao chegar ao elo ${data.min_rank.name}.`}
         </p>
       )}
     </Card>
@@ -231,6 +279,7 @@ function AccuracyBoard({ data, onOpen }: { data: AccuracyLeaderboard; onOpen: Op
 export function RankingPage() {
   const [tab, setTab] = useState<Tab>('global')
   const [openPlayer, setOpenPlayer] = useState<PublicUser | null>(null)
+  const [elo, setElo] = useState<string | null>(null)
 
   const global = useQuery({
     queryKey: ['ranking', 'global'],
@@ -241,8 +290,13 @@ export function RankingPage() {
     queryFn: () => api.get<FriendsLeaderboard>('/ranking/friends'),
   })
   const accuracy = useQuery({
-    queryKey: ['ranking', 'accuracy'],
-    queryFn: () => api.get<AccuracyLeaderboard>('/ranking/accuracy'),
+    queryKey: ['ranking', 'accuracy', elo ?? 'all'],
+    queryFn: () =>
+      api.get<AccuracyLeaderboard>(
+        elo ? `/ranking/accuracy?elo=${encodeURIComponent(elo)}` : '/ranking/accuracy'
+      ),
+    // Switching elos keeps the current list on screen instead of a spinner.
+    placeholderData: keepPreviousData,
   })
 
   const active = { global, friends, accuracy }[tab]
@@ -262,8 +316,8 @@ export function RankingPage() {
         {(
           [
             ['global', 'Global'],
-            ['friends', 'Amigos'],
             ['accuracy', 'Precisão'],
+            ['friends', 'Amigos'],
           ] as [Tab, string][]
         ).map(([value, label]) => (
           <button
@@ -289,7 +343,12 @@ export function RankingPage() {
       ) : tab === 'friends' && friends.data ? (
         <FriendsBoard data={friends.data} onOpen={setOpenPlayer} />
       ) : tab === 'accuracy' && accuracy.data ? (
-        <AccuracyBoard data={accuracy.data} onOpen={setOpenPlayer} />
+        <AccuracyBoard
+          data={accuracy.data}
+          elo={elo}
+          onEloChange={setElo}
+          onOpen={setOpenPlayer}
+        />
       ) : (
         <Card>
           <p className="text-sm font-semibold text-sand-500">Não foi possível carregar o ranking.</p>
