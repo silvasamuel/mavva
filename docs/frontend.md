@@ -124,6 +124,16 @@ Notion na clareza. Zero clichê religioso.
 - Level-up e streak no summary: escala + confete discreto
 - Transições de página: fade/slide 150–200 ms
 
+**Mascote (semente):** animação Rive em `src/assets/mascot/semente.riv`, gerada a
+partir de `frontend/rive/semente/` (veja o README de lá). `<SeedMascot>` pinta na
+hora uma imagem parada (`semente.png`) e troca pela animada quando a página fica
+ociosa. O runtime do Rive (~600 KB comprimido, `.wasm` servido pelo próprio Mavva)
+fica num chunk separado (`SeedMascotCanvas`), e com *reduzir movimento* ele nem é
+baixado. A state machine `Mascot` expõe os gatilhos `correct`, `wrong` e `celebrate`
+e os números `lookX`/`lookY` (0–100, 50 = olhando para frente); no logo, os olhos
+seguem o cursor. Nos testes, `SeedMascotCanvas` é trocado por um stub
+(`src/test/setup.ts`), já que o jsdom não tem canvas nem wasm.
+
 **Acessibilidade:** contraste AA, foco visível, feedback nunca só por cor
 (ícones ✓/✗ acompanham), inputs com labels reais.
 
