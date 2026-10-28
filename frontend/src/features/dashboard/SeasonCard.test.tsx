@@ -30,7 +30,9 @@ describe('SeasonCard', () => {
     expect(view.getByText('Elo atual').parentElement).toHaveTextContent('Espiga')
     expect(view.getByText('Maior elo').parentElement).toHaveTextContent('Cedro')
     expect(view.getByText('Mês passado').parentElement).toHaveTextContent('Oliveira')
-    expect(card).toHaveTextContent(/Todo dia 1º, XP, nível e o ranking de XP recomeçam/)
+    const prize = within(card).getByRole('region', { name: 'Troféu de novembro: tribo de José' })
+    expect(prize).toHaveTextContent('Troféu de novembroTribo de José')
+    expect(prize).toHaveTextContent('Curiosidade: Vendido pelos irmãos, governou o Egito')
   })
 
   it('reads "Sem elo" without a last season and links to the ranking', async () => {
@@ -49,7 +51,6 @@ describe('SeasonCard', () => {
 
     expect(within(card).getByText('Reta final da temporada')).toBeInTheDocument()
     expect(within(card).getByText('Último dia')).toBeInTheDocument()
-    expect(card).toHaveTextContent(/Espiga fica guardado como o seu elo do mês passado/)
 
     await user.click(screen.getByRole('button', { name: 'Subir de elo agora' }))
     expect(screen.getByText('novo quiz')).toBeInTheDocument()
