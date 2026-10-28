@@ -25,6 +25,7 @@ const NAV_ITEMS: NavItem[] = [
   { to: '/ranking', label: 'Ranking', icon: AppIcons.ranking },
   { to: '/achievements', label: 'Conquistas', icon: AppIcons.achievements },
   { to: '/suggest', label: 'Sugerir', icon: AppIcons.suggest },
+  { to: '/notifications', label: 'Novidades', icon: AppIcons.bell },
   { to: '/profile', label: 'Perfil', icon: AppIcons.profile },
 ]
 
@@ -34,7 +35,7 @@ const MOBILE_TABS: NavItem[] = [
   { to: '/duels', label: 'Duelos', icon: AppIcons.duels },
 ]
 
-const BADGE_PATHS = ['/duels', '/review', '/friends']
+const BADGE_PATHS = ['/duels', '/review', '/friends', '/notifications']
 
 const MORE_ITEMS: NavItem[] = [
   { to: '/review', label: 'Revisar', icon: AppIcons.review },
@@ -42,6 +43,7 @@ const MORE_ITEMS: NavItem[] = [
   { to: '/ranking', label: 'Ranking', icon: AppIcons.ranking },
   { to: '/achievements', label: 'Conquistas', icon: AppIcons.achievements },
   { to: '/suggest', label: 'Sugerir', icon: AppIcons.suggest },
+  { to: '/notifications', label: 'Novidades', icon: AppIcons.bell },
   { to: '/profile', label: 'Perfil', icon: AppIcons.profile },
 ]
 
@@ -84,7 +86,8 @@ export function AppShell({ children }: { children?: ReactNode }) {
   const moreActive = MORE_ITEMS.some(
     (item) => location.pathname === item.to || location.pathname.startsWith(`${item.to}/`)
   )
-  const moreCount = (data?.reviews_due ?? 0) + friendRequests
+  const notificationsUnread = data?.notifications_unread ?? 0
+  const moreCount = (data?.reviews_due ?? 0) + friendRequests + notificationsUnread
 
   useEffect(() => {
     if (!moreOpen) return
@@ -99,6 +102,7 @@ export function AppShell({ children }: { children?: ReactNode }) {
     if (to === '/duels') return data?.duels?.awaiting_me ?? 0
     if (to === '/review') return data?.reviews_due ?? 0
     if (to === '/friends') return friendRequests
+    if (to === '/notifications') return notificationsUnread
     return 0
   }
 
@@ -141,15 +145,36 @@ export function AppShell({ children }: { children?: ReactNode }) {
         {/* On a phone held sideways the pinned HUD plus the tab bar would eat
             half the screen, so short screens let it scroll away. */}
         <div className="sticky top-0 z-10 -mx-4 mb-4 bg-gradient-to-b from-[#f4efe0]/90 to-transparent px-4 pb-2 pt-2 backdrop-blur-[2px] md:-mx-8 md:px-8 [@media(max-height:500px)]:static">
-          <GameHud
-            loading={isPending}
-            rankCode={data?.stats.rank.code}
-            rankName={data?.stats.rank.name}
-            level={data?.stats.level}
-            xpInto={data?.stats.xp_into_level}
-            xpForNext={data?.stats.xp_for_next_level}
-            streak={streak}
-          />
+          <div className="flex items-center gap-2">
+            <div className="min-w-0 flex-1">
+              <GameHud
+                loading={isPending}
+                rankCode={data?.stats.rank.code}
+                rankName={data?.stats.rank.name}
+                level={data?.stats.level}
+                xpInto={data?.stats.xp_into_level}
+                xpForNext={data?.stats.xp_for_next_level}
+                streak={streak}
+              />
+            </div>
+            {/* On phones "Novidades" lives under "Mais"; the bell keeps news in sight. */}
+            <NavLink
+              to="/notifications"
+              aria-label={
+                notificationsUnread > 0
+                  ? `Novidades: ${notificationsUnread} não lida${notificationsUnread === 1 ? '' : 's'}`
+                  : 'Novidades'
+              }
+              className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/80 text-sand-600 shadow-card backdrop-blur-md md:hidden"
+            >
+              <Glyph as={AppIcons.bell} className="h-6 w-6" />
+              {notificationsUnread > 0 && (
+                <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-grain-400 px-1 text-[10px] font-extrabold text-grain-900">
+                  {notificationsUnread}
+                </span>
+              )}
+            </NavLink>
+          </div>
         </div>
         {children ?? <Outlet />}
       </main>

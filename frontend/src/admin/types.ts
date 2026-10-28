@@ -1,6 +1,24 @@
-import type { Difficulty, FlagReason, QuestionDraft, QuestionType, Testament } from '@/types/api'
+import type {
+  AnnouncementKind,
+  Difficulty,
+  FlagReason,
+  QuestionDraft,
+  QuestionType,
+  Testament,
+} from '@/types/api'
 
-export type AdminTab = 'home' | 'activity' | 'review' | 'questions' | 'users'
+export type AdminTab = 'home' | 'activity' | 'review' | 'questions' | 'users' | 'news'
+
+export interface AdminAnnouncement {
+  id: string
+  title: string
+  body: string
+  kind: AnnouncementKind
+  /** null = rascunho */
+  published_at: string | null
+  created_at: string
+  updated_at: string
+}
 
 export type ActivityGranularity = 'day' | 'week' | 'month'
 

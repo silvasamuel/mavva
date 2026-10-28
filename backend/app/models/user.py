@@ -51,6 +51,9 @@ class User(TimestampMixin, Base):
     # dismissed (see season_service.notice_for). Null = never.
     season_start_seen: Mapped[int | None] = mapped_column(default=None)
     season_end_seen: Mapped[int | None] = mapped_column(default=None)
+    # Last time the player opened "Novidades"; announcements published after it
+    # (or after signup, while null) count as unread.
+    notifications_seen_at: Mapped[datetime | None] = mapped_column(default=None)
 
     stats: Mapped["UserStats"] = relationship(back_populates="user", cascade="all, delete-orphan")
 

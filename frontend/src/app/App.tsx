@@ -15,6 +15,7 @@ import { QuizPlayPage } from '@/features/quiz/QuizPlayPage'
 import { QuizSummaryPage } from '@/features/quiz/QuizSummaryPage'
 import { ReviewPage } from '@/features/review/ReviewPage'
 import { AchievementsPage } from '@/features/achievements/AchievementsPage'
+import { NotificationsPage } from '@/features/notifications/NotificationsPage'
 import { ProfilePage } from '@/features/profile/ProfilePage'
 import { DuelsPage } from '@/features/duels/DuelsPage'
 import { DuelResultPage } from '@/features/duels/DuelResultPage'
@@ -72,6 +73,7 @@ export default function App() {
                 <Route path="/friends" element={<FriendsPage />} />
                 <Route path="/ranking" element={<RankingPage />} />
                 <Route path="/achievements" element={<AchievementsPage />} />
+                <Route path="/notifications" element={<NotificationsPage />} />
                 <Route path="/suggest" element={<SuggestQuestionPage />} />
                 <Route path="/profile" element={<ProfilePage />} />
               </Route>
