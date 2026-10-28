@@ -23,7 +23,10 @@ export function ProgressRing({
   const bar = barClass ?? (ratio >= 1 ? 'stroke-grain-400' : 'stroke-leaf-500')
 
   return (
-    <div className="relative inline-flex items-center justify-center" style={{ width: size, height: size }}>
+    <div
+      className="relative inline-flex items-center justify-center"
+      style={{ width: size, height: size }}
+    >
       <svg width={size} height={size} className="-rotate-90">
         <circle
           cx={size / 2}

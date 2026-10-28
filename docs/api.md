@@ -122,6 +122,11 @@ resposta correta não pode ser inferida chamando a API diretamente.
   "season": { "number": 2, "name": "outubro de 2026", "starts_on": "2026-10-01",
               "ends_on": "2026-11-01", "days_left": 23 },
   "season_notice": "start",  // "start" | "end" | null — ver "Avisos de temporada"
+  "last_season_podium": { "season": { "number": 1, "name": "setembro de 2026" },  // só com "start"
+                          "entries": [ { "position": 1, "username": "bia", "name": "Bia",
+                                         "final_xp": 4200, "rank": { "code": "videira", … } } ] },
+  "podium_celebration": { "season": { "number": 1, "name": "setembro de 2026" },
+                          "final_xp": 4200, "position": 1 },  // só para o pódio, até ver a comemoração
   "daily_goal": { "target": 50, "earned_today": 30, "achieved": false },
   "evolution": [ { "date": "2026-07-01", "xp": 60, "questions": 12 }, /* 30 dias */ ],
   "categories": [ { "id": 1, "slug": "personagens", "name": "Personagens", "icon": "👤",
@@ -182,6 +187,7 @@ pergunta — o agendamento já feito não muda, como no Anki. O badge do dashboa
 | Método | Rota | Descrição |
 |---|---|---|
 | GET | `/ranking/global` | `{season, top, me, total_players}`: `season` é a temporada atual (ver abaixo); top 10 por XP (empate desempata pelo username), a posição de quem pede (`me`, mesmo fora do top) e o total de jogadores. Contas inativas não entram no top, na posição nem no total. |
+| GET | `/ranking/all-time` | `{podium}`: as 3 maiores pontuações de uma temporada de todos os tempos, uma por jogador (a melhor dele). Temporadas fechadas vêm de `season_results`; a atual entra ao vivo (`live: true`). Cada item: `{position, score, season: {number, name}, live, is_me, user}`. Contas inativas ficam de fora. |
 | GET | `/ranking/friends` | `{entries}`: você e seus amigos ordenados por XP. Amigos com conta inativa ficam de fora. |
 | GET | `/ranking/accuracy?elo=` | `{elo, elos, min_rank, min_level, eligible, top, me, total_players}`: top 10 por precisão geral (`correct_answers / questions_answered` de toda a vida, `accuracy` de 0 a 1). Só entra quem tem conta ativa e já chegou ao elo **Espiga** (nível 11, `min_rank`/`min_level`) — com 3.250 XP no mínimo, 3 de 3 (100%) não lidera. `elo` (opcional: `espiga`, `videira`, `oliveira`, `cedro`, `celeiro`, listados em `elos`) restringe a um elo pelo nível atual; sem ele, valem todos a partir do Espiga. Outro valor → 422. Empate em precisão desempata por mais respostas e depois pelo username. `me` é a sua posição no recorte (mesmo fora do top) ou `null` se você está abaixo do Espiga ou em outro elo; `eligible` diz se você já chegou ao Espiga; `total_players` conta só quem está no recorte. |
 
@@ -203,6 +209,19 @@ da vida toda e não mudam.
 - `best_rank` / `last_season_rank` aparecem no dashboard (`stats`) e no perfil público.
 - A primeira temporada é o mês em que o deploy entrou: o XP de antes conta para ela, e o
 
+**Troféus do pódio.** Quem fecha a temporada entre os 3 primeiros (`season_results.position` ≤ 3)
+ganha um troféu de ouro, prata ou bronze: `stats.trophies` (`[{number, name, position}]`) no
+dashboard e `trophies` (`[{season, position}]`) no perfil público, do mais recente ao mais antigo.
+Na primeira visita depois do fechamento, o dashboard traz `podium_celebration` para quem ficou no
+pódio (e segura o `season_notice` até lá); `POST /users/me/podium-celebration` (204) marca como
+vista (`users.podium_seen_season`). O aviso de nova temporada (`start`) traz `last_season_podium`
+com o top 3 da temporada que acabou.
+
+**Conquistas de temporada.** No fechamento, as conquistas são reavaliadas para o top 10
+(`season_top10`, `season_podiums`, `season_wins` contam colocações em `season_results`;
+`seasons_played` conta temporadas com XP). Não dão XP: o bônus cairia na temporada nova e daria
+vantagem ao pódio.
+
 **Avisos de temporada** (`season_notice` no dashboard), cada um uma vez por temporada, lembrados
 no servidor (`users.season_start_seen` / `season_end_seen`):
 
@@ -215,7 +234,7 @@ no servidor (`users.season_start_seen` / `season_end_seen`):
 
 | Método | Rota | Descrição |
 |---|---|---|
-| GET | `/players/{id}` | Perfil público de outro jogador — aberto pelo ranking e pela lista de amigos. Qualquer jogador logado pode ver (o ranking global já mostra desconhecidos). Devolve `user` (`PublicUser`), `relation` (`self`/`friends`/`pending_sent`/`pending_received`/`none`), `member_since` (`"YYYY-MM"`, só o mês), `stats` (XP total, sequência atual/recorde, respondidas, precisão, sessões perfeitas), `achievements_unlocked`/`achievements_total`, `recent_achievements` (até 4, mais recentes primeiro, sem data) e `strongest_categories` (até 3, só com ≥ 5 respostas), `best_rank` (maior elo já conquistado, temporada atual inclusa) e `last_season_rank` (elo em que terminou a temporada passada; `null` se não jogou). **Nunca** inclui e-mail, fuso, meta diária, papel, datas de atividade ou de desbloqueio, nem quanto falta para o próximo nível. 404 para id desconhecido ou conta inativa (igual ao ranking). |
+| GET | `/players/{id}` | Perfil público de outro jogador — aberto pelo ranking e pela lista de amigos. Qualquer jogador logado pode ver (o ranking global já mostra desconhecidos). Devolve `user` (`PublicUser`), `relation` (`self`/`friends`/`pending_sent`/`pending_received`/`none`), `member_since` (`"YYYY-MM"`, só o mês), `stats` (XP total, sequência atual/recorde, respondidas, precisão, sessões perfeitas), `achievements_unlocked`/`achievements_total`, `achievements` (todas as desbloqueadas, mais recentes primeiro, sem data), `trophies` (pódios de temporada, `[{season, position}]`) e `strongest_categories` (até 3, só com ≥ 5 respostas), `best_rank` (maior elo já conquistado, temporada atual inclusa) e `last_season_rank` (elo em que terminou a temporada passada; `null` se não jogou). **Nunca** inclui e-mail, fuso, meta diária, papel, datas de atividade ou de desbloqueio, nem quanto falta para o próximo nível. 404 para id desconhecido ou conta inativa (igual ao ranking). |
 
 ## Duelos
 

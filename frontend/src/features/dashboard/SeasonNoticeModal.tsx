@@ -20,6 +20,47 @@ function Rule({ icon, children }: { icon: Icon; children: ReactNode }) {
   )
 }
 
+const MEDAL = [
+  'bg-grain-400 text-grain-900',
+  'bg-sand-200 text-sand-700',
+  'bg-[#E3A56E] text-[#5C3412]',
+]
+
+/** How last season ended: its top three, the champion with the trophy. */
+function LastPodium({ podium }: { podium: NonNullable<DashboardData['last_season_podium']> }) {
+  return (
+    <section
+      aria-label={`Pódio de ${podium.season.name}`}
+      className="rounded-2xl bg-grain-50 p-3 ring-1 ring-grain-200"
+    >
+      <p className="mb-2 text-xs font-extrabold uppercase tracking-wide text-grain-700">
+        Pódio de {podium.season.name}
+      </p>
+      <ol className="space-y-1.5 text-left">
+        {podium.entries.map((entry) => (
+          <li key={entry.position} className="flex items-center gap-2">
+            <span
+              className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-extrabold ${MEDAL[entry.position - 1]}`}
+            >
+              {entry.position === 1 ? (
+                <Glyph as={AppIcons.ranking} className="h-4 w-4" />
+              ) : (
+                `${entry.position}º`
+              )}
+            </span>
+            <span className="min-w-0 flex-1 truncate text-sm font-extrabold text-ink">
+              @{entry.username}
+            </span>
+            <span className="text-xs font-extrabold tabular-nums text-sand-500">
+              {entry.final_xp.toLocaleString('pt-BR')} XP
+            </span>
+          </li>
+        ))}
+      </ol>
+    </section>
+  )
+}
+
 function StartBody({ data }: { data: DashboardData }) {
   const { season, stats } = data
   const last = stats.last_season_rank
@@ -39,14 +80,21 @@ function StartBody({ data }: { data: DashboardData }) {
             : 'No Mavva, cada mês é uma temporada. Veja como funciona:'}
         </p>
       </div>
+      {data.last_season_podium && <LastPodium podium={data.last_season_podium} />}
       <ul className="space-y-2.5 rounded-2xl bg-sand-50 p-4 text-left">
         <Rule icon={AppIcons.season}>
-          Todo dia 1º, <strong className="font-extrabold text-ink">XP, nível e o ranking de XP</strong>{' '}
-          recomeçam para todos.
+          Todo dia 1º,{' '}
+          <strong className="font-extrabold text-ink">XP, nível e o ranking de XP</strong> recomeçam
+          para todos.
         </Rule>
         <Rule icon={AppIcons.crown}>
           Seu <strong className="font-extrabold text-ink">maior elo</strong> e o do{' '}
-          <strong className="font-extrabold text-ink">mês passado</strong> ficam guardados no perfil.
+          <strong className="font-extrabold text-ink">mês passado</strong> ficam guardados no
+          perfil.
+        </Rule>
+        <Rule icon={AppIcons.ranking}>
+          No fim de cada temporada o pódio é revelado e leva troféus de
+          <strong className="font-extrabold text-ink"> ouro, prata e bronze</strong>.
         </Rule>
         <Rule icon={AppIcons.check}>
           Conquistas, sequência, duelos e precisão continuam valendo.
@@ -70,9 +118,7 @@ function EndBody({ data }: { data: DashboardData }) {
             className="absolute -right-3 -top-1 h-7 w-7 text-grain-500"
           />
         </span>
-        <p className="text-xs font-extrabold uppercase tracking-wide text-grain-700">
-          Reta final
-        </p>
+        <p className="text-xs font-extrabold uppercase tracking-wide text-grain-700">Reta final</p>
         <h2 className="text-xl font-extrabold leading-tight text-ink">
           {season.days_left <= 1
             ? `A temporada de ${season.name} termina hoje`
@@ -86,12 +132,14 @@ function EndBody({ data }: { data: DashboardData }) {
       <ul className="space-y-2.5 rounded-2xl bg-grain-50 p-4 text-left ring-1 ring-grain-200">
         <Rule icon={AppIcons.season}>
           No dia 1º, XP e nível recomeçam e{' '}
-          <strong className="font-extrabold text-ink">{stats.rank.name}</strong> vira o seu elo do mês
-          passado.
+          <strong className="font-extrabold text-ink">{stats.rank.name}</strong> vira o seu elo do
+          mês passado.
         </Rule>
-        <Rule icon={AppIcons.levelUp}>
-          Cada quiz até lá conta: suba de elo antes da virada.
+        <Rule icon={AppIcons.ranking}>
+          Quem terminar no <strong className="font-extrabold text-ink">pódio</strong> leva um troféu
+          de ouro, prata ou bronze para o perfil.
         </Rule>
+        <Rule icon={AppIcons.levelUp}>Cada quiz até lá conta: suba de elo antes da virada.</Rule>
       </ul>
     </>
   )

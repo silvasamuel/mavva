@@ -4,9 +4,7 @@ export function Logo({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' }) {
   return (
     <div className="flex items-center gap-2">
       <img src="/manna.svg?v=6" alt="" className={dims} aria-hidden />
-      <span className={`font-extrabold lowercase tracking-tight text-leaf-600 ${text}`}>
-        mavva
-      </span>
+      <span className={`font-extrabold lowercase tracking-tight text-leaf-600 ${text}`}>mavva</span>
     </div>
   )
 }

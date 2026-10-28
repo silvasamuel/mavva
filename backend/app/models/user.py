@@ -54,6 +54,9 @@ class User(TimestampMixin, Base):
     # Last time the player opened "Novidades"; announcements published after it
     # (or after signup, while null) count as unread.
     notifications_seen_at: Mapped[datetime | None] = mapped_column(default=None)
+    # Number of the last season whose podium celebration (1st, 2nd or 3rd) this
+    # player has seen.
+    podium_seen_season: Mapped[int | None] = mapped_column(default=None)
 
     stats: Mapped["UserStats"] = relationship(back_populates="user", cascade="all, delete-orphan")
 

@@ -8,6 +8,7 @@ import { Logo } from '@/components/Logo'
 import { GameHud } from '@/components/GameHud'
 import { useAuth } from '@/features/auth/AuthContext'
 import { FirstLoginTutorial } from '@/features/tutorial/FirstLoginTutorial'
+import { PodiumCelebration } from '@/features/seasons/PodiumCelebration'
 import { AppIcons, Glyph, type Icon } from '@/lib/icons'
 
 interface NavItem {
@@ -287,6 +288,7 @@ export function AppShell({ children }: { children?: ReactNode }) {
 
       {/* Mounted only in the shell, so it never covers quiz play or the auth pages. */}
       <FirstLoginTutorial />
+      <PodiumCelebration />
     </div>
   )
 }

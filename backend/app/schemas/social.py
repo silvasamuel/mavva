@@ -58,6 +58,11 @@ class PlayerCategoryOut(BaseModel):
     answered: int
 
 
+class TrophyOut(BaseModel):
+    season: str  # "outubro de 2026"
+    position: int  # 1 gold, 2 silver, 3 bronze
+
+
 class PlayerProfileOut(BaseModel):
     """Another player's public profile — game stats only.
 
@@ -74,9 +79,10 @@ class PlayerProfileOut(BaseModel):
     # Level resets every season; these carry the player's standing across them.
     best_rank: RankOut  # highest ever, this season included
     last_season_rank: RankOut | None  # None if they didn't play last season
+    trophies: list[TrophyOut]  # podium finishes, most recent first
     achievements_unlocked: int
     achievements_total: int
-    recent_achievements: list[PlayerAchievementOut]  # newest first
+    achievements: list[PlayerAchievementOut]  # every unlock, newest first
     strongest_categories: list[PlayerCategoryOut]  # best accuracy first
 
 

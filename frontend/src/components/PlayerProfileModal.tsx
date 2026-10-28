@@ -1,9 +1,10 @@
-import { useState, type ReactNode } from 'react'
+import { useId, useRef, useState, type KeyboardEvent, type ReactNode } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { api, ApiError } from '@/lib/api'
 import type { PlayerProfile, PublicUser } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
+import { SeasonTrophies } from '@/components/SeasonTrophies'
 import { EloTile } from '@/components/EloTile'
 import { RankBadge } from '@/components/RankBadge'
 import { formatPercent } from '@/lib/format'
@@ -64,14 +65,224 @@ function Stat({
 
 function SectionTitle({ children }: { children: ReactNode }) {
   return (
-    <h3 className="mb-2 text-xs font-extrabold uppercase tracking-wide text-sand-500">{children}</h3>
+    <h3 className="mb-2 text-xs font-extrabold uppercase tracking-wide text-sand-500">
+      {children}
+    </h3>
+  )
+}
+
+const TABS = [
+  { key: 'trophies', label: 'Troféus' },
+  { key: 'achievements', label: 'Conquistas' },
+  { key: 'stats', label: 'Estatísticas' },
+] as const
+
+type TabKey = (typeof TABS)[number]['key']
+
+const METAL_COUNT: [position: number, one: string, many: string][] = [
+  [1, 'ouro', 'ouros'],
+  [2, 'prata', 'pratas'],
+  [3, 'bronze', 'bronzes'],
+]
+
+/** "2 ouros · 1 bronze": a quick tally above a shelf that can grow long. */
+function trophyTally(trophies: PlayerProfile['trophies']): string {
+  return METAL_COUNT.map(([position, one, many]) => {
+    const count = trophies.filter((t) => t.position === position).length
+    return count === 0 ? null : `${count} ${count === 1 ? one : many}`
+  })
+    .filter(Boolean)
+    .join(' · ')
+}
+
+/**
+ * Trophies, achievements and stats, one at a time, so a long trophy shelf
+ * doesn't push everything else out of sight. Arrow keys move between tabs.
+ */
+function ProfileTabs({ profile }: { profile: PlayerProfile }) {
+  const [active, setActive] = useState<TabKey>('trophies')
+  const tabRefs = useRef<Partial<Record<TabKey, HTMLButtonElement | null>>>({})
+  const id = useId()
+  const counts: Partial<Record<TabKey, number>> = {
+    trophies: profile.trophies.length,
+    achievements: profile.achievements_unlocked,
+  }
+
+  function onKeyDown(event: KeyboardEvent<HTMLDivElement>) {
+    const index = TABS.findIndex((tab) => tab.key === active)
+    const next =
+      event.key === 'ArrowRight'
+        ? (index + 1) % TABS.length
+        : event.key === 'ArrowLeft'
+          ? (index - 1 + TABS.length) % TABS.length
+          : event.key === 'Home'
+            ? 0
+            : event.key === 'End'
+              ? TABS.length - 1
+              : null
+    if (next == null) return
+    event.preventDefault()
+    setActive(TABS[next].key)
+    tabRefs.current[TABS[next].key]?.focus()
+  }
+
+  return (
+    <div>
+      <div
+        role="tablist"
+        aria-label="Seções do perfil"
+        onKeyDown={onKeyDown}
+        className="grid grid-cols-3 gap-1 rounded-2xl bg-sand-100 p-1"
+      >
+        {TABS.map((tab) => {
+          const selected = tab.key === active
+          const count = counts[tab.key]
+          return (
+            <button
+              key={tab.key}
+              ref={(el) => {
+                tabRefs.current[tab.key] = el
+              }}
+              type="button"
+              role="tab"
+              id={`${id}-${tab.key}-tab`}
+              aria-selected={selected}
+              aria-controls={`${id}-${tab.key}-panel`}
+              tabIndex={selected ? 0 : -1}
+              onClick={() => setActive(tab.key)}
+              className={`flex items-center justify-center gap-1 rounded-xl px-1 py-2 text-xs font-extrabold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-leaf-500 ${
+                selected ? 'bg-white text-ink shadow-sm' : 'text-sand-500 hover:text-ink'
+              }`}
+            >
+              {tab.label}
+              {count != null && count > 0 && (
+                <span
+                  aria-hidden
+                  className={`rounded-full px-1.5 text-[10px] tabular-nums ${
+                    selected ? 'bg-grain-100 text-grain-800' : 'bg-sand-200 text-sand-600'
+                  }`}
+                >
+                  {count}
+                </span>
+              )}
+            </button>
+          )
+        })}
+      </div>
+
+      <div
+        role="tabpanel"
+        id={`${id}-${active}-panel`}
+        aria-labelledby={`${id}-${active}-tab`}
+        tabIndex={0}
+        className="mt-3 rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-leaf-500"
+      >
+        {active === 'trophies' && <TrophiesPanel trophies={profile.trophies} />}
+        {active === 'achievements' && <AchievementsPanel profile={profile} />}
+        {active === 'stats' && <StatsPanel profile={profile} />}
+      </div>
+    </div>
+  )
+}
+
+function TrophiesPanel({ trophies }: { trophies: PlayerProfile['trophies'] }) {
+  if (trophies.length === 0) {
+    return (
+      <p className="py-4 text-sm font-semibold text-sand-400">
+        Nenhum troféu ainda. O pódio de cada temporada leva ouro, prata ou bronze.
+      </p>
+    )
+  }
+  return (
+    <div className="space-y-2">
+      <p className="text-xs font-extrabold text-sand-500">{trophyTally(trophies)}</p>
+      <SeasonTrophies trophies={trophies} />
+    </div>
+  )
+}
+
+function AchievementsPanel({ profile }: { profile: PlayerProfile }) {
+  return (
+    <section>
+      <SectionTitle>
+        Conquistas · {profile.achievements_unlocked} de {profile.achievements_total}
+      </SectionTitle>
+      {profile.achievements.length > 0 ? (
+        <ul aria-label="Conquistas desbloqueadas" className="grid grid-cols-2 gap-2 text-left">
+          {profile.achievements.map((achievement) => (
+            <li
+              key={achievement.code}
+              className="flex items-center gap-2 rounded-2xl bg-grain-50 px-2.5 py-2 ring-1 ring-grain-200"
+            >
+              <span className="shrink-0 text-grain-700">
+                <AchievementGlyph code={achievement.code} className="h-5 w-5" />
+              </span>
+              <span className="truncate text-xs font-bold text-ink">{achievement.name}</span>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="text-sm font-semibold text-sand-400">Nenhuma ainda.</p>
+      )}
+    </section>
+  )
+}
+
+function StatsPanel({ profile }: { profile: PlayerProfile }) {
+  const { user, stats } = profile
+  const duels = user.duel_wins + user.duel_losses + user.duel_draws
+  return (
+    <div className="space-y-5">
+      <dl className="grid grid-cols-2 gap-2">
+        <Stat
+          icon={stats.current_streak > 0 ? AppIcons.streak : AppIcons.streakOff}
+          value={stats.current_streak === 1 ? '1 dia' : `${stats.current_streak} dias`}
+          label="Sequência"
+          hint={`recorde ${stats.longest_streak}`}
+        />
+        <Stat
+          icon={AppIcons.check}
+          value={formatPercent(stats.accuracy)}
+          label="Precisão"
+          hint={`${stats.questions_answered.toLocaleString('pt-BR')} respondidas`}
+        />
+        <Stat icon={AppIcons.star} value={stats.perfect_sessions} label="Sessões perfeitas" />
+        <Stat
+          icon={AppIcons.duels}
+          value={`${user.duel_wins}V ${user.duel_draws}E ${user.duel_losses}D`}
+          label="Duelos"
+          hint={duels > 0 ? `${formatPercent(user.duel_wins / duels)} de vitórias` : 'nenhum ainda'}
+        />
+      </dl>
+
+      {profile.strongest_categories.length > 0 && (
+        <section>
+          <SectionTitle>Mais forte em</SectionTitle>
+          <ul className="space-y-1.5 text-left">
+            {profile.strongest_categories.map((category) => (
+              <li
+                key={category.slug}
+                className="flex items-center gap-2 rounded-2xl bg-sand-50 px-3 py-2"
+              >
+                <span className="shrink-0 text-leaf-700">
+                  <CategoryGlyph slug={category.slug} emoji={category.icon} className="h-5 w-5" />
+                </span>
+                <span className="flex-1 truncate text-sm font-bold text-ink">{category.name}</span>
+                <span className="text-sm font-extrabold text-leaf-700">
+                  {formatPercent(category.accuracy)}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+    </div>
   )
 }
 
 function ProfileBody({ profile }: { profile: PlayerProfile }) {
   const { user, stats } = profile
   const relation = RELATION_LABEL[profile.relation]
-  const duels = user.duel_wins + user.duel_losses + user.duel_draws
 
   return (
     <div className="space-y-5">
@@ -104,72 +315,7 @@ function ProfileBody({ profile }: { profile: PlayerProfile }) {
         <EloTile label="Mês passado" rank={profile.last_season_rank} />
       </dl>
 
-      <dl className="grid grid-cols-2 gap-2">
-        <Stat
-          icon={stats.current_streak > 0 ? AppIcons.streak : AppIcons.streakOff}
-          value={stats.current_streak === 1 ? '1 dia' : `${stats.current_streak} dias`}
-          label="Sequência"
-          hint={`recorde ${stats.longest_streak}`}
-        />
-        <Stat
-          icon={AppIcons.check}
-          value={formatPercent(stats.accuracy)}
-          label="Precisão"
-          hint={`${stats.questions_answered.toLocaleString('pt-BR')} respondidas`}
-        />
-        <Stat icon={AppIcons.star} value={stats.perfect_sessions} label="Sessões perfeitas" />
-        <Stat
-          icon={AppIcons.duels}
-          value={`${user.duel_wins}V ${user.duel_draws}E ${user.duel_losses}D`}
-          label="Duelos"
-          hint={duels > 0 ? `${formatPercent(user.duel_wins / duels)} de vitórias` : 'nenhum ainda'}
-        />
-      </dl>
-
-      <section>
-        <SectionTitle>
-          Conquistas · {profile.achievements_unlocked} de {profile.achievements_total}
-        </SectionTitle>
-        {profile.recent_achievements.length > 0 ? (
-          <ul aria-label="Conquistas mais recentes" className="grid grid-cols-2 gap-2 text-left">
-            {profile.recent_achievements.map((achievement) => (
-              <li
-                key={achievement.code}
-                className="flex items-center gap-2 rounded-2xl bg-grain-50 px-2.5 py-2 ring-1 ring-grain-200"
-              >
-                <span className="shrink-0 text-grain-700">
-                  <AchievementGlyph code={achievement.code} className="h-5 w-5" />
-                </span>
-                <span className="truncate text-xs font-bold text-ink">{achievement.name}</span>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p className="text-sm font-semibold text-sand-400">Nenhuma ainda.</p>
-        )}
-      </section>
-
-      {profile.strongest_categories.length > 0 && (
-        <section>
-          <SectionTitle>Mais forte em</SectionTitle>
-          <ul className="space-y-1.5 text-left">
-            {profile.strongest_categories.map((category) => (
-              <li
-                key={category.slug}
-                className="flex items-center gap-2 rounded-2xl bg-sand-50 px-3 py-2"
-              >
-                <span className="shrink-0 text-leaf-700">
-                  <CategoryGlyph slug={category.slug} emoji={category.icon} className="h-5 w-5" />
-                </span>
-                <span className="flex-1 truncate text-sm font-bold text-ink">{category.name}</span>
-                <span className="text-sm font-extrabold text-leaf-700">
-                  {formatPercent(category.accuracy)}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
+      <ProfileTabs profile={profile} />
 
       <p className="text-xs font-semibold text-sand-400">
         Joga desde {memberSince(profile.member_since)}
@@ -227,26 +373,11 @@ function ProfileSkeleton({ user }: { user?: PublicUser }) {
         ))}
       </div>
 
-      <div className="grid grid-cols-2 gap-2">
-        {[0, 1, 2, 3].map((index) => (
-          <span key={index} className="block h-[6.5rem] animate-pulse rounded-2xl bg-sand-50" />
-        ))}
-      </div>
-
       <div>
-        <Bone className="mx-auto mb-2 h-4 w-40" />
-        <div className="grid grid-cols-2 gap-2">
-          {[0, 1, 2, 3].map((index) => (
-            <span key={index} className="block h-9 animate-pulse rounded-2xl bg-grain-50" />
-          ))}
-        </div>
-      </div>
-
-      <div>
-        <Bone className="mx-auto mb-2 h-4 w-28" />
-        <div className="space-y-1.5">
+        <span className="block h-10 animate-pulse rounded-2xl bg-sand-100" />
+        <div className="mt-3 flex justify-center gap-3">
           {[0, 1, 2].map((index) => (
-            <span key={index} className="block h-9 animate-pulse rounded-2xl bg-sand-50" />
+            <span key={index} className="block h-36 w-24 animate-pulse rounded-2xl bg-sand-50" />
           ))}
         </div>
       </div>

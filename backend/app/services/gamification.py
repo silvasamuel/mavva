@@ -167,6 +167,9 @@ def upsert_daily_activity(
             user_id=user_id, date=day, xp=0, questions=0, correct=0, time_seconds=0
         )
         db.add(activity)
+        # Sessions don't autoflush: flush now so a second call for the same day
+        # (several paid unlocks at once) finds this row instead of adding another.
+        db.flush()
     activity.xp += xp
     activity.questions += questions
     activity.correct += correct

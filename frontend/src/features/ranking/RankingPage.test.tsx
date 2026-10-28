@@ -73,9 +73,10 @@ function profileOf(user: PublicUser): PlayerProfile {
     },
     best_rank: { code: 'semente', name: 'Semente' },
     last_season_rank: null,
+    trophies: [],
     achievements_unlocked: 0,
     achievements_total: 32,
-    recent_achievements: [],
+    achievements: [],
     strongest_categories: [],
   }
 }
@@ -125,6 +126,7 @@ describe('RankingPage', () => {
         }
       }
       if (path === '/ranking/friends') return { entries: [entry(1, me, true)] }
+      if (path === '/ranking/all-time') return { podium: [] }
       if (path.startsWith('/ranking/accuracy')) {
         const elo = new URLSearchParams(path.split('?')[1]).get('elo')
         return { ...accuracyBoard, elo }

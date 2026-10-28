@@ -5,10 +5,13 @@ from app.models import User
 from app.schemas.ranking import (
     AccuracyEntry,
     AccuracyLeaderboardOut,
+    AllTimePodiumOut,
     FriendsLeaderboardOut,
     GlobalLeaderboardOut,
     LeaderboardEntry,
+    PodiumEntryOut,
     SeasonOut,
+    SeasonRefOut,
 )
 from app.schemas.social import PublicUser
 from app.schemas.user import RankOut
@@ -107,4 +110,25 @@ def accuracy_ranking(
         top=[_accuracy_entry(row) for row in board.top],
         me=_accuracy_entry(board.me) if board.me else None,
         total_players=board.total_players,
+    )
+
+
+@router.get("/all-time", response_model=AllTimePodiumOut)
+def all_time_podium(user: CurrentUser, db: DbDep) -> AllTimePodiumOut:
+    """The three best single-season scores ever, one per player."""
+    entries = ranking_service.all_time_podium(db, user)
+    return AllTimePodiumOut(
+        podium=[
+            PodiumEntryOut(
+                position=e.position,
+                score=e.score,
+                season=SeasonRefOut(
+                    number=e.season.number, name=season_service.season_name(e.season)
+                ),
+                live=e.live,
+                is_me=e.is_me,
+                user=_public(e.user),
+            )
+            for e in entries
+        ]
     )

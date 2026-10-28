@@ -3,11 +3,22 @@ lifetime accuracy among players who reached Espiga, optionally one elo at a time
 
 from dataclasses import dataclass
 
-from sqlalchemy import BigInteger, ColumnElement, Float, and_, cast, func, or_, select
+from sqlalchemy import (
+    BigInteger,
+    ColumnElement,
+    Float,
+    and_,
+    cast,
+    func,
+    literal,
+    or_,
+    select,
+    union_all,
+)
 from sqlalchemy.orm import Session, selectinload
 
-from app.models import User, UserStats
-from app.services import friendship_service
+from app.models import Season, SeasonResult, User, UserStats
+from app.services import friendship_service, season_service
 from app.services.gamification import LEVELS_PER_RANK, RANKS, Rank, rank_from_level
 
 GLOBAL_LIMIT = 10
@@ -224,3 +235,67 @@ def accuracy_board(db: Session, me: User, elo: Rank | None = None) -> AccuracyBo
     return AccuracyBoard(
         top=top, me=mine, eligible=level >= ACCURACY_MIN_RANK.min_level, total_players=total
     )
+
+
+# --- all-time podium -----------------------------------------------------------------
+
+PODIUM_SIZE = 3
+
+
+@dataclass(frozen=True)
+class PodiumEntry:
+    position: int
+    user: User
+    score: int  # XP in the season of that record
+    season: Season
+    live: bool  # the record is in the season still being played
+    is_me: bool
+
+
+def all_time_podium(db: Session, me: User) -> list[PodiumEntry]:
+    """The three best season scores ever, one per player (their best), active accounts
+    only. Closed seasons come from season_results; the current one counts live."""
+    current, _ = season_service.ensure_current_season(db, season_service.season_today())
+    past = select(
+        SeasonResult.user_id.label("user_id"),
+        SeasonResult.final_xp.label("score"),
+        SeasonResult.season_id.label("season_id"),
+    )
+    live = select(
+        UserStats.user_id.label("user_id"),
+        UserStats.total_xp.label("score"),
+        literal(current.id).label("season_id"),
+    ).where(UserStats.total_xp > 0)
+    scores = union_all(past, live).subquery()
+    best = (
+        select(
+            scores.c.user_id,
+            scores.c.score,
+            scores.c.season_id,
+            func.row_number()
+            .over(
+                partition_by=scores.c.user_id, order_by=(scores.c.score.desc(), scores.c.season_id)
+            )
+            .label("pick"),
+        )
+    ).subquery()
+    rows = db.execute(
+        select(User, best.c.score, Season)
+        .join(best, best.c.user_id == User.id)
+        .join(Season, Season.id == best.c.season_id)
+        .where(best.c.pick == 1, User.is_active.is_(True))
+        .options(selectinload(User.stats))
+        .order_by(best.c.score.desc(), User.username.asc())
+        .limit(PODIUM_SIZE)
+    ).all()
+    return [
+        PodiumEntry(
+            position=index + 1,
+            user=user,
+            score=score,
+            season=season,
+            live=season.id == current.id,
+            is_me=user.id == me.id,
+        )
+        for index, (user, score, season) in enumerate(rows)
+    ]

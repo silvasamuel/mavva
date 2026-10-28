@@ -54,8 +54,22 @@ function Crown({ code }: { code: RankCode }) {
       return (
         <>
           <rect x="30.4" y="4" width="3.2" height="9" rx="1.6" fill="#237d31" />
-          <ellipse cx="25.6" cy="7.6" rx="7.2" ry="4.2" transform="rotate(-28 25.6 7.6)" fill="#8dd295" />
-          <ellipse cx="38.6" cy="7.2" rx="6.6" ry="3.8" transform="rotate(32 38.6 7.2)" fill="#bce6c0" />
+          <ellipse
+            cx="25.6"
+            cy="7.6"
+            rx="7.2"
+            ry="4.2"
+            transform="rotate(-28 25.6 7.6)"
+            fill="#8dd295"
+          />
+          <ellipse
+            cx="38.6"
+            cy="7.2"
+            rx="6.6"
+            ry="3.8"
+            transform="rotate(32 38.6 7.2)"
+            fill="#bce6c0"
+          />
         </>
       )
     case 'espiga':
@@ -70,7 +84,10 @@ function Crown({ code }: { code: RankCode }) {
     case 'videira':
       return (
         <>
-          <path d="M31.2 14c1-6 7.2-9.6 12.4-9.2 1.2.1 1.2 1.8 0 2-4.4-.2-8.6 2.4-9.4 7.2-.1.8-1.3.8-1.3 0Z" fill="#184220" />
+          <path
+            d="M31.2 14c1-6 7.2-9.6 12.4-9.2 1.2.1 1.2 1.8 0 2-4.4-.2-8.6 2.4-9.4 7.2-.1.8-1.3.8-1.3 0Z"
+            fill="#184220"
+          />
           <circle cx="41.5" cy="6.2" r="3.1" fill="#1c4f25" />
           <circle cx="45.8" cy="9.4" r="2.7" fill="#184220" />
           <circle cx="40.2" cy="10.6" r="2.5" fill="#237d31" />
@@ -80,9 +97,30 @@ function Crown({ code }: { code: RankCode }) {
       return (
         <>
           <ellipse cx="22.5" cy="9" rx="9" ry="5" transform="rotate(-32 22.5 9)" fill="#57b663" />
-          <ellipse cx="41.5" cy="8.6" rx="8.4" ry="4.6" transform="rotate(30 41.5 8.6)" fill="#8dd295" />
-          <ellipse cx="20.5" cy="12.8" rx="2.4" ry="3.2" transform="rotate(-18 20.5 12.8)" fill="#f3cb57" />
-          <ellipse cx="43.8" cy="12.4" rx="2.3" ry="3" transform="rotate(16 43.8 12.4)" fill="#efb62f" />
+          <ellipse
+            cx="41.5"
+            cy="8.6"
+            rx="8.4"
+            ry="4.6"
+            transform="rotate(30 41.5 8.6)"
+            fill="#8dd295"
+          />
+          <ellipse
+            cx="20.5"
+            cy="12.8"
+            rx="2.4"
+            ry="3.2"
+            transform="rotate(-18 20.5 12.8)"
+            fill="#f3cb57"
+          />
+          <ellipse
+            cx="43.8"
+            cy="12.4"
+            rx="2.3"
+            ry="3"
+            transform="rotate(16 43.8 12.4)"
+            fill="#efb62f"
+          />
         </>
       )
     case 'cedro':

@@ -1,7 +1,7 @@
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from app.models import User, UserAchievement
+from app.models import DailyActivity, User, UserAchievement
 from app.seeds.achievements import xp_reward_for
 from app.services.achievement_service import evaluate_achievements
 from app.services.auth_service import register_user
@@ -45,3 +45,15 @@ class TestAchievementXp:
         assert "level_5" in codes
         assert "xp_1000" in codes
         assert user.stats.total_xp == 980 + xp_reward_for("level_5") + xp_reward_for("xp_1000")
+
+    def test_several_paid_unlocks_share_one_daily_activity_without_autoflush(self, db: Session):
+        # The app's sessions don't autoflush (app/db/session.py), so the day's
+        # activity row added by the first paid unlock is still pending when the
+        # next one looks it up. Season close hits this on a day with no play yet.
+        user = _user_with_stats(db, total_xp=980)
+        db.autoflush = False
+        evaluate_achievements(db, user, user.stats)
+        db.flush()
+        rows = db.scalars(select(DailyActivity).where(DailyActivity.user_id == user.id)).all()
+        assert len(rows) == 1
+        assert rows[0].xp == xp_reward_for("level_5") + xp_reward_for("xp_1000")

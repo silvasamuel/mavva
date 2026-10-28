@@ -37,6 +37,13 @@ def complete_tutorial(user: CurrentUser, db: DbDep) -> UserOut:
     return UserOut.model_validate(user)
 
 
+@router.post("/me/podium-celebration", status_code=status.HTTP_204_NO_CONTENT)
+def dismiss_podium_celebration(user: CurrentUser, db: DbDep) -> None:
+    """A podium finisher saw their celebration; it doesn't come back."""
+    season_service.mark_podium_seen(db, user)
+    db.commit()
+
+
 @router.post("/me/season-notice", status_code=status.HTTP_204_NO_CONTENT)
 def dismiss_season_notice(body: SeasonNoticeIn, user: CurrentUser, db: DbDep) -> None:
     """Closes the current season's start or end modal for good (on every device)."""
