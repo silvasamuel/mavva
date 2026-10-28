@@ -239,8 +239,8 @@ def get_dashboard(db: Session, user: User) -> dict[str, Any]:
     season_day = season_service.season_today()
     season, _ = season_service.ensure_current_season(db, season_day)
     season_ranks = season_service.ranks_for(stats)
-    # The champion's celebration goes first; the season modal waits for the next visit.
-    celebration = season_service.champion_celebration(db, user)
+    # The podium's celebration goes first; the season modal waits for the next visit.
+    celebration = season_service.podium_celebration(db, user)
     notice = None if celebration else season_service.notice_for(user, season, season_day)
     closed = season_service.latest_closed(db) if notice == "start" else None
     return {
@@ -249,10 +249,11 @@ def get_dashboard(db: Session, user: User) -> dict[str, Any]:
         "season_notice": notice,
         # How last season ended, revealed in the new season's welcome.
         "last_season_podium": _podium_payload(db, closed) if closed else None,
-        "champion_celebration": (
+        "podium_celebration": (
             {
                 "season": season_service.season_ref(celebration.season),
                 "final_xp": celebration.final_xp,
+                "position": celebration.position,
             }
             if celebration
             else None
@@ -268,9 +269,10 @@ def get_dashboard(db: Session, user: User) -> dict[str, Any]:
                 if season_ranks.last_season
                 else None
             ),
-            # Seasons this player won, most recent first (the profile's trophies).
-            "champion_titles": [
-                season_service.season_ref(s) for s in season_service.champion_titles(db, user.id)
+            # Gold, silver and bronze trophies: podium finishes, most recent first.
+            "trophies": [
+                {**season_service.season_ref(s), "position": position}
+                for s, position in season_service.season_trophies(db, user.id)
             ],
             "xp_into_level": xp_into_level,
             "xp_for_next_level": xp_for_next,

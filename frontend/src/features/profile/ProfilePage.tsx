@@ -6,7 +6,7 @@ import type { DashboardData, User } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Card, CardTitle } from '@/components/ui/Card'
 import { Input } from '@/components/ui/Input'
-import { ChampionTrophies } from '@/components/ChampionTrophies'
+import { SeasonTrophies } from '@/components/SeasonTrophies'
 import { EloTile } from '@/components/EloTile'
 import { RankBadge } from '@/components/RankBadge'
 import { formatSeasonEnd } from '@/lib/format'
@@ -39,8 +39,7 @@ export function ProfilePage() {
   const [tutorialOpen, setTutorialOpen] = useState(false)
 
   const save = useMutation({
-    mutationFn: () =>
-      api.patch<User>('/users/me', { name, username, daily_goal_xp: dailyGoal }),
+    mutationFn: () => api.patch<User>('/users/me', { name, username, daily_goal_xp: dailyGoal }),
     onSuccess: (updated) => {
       updateUser(updated)
       setMessage('Alterações salvas!')
@@ -53,16 +52,12 @@ export function ProfilePage() {
   })
 
   const profileBand = dashboard ? rankFromLevel(dashboard.stats.level) : null
-  const profileNext =
-    profileBand?.maxLevel != null ? rankFromLevel(profileBand.maxLevel + 1) : null
+  const profileNext = profileBand?.maxLevel != null ? rankFromLevel(profileBand.maxLevel + 1) : null
   const eloHint =
     dashboard && profileBand
       ? nextRankCopy(
-          rankProgress(
-            dashboard.stats.level,
-            profileBand.minLevel,
-            profileNext?.minLevel ?? null
-          ).remaining,
+          rankProgress(dashboard.stats.level, profileBand.minLevel, profileNext?.minLevel ?? null)
+            .remaining,
           profileNext?.name ?? null
         )
       : null
@@ -95,18 +90,23 @@ export function ProfilePage() {
         <Card className="space-y-3">
           <CardTitle>Temporadas</CardTitle>
           <p className="text-sm font-semibold text-sand-500">
-            Temporada de {dashboard.season.name} · {formatSeasonEnd(dashboard.season.days_left)}.
-            No dia 1º, XP, nível e o ranking de XP recomeçam — seus elos ficam aqui.
+            Temporada de {dashboard.season.name} · {formatSeasonEnd(dashboard.season.days_left)}. No
+            dia 1º, XP, nível e o ranking de XP recomeçam — seus elos ficam aqui.
           </p>
           <dl className="grid grid-cols-2 gap-2">
             <EloTile label="Maior elo" rank={dashboard.stats.best_rank} />
             <EloTile label="Mês passado" rank={dashboard.stats.last_season_rank} />
           </dl>
-          {dashboard.stats.champion_titles.length > 0 ? (
-            <ChampionTrophies titles={dashboard.stats.champion_titles.map((season) => season.name)} />
+          {dashboard.stats.trophies.length > 0 ? (
+            <SeasonTrophies
+              trophies={dashboard.stats.trophies.map((t) => ({
+                season: t.name,
+                position: t.position,
+              }))}
+            />
           ) : (
             <p className="text-xs font-semibold text-sand-400">
-              Termine uma temporada em 1º lugar para ganhar o troféu de campeão.
+              Termine uma temporada no pódio para ganhar um troféu: ouro, prata ou bronze.
             </p>
           )}
         </Card>

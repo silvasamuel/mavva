@@ -219,6 +219,12 @@ const ACHIEVEMENT_ICONS: Record<string, Icon> = {
   duel_played_25: Trophy,
   duel_flawless_1: Star,
   duel_flawless_5: Sparkle,
+  season_top10_1: Grains,
+  season_podium_1: Medal,
+  season_win_1: Crown,
+  season_podium_3: Columns,
+  season_win_3: Trophy,
+  seasons_played_12: Scroll,
 }
 
 export function AchievementGlyph({

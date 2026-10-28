@@ -125,8 +125,8 @@ resposta correta não pode ser inferida chamando a API diretamente.
   "last_season_podium": { "season": { "number": 1, "name": "setembro de 2026" },  // só com "start"
                           "entries": [ { "position": 1, "username": "bia", "name": "Bia",
                                          "final_xp": 4200, "rank": { "code": "videira", … } } ] },
-  "champion_celebration": { "season": { "number": 1, "name": "setembro de 2026" },
-                            "final_xp": 4200 },  // só para o campeão, até ver a comemoração
+  "podium_celebration": { "season": { "number": 1, "name": "setembro de 2026" },
+                          "final_xp": 4200, "position": 1 },  // só para o pódio, até ver a comemoração
   "daily_goal": { "target": 50, "earned_today": 30, "achieved": false },
   "evolution": [ { "date": "2026-07-01", "xp": 60, "questions": 12 }, /* 30 dias */ ],
   "categories": [ { "id": 1, "slug": "personagens", "name": "Personagens", "icon": "👤",
@@ -209,12 +209,18 @@ da vida toda e não mudam.
 - `best_rank` / `last_season_rank` aparecem no dashboard (`stats`) e no perfil público.
 - A primeira temporada é o mês em que o deploy entrou: o XP de antes conta para ela, e o
 
-**Campeões.** Quem fecha a temporada em 1º (`season_results.position = 1`) ganha um troféu:
-`stats.champion_titles` no dashboard e `champion_titles` no perfil público. Na primeira visita
-depois do fechamento, o dashboard traz `champion_celebration` para o campeão (e segura o
-`season_notice` até lá); `POST /users/me/champion-celebration` (204) marca como vista
-(`users.champion_seen_season`). O aviso de nova temporada (`start`) traz `last_season_podium`
+**Troféus do pódio.** Quem fecha a temporada entre os 3 primeiros (`season_results.position` ≤ 3)
+ganha um troféu de ouro, prata ou bronze: `stats.trophies` (`[{number, name, position}]`) no
+dashboard e `trophies` (`[{season, position}]`) no perfil público, do mais recente ao mais antigo.
+Na primeira visita depois do fechamento, o dashboard traz `podium_celebration` para quem ficou no
+pódio (e segura o `season_notice` até lá); `POST /users/me/podium-celebration` (204) marca como
+vista (`users.podium_seen_season`). O aviso de nova temporada (`start`) traz `last_season_podium`
 com o top 3 da temporada que acabou.
+
+**Conquistas de temporada.** No fechamento, as conquistas são reavaliadas para o top 10
+(`season_top10`, `season_podiums`, `season_wins` contam colocações em `season_results`;
+`seasons_played` conta temporadas com XP). Não dão XP: o bônus cairia na temporada nova e daria
+vantagem ao pódio.
 
 **Avisos de temporada** (`season_notice` no dashboard), cada um uma vez por temporada, lembrados
 no servidor (`users.season_start_seen` / `season_end_seen`):

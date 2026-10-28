@@ -19,6 +19,7 @@ from app.schemas.social import (
     PlayerProfileOut,
     PlayerStatsOut,
     PublicUser,
+    TrophyOut,
     UserSearchResult,
 )
 from app.schemas.user import RankOut
@@ -169,8 +170,9 @@ def player_profile_view(user_id: uuid.UUID, user: CurrentUser, db: DbDep) -> Pla
             if ranks.last_season
             else None
         ),
-        champion_titles=[
-            season_service.season_name(s) for s in season_service.champion_titles(db, player.id)
+        trophies=[
+            TrophyOut(season=season_service.season_name(s), position=position)
+            for s, position in season_service.season_trophies(db, player.id)
         ],
         achievements_unlocked=unlocked,
         achievements_total=total,

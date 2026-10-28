@@ -21,12 +21,32 @@ const CONFETTI = Array.from({ length: 34 }, (_, i) => ({
   wide: i % 3 === 0,
 }))
 
+// Per podium place: the kicker, the trophy's metal, and the glowing disc it sits on.
+const PLACES: Record<number, { title: string; metal: string; disc: string }> = {
+  1: {
+    title: 'Campeão da temporada',
+    metal: 'ouro',
+    disc: 'bg-grain-400 shadow-[0_0_80px_20px_rgba(243,203,87,0.45)] ring-grain-300/60',
+  },
+  2: {
+    title: '2º lugar da temporada',
+    metal: 'prata',
+    disc: 'bg-sand-200 shadow-[0_0_70px_16px_rgba(221,226,232,0.4)] ring-white/50',
+  },
+  3: {
+    title: '3º lugar da temporada',
+    metal: 'bronze',
+    disc: 'bg-[#E3A56E] shadow-[0_0_70px_16px_rgba(213,143,85,0.4)] ring-[#F7CFA8]/50',
+  },
+}
+
 /**
- * The last season's champion, on their first visit after it closed: a trophy,
- * light rays and confetti, once. Dismissing (or opening the trophy) tells the
- * server, so it never comes back on another device either.
+ * The last season's podium (1st to 3rd), on their first visit after it closed:
+ * a gold, silver or bronze trophy and confetti, once; the champion also gets
+ * light rays. Dismissing (or opening the trophy) tells the server, so it never
+ * comes back on another device either.
  */
-export function ChampionCelebration() {
+export function PodiumCelebration() {
   const navigate = useNavigate()
   const queryClient = useQueryClient()
   const reduceMotion = useReducedMotion()
@@ -34,14 +54,14 @@ export function ChampionCelebration() {
     queryKey: ['dashboard'],
     queryFn: () => api.get<DashboardData>('/dashboard'),
   })
-  const celebration = data?.champion_celebration ?? null
+  const celebration = data?.podium_celebration ?? null
   const primaryRef = useRef<HTMLButtonElement>(null)
 
   function close(then?: () => void) {
     queryClient.setQueryData<DashboardData>(['dashboard'], (current) =>
-      current ? { ...current, champion_celebration: null } : current
+      current ? { ...current, podium_celebration: null } : current
     )
-    void api.post('/users/me/champion-celebration').catch(() => {
+    void api.post('/users/me/podium-celebration').catch(() => {
       // Offline: it shows again next visit, which is harmless.
     })
     then?.()
@@ -50,6 +70,7 @@ export function ChampionCelebration() {
   closeRef.current = close
 
   const showing = celebration?.season.number
+  const place = PLACES[celebration?.position ?? 1] ?? PLACES[1]
   useEffect(() => {
     if (showing == null) return
     primaryRef.current?.focus()
@@ -66,7 +87,7 @@ export function ChampionCelebration() {
         <motion.div
           role="dialog"
           aria-modal="true"
-          aria-label={`Campeão da temporada de ${celebration.season.name}`}
+          aria-label={`${place.title} de ${celebration.season.name}`}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -74,19 +95,21 @@ export function ChampionCelebration() {
         >
           {!reduceMotion && (
             <>
-              {/* slow-turning light rays behind the trophy */}
-              <motion.div
-                aria-hidden
-                className="pointer-events-none absolute left-1/2 top-1/2 h-[140vmax] w-[140vmax] -translate-x-1/2 -translate-y-1/2 opacity-25"
-                style={{
-                  background:
-                    'repeating-conic-gradient(from 0deg, #F3CB57 0deg 8deg, transparent 8deg 24deg)',
-                  maskImage: 'radial-gradient(circle, black 0%, transparent 60%)',
-                  WebkitMaskImage: 'radial-gradient(circle, black 0%, transparent 60%)',
-                }}
-                animate={{ rotate: 360 }}
-                transition={{ duration: 40, ease: 'linear', repeat: Infinity }}
-              />
+              {/* slow-turning light rays behind the champion's trophy */}
+              {celebration.position === 1 && (
+                <motion.div
+                  aria-hidden
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-[140vmax] w-[140vmax] -translate-x-1/2 -translate-y-1/2 opacity-25"
+                  style={{
+                    background:
+                      'repeating-conic-gradient(from 0deg, #F3CB57 0deg 8deg, transparent 8deg 24deg)',
+                    maskImage: 'radial-gradient(circle, black 0%, transparent 60%)',
+                    WebkitMaskImage: 'radial-gradient(circle, black 0%, transparent 60%)',
+                  }}
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 40, ease: 'linear', repeat: Infinity }}
+                />
+              )}
               {CONFETTI.map((piece, i) => (
                 <motion.span
                   key={i}
@@ -112,9 +135,13 @@ export function ChampionCelebration() {
               initial={reduceMotion ? false : { scale: 0.2, rotate: -20, y: 40 }}
               animate={{ scale: 1, rotate: 0, y: 0 }}
               transition={{ type: 'spring', stiffness: 260, damping: 14, delay: 0.15 }}
-              className="flex h-36 w-36 items-center justify-center rounded-full bg-grain-400 text-grain-900 shadow-[0_0_80px_20px_rgba(243,203,87,0.45)] ring-8 ring-grain-300/60"
+              className={`flex h-36 w-36 items-center justify-center rounded-full ring-8 ${place.disc}`}
             >
-              <MonthTrophy season={celebration.season.name} className="h-28 w-24" />
+              <MonthTrophy
+                season={celebration.season.name}
+                place={celebration.position}
+                className="h-28 w-24"
+              />
             </motion.div>
             <motion.div
               initial={reduceMotion ? false : { opacity: 0, y: 16 }}
@@ -123,15 +150,16 @@ export function ChampionCelebration() {
               className="space-y-2"
             >
               <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-grain-200">
-                Campeão da temporada
+                {place.title}
               </p>
               <h2 className="text-3xl font-extrabold leading-tight">{celebration.season.name}</h2>
               <p className="text-sm font-semibold text-white/80">
-                Você terminou em 1º lugar com{' '}
+                Você terminou em {celebration.position}º lugar com{' '}
                 <strong className="font-extrabold text-grain-200">
                   {celebration.final_xp.toLocaleString('pt-BR')} XP
                 </strong>
-                . Seu troféu de {trophyForSeason(celebration.season.name).stone.toLowerCase()} já está no perfil.
+                . Seu troféu de {place.metal} com{' '}
+                {trophyForSeason(celebration.season.name).stone.toLowerCase()} já está no perfil.
               </p>
             </motion.div>
             <motion.div
@@ -140,7 +168,12 @@ export function ChampionCelebration() {
               transition={{ delay: 0.7 }}
               className="mt-3 flex w-full flex-col gap-2"
             >
-              <Button ref={primaryRef} variant="gold" full onClick={() => close(() => navigate('/profile'))}>
+              <Button
+                ref={primaryRef}
+                variant="gold"
+                full
+                onClick={() => close(() => navigate('/profile'))}
+              >
                 Ver meu troféu
               </Button>
               <button

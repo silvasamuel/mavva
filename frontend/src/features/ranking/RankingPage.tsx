@@ -41,8 +41,8 @@ function SeasonBanner({ season }: { season: Season }) {
           Temporada de {season.name} · {formatSeasonEnd(season.days_left)}
         </p>
         <p className="text-xs font-semibold text-sand-500">
-          No dia 1º, XP, nível e o ranking de XP recomeçam. O 1º lugar leva o troféu de campeão
-          e o pódio da temporada é revelado para todos.
+          No dia 1º, XP, nível e o ranking de XP recomeçam. O pódio leva troféus de ouro, prata
+          e bronze, revelados para todos.
         </p>
       </div>
     </section>

@@ -4,7 +4,7 @@ import { api, ApiError } from '@/lib/api'
 import type { PlayerProfile, PublicUser } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
-import { ChampionTrophies } from '@/components/ChampionTrophies'
+import { SeasonTrophies } from '@/components/SeasonTrophies'
 import { EloTile } from '@/components/EloTile'
 import { RankBadge } from '@/components/RankBadge'
 import { formatPercent } from '@/lib/format'
@@ -65,7 +65,9 @@ function Stat({
 
 function SectionTitle({ children }: { children: ReactNode }) {
   return (
-    <h3 className="mb-2 text-xs font-extrabold uppercase tracking-wide text-sand-500">{children}</h3>
+    <h3 className="mb-2 text-xs font-extrabold uppercase tracking-wide text-sand-500">
+      {children}
+    </h3>
   )
 }
 
@@ -105,7 +107,7 @@ function ProfileBody({ profile }: { profile: PlayerProfile }) {
         <EloTile label="Mês passado" rank={profile.last_season_rank} />
       </dl>
 
-      {profile.champion_titles.length > 0 && <ChampionTrophies titles={profile.champion_titles} />}
+      {profile.trophies.length > 0 && <SeasonTrophies trophies={profile.trophies} />}
 
       <dl className="grid grid-cols-2 gap-2">
         <Stat

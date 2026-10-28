@@ -12,6 +12,7 @@ from app.models import (
     Question,
     QuizAnswer,
     QuizSession,
+    SeasonResult,
     User,
     UserAchievement,
     UserStats,
@@ -52,6 +53,15 @@ def _flawless_duel_wins(db: Session, user_id: uuid.UUID) -> int:
     )
 
 
+def _season_finishes(db: Session, user_id: uuid.UUID, max_position: int | None) -> int:
+    """Closed seasons the player finished at or above `max_position` (None: any finish
+    with XP, i.e. seasons played)."""
+    query = select(func.count()).select_from(SeasonResult).where(SeasonResult.user_id == user_id)
+    if max_position is not None:
+        query = query.where(SeasonResult.position <= max_position)
+    return db.scalar(query) or 0
+
+
 def current_value(db: Session, user: User, stats: UserStats, criteria: dict[str, Any]) -> int:
     kind = criteria.get("type")
     match kind:
@@ -77,6 +87,14 @@ def current_value(db: Session, user: User, stats: UserStats, criteria: dict[str,
             return stats.total_xp
         case "categories_covered":
             return _distinct_categories_answered(db, user.id)
+        case "season_wins":
+            return _season_finishes(db, user.id, max_position=1)
+        case "season_podiums":
+            return _season_finishes(db, user.id, max_position=3)
+        case "season_top10":
+            return _season_finishes(db, user.id, max_position=10)
+        case "seasons_played":
+            return _season_finishes(db, user.id, max_position=None)
         case _:
             return 0
 

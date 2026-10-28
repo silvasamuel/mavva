@@ -123,6 +123,57 @@ ACHIEVEMENTS: list[tuple[str, str, str, str, dict[str, Any], int]] = [
         {"type": "categories_covered"},
         200,
     ),
+    # --- Seasons (closed seasons, from season_results) ---
+    # No XP: they unlock as a season closes, and XP then would hand the podium a
+    # head start in the new one. The trophy is the reward.
+    (
+        "season_top10_1",
+        "Primeiros frutos",
+        "🌾",
+        "Termine uma temporada entre os 10 primeiros",
+        {"type": "season_top10", "value": 1},
+        0,
+    ),
+    (
+        "season_podium_1",
+        "Os três valentes",
+        "🥉",
+        "Termine uma temporada no pódio",
+        {"type": "season_podiums", "value": 1},
+        0,
+    ),
+    (
+        "season_win_1",
+        "Coroa da justiça",
+        "👑",
+        "Vença uma temporada",
+        {"type": "season_wins", "value": 1},
+        0,
+    ),
+    (
+        "season_podium_3",
+        "Coluna no templo",
+        "🏛️",
+        "Fique no pódio em 3 temporadas",
+        {"type": "season_podiums", "value": 3},
+        0,
+    ),
+    (
+        "season_win_3",
+        "Cordão de três dobras",
+        "🏆",
+        "Vença 3 temporadas",
+        {"type": "season_wins", "value": 3},
+        0,
+    ),
+    (
+        "seasons_played_12",
+        "Doze tribos",
+        "📜",
+        "Pontue em 12 temporadas",
+        {"type": "seasons_played", "value": 12},
+        0,
+    ),
     # --- Duels ---
     (
         "duel_win_1",

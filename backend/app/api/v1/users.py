@@ -37,10 +37,10 @@ def complete_tutorial(user: CurrentUser, db: DbDep) -> UserOut:
     return UserOut.model_validate(user)
 
 
-@router.post("/me/champion-celebration", status_code=status.HTTP_204_NO_CONTENT)
-def dismiss_champion_celebration(user: CurrentUser, db: DbDep) -> None:
-    """The season champion saw their celebration; it doesn't come back."""
-    season_service.mark_champion_seen(db, user)
+@router.post("/me/podium-celebration", status_code=status.HTTP_204_NO_CONTENT)
+def dismiss_podium_celebration(user: CurrentUser, db: DbDep) -> None:
+    """A podium finisher saw their celebration; it doesn't come back."""
+    season_service.mark_podium_seen(db, user)
     db.commit()
 
 

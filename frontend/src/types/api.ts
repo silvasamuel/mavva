@@ -81,8 +81,8 @@ export interface PlayerProfile {
   best_rank: RankRef
   /** Where the player finished last season; null if they didn't play it. */
   last_season_rank: RankRef | null
-  /** Seasons this player won, most recent first ("outubro de 2026"). */
-  champion_titles: string[]
+  /** Podium finishes, most recent first: 1 gold, 2 silver, 3 bronze. */
+  trophies: { season: string; position: number }[]
   achievements_unlocked: number
   achievements_total: number
   recent_achievements: { code: string; name: string }[]
@@ -352,16 +352,16 @@ export interface DashboardData {
     total_time_seconds: number
     best_rank: RankRef
     last_season_rank: RankRef | null
-    /** Seasons the player won, most recent first: the profile's trophies. */
-    champion_titles: SeasonRef[]
+    /** Podium finishes, most recent first: the profile's trophy shelf. */
+    trophies: (SeasonRef & { position: number })[]
   }
   season: Season
   /** Season modal to open on the home screen, each once per season. */
   season_notice: 'start' | 'end' | null
   /** How the last season ended; only with the "start" notice. */
   last_season_podium: SeasonPodium | null
-  /** Set once for the last season's champion, until they've seen the celebration. */
-  champion_celebration: { season: SeasonRef; final_xp: number } | null
+  /** Set for the last season's podium (1st-3rd) until they've seen the celebration. */
+  podium_celebration: { season: SeasonRef; final_xp: number; position: number } | null
   daily_goal: { target: number; earned_today: number; achieved: boolean }
   evolution: { date: string; xp: number; questions: number; correct: number }[]
   categories: {

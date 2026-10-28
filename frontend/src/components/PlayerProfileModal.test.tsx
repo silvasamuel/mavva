@@ -42,7 +42,7 @@ function profile(overrides: Partial<PlayerProfile> = {}): PlayerProfile {
     },
     best_rank: { code: 'cedro', name: 'Cedro' },
     last_season_rank: { code: 'oliveira', name: 'Oliveira' },
-    champion_titles: [],
+    trophies: [],
     achievements_unlocked: 8,
     achievements_total: 32,
     recent_achievements: [
@@ -162,15 +162,27 @@ describe('PlayerProfileModal', () => {
     expect(view.queryByText('Amigo')).not.toBeInTheDocument()
   })
 
-  it('shows the season champion trophies', async () => {
-    get.mockResolvedValue(profile({ champion_titles: ['setembro de 2026', 'agosto de 2026'] }))
+  it('shows the season podium trophies', async () => {
+    get.mockResolvedValue(
+      profile({
+        trophies: [
+          { season: 'setembro de 2026', position: 1 },
+          { season: 'agosto de 2026', position: 3 },
+          { season: 'julho de 2026', position: 2 },
+        ],
+      })
+    )
     renderModal()
-    const trophies = await screen.findByRole('list', { name: 'Troféus de campeão' })
+    const trophies = await screen.findByRole('list', { name: 'Troféus de temporada' })
     expect(
       within(trophies)
         .getAllByRole('listitem')
         .map((li) => li.getAttribute('aria-label'))
-    ).toEqual(['Campeão · setembro de 2026 (Ametista)', 'Campeão · agosto de 2026 (Ágata)'])
+    ).toEqual([
+      '1º lugar · setembro de 2026 (Ametista)',
+      '3º lugar · agosto de 2026 (Ágata)',
+      '2º lugar · julho de 2026 (Jacinto)',
+    ])
   })
 
   it('labels the player’s own profile', async () => {

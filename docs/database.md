@@ -43,7 +43,7 @@ erDiagram
 | tutorial_completed_at | TIMESTAMPTZ NULL | quando o jogador terminou ou pulou o tutorial do primeiro login; null = ainda não viu |
 | season_start_seen / season_end_seen | INT NULL | número da última temporada cujo aviso de início / fim o jogador fechou; null = nunca |
 | notifications_seen_at | TIMESTAMPTZ NULL | última vez que abriu "Novidades"; null = conta a partir do cadastro |
-| champion_seen_season | INT NULL | última temporada cuja comemoração de campeão o jogador viu |
+| podium_seen_season | INT NULL | última temporada cuja comemoração de pódio o jogador viu |
 | created_at / updated_at | TIMESTAMPTZ | |
 
 ### refresh_tokens
@@ -186,7 +186,8 @@ UNIQUE `(user_id, date)`. `date` já convertida para o fuso do usuário.
 ### achievements *(catálogo, seed)*
 `id INT PK, code VARCHAR UNIQUE, name, description, icon, criteria JSONB`
 `criteria` ex.: `{"type": "streak", "value": 7}`, `{"type": "total_correct", "value": 100}`,
-`{"type": "category_correct", "category": "parabolas", "value": 25}`, `{"type": "perfect_sessions", "value": 10}`.
+`{"type": "category_correct", "category": "parabolas", "value": 25}`, `{"type": "perfect_sessions", "value": 10}`,
+`{"type": "season_podiums", "value": 3}` (colocações em `season_results`, avaliadas no fechamento da temporada).
 
 ### user_achievements
 `user_id FK, achievement_id FK, unlocked_at` — PK composta.

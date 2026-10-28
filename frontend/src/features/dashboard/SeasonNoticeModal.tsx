@@ -93,8 +93,8 @@ function StartBody({ data }: { data: DashboardData }) {
           perfil.
         </Rule>
         <Rule icon={AppIcons.ranking}>
-          O <strong className="font-extrabold text-ink">1º lugar</strong> leva o troféu de campeão,
-          e o pódio é revelado no fim de cada temporada.
+          No fim de cada temporada o pódio é revelado e leva troféus de
+          <strong className="font-extrabold text-ink"> ouro, prata e bronze</strong>.
         </Rule>
         <Rule icon={AppIcons.check}>
           Conquistas, sequência, duelos e precisão continuam valendo.
@@ -136,8 +136,8 @@ function EndBody({ data }: { data: DashboardData }) {
           mês passado.
         </Rule>
         <Rule icon={AppIcons.ranking}>
-          Quem terminar em <strong className="font-extrabold text-ink">1º lugar</strong> leva o
-          troféu de campeão para o perfil, e o pódio é revelado para todos.
+          Quem terminar no <strong className="font-extrabold text-ink">pódio</strong> leva um troféu
+          de ouro, prata ou bronze para o perfil.
         </Rule>
         <Rule icon={AppIcons.levelUp}>Cada quiz até lá conta: suba de elo antes da virada.</Rule>
       </ul>

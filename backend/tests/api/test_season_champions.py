@@ -1,4 +1,4 @@
-"""All-time podium, season champions' trophies and the champion's celebration."""
+"""All-time podium, podium trophies, the podium celebration and season achievements."""
 
 import uuid
 from datetime import UTC, date, datetime
@@ -8,7 +8,7 @@ from fastapi.testclient import TestClient
 from sqlalchemy.orm import Session
 
 from app.models import Season, SeasonResult, User, UserStats
-from app.services import season_service
+from app.services import achievement_service, season_service
 
 TODAY = date(2026, 10, 9)
 
@@ -99,24 +99,32 @@ class TestAllTimePodium:
         assert client.get("/api/v1/ranking/all-time").status_code == 401
 
 
-class TestChampions:
-    def test_titles_on_the_dashboard_and_the_public_profile(
+class TestPodiumTrophies:
+    def test_gold_silver_and_bronze_on_the_dashboard_and_the_public_profile(
         self, auth_client: TestClient, db: Session
     ):
-        august, september = _closed_season(db, 1, 8), _closed_season(db, 2, 9)
+        july, august, september = (
+            _closed_season(db, 1, 7),
+            _closed_season(db, 2, 8),
+            _closed_season(db, 3, 9),
+        )
         me = _me(auth_client, db)
         rival = _player(db, "rival")
+        _result(db, july, me, 400, 4)  # off the podium: no trophy
         _result(db, august, me, 800, 1)
         _result(db, september, rival, 900, 1)
-        _result(db, september, me, 600, 2)
+        _result(db, september, me, 600, 3)
 
         dashboard = auth_client.get("/api/v1/dashboard").json()
-        assert dashboard["stats"]["champion_titles"] == [{"number": 1, "name": "agosto de 2026"}]
+        assert dashboard["stats"]["trophies"] == [
+            {"number": 3, "name": "setembro de 2026", "position": 3},
+            {"number": 2, "name": "agosto de 2026", "position": 1},
+        ]
 
         profile = auth_client.get(f"/api/v1/players/{rival.id}").json()
-        assert profile["champion_titles"] == ["setembro de 2026"]
+        assert profile["trophies"] == [{"season": "setembro de 2026", "position": 1}]
 
-    def test_the_champion_is_celebrated_once_before_the_season_welcome(
+    def test_the_podium_is_celebrated_once_before_the_season_welcome(
         self, auth_client: TestClient, db: Session
     ):
         september = _closed_season(db, 1, 9)
@@ -128,16 +136,17 @@ class TestChampions:
         _result(db, september, third, 900, 3)
 
         dashboard = auth_client.get("/api/v1/dashboard").json()
-        assert dashboard["champion_celebration"] == {
+        assert dashboard["podium_celebration"] == {
             "season": {"number": 1, "name": "setembro de 2026"},
             "final_xp": 1500,
+            "position": 1,
         }
         assert dashboard["season_notice"] is None  # the celebration goes first
 
-        assert auth_client.post("/api/v1/users/me/champion-celebration").status_code == 204
+        assert auth_client.post("/api/v1/users/me/podium-celebration").status_code == 204
 
         dashboard = auth_client.get("/api/v1/dashboard").json()
-        assert dashboard["champion_celebration"] is None
+        assert dashboard["podium_celebration"] is None
         # next comes the new season's welcome, revealing how the last one ended
         assert dashboard["season_notice"] == "start"
         podium = dashboard["last_season_podium"]
@@ -148,9 +157,51 @@ class TestChampions:
             (3, "terceira", 900),
         ]
 
-    def test_only_the_champion_is_celebrated(self, auth_client: TestClient, db: Session):
+    def test_second_and_third_are_celebrated_too(self, auth_client: TestClient, db: Session):
         september = _closed_season(db, 1, 9)
         me = _me(auth_client, db)
         _result(db, september, _player(db, "campea"), 2000, 1)
-        _result(db, september, me, 100, 2)
-        assert auth_client.get("/api/v1/dashboard").json()["champion_celebration"] is None
+        _result(db, september, me, 1200, 2)
+        celebration = auth_client.get("/api/v1/dashboard").json()["podium_celebration"]
+        assert celebration["position"] == 2
+        assert celebration["final_xp"] == 1200
+
+    def test_off_the_podium_there_is_nothing_to_celebrate(
+        self, auth_client: TestClient, db: Session
+    ):
+        september = _closed_season(db, 1, 9)
+        me = _me(auth_client, db)
+        _result(db, september, me, 100, 4)
+        assert auth_client.get("/api/v1/dashboard").json()["podium_celebration"] is None
+
+
+class TestSeasonAchievements:
+    def _codes(self, client: TestClient) -> set[str]:
+        return {a["code"] for a in client.get("/api/v1/achievements").json() if a["unlocked_at"]}
+
+    def test_closing_a_season_unlocks_them_for_the_top_of_the_board(
+        self, auth_client: TestClient, db: Session, monkeypatch: pytest.MonkeyPatch
+    ):
+        me = _me(auth_client, db)  # opens October as season 1
+        me.stats.total_xp = 900
+        _player(db, "segunda", xp=500)
+        db.flush()
+
+        # November's first request closes October with me on top
+        monkeypatch.setattr(season_service, "season_today", lambda: date(2026, 11, 2))
+        auth_client.get("/api/v1/users/me")
+
+        unlocked = self._codes(auth_client)
+        assert {"season_top10_1", "season_podium_1", "season_win_1"} <= unlocked
+        assert "season_win_3" not in unlocked
+        # no XP from them: the new season starts level for everyone
+        assert auth_client.get("/api/v1/dashboard").json()["stats"]["total_xp"] == 0
+
+    def test_counts_wins_and_podiums_across_seasons(self, auth_client: TestClient, db: Session):
+        seasons = [_closed_season(db, n, 5 + n) for n in range(1, 4)]
+        me = _me(auth_client, db)
+        for season in seasons:
+            _result(db, season, me, 1000, 1)
+        achievement_service.evaluate_achievements(db, me, me.stats)
+        db.flush()
+        assert {"season_win_3", "season_podium_3", "season_win_1"} <= self._codes(auth_client)

@@ -1,4 +1,4 @@
-"""remember which season-champion celebration a player has seen
+"""remember which season-podium celebration a player has seen
 
 Revision ID: a5b6c7d8e9f0
 Revises: f4a5b6c7d8e9
@@ -19,8 +19,8 @@ depends_on: str | Sequence[str] | None = None
 
 
 def upgrade() -> None:
-    op.add_column("users", sa.Column("champion_seen_season", sa.Integer(), nullable=True))
+    op.add_column("users", sa.Column("podium_seen_season", sa.Integer(), nullable=True))
 
 
 def downgrade() -> None:
-    op.drop_column("users", "champion_seen_season")
+    op.drop_column("users", "podium_seen_season")

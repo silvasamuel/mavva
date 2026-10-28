@@ -21,6 +21,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy.sql.elements import SQLCoreOperations
 
 from app.models import Season, SeasonResult, User, UserStats
+from app.services import achievement_service
 from app.services.gamification import LEVELS_PER_RANK, RANKS, Rank, rank_from_level
 
 # Seasons follow Brazil's calendar, like the rest of the product.
@@ -121,8 +122,9 @@ def ensure_current_season(db: Session, today: date) -> tuple[Season, bool]:
     latest = _latest(db)  # another request may have rolled over while we waited
     if latest is not None and today < latest.ends_on:
         return latest, False
-    if latest is not None and latest.closed_at is None:
-        _close(db, latest)
+    closing = latest if latest is not None and latest.closed_at is None else None
+    if closing is not None:
+        _close(db, closing)
     # A month with no traffic at all gets no season of its own.
     season = Season(
         number=(latest.number + 1) if latest else 1,
@@ -133,6 +135,9 @@ def ensure_current_season(db: Session, today: date) -> tuple[Season, bool]:
     db.flush()
     # The bulk UPDATE bypassed the identity map; reload anything already loaded.
     db.expire_all()
+    if closing is not None:
+        _award_season_achievements(db, closing)
+        db.flush()
     return season, True
 
 
@@ -201,16 +206,23 @@ def latest_closed(db: Session) -> Season | None:
     )
 
 
-def champion_titles(db: Session, user_id: object) -> list[Season]:
-    """Every closed season this player finished first in, most recent first."""
-    return list(
-        db.scalars(
-            select(Season)
-            .join(SeasonResult, SeasonResult.season_id == Season.id)
-            .where(SeasonResult.user_id == user_id, SeasonResult.position == 1)
-            .order_by(Season.number.desc())
-        ).all()
-    )
+# A podium finish (1st, 2nd or 3rd) earns a gold, silver or bronze trophy.
+PODIUM = 3
+# Season achievements unlock at the close for the top of the board; everyone else
+# gets theirs on their next evaluation (any finished quiz).
+EVALUATE_AT_CLOSE = 10
+
+
+def season_trophies(db: Session, user_id: object) -> list[tuple[Season, int]]:
+    """(season, position) for every closed season this player finished on the podium,
+    most recent first."""
+    rows = db.execute(
+        select(Season, SeasonResult.position)
+        .join(SeasonResult, SeasonResult.season_id == Season.id)
+        .where(SeasonResult.user_id == user_id, SeasonResult.position <= PODIUM)
+        .order_by(Season.number.desc())
+    ).all()
+    return [(season, position) for season, position in rows]
 
 
 def podium(db: Session, season: Season) -> list[SeasonResult]:
@@ -229,27 +241,43 @@ def podium(db: Session, season: Season) -> list[SeasonResult]:
 class Celebration:
     season: Season
     final_xp: int
+    position: int  # 1, 2 or 3
 
 
-def champion_celebration(db: Session, user: User) -> Celebration | None:
-    """The last closed season's champion gets a one-off celebration on their next visit."""
+def podium_celebration(db: Session, user: User) -> Celebration | None:
+    """Who finished the last closed season on the podium gets a one-off celebration
+    on their next visit (the champion's is the big one)."""
     season = latest_closed(db)
-    if season is None or (user.champion_seen_season or 0) >= season.number:
+    if season is None or (user.podium_seen_season or 0) >= season.number:
         return None
     result = db.scalar(
         select(SeasonResult).where(
             SeasonResult.season_id == season.id,
             SeasonResult.user_id == user.id,
-            SeasonResult.position == 1,
+            SeasonResult.position <= PODIUM,
         )
     )
-    return Celebration(season=season, final_xp=result.final_xp) if result else None
+    if result is None or result.position is None:
+        return None
+    return Celebration(season=season, final_xp=result.final_xp, position=result.position)
 
 
-def mark_champion_seen(db: Session, user: User) -> None:
+def mark_podium_seen(db: Session, user: User) -> None:
     season = latest_closed(db)
     if season is not None:
-        user.champion_seen_season = max(user.champion_seen_season or 0, season.number)
+        user.podium_seen_season = max(user.podium_seen_season or 0, season.number)
+
+
+def _award_season_achievements(db: Session, season: Season) -> None:
+    """Right after a close, unlock season achievements for the top of the board."""
+    top = db.scalars(
+        select(User)
+        .join(SeasonResult, SeasonResult.user_id == User.id)
+        .where(SeasonResult.season_id == season.id, SeasonResult.position <= EVALUATE_AT_CLOSE)
+    ).all()
+    for user in top:
+        if user.stats is not None:
+            achievement_service.evaluate_achievements(db, user, user.stats)
 
 
 def season_ref(season: Season) -> dict[str, object]:

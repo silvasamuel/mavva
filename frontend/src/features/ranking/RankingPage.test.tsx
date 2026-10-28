@@ -73,7 +73,7 @@ function profileOf(user: PublicUser): PlayerProfile {
     },
     best_rank: { code: 'semente', name: 'Semente' },
     last_season_rank: null,
-    champion_titles: [],
+    trophies: [],
     achievements_unlocked: 0,
     achievements_total: 32,
     recent_achievements: [],
