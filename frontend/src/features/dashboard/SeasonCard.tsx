@@ -88,12 +88,6 @@ export function SeasonCard({ data }: { data: DashboardData }) {
         <MonthPrize season={season.name} compact />
       </div>
 
-      <p className="mt-3 text-sm font-semibold text-sand-600">
-        {finalWeek
-          ? `Últimos dias: no dia 1º o pódio é revelado e leva o troféu, e ${stats.rank.name} fica guardado como o seu elo do mês passado.`
-          : 'Todo dia 1º, XP, nível e o ranking de XP recomeçam, o pódio leva o troféu do mês e seus elos ficam guardados no perfil.'}
-      </p>
-
       <Button
         variant={finalWeek ? 'gold' : 'secondary'}
         size="sm"

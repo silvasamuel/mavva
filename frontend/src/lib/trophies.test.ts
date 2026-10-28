@@ -5,6 +5,7 @@ describe('month trophies', () => {
   it('has twelve distinct trophies, one tribe each', () => {
     expect(MONTH_TROPHIES).toHaveLength(12)
     expect(new Set(MONTH_TROPHIES.map((t) => t.tribe)).size).toBe(12)
+    expect(MONTH_TROPHIES.every((t) => t.fact.length > 0 && t.fact.length <= 120)).toBe(true)
     expect(new Set(MONTH_TROPHIES.map((t) => t.gem.join())).size).toBe(12)
   })
 
