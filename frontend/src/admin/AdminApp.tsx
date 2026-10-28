@@ -10,6 +10,7 @@ import { UsersPanel } from './UsersPanel'
 import { QuestionsPanel } from './QuestionsPanel'
 import { ReviewPanel } from './ReviewPanel'
 import { PublishBar } from './PublishBar'
+import { AnnouncementsPanel } from './AnnouncementsPanel'
 import type { AdminDashboard, AdminTab } from './types'
 import { AppIcons, Glyph } from '@/lib/icons'
 
@@ -19,6 +20,7 @@ const TABS: { value: AdminTab; label: string; icon: typeof AppIcons.home }[] = [
   { value: 'review', label: 'Revisão', icon: AppIcons.search },
   { value: 'questions', label: 'Perguntas', icon: AppIcons.study },
   { value: 'users', label: 'Usuários', icon: AppIcons.users },
+  { value: 'news', label: 'Novidades', icon: AppIcons.bell },
 ]
 
 export function AdminApp() {
@@ -100,6 +102,8 @@ export function AdminApp() {
           <ReviewPanel />
         ) : tab === 'questions' ? (
           <QuestionsPanel />
+        ) : tab === 'news' ? (
+          <AnnouncementsPanel />
         ) : user ? (
           <UsersPanel adminId={user.id} />
         ) : null}

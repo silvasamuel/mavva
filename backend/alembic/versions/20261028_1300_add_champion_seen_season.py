@@ -1,7 +1,7 @@
 """remember which season-champion celebration a player has seen
 
 Revision ID: a5b6c7d8e9f0
-Revises: e3f4a5b6c7d8
+Revises: f4a5b6c7d8e9
 Create Date: 2026-10-28 13:00:00.000000
 
 """
@@ -13,7 +13,7 @@ import sqlalchemy as sa
 from alembic import op
 
 revision: str = "a5b6c7d8e9f0"
-down_revision: str | None = "e3f4a5b6c7d8"
+down_revision: str | None = "f4a5b6c7d8e9"
 branch_labels: str | Sequence[str] | None = None
 depends_on: str | Sequence[str] | None = None
 

@@ -1,3 +1,4 @@
+from app.models.announcement import Announcement
 from app.models.gamification import (
     Achievement,
     DailyActivity,
@@ -20,6 +21,7 @@ from app.models.user import (
 
 __all__ = [
     "Achievement",
+    "Announcement",
     "AppSuggestion",
     "Category",
     "DailyActivity",

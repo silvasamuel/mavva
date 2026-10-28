@@ -42,6 +42,7 @@ erDiagram
 | daily_goal_xp | INT | default 50 |
 | tutorial_completed_at | TIMESTAMPTZ NULL | quando o jogador terminou ou pulou o tutorial do primeiro login; null = ainda não viu |
 | season_start_seen / season_end_seen | INT NULL | número da última temporada cujo aviso de início / fim o jogador fechou; null = nunca |
+| notifications_seen_at | TIMESTAMPTZ NULL | última vez que abriu "Novidades"; null = conta a partir do cadastro |
 | champion_seen_season | INT NULL | última temporada cuja comemoração de campeão o jogador viu |
 | created_at / updated_at | TIMESTAMPTZ | |
 
@@ -155,6 +156,12 @@ position INT NULL, created_at` — UNIQUE `(season_id, user_id)`, índice em `us
 Só jogadores que ganharam XP na temporada. `position` segue a ordem do ranking global
 (XP, depois username) e é NULL para contas inativas. Id inteiro gerado pelo banco porque
 as linhas entram num único `INSERT … SELECT`.
+
+### announcements *(novidades publicadas pela equipe)*
+`id UUID PK, title VARCHAR(120), body TEXT, kind ENUM(feature, improvement, fix, notice),
+published_at TIMESTAMPTZ NULL, created_by_id FK users (SET NULL), created_at, updated_at`
+`published_at` nulo = rascunho; índice em `published_at`. Não lido para um jogador =
+`published_at > coalesce(users.notifications_seen_at, users.created_at)`.
 
 ### daily_activities *(série temporal do gráfico de evolução + cálculo de streak)*
 `id UUID PK, user_id FK, date DATE, xp INT, questions INT, correct INT, time_seconds INT`
