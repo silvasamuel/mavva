@@ -5,6 +5,7 @@ import { api } from '@/lib/api'
 import type { DashboardData } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
+import { MonthPrize } from '@/components/MonthPrize'
 import { RankBadge } from '@/components/RankBadge'
 import { nextRankCopy } from '@/lib/ranks'
 import { AppIcons, Glyph, type Icon } from '@/lib/icons'
@@ -81,6 +82,7 @@ function StartBody({ data }: { data: DashboardData }) {
         </p>
       </div>
       {data.last_season_podium && <LastPodium podium={data.last_season_podium} />}
+      <MonthPrize season={season.name} />
       <ul className="space-y-2.5 rounded-2xl bg-sand-50 p-4 text-left">
         <Rule icon={AppIcons.season}>
           Todo dia 1º,{' '}
@@ -93,7 +95,7 @@ function StartBody({ data }: { data: DashboardData }) {
           perfil.
         </Rule>
         <Rule icon={AppIcons.ranking}>
-          No fim de cada temporada o pódio é revelado e leva troféus de
+          No fim de cada temporada o pódio é revelado e leva o troféu do mês em
           <strong className="font-extrabold text-ink"> ouro, prata e bronze</strong>.
         </Rule>
         <Rule icon={AppIcons.check}>
@@ -129,6 +131,7 @@ function EndBody({ data }: { data: DashboardData }) {
           nível {stats.level}. {nextRankCopy(toNext, stats.rank.next_name)}.
         </p>
       </div>
+      <MonthPrize season={season.name} />
       <ul className="space-y-2.5 rounded-2xl bg-grain-50 p-4 text-left ring-1 ring-grain-200">
         <Rule icon={AppIcons.season}>
           No dia 1º, XP e nível recomeçam e{' '}
@@ -136,8 +139,8 @@ function EndBody({ data }: { data: DashboardData }) {
           mês passado.
         </Rule>
         <Rule icon={AppIcons.ranking}>
-          Quem terminar no <strong className="font-extrabold text-ink">pódio</strong> leva um troféu
-          de ouro, prata ou bronze para o perfil.
+          Quem terminar no <strong className="font-extrabold text-ink">pódio</strong> leva o troféu
+          do mês em ouro, prata ou bronze para o perfil.
         </Rule>
         <Rule icon={AppIcons.levelUp}>Cada quiz até lá conta: suba de elo antes da virada.</Rule>
       </ul>

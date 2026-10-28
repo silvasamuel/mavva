@@ -14,6 +14,7 @@ import type {
   PublicUser,
   Season,
 } from '@/types/api'
+import { MonthPrize } from '@/components/MonthPrize'
 import { PlayerProfileModal } from '@/components/PlayerProfileModal'
 import { RankBadge } from '@/components/RankBadge'
 import { Button } from '@/components/ui/Button'
@@ -31,20 +32,19 @@ type OpenPlayer = (user: PublicUser) => void
 
 function SeasonBanner({ season }: { season: Season }) {
   return (
-    <section
-      aria-label="Temporada"
-      className="flex items-start gap-3 rounded-2xl bg-grain-50 px-4 py-3 ring-1 ring-grain-200"
-    >
-      <Glyph as={AppIcons.season} className="mt-0.5 h-5 w-5 shrink-0 text-grain-600" />
-      <div>
-        <p className="text-sm font-extrabold text-ink">
-          Temporada de {season.name} · {formatSeasonEnd(season.days_left)}
-        </p>
-        <p className="text-xs font-semibold text-sand-500">
-          No dia 1º, XP, nível e o ranking de XP recomeçam. O pódio leva troféus de ouro, prata
-          e bronze, revelados para todos.
-        </p>
+    <section aria-label="Temporada" className="space-y-2">
+      <div className="flex items-start gap-3 rounded-2xl bg-grain-50 px-4 py-3 ring-1 ring-grain-200">
+        <Glyph as={AppIcons.season} className="mt-0.5 h-5 w-5 shrink-0 text-grain-600" />
+        <div>
+          <p className="text-sm font-extrabold text-ink">
+            Temporada de {season.name} · {formatSeasonEnd(season.days_left)}
+          </p>
+          <p className="text-xs font-semibold text-sand-500">
+            No dia 1º, XP, nível e o ranking de XP recomeçam, e o pódio é revelado para todos.
+          </p>
+        </div>
       </div>
+      <MonthPrize season={season.name} compact />
     </section>
   )
 }
@@ -246,8 +246,8 @@ function AccuracyBoard({
   return (
     <Card>
       <p className="mb-3 text-sm font-semibold text-sand-500">
-        Só entra neste ranking quem já chegou ao elo {data.min_rank.name} (nível{' '}
-        {data.min_level}). Escolha um elo para se comparar com quem está no mesmo estágio.
+        Só entra neste ranking quem já chegou ao elo {data.min_rank.name} (nível {data.min_level}).
+        Escolha um elo para se comparar com quem está no mesmo estágio.
       </p>
       <EloFilter data={data} elo={elo} onChange={onEloChange} />
       {data.top.length === 0 ? (
@@ -352,15 +352,12 @@ export function RankingPage() {
       ) : tab === 'friends' && friends.data ? (
         <FriendsBoard data={friends.data} onOpen={setOpenPlayer} />
       ) : tab === 'accuracy' && accuracy.data ? (
-        <AccuracyBoard
-          data={accuracy.data}
-          elo={elo}
-          onEloChange={setElo}
-          onOpen={setOpenPlayer}
-        />
+        <AccuracyBoard data={accuracy.data} elo={elo} onEloChange={setElo} onOpen={setOpenPlayer} />
       ) : (
         <Card>
-          <p className="text-sm font-semibold text-sand-500">Não foi possível carregar o ranking.</p>
+          <p className="text-sm font-semibold text-sand-500">
+            Não foi possível carregar o ranking.
+          </p>
           <Button className="mt-3" variant="secondary" onClick={() => void active.refetch()}>
             Tentar de novo
           </Button>

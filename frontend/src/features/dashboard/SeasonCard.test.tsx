@@ -31,6 +31,9 @@ describe('SeasonCard', () => {
     expect(view.getByText('Maior elo').parentElement).toHaveTextContent('Cedro')
     expect(view.getByText('Mês passado').parentElement).toHaveTextContent('Oliveira')
     expect(card).toHaveTextContent(/Todo dia 1º, XP, nível e o ranking de XP recomeçam/)
+    expect(
+      within(card).getByRole('region', { name: 'Troféu de novembro: tribo de José' })
+    ).toHaveTextContent('Troféu de novembroTribo de José')
   })
 
   it('reads "Sem elo" without a last season and links to the ranking', async () => {

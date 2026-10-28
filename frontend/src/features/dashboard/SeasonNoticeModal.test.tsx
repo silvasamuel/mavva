@@ -48,6 +48,9 @@ describe('SeasonNoticeModal', () => {
     expect(dialog).toHaveTextContent('Você terminou o mês passado como Oliveira.')
     expect(dialog).toHaveTextContent('Seu maior elo é Cedro.')
     expect(dialog).toHaveTextContent(/XP, nível e o ranking de XP recomeçam/)
+    expect(
+      within(dialog).getByRole('region', { name: 'Troféu de novembro: tribo de José' })
+    ).toHaveTextContent('Ouro, prata e bronze para o pódio da temporada.')
 
     await user.click(within(dialog).getByRole('button', { name: 'Bora começar' }))
 
@@ -61,8 +64,20 @@ describe('SeasonNoticeModal', () => {
       last_season_podium: {
         season: { number: 1, name: 'outubro de 2026' },
         entries: [
-          { position: 1, username: 'bia', name: 'Bia', final_xp: 4200, rank: { code: 'videira', name: 'Videira' } },
-          { position: 2, username: 'ana', name: 'Ana', final_xp: 3100, rank: { code: 'espiga', name: 'Espiga' } },
+          {
+            position: 1,
+            username: 'bia',
+            name: 'Bia',
+            final_xp: 4200,
+            rank: { code: 'videira', name: 'Videira' },
+          },
+          {
+            position: 2,
+            username: 'ana',
+            name: 'Ana',
+            final_xp: 3100,
+            rank: { code: 'espiga', name: 'Espiga' },
+          },
         ],
       },
     })
@@ -86,6 +101,9 @@ describe('SeasonNoticeModal', () => {
     ).toBeInTheDocument()
     expect(dialog).toHaveTextContent('Faltam 4 níveis para Videira')
     expect(dialog).toHaveTextContent(/Espiga vira o seu elo do mês passado/)
+    expect(
+      within(dialog).getByRole('region', { name: 'Troféu de novembro: tribo de José' })
+    ).toBeInTheDocument()
 
     await user.click(within(dialog).getByRole('button', { name: 'Jogar agora' }))
 

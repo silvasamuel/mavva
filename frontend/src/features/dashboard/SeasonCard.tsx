@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import type { DashboardData, RankRef } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { ProgressBar } from '@/components/ui/ProgressBar'
+import { MonthPrize } from '@/components/MonthPrize'
 import { RankBadge } from '@/components/RankBadge'
 import { daysBetween } from '@/lib/format'
 import { AppIcons, Glyph } from '@/lib/icons'
@@ -83,10 +84,14 @@ export function SeasonCard({ data }: { data: DashboardData }) {
         <EloCell label="Mês passado" rank={stats.last_season_rank} />
       </dl>
 
+      <div className="mt-3">
+        <MonthPrize season={season.name} compact />
+      </div>
+
       <p className="mt-3 text-sm font-semibold text-sand-600">
         {finalWeek
-          ? `Últimos dias: no dia 1º o pódio é revelado, o pódio leva troféus de ouro, prata e bronze, e ${stats.rank.name} fica guardado como o seu elo do mês passado.`
-          : 'Todo dia 1º, XP, nível e o ranking de XP recomeçam. O pódio leva troféus de ouro, prata e bronze, e seus elos ficam guardados no perfil.'}
+          ? `Últimos dias: no dia 1º o pódio é revelado e leva o troféu, e ${stats.rank.name} fica guardado como o seu elo do mês passado.`
+          : 'Todo dia 1º, XP, nível e o ranking de XP recomeçam, o pódio leva o troféu do mês e seus elos ficam guardados no perfil.'}
       </p>
 
       <Button
