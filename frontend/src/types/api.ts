@@ -85,7 +85,8 @@ export interface PlayerProfile {
   trophies: { season: string; position: number }[]
   achievements_unlocked: number
   achievements_total: number
-  recent_achievements: { code: string; name: string }[]
+  /** Every unlocked achievement, most recent first. */
+  achievements: { code: string; name: string }[]
   strongest_categories: {
     slug: string
     name: string

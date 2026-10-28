@@ -82,7 +82,7 @@ class PlayerProfileOut(BaseModel):
     trophies: list[TrophyOut]  # podium finishes, most recent first
     achievements_unlocked: int
     achievements_total: int
-    recent_achievements: list[PlayerAchievementOut]  # newest first
+    achievements: list[PlayerAchievementOut]  # every unlock, newest first
     strongest_categories: list[PlayerCategoryOut]  # best accuracy first
 
 

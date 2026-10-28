@@ -50,7 +50,7 @@ const joaoProfile: PlayerProfile = {
   trophies: [],
   achievements_unlocked: 5,
   achievements_total: 32,
-  recent_achievements: [],
+  achievements: [],
   strongest_categories: [],
 }
 
@@ -80,6 +80,7 @@ describe('FriendsPage', () => {
 
     const dialog = await screen.findByRole('dialog', { name: 'Perfil de João Lima' })
     expect(within(dialog).getByText('Espiga · Nível 8')).toBeInTheDocument()
+    await user.click(within(dialog).getByRole('tab', { name: 'Estatísticas' }))
     expect(within(dialog).getByText('80%')).toBeInTheDocument()
   })
 

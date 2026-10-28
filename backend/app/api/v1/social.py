@@ -150,7 +150,7 @@ def player_profile_view(user_id: uuid.UUID, user: CurrentUser, db: DbDep) -> Pla
     stats = player.stats
     total_xp = stats.total_xp if stats else 0
     answered = stats.questions_answered if stats else 0
-    unlocked, total, recent = player_profile.achievements_of(db, player.id)
+    unlocked, total, earned = player_profile.achievements_of(db, player.id)
     ranks = season_service.ranks_for(stats)
     return PlayerProfileOut(
         user=_require_public(player),
@@ -176,7 +176,7 @@ def player_profile_view(user_id: uuid.UUID, user: CurrentUser, db: DbDep) -> Pla
         ],
         achievements_unlocked=unlocked,
         achievements_total=total,
-        recent_achievements=[PlayerAchievementOut(code=a.code, name=a.name) for a in recent],
+        achievements=[PlayerAchievementOut(code=a.code, name=a.name) for a in earned],
         strongest_categories=[
             PlayerCategoryOut(
                 slug=row["slug"],

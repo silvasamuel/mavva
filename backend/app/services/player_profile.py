@@ -17,7 +17,6 @@ from app.models.enums import FriendshipStatus
 from app.services import friendship_service
 from app.services.stats_service import category_performance
 
-RECENT_ACHIEVEMENTS = 4
 STRONGEST_CATEGORIES = 3
 # A category needs this many answers before its accuracy says anything.
 MIN_CATEGORY_ANSWERS = 5
@@ -47,7 +46,7 @@ def relation_to(db: Session, me: User, other: User) -> Relation:
 
 
 def achievements_of(db: Session, user_id: uuid.UUID) -> tuple[int, int, list[Achievement]]:
-    """(unlocked, total, most recent unlocks first)."""
+    """(unlocked count, catalog size, every unlock with the most recent first)."""
     unlocked = (
         db.scalar(
             select(func.count())
@@ -57,16 +56,15 @@ def achievements_of(db: Session, user_id: uuid.UUID) -> tuple[int, int, list[Ach
         or 0
     )
     total = db.scalar(select(func.count()).select_from(Achievement)) or 0
-    recent = list(
+    earned = list(
         db.scalars(
             select(Achievement)
             .join(UserAchievement, UserAchievement.achievement_id == Achievement.id)
             .where(UserAchievement.user_id == user_id)
             .order_by(UserAchievement.unlocked_at.desc(), Achievement.id)
-            .limit(RECENT_ACHIEVEMENTS)
         )
     )
-    return unlocked, total, recent
+    return unlocked, total, earned
 
 
 def strongest_categories(db: Session, user: User) -> list[dict[str, Any]]:

@@ -167,7 +167,7 @@ class TestStats:
 
 
 class TestAchievements:
-    def test_counts_and_most_recent_first(self, auth_client: TestClient, db: Session):
+    def test_counts_and_every_unlock_most_recent_first(self, auth_client: TestClient, db: Session):
         seed_achievements(db)
         other = _other(auth_client)
         user_id = uuid.UUID(other["user"]["id"])
@@ -186,7 +186,7 @@ class TestAchievements:
         body = _profile(auth_client, other["user"]["id"]).json()
         assert body["achievements_unlocked"] == 6
         assert body["achievements_total"] == len(catalog)
-        assert [a["code"] for a in body["recent_achievements"]] == [a.code for a in catalog[:4]]
+        assert [a["code"] for a in body["achievements"]] == [a.code for a in catalog[:6]]
 
 
 class TestStrongestCategories:

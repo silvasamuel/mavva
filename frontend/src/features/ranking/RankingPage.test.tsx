@@ -76,7 +76,7 @@ function profileOf(user: PublicUser): PlayerProfile {
     trophies: [],
     achievements_unlocked: 0,
     achievements_total: 32,
-    recent_achievements: [],
+    achievements: [],
     strongest_categories: [],
   }
 }

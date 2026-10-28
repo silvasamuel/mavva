@@ -45,7 +45,7 @@ function profile(overrides: Partial<PlayerProfile> = {}): PlayerProfile {
     trophies: [],
     achievements_unlocked: 8,
     achievements_total: 32,
-    recent_achievements: [
+    achievements: [
       { code: 'streak_7', name: 'Uma semana no deserto' },
       { code: 'duel_win_1', name: 'Pedra e funda' },
     ],
@@ -78,6 +78,7 @@ describe('PlayerProfileModal', () => {
   })
 
   it('shows the player’s level, stats and details', async () => {
+    const user = userEvent.setup()
     renderModal()
     const dialog = await screen.findByRole('dialog', { name: 'Perfil de Maria Souza' })
     const view = within(dialog)
@@ -90,17 +91,42 @@ describe('PlayerProfileModal', () => {
     const elos = view.getByLabelText('Elos')
     expect(within(elos).getByText('Maior elo').parentElement).toHaveTextContent('Cedro')
     expect(within(elos).getByText('Mês passado').parentElement).toHaveTextContent('Oliveira')
+    expect(view.getByText('Joga desde setembro de 2026')).toBeInTheDocument()
+
+    await user.click(view.getByRole('tab', { name: 'Estatísticas' }))
     expect(view.getByText('5 dias')).toBeInTheDocument()
     expect(view.getByText('recorde 12')).toBeInTheDocument()
     expect(view.getByText('87%')).toBeInTheDocument()
     expect(view.getByText('420 respondidas')).toBeInTheDocument()
     expect(view.getByText('6V 1E 3D')).toBeInTheDocument()
     expect(view.getByText('60% de vitórias')).toBeInTheDocument()
-    expect(view.getByText('Conquistas · 8 de 32')).toBeInTheDocument()
-    expect(view.getByText('Pedra e funda')).toBeInTheDocument()
     expect(view.getByText('Profetas')).toBeInTheDocument()
     expect(view.getByText('92%')).toBeInTheDocument()
-    expect(view.getByText('Joga desde setembro de 2026')).toBeInTheDocument()
+
+    await user.click(view.getByRole('tab', { name: /Conquistas/ }))
+    expect(view.getByText('Conquistas · 8 de 32')).toBeInTheDocument()
+    expect(view.getByText('Pedra e funda')).toBeInTheDocument()
+  })
+
+  it('opens on trophies and moves between tabs with the arrow keys', async () => {
+    const user = userEvent.setup()
+    renderModal()
+    const view = within(await screen.findByRole('dialog', { name: 'Perfil de Maria Souza' }))
+
+    const tabs = view.getAllByRole('tab')
+    expect(tabs.map((tab) => tab.textContent)).toEqual(['Troféus', 'Conquistas8', 'Estatísticas'])
+    expect(view.getByRole('tab', { name: 'Troféus' })).toHaveAttribute('aria-selected', 'true')
+    expect(view.getByRole('tabpanel', { name: 'Troféus' })).toHaveTextContent(
+      'Nenhum troféu ainda.'
+    )
+
+    await user.click(tabs[0])
+    await user.keyboard('{ArrowRight}')
+    expect(view.getByRole('tab', { name: /Conquistas/ })).toHaveFocus()
+    expect(view.getByRole('tabpanel')).toHaveTextContent('Conquistas · 8 de 32')
+    await user.keyboard('{ArrowLeft}{ArrowLeft}')
+    expect(view.getByRole('tab', { name: 'Estatísticas' })).toHaveAttribute('aria-selected', 'true')
+    expect(view.getByRole('tabpanel')).toHaveTextContent('Sequência')
   })
 
   it('shows what the tapped row knows while the profile loads', async () => {
@@ -139,6 +165,7 @@ describe('PlayerProfileModal', () => {
   })
 
   it('handles a brand-new player gracefully', async () => {
+    const user = userEvent.setup()
     get.mockResolvedValue(
       profile({
         relation: 'none',
@@ -147,19 +174,24 @@ describe('PlayerProfileModal', () => {
         best_rank: { code: 'semente', name: 'Semente' },
         last_season_rank: null,
         achievements_unlocked: 0,
-        recent_achievements: [],
+        achievements: [],
         strongest_categories: [],
       })
     )
     renderModal()
     const view = within(await screen.findByRole('dialog', { name: 'Perfil de Maria Souza' }))
+    expect(view.getByText('Mês passado').parentElement).toHaveTextContent('Sem elo')
+    expect(view.queryByText('Amigo')).not.toBeInTheDocument()
+    expect(view.getByText(/Nenhum troféu ainda/)).toBeInTheDocument()
+
+    await user.click(view.getByRole('tab', { name: 'Conquistas' }))
+    expect(view.getByText('Nenhuma ainda.')).toBeInTheDocument()
+
+    await user.click(view.getByRole('tab', { name: 'Estatísticas' }))
     expect(view.getByText('—')).toBeInTheDocument()
     expect(view.getByText('1 dia')).toBeInTheDocument()
-    expect(view.getByText('Mês passado').parentElement).toHaveTextContent('Sem elo')
     expect(view.getByText('nenhum ainda')).toBeInTheDocument()
-    expect(view.getByText('Nenhuma ainda.')).toBeInTheDocument()
     expect(view.queryByText('Mais forte em')).not.toBeInTheDocument()
-    expect(view.queryByText('Amigo')).not.toBeInTheDocument()
   })
 
   it('shows the season podium trophies', async () => {
@@ -169,10 +201,12 @@ describe('PlayerProfileModal', () => {
           { season: 'setembro de 2026', position: 1 },
           { season: 'agosto de 2026', position: 3 },
           { season: 'julho de 2026', position: 2 },
+          { season: 'junho de 2026', position: 1 },
         ],
       })
     )
     renderModal()
+    expect(await screen.findByText('2 ouros · 1 prata · 1 bronze')).toBeInTheDocument()
     const trophies = await screen.findByRole('list', { name: 'Troféus de temporada' })
     expect(
       within(trophies)
@@ -182,6 +216,7 @@ describe('PlayerProfileModal', () => {
       '1º lugar · setembro de 2026 (Ametista)',
       '3º lugar · agosto de 2026 (Ágata)',
       '2º lugar · julho de 2026 (Jacinto)',
+      '1º lugar · junho de 2026 (Diamante)',
     ])
   })
 
