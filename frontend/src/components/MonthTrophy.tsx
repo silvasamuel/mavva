@@ -34,7 +34,7 @@ const METALS = {
 } as const
 
 /**
- * A cup set with the month's stone, the month engraved on the base: gold for
+ * A cup set with the month's tribe stone, the month engraved on the base: gold for
  * the champion, silver for 2nd, bronze for 3rd. `season` is the season's name
  * ("setembro de 2026").
  */
@@ -94,7 +94,7 @@ export function MonthTrophy({
         strokeLinecap="round"
         opacity="0.7"
       />
-      {/* the month's stone */}
+      {/* the month's tribe stone */}
       <polygon
         points="32,14 40,21 32,30 24,21"
         fill={`url(#${gem})`}

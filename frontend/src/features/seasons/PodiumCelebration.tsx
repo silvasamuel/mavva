@@ -158,8 +158,8 @@ export function PodiumCelebration() {
                 <strong className="font-extrabold text-grain-200">
                   {celebration.final_xp.toLocaleString('pt-BR')} XP
                 </strong>
-                . Seu troféu de {place.metal} com{' '}
-                {trophyForSeason(celebration.season.name).stone.toLowerCase()} já está no perfil.
+                . Seu troféu de {place.metal} da tribo de{' '}
+                {trophyForSeason(celebration.season.name).tribe} já está no perfil.
               </p>
             </motion.div>
             <motion.div

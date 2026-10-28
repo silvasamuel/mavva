@@ -30,10 +30,10 @@ export function GameHud({
       <div className="min-w-0 flex-1">
         <div className="flex items-baseline gap-2">
           <p className="truncate text-sm font-extrabold leading-none">
-            {loading ? '…' : rankName ?? 'Semente'}
+            {loading ? '…' : (rankName ?? 'Semente')}
           </p>
           <p className="text-xs font-extrabold uppercase tracking-wide text-sand-500">
-            Nv {loading ? '–' : level ?? 1}
+            Nv {loading ? '–' : (level ?? 1)}
           </p>
         </div>
         <ProgressBar

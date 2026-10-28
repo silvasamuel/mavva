@@ -5,7 +5,11 @@ export function Card({
   className?: string
   children: React.ReactNode
 }) {
-  return <div className={`rounded-3xl bg-white/80 p-5 shadow-card backdrop-blur-sm ${className}`}>{children}</div>
+  return (
+    <div className={`rounded-3xl bg-white/80 p-5 shadow-card backdrop-blur-sm ${className}`}>
+      {children}
+    </div>
+  )
 }
 
 const TITLE = 'text-sm font-extrabold uppercase tracking-wider text-sand-600'

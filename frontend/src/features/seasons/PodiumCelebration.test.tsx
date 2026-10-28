@@ -66,7 +66,7 @@ describe('PodiumCelebration', () => {
 
     const dialog = screen.getByRole('dialog', { name: '2º lugar da temporada de setembro de 2026' })
     expect(dialog).toHaveTextContent('Você terminou em 2º lugar com 3.100 XP')
-    expect(dialog).toHaveTextContent('Seu troféu de prata com ametista já está no perfil.')
+    expect(dialog).toHaveTextContent('Seu troféu de prata da tribo de Issacar já está no perfil.')
   })
 
   it('celebrates 3rd place with the bronze trophy', () => {
@@ -74,6 +74,6 @@ describe('PodiumCelebration', () => {
 
     expect(
       screen.getByRole('dialog', { name: '3º lugar da temporada de setembro de 2026' })
-    ).toHaveTextContent('Seu troféu de bronze com ametista')
+    ).toHaveTextContent('Seu troféu de bronze da tribo de Issacar')
   })
 })

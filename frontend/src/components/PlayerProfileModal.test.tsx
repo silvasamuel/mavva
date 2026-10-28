@@ -213,10 +213,10 @@ describe('PlayerProfileModal', () => {
         .getAllByRole('listitem')
         .map((li) => li.getAttribute('aria-label'))
     ).toEqual([
-      '1º lugar · setembro de 2026 (Ametista)',
-      '3º lugar · agosto de 2026 (Ágata)',
-      '2º lugar · julho de 2026 (Jacinto)',
-      '1º lugar · junho de 2026 (Diamante)',
+      '1º lugar · setembro de 2026 (tribo de Issacar)',
+      '3º lugar · agosto de 2026 (tribo de Aser)',
+      '2º lugar · julho de 2026 (tribo de Gade)',
+      '1º lugar · junho de 2026 (tribo de Naftali)',
     ])
   })
 
