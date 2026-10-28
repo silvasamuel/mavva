@@ -42,6 +42,7 @@ function profile(overrides: Partial<PlayerProfile> = {}): PlayerProfile {
     },
     best_rank: { code: 'cedro', name: 'Cedro' },
     last_season_rank: { code: 'oliveira', name: 'Oliveira' },
+    champion_titles: [],
     achievements_unlocked: 8,
     achievements_total: 32,
     recent_achievements: [
@@ -159,6 +160,16 @@ describe('PlayerProfileModal', () => {
     expect(view.getByText('Nenhuma ainda.')).toBeInTheDocument()
     expect(view.queryByText('Mais forte em')).not.toBeInTheDocument()
     expect(view.queryByText('Amigo')).not.toBeInTheDocument()
+  })
+
+  it('shows the season champion trophies', async () => {
+    get.mockResolvedValue(profile({ champion_titles: ['setembro de 2026', 'agosto de 2026'] }))
+    renderModal()
+    const trophies = await screen.findByRole('list', { name: 'Troféus de campeão' })
+    expect(within(trophies).getAllByRole('listitem').map((li) => li.textContent)).toEqual([
+      'Campeão · setembro de 2026',
+      'Campeão · agosto de 2026',
+    ])
   })
 
   it('labels the player’s own profile', async () => {

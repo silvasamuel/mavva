@@ -169,6 +169,9 @@ def player_profile_view(user_id: uuid.UUID, user: CurrentUser, db: DbDep) -> Pla
             if ranks.last_season
             else None
         ),
+        champion_titles=[
+            season_service.season_name(s) for s in season_service.champion_titles(db, player.id)
+        ],
         achievements_unlocked=unlocked,
         achievements_total=total,
         recent_achievements=[PlayerAchievementOut(code=a.code, name=a.name) for a in recent],

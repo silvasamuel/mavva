@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom'
 import { keepPreviousData, useQuery } from '@tanstack/react-query'
 import { api } from '@/lib/api'
 import { formatPercent, formatSeasonEnd } from '@/lib/format'
+import { AllTimePodium } from './AllTimePodium'
 import type {
+  AllTimePodium as AllTimePodiumData,
   AccuracyEntry,
   AccuracyLeaderboard,
   FriendsLeaderboard,
@@ -39,7 +41,8 @@ function SeasonBanner({ season }: { season: Season }) {
           Temporada de {season.name} · {formatSeasonEnd(season.days_left)}
         </p>
         <p className="text-xs font-semibold text-sand-500">
-          No dia 1º, XP, nível e o ranking de XP recomeçam. Seu elo da temporada fica no perfil.
+          No dia 1º, XP, nível e o ranking de XP recomeçam. O 1º lugar leva o troféu de campeão
+          e o pódio da temporada é revelado para todos.
         </p>
       </div>
     </section>
@@ -285,6 +288,10 @@ export function RankingPage() {
     queryKey: ['ranking', 'global'],
     queryFn: () => api.get<GlobalLeaderboard>('/ranking/global'),
   })
+  const podium = useQuery({
+    queryKey: ['ranking', 'all-time'],
+    queryFn: () => api.get<AllTimePodiumData>('/ranking/all-time'),
+  })
   const friends = useQuery({
     queryKey: ['ranking', 'friends'],
     queryFn: () => api.get<FriendsLeaderboard>('/ranking/friends'),
@@ -309,6 +316,8 @@ export function RankingPage() {
           Quem lidera o Mavva em XP e em precisão.
         </p>
       </header>
+
+      {podium.data && <AllTimePodium data={podium.data} onOpen={setOpenPlayer} />}
 
       {global.data && <SeasonBanner season={global.data.season} />}
 

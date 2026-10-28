@@ -74,6 +74,7 @@ class PlayerProfileOut(BaseModel):
     # Level resets every season; these carry the player's standing across them.
     best_rank: RankOut  # highest ever, this season included
     last_season_rank: RankOut | None  # None if they didn't play last season
+    champion_titles: list[str]  # seasons won, most recent first ("outubro de 2026")
     achievements_unlocked: int
     achievements_total: int
     recent_achievements: list[PlayerAchievementOut]  # newest first

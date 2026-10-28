@@ -85,8 +85,8 @@ export function SeasonCard({ data }: { data: DashboardData }) {
 
       <p className="mt-3 text-sm font-semibold text-sand-600">
         {finalWeek
-          ? `Últimos dias para subir de elo: no dia 1º, XP e nível recomeçam e ${stats.rank.name} fica guardado como o seu elo do mês passado.`
-          : 'Todo dia 1º, XP, nível e o ranking de XP recomeçam. Seu maior elo e o do mês passado ficam guardados no perfil.'}
+          ? `Últimos dias: no dia 1º o pódio é revelado, o 1º lugar leva o troféu de campeão e ${stats.rank.name} fica guardado como o seu elo do mês passado.`
+          : 'Todo dia 1º, XP, nível e o ranking de XP recomeçam. O 1º lugar leva o troféu de campeão, e seus elos ficam guardados no perfil.'}
       </p>
 
       <Button

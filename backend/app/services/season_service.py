@@ -190,3 +190,67 @@ def season_payload(season: Season, today: date) -> dict[str, object]:
         "ends_on": season.ends_on.isoformat(),
         "days_left": max(0, (season.ends_on - today).days),
     }
+
+
+# --- champions and podiums ---------------------------------------------------------
+
+
+def latest_closed(db: Session) -> Season | None:
+    return db.scalar(
+        select(Season).where(Season.closed_at.is_not(None)).order_by(Season.number.desc()).limit(1)
+    )
+
+
+def champion_titles(db: Session, user_id: object) -> list[Season]:
+    """Every closed season this player finished first in, most recent first."""
+    return list(
+        db.scalars(
+            select(Season)
+            .join(SeasonResult, SeasonResult.season_id == Season.id)
+            .where(SeasonResult.user_id == user_id, SeasonResult.position == 1)
+            .order_by(Season.number.desc())
+        ).all()
+    )
+
+
+def podium(db: Session, season: Season) -> list[SeasonResult]:
+    """The top three of a closed season (positions 1-3; inactive accounts have none)."""
+    return list(
+        db.scalars(
+            select(SeasonResult)
+            .where(SeasonResult.season_id == season.id, SeasonResult.position.is_not(None))
+            .where(SeasonResult.position <= 3)
+            .order_by(SeasonResult.position)
+        ).all()
+    )
+
+
+@dataclass(frozen=True)
+class Celebration:
+    season: Season
+    final_xp: int
+
+
+def champion_celebration(db: Session, user: User) -> Celebration | None:
+    """The last closed season's champion gets a one-off celebration on their next visit."""
+    season = latest_closed(db)
+    if season is None or (user.champion_seen_season or 0) >= season.number:
+        return None
+    result = db.scalar(
+        select(SeasonResult).where(
+            SeasonResult.season_id == season.id,
+            SeasonResult.user_id == user.id,
+            SeasonResult.position == 1,
+        )
+    )
+    return Celebration(season=season, final_xp=result.final_xp) if result else None
+
+
+def mark_champion_seen(db: Session, user: User) -> None:
+    season = latest_closed(db)
+    if season is not None:
+        user.champion_seen_season = max(user.champion_seen_season or 0, season.number)
+
+
+def season_ref(season: Season) -> dict[str, object]:
+    return {"number": season.number, "name": season_name(season)}

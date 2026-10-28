@@ -81,6 +81,8 @@ export interface PlayerProfile {
   best_rank: RankRef
   /** Where the player finished last season; null if they didn't play it. */
   last_season_rank: RankRef | null
+  /** Seasons this player won, most recent first ("outubro de 2026"). */
+  champion_titles: string[]
   achievements_unlocked: number
   achievements_total: number
   recent_achievements: { code: string; name: string }[]
@@ -110,6 +112,36 @@ export interface LeaderboardEntry {
   total_xp: number
   is_me: boolean
   user: PublicUser
+}
+
+export interface SeasonRef {
+  number: number
+  /** "outubro de 2026" */
+  name: string
+}
+
+export interface SeasonPodium {
+  season: SeasonRef
+  entries: {
+    position: number
+    username: string
+    name: string
+    final_xp: number
+    rank: { code: string; name: string }
+  }[]
+}
+
+/** The best single-season scores ever, one per player. */
+export interface AllTimePodium {
+  podium: {
+    position: number
+    score: number
+    season: SeasonRef
+    /** The record is in the season still being played. */
+    live: boolean
+    is_me: boolean
+    user: PublicUser
+  }[]
 }
 
 export interface GlobalLeaderboard {
@@ -320,10 +352,16 @@ export interface DashboardData {
     total_time_seconds: number
     best_rank: RankRef
     last_season_rank: RankRef | null
+    /** Seasons the player won, most recent first: the profile's trophies. */
+    champion_titles: SeasonRef[]
   }
   season: Season
   /** Season modal to open on the home screen, each once per season. */
   season_notice: 'start' | 'end' | null
+  /** How the last season ended; only with the "start" notice. */
+  last_season_podium: SeasonPodium | null
+  /** Set once for the last season's champion, until they've seen the celebration. */
+  champion_celebration: { season: SeasonRef; final_xp: number } | null
   daily_goal: { target: number; earned_today: number; achieved: boolean }
   evolution: { date: string; xp: number; questions: number; correct: number }[]
   categories: {

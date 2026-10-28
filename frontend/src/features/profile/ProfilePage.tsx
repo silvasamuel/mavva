@@ -6,6 +6,7 @@ import type { DashboardData, User } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Card, CardTitle } from '@/components/ui/Card'
 import { Input } from '@/components/ui/Input'
+import { ChampionTrophies } from '@/components/ChampionTrophies'
 import { EloTile } from '@/components/EloTile'
 import { RankBadge } from '@/components/RankBadge'
 import { formatSeasonEnd } from '@/lib/format'
@@ -101,6 +102,13 @@ export function ProfilePage() {
             <EloTile label="Maior elo" rank={dashboard.stats.best_rank} />
             <EloTile label="Mês passado" rank={dashboard.stats.last_season_rank} />
           </dl>
+          {dashboard.stats.champion_titles.length > 0 ? (
+            <ChampionTrophies titles={dashboard.stats.champion_titles.map((season) => season.name)} />
+          ) : (
+            <p className="text-xs font-semibold text-sand-400">
+              Termine uma temporada em 1º lugar para ganhar o troféu de campeão.
+            </p>
+          )}
         </Card>
       )}
 

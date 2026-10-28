@@ -42,6 +42,7 @@ erDiagram
 | daily_goal_xp | INT | default 50 |
 | tutorial_completed_at | TIMESTAMPTZ NULL | quando o jogador terminou ou pulou o tutorial do primeiro login; null = ainda não viu |
 | season_start_seen / season_end_seen | INT NULL | número da última temporada cujo aviso de início / fim o jogador fechou; null = nunca |
+| champion_seen_season | INT NULL | última temporada cuja comemoração de campeão o jogador viu |
 | created_at / updated_at | TIMESTAMPTZ | |
 
 ### refresh_tokens

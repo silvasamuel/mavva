@@ -142,6 +142,29 @@ def _duels_awaiting(db: Session, user: User) -> int:
     return pending
 
 
+def _podium_payload(db: Session, season: Any) -> dict[str, Any] | None:
+    results = season_service.podium(db, season)
+    if not results:
+        return None
+    users = {
+        u.id: u for u in db.scalars(select(User).where(User.id.in_([r.user_id for r in results])))
+    }
+    return {
+        "season": season_service.season_ref(season),
+        "entries": [
+            {
+                "position": r.position,
+                "username": users[r.user_id].username,
+                "name": users[r.user_id].name,
+                "final_xp": r.final_xp,
+                "rank": rank_payload(r.final_level),
+            }
+            for r in results
+            if r.user_id in users
+        ],
+    }
+
+
 def _pending_friend_requests(db: Session, user: User) -> int:
     # Matches the incoming list: a deactivated requester isn't shown, so no badge.
     return (
@@ -216,10 +239,24 @@ def get_dashboard(db: Session, user: User) -> dict[str, Any]:
     season_day = season_service.season_today()
     season, _ = season_service.ensure_current_season(db, season_day)
     season_ranks = season_service.ranks_for(stats)
+    # The champion's celebration goes first; the season modal waits for the next visit.
+    celebration = season_service.champion_celebration(db, user)
+    notice = None if celebration else season_service.notice_for(user, season, season_day)
+    closed = season_service.latest_closed(db) if notice == "start" else None
     return {
         "season": season_service.season_payload(season, season_day),
         # "start" | "end" | null — the season modal to open on the home screen.
-        "season_notice": season_service.notice_for(user, season, season_day),
+        "season_notice": notice,
+        # How last season ended, revealed in the new season's welcome.
+        "last_season_podium": _podium_payload(db, closed) if closed else None,
+        "champion_celebration": (
+            {
+                "season": season_service.season_ref(celebration.season),
+                "final_xp": celebration.final_xp,
+            }
+            if celebration
+            else None
+        ),
         "stats": {
             "total_xp": stats.total_xp,
             "level": level,
@@ -231,6 +268,10 @@ def get_dashboard(db: Session, user: User) -> dict[str, Any]:
                 if season_ranks.last_season
                 else None
             ),
+            # Seasons this player won, most recent first (the profile's trophies).
+            "champion_titles": [
+                season_service.season_ref(s) for s in season_service.champion_titles(db, user.id)
+            ],
             "xp_into_level": xp_into_level,
             "xp_for_next_level": xp_for_next,
             "current_streak": effective_streak(stats, today),

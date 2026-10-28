@@ -55,6 +55,22 @@ describe('SeasonNoticeModal', () => {
     expect(client.getQueryData<DashboardData>(['dashboard'])?.season_notice).toBeNull()
   })
 
+  it('reveals how the last season ended', () => {
+    renderModal({
+      ...seasonDashboard({ notice: 'start' }),
+      last_season_podium: {
+        season: { number: 1, name: 'outubro de 2026' },
+        entries: [
+          { position: 1, username: 'bia', name: 'Bia', final_xp: 4200, rank: { code: 'videira', name: 'Videira' } },
+          { position: 2, username: 'ana', name: 'Ana', final_xp: 3100, rank: { code: 'espiga', name: 'Espiga' } },
+        ],
+      },
+    })
+    const podium = screen.getByRole('region', { name: 'Pódio de outubro de 2026' })
+    expect(within(podium).getAllByRole('listitem')[0]).toHaveTextContent('@bia4.200 XP')
+    expect(within(podium).getAllByRole('listitem')[1]).toHaveTextContent('2º@ana3.100 XP')
+  })
+
   it('explains seasons to who has no last season yet', () => {
     renderModal(seasonDashboard({ notice: 'start', last: null }))
     expect(screen.getByRole('dialog')).toHaveTextContent('No Mavva, cada mês é uma temporada.')

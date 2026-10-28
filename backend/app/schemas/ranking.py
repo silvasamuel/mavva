@@ -21,6 +21,24 @@ class LeaderboardEntry(BaseModel):
     user: PublicUser
 
 
+class SeasonRefOut(BaseModel):
+    number: int
+    name: str  # "outubro de 2026"
+
+
+class PodiumEntryOut(BaseModel):
+    position: int  # 1, 2 or 3
+    score: int  # XP in that season
+    season: SeasonRefOut
+    live: bool  # set in the season still being played
+    is_me: bool
+    user: PublicUser
+
+
+class AllTimePodiumOut(BaseModel):
+    podium: list[PodiumEntryOut]  # up to 3, best first; one entry per player
+
+
 class GlobalLeaderboardOut(BaseModel):
     season: SeasonOut  # XP and the board restart when it ends
     top: list[LeaderboardEntry]
