@@ -347,6 +347,8 @@ export interface DashboardData {
   }[]
   reviews_due: number
   friend_requests: number
+  /** Unread "Novidades", for the bell badge. */
+  notifications_unread: number
   duels: {
     wins: number
     losses: number
@@ -405,4 +407,24 @@ export type AppSuggestionKind = 'feature' | 'correction'
 export interface SuggestionCreateResponse {
   id: string
   status: 'open' | 'reviewed'
+}
+
+// --- Novidades (announcements) ---
+
+export type AnnouncementKind = 'feature' | 'improvement' | 'fix' | 'notice'
+
+export interface NotificationItem {
+  id: string
+  title: string
+  /** Plain text; line breaks are kept. */
+  body: string
+  kind: AnnouncementKind
+  published_at: string
+  unread: boolean
+}
+
+export interface NotificationFeed {
+  /** Newest first. */
+  items: NotificationItem[]
+  unread_count: number
 }

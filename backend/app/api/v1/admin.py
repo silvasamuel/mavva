@@ -11,6 +11,7 @@ from sqlalchemy.orm import selectinload
 from app.core.deps import AdminUser, DbDep
 from app.data.books import BOOKS
 from app.models import (
+    Announcement,
     AppSuggestion,
     Category,
     Question,
@@ -44,8 +45,16 @@ from app.schemas.moderation import (
     AdminSuggestionOut,
     QuestionDraft,
 )
+from app.schemas.notification import AnnouncementIn, AnnouncementOut, AnnouncementUpdate
 from app.seeds.questions import OptionIn, sync_accepted_answers, sync_options
-from app.services import admin_stats, auth_service, content_sync, moderation_service, user_service
+from app.services import (
+    admin_stats,
+    announcement_service,
+    auth_service,
+    content_sync,
+    moderation_service,
+    user_service,
+)
 from app.services.content_sync import ContentSyncError
 from app.services.moderation_service import ModerationError
 from app.services.user_service import UserServiceError
@@ -499,4 +508,63 @@ def review_suggestion(suggestion_id: uuid.UUID, _admin: AdminUser, db: DbDep) ->
         moderation_service.review_suggestion(db, suggestion_id)
     except ModerationError as error:
         raise HTTPException(error.status_code, error.message) from error
+    db.commit()
+
+
+# --- Announcements ("Novidades") ---
+
+_ANNOUNCEMENT_NOT_FOUND = "Novidade não encontrada"
+
+
+@router.get("/announcements", response_model=list[AnnouncementOut])
+def list_announcements(_admin: AdminUser, db: DbDep) -> list[AnnouncementOut]:
+    """Drafts first, then the published ones from newest to oldest."""
+    rows = db.scalars(
+        select(Announcement).order_by(
+            Announcement.published_at.is_(None).desc(),
+            Announcement.published_at.desc(),
+            Announcement.created_at.desc(),
+        )
+    ).all()
+    return [AnnouncementOut.model_validate(row) for row in rows]
+
+
+@router.post("/announcements", response_model=AnnouncementOut, status_code=status.HTTP_201_CREATED)
+def create_announcement(body: AnnouncementIn, admin: AdminUser, db: DbDep) -> AnnouncementOut:
+    announcement = Announcement(
+        title=body.title, body=body.body, kind=body.kind, created_by_id=admin.id
+    )
+    announcement_service.set_published(announcement, body.published)
+    db.add(announcement)
+    db.commit()
+    db.refresh(announcement)
+    return AnnouncementOut.model_validate(announcement)
+
+
+@router.patch("/announcements/{announcement_id}", response_model=AnnouncementOut)
+def update_announcement(
+    announcement_id: uuid.UUID, body: AnnouncementUpdate, _admin: AdminUser, db: DbDep
+) -> AnnouncementOut:
+    announcement = announcement_service.get(db, announcement_id)
+    if announcement is None:
+        raise HTTPException(status.HTTP_404_NOT_FOUND, _ANNOUNCEMENT_NOT_FOUND)
+    if body.title is not None:
+        announcement.title = body.title
+    if body.body is not None:
+        announcement.body = body.body
+    if body.kind is not None:
+        announcement.kind = body.kind
+    if body.published is not None:
+        announcement_service.set_published(announcement, body.published)
+    db.commit()
+    db.refresh(announcement)
+    return AnnouncementOut.model_validate(announcement)
+
+
+@router.delete("/announcements/{announcement_id}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_announcement(announcement_id: uuid.UUID, _admin: AdminUser, db: DbDep) -> None:
+    announcement = announcement_service.get(db, announcement_id)
+    if announcement is None:
+        raise HTTPException(status.HTTP_404_NOT_FOUND, _ANNOUNCEMENT_NOT_FOUND)
+    db.delete(announcement)
     db.commit()

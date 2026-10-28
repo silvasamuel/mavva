@@ -19,7 +19,7 @@ from app.models import (
     UserStats,
 )
 from app.models.enums import DuelStatus, FriendshipStatus, QuizMode
-from app.services import season_service, srs
+from app.services import announcement_service, season_service, srs
 from app.services.duel_service import DUEL_XP
 from app.services.gamification import (
     effective_streak,
@@ -271,6 +271,8 @@ def get_dashboard(db: Session, user: User) -> dict[str, Any]:
         ],
         "reviews_due": reviews_due,
         "friend_requests": _pending_friend_requests(db, user),
+        # unread "Novidades", for the bell badge
+        "notifications_unread": announcement_service.unread_count(db, user),
         "duels": {
             "wins": stats.duel_wins,
             "losses": stats.duel_losses,

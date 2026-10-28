@@ -129,6 +129,7 @@ resposta correta não pode ser inferida chamando a API diretamente.
   "recent_sessions": [ { "id": "…", "completed_at": "…", "correct_count": 9,
                          "question_count": 10, "xp_earned": 145, "filters": {} } ],
   "reviews_due": 14,
+  "notifications_unread": 2,  // "Novidades" ainda não lidas (badge do sino)
   "recommendations": [
     { "type": "review", "reason": "14 revisões vencendo hoje" },
     { "type": "category", "category_slug": "profetas", "reason": "Sua menor acurácia (62%)" }
@@ -248,6 +249,20 @@ diária). O XP total do usuário nunca fica negativo.
 |---|---|---|
 | GET | `/achievements` | Catálogo completo com `unlocked_at` (null se bloqueada) e progresso atual. Ordenação: desbloqueadas primeiro (mais recentes no topo), depois bloqueadas por proximidade da conclusão. |
 
+## Novidades (notificações)
+
+Avisos que a equipe publica para todos os jogadores (novas funcionalidades, melhorias,
+correções, avisos). Um aviso está **não lido** quando foi publicado depois da última
+visita do jogador à tela de Novidades — ou, se ele nunca abriu, depois do cadastro.
+Assim quem acabou de chegar não recebe o histórico inteiro como novidade.
+
+| Método | Rota | Descrição |
+|---|---|---|
+| GET | `/notifications` | `{items, unread_count}`: até 50 avisos publicados, do mais novo para o mais antigo. Cada item: `{id, title, body, kind, published_at, unread}`; `kind` é `feature`, `improvement`, `fix` ou `notice`. Rascunhos nunca aparecem. |
+| POST | `/notifications/seen` | Marca tudo como lido (grava `users.notifications_seen_at`). A tela chama ao abrir. 204. |
+
+O dashboard traz `notifications_unread` para o badge do sino.
+
 ## Admin (requer `role = admin`)
 
 Toda rota abaixo passa pela dependência `AdminUser` no backend: **403** para
@@ -267,6 +282,10 @@ real — o front-end separado (bundle `/admin`) é conveniência, não proteçã
 | GET | `/admin/questions/{id}` | Detalhe completo (enunciado, explicação, referência, opções, respostas). |
 | PATCH | `/admin/questions/{id}` | Edita campos enviados (`exclude_unset`). Valida MC (4 opções, 1 correta) e aberta (≥1 resposta). `type` e `category_id` são imutáveis. |
 | GET | `/admin/content/status` | Compara o banco com `content/questions/*.json`: `{mode: github\|local, dirty_files}`. |
+| GET | `/admin/announcements` | Todas as novidades: rascunhos primeiro, depois as publicadas da mais nova para a mais antiga. |
+| POST | `/admin/announcements` | Body: `{title (≤120), body (≤2000), kind, published}`. `published=false` salva como rascunho. 201. |
+| PATCH | `/admin/announcements/{id}` | Edita os campos enviados. `published: true` publica (a data é gravada só na primeira vez — corrigir um texto depois não volta a marcar como não lido); `false` volta a rascunho. 404 se não existir. |
+| DELETE | `/admin/announcements/{id}` | Apaga a novidade. 204. |
 | POST | `/admin/content/publish` | Reescreve os arquivos a partir do banco. `mode=local` grava em disco; `mode=github` (com `GITHUB_TOKEN`) abre ou atualiza um PR contra a branch configurada e retorna `pr_url`. |
 
 ## Saúde

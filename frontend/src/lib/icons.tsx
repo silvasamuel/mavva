@@ -2,6 +2,7 @@ import type { Icon, IconWeight } from '@phosphor-icons/react'
 import {
   Acorn,
   ArrowsClockwise,
+  Bell,
   Bird,
   BookOpen,
   BookOpenText,
@@ -24,8 +25,8 @@ import {
   Footprints,
   GraduationCap,
   Grains,
-  HandsPraying,
   Handshake,
+  HandsPraying,
   Hourglass,
   House,
   Info,
@@ -40,6 +41,7 @@ import {
   PencilSimple,
   Plant,
   Prohibit,
+  RocketLaunch,
   Scroll,
   Shield,
   SignOut,
@@ -60,6 +62,7 @@ import {
   UsersThree,
   Warning,
   Waves,
+  Wrench,
   XCircle,
 } from '@phosphor-icons/react'
 
@@ -118,6 +121,10 @@ export const AppIcons = {
   cross: Cross,
   info: Info,
   season: CalendarBlank,
+  bell: Bell,
+  rocket: RocketLaunch,
+  wrench: Wrench,
+  megaphone: Megaphone,
 } as const
 
 const CATEGORY_BY_SLUG: Record<string, Icon> = {

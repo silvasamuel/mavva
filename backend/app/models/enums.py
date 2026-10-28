@@ -91,3 +91,10 @@ class AppSuggestionKind(StrEnum):
 class AppSuggestionStatus(StrEnum):
     OPEN = "open"
     REVIEWED = "reviewed"
+
+
+class AnnouncementKind(StrEnum):
+    FEATURE = "feature"
+    IMPROVEMENT = "improvement"
+    FIX = "fix"
+    NOTICE = "notice"
