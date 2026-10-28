@@ -11,7 +11,9 @@ describe('resolveApiUrl', () => {
   })
 
   it('stays same-origin when the configured host matches the page', () => {
-    expect(resolveApiUrl('https://mavva.vercel.app', 'https://mavva.vercel.app', true)).toBe('')
+    expect(
+      resolveApiUrl('https://mavva.vercel.app', 'https://mavva.vercel.app', true)
+    ).toBe('')
   })
 
   it('does not call the Vercel host from the custom domain', () => {
@@ -19,8 +21,8 @@ describe('resolveApiUrl', () => {
   })
 
   it('keeps an explicit non-Vercel API host', () => {
-    expect(resolveApiUrl('https://mavva-api.onrender.com', 'https://mavva.com.br', true)).toBe(
-      'https://mavva-api.onrender.com'
-    )
+    expect(
+      resolveApiUrl('https://mavva-api.onrender.com', 'https://mavva.com.br', true)
+    ).toBe('https://mavva-api.onrender.com')
   })
 })

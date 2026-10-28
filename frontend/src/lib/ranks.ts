@@ -1,4 +1,11 @@
-export type RankCode = 'semente' | 'broto' | 'espiga' | 'videira' | 'oliveira' | 'cedro' | 'celeiro'
+export type RankCode =
+  | 'semente'
+  | 'broto'
+  | 'espiga'
+  | 'videira'
+  | 'oliveira'
+  | 'cedro'
+  | 'celeiro'
 
 export interface Rank {
   code: RankCode
