@@ -54,11 +54,7 @@ export function DashboardPage() {
       className="space-y-5"
       initial={reduceMotion ? undefined : 'hidden'}
       animate={reduceMotion ? undefined : 'show'}
-      variants={
-        reduceMotion
-          ? undefined
-          : { show: { transition: { staggerChildren: 0.07 } } }
-      }
+      variants={reduceMotion ? undefined : { show: { transition: { staggerChildren: 0.07 } } }}
     >
       <motion.section
         variants={enter}
@@ -183,9 +179,7 @@ export function DashboardPage() {
         className="rounded-3xl bg-white/75 px-4 py-4 shadow-card backdrop-blur-sm sm:px-5"
       >
         <div className="mb-3 flex items-center justify-between">
-          <h2 className="text-xs font-extrabold uppercase tracking-wider text-sand-600">
-            Semana
-          </h2>
+          <h2 className="text-xs font-extrabold uppercase tracking-wider text-sand-600">Semana</h2>
           <p className="text-xs font-bold text-sand-400">
             {week.filter((day) => day.xp > 0).length}/7 dias
           </p>
@@ -214,7 +208,10 @@ export function DashboardPage() {
         </ol>
       </motion.section>
 
-      <motion.section variants={enter} className="rounded-3xl bg-white/75 p-5 shadow-card backdrop-blur-sm">
+      <motion.section
+        variants={enter}
+        className="rounded-3xl bg-white/75 p-5 shadow-card backdrop-blur-sm"
+      >
         <h2 className="mb-3 text-xs font-extrabold uppercase tracking-wider text-sand-600">
           Categorias
         </h2>
@@ -228,9 +225,7 @@ export function DashboardPage() {
               <li key={category.id}>
                 <button
                   type="button"
-                  onClick={() =>
-                    navigate('/quiz/new', { state: { categorySlug: category.slug } })
-                  }
+                  onClick={() => navigate('/quiz/new', { state: { categorySlug: category.slug } })}
                   className="flex w-full flex-col items-center gap-1.5 rounded-2xl p-1.5 transition-transform hover:scale-105 active:scale-95"
                 >
                   <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-leaf-50 text-leaf-700 ring-2 ring-leaf-100">
@@ -250,7 +245,10 @@ export function DashboardPage() {
       </motion.section>
 
       {recent_sessions.length > 0 && (
-        <motion.section variants={enter} className="rounded-3xl bg-white/75 p-5 shadow-card backdrop-blur-sm">
+        <motion.section
+          variants={enter}
+          className="rounded-3xl bg-white/75 p-5 shadow-card backdrop-blur-sm"
+        >
           <h2 className="mb-1 text-xs font-extrabold uppercase tracking-wider text-sand-600">
             Partidas
           </h2>
@@ -306,7 +304,10 @@ export function DashboardPage() {
         </motion.section>
       )}
 
-      <motion.details variants={enter} className="group rounded-3xl bg-white/75 shadow-card backdrop-blur-sm">
+      <motion.details
+        variants={enter}
+        className="group rounded-3xl bg-white/75 shadow-card backdrop-blur-sm"
+      >
         <summary className="cursor-pointer list-none px-5 py-4 text-xs font-extrabold uppercase tracking-wider text-sand-600 [&::-webkit-details-marker]:hidden">
           <span className="flex items-center justify-between">
             Evolução — 30 dias
