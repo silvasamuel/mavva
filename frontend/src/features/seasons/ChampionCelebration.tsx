@@ -6,7 +6,8 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { api } from '@/lib/api'
 import type { DashboardData } from '@/types/api'
 import { Button } from '@/components/ui/Button'
-import { AppIcons, Glyph } from '@/lib/icons'
+import { MonthTrophy } from '@/components/MonthTrophy'
+import { trophyForSeason } from '@/lib/trophies'
 
 const CONFETTI_COLORS = ['#F3CB57', '#57B663', '#FFFFFF', '#E8671A', '#8DD295', '#FFE79A']
 
@@ -113,7 +114,7 @@ export function ChampionCelebration() {
               transition={{ type: 'spring', stiffness: 260, damping: 14, delay: 0.15 }}
               className="flex h-36 w-36 items-center justify-center rounded-full bg-grain-400 text-grain-900 shadow-[0_0_80px_20px_rgba(243,203,87,0.45)] ring-8 ring-grain-300/60"
             >
-              <Glyph as={AppIcons.ranking} className="h-20 w-20" />
+              <MonthTrophy season={celebration.season.name} className="h-28 w-24" />
             </motion.div>
             <motion.div
               initial={reduceMotion ? false : { opacity: 0, y: 16 }}
@@ -130,7 +131,7 @@ export function ChampionCelebration() {
                 <strong className="font-extrabold text-grain-200">
                   {celebration.final_xp.toLocaleString('pt-BR')} XP
                 </strong>
-                . Seu troféu já está no perfil.
+                . Seu troféu de {trophyForSeason(celebration.season.name).stone.toLowerCase()} já está no perfil.
               </p>
             </motion.div>
             <motion.div

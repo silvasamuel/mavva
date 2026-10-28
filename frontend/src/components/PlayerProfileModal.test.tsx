@@ -166,10 +166,11 @@ describe('PlayerProfileModal', () => {
     get.mockResolvedValue(profile({ champion_titles: ['setembro de 2026', 'agosto de 2026'] }))
     renderModal()
     const trophies = await screen.findByRole('list', { name: 'Troféus de campeão' })
-    expect(within(trophies).getAllByRole('listitem').map((li) => li.textContent)).toEqual([
-      'Campeão · setembro de 2026',
-      'Campeão · agosto de 2026',
-    ])
+    expect(
+      within(trophies)
+        .getAllByRole('listitem')
+        .map((li) => li.getAttribute('aria-label'))
+    ).toEqual(['Campeão · setembro de 2026 (Ametista)', 'Campeão · agosto de 2026 (Ágata)'])
   })
 
   it('labels the player’s own profile', async () => {
