@@ -587,7 +587,7 @@
           "correct": false
         },
         {
-          "text": "Sabedoria terrena",
+          "text": "Sabedoria",
           "correct": false
         }
       ],
@@ -600,7 +600,7 @@
         "verse_start": 28,
         "verse_end": 29
       },
-      "difficulty": "expert"
+      "difficulty": "hard"
     },
     {
       "external_id": "doutrinas-0020",

@@ -545,12 +545,12 @@
         }
       ],
       "accepted_answers": null,
-      "explanation": "'Para o tribunal de César apelo... Apelaste para César, para César irás' (At 25:11-12).",
+      "explanation": "'Então Festo, tendo falado com o conselho, respondeu: Apelaste para César? Para César irás.' (Atos 25:12).\n",
       "divergence_note": null,
       "reference": {
         "book": "atos",
         "chapter": 25,
-        "verse_start": 11,
+        "verse_start": 12,
         "verse_end": 12
       },
       "difficulty": "expert"

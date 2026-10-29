@@ -1302,7 +1302,7 @@
           "correct": true
         },
         {
-          "text": "Ananias, Misael e Azarias apenas",
+          "text": "Abraão, Isaque e Jacó",
           "correct": false
         },
         {
@@ -1323,7 +1323,7 @@
         "verse_start": 19,
         "verse_end": 25
       },
-      "difficulty": "medium"
+      "difficulty": "easy"
     },
     {
       "external_id": "personagens-0045",

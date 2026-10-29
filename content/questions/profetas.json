@@ -675,22 +675,22 @@
     {
       "external_id": "profetas-0023",
       "type": "multiple_choice",
-      "text": "Que sinal Isaías deu a Acaz sobre a virgem que conceberia um filho?",
+      "text": "Qual foi o nome dado ao filho que a virgem conceberia, segundo o sinal anunciado por Isaías a Acaz?",
       "options": [
         {
-          "text": "O sinal do Emanuel",
+          "text": "Emanuel",
           "correct": true
         },
         {
-          "text": "O sinal do arco-íris",
+          "text": "Jesus",
           "correct": false
         },
         {
-          "text": "O sinal do velo",
+          "text": "Yeshua",
           "correct": false
         },
         {
-          "text": "O sinal da sombra",
+          "text": "Aba",
           "correct": false
         }
       ],
@@ -703,7 +703,7 @@
         "verse_start": 14,
         "verse_end": null
       },
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
       "external_id": "profetas-0024",
