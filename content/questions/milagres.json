@@ -934,7 +934,10 @@
         "A orla",
         "A orla da veste",
         "A borda",
-        "A franja"
+        "A franja",
+        "orla",
+        "borda",
+        "barra"
       ],
       "explanation": "'Se eu tão-somente tocar na sua veste, ficarei sã'; Jesus disse: 'A tua fé te salvou' (Mt 9:20-22).",
       "divergence_note": null,

@@ -1418,7 +1418,8 @@
         "verse_start": 2,
         "verse_end": null
       },
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "is_active": false
     },
     {
       "external_id": "teologia-biblica-0045",
