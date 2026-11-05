@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { motion, useReducedMotion, type Variants } from 'framer-motion'
@@ -14,8 +15,31 @@ import { EvolutionChart } from './EvolutionChart'
 import { SeasonCard } from './SeasonCard'
 import { SeasonNoticeModal } from './SeasonNoticeModal'
 
+type CategoryOrder = 'best' | 'worst'
+
+const CATEGORY_ORDER_KEY = 'mavva:category-order'
+
+function storedCategoryOrder(): CategoryOrder {
+  try {
+    return localStorage.getItem(CATEGORY_ORDER_KEY) === 'worst' ? 'worst' : 'best'
+  } catch {
+    return 'best'
+  }
+}
+
 export function DashboardPage() {
   const { user } = useAuth()
+  // Which end of the category map to show first; remembered on this device.
+  const [categoryOrder, setCategoryOrder] = useState<CategoryOrder>(storedCategoryOrder)
+
+  function changeCategoryOrder(order: CategoryOrder) {
+    setCategoryOrder(order)
+    try {
+      localStorage.setItem(CATEGORY_ORDER_KEY, order)
+    } catch {
+      // Private mode: the choice just doesn't survive a reload.
+    }
+  }
   const navigate = useNavigate()
   const reduceMotion = useReducedMotion()
   const { data, isLoading } = useQuery({
@@ -34,9 +58,13 @@ export function DashboardPage() {
   const { stats, daily_goal, categories, recent_sessions, reviews_due } = data
   const firstName = user?.name.split(' ')[0] ?? 'você'
   const remaining = Math.max(0, daily_goal.target - daily_goal.earned_today)
+  // Ties break toward the most-played category, whichever end is shown.
   const practiced = categories
     .filter((category) => category.answered > 0)
-    .sort((a, b) => (b.accuracy ?? 0) - (a.accuracy ?? 0) || b.answered - a.answered)
+    .sort((a, b) => {
+      const byAccuracy = (a.accuracy ?? 0) - (b.accuracy ?? 0)
+      return (categoryOrder === 'best' ? -byAccuracy : byAccuracy) || b.answered - a.answered
+    })
     .slice(0, 8)
   const week = lastSevenDays(data.evolution)
   const hour = new Date().getHours()
@@ -212,9 +240,40 @@ export function DashboardPage() {
         variants={enter}
         className="rounded-3xl bg-white/75 p-5 shadow-card backdrop-blur-sm"
       >
-        <h2 className="mb-3 text-xs font-extrabold uppercase tracking-wider text-sand-600">
-          Categorias
-        </h2>
+        <div className="mb-3 flex items-center justify-between gap-3">
+          <h2 className="text-xs font-extrabold uppercase tracking-wider text-sand-600">
+            Categorias
+          </h2>
+          {practiced.length > 0 && (
+            <div
+              role="radiogroup"
+              aria-label="Ordem das categorias"
+              className="flex rounded-full bg-sand-100 p-0.5"
+            >
+              {(
+                [
+                  ['best', 'Melhores'],
+                  ['worst', 'Piores'],
+                ] as const
+              ).map(([order, label]) => (
+                <button
+                  key={order}
+                  type="button"
+                  role="radio"
+                  aria-checked={categoryOrder === order}
+                  onClick={() => changeCategoryOrder(order)}
+                  className={`rounded-full px-3 py-1 text-xs font-extrabold transition-colors ${
+                    categoryOrder === order
+                      ? 'bg-white text-ink shadow-sm'
+                      : 'text-sand-500 hover:text-ink'
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
         {practiced.length === 0 ? (
           <p className="py-6 text-center text-sm font-bold text-sand-500">
             Complete um quiz para abrir o mapa de categorias.
