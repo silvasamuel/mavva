@@ -161,6 +161,22 @@ describe('QuizPlayPage report during a round', () => {
     })
   })
 
+  it('names the theme on the splash and keeps the report link clear of "Continuar"', async () => {
+    const user = userEvent.setup()
+    renderPlay()
+
+    expect(await screen.findByText('Quem construiu a arca?')).toBeInTheDocument()
+    await user.click(screen.getByRole('radio', { name: /noé/i }))
+    await user.click(screen.getByRole('button', { name: /responder/i }))
+
+    const splash = await screen.findByRole('dialog', { name: 'Resposta correta' })
+    expect(splash).toHaveTextContent('Personagens')
+    const next = screen.getByRole('button', { name: /continuar/i })
+    const report = screen.getByRole('button', { name: /há um problema nesta pergunta/i })
+    // The link sits after the button, so a tap aimed at "Continuar" can't land on it.
+    expect(next.compareDocumentPosition(report) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy()
+  })
+
   it('lets the player answer the next question after reporting the current one', async () => {
     const user = userEvent.setup()
     renderPlay()
