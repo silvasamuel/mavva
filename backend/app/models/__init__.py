@@ -6,7 +6,7 @@ from app.models.gamification import (
     UserAchievement,
 )
 from app.models.moderation import AppSuggestion, QuestionFlag, QuestionProposal
-from app.models.question import Category, Question, QuestionAnswer, QuestionOption
+from app.models.question import Category, Question, QuestionOption
 from app.models.quiz import QuizAnswer, QuizSession, QuizSessionQuestion
 from app.models.rate_limit import RateLimitBucket
 from app.models.season import Season, SeasonResult
@@ -30,7 +30,6 @@ __all__ = [
     "Friendship",
     "PasswordResetToken",
     "Question",
-    "QuestionAnswer",
     "QuestionFlag",
     "QuestionOption",
     "QuestionProposal",

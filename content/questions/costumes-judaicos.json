@@ -3,7 +3,6 @@
   "questions": [
     {
       "external_id": "costumes-judaicos-0001",
-      "type": "multiple_choice",
       "text": "Com quantos dias de vida o menino israelita devia ser circuncidado, segundo a Lei?",
       "options": [
         {
@@ -23,7 +22,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"No dia oitavo se circuncidará ao menino a carne do seu prepúcio\" (Lv 12:3) — sinal da aliança dado a Abraão (Gn 17:12). O próprio Jesus foi circuncidado ao oitavo dia (Lc 2:21).",
       "divergence_note": null,
       "reference": {
@@ -36,7 +34,6 @@
     },
     {
       "external_id": "costumes-judaicos-0002",
-      "type": "multiple_choice",
       "text": "O que o mandamento do sábado ordenava a Israel?",
       "options": [
         {
@@ -56,7 +53,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Lembra-te do dia do sábado, para o santificar... não farás nenhuma obra\" (Êx 20:8-10), fundamentado no descanso da criação e na libertação do Egito (Dt 5:15). Jesus, Senhor do sábado, o devolveu ao propósito original: \"o sábado foi feito por causa do homem\" (Mc 2:27).",
       "divergence_note": null,
       "reference": {
@@ -69,7 +65,6 @@
     },
     {
       "external_id": "costumes-judaicos-0003",
-      "type": "multiple_choice",
       "text": "O que era o \"levirato\", costume presente na história de Rute e na pergunta dos saduceus a Jesus?",
       "options": [
         {
@@ -89,7 +84,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Quando irmãos morarem juntos, e um deles morrer, e não tiver filho... seu cunhado... a tomará por mulher\" (Dt 25:5), para que o nome do morto não se apagasse. Boaz cumpre papel de resgatador com Rute (Rt 4), e os saduceus usam o costume para questionar a ressurreição (Mt 22:24-28).",
       "divergence_note": null,
       "reference": {
@@ -102,7 +96,6 @@
     },
     {
       "external_id": "costumes-judaicos-0004",
-      "type": "multiple_choice",
       "text": "O que eram os filactérios que os fariseus alargavam \"para serem vistos pelos homens\"?",
       "options": [
         {
@@ -122,7 +115,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Levando ao pé da letra \"atá-las-ás por sinal na tua mão... entre os teus olhos\" (Dt 6:8), usavam-se estojos com textos da Lei. Jesus não condena o costume, mas a ostentação: \"alargam os seus filactérios\" (Mt 23:5).",
       "divergence_note": null,
       "reference": {
@@ -135,7 +127,6 @@
     },
     {
       "external_id": "costumes-judaicos-0005",
-      "type": "multiple_choice",
       "text": "Por que os fariseus criticaram os discípulos de Jesus por comerem \"com as mãos por lavar\" (Marcos 7)?",
       "options": [
         {
@@ -155,7 +146,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "A lavagem cerimonial era \"tradição dos anciãos\" (Mc 7:3-5), regra humana acrescentada à Lei. Jesus responde com Isaías: \"em vão me honram, ensinando doutrinas que são mandamentos de homens\" (Mc 7:7) — e declara que o que contamina vem do coração (Mc 7:20-23).",
       "divergence_note": null,
       "reference": {
@@ -168,15 +158,24 @@
     },
     {
       "external_id": "costumes-judaicos-0006",
-      "type": "open_answer",
       "text": "Que fração dos seus ganhos o israelita devia entregar como dízimo?",
-      "options": null,
-      "accepted_answers": [
-        "Décima parte",
-        "Um décimo",
-        "10%",
-        "Dez por cento",
-        "A decima parte"
+      "options": [
+        {
+          "text": "Décima parte",
+          "correct": true
+        },
+        {
+          "text": "Quinta parte",
+          "correct": false
+        },
+        {
+          "text": "Terça parte",
+          "correct": false
+        },
+        {
+          "text": "Vigésima parte",
+          "correct": false
+        }
       ],
       "explanation": "\"Todas as dízimas da terra... são do Senhor\" (Lv 27:30) — a décima parte, destinada aos levitas, que não tinham herança de terra (Nm 18:21). Abraão já dera o dízimo a Melquisedeque antes da Lei (Gn 14:20).",
       "divergence_note": null,
@@ -190,14 +189,24 @@
     },
     {
       "external_id": "costumes-judaicos-0007",
-      "type": "open_answer",
       "text": "De quantos em quantos anos era celebrado o ano do jubileu, quando as terras voltavam aos donos originais?",
-      "options": null,
-      "accepted_answers": [
-        "50",
-        "Cinquenta",
-        "Cinquenta anos",
-        "De cinquenta em cinquenta"
+      "options": [
+        {
+          "text": "50",
+          "correct": true
+        },
+        {
+          "text": "7",
+          "correct": false
+        },
+        {
+          "text": "40",
+          "correct": false
+        },
+        {
+          "text": "70",
+          "correct": false
+        }
       ],
       "explanation": "\"Santificareis o ano quinquagésimo... e apregoareis liberdade na terra\" (Lv 25:10): terras devolvidas, dívidas perdoadas, escravos libertos. Jesus abre seu ministério anunciando \"o ano aceitável do Senhor\" (Lc 4:19) — o jubileu definitivo.",
       "divergence_note": null,
@@ -211,7 +220,6 @@
     },
     {
       "external_id": "costumes-judaicos-0008",
-      "type": "multiple_choice",
       "text": "Qual oferta Maria e José levaram na apresentação de Jesus no templo, e o que ela revela?",
       "options": [
         {
@@ -231,7 +239,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Levítico 12:8 permitia aos que não podiam dar um cordeiro oferecer \"duas rolas ou dois pombinhos\" — exatamente a oferta de Maria e José (Lc 2:24). O Rei dos reis nasceu numa família pobre: \"sendo rico, por amor de vós se fez pobre\" (2Co 8:9).",
       "divergence_note": null,
       "reference": {
@@ -244,7 +251,6 @@
     },
     {
       "external_id": "costumes-judaicos-0009",
-      "type": "multiple_choice",
       "text": "O que significava, na cultura judaica, rasgar as próprias vestes?",
       "options": [
         {
@@ -264,7 +270,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jacó rasgou as vestes pela suposta morte de José (Gn 37:34); Jó, ao perder tudo (Jó 1:20); o sumo sacerdote, ao julgar blasfema a resposta de Jesus (Mt 26:65). Deus, porém, pede mais: \"rasgai o vosso coração, e não as vossas vestes\" (Jl 2:13).",
       "divergence_note": null,
       "reference": {
@@ -277,7 +282,6 @@
     },
     {
       "external_id": "costumes-judaicos-0010",
-      "type": "multiple_choice",
       "text": "Por que se lavavam os pés dos hóspedes ao chegarem a uma casa?",
       "options": [
         {
@@ -297,7 +301,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Caminhava-se de sandálias por estradas de terra; oferecer água para os pés era cortesia elementar — Abraão a oferece aos visitantes (Gn 18:4), e Simão a omite com Jesus (Lc 7:44). Por isso o gesto de Jesus em João 13 chocou: o Mestre fez o serviço do escravo.",
       "divergence_note": null,
       "reference": {
@@ -310,7 +313,6 @@
     },
     {
       "external_id": "costumes-judaicos-0011",
-      "type": "multiple_choice",
       "text": "Em que dia de vida o menino israelita era circuncidado, sinal da aliança?",
       "options": [
         {
@@ -330,7 +332,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'No dia oitavo se circuncidará a carne do seu prepúcio' (Lv 12:3; Gn 17:12).",
       "divergence_note": null,
       "reference": {
@@ -344,7 +345,6 @@
     },
     {
       "external_id": "costumes-judaicos-0012",
-      "type": "multiple_choice",
       "text": "De quanto em quanto tempo a terra deveria descansar no ano sabático?",
       "options": [
         {
@@ -364,7 +364,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'No sétimo ano haverá descanso... um sábado ao SENHOR; não semearás o teu campo' (Lv 25:4).",
       "divergence_note": null,
       "reference": {
@@ -377,7 +376,6 @@
     },
     {
       "external_id": "costumes-judaicos-0013",
-      "type": "multiple_choice",
       "text": "Após quantos anos vinha o Jubileu, com libertação e restituição das terras?",
       "options": [
         {
@@ -397,7 +395,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Santificareis o ano quinquagésimo... será para vós o jubileu' (Lv 25:10), com liberdade e retorno das posses.",
       "divergence_note": null,
       "reference": {
@@ -411,7 +408,6 @@
     },
     {
       "external_id": "costumes-judaicos-0014",
-      "type": "multiple_choice",
       "text": "Que animal era enviado ao deserto no Dia da Expiação, levando simbolicamente os pecados?",
       "options": [
         {
@@ -431,7 +427,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Sobre o bode 'Azazel' o sumo sacerdote confessava as iniquidades e o enviava ao deserto (Lv 16:10,21-22).",
       "divergence_note": null,
       "reference": {
@@ -444,7 +439,6 @@
     },
     {
       "external_id": "costumes-judaicos-0015",
-      "type": "multiple_choice",
       "text": "Qual carne era proibida pela Lei por o animal não ruminar, embora tenha unha fendida?",
       "options": [
         {
@@ -464,7 +458,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'O porco... não rumina; este vos será imundo' (Lv 11:7), entre as leis de alimentos puros e impuros.",
       "divergence_note": null,
       "reference": {
@@ -477,7 +470,6 @@
     },
     {
       "external_id": "costumes-judaicos-0016",
-      "type": "multiple_choice",
       "text": "O que se atava à testa e ao braço com trechos da Lei, criticado por Jesus quando ostentado?",
       "options": [
         {
@@ -497,7 +489,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jesus condenou alargar filactérios por vaidade (Mt 23:5); a prática vem de Dt 6:8.",
       "divergence_note": null,
       "reference": {
@@ -510,7 +501,6 @@
     },
     {
       "external_id": "costumes-judaicos-0017",
-      "type": "multiple_choice",
       "text": "O que os judeus faziam ao rasgar as vestes?",
       "options": [
         {
@@ -530,7 +520,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Rasgar as vestes sinalizava dor ou horror; o sumo sacerdote o fez ao ouvir Jesus (Mt 26:65).",
       "divergence_note": null,
       "reference": {
@@ -544,14 +533,24 @@
     },
     {
       "external_id": "costumes-judaicos-0018",
-      "type": "open_answer",
       "text": "Que oferta os pobres faziam pela purificação após o parto, como fez Maria?",
-      "options": null,
-      "accepted_answers": [
-        "Duas rolas",
-        "Dois pombinhos",
-        "Duas rolas ou dois pombinhos",
-        "Um par de rolas"
+      "options": [
+        {
+          "text": "Duas rolas ou dois pombinhos",
+          "correct": true
+        },
+        {
+          "text": "Um cordeiro de um ano",
+          "correct": false
+        },
+        {
+          "text": "Um cabrito",
+          "correct": false
+        },
+        {
+          "text": "Um novilho",
+          "correct": false
+        }
       ],
       "explanation": "A Lei permitia aos pobres oferecer duas rolas ou dois pombinhos (Lv 12:8); assim fez Maria (Lc 2:24).",
       "divergence_note": null,
@@ -566,7 +565,6 @@
     },
     {
       "external_id": "costumes-judaicos-0019",
-      "type": "multiple_choice",
       "text": "Qual direito permitia ao parente próximo (goel) resgatar terras ou casar com a viúva sem filhos?",
       "options": [
         {
@@ -586,7 +584,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O 'remidor' resgatava a herança e levantava descendência (Dt 25:5-6; Rt 4:4-6) — pano de fundo de Rute e Boaz.",
       "divergence_note": null,
       "reference": {
@@ -599,7 +596,6 @@
     },
     {
       "external_id": "costumes-judaicos-0020",
-      "type": "multiple_choice",
       "text": "Qual dia da semana era guardado como descanso, conforme o quarto mandamento?",
       "options": [
         {
@@ -619,7 +615,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Lembra-te do dia do sábado, para o santificar' (Êx 20:8); descanso baseado no repouso da criação.",
       "divergence_note": null,
       "reference": {
@@ -632,13 +627,24 @@
     },
     {
       "external_id": "costumes-judaicos-0021",
-      "type": "open_answer",
       "text": "Qual voto de consagração incluía não cortar o cabelo nem beber vinho (feito por Sansão e Samuel)?",
-      "options": null,
-      "accepted_answers": [
-        "Voto de nazireu",
-        "Nazireu",
-        "Nazireado"
+      "options": [
+        {
+          "text": "Voto de nazireu",
+          "correct": true
+        },
+        {
+          "text": "Voto de corbã",
+          "correct": false
+        },
+        {
+          "text": "Voto dos recabitas",
+          "correct": false
+        },
+        {
+          "text": "Voto de jejum",
+          "correct": false
+        }
       ],
       "explanation": "O nazireu abstinha-se de vinho, não cortava o cabelo e evitava contato com mortos (Nm 6:2-5).",
       "divergence_note": null,
@@ -652,7 +658,6 @@
     },
     {
       "external_id": "costumes-judaicos-0022",
-      "type": "multiple_choice",
       "text": "Que prática deixava as espigas caídas e os cantos do campo para os pobres e estrangeiros?",
       "options": [
         {
@@ -672,7 +677,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Não segarás totalmente os cantos do teu campo... para o pobre e para o estrangeiro os deixarás' (Lv 19:9-10) — pano de fundo de Rute.",
       "divergence_note": null,
       "reference": {
@@ -685,7 +689,6 @@
     },
     {
       "external_id": "costumes-judaicos-0023",
-      "type": "multiple_choice",
       "text": "O que era o 'shemá', recitado diariamente pelos israelitas?",
       "options": [
         {
@@ -705,7 +708,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Deuteronômio 6:4-5 ordena amar a Deus de todo o coração; Jesus o citou como o maior mandamento (Mc 12:29-30).",
       "divergence_note": null,
       "reference": {
@@ -718,7 +720,6 @@
     },
     {
       "external_id": "costumes-judaicos-0024",
-      "type": "multiple_choice",
       "text": "Qual era a função do sumo sacerdote no Antigo Testamento?",
       "options": [
         {
@@ -738,7 +739,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O sumo sacerdote entrava no Santo dos Santos uma vez por ano com sangue por si e pelo povo (Lv 16:32-34; Hb 9:7).",
       "divergence_note": null,
       "reference": {
@@ -751,7 +751,6 @@
     },
     {
       "external_id": "costumes-judaicos-0025",
-      "type": "multiple_choice",
       "text": "O que os israelitas prendiam nas bordas das vestes, por ordem da Lei?",
       "options": [
         {
@@ -771,7 +770,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Nas bordas das suas vestes... um cordão azul' para lembrarem os mandamentos do SENHOR (Nm 15:38-39).",
       "divergence_note": null,
       "reference": {
@@ -784,7 +782,6 @@
     },
     {
       "external_id": "costumes-judaicos-0026",
-      "type": "multiple_choice",
       "text": "Por que os judeus evitavam entrar na casa de um gentio antes da Páscoa?",
       "options": [
         {
@@ -804,7 +801,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Não entraram na audiência, para não se contaminarem, mas poderem comer a páscoa' (Jo 18:28).",
       "divergence_note": null,
       "reference": {
@@ -817,14 +813,24 @@
     },
     {
       "external_id": "costumes-judaicos-0027",
-      "type": "open_answer",
       "text": "Que gesto público expressava arrependimento, acompanhado de pano áspero e cinza?",
-      "options": null,
-      "accepted_answers": [
-        "Vestir saco e cinza",
-        "Saco e cinza",
-        "Cobrir-se de saco e cinza",
-        "Pano de saco e cinza"
+      "options": [
+        {
+          "text": "Vestir saco e cinza",
+          "correct": true
+        },
+        {
+          "text": "Rasgar as vestes",
+          "correct": false
+        },
+        {
+          "text": "Ungir a cabeça com óleo",
+          "correct": false
+        },
+        {
+          "text": "Lavar as mãos em público",
+          "correct": false
+        }
       ],
       "explanation": "Nínive se cobriu de saco e cinza ao ouvir Jonas (Jn 3:5-6); Jó também o fez em arrependimento (Jó 42:6).",
       "divergence_note": null,
@@ -838,7 +844,6 @@
     },
     {
       "external_id": "costumes-judaicos-0028",
-      "type": "multiple_choice",
       "text": "O que acontecia às dívidas no ano da remissão, a cada sete anos?",
       "options": [
         {
@@ -858,7 +863,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'No fim de cada sete anos farás remissão... todo credor perdoará o que emprestou ao seu próximo' (Dt 15:1-2).",
       "divergence_note": null,
       "reference": {
@@ -871,7 +875,6 @@
     },
     {
       "external_id": "costumes-judaicos-0029",
-      "type": "multiple_choice",
       "text": "Para que serviam as cidades de refúgio em Israel?",
       "options": [
         {
@@ -891,7 +894,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Serão para vós cidades de refúgio do vingador, para que não morra o homicida sem que primeiro esteja perante a congregação' (Nm 35:11-12).",
       "divergence_note": null,
       "reference": {
@@ -904,7 +906,6 @@
     },
     {
       "external_id": "costumes-judaicos-0030",
-      "type": "multiple_choice",
       "text": "Quantos pães da proposição ficavam continuamente diante do SENHOR?",
       "options": [
         {
@@ -924,7 +925,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Doze bolos em duas fileiras sobre a mesa de ouro puro, renovados a cada sábado — um por tribo (Lv 24:5-8).",
       "divergence_note": null,
       "reference": {
@@ -937,7 +937,6 @@
     },
     {
       "external_id": "costumes-judaicos-0031",
-      "type": "multiple_choice",
       "text": "O que a Lei mandava fazer com o primogênito dos filhos de Israel?",
       "options": [
         {
@@ -957,7 +956,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Santifica-me todo o primogênito' (Êx 13:2); o primogênito humano era remido por resgate (Êx 13:13-15).",
       "divergence_note": null,
       "reference": {
@@ -970,13 +968,24 @@
     },
     {
       "external_id": "costumes-judaicos-0032",
-      "type": "open_answer",
       "text": "Que utensílio o sacerdote usava para levar brasas e incenso ao lugar santo?",
-      "options": null,
-      "accepted_answers": [
-        "Incensário",
-        "O incensário",
-        "Turíbulo"
+      "options": [
+        {
+          "text": "Incensário",
+          "correct": true
+        },
+        {
+          "text": "Candelabro",
+          "correct": false
+        },
+        {
+          "text": "Bacia de bronze",
+          "correct": false
+        },
+        {
+          "text": "Altar do holocausto",
+          "correct": false
+        }
       ],
       "explanation": "Arão correu com o incensário para fazer expiação e deter a praga entre o povo (Nm 16:46-48).",
       "divergence_note": null,
@@ -990,7 +999,6 @@
     },
     {
       "external_id": "costumes-judaicos-0033",
-      "type": "multiple_choice",
       "text": "O que a Lei ordenava fazer com o corpo de um executado pendurado num madeiro?",
       "options": [
         {
@@ -1010,7 +1018,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'O seu cadáver não permanecerá no madeiro... o enterrarás no mesmo dia' (Dt 21:22-23) — por isso a pressa em sepultar Jesus antes do sábado.",
       "divergence_note": null,
       "reference": {
@@ -1023,7 +1030,6 @@
     },
     {
       "external_id": "costumes-judaicos-0034",
-      "type": "multiple_choice",
       "text": "O que Jesus ordenou ao leproso curado, conforme a Lei de Moisés?",
       "options": [
         {
@@ -1043,7 +1049,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Vai, mostra-te ao sacerdote e apresenta a oferta que Moisés determinou' (Mt 8:4; cf. Lv 14) — a purificação ritual exigia sacrifícios.",
       "divergence_note": null,
       "reference": {
@@ -1056,7 +1061,6 @@
     },
     {
       "external_id": "costumes-judaicos-0035",
-      "type": "multiple_choice",
       "text": "Onde a Lei mandava escrever as palavras do mandamento, além de atá-las à mão?",
       "options": [
         {
@@ -1076,7 +1080,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'E as escreverás nos umbrais de tua casa e nas tuas portas' (Dt 6:9) — origem da mezuzá.",
       "divergence_note": null,
       "reference": {
@@ -1089,7 +1092,6 @@
     },
     {
       "external_id": "costumes-judaicos-0036",
-      "type": "multiple_choice",
       "text": "Com que idade os levitas entravam no serviço do tabernáculo, segundo Números 4?",
       "options": [
         {
@@ -1109,7 +1111,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Da idade de trinta anos para cima até aos cinquenta... todo o que entra no serviço' (Nm 4:3).",
       "divergence_note": null,
       "reference": {
@@ -1122,7 +1123,6 @@
     },
     {
       "external_id": "costumes-judaicos-0037",
-      "type": "multiple_choice",
       "text": "Qual era a pena prevista na Lei para quem blasfemasse o nome do SENHOR?",
       "options": [
         {
@@ -1142,7 +1142,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Aquele que blasfemar o nome do SENHOR certamente morrerá; toda a congregação o apedrejará' (Lv 24:16) — acusação usada contra Jesus e Estêvão.",
       "divergence_note": null,
       "reference": {
@@ -1155,13 +1154,24 @@
     },
     {
       "external_id": "costumes-judaicos-0038",
-      "type": "open_answer",
       "text": "Que peça do traje do sumo sacerdote trazia doze pedras, uma por tribo?",
-      "options": null,
-      "accepted_answers": [
-        "Peitoral",
-        "O peitoral",
-        "Peitoral do juízo"
+      "options": [
+        {
+          "text": "Peitoral",
+          "correct": true
+        },
+        {
+          "text": "Éfode",
+          "correct": false
+        },
+        {
+          "text": "Mitra",
+          "correct": false
+        },
+        {
+          "text": "Manto azul",
+          "correct": false
+        }
       ],
       "explanation": "'As pedras serão segundo os nomes dos filhos de Israel, doze' no peitoral (Êx 28:21) — o sacerdote levava o povo sobre o coração.",
       "divergence_note": null,
@@ -1175,7 +1185,6 @@
     },
     {
       "external_id": "costumes-judaicos-0039",
-      "type": "multiple_choice",
       "text": "Quantos mandamentos Deus entregou a Moisés no monte Sinai, escritos em tábuas?",
       "options": [
         {
@@ -1195,7 +1204,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Escreveu nas tábuas as palavras da aliança, os dez mandamentos' (Êx 34:28).",
       "divergence_note": null,
       "reference": {
@@ -1208,7 +1216,6 @@
     },
     {
       "external_id": "costumes-judaicos-0040",
-      "type": "multiple_choice",
       "text": "Que gesto o servo de Abraão fez ao jurar que buscaria uma esposa para Isaque?",
       "options": [
         {
@@ -1228,7 +1235,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Põe agora a tua mão debaixo da minha coxa, para que eu te faça jurar pelo SENHOR' (Gn 24:2-3) — gesto solene de juramento.",
       "divergence_note": null,
       "reference": {
@@ -1241,7 +1247,6 @@
     },
     {
       "external_id": "costumes-judaicos-0041",
-      "type": "multiple_choice",
       "text": "Como se chama o princípio da Lei citado por Jesus: 'olho por olho e dente por dente'?",
       "options": [
         {
@@ -1261,7 +1266,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Ouvistes que foi dito: Olho por olho e dente por dente' (Mt 5:38; cf. Êx 21:24) — limite à vingança, que Jesus supera com o amor ao inimigo.",
       "divergence_note": null,
       "reference": {
@@ -1274,7 +1278,6 @@
     },
     {
       "external_id": "costumes-judaicos-0042",
-      "type": "multiple_choice",
       "text": "Onde, segundo Jesus, os hipócritas gostavam de orar para serem vistos?",
       "options": [
         {
@@ -1294,7 +1297,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Gostam de orar em pé nas sinagogas e às esquinas das ruas, para serem vistos pelos homens' (Mt 6:5).",
       "divergence_note": null,
       "reference": {
@@ -1307,7 +1309,6 @@
     },
     {
       "external_id": "costumes-judaicos-0043",
-      "type": "multiple_choice",
       "text": "A quem Deus mandou pronunciar sobre Israel a bênção \"O Senhor te abençoe e te guarde\"?",
       "options": [
         {
@@ -1327,7 +1328,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Deus mandou Moisés dizer a Arão e a seus filhos: \"Assim abençoareis os filhos de Israel\" (Nm 6:23). A bênção sacerdotal pede proteção, misericórdia e paz, e Deus promete: \"Assim porão o meu nome sobre os filhos de Israel, e eu os abençoarei\" (Nm 6:27). Jesus, o nosso grande Sumo Sacerdote (Hb 4:14), despediu-se dos discípulos levantando as mãos e abençoando-os (Lc 24:50).",
       "divergence_note": null,
       "reference": {
@@ -1340,7 +1340,6 @@
     },
     {
       "external_id": "costumes-judaicos-0044",
-      "type": "multiple_choice",
       "text": "Que costume Labão alegou para justificar ter dado Leia (Lia), e não Raquel, como esposa a Jacó?",
       "options": [
         {
@@ -1360,7 +1359,6 @@
           "correct": true
         }
       ],
-      "accepted_answers": null,
       "explanation": "Depois de servir sete anos por Raquel, Jacó recebeu Leia e protestou; Labão respondeu: \"Não se faz assim no nosso lugar, que a menor se dê antes da primogênita\" (Gn 29:26). Jacó \"cumpriu a semana desta\", recebeu também Raquel e serviu por ela outros sete anos (Gn 29:27-30). Ironia do texto: quem enganara o pai fazendo-se passar pelo primogênito (Gn 27) foi enganado com a primogênita.",
       "divergence_note": null,
       "reference": {
@@ -1373,7 +1371,6 @@
     },
     {
       "external_id": "costumes-judaicos-0045",
-      "type": "multiple_choice",
       "text": "Segundo Deuteronômio 21, que gesto os anciãos faziam para se declararem inocentes de um sangue derramado — o mesmo que Pilatos fez diante da multidão?",
       "options": [
         {
@@ -1393,7 +1390,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Quando se achava um morto sem saber quem o matara, os anciãos da cidade mais próxima lavavam as mãos sobre uma bezerra degolada e diziam: \"As nossas mãos não derramaram este sangue\" (Dt 21:6-7). Pilatos, \"tomando água, lavou as mãos diante da multidão, dizendo: Estou inocente do sangue deste justo\" (Mt 27:24). O gesto, porém, não o isentou: Atos 4:27 o inclui entre os que se ajuntaram contra Jesus.",
       "divergence_note": null,
       "reference": {
@@ -1406,16 +1402,24 @@
     },
     {
       "external_id": "costumes-judaicos-0046",
-      "type": "open_answer",
       "text": "Por quantos dias os filhos de Israel prantearam a morte de Moisés nas campinas de Moabe?",
-      "options": null,
-      "accepted_answers": [
-        "30",
-        "Trinta",
-        "30 dias",
-        "Trinta dias",
-        "Por 30 dias",
-        "Por trinta dias"
+      "options": [
+        {
+          "text": "30",
+          "correct": true
+        },
+        {
+          "text": "7",
+          "correct": false
+        },
+        {
+          "text": "40",
+          "correct": false
+        },
+        {
+          "text": "70",
+          "correct": false
+        }
       ],
       "explanation": "\"E os filhos de Israel prantearam a Moisés trinta dias, nas campinas de Moabe; e os dias do pranto do luto de Moisés se cumpriram\" (Dt 34:8). O mesmo luto de trinta dias fora guardado por toda a congregação na morte de Arão (Nm 20:29). Terminado o pranto, o povo passou a ouvir Josué, sobre quem Moisés havia imposto as mãos (Dt 34:9).",
       "divergence_note": null,
@@ -1429,7 +1433,6 @@
     },
     {
       "external_id": "costumes-judaicos-0047",
-      "type": "multiple_choice",
       "text": "Segundo a Lei, quando o patrão devia pagar o salário do trabalhador pobre contratado por dia?",
       "options": [
         {
@@ -1449,7 +1452,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "A Lei mandava pagar o diarista pobre no mesmo dia: \"o sol se não porá sobre isso; porquanto pobre é, e sua alma se atém a isso\" (Dt 24:15). Levítico reforça: \"a paga do jornaleiro não ficará contigo até à manhã\" (Lv 19:13). O diarista vivia do pagamento de cada dia — por isso, na parábola dos trabalhadores da vinha, o senhor manda pagar a todos ao anoitecer (Mt 20:8).",
       "divergence_note": null,
       "reference": {

@@ -3,7 +3,6 @@
   "questions": [
     {
       "external_id": "evangelhos-0001",
-      "type": "multiple_choice",
       "text": "Qual foi o primeiro sinal (milagre) de Jesus registrado no Evangelho de João?",
       "options": [
         {
@@ -23,7 +22,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Nas bodas de Caná da Galileia, Jesus transformou água em vinho. João o chama de \"princípio dos sinais\" pelo qual Jesus \"manifestou a sua glória, e os seus discípulos creram nele\" (Jo 2:11).",
       "divergence_note": null,
       "reference": {
@@ -36,14 +34,24 @@
     },
     {
       "external_id": "evangelhos-0002",
-      "type": "open_answer",
       "text": "Quantos dias Jesus jejuou no deserto antes de ser tentado pelo diabo?",
-      "options": null,
-      "accepted_answers": [
-        "40",
-        "quarenta",
-        "40 dias",
-        "quarenta dias"
+      "options": [
+        {
+          "text": "40",
+          "correct": true
+        },
+        {
+          "text": "7",
+          "correct": false
+        },
+        {
+          "text": "30",
+          "correct": false
+        },
+        {
+          "text": "50",
+          "correct": false
+        }
       ],
       "explanation": "Jesus jejuou quarenta dias e quarenta noites (Mt 4:2) e venceu cada tentação citando as Escrituras: \"Está escrito\". O período ecoa os quarenta anos de Israel no deserto — onde Israel falhou, Cristo venceu.",
       "divergence_note": null,
@@ -57,7 +65,6 @@
     },
     {
       "external_id": "evangelhos-0003",
-      "type": "multiple_choice",
       "text": "Quem pediu corajosamente a Pilatos o corpo de Jesus para sepultá-lo?",
       "options": [
         {
@@ -77,7 +84,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "José de Arimateia, membro honrado do Sinédrio que esperava o Reino de Deus, ousou pedir o corpo de Jesus (Mc 15:43). Nicodemos o ajudou no sepultamento, trazendo mirra e aloés (Jo 19:39).",
       "divergence_note": null,
       "reference": {
@@ -90,7 +96,6 @@
     },
     {
       "external_id": "evangelhos-0004",
-      "type": "multiple_choice",
       "text": "Na transfiguração de Jesus, quais dois homens do Antigo Testamento apareceram falando com ele?",
       "options": [
         {
@@ -110,7 +115,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Moisés e Elias apareceram em glória com Jesus no monte (Mt 17:3). Muitos intérpretes veem neles a Lei e os Profetas testemunhando a respeito de Cristo, que é o cumprimento de ambos (Lc 24:27).",
       "divergence_note": null,
       "reference": {
@@ -123,7 +127,6 @@
     },
     {
       "external_id": "evangelhos-0005",
-      "type": "multiple_choice",
       "text": "Qual dos doze apóstolos era cobrador de impostos antes de ser chamado por Jesus?",
       "options": [
         {
@@ -143,7 +146,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jesus viu Mateus (também chamado Levi) sentado na coletoria e disse: \"Segue-me\" (Mt 9:9). O chamado de um publicano — classe desprezada em Israel — mostra que Jesus veio chamar pecadores, não justos (Mt 9:13).",
       "divergence_note": null,
       "reference": {
@@ -156,12 +158,24 @@
     },
     {
       "external_id": "evangelhos-0006",
-      "type": "open_answer",
       "text": "Em qual rio João Batista batizou Jesus?",
-      "options": null,
-      "accepted_answers": [
-        "Jordão",
-        "Rio Jordão"
+      "options": [
+        {
+          "text": "Jordão",
+          "correct": true
+        },
+        {
+          "text": "Nilo",
+          "correct": false
+        },
+        {
+          "text": "Eufrates",
+          "correct": false
+        },
+        {
+          "text": "Quebar",
+          "correct": false
+        }
       ],
       "explanation": "Jesus foi batizado por João no rio Jordão \"para cumprir toda a justiça\" (Mt 3:15). Ali o Espírito desceu como pomba e o Pai declarou: \"Este é o meu Filho amado, em quem me comprazo\" (Mt 3:17).",
       "divergence_note": null,
@@ -175,7 +189,6 @@
     },
     {
       "external_id": "evangelhos-0007",
-      "type": "multiple_choice",
       "text": "Quando Pedro perguntou quantas vezes deveria perdoar seu irmão, qual foi a resposta de Jesus?",
       "options": [
         {
@@ -195,7 +208,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Pedro sugeriu sete vezes, mas Jesus respondeu \"até setenta vezes sete\" (Mt 18:22) — não um cálculo, mas perdão sem limites. Em seguida, contou a parábola do credor incompassivo para mostrar o porquê: fomos perdoados de dívida infinitamente maior.",
       "divergence_note": null,
       "reference": {
@@ -208,7 +220,6 @@
     },
     {
       "external_id": "evangelhos-0008",
-      "type": "multiple_choice",
       "text": "Em que árvore Zaqueu subiu para conseguir ver Jesus em Jericó?",
       "options": [
         {
@@ -228,7 +239,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Zaqueu, chefe dos publicanos e de pequena estatura, subiu num sicômoro para ver Jesus (Lc 19:4). Jesus se convidou à sua casa, e a transformação foi radical: restituiu quadruplicado o que havia extorquido.",
       "divergence_note": null,
       "reference": {
@@ -241,7 +251,6 @@
     },
     {
       "external_id": "evangelhos-0009",
-      "type": "multiple_choice",
       "text": "Qual autor de evangelho é chamado por Paulo de \"o médico amado\"?",
       "options": [
         {
@@ -261,7 +270,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Paulo se refere a \"Lucas, o médico amado\" em Colossenses 4:14. Lucas foi companheiro de viagens de Paulo e escreveu também o livro de Atos, formando com seu evangelho uma obra em dois volumes dedicada a Teófilo.",
       "divergence_note": "Os evangelhos são formalmente anônimos; a atribuição a Lucas vem do testemunho unânime da igreja antiga (Irineu, Cânon Muratori). O dado bíblico direto é que Lucas era médico e companheiro de Paulo (Cl 4:14; 2Tm 4:11).",
       "reference": {
@@ -274,14 +282,24 @@
     },
     {
       "external_id": "evangelhos-0010",
-      "type": "open_answer",
       "text": "Qual homem foi obrigado a carregar a cruz de Jesus no caminho do Calvário?",
-      "options": null,
-      "accepted_answers": [
-        "Simão",
-        "Simão Cireneu",
-        "Simão de Cirene",
-        "Simao Cireneu"
+      "options": [
+        {
+          "text": "Simão de Cirene",
+          "correct": true
+        },
+        {
+          "text": "José de Arimateia",
+          "correct": false
+        },
+        {
+          "text": "Nicodemos",
+          "correct": false
+        },
+        {
+          "text": "Barrabás",
+          "correct": false
+        }
       ],
       "explanation": "Os soldados obrigaram Simão de Cirene, que voltava do campo, a carregar a cruz de Jesus (Mt 27:32). Marcos anota que ele era pai de Alexandre e Rufo (Mc 15:21), nomes aparentemente conhecidos da igreja primitiva.",
       "divergence_note": null,
@@ -295,7 +313,6 @@
     },
     {
       "external_id": "evangelhos-0011",
-      "type": "multiple_choice",
       "text": "Quantos cestos sobraram após Jesus alimentar os cinco mil?",
       "options": [
         {
@@ -315,7 +332,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Depois de todos se fartarem, recolheram doze cestos cheios dos pedaços (Mt 14:20), sinal da provisão abundante de Deus.",
       "divergence_note": null,
       "reference": {
@@ -328,7 +344,6 @@
     },
     {
       "external_id": "evangelhos-0012",
-      "type": "multiple_choice",
       "text": "Qual foi o mandamento que Jesus chamou de o maior de todos?",
       "options": [
         {
@@ -348,7 +363,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jesus citou Deuteronômio 6:5: amar a Deus de todo o coração, alma e entendimento é o grande mandamento; o segundo é amar o próximo (Mt 22:37-39).",
       "divergence_note": null,
       "reference": {
@@ -361,7 +375,6 @@
     },
     {
       "external_id": "evangelhos-0013",
-      "type": "multiple_choice",
       "text": "No Sermão do Monte, como Jesus chama os que promovem a paz?",
       "options": [
         {
@@ -381,7 +394,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Bem-aventurados os pacificadores, porque serão chamados filhos de Deus' (Mt 5:9), uma das Bem-aventuranças.",
       "divergence_note": null,
       "reference": {
@@ -394,14 +406,24 @@
     },
     {
       "external_id": "evangelhos-0014",
-      "type": "open_answer",
       "text": "Em qual monte Jesus foi crucificado, também chamado 'Lugar da Caveira'?",
-      "options": null,
-      "accepted_answers": [
-        "Gólgota",
-        "Golgota",
-        "Calvário",
-        "Calvario"
+      "options": [
+        {
+          "text": "Gólgota",
+          "correct": true
+        },
+        {
+          "text": "Monte das Oliveiras",
+          "correct": false
+        },
+        {
+          "text": "Monte Sião",
+          "correct": false
+        },
+        {
+          "text": "Monte Hermom",
+          "correct": false
+        }
       ],
       "explanation": "Jesus foi crucificado no Gólgota, que significa 'Lugar da Caveira' (Jo 19:17), fora dos muros de Jerusalém.",
       "divergence_note": null,
@@ -415,7 +437,6 @@
     },
     {
       "external_id": "evangelhos-0015",
-      "type": "multiple_choice",
       "text": "Que sinal Judas combinou para identificar Jesus aos que vieram prendê-lo?",
       "options": [
         {
@@ -435,7 +456,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Aquele que eu beijar, é esse; prendei-o' (Mt 26:48). O beijo de Judas tornou-se símbolo de traição.",
       "divergence_note": null,
       "reference": {
@@ -448,7 +468,6 @@
     },
     {
       "external_id": "evangelhos-0016",
-      "type": "multiple_choice",
       "text": "Quem batizou Jesus e depois foi preso e decapitado por Herodes?",
       "options": [
         {
@@ -468,7 +487,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "João Batista, precursor do Messias, foi preso e decapitado por Herodes Antipas a pedido de Herodias (Mc 6:17-28).",
       "divergence_note": null,
       "reference": {
@@ -481,7 +499,6 @@
     },
     {
       "external_id": "evangelhos-0017",
-      "type": "multiple_choice",
       "text": "O que Jesus disse ao ladrão arrependido crucificado ao seu lado?",
       "options": [
         {
@@ -501,7 +518,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Ao malfeitor que se voltou a ele, Jesus prometeu: 'Hoje estarás comigo no Paraíso' (Lc 23:43) — salvação pela graça, no último instante.",
       "divergence_note": null,
       "reference": {
@@ -514,11 +530,24 @@
     },
     {
       "external_id": "evangelhos-0018",
-      "type": "open_answer",
       "text": "Qual apóstolo pescador era irmão de Simão Pedro?",
-      "options": null,
-      "accepted_answers": [
-        "André"
+      "options": [
+        {
+          "text": "André",
+          "correct": true
+        },
+        {
+          "text": "Tiago",
+          "correct": false
+        },
+        {
+          "text": "João",
+          "correct": false
+        },
+        {
+          "text": "Filipe",
+          "correct": false
+        }
       ],
       "explanation": "André, irmão de Simão Pedro, foi um dos primeiros chamados e levou o irmão a Jesus (Jo 1:40-42).",
       "divergence_note": null,
@@ -532,7 +561,6 @@
     },
     {
       "external_id": "evangelhos-0019",
-      "type": "multiple_choice",
       "text": "Segundo João, o que 'se fez carne e habitou entre nós'?",
       "options": [
         {
@@ -552,7 +580,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'E o Verbo se fez carne e habitou entre nós' (Jo 1:14) — a encarnação do Filho eterno de Deus.",
       "divergence_note": null,
       "reference": {
@@ -565,7 +592,6 @@
     },
     {
       "external_id": "evangelhos-0020",
-      "type": "multiple_choice",
       "text": "Que animal Jesus montou ao entrar triunfalmente em Jerusalém?",
       "options": [
         {
@@ -585,7 +611,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jesus entrou em Jerusalém sobre um jumentinho, cumprindo Zacarias 9:9 (Mt 21:5-7); a multidão o aclamou com 'Hosana'.",
       "divergence_note": null,
       "reference": {
@@ -598,12 +623,24 @@
     },
     {
       "external_id": "evangelhos-0021",
-      "type": "open_answer",
       "text": "Qual profetisa idosa reconheceu o menino Jesus no templo, junto com Simeão?",
-      "options": null,
-      "accepted_answers": [
-        "Ana",
-        "A profetisa Ana"
+      "options": [
+        {
+          "text": "Ana",
+          "correct": true
+        },
+        {
+          "text": "Isabel",
+          "correct": false
+        },
+        {
+          "text": "Joana",
+          "correct": false
+        },
+        {
+          "text": "Débora",
+          "correct": false
+        }
       ],
       "explanation": "Ana, filha de Fanuel, da tribo de Aser, servia no templo e falou do menino aos que esperavam a redenção (Lc 2:36-38).",
       "divergence_note": null,
@@ -617,7 +654,6 @@
     },
     {
       "external_id": "evangelhos-0022",
-      "type": "multiple_choice",
       "text": "Segundo João, qual discípulo apontou o menino com cinco pães e dois peixinhos?",
       "options": [
         {
@@ -637,7 +673,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Está aqui um rapaz que tem cinco pães de cevada e dois peixinhos' (Jo 6:8-9), disse André antes da multiplicação.",
       "divergence_note": null,
       "reference": {
@@ -650,7 +685,6 @@
     },
     {
       "external_id": "evangelhos-0023",
-      "type": "multiple_choice",
       "text": "O que Jesus respondeu ao ser tentado a transformar pedras em pão?",
       "options": [
         {
@@ -670,7 +704,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jesus citou Deuteronômio 8:3: 'Nem só de pão viverá o homem, mas de toda a palavra que sai da boca de Deus' (Mt 4:4).",
       "divergence_note": null,
       "reference": {
@@ -683,7 +716,6 @@
     },
     {
       "external_id": "evangelhos-0024",
-      "type": "multiple_choice",
       "text": "Quantas pessoas Jesus levou consigo ao monte da transfiguração?",
       "options": [
         {
@@ -703,7 +735,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Tomou Jesus consigo a Pedro, e a Tiago, e a João, seu irmão, e os conduziu em particular a um alto monte' (Mt 17:1).",
       "divergence_note": null,
       "reference": {
@@ -716,7 +747,6 @@
     },
     {
       "external_id": "evangelhos-0025",
-      "type": "multiple_choice",
       "text": "Na cruz, a quem Jesus confiou o cuidado de sua mãe?",
       "options": [
         {
@@ -736,7 +766,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Mulher, eis aí o teu filho... Eis aí tua mãe. E desde aquela hora o discípulo a recebeu em sua casa' (Jo 19:26-27).",
       "divergence_note": null,
       "reference": {
@@ -749,7 +778,6 @@
     },
     {
       "external_id": "evangelhos-0026",
-      "type": "multiple_choice",
       "text": "O que a mulher samaritana deixou junto ao poço ao correr para a cidade?",
       "options": [
         {
@@ -769,7 +797,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Deixou, pois, a mulher o seu cântaro e foi à cidade' anunciar: 'Vinde, vede um homem que me disse tudo quanto tenho feito' (Jo 4:28-29).",
       "divergence_note": null,
       "reference": {
@@ -782,13 +809,24 @@
     },
     {
       "external_id": "evangelhos-0027",
-      "type": "open_answer",
       "text": "Quais foram as últimas palavras que Jesus disse antes de morrer, segundo o Evangelho de João?",
-      "options": null,
-      "accepted_answers": [
-        "Está consumado",
-        "Esta consumado",
-        "Tudo está consumado"
+      "options": [
+        {
+          "text": "Está consumado",
+          "correct": true
+        },
+        {
+          "text": "Pai, nas tuas mãos entrego o meu espírito",
+          "correct": false
+        },
+        {
+          "text": "Deus meu, Deus meu, por que me desamparaste?",
+          "correct": false
+        },
+        {
+          "text": "Tenho sede",
+          "correct": false
+        }
       ],
       "explanation": "'Quando Jesus tomou o vinagre, disse: Está consumado. E, inclinando a cabeça, entregou o espírito' (Jo 19:30).",
       "divergence_note": null,
@@ -802,7 +840,6 @@
     },
     {
       "external_id": "evangelhos-0028",
-      "type": "multiple_choice",
       "text": "O que Jesus fez antes de escolher os doze apóstolos, segundo Lucas?",
       "options": [
         {
@@ -822,7 +859,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Retirou-se ao monte a orar e passou a noite em oração a Deus. E, quando já era dia, chamou a si os seus discípulos' (Lc 6:12-13).",
       "divergence_note": null,
       "reference": {
@@ -835,7 +871,6 @@
     },
     {
       "external_id": "evangelhos-0029",
-      "type": "multiple_choice",
       "text": "Que pergunta Jesus fez em Cesareia de Filipe, respondida por Pedro?",
       "options": [
         {
@@ -855,7 +890,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Pedro respondeu: 'Tu és o Cristo, o Filho do Deus vivo' (Mt 16:15-16), confissão que Jesus atribuiu à revelação do Pai.",
       "divergence_note": null,
       "reference": {
@@ -868,7 +902,6 @@
     },
     {
       "external_id": "evangelhos-0030",
-      "type": "multiple_choice",
       "text": "O que Jesus fez na última ceia antes de dizer 'exemplo vos dei'?",
       "options": [
         {
@@ -888,7 +921,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Se eu, o Senhor e Mestre, vos lavei os pés, vós deveis também lavar os pés uns aos outros' (Jo 13:14-15).",
       "divergence_note": null,
       "reference": {
@@ -901,7 +933,6 @@
     },
     {
       "external_id": "evangelhos-0031",
-      "type": "multiple_choice",
       "text": "Como Lucas descreve o encontro dos discípulos com Jesus a caminho de Emaús?",
       "options": [
         {
@@ -921,7 +952,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jesus lhes expôs as Escrituras e foi reconhecido ao partir o pão; 'não ardia em nós o nosso coração?' (Lc 24:16,30-32).",
       "divergence_note": null,
       "reference": {
@@ -934,14 +964,24 @@
     },
     {
       "external_id": "evangelhos-0032",
-      "type": "open_answer",
       "text": "Que ordem final Jesus deixou aos discípulos antes de subir ao céu, em Mateus 28?",
-      "options": null,
-      "accepted_answers": [
-        "Fazer discípulos de todas as nações",
-        "Ide e fazei discípulos",
-        "A Grande Comissão",
-        "Fazer discipulos de todas as nacoes"
+      "options": [
+        {
+          "text": "Fazer discípulos de todas as nações",
+          "correct": true
+        },
+        {
+          "text": "Esperar em Jerusalém a promessa do Pai",
+          "correct": false
+        },
+        {
+          "text": "Apascentar as suas ovelhas",
+          "correct": false
+        },
+        {
+          "text": "Vender tudo e dar aos pobres",
+          "correct": false
+        }
       ],
       "explanation": "'Ide, portanto, fazei discípulos de todas as nações... eis que eu estou convosco todos os dias' (Mt 28:19-20).",
       "divergence_note": null,
@@ -955,7 +995,6 @@
     },
     {
       "external_id": "evangelhos-0033",
-      "type": "multiple_choice",
       "text": "Qual era a profissão de Pedro, André, Tiago e João quando Jesus os chamou?",
       "options": [
         {
@@ -975,7 +1014,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jesus os viu lançando e consertando redes junto ao mar da Galileia e disse: 'Vinde após mim' (Mt 4:18-22).",
       "divergence_note": null,
       "reference": {
@@ -988,7 +1026,6 @@
     },
     {
       "external_id": "evangelhos-0034",
-      "type": "multiple_choice",
       "text": "Quem perguntou a Jesus o que fazer para herdar a vida eterna e se retirou triste?",
       "options": [
         {
@@ -1008,7 +1045,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Ao ouvir 'vende tudo o que tens e dá aos pobres', o jovem 'retirou-se triste, porque possuía muitas propriedades' (Mt 19:16-22).",
       "divergence_note": null,
       "reference": {
@@ -1021,7 +1057,6 @@
     },
     {
       "external_id": "evangelhos-0035",
-      "type": "multiple_choice",
       "text": "O que Jesus disse aos que acusavam a mulher surpreendida em adultério?",
       "options": [
         {
@@ -1041,7 +1076,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Um a um saíram, e Jesus disse à mulher: 'Nem eu também te condeno; vai-te e não peques mais' (Jo 8:7-11).",
       "divergence_note": null,
       "reference": {
@@ -1054,7 +1088,6 @@
     },
     {
       "external_id": "evangelhos-0036",
-      "type": "multiple_choice",
       "text": "Que pedido a mãe de Tiago e João fez a Jesus?",
       "options": [
         {
@@ -1074,7 +1107,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jesus respondeu que beber do seu cálice era o caminho, e que 'quem quiser ser grande seja vosso servo' (Mt 20:20-27).",
       "divergence_note": null,
       "reference": {
@@ -1087,7 +1119,6 @@
     },
     {
       "external_id": "evangelhos-0037",
-      "type": "multiple_choice",
       "text": "Qual cego de Jericó clamou 'Jesus, filho de Davi, tem misericórdia de mim'?",
       "options": [
         {
@@ -1107,7 +1138,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Bartimeu, o cego, filho de Timeu' não se calou; Jesus disse: 'Vai, a tua fé te salvou', e ele o seguiu (Mc 10:46-52).",
       "divergence_note": null,
       "reference": {
@@ -1120,14 +1150,24 @@
     },
     {
       "external_id": "evangelhos-0038",
-      "type": "open_answer",
       "text": "Quantas vezes Pedro negou conhecer Jesus, como o Senhor havia predito?",
-      "options": null,
-      "accepted_answers": [
-        "3",
-        "três",
-        "tres",
-        "três vezes"
+      "options": [
+        {
+          "text": "3",
+          "correct": true
+        },
+        {
+          "text": "2",
+          "correct": false
+        },
+        {
+          "text": "4",
+          "correct": false
+        },
+        {
+          "text": "7",
+          "correct": false
+        }
       ],
       "explanation": "'Antes que o galo cante, três vezes me negarás' (Mt 26:34) — cumprido no pátio de Caifás (Mt 26:69-75).",
       "divergence_note": null,
@@ -1141,7 +1181,6 @@
     },
     {
       "external_id": "evangelhos-0039",
-      "type": "multiple_choice",
       "text": "Qual oração Jesus ensinou aos discípulos, começando com 'Pai nosso, que estás nos céus'?",
       "options": [
         {
@@ -1161,7 +1200,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Portanto, vós orareis assim: Pai nosso, que estás nos céus, santificado seja o teu nome' (Mt 6:9-13).",
       "divergence_note": null,
       "reference": {
@@ -1174,7 +1212,6 @@
     },
     {
       "external_id": "evangelhos-0040",
-      "type": "multiple_choice",
       "text": "Quem traiu Jesus por trinta moedas de prata?",
       "options": [
         {
@@ -1194,7 +1231,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Judas perguntou aos sacerdotes 'que me quereis dar?', e 'eles lhe pesaram trinta moedas de prata' (Mt 26:14-15).",
       "divergence_note": null,
       "reference": {
@@ -1207,7 +1243,6 @@
     },
     {
       "external_id": "evangelhos-0041",
-      "type": "multiple_choice",
       "text": "Quantos apóstolos Jesus escolheu para estarem com ele?",
       "options": [
         {
@@ -1227,7 +1262,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Chamando os seus doze discípulos, deu-lhes poder sobre os espíritos imundos' (Mt 10:1) — os nomes seguem em Mt 10:2-4.",
       "divergence_note": null,
       "reference": {
@@ -1240,7 +1274,6 @@
     },
     {
       "external_id": "evangelhos-0042",
-      "type": "multiple_choice",
       "text": "Quem ungiu os pés de Jesus com perfume de nardo em Betânia, enxugando-os com os cabelos?",
       "options": [
         {
@@ -1260,7 +1293,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Maria, tomando um arrátel de unguento de nardo puro... ungiu os pés de Jesus e enxugou-lhos com os seus cabelos' (Jo 12:3).",
       "divergence_note": null,
       "reference": {
@@ -1273,7 +1305,6 @@
     },
     {
       "external_id": "evangelhos-0043",
-      "type": "multiple_choice",
       "text": "Que apelido Jesus deu aos irmãos Tiago e João?",
       "options": [
         {
@@ -1293,7 +1324,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Tiago, filho de Zebedeu, e João, irmão de Tiago, aos quais pôs o nome de Boanerges, que significa: Filhos do trovão' (Mc 3:17).",
       "divergence_note": null,
       "reference": {
@@ -1306,7 +1336,6 @@
     },
     {
       "external_id": "evangelhos-0044",
-      "type": "multiple_choice",
       "text": "Que discípulo Jesus viu 'debaixo da figueira' e chamou 'verdadeiro israelita, em quem não há dolo'?",
       "options": [
         {
@@ -1326,7 +1355,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Natanael duvidou de Nazaré, mas ao ouvir 'quando estavas debaixo da figueira, te vi' confessou: 'Tu és o Filho de Deus' (Jo 1:45-49).",
       "divergence_note": null,
       "reference": {
@@ -1339,7 +1367,6 @@
     },
     {
       "external_id": "evangelhos-0045",
-      "type": "multiple_choice",
       "text": "Que presentes os magos do Oriente ofereceram ao menino Jesus?",
       "options": [
         {
@@ -1359,7 +1386,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Guiados pela estrela, os magos encontraram o menino \"na casa\", com Maria, \"e prostrando-se, o adoraram; e, abrindo os seus tesouros, lhe ofertaram dádivas: ouro, incenso e mirra\" (Mt 2:11). Muitos intérpretes veem nos presentes sinais de realeza, de adoração e de morte — a mirra reaparece no sepultamento de Jesus (Jo 19:39). O texto não diz quantos eram os magos nem os chama de reis: a ideia de três reis vem da tradição, e o número provavelmente se inspira nos três presentes.",
       "divergence_note": null,
       "reference": {
@@ -1372,13 +1398,24 @@
     },
     {
       "external_id": "evangelhos-0046",
-      "type": "open_answer",
       "text": "Qual anjo Deus enviou a Nazaré para anunciar a Maria que ela seria a mãe de Jesus?",
-      "options": null,
-      "accepted_answers": [
-        "Gabriel",
-        "Anjo Gabriel",
-        "O anjo Gabriel"
+      "options": [
+        {
+          "text": "Gabriel",
+          "correct": true
+        },
+        {
+          "text": "Miguel",
+          "correct": false
+        },
+        {
+          "text": "Rafael",
+          "correct": false
+        },
+        {
+          "text": "Uriel",
+          "correct": false
+        }
       ],
       "explanation": "\"No sexto mês, foi o anjo Gabriel enviado por Deus a uma cidade da Galileia, chamada Nazaré\" (Lc 1:26), a uma virgem desposada com José. Ele anunciou que Maria conceberia pelo poder do Espírito Santo e daria à luz um filho chamado Jesus (Lc 1:31,35), e ela respondeu: \"Eis aqui a serva do Senhor; cumpra-se em mim segundo a tua palavra\" (Lc 1:38). Meses antes, o mesmo Gabriel havia anunciado a Zacarias o nascimento de João Batista (Lc 1:19).",
       "divergence_note": null,
@@ -1392,7 +1429,6 @@
     },
     {
       "external_id": "evangelhos-0047",
-      "type": "multiple_choice",
       "text": "De que se alimentava João Batista no deserto da Judeia?",
       "options": [
         {
@@ -1412,7 +1448,6 @@
           "correct": true
         }
       ],
-      "accepted_answers": null,
       "explanation": "João vestia-se de pelos de camelo, com um cinto de couro em torno dos lombos, e \"alimentava-se de gafanhotos e de mel silvestre\" (Mt 3:4). A roupa lembrava a do profeta Elias (2Rs 1:8), e o gafanhoto estava entre os insetos que a Lei permitia comer (Lv 11:22). A vida austera combinava com a mensagem que ele pregava: \"Arrependei-vos, porque é chegado o reino dos céus\" (Mt 3:2).",
       "divergence_note": null,
       "reference": {

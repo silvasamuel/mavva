@@ -46,7 +46,6 @@ function session(overrides: Partial<QuizSession> = {}): QuizSession {
       {
         id: 'q1',
         position: 0,
-        type: 'multiple_choice',
         text: 'Quem construiu a arca?',
         difficulty: 'easy',
         category_name: 'Personagens',
@@ -61,7 +60,6 @@ function session(overrides: Partial<QuizSession> = {}): QuizSession {
       {
         id: 'q2',
         position: 1,
-        type: 'multiple_choice',
         text: 'Quem foi engolido pelo grande peixe?',
         difficulty: 'easy',
         category_name: 'Personagens',
@@ -82,7 +80,6 @@ function feedback(overrides: Partial<AnswerFeedback> = {}): AnswerFeedback {
   return {
     is_correct: true,
     correct_option_id: 'q1-a',
-    correct_answer: null,
     explanation: 'Gênesis narra que Noé construiu a arca.',
     divergence_note: null,
     reference: {
@@ -105,7 +102,6 @@ function plainQuestion(n: number): QuizQuestion {
   return {
     id: `q${n}`,
     position: n - 1,
-    type: 'multiple_choice',
     text: `Pergunta número ${n}?`,
     difficulty: 'easy',
     category_name: 'Personagens',

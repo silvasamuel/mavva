@@ -9,7 +9,7 @@ from sqlalchemy.orm import Session
 
 from app.models import QuizSession, ReviewItem
 from app.seeds.achievements import xp_reward_for
-from tests.factories import make_category, make_mc_question, make_open_question
+from tests.factories import make_category, make_mc_question
 from tests.helpers import register_and_login
 
 
@@ -64,9 +64,8 @@ def _answer(
 class TestQuizFlow:
     def _seed_bank(self, db: Session) -> None:
         category = make_category(db)
-        for _ in range(2):
+        for _ in range(3):
             make_mc_question(db, category)
-        make_open_question(db, category)
 
     def test_questions_never_leak_answer_key(self, auth_client: TestClient, db: Session):
         self._seed_bank(db)
@@ -74,7 +73,6 @@ class TestQuizFlow:
         for question in quiz["questions"]:
             for option in question["options"]:
                 assert "is_correct" not in option
-            assert "accepted_answers" not in question
             assert "explanation" not in question
 
     def test_full_session_updates_stats_streak_and_srs(self, auth_client: TestClient, db: Session):
@@ -83,13 +81,10 @@ class TestQuizFlow:
         session_id = quiz["id"]
 
         for question in quiz["questions"]:
-            if question["type"] == "multiple_choice":
-                payload = {
-                    "question_id": question["id"],
-                    "selected_option_id": _correct_option_id(db, question),
-                }
-            else:
-                payload = {"question_id": question["id"], "answer_text": "jesus"}
+            payload = {
+                "question_id": question["id"],
+                "selected_option_id": _correct_option_id(db, question),
+            }
             response = auth_client.post(f"/api/v1/quizzes/{session_id}/answers", json=payload)
             assert response.status_code == 200, response.text
             feedback = response.json()

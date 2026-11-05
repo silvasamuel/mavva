@@ -3,7 +3,6 @@
   "questions": [
     {
       "external_id": "idiomas-biblicos-0001",
-      "type": "multiple_choice",
       "text": "Em qual idioma foi escrita a maior parte do Antigo Testamento?",
       "options": [
         {
@@ -23,7 +22,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O Antigo Testamento foi escrito em hebraico, a \"língua de Canaã\" (Is 19:18), com algumas seções em aramaico. A ele Paulo se refere: \"aos judeus foram confiados os oráculos de Deus\" (Rm 3:2).",
       "divergence_note": null,
       "reference": {
@@ -36,12 +34,24 @@
     },
     {
       "external_id": "idiomas-biblicos-0002",
-      "type": "open_answer",
       "text": "O que significa o nome \"Emanuel\"?",
-      "options": null,
-      "accepted_answers": [
-        "Deus conosco",
-        "Deus é conosco"
+      "options": [
+        {
+          "text": "Deus conosco",
+          "correct": true
+        },
+        {
+          "text": "Deus salva",
+          "correct": false
+        },
+        {
+          "text": "Deus é forte",
+          "correct": false
+        },
+        {
+          "text": "Deus é juiz",
+          "correct": false
+        }
       ],
       "explanation": "\"E chamá-lo-ão pelo nome de Emanuel, que traduzido é: Deus conosco\" (Mt 1:23, citando Is 7:14). O hebraico immanu (conosco) + El (Deus) resume a encarnação numa palavra.",
       "divergence_note": null,
@@ -55,7 +65,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0003",
-      "type": "multiple_choice",
       "text": "O que significa \"Abba\", palavra aramaica que Jesus usou ao orar no Getsêmani?",
       "options": [
         {
@@ -75,7 +84,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Aba, Pai, todas as coisas te são possíveis\" (Mc 14:36) — termo aramaico de intimidade filial. Paulo o estende a todo crente: \"recebestes o espírito de adoção de filhos, pelo qual clamamos: Aba, Pai\" (Rm 8:15).",
       "divergence_note": null,
       "reference": {
@@ -88,7 +96,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0004",
-      "type": "multiple_choice",
       "text": "O que significa \"Talita cumi\", dito por Jesus à filha de Jairo?",
       "options": [
         {
@@ -108,7 +115,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Talita cumi, que, traduzido, é: Menina, a ti te digo, levanta-te\" (Mc 5:41). Marcos preserva o aramaico original de Jesus em vários momentos — Efatá (\"abre-te\", Mc 7:34) é outro exemplo.",
       "divergence_note": null,
       "reference": {
@@ -121,7 +127,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0005",
-      "type": "multiple_choice",
       "text": "Qual o significado do clamor de Jesus na cruz: \"Eli, Eli, lamá sabactâni\"?",
       "options": [
         {
@@ -141,7 +146,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Mateus 27:46 traduz o clamor, que cita o Salmo 22:1. Os presentes confundiram \"Eli\" com um chamado a Elias (Mt 27:47) — mas Jesus orava o salmo do justo sofredor, que termina em vindicação.",
       "divergence_note": null,
       "reference": {
@@ -154,7 +158,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0006",
-      "type": "multiple_choice",
       "text": "Quais livros do Antigo Testamento contêm longas seções em aramaico?",
       "options": [
         {
@@ -174,7 +177,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Daniel 2:4-7:28 e Esdras 4:8-6:18; 7:12-26 estão em aramaico — a língua diplomática dos impérios babilônico e persa, cenário desses livros. O aramaico era a língua franca do Oriente até ser substituído pelo grego.",
       "divergence_note": null,
       "reference": {
@@ -187,7 +189,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0007",
-      "type": "multiple_choice",
       "text": "O que foi a Septuaginta (LXX)?",
       "options": [
         {
@@ -207,7 +208,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Feita em Alexandria a partir do século III a.C., a Septuaginta levou as Escrituras aos judeus de fala grega. Os apóstolos frequentemente citam o AT por ela — a Bíblia da igreja primitiva em expansão.",
       "divergence_note": "O nome (\"Setenta\") vem da tradição da Carta de Aristeias, segundo a qual setenta e dois anciãos teriam feito a tradução — relato lendário em seus detalhes, segundo os historiadores, embora a tradução em si seja fato bem estabelecido.",
       "reference": {
@@ -220,7 +220,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0008",
-      "type": "multiple_choice",
       "text": "O que significa \"Maranata\", expressão aramaica preservada por Paulo em 1 Coríntios 16:22?",
       "options": [
         {
@@ -240,7 +239,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Marana tha — \"Vem, Senhor nosso!\" — era oração da igreja primitiva de fala aramaica, preservada até em cartas gregas. Apocalipse a ecoa em grego: \"Vem, Senhor Jesus\" (Ap 22:20).",
       "divergence_note": null,
       "reference": {
@@ -253,7 +251,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0009",
-      "type": "multiple_choice",
       "text": "Qual nome Deus revelou a Moisés na sarça ardente, ligado ao verbo \"ser\" em hebraico?",
       "options": [
         {
@@ -273,7 +270,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"EU SOU O QUE SOU... assim dirás: EU SOU me enviou a vós\" (Êx 3:14). O tetragrama YHWH, relacionado ao verbo ser, é o nome próprio de Deus no AT — que Jesus evoca nos seus \"EU SOU\" (Jo 8:58).",
       "divergence_note": null,
       "reference": {
@@ -286,14 +282,24 @@
     },
     {
       "external_id": "idiomas-biblicos-0010",
-      "type": "open_answer",
       "text": "Que palavra hebraica, usada nos Salmos e adotada pela igreja, significa \"louvai ao Senhor\"?",
-      "options": null,
-      "accepted_answers": [
-        "Aleluia",
-        "Hallelujah",
-        "Halleluia",
-        "Aleluya"
+      "options": [
+        {
+          "text": "Aleluia",
+          "correct": true
+        },
+        {
+          "text": "Hosana",
+          "correct": false
+        },
+        {
+          "text": "Amém",
+          "correct": false
+        },
+        {
+          "text": "Maranata",
+          "correct": false
+        }
       ],
       "explanation": "Hallelu-Yah — \"louvai a Yah(weh)\" — abre e fecha vários salmos (Sl 146-150) e ressoa no céu em Apocalipse 19:1-6: \"Aleluia! Pois já o Senhor Deus Todo-Poderoso reina\".",
       "divergence_note": null,
@@ -307,7 +313,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0011",
-      "type": "multiple_choice",
       "text": "Em que idioma foi escrita a maior parte do Antigo Testamento?",
       "options": [
         {
@@ -327,7 +332,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O AT foi escrito majoritariamente em hebraico (com trechos em aramaico), a exemplo de 'Bereshit' em Gênesis 1:1.",
       "divergence_note": null,
       "reference": {
@@ -341,7 +345,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0012",
-      "type": "multiple_choice",
       "text": "Em que idioma foi escrito o Novo Testamento?",
       "options": [
         {
@@ -361,7 +364,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O NT foi escrito em grego koiné, língua franca do Império; a inscrição na cruz foi em hebraico, grego e latim (Jo 19:20).",
       "divergence_note": null,
       "reference": {
@@ -374,12 +376,24 @@
     },
     {
       "external_id": "idiomas-biblicos-0013",
-      "type": "open_answer",
       "text": "O que significa a palavra 'Emanuel', dada como nome ao Messias?",
-      "options": null,
-      "accepted_answers": [
-        "Deus conosco",
-        "Deus está conosco"
+      "options": [
+        {
+          "text": "Deus conosco",
+          "correct": true
+        },
+        {
+          "text": "Deus é fiel",
+          "correct": false
+        },
+        {
+          "text": "Deus ouviu",
+          "correct": false
+        },
+        {
+          "text": "Dom de Deus",
+          "correct": false
+        }
       ],
       "explanation": "'Chamá-lo-ão Emanuel, que traduzido é: Deus conosco' (Mt 1:23; Is 7:14).",
       "divergence_note": null,
@@ -394,7 +408,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0014",
-      "type": "multiple_choice",
       "text": "O que significa a exclamação 'Aleluia'?",
       "options": [
         {
@@ -414,7 +427,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Aleluia' (hallelu-Yah) significa 'louvai ao SENHOR', comum nos Salmos e em Apocalipse 19:1.",
       "divergence_note": null,
       "reference": {
@@ -427,7 +439,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0015",
-      "type": "multiple_choice",
       "text": "Qual palavra Jesus clamou na cruz — 'Eloí, Eloí, lamá sabactâni'?",
       "options": [
         {
@@ -447,7 +458,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Em aramaico, Jesus citou o Salmo 22:1 na cruz (Mc 15:34).",
       "divergence_note": null,
       "reference": {
@@ -461,14 +471,24 @@
     },
     {
       "external_id": "idiomas-biblicos-0016",
-      "type": "open_answer",
       "text": "O que significa o nome 'Jesus' (Yeshua)?",
-      "options": null,
-      "accepted_answers": [
-        "O Senhor salva",
-        "O SENHOR salva",
-        "Salvador",
-        "Javé salva"
+      "options": [
+        {
+          "text": "O Senhor salva",
+          "correct": true
+        },
+        {
+          "text": "Deus conosco",
+          "correct": false
+        },
+        {
+          "text": "Ungido",
+          "correct": false
+        },
+        {
+          "text": "Filho da promessa",
+          "correct": false
+        }
       ],
       "explanation": "'Chamarás o seu nome Jesus, porque ele salvará o seu povo dos pecados' (Mt 1:21).",
       "divergence_note": null,
@@ -482,7 +502,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0017",
-      "type": "multiple_choice",
       "text": "O que significam 'Messias' (hebraico) e 'Cristo' (grego)?",
       "options": [
         {
@@ -502,7 +521,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Achamos o Messias (que, traduzido, é o Cristo)' (Jo 1:41) — ambos significam 'ungido'.",
       "divergence_note": null,
       "reference": {
@@ -515,12 +533,24 @@
     },
     {
       "external_id": "idiomas-biblicos-0018",
-      "type": "open_answer",
       "text": "Que palavra aramaica que significa 'Pai' Jesus usou no Getsêmani, também empregada por Paulo?",
-      "options": null,
-      "accepted_answers": [
-        "Aba",
-        "Abba"
+      "options": [
+        {
+          "text": "Aba",
+          "correct": true
+        },
+        {
+          "text": "Amém",
+          "correct": false
+        },
+        {
+          "text": "Rabi",
+          "correct": false
+        },
+        {
+          "text": "Efatá",
+          "correct": false
+        }
       ],
       "explanation": "'Aba, Pai, tudo te é possível' (Mc 14:36); Paulo a retoma para a adoção dos filhos (Rm 8:15).",
       "divergence_note": null,
@@ -535,7 +565,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0019",
-      "type": "multiple_choice",
       "text": "O que significa 'Amém', dito ao fim das orações?",
       "options": [
         {
@@ -555,7 +584,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Amém' vem de uma raiz hebraica de firmeza e verdade; era a resposta do povo às bênçãos e maldições (Dt 27:15-26).",
       "divergence_note": null,
       "reference": {
@@ -568,7 +596,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0020",
-      "type": "multiple_choice",
       "text": "O que a multidão gritava com 'Hosana' na entrada triunfal?",
       "options": [
         {
@@ -588,7 +615,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Hosana' (do Sl 118:25, 'salva-nos agora') tornou-se aclamação messiânica ao Filho de Davi (Mt 21:9).",
       "divergence_note": null,
       "reference": {
@@ -601,12 +627,24 @@
     },
     {
       "external_id": "idiomas-biblicos-0021",
-      "type": "open_answer",
       "text": "O que significa 'Rabôni', palavra que Maria Madalena dirigiu a Jesus ressurreto?",
-      "options": null,
-      "accepted_answers": [
-        "Mestre",
-        "Meu mestre"
+      "options": [
+        {
+          "text": "Mestre",
+          "correct": true
+        },
+        {
+          "text": "Senhor",
+          "correct": false
+        },
+        {
+          "text": "Pai",
+          "correct": false
+        },
+        {
+          "text": "Salvador",
+          "correct": false
+        }
       ],
       "explanation": "'Ela, voltando-se, disse-lhe: Rabôni (que quer dizer Mestre)' (Jo 20:16).",
       "divergence_note": null,
@@ -620,13 +658,24 @@
     },
     {
       "external_id": "idiomas-biblicos-0022",
-      "type": "open_answer",
       "text": "O que significa o termo aramaico 'Gólgota'?",
-      "options": null,
-      "accepted_answers": [
-        "Lugar da caveira",
-        "Caveira",
-        "Lugar da caveira (calvário)"
+      "options": [
+        {
+          "text": "Lugar da caveira",
+          "correct": true
+        },
+        {
+          "text": "Lagar de azeite",
+          "correct": false
+        },
+        {
+          "text": "Casa de misericórdia",
+          "correct": false
+        },
+        {
+          "text": "Monte do sacrifício",
+          "correct": false
+        }
       ],
       "explanation": "'Levaram-no ao lugar do Gólgota, que se traduz por lugar da Caveira' (Mc 15:22).",
       "divergence_note": null,
@@ -640,7 +689,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0023",
-      "type": "multiple_choice",
       "text": "O que significa a palavra hebraica 'shalom', usada como saudação?",
       "options": [
         {
@@ -660,7 +708,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Mais que ausência de guerra, shalom é plenitude e integridade — a bênção sacerdotal pede que Deus dê 'a paz' (Nm 6:26).",
       "divergence_note": null,
       "reference": {
@@ -673,7 +720,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0024",
-      "type": "multiple_choice",
       "text": "O que significa 'evangelho' (euangelion) no grego do Novo Testamento?",
       "options": [
         {
@@ -693,7 +739,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Princípio do evangelho de Jesus Cristo, Filho de Deus' (Mc 1:1) — o anúncio da boa nova do Reino.",
       "divergence_note": null,
       "reference": {
@@ -706,7 +751,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0025",
-      "type": "multiple_choice",
       "text": "O que significa a palavra grega 'ekklesia', traduzida por 'igreja'?",
       "options": [
         {
@@ -726,7 +770,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jesus diz: 'edificarei a minha igreja' (Mt 16:18) — não um edifício, mas o povo convocado.",
       "divergence_note": null,
       "reference": {
@@ -739,7 +782,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0026",
-      "type": "multiple_choice",
       "text": "O que significa 'Efatá', dito por Jesus ao curar o surdo?",
       "options": [
         {
@@ -759,7 +801,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'E, suspirando, disse: Efatá, isto é, Abre-te. E logo se abriram os seus ouvidos' (Mc 7:34-35).",
       "divergence_note": null,
       "reference": {
@@ -772,13 +813,24 @@
     },
     {
       "external_id": "idiomas-biblicos-0027",
-      "type": "open_answer",
       "text": "Que palavra hebraica, repetida três vezes por serafins em Isaías 6, significa 'santo'?",
-      "options": null,
-      "accepted_answers": [
-        "Kadosh",
-        "Qadosh",
-        "Santo"
+      "options": [
+        {
+          "text": "Kadosh",
+          "correct": true
+        },
+        {
+          "text": "Shalom",
+          "correct": false
+        },
+        {
+          "text": "Hesed",
+          "correct": false
+        },
+        {
+          "text": "Kabod",
+          "correct": false
+        }
       ],
       "explanation": "'Santo, Santo, Santo é o SENHOR dos Exércitos' (Is 6:3) — a repetição tripla marca o superlativo hebraico.",
       "divergence_note": null,
@@ -792,7 +844,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0028",
-      "type": "multiple_choice",
       "text": "O que significa o nome 'Israel', dado a Jacó após a luta em Peniel?",
       "options": [
         {
@@ -812,7 +863,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Não te chamarás mais Jacó, mas Israel, pois como príncipe lutaste com Deus e com os homens e prevaleceste' (Gn 32:28).",
       "divergence_note": null,
       "reference": {
@@ -825,7 +875,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0029",
-      "type": "multiple_choice",
       "text": "O que significa a palavra hebraica 'hesed', tão frequente nos Salmos?",
       "options": [
         {
@@ -845,7 +894,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "É a bondade leal de Deus que não falha: 'a sua benignidade dura para sempre' (Sl 136:1).",
       "divergence_note": null,
       "reference": {
@@ -858,7 +906,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0030",
-      "type": "multiple_choice",
       "text": "O que significa o título 'Cefas', dado por Jesus a Simão?",
       "options": [
         {
@@ -878,7 +925,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Tu és Simão... tu serás chamado Cefas (que quer dizer Pedro)' (Jo 1:42) — Cefas é aramaico para pedra.",
       "divergence_note": null,
       "reference": {
@@ -891,7 +937,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0031",
-      "type": "multiple_choice",
       "text": "O que significa 'Betel', nome dado por Jacó ao lugar do sonho da escada?",
       "options": [
         {
@@ -911,7 +956,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Chamou aquele lugar Betel'; ele exclamou: 'esta é a casa de Deus e a porta dos céus' (Gn 28:17-19).",
       "divergence_note": null,
       "reference": {
@@ -924,13 +968,24 @@
     },
     {
       "external_id": "idiomas-biblicos-0032",
-      "type": "open_answer",
       "text": "Que palavra grega, traduzida por 'graça', é central na teologia paulina?",
-      "options": null,
-      "accepted_answers": [
-        "Charis",
-        "Káris",
-        "Karis"
+      "options": [
+        {
+          "text": "Charis",
+          "correct": true
+        },
+        {
+          "text": "Ágape",
+          "correct": false
+        },
+        {
+          "text": "Pistis",
+          "correct": false
+        },
+        {
+          "text": "Eirene",
+          "correct": false
+        }
       ],
       "explanation": "'Pela graça sois salvos' (Ef 2:8) — charis é o favor imerecido de Deus, contraposto às obras.",
       "divergence_note": null,
@@ -944,7 +999,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0033",
-      "type": "multiple_choice",
       "text": "O que significa 'Getsêmani', nome do jardim onde Jesus orou antes da prisão?",
       "options": [
         {
@@ -964,7 +1018,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O nome aramaico designa a prensa de azeitonas do monte das Oliveiras (Mt 26:36) — ali o Filho foi 'prensado' em oração.",
       "divergence_note": "O significado 'prensa de azeite' vem da etimologia do nome aramaico/hebraico (gat shemanim); o texto bíblico não traduz o termo.",
       "reference": {
@@ -977,7 +1030,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0034",
-      "type": "multiple_choice",
       "text": "O que significa 'Betesda', nome do tanque em Jerusalém onde Jesus curou o paralítico?",
       "options": [
         {
@@ -997,7 +1049,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Betesda (hebraico beth hesda) é lido como 'casa de misericórdia' — o lugar onde o enfermo de 38 anos foi curado (Jo 5:2-9).",
       "divergence_note": "A etimologia 'casa de misericórdia' é a leitura mais comum, mas manuscritos variam a grafia (Betzata, Betsaida); o significado não é dado no texto.",
       "reference": {
@@ -1010,7 +1061,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0035",
-      "type": "multiple_choice",
       "text": "O que significa o nome 'Isaque', dado ao filho da promessa?",
       "options": [
         {
@@ -1030,7 +1080,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Abraão e Sara riram da promessa (Gn 17:17; 18:12), e Sara disse: 'Deus me tem feito riso' (Gn 21:6).",
       "divergence_note": null,
       "reference": {
@@ -1043,7 +1092,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0036",
-      "type": "multiple_choice",
       "text": "Que palavra grega para 'amor' João usa em 'Deus amou o mundo de tal maneira'?",
       "options": [
         {
@@ -1063,7 +1111,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Porque Deus amou (egápesen) o mundo de tal maneira' (Jo 3:16) — o amor que se doa, não o que deseja.",
       "divergence_note": null,
       "reference": {
@@ -1076,7 +1123,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0037",
-      "type": "multiple_choice",
       "text": "O que significa 'Icabode', nome dado pela mulher de Fineias ao morrer?",
       "options": [
         {
@@ -1096,7 +1142,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Chamou o menino Icabode, dizendo: Foi-se a glória de Israel', porque a arca fora tomada (1Sm 4:21-22).",
       "divergence_note": null,
       "reference": {
@@ -1109,12 +1154,24 @@
     },
     {
       "external_id": "idiomas-biblicos-0038",
-      "type": "open_answer",
       "text": "Que palavra grega traduzida por 'arrependimento' significa literalmente 'mudança de mente'?",
-      "options": null,
-      "accepted_answers": [
-        "Metanoia",
-        "Metanóia"
+      "options": [
+        {
+          "text": "Metanoia",
+          "correct": true
+        },
+        {
+          "text": "Koinonia",
+          "correct": false
+        },
+        {
+          "text": "Parousia",
+          "correct": false
+        },
+        {
+          "text": "Kenosis",
+          "correct": false
+        }
       ],
       "explanation": "'Arrependei-vos (metanoeite), porque é chegado o reino dos céus' (Mt 4:17) — não só pesar, mas mudança de rumo.",
       "divergence_note": null,
@@ -1128,7 +1185,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0039",
-      "type": "multiple_choice",
       "text": "O que significa a palavra 'apóstolo' (apostolos)?",
       "options": [
         {
@@ -1148,7 +1204,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Apóstolo é 'aquele que é enviado' com autoridade de quem envia — 'assim como o Pai me enviou, também eu vos envio' (Jo 20:21).",
       "divergence_note": null,
       "reference": {
@@ -1161,7 +1216,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0040",
-      "type": "multiple_choice",
       "text": "O que significa 'Pentecostes'?",
       "options": [
         {
@@ -1181,7 +1235,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Do grego pentekoste, 'quinquagésimo': a festa cinquenta dias após a Páscoa (At 2:1; cf. Lv 23:16).",
       "divergence_note": null,
       "reference": {
@@ -1194,7 +1247,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0041",
-      "type": "multiple_choice",
       "text": "O que significa 'Babel', segundo a explicação de Gênesis 11:9?",
       "options": [
         {
@@ -1214,7 +1266,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Chamou-se o seu nome Babel, porquanto ali confundiu o SENHOR a língua de toda a terra' (Gn 11:9).",
       "divergence_note": null,
       "reference": {
@@ -1227,7 +1278,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0042",
-      "type": "multiple_choice",
       "text": "O que significa o nome 'Barnabé', dado a José, o levita de Chipre?",
       "options": [
         {
@@ -1247,7 +1297,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'José, cognominado pelos apóstolos Barnabé (que, traduzido, é filho da consolação)' (At 4:36).",
       "divergence_note": null,
       "reference": {
@@ -1260,7 +1309,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0043",
-      "type": "multiple_choice",
       "text": "O que significa 'Belém' (Bete-Leém) em hebraico?",
       "options": [
         {
@@ -1280,7 +1328,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Beth-lechem, 'casa do pão' — onde nasceu aquele que disse 'eu sou o pão da vida' (Jo 6:35; Mt 2:1).",
       "divergence_note": null,
       "reference": {
@@ -1293,7 +1340,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0044",
-      "type": "multiple_choice",
       "text": "O que significa 'Torá', nome hebraico dos cinco livros de Moisés?",
       "options": [
         {
@@ -1313,7 +1359,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Torá é 'instrução, lei' — 'a lei do SENHOR é perfeita' (Sl 19:7); Jesus a chama 'a Lei de Moisés' (Lc 24:44).",
       "divergence_note": null,
       "reference": {
@@ -1326,14 +1371,24 @@
     },
     {
       "external_id": "idiomas-biblicos-0045",
-      "type": "open_answer",
       "text": "Que palavra hebraica abre a Bíblia e significa 'no princípio'?",
-      "options": null,
-      "accepted_answers": [
-        "Bereshit",
-        "Bereshith",
-        "Bereshít",
-        "Bere'shit"
+      "options": [
+        {
+          "text": "Bereshit",
+          "correct": true
+        },
+        {
+          "text": "Shemot",
+          "correct": false
+        },
+        {
+          "text": "Bemidbar",
+          "correct": false
+        },
+        {
+          "text": "Devarim",
+          "correct": false
+        }
       ],
       "explanation": "Bereshit bara Elohim — 'No princípio criou Deus os céus e a terra' (Gn 1:1); é também o nome hebraico do livro de Gênesis.",
       "divergence_note": null,
@@ -1347,12 +1402,24 @@
     },
     {
       "external_id": "idiomas-biblicos-0046",
-      "type": "open_answer",
       "text": "Depois de uma vitória sobre os filisteus, Samuel ergueu uma pedra e lhe deu um nome hebraico que significa \"pedra de ajuda\". Que nome foi esse?",
-      "options": null,
-      "accepted_answers": [
-        "Ebenézer",
-        "Eben-Ezer"
+      "options": [
+        {
+          "text": "Ebenézer",
+          "correct": true
+        },
+        {
+          "text": "Betel",
+          "correct": false
+        },
+        {
+          "text": "Peniel",
+          "correct": false
+        },
+        {
+          "text": "Mispa",
+          "correct": false
+        }
       ],
       "explanation": "Depois que o SENHOR trovejou com grande trovoada sobre os filisteus e eles foram derrotados diante de Israel (1Sm 7:10), Samuel colocou uma pedra entre Mispa e Sem, chamou-a Ebenézer e disse: \"Até aqui nos ajudou o SENHOR\" (1Sm 7:12). O nome fazia da pedra um memorial de que a vitória viera de Deus, e não da força de Israel.",
       "divergence_note": null,
@@ -1366,7 +1433,6 @@
     },
     {
       "external_id": "idiomas-biblicos-0047",
-      "type": "multiple_choice",
       "text": "Segundo Êxodo 2:10, por que a filha de Faraó deu ao menino hebreu o nome de Moisés?",
       "options": [
         {
@@ -1386,7 +1452,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Ela o chamou Moisés e explicou: \"Porque das águas o tenho tirado\" (Êx 2:10) — em hebraico, o nome soa como o verbo mashah, \"tirar\". O menino que Faraó mandara lançar ao rio (Êx 1:22) foi tirado dele e, anos depois, conduziria Israel em seco pelo meio do mar (Êx 14:21-22).",
       "divergence_note": null,
       "reference": {
@@ -1399,13 +1464,24 @@
     },
     {
       "external_id": "idiomas-biblicos-0048",
-      "type": "open_answer",
       "text": "Que expressão, formada pela primeira e pela última letra do alfabeto grego, o Senhor usa no Apocalipse para se apresentar como o princípio e o fim?",
-      "options": null,
-      "accepted_answers": [
-        "Alfa e Ômega",
-        "O Alfa e o Ômega",
-        "Alfa e o Ômega"
+      "options": [
+        {
+          "text": "Alfa e Ômega",
+          "correct": true
+        },
+        {
+          "text": "Álef e Tav",
+          "correct": false
+        },
+        {
+          "text": "Alfa e Zeta",
+          "correct": false
+        },
+        {
+          "text": "Alfa e Beta",
+          "correct": false
+        }
       ],
       "explanation": "\"Eu sou o Alfa e o Ômega, o princípio e o fim, o primeiro e o derradeiro\" (Ap 22:13). Como o Novo Testamento foi escrito em grego, as letras extremas do alfabeto dizem que tudo começa e termina nele. O título ecoa a declaração de Deus em Isaías — \"Eu sou o primeiro e eu sou o último\" (Is 44:6) — e, no fim do livro, quem o pronuncia é o mesmo que declara: \"Eu, Jesus, enviei o meu anjo\" (Ap 22:16).",
       "divergence_note": null,

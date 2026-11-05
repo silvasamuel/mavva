@@ -6,8 +6,8 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.models import DailyActivity, User, UserStats
-from app.models.enums import Difficulty, QuestionType, UserRole
-from tests.factories import make_category, make_mc_question, make_open_question
+from app.models.enums import Testament, UserRole
+from tests.factories import make_category, make_mc_question
 from tests.helpers import register_user, verification_tokens
 
 
@@ -119,40 +119,6 @@ class TestAdminQuestionEditing:
         )
         assert response.status_code == 400
 
-    def test_edit_open_answer_accepted_answers(self, auth_client: TestClient, db: Session):
-        client = self._admin_client(auth_client, db)
-        category = make_category(db)
-        question = make_open_question(db, category)
-        original_answer_ids = [answer.id for answer in question.accepted_answers]
-        response = client.patch(
-            f"/api/v1/admin/questions/{question.id}",
-            json={"accepted_answers": [{"text": "Resposta A"}, {"text": "Resposta B"}]},
-        )
-        assert response.status_code == 200, response.text
-        assert [a["text"] for a in response.json()["accepted_answers"]] == [
-            "Resposta A",
-            "Resposta B",
-        ]
-        db.refresh(question)
-        assert [a.id for a in question.accepted_answers] == original_answer_ids
-
-    def test_cannot_put_options_on_open_answer(self, auth_client: TestClient, db: Session):
-        client = self._admin_client(auth_client, db)
-        category = make_category(db)
-        question = make_open_question(db, category)
-        response = client.patch(
-            f"/api/v1/admin/questions/{question.id}",
-            json={
-                "options": [
-                    {"text": "A", "is_correct": True},
-                    {"text": "B", "is_correct": False},
-                    {"text": "C", "is_correct": False},
-                    {"text": "D", "is_correct": False},
-                ]
-            },
-        )
-        assert response.status_code == 400
-
     def test_invalid_book_rejected(self, auth_client: TestClient, db: Session):
         client = self._admin_client(auth_client, db)
         category = make_category(db)
@@ -214,40 +180,6 @@ class TestAdminUsers:
             auth_client.get("/api/v1/admin/users/00000000-0000-0000-0000-000000000001").status_code
             == 404
         )
-
-
-class TestAdminQuestionTypeFilter:
-    def test_filters_by_multiple_choice_and_open_answer(self, auth_client: TestClient, db: Session):
-        _promote_to_admin(db, "samuel@teste.com")
-        category = make_category(db)
-        mc = make_mc_question(db, category)
-        op = make_open_question(db, category)
-
-        mc_only = auth_client.get("/api/v1/admin/questions?type=multiple_choice")
-        assert mc_only.status_code == 200, mc_only.text
-        mc_ids = {item["id"] for item in mc_only.json()["items"]}
-        assert str(mc.id) in mc_ids
-        assert str(op.id) not in mc_ids
-        assert all(item["type"] == "multiple_choice" for item in mc_only.json()["items"])
-
-        open_only = auth_client.get("/api/v1/admin/questions?type=open_answer")
-        open_ids = {item["id"] for item in open_only.json()["items"]}
-        assert str(op.id) in open_ids
-        assert str(mc.id) not in open_ids
-
-    def test_combines_with_difficulty_and_category(self, auth_client: TestClient, db: Session):
-        _promote_to_admin(db, "samuel@teste.com")
-        category = make_category(db)
-        easy_open = make_open_question(db, category, difficulty=Difficulty.EASY)
-        make_mc_question(db, category, difficulty=Difficulty.EASY)
-        make_open_question(db, category, difficulty=Difficulty.HARD)
-
-        response = auth_client.get(
-            "/api/v1/admin/questions"
-            f"?type={QuestionType.OPEN_ANSWER.value}&difficulty=easy&category_id={category.id}"
-        )
-        items = response.json()["items"]
-        assert [item["id"] for item in items] == [str(easy_open.id)]
 
 
 class TestAdminUsersSorting:
@@ -383,7 +315,7 @@ class TestAdminDashboard:
         _promote_to_admin(db, "samuel@teste.com")
         category = make_category(db)
         make_mc_question(db, category)
-        make_open_question(db, category)
+        make_mc_question(db, category, testament=Testament.NEW)
         inactive = make_mc_question(db, category)
         inactive.is_active = False
         admin = db.query(User).filter(User.email == "samuel@teste.com").one()
@@ -423,7 +355,6 @@ class TestAdminDashboard:
         assert body["questions"]["total"] == 3
         assert body["questions"]["active"] == 2
         assert body["questions"]["inactive"] == 1
-        assert body["questions"]["open_answer"] == 1
         assert body["questions"]["old_testament"] == 2
         assert body["review"]["flags_open"] == 0
         assert body["review"]["proposals_pending"] == 0

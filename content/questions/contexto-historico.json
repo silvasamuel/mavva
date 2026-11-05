@@ -3,7 +3,6 @@
   "questions": [
     {
       "external_id": "contexto-historico-0001",
-      "type": "multiple_choice",
       "text": "Qual império dominava a Judeia na época do nascimento e ministério de Jesus?",
       "options": [
         {
@@ -23,7 +22,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Naqueles dias saiu um decreto da parte de César Augusto\" (Lc 2:1) — Roma governava a Judeia por meio de reis vassalos (Herodes) e governadores (Pilatos). As estradas e a paz romana serviriam depois à expansão do evangelho.",
       "divergence_note": null,
       "reference": {
@@ -36,7 +34,6 @@
     },
     {
       "external_id": "contexto-historico-0002",
-      "type": "multiple_choice",
       "text": "Qual rei governava a Judeia quando Jesus nasceu e ordenou a matança dos meninos de Belém?",
       "options": [
         {
@@ -56,7 +53,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Tendo nascido Jesus em Belém... no tempo do rei Herodes\" (Mt 2:1). Enganado pelos magos, Herodes, o Grande, mandou matar os meninos de Belém (Mt 2:16). Antipas, seu filho, foi quem prendeu João Batista décadas depois.",
       "divergence_note": null,
       "reference": {
@@ -69,13 +65,24 @@
     },
     {
       "external_id": "contexto-historico-0003",
-      "type": "open_answer",
       "text": "Qual governador romano sentenciou Jesus à crucificação?",
-      "options": null,
-      "accepted_answers": [
-        "Pilatos",
-        "Pôncio Pilatos",
-        "Poncio Pilatos"
+      "options": [
+        {
+          "text": "Pilatos",
+          "correct": true
+        },
+        {
+          "text": "Herodes Antipas",
+          "correct": false
+        },
+        {
+          "text": "Félix",
+          "correct": false
+        },
+        {
+          "text": "Festo",
+          "correct": false
+        }
       ],
       "explanation": "Pôncio Pilatos, governador da Judeia de 26 a 36 d.C., declarou três vezes não achar crime em Jesus, mas cedeu à pressão e \"entregou-o para ser crucificado\" (Jo 19:16). Seu nome ficou registrado até no Credo Apostólico.",
       "divergence_note": null,
@@ -89,7 +96,6 @@
     },
     {
       "external_id": "contexto-historico-0004",
-      "type": "multiple_choice",
       "text": "Segundo Atos 23:8, qual era a principal diferença doutrinária entre fariseus e saduceus?",
       "options": [
         {
@@ -109,7 +115,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Os saduceus dizem que não há ressurreição, nem anjo, nem espírito; mas os fariseus reconhecem uma e outra coisa\" (At 23:8). Paulo usou essa divisão a seu favor no Sinédrio. Os saduceus dominavam o sacerdócio; os fariseus, as sinagogas.",
       "divergence_note": null,
       "reference": {
@@ -122,7 +127,6 @@
     },
     {
       "external_id": "contexto-historico-0005",
-      "type": "multiple_choice",
       "text": "O que era o Sinédrio?",
       "options": [
         {
@@ -142,7 +146,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O Sinédrio julgou Jesus (Mt 26:59), Pedro e João (At 4), Estêvão (At 6:12) e Paulo (At 23). Presidido pelo sumo sacerdote, reunia principais sacerdotes, anciãos e escribas; sob Roma, não podia executar sentenças de morte (Jo 18:31).",
       "divergence_note": null,
       "reference": {
@@ -155,7 +158,6 @@
     },
     {
       "external_id": "contexto-historico-0006",
-      "type": "multiple_choice",
       "text": "Quando questionado sobre o tributo a César, que moeda Jesus pediu para ver?",
       "options": [
         {
@@ -175,7 +177,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Mostrai-me a moeda do tributo. E eles lhe apresentaram um denário\" (Mt 22:19) — moeda romana com a imagem de César. Daí a resposta: \"dai pois a César o que é de César, e a Deus o que é de Deus\" (Mt 22:21).",
       "divergence_note": null,
       "reference": {
@@ -188,7 +189,6 @@
     },
     {
       "external_id": "contexto-historico-0007",
-      "type": "multiple_choice",
       "text": "Em que língua o Novo Testamento foi escrito, refletindo a cultura dominante do Mediterrâneo?",
       "options": [
         {
@@ -208,7 +208,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Desde as conquistas de Alexandre, o grego koiné era a língua comum do mundo mediterrâneo — por isso os apóstolos escreveram nela, alcançando judeus da dispersão e gentios. Jesus, no cotidiano, falava aramaico (cf. Mc 5:41).",
       "divergence_note": null,
       "reference": {
@@ -222,7 +221,6 @@
     },
     {
       "external_id": "contexto-historico-0008",
-      "type": "multiple_choice",
       "text": "Qual a origem da hostilidade entre judeus e samaritanos, pressuposta em João 4:9?",
       "options": [
         {
@@ -242,7 +240,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Após a queda de Samaria, a Assíria repovoou a região com gentios que se misturaram aos israelitas remanescentes (2Rs 17:24-33), gerando um povo de culto misto que adorava no Gerizim — \"nossos pais adoraram neste monte\" (Jo 4:20). Por isso \"os judeus não se comunicam com os samaritanos\" (Jo 4:9). Jesus atravessou exatamente essa barreira.",
       "divergence_note": null,
       "reference": {
@@ -255,7 +252,6 @@
     },
     {
       "external_id": "contexto-historico-0009",
-      "type": "multiple_choice",
       "text": "O que eram as sinagogas, onde Jesus e Paulo costumavam ensinar?",
       "options": [
         {
@@ -275,7 +271,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Sem templo durante o exílio, os judeus se reuniam para ler a Lei e orar — prática que se consolidou nas sinagogas espalhadas por toda cidade. Jesus lia e ensinava nelas \"como era seu costume\" (Lc 4:16); sacrifícios, só no templo de Jerusalém.",
       "divergence_note": "O desenvolvimento histórico das sinagogas é reconstruído pelos historiadores a partir de evidências pós-exílicas; o Novo Testamento as mostra já plenamente estabelecidas.",
       "reference": {
@@ -288,7 +283,6 @@
     },
     {
       "external_id": "contexto-historico-0010",
-      "type": "multiple_choice",
       "text": "Segundo os historiadores, o que aconteceu com o templo de Jerusalém no ano 70 d.C.?",
       "options": [
         {
@@ -308,7 +302,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Segundo Josefo, historiador judeu e testemunha ocular, as legiões de Tito incendiaram e demoliram o templo ao sufocar a revolta judaica. Jesus havia anunciado quarenta anos antes: \"não ficará aqui pedra sobre pedra que não seja derrubada\" (Mt 24:2).",
       "divergence_note": "A destruição em 70 d.C. é fato histórico extrabíblico (fonte principal: Josefo); a profecia de Jesus está registrada em Mt 24:1-2, Mc 13:1-2 e Lc 21:5-6.",
       "reference": {
@@ -321,7 +314,6 @@
     },
     {
       "external_id": "contexto-historico-0011",
-      "type": "multiple_choice",
       "text": "Qual império dominava a Judeia no tempo do nascimento de Jesus?",
       "options": [
         {
@@ -341,7 +333,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Roma dominava a região; o recenseamento de César Augusto levou José a Belém (Lc 2:1).",
       "divergence_note": null,
       "reference": {
@@ -355,7 +346,6 @@
     },
     {
       "external_id": "contexto-historico-0012",
-      "type": "multiple_choice",
       "text": "Qual governador romano condenou Jesus à crucificação?",
       "options": [
         {
@@ -375,7 +365,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Pilatos, prefeito da Judeia, entregou Jesus para ser crucificado, lavando as mãos (Mt 27:24-26; Lc 23:24).",
       "divergence_note": null,
       "reference": {
@@ -389,7 +378,6 @@
     },
     {
       "external_id": "contexto-historico-0013",
-      "type": "multiple_choice",
       "text": "Qual rei, nomeado por Roma, ordenou a matança dos meninos de Belém?",
       "options": [
         {
@@ -409,7 +397,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Temendo o 'rei dos judeus', Herodes mandou matar os meninos de Belém (Mt 2:16).",
       "divergence_note": null,
       "reference": {
@@ -423,7 +410,6 @@
     },
     {
       "external_id": "contexto-historico-0014",
-      "type": "multiple_choice",
       "text": "Qual grupo religioso judaico negava a ressurreição dos mortos?",
       "options": [
         {
@@ -443,7 +429,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Os saduceus dizem que não há ressurreição, nem anjo, nem espírito' (At 23:8), ao contrário dos fariseus.",
       "divergence_note": null,
       "reference": {
@@ -457,7 +442,6 @@
     },
     {
       "external_id": "contexto-historico-0015",
-      "type": "multiple_choice",
       "text": "Em que cidade os discípulos foram chamados 'cristãos' pela primeira vez?",
       "options": [
         {
@@ -477,7 +461,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Em Antioquia foram os discípulos, pela primeira vez, chamados cristãos' (At 11:26).",
       "divergence_note": null,
       "reference": {
@@ -491,7 +474,6 @@
     },
     {
       "external_id": "contexto-historico-0016",
-      "type": "multiple_choice",
       "text": "Qual concílio, em Atos 15, decidiu que os gentios não precisavam se circuncidar?",
       "options": [
         {
@@ -511,7 +493,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Os apóstolos e presbíteros reuniram-se em Jerusalém e não impuseram a circuncisão aos gentios (At 15:6,19-20).",
       "divergence_note": null,
       "reference": {
@@ -524,7 +505,6 @@
     },
     {
       "external_id": "contexto-historico-0017",
-      "type": "multiple_choice",
       "text": "Perante qual procurador romano Paulo apelou a César?",
       "options": [
         {
@@ -544,7 +524,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Então Festo, tendo falado com o conselho, respondeu: Apelaste para César? Para César irás.' (Atos 25:12).\n",
       "divergence_note": null,
       "reference": {
@@ -557,7 +536,6 @@
     },
     {
       "external_id": "contexto-historico-0018",
-      "type": "multiple_choice",
       "text": "Qual grupo era conhecido pelo rigor com a lei e as tradições, frequentemente confrontado por Jesus?",
       "options": [
         {
@@ -577,7 +555,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Os fariseus 'assentam-se na cadeira de Moisés' (Mt 23:2); Jesus repreendeu sua hipocrisia.",
       "divergence_note": null,
       "reference": {
@@ -590,7 +567,6 @@
     },
     {
       "external_id": "contexto-historico-0019",
-      "type": "multiple_choice",
       "text": "Segundo os historiadores, qual língua franca facilitou a difusão do evangelho no Império?",
       "options": [
         {
@@ -610,7 +586,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O grego comum era falado em todo o Império; a inscrição na cruz incluía hebraico, grego e latim (Jo 19:20).",
       "divergence_note": null,
       "reference": {
@@ -624,7 +599,6 @@
     },
     {
       "external_id": "contexto-historico-0020",
-      "type": "multiple_choice",
       "text": "Perante qual procurador, que o deixou preso esperando suborno, Paulo se defendeu em Cesareia?",
       "options": [
         {
@@ -644,7 +618,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Félix ouviu Paulo, mas o deixou preso dois anos esperando dinheiro (At 24:26-27).",
       "divergence_note": null,
       "reference": {
@@ -657,7 +630,6 @@
     },
     {
       "external_id": "contexto-historico-0021",
-      "type": "multiple_choice",
       "text": "Qual tetrarca da Galileia, a quem Pilatos enviou Jesus, desejava ver um sinal?",
       "options": [
         {
@@ -677,7 +649,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Pilatos remeteu Jesus a Herodes Antipas, tetrarca da Galileia, que o interrogou sem resposta (Lc 23:7-9).",
       "divergence_note": null,
       "reference": {
@@ -690,7 +661,6 @@
     },
     {
       "external_id": "contexto-historico-0022",
-      "type": "multiple_choice",
       "text": "Como se chamava o supremo tribunal religioso judaico que julgou Jesus e os apóstolos?",
       "options": [
         {
@@ -710,7 +680,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O Sinédrio, presidido pelo sumo sacerdote, reuniu-se para condenar Jesus (Mt 26:59) e depois julgar os apóstolos (At 5:27).",
       "divergence_note": null,
       "reference": {
@@ -723,7 +692,6 @@
     },
     {
       "external_id": "contexto-historico-0023",
-      "type": "multiple_choice",
       "text": "Que classe de judeus cobrava impostos para Roma e era vista como traidora?",
       "options": [
         {
@@ -743,7 +711,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Publicanos como Mateus e Zaqueu eram desprezados por servir a Roma; Jesus comeu com eles (Lc 5:29-30; 19:2-7).",
       "divergence_note": null,
       "reference": {
@@ -756,7 +723,6 @@
     },
     {
       "external_id": "contexto-historico-0024",
-      "type": "multiple_choice",
       "text": "Que estrutura política Roma usava na Judeia por meio de reis-clientes como Herodes?",
       "options": [
         {
@@ -776,7 +742,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Herodes reinava por concessão de Roma; depois a Judeia passou a prefeitos/procuradores como Pilatos (Lc 3:1).",
       "divergence_note": null,
       "reference": {
@@ -789,7 +754,6 @@
     },
     {
       "external_id": "contexto-historico-0025",
-      "type": "multiple_choice",
       "text": "Que evento levou judeus a se espalharem por todo o Império, criando a Diáspora?",
       "options": [
         {
@@ -809,7 +773,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Por isso havia judeus 'de todas as nações' em Jerusalém no Pentecostes (At 2:5-11).",
       "divergence_note": null,
       "reference": {
@@ -822,7 +785,6 @@
     },
     {
       "external_id": "contexto-historico-0026",
-      "type": "multiple_choice",
       "text": "Que cidadania Paulo invocou para evitar ser açoitado sem julgamento?",
       "options": [
         {
@@ -842,7 +804,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'É-vos lícito açoitar um homem romano, sem ser condenado?' — o tribuno temeu ao saber (At 22:25-29).",
       "divergence_note": null,
       "reference": {
@@ -855,14 +816,24 @@
     },
     {
       "external_id": "contexto-historico-0027",
-      "type": "open_answer",
       "text": "Segundo os historiadores, em que ano aproximado o templo de Jerusalém foi destruído pelos romanos?",
-      "options": null,
-      "accepted_answers": [
-        "70",
-        "70 d.C.",
-        "ano 70",
-        "70 dC"
+      "options": [
+        {
+          "text": "70 d.C.",
+          "correct": true
+        },
+        {
+          "text": "33 d.C.",
+          "correct": false
+        },
+        {
+          "text": "135 d.C.",
+          "correct": false
+        },
+        {
+          "text": "586 a.C.",
+          "correct": false
+        }
       ],
       "explanation": "A destruição em 70 d.C. é registrada por historiadores como Josefo; Jesus a havia predito (Mt 24:1-2).",
       "divergence_note": "A data de 70 d.C. vem de fontes históricas extrabíblicas (notadamente Josefo); o texto bíblico registra a predição de Jesus, não o ano.",
@@ -877,7 +848,6 @@
     },
     {
       "external_id": "contexto-historico-0028",
-      "type": "multiple_choice",
       "text": "Qual imperador romano ordenou o recenseamento que levou José e Maria a Belém?",
       "options": [
         {
@@ -897,7 +867,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Saiu um decreto da parte de César Augusto para que todo o mundo se alistasse' (Lc 2:1).",
       "divergence_note": null,
       "reference": {
@@ -910,7 +879,6 @@
     },
     {
       "external_id": "contexto-historico-0029",
-      "type": "multiple_choice",
       "text": "Aos pés de qual mestre da lei Paulo foi instruído em Jerusalém?",
       "options": [
         {
@@ -930,7 +898,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Instruído aos pés de Gamaliel, conforme a verdade da lei de nossos pais' (At 22:3); o mesmo Gamaliel aconselhou moderação ao Sinédrio (At 5:34-39).",
       "divergence_note": null,
       "reference": {
@@ -943,7 +910,6 @@
     },
     {
       "external_id": "contexto-historico-0030",
-      "type": "multiple_choice",
       "text": "Que grupo judaico defendia a resistência armada contra o domínio de Roma?",
       "options": [
         {
@@ -963,7 +929,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Um dos doze é chamado 'Simão, o Zelote' (Lc 6:15), indicando essa corrente entre os seguidores de Jesus.",
       "divergence_note": null,
       "reference": {
@@ -976,7 +941,6 @@
     },
     {
       "external_id": "contexto-historico-0031",
-      "type": "multiple_choice",
       "text": "Para qual cidade litorânea Paulo foi enviado sob escolta, sede do governo romano na Judeia?",
       "options": [
         {
@@ -996,7 +960,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O tribuno enviou Paulo de noite a Cesareia, ao governador Félix, com forte escolta (At 23:23-24,33).",
       "divergence_note": null,
       "reference": {
@@ -1009,13 +972,24 @@
     },
     {
       "external_id": "contexto-historico-0032",
-      "type": "open_answer",
       "text": "Segundo os historiadores, qual estrada romana Paulo percorreu ao se aproximar de Roma?",
-      "options": null,
-      "accepted_answers": [
-        "Via Ápia",
-        "Via Apia",
-        "A Via Ápia"
+      "options": [
+        {
+          "text": "Via Ápia",
+          "correct": true
+        },
+        {
+          "text": "Via Egnácia",
+          "correct": false
+        },
+        {
+          "text": "Via Aurélia",
+          "correct": false
+        },
+        {
+          "text": "Via Flamínia",
+          "correct": false
+        }
       ],
       "explanation": "Os irmãos saíram ao encontro de Paulo até a Praça de Ápio e as Três Vendas (At 28:15), pontos da Via Ápia segundo os historiadores.",
       "divergence_note": "A identificação da estrada como Via Ápia vem da geografia histórica romana; o texto bíblico nomeia apenas os pontos de parada (Praça de Ápio e Três Vendas).",
@@ -1029,7 +1003,6 @@
     },
     {
       "external_id": "contexto-historico-0033",
-      "type": "multiple_choice",
       "text": "Qual procônsul de Acaia se recusou a julgar a acusação dos judeus contra Paulo em Corinto?",
       "options": [
         {
@@ -1049,7 +1022,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Gálio disse que não seria juiz de 'questões de palavras e nomes da vossa lei' e os expulsou do tribunal (At 18:12-17).",
       "divergence_note": null,
       "reference": {
@@ -1062,7 +1034,6 @@
     },
     {
       "external_id": "contexto-historico-0034",
-      "type": "multiple_choice",
       "text": "Qual imperador reinava quando João Batista começou a pregar, segundo Lucas 3:1?",
       "options": [
         {
@@ -1082,7 +1053,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'No ano quinze do império de Tibério César, sendo Pôncio Pilatos presidente da Judeia' (Lc 3:1) — Lucas ancora o evangelho na história.",
       "divergence_note": null,
       "reference": {
@@ -1095,7 +1065,6 @@
     },
     {
       "external_id": "contexto-historico-0035",
-      "type": "multiple_choice",
       "text": "Que cargo romano tinha Sérgio Paulo, que ouviu o evangelho em Chipre?",
       "options": [
         {
@@ -1115,7 +1084,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'O procônsul Sérgio Paulo, homem prudente' chamou Barnabé e Saulo para ouvir a palavra de Deus (At 13:7).",
       "divergence_note": null,
       "reference": {
@@ -1128,7 +1096,6 @@
     },
     {
       "external_id": "contexto-historico-0036",
-      "type": "multiple_choice",
       "text": "Que estatuto Filipos tinha no Império, sendo chamada 'colônia' em Atos 16?",
       "options": [
         {
@@ -1148,7 +1115,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Filipos era colônia romana (At 16:12); por isso Paulo pôde invocar seus direitos ao ser açoitado sem julgamento (At 16:37).",
       "divergence_note": null,
       "reference": {
@@ -1161,7 +1127,6 @@
     },
     {
       "external_id": "contexto-historico-0037",
-      "type": "multiple_choice",
       "text": "Que moeda de valor ínfimo Jesus citou ao dizer que dois passarinhos se vendem por ela?",
       "options": [
         {
@@ -1181,7 +1146,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Não se vendem dois passarinhos por um ceitil? E nenhum deles cairá em terra sem a vontade de vosso Pai' (Mt 10:29).",
       "divergence_note": null,
       "reference": {
@@ -1194,7 +1158,6 @@
     },
     {
       "external_id": "contexto-historico-0038",
-      "type": "multiple_choice",
       "text": "Que tipo de tribunal era a 'audiência' (pretório) onde Pilatos interrogou Jesus?",
       "options": [
         {
@@ -1214,7 +1177,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Levaram Jesus 'à audiência' de Pilatos, onde os judeus não entraram para não se contaminar (Jo 18:28) — o pretório romano.",
       "divergence_note": null,
       "reference": {
@@ -1227,12 +1189,24 @@
     },
     {
       "external_id": "contexto-historico-0039",
-      "type": "open_answer",
       "text": "Qual sumo sacerdote, genro de Anás, presidiu o julgamento de Jesus?",
-      "options": null,
-      "accepted_answers": [
-        "Caifás",
-        "Caifas"
+      "options": [
+        {
+          "text": "Caifás",
+          "correct": true
+        },
+        {
+          "text": "Anás",
+          "correct": false
+        },
+        {
+          "text": "Ananias",
+          "correct": false
+        },
+        {
+          "text": "Alexandre",
+          "correct": false
+        }
       ],
       "explanation": "'Levaram-no primeiro a Anás... sogro de Caifás, que era o sumo sacerdote daquele ano' (Jo 18:13).",
       "divergence_note": null,
@@ -1246,7 +1220,6 @@
     },
     {
       "external_id": "contexto-historico-0040",
-      "type": "multiple_choice",
       "text": "Que língua Jesus falava no dia a dia, preservada em expressões como 'Talita cumi' e 'Efatá'?",
       "options": [
         {
@@ -1266,7 +1239,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O aramaico era a língua comum da Palestina; os evangelhos guardam palavras de Jesus nela (Mc 5:41; 7:34).",
       "divergence_note": null,
       "reference": {
@@ -1279,7 +1251,6 @@
     },
     {
       "external_id": "contexto-historico-0041",
-      "type": "multiple_choice",
       "text": "Quem eram os 'escribas', tantas vezes citados ao lado dos fariseus?",
       "options": [
         {
@@ -1299,7 +1270,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Os escribas ensinavam 'como os que têm autoridade' — e o povo notou que Jesus ensinava diferente deles (Mc 1:22).",
       "divergence_note": null,
       "reference": {
@@ -1312,7 +1282,6 @@
     },
     {
       "external_id": "contexto-historico-0042",
-      "type": "multiple_choice",
       "text": "Qual imperador expulsou os judeus de Roma, trazendo Áquila e Priscila a Corinto?",
       "options": [
         {
@@ -1332,7 +1301,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Áquila e Priscila haviam chegado 'da Itália, por Cláudio ter mandado que todos os judeus saíssem de Roma' (At 18:2).",
       "divergence_note": null,
       "reference": {
@@ -1345,7 +1313,6 @@
     },
     {
       "external_id": "contexto-historico-0043",
-      "type": "multiple_choice",
       "text": "Quem eram os 'herodianos' que se uniram aos fariseus para armar contra Jesus?",
       "options": [
         {
@@ -1365,7 +1332,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Fariseus e herodianos, normalmente rivais, uniram-se para 'matá-lo' (Mc 3:6) e na pergunta sobre o tributo (Mc 12:13).",
       "divergence_note": null,
       "reference": {
@@ -1378,14 +1344,24 @@
     },
     {
       "external_id": "contexto-historico-0044",
-      "type": "open_answer",
       "text": "No Sermão do Monte, se alguém te obrigar a caminhar uma milha, quantas milhas Jesus manda caminhar com ele?",
-      "options": null,
-      "accepted_answers": [
-        "2",
-        "duas",
-        "2 milhas",
-        "duas milhas"
+      "options": [
+        {
+          "text": "2",
+          "correct": true
+        },
+        {
+          "text": "3",
+          "correct": false
+        },
+        {
+          "text": "5",
+          "correct": false
+        },
+        {
+          "text": "10",
+          "correct": false
+        }
       ],
       "explanation": "\"E, se qualquer te obrigar a caminhar uma milha, vai com ele duas\" (Mt 5:41). Segundo os historiadores, soldados e oficiais romanos podiam obrigar civis a carregar cargas por certa distância — e a milha romana tinha cerca de 1,5 km. No grego, o verbo traduzido por \"obrigar\" (angareuō) é o mesmo usado para Simão Cireneu, \"a quem constrangeram a levar a sua cruz\" (Mt 27:32); Jesus ensina a transformar a imposição em serviço voluntário.",
       "divergence_note": null,
@@ -1399,7 +1375,6 @@
     },
     {
       "external_id": "contexto-historico-0045",
-      "type": "multiple_choice",
       "text": "Segundo os Evangelhos, que costume da festa da Páscoa Pilatos tentou usar para libertar Jesus?",
       "options": [
         {
@@ -1419,7 +1394,6 @@
           "correct": true
         }
       ],
-      "accepted_answers": null,
       "explanation": "Mateus registra que, por ocasião da festa, o governador romano costumava soltar um preso, \"escolhendo o povo aquele que quisesse\" (Mt 27:15), e João liga o costume à Páscoa (Jo 18:39). Sabendo que Jesus lhe fora entregue \"por inveja\", Pilatos ofereceu à multidão Jesus ou Barrabás, \"um preso bem-conhecido\" (Mt 27:16-18). Persuadida pelos príncipes dos sacerdotes e pelos anciãos, a multidão pediu Barrabás, e Jesus foi entregue para ser crucificado (Mt 27:20-26).",
       "divergence_note": null,
       "reference": {
@@ -1432,7 +1406,6 @@
     },
     {
       "external_id": "contexto-historico-0046",
-      "type": "multiple_choice",
       "text": "Que nome, o mesmo da maior unidade do exército romano, deu a si mesmo o endemoninhado que morava nos sepulcros, \"porque somos muitos\"?",
       "options": [
         {
@@ -1452,7 +1425,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Legião é o meu nome, porque somos muitos\" (Mc 5:9); Lucas explica que \"tinham entrado nele muitos demônios\" (Lc 8:30). A legião era a maior unidade do exército romano — segundo os historiadores, com cerca de cinco a seis mil soldados —, nome que sugeria uma força numerosa e poderosa. Ainda assim, bastou a palavra de Jesus para libertar o homem, que foi anunciar em Decápolis \"quão grandes coisas Jesus lhe fizera\" (Mc 5:20).",
       "divergence_note": null,
       "reference": {
@@ -1465,7 +1437,6 @@
     },
     {
       "external_id": "contexto-historico-0047",
-      "type": "multiple_choice",
       "text": "Que cargo tinha Jairo, o pai da menina que Jesus ressuscitou?",
       "options": [
         {
@@ -1485,7 +1456,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Marcos o apresenta como \"um dos principais da sinagoga\" (Mc 5:22), e Lucas, como \"príncipe da sinagoga\" (Lc 8:41). Os principais da sinagoga cuidavam do culto local: em Antioquia da Pisídia, por exemplo, \"depois da lição da lei e dos profetas\", foram eles que convidaram Paulo e seus companheiros a falar ao povo (At 13:15). Outro deles, Crispo, \"creu no Senhor com toda a sua casa\" em Corinto (At 18:8).",
       "divergence_note": null,
       "reference": {
@@ -1498,7 +1468,6 @@
     },
     {
       "external_id": "contexto-historico-0048",
-      "type": "multiple_choice",
       "text": "Segundo Mateus 26:73, o que denunciou Pedro como seguidor de Jesus no pátio do sumo sacerdote?",
       "options": [
         {
@@ -1518,7 +1487,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Verdadeiramente também tu és deles, pois a tua fala te denuncia\" (Mt 26:73); no relato de Marcos, eles dizem: \"porque és também galileu\" (Mc 14:70). Jesus e a maior parte dos discípulos vinham da Galileia, e o modo de falar da região se distinguia do de Jerusalém — fora da Bíblia, textos rabínicos bem posteriores, como o Talmude, comentam a pronúncia característica dos galileus. No Pentecostes, a multidão também reconheceu os discípulos como galileus: \"não são galileus todos esses homens que estão falando?\" (At 2:7).",
       "divergence_note": "O texto bíblico diz apenas que a fala de Pedro o denunciava (Mt 26:73) e que ele era galileu (Mc 14:70); o comentário sobre a pronúncia dos galileus vem do Talmude babilônico (Eruvin 53b), obra rabínica bem posterior ao Novo Testamento.",
       "reference": {
@@ -1531,14 +1499,24 @@
     },
     {
       "external_id": "contexto-historico-0049",
-      "type": "open_answer",
       "text": "Segundo João 2:20, em quantos anos os judeus disseram que \"foi edificado este templo\"?",
-      "options": null,
-      "accepted_answers": [
-        "46",
-        "quarenta e seis",
-        "46 anos",
-        "quarenta e seis anos"
+      "options": [
+        {
+          "text": "46",
+          "correct": true
+        },
+        {
+          "text": "40",
+          "correct": false
+        },
+        {
+          "text": "70",
+          "correct": false
+        },
+        {
+          "text": "20",
+          "correct": false
+        }
       ],
       "explanation": "Quando Jesus disse \"Derribai este templo, e em três dias o levantarei\", os judeus retrucaram: \"Em quarenta e seis anos foi edificado este templo, e tu o levantarás em três dias?\" (Jo 2:19-20). Segundo o historiador judeu Flávio Josefo, Herodes, o Grande, começou uma grande reforma do templo no 18º ano do seu reinado — por volta de 20-19 a.C., pelo cálculo dos historiadores —, e as obras continuaram por décadas depois da sua morte. Mas Jesus \"falava do templo do seu corpo\", e, depois que ele ressuscitou, os discípulos se lembraram dessas palavras e creram (Jo 2:21-22).",
       "divergence_note": "O número 46 está no próprio texto (Jo 2:20). A data de início da reforma vem de Flávio Josefo, fonte extrabíblica: nas Antiguidades Judaicas ele fala do 18º ano de Herodes (c. 20-19 a.C.), mas na Guerra dos Judeus, do 15º ano — por isso a data é aproximada.",
@@ -1552,7 +1530,6 @@
     },
     {
       "external_id": "contexto-historico-0050",
-      "type": "multiple_choice",
       "text": "Em Listra, depois que Paulo curou um homem coxo de nascença, com que nomes de deuses a multidão chamou Barnabé e Paulo?",
       "options": [
         {
@@ -1572,7 +1549,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "A multidão gritou em língua licaônica: \"Fizeram-se os deuses semelhantes aos homens, e desceram até nós\", e \"chamavam Júpiter a Barnabé, e Mercúrio a Paulo; porque este era o que falava\" (At 14:11-12). No original grego, os nomes são Zeus e Hermes, e Hermes era tido como o mensageiro dos deuses. Estudiosos lembram uma lenda ambientada na vizinha Frígia e registrada pelo poeta romano Ovídio, em que esses dois deuses visitaram a terra disfarçados de homens e só um casal de idosos, Filêmon e Báucis, os acolheu. Paulo e Barnabé rasgaram as vestes e chamaram o povo a se converter \"ao Deus vivo, que fez o céu, e a terra, e o mar\" (At 14:14-15).",
       "divergence_note": "A lenda de Filêmon e Báucis (Ovídio, Metamorfoses, livro 8), ambientada na Frígia, região vizinha à Licaônia, é contexto extrabíblico citado por estudiosos para explicar a reação da multidão; o texto de Atos não a menciona.",
       "reference": {
@@ -1585,7 +1561,6 @@
     },
     {
       "external_id": "contexto-historico-0051",
-      "type": "multiple_choice",
       "text": "Ao voltar do Egito, José teve receio de ir para a Judeia porque um filho de Herodes reinava ali em lugar do pai. Quem era ele?",
       "options": [
         {
@@ -1605,7 +1580,6 @@
           "correct": true
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Ouvindo que Arquelau reinava na Judeia em lugar de Herodes, seu pai, receou ir para lá\"; avisado em sonhos, José foi para a Galileia e morou em Nazaré (Mt 2:22-23). Segundo o historiador Flávio Josefo, com a morte de Herodes, o Grande, o reino foi dividido entre três filhos: Arquelau ficou com a Judeia, a Samaria e a Idumeia, com o título de etnarca; Antipas, com a Galileia e a Pereia; e Filipe, com regiões a nordeste — os dois últimos aparecem como tetrarcas em Lucas 3:1. Ainda segundo Josefo, Arquelau foi acusado diante de César por sua crueldade e tirania e acabou deposto e exilado (em 6 d.C., pelo cálculo dos historiadores); a Judeia passou então a ser uma província governada por Roma, como no tempo de Pôncio Pilatos (Lc 3:1).",
       "divergence_note": "Mateus registra apenas que Arquelau reinava na Judeia (Mt 2:22); a divisão do reino de Herodes e a deposição de Arquelau vêm de Flávio Josefo, fonte extrabíblica.",
       "reference": {

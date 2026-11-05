@@ -20,10 +20,9 @@ from app.models import (
     User,
     UserStats,
 )
-from app.models.enums import Difficulty, QuestionFlagStatus, QuestionType
+from app.models.enums import Difficulty, QuestionFlagStatus
 from app.schemas.admin import (
     AdminActivityOut,
-    AdminAnswer,
     AdminCategoryOut,
     AdminDashboardOut,
     AdminOption,
@@ -46,7 +45,7 @@ from app.schemas.moderation import (
     QuestionDraft,
 )
 from app.schemas.notification import AnnouncementIn, AnnouncementOut, AnnouncementUpdate
-from app.seeds.questions import OptionIn, sync_accepted_answers, sync_options
+from app.seeds.questions import OptionIn, sync_options
 from app.services import (
     admin_stats,
     announcement_service,
@@ -238,7 +237,6 @@ def list_questions(
     search: str | None = Query(default=None, max_length=200),
     category_id: int | None = None,
     difficulty: Difficulty | None = None,
-    type: QuestionType | None = None,
     limit: int = Query(default=25, ge=1, le=100),
     offset: int = Query(default=0, ge=0),
 ) -> AdminQuestionList:
@@ -252,8 +250,6 @@ def list_questions(
         query = query.where(Question.category_id == category_id)
     if difficulty is not None:
         query = query.where(Question.difficulty == difficulty)
-    if type is not None:
-        query = query.where(Question.type == type)
 
     total = db.scalar(select(func.count()).select_from(query.subquery())) or 0
     rows = db.execute(
@@ -263,7 +259,6 @@ def list_questions(
         AdminQuestionListItem(
             id=q.id,
             external_id=q.external_id,
-            type=q.type,
             text=q.text,
             difficulty=q.difficulty,
             category_id=q.category_id,
@@ -277,9 +272,7 @@ def list_questions(
 
 def _load_question(db: DbDep, question_id: uuid.UUID) -> Question:
     question = db.scalar(
-        select(Question)
-        .where(Question.id == question_id)
-        .options(selectinload(Question.options), selectinload(Question.accepted_answers))
+        select(Question).where(Question.id == question_id).options(selectinload(Question.options))
     )
     if question is None:
         raise HTTPException(status.HTTP_404_NOT_FOUND, "Pergunta não encontrada")
@@ -290,7 +283,6 @@ def _detail(question: Question) -> AdminQuestionDetail:
     return AdminQuestionDetail(
         id=question.id,
         external_id=question.external_id,
-        type=question.type,
         text=question.text,
         explanation=question.explanation,
         divergence_note=question.divergence_note,
@@ -303,7 +295,6 @@ def _detail(question: Question) -> AdminQuestionDetail:
         category_id=question.category_id,
         is_active=question.is_active,
         options=[AdminOption(text=o.text, is_correct=o.is_correct) for o in question.options],
-        accepted_answers=[AdminAnswer(text=a.text) for a in question.accepted_answers],
     )
 
 
@@ -365,29 +356,16 @@ def update_question(
 
     # Answer key: enforce the same invariants the seed does.
     if "options" in data:
-        if question.type != QuestionType.MULTIPLE_CHOICE:
-            raise HTTPException(
-                status.HTTP_400_BAD_REQUEST, "Só perguntas de múltipla escolha têm alternativas"
-            )
         options = data.pop("options")
         if len(options) != 4 or sum(1 for o in options if o["is_correct"]) != 1:
             raise HTTPException(
                 status.HTTP_400_BAD_REQUEST,
-                "Múltipla escolha exige 4 alternativas e exatamente 1 correta",
+                "A pergunta exige 4 alternativas e exatamente 1 correta",
             )
         sync_options(
             question,
             [OptionIn(text=o["text"], correct=o["is_correct"]) for o in options],
         )
-    if "accepted_answers" in data:
-        if question.type != QuestionType.OPEN_ANSWER:
-            raise HTTPException(
-                status.HTTP_400_BAD_REQUEST, "Só perguntas abertas têm respostas aceitas"
-            )
-        answers = data.pop("accepted_answers")
-        if not answers:
-            raise HTTPException(status.HTTP_400_BAD_REQUEST, "Informe ao menos uma resposta aceita")
-        sync_accepted_answers(question, [a["text"] for a in answers])
 
     for field, value in data.items():
         setattr(question, field, value)

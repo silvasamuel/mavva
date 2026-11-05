@@ -3,7 +3,6 @@
   "questions": [
     {
       "external_id": "festas-judaicas-0001",
-      "type": "multiple_choice",
       "text": "O que a Páscoa judaica celebra?",
       "options": [
         {
@@ -23,7 +22,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"É o sacrifício da páscoa ao Senhor, que passou as casas dos filhos de Israel no Egito, quando feriu aos egípcios\" (Êx 12:27). O cordeiro e o sangue nos umbrais apontavam para Cristo, \"nossa páscoa\" (1Co 5:7).",
       "divergence_note": null,
       "reference": {
@@ -36,7 +34,6 @@
     },
     {
       "external_id": "festas-judaicas-0002",
-      "type": "multiple_choice",
       "text": "Quantos dias após a Páscoa se celebrava Pentecostes, a Festa das Semanas?",
       "options": [
         {
@@ -56,7 +53,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Contavam-se sete semanas completas e mais um dia — cinquenta (Lv 23:15-16), daí o nome grego \"Pentecostes\". Festa das primícias da colheita do trigo, foi o dia escolhido para as primícias da igreja: três mil convertidos (At 2:41).",
       "divergence_note": null,
       "reference": {
@@ -69,7 +65,6 @@
     },
     {
       "external_id": "festas-judaicas-0003",
-      "type": "multiple_choice",
       "text": "O que Israel relembrava habitando em cabanas durante a Festa dos Tabernáculos?",
       "options": [
         {
@@ -89,7 +84,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Sete dias habitareis em tendas... para que saibam as vossas gerações que eu fiz habitar os filhos de Israel em tendas, quando os tirei da terra do Egito\" (Lv 23:42-43). Foi nessa festa que Jesus clamou: \"se alguém tem sede, venha a mim e beba\" (Jo 7:2,37).",
       "divergence_note": null,
       "reference": {
@@ -102,7 +96,6 @@
     },
     {
       "external_id": "festas-judaicas-0004",
-      "type": "multiple_choice",
       "text": "O que acontecia no Dia da Expiação (Yom Kipur), único dia do ano em que o sumo sacerdote entrava no Santo dos Santos?",
       "options": [
         {
@@ -122,7 +115,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Levítico 16 descreve o rito: o sumo sacerdote entrava com sangue no véu adentro, e o bode emissário levava as iniquidades \"para a terra solitária\". Hebreus vê ali a sombra de Cristo, que entrou \"uma vez no santuário, havendo efetuado uma eterna redenção\" (Hb 9:12).",
       "divergence_note": null,
       "reference": {
@@ -135,7 +127,6 @@
     },
     {
       "external_id": "festas-judaicas-0005",
-      "type": "multiple_choice",
       "text": "Qual festa foi instituída para celebrar o livramento dos judeus nos dias da rainha Ester?",
       "options": [
         {
@@ -155,7 +146,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O nome vem de \"Pur\", a sorte que Hamã lançara para exterminar os judeus (Et 9:24-26). Revertida a trama, Mardoqueu instituiu dias de \"banquetes e alegria, e de mandarem presentes uns aos outros, e dádivas aos pobres\" (Et 9:22).",
       "divergence_note": null,
       "reference": {
@@ -168,7 +158,6 @@
     },
     {
       "external_id": "festas-judaicas-0006",
-      "type": "multiple_choice",
       "text": "Qual festa, celebrada por Jesus em João 10:22, relembrava a purificação do templo na época dos Macabeus?",
       "options": [
         {
@@ -188,7 +177,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"E em Jerusalém havia a festa da dedicação, e era inverno\" (Jo 10:22). Segundo a história judaica (1 Macabeus 4), a festa celebra a purificação do templo em 164 a.C., após a profanação por Antíoco Epifânio — evento do período entre os testamentos.",
       "divergence_note": "A origem da festa está nos livros dos Macabeus, que não fazem parte do cânon protestante; a festa em si é mencionada no evangelho de João como pano de fundo histórico.",
       "reference": {
@@ -201,7 +189,6 @@
     },
     {
       "external_id": "festas-judaicas-0007",
-      "type": "multiple_choice",
       "text": "Durante a Festa dos Pães Asmos, o que era rigorosamente removido das casas por sete dias?",
       "options": [
         {
@@ -221,7 +208,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Sete dias comereis pães asmos; ao primeiro dia tirareis o fermento das vossas casas\" (Êx 12:15), lembrando a pressa da saída do Egito. Paulo aplica o símbolo: \"alimpai-vos do fermento velho... porque Cristo, nossa páscoa, foi sacrificado por nós\" (1Co 5:7-8).",
       "divergence_note": null,
       "reference": {
@@ -234,7 +220,6 @@
     },
     {
       "external_id": "festas-judaicas-0008",
-      "type": "multiple_choice",
       "text": "Quais eram as três festas anuais em que todo homem israelita devia comparecer perante o Senhor?",
       "options": [
         {
@@ -254,7 +239,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Três vezes no ano todo varão entre ti aparecerá perante o Senhor\" (Êx 23:14-17; Dt 16:16): Pães Asmos, Semanas e Tabernáculos. Por isso Jerusalém se enchia de peregrinos — como no Pentecostes de Atos 2, com \"varões religiosos, de todas as nações\" (At 2:5).",
       "divergence_note": null,
       "reference": {
@@ -267,7 +251,6 @@
     },
     {
       "external_id": "festas-judaicas-0009",
-      "type": "multiple_choice",
       "text": "Durante qual festa Jesus foi crucificado?",
       "options": [
         {
@@ -287,7 +270,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "A última ceia foi uma refeição pascal (Lc 22:15), e Jesus morreu na festa em que os cordeiros eram sacrificados — a coincidência é o próprio ponto: \"o nosso Cordeiro pascal, Cristo, foi imolado\" (1Co 5:7).",
       "divergence_note": null,
       "reference": {
@@ -300,7 +282,6 @@
     },
     {
       "external_id": "festas-judaicas-0010",
-      "type": "multiple_choice",
       "text": "O que marcava a Festa das Trombetas, no primeiro dia do sétimo mês?",
       "options": [
         {
@@ -320,7 +301,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"No mês sétimo, ao primeiro do mês, tereis descanso, memorial com sonido de trombetas, santa convocação\" (Lv 23:24). Abria o mês mais solene do calendário, que continha o Dia da Expiação e os Tabernáculos — o judaísmo posterior a celebra como Rosh Hashaná, o ano novo.",
       "divergence_note": null,
       "reference": {
@@ -333,7 +313,6 @@
     },
     {
       "external_id": "festas-judaicas-0011",
-      "type": "multiple_choice",
       "text": "Qual festa, 50 dias após a Páscoa, celebrava a colheita e coincidiu com a vinda do Espírito?",
       "options": [
         {
@@ -353,7 +332,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "A Festa das Semanas (Pentecostes) ocorria 50 dias após a Páscoa (Lv 23:15-16); nela o Espírito foi derramado (At 2).",
       "divergence_note": null,
       "reference": {
@@ -366,7 +344,6 @@
     },
     {
       "external_id": "festas-judaicas-0012",
-      "type": "multiple_choice",
       "text": "Em que festa o povo habitava em cabanas, lembrando a peregrinação no deserto?",
       "options": [
         {
@@ -386,7 +363,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Sete dias habitareis em tendas... para que saibam as vossas gerações que fiz habitar os filhos de Israel em tendas' (Lv 23:42-43).",
       "divergence_note": null,
       "reference": {
@@ -399,7 +375,6 @@
     },
     {
       "external_id": "festas-judaicas-0013",
-      "type": "multiple_choice",
       "text": "Qual era o dia mais solene, em que o sumo sacerdote entrava no Santo dos Santos?",
       "options": [
         {
@@ -419,7 +394,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "No Dia da Expiação, uma vez por ano, o sumo sacerdote fazia expiação pelo povo (Lv 16:29-34).",
       "divergence_note": null,
       "reference": {
@@ -432,11 +406,24 @@
     },
     {
       "external_id": "festas-judaicas-0014",
-      "type": "open_answer",
       "text": "Qual festa, instituída no tempo de Ester, celebra o livramento dos judeus na Pérsia?",
-      "options": null,
-      "accepted_answers": [
-        "Purim"
+      "options": [
+        {
+          "text": "Purim",
+          "correct": true
+        },
+        {
+          "text": "Hanucá",
+          "correct": false
+        },
+        {
+          "text": "Tabernáculos",
+          "correct": false
+        },
+        {
+          "text": "Pentecostes",
+          "correct": false
+        }
       ],
       "explanation": "Purim comemora o livramento do plano de Hamã, com dias de banquete e alegria (Et 9:26-28).",
       "divergence_note": null,
@@ -451,7 +438,6 @@
     },
     {
       "external_id": "festas-judaicas-0015",
-      "type": "multiple_choice",
       "text": "Que elemento era removido das casas na Festa dos Pães Asmos?",
       "options": [
         {
@@ -471,7 +457,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Sete dias comereis pães asmos... tirareis o fermento das vossas casas' (Êx 12:15), lembrando a saída apressada do Egito.",
       "divergence_note": null,
       "reference": {
@@ -485,7 +470,6 @@
     },
     {
       "external_id": "festas-judaicas-0016",
-      "type": "multiple_choice",
       "text": "Qual festa marcava o início do sétimo mês com toque de trombetas?",
       "options": [
         {
@@ -505,7 +489,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'No sétimo mês, ao primeiro do mês... memorial com sonido de trombetas' (Lv 23:24).",
       "divergence_note": null,
       "reference": {
@@ -518,7 +501,6 @@
     },
     {
       "external_id": "festas-judaicas-0017",
-      "type": "multiple_choice",
       "text": "A quantas festas anuais de peregrinação todo israelita devia comparecer diante do SENHOR?",
       "options": [
         {
@@ -538,7 +520,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Três vezes no ano todo o homem aparecerá perante o SENHOR': Pães Asmos, Semanas e Tabernáculos (Dt 16:16).",
       "divergence_note": null,
       "reference": {
@@ -551,7 +532,6 @@
     },
     {
       "external_id": "festas-judaicas-0018",
-      "type": "multiple_choice",
       "text": "Qual festa, não mosaica, celebra a purificação do templo?",
       "options": [
         {
@@ -571,7 +551,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Celebrava-se em Jerusalém a festa da dedicação... e Jesus andava no templo' (Jo 10:22-23).",
       "divergence_note": null,
       "reference": {
@@ -585,7 +564,6 @@
     },
     {
       "external_id": "festas-judaicas-0019",
-      "type": "multiple_choice",
       "text": "Qual animal era central na refeição da Páscoa, com o sangue nos umbrais?",
       "options": [
         {
@@ -605,7 +583,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Cada família tomava um cordeiro sem defeito (a lei também permitia um cabrito, Êx 12:5), e o sangue passado nos umbrais livrava do destruidor que feriu os primogênitos do Egito (Êx 12:5-13).",
       "divergence_note": null,
       "reference": {
@@ -618,13 +595,24 @@
     },
     {
       "external_id": "festas-judaicas-0020",
-      "type": "open_answer",
       "text": "Qual festa relembra a saída do Egito, com cordeiro e pães asmos?",
-      "options": null,
-      "accepted_answers": [
-        "Páscoa",
-        "Pascoa",
-        "Páscoa judaica"
+      "options": [
+        {
+          "text": "Páscoa",
+          "correct": true
+        },
+        {
+          "text": "Pentecostes",
+          "correct": false
+        },
+        {
+          "text": "Tabernáculos",
+          "correct": false
+        },
+        {
+          "text": "Dia da Expiação",
+          "correct": false
+        }
       ],
       "explanation": "A Páscoa (Pessach) memoriza a libertação do Egito na décima praga (Êx 12:11-14).",
       "divergence_note": null,
@@ -638,7 +626,6 @@
     },
     {
       "external_id": "festas-judaicas-0021",
-      "type": "multiple_choice",
       "text": "Quantos dias durava a Festa dos Tabernáculos?",
       "options": [
         {
@@ -658,7 +645,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Sete dias oferecereis... e ao oitavo dia... assembleia solene' (Lv 23:34-36).",
       "divergence_note": null,
       "reference": {
@@ -671,14 +657,24 @@
     },
     {
       "external_id": "festas-judaicas-0022",
-      "type": "open_answer",
       "text": "Em que mês do calendário hebraico era celebrada a Páscoa?",
-      "options": null,
-      "accepted_answers": [
-        "Abibe",
-        "Abib",
-        "Nisã",
-        "Nisan"
+      "options": [
+        {
+          "text": "Abibe",
+          "correct": true
+        },
+        {
+          "text": "Tisri",
+          "correct": false
+        },
+        {
+          "text": "Sivã",
+          "correct": false
+        },
+        {
+          "text": "Adar",
+          "correct": false
+        }
       ],
       "explanation": "'Hoje, no mês de Abibe, vós saís' (Êx 13:4). Depois do exílio o mesmo mês passou a se chamar Nisã (Et 3:7): é o primeiro mês do ano religioso, o da libertação do Egito.",
       "divergence_note": null,
@@ -692,7 +688,6 @@
     },
     {
       "external_id": "festas-judaicas-0023",
-      "type": "multiple_choice",
       "text": "Que oferta especial marcava a Festa das Primícias, no início da colheita?",
       "options": [
         {
@@ -712,7 +707,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Trareis um molho das primícias da vossa sega ao sacerdote' (Lv 23:10); Paulo aplica a imagem a Cristo ressurreto (1Co 15:20).",
       "divergence_note": null,
       "reference": {
@@ -725,7 +719,6 @@
     },
     {
       "external_id": "festas-judaicas-0024",
-      "type": "multiple_choice",
       "text": "Em qual festa Jesus proclamou: 'Se alguém tem sede, venha a mim e beba'?",
       "options": [
         {
@@ -745,7 +738,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'No último dia, o grande dia da festa' dos Tabernáculos, Jesus fez esse convite, falando do Espírito (Jo 7:37-39).",
       "divergence_note": null,
       "reference": {
@@ -758,7 +750,6 @@
     },
     {
       "external_id": "festas-judaicas-0025",
-      "type": "multiple_choice",
       "text": "Que alimento amargo acompanhava a refeição da Páscoa?",
       "options": [
         {
@@ -778,7 +769,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Com ervas amargas o comerão' (Êx 12:8) — memória da amargura da servidão no Egito.",
       "divergence_note": null,
       "reference": {
@@ -791,7 +781,6 @@
     },
     {
       "external_id": "festas-judaicas-0026",
-      "type": "multiple_choice",
       "text": "Qual era o propósito principal do Dia da Expiação para o povo?",
       "options": [
         {
@@ -811,7 +800,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Naquele dia se fará expiação por vós, para vos purificar de todos os vossos pecados' (Lv 16:30).",
       "divergence_note": null,
       "reference": {
@@ -825,13 +813,24 @@
     },
     {
       "external_id": "festas-judaicas-0027",
-      "type": "open_answer",
       "text": "Que festa Jesus celebrava com os discípulos na última ceia?",
-      "options": null,
-      "accepted_answers": [
-        "Páscoa",
-        "Pascoa",
-        "A Páscoa"
+      "options": [
+        {
+          "text": "Páscoa",
+          "correct": true
+        },
+        {
+          "text": "Pentecostes",
+          "correct": false
+        },
+        {
+          "text": "Tabernáculos",
+          "correct": false
+        },
+        {
+          "text": "Purim",
+          "correct": false
+        }
       ],
       "explanation": "'Onde queres que preparemos a Páscoa?' (Mt 26:17-19); nessa ceia ele instituiu a Ceia do Senhor.",
       "divergence_note": null,
@@ -846,7 +845,6 @@
     },
     {
       "external_id": "festas-judaicas-0028",
-      "type": "multiple_choice",
       "text": "Que cerimônia abria o ano do jubileu, no Dia da Expiação?",
       "options": [
         {
@@ -866,7 +864,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Então, no mês sétimo, aos dez do mês, farás passar a trombeta do jubileu... e apregoareis liberdade na terra' (Lv 25:9-10).",
       "divergence_note": null,
       "reference": {
@@ -879,7 +876,6 @@
     },
     {
       "external_id": "festas-judaicas-0029",
-      "type": "multiple_choice",
       "text": "O que os israelitas deviam contar entre a Páscoa e a Festa das Semanas?",
       "options": [
         {
@@ -899,7 +895,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Contareis sete semanas inteiras... até ao dia seguinte ao sétimo sábado, cinquenta dias' (Lv 23:15-16) — daí o nome Pentecostes.",
       "divergence_note": null,
       "reference": {
@@ -913,7 +908,6 @@
     },
     {
       "external_id": "festas-judaicas-0030",
-      "type": "multiple_choice",
       "text": "Que ramos os israelitas usavam para fazer as cabanas dos Tabernáculos?",
       "options": [
         {
@@ -933,7 +927,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Tomareis... ramos de palmeiras, ramos de árvores espessas e salgueiros de ribeiras' (Lv 23:40).",
       "divergence_note": null,
       "reference": {
@@ -946,7 +939,6 @@
     },
     {
       "external_id": "festas-judaicas-0031",
-      "type": "multiple_choice",
       "text": "Quem instituiu a Festa de Purim e por qual motivo?",
       "options": [
         {
@@ -966,7 +958,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Mardoqueu escreveu às províncias para celebrarem os dias em que 'se lhes mudou a tristeza em alegria' (Et 9:20-22).",
       "divergence_note": null,
       "reference": {
@@ -979,14 +970,24 @@
     },
     {
       "external_id": "festas-judaicas-0032",
-      "type": "open_answer",
       "text": "Que refeição comemorativa Jesus reinterpretou ao dizer 'isto é o meu corpo'?",
-      "options": null,
-      "accepted_answers": [
-        "A ceia pascal",
-        "Páscoa",
-        "A Páscoa",
-        "Ceia pascal"
+      "options": [
+        {
+          "text": "A ceia pascal",
+          "correct": true
+        },
+        {
+          "text": "A ceia de Pentecostes",
+          "correct": false
+        },
+        {
+          "text": "A refeição do sábado",
+          "correct": false
+        },
+        {
+          "text": "O banquete de Purim",
+          "correct": false
+        }
       ],
       "explanation": "Durante a ceia da Páscoa, Jesus tomou o pão e o cálice, instituindo a nova aliança em seu sangue (Lc 22:14-20).",
       "divergence_note": null,
@@ -1000,7 +1001,6 @@
     },
     {
       "external_id": "festas-judaicas-0033",
-      "type": "multiple_choice",
       "text": "Em que dia começava a Festa dos Tabernáculos, segundo Levítico 23?",
       "options": [
         {
@@ -1020,7 +1020,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Aos quinze dias deste mês sétimo será a festa dos tabernáculos ao SENHOR, por sete dias' (Lv 23:34).",
       "divergence_note": null,
       "reference": {
@@ -1033,7 +1032,6 @@
     },
     {
       "external_id": "festas-judaicas-0034",
-      "type": "multiple_choice",
       "text": "Em que dia do mês o cordeiro pascal devia ser separado, antes de ser morto no dia catorze?",
       "options": [
         {
@@ -1053,7 +1051,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Aos dez deste mês tome cada um para si um cordeiro... e o guardareis até ao décimo quarto dia' (Êx 12:3-6).",
       "divergence_note": null,
       "reference": {
@@ -1066,7 +1063,6 @@
     },
     {
       "external_id": "festas-judaicas-0035",
-      "type": "multiple_choice",
       "text": "Segundo Deuteronômio 16, o que ninguém deveria fazer ao comparecer às três festas anuais?",
       "options": [
         {
@@ -1086,7 +1082,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Não aparecerá vazio perante o SENHOR; cada qual conforme o dom da sua mão' (Dt 16:16-17).",
       "divergence_note": null,
       "reference": {
@@ -1099,7 +1094,6 @@
     },
     {
       "external_id": "festas-judaicas-0036",
-      "type": "multiple_choice",
       "text": "O que Ester pediu aos judeus de Susã antes de comparecer ao rei — prática depois ligada ao Purim?",
       "options": [
         {
@@ -1119,7 +1113,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Jejuai por mim, e não comais nem bebais por três dias... e assim irei ter com o rei' (Et 4:16).",
       "divergence_note": null,
       "reference": {
@@ -1132,7 +1125,6 @@
     },
     {
       "external_id": "festas-judaicas-0037",
-      "type": "multiple_choice",
       "text": "Para qual festa Paulo se apressava a chegar a Jerusalém, segundo Atos 20:16?",
       "options": [
         {
@@ -1152,7 +1144,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Apressava-se para estar em Jerusalém no dia de Pentecostes, se lhe fosse possível' (At 20:16).",
       "divergence_note": null,
       "reference": {
@@ -1165,7 +1156,6 @@
     },
     {
       "external_id": "festas-judaicas-0038",
-      "type": "multiple_choice",
       "text": "Que sacrifício acompanhava o Dia da Expiação além do bode emissário, oferecido pelo próprio sacerdote?",
       "options": [
         {
@@ -1185,7 +1175,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Arão fará chegar o novilho da expiação, que será para ele, e fará expiação por si e pela sua casa' (Lv 16:6,11).",
       "divergence_note": null,
       "reference": {
@@ -1198,13 +1187,24 @@
     },
     {
       "external_id": "festas-judaicas-0039",
-      "type": "open_answer",
       "text": "Que planta era mergulhada no sangue do cordeiro para marcar os umbrais na primeira Páscoa?",
-      "options": null,
-      "accepted_answers": [
-        "Hissopo",
-        "Hissope",
-        "Molho de hissopo"
+      "options": [
+        {
+          "text": "Hissopo",
+          "correct": true
+        },
+        {
+          "text": "Ramo de oliveira",
+          "correct": false
+        },
+        {
+          "text": "Cedro",
+          "correct": false
+        },
+        {
+          "text": "Mirra",
+          "correct": false
+        }
       ],
       "explanation": "'Tomai um molho de hissopo, e molhai-o no sangue... e marcai a verga da porta e ambas as ombreiras' (Êx 12:22).",
       "divergence_note": null,
@@ -1218,7 +1218,6 @@
     },
     {
       "external_id": "festas-judaicas-0040",
-      "type": "multiple_choice",
       "text": "Quantos dias durava a Festa dos Pães Asmos, logo após a Páscoa?",
       "options": [
         {
@@ -1238,7 +1237,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Aos quinze dias deste mês é a festa dos pães asmos do SENHOR; sete dias comereis pães asmos' (Lv 23:6).",
       "divergence_note": null,
       "reference": {
@@ -1251,7 +1249,6 @@
     },
     {
       "external_id": "festas-judaicas-0041",
-      "type": "multiple_choice",
       "text": "Que oferta singular marcava Pentecostes, a Festa das Semanas, segundo Levítico 23?",
       "options": [
         {
@@ -1271,7 +1268,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Trareis dois pães... serão levedados; são as primícias ao SENHOR' (Lv 23:17) — a única oferta com fermento sobre o altar.",
       "divergence_note": null,
       "reference": {
@@ -1284,7 +1280,6 @@
     },
     {
       "external_id": "festas-judaicas-0042",
-      "type": "multiple_choice",
       "text": "Que celebração mensal Israel marcava com trombetas e sacrifícios, citada com o sábado?",
       "options": [
         {
@@ -1304,7 +1299,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Nos princípios dos vossos meses oferecereis holocausto ao SENHOR' (Nm 28:11); 'lua nova e sábado' andam juntos (Is 1:13; Cl 2:16).",
       "divergence_note": null,
       "reference": {
@@ -1317,7 +1311,6 @@
     },
     {
       "external_id": "festas-judaicas-0043",
-      "type": "multiple_choice",
       "text": "Como os israelitas deviam comer a primeira Páscoa, na noite da saída do Egito?",
       "options": [
         {
@@ -1337,7 +1330,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Assim, pois, o comereis: os vossos lombos cingidos, os vossos sapatos nos pés, e o vosso cajado na mão; e o comereis apressadamente; esta é a Páscoa do Senhor\" (Êx 12:11). Era a refeição de um povo pronto para partir: naquela mesma noite o Senhor feriu os primogênitos do Egito, e Faraó mandou Israel sair (Êx 12:29-31).",
       "divergence_note": null,
       "reference": {
@@ -1350,7 +1342,6 @@
     },
     {
       "external_id": "festas-judaicas-0044",
-      "type": "multiple_choice",
       "text": "O que Jesus e os discípulos fizeram ao terminar a ceia da Páscoa, antes de saírem para o monte das Oliveiras?",
       "options": [
         {
@@ -1370,7 +1361,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Depois de instituir a ceia com o pão e o cálice, \"tendo cantado o hino, saíram para o monte das Oliveiras\" (Mt 26:30; Mc 14:26). Os evangelhos não dizem qual hino foi cantado. Segundo a tradição judaica registrada mais tarde na Mishná, a ceia pascal era acompanhada pelos Salmos do Hallel (113 a 118), entre eles o Sl 114, que canta a saída do Egito.",
       "divergence_note": null,
       "reference": {
@@ -1383,7 +1373,6 @@
     },
     {
       "external_id": "festas-judaicas-0045",
-      "type": "multiple_choice",
       "text": "Como devia ser o cordeiro escolhido para a Páscoa, segundo Êxodo 12?",
       "options": [
         {
@@ -1403,7 +1392,6 @@
           "correct": true
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"O cordeiro, ou cabrito, será sem mácula, um macho de um ano\" (Êx 12:5). A exigência de um animal perfeito aponta para Cristo: fomos resgatados \"com o precioso sangue de Cristo, como de um cordeiro imaculado e incontaminado\" (1Pe 1:19).",
       "divergence_note": null,
       "reference": {
@@ -1416,15 +1404,24 @@
     },
     {
       "external_id": "festas-judaicas-0046",
-      "type": "open_answer",
       "text": "Para qual festa José e Maria subiam a Jerusalém todos os anos, segundo o Evangelho de Lucas?",
-      "options": null,
-      "accepted_answers": [
-        "Páscoa",
-        "A Páscoa",
-        "Festa da Páscoa",
-        "Pessach",
-        "Pesach"
+      "options": [
+        {
+          "text": "Páscoa",
+          "correct": true
+        },
+        {
+          "text": "Pentecostes",
+          "correct": false
+        },
+        {
+          "text": "Tabernáculos",
+          "correct": false
+        },
+        {
+          "text": "Dedicação",
+          "correct": false
+        }
       ],
       "explanation": "\"Ora, todos os anos, iam seus pais a Jerusalém, à Festa da Páscoa\" (Lc 2:41). A Páscoa, unida à Festa dos Pães Asmos, era uma das três festas anuais em que todo varão israelita devia comparecer perante o Senhor (Dt 16:16). Foi numa dessas viagens, quando Jesus tinha doze anos, que ele ficou no templo, ouvindo e interrogando os doutores (Lc 2:42-46).",
       "divergence_note": null,
@@ -1438,7 +1435,6 @@
     },
     {
       "external_id": "festas-judaicas-0047",
-      "type": "multiple_choice",
       "text": "Sobre o cordeiro pascal, a Lei mandava fazer três destas coisas e proibia uma — proibição que João viu cumprida em Jesus na cruz. Qual era a coisa proibida?",
       "options": [
         {
@@ -1458,7 +1454,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "A Lei mandava comer o cordeiro numa só casa, \"nem dela quebrareis osso\" (Êx 12:46; cf. Nm 9:12). Na cruz, os soldados quebraram as pernas dos dois crucificados com Jesus, mas não as dele, que já estava morto — \"para que se cumprisse a Escritura, que diz: Nenhum dos seus ossos será quebrado\" (Jo 19:32-36; cf. Sl 34:20). Assar o cordeiro, comê-lo com pães asmos e separá-lo no dia dez eram ordens, não proibições (Êx 12:3,8).",
       "divergence_note": null,
       "reference": {
@@ -1471,12 +1466,24 @@
     },
     {
       "external_id": "festas-judaicas-0048",
-      "type": "open_answer",
       "text": "Qual rei de Judá celebrou uma Páscoa como nunca se havia celebrado desde os dias dos juízes?",
-      "options": null,
-      "accepted_answers": [
-        "Josias",
-        "Rei Josias"
+      "options": [
+        {
+          "text": "Josias",
+          "correct": true
+        },
+        {
+          "text": "Ezequias",
+          "correct": false
+        },
+        {
+          "text": "Asa",
+          "correct": false
+        },
+        {
+          "text": "Josafá",
+          "correct": false
+        }
       ],
       "explanation": "Depois que o livro da Lei foi achado no templo, Josias ordenou: \"Celebrai a Páscoa ao Senhor, vosso Deus, como está escrito no livro do concerto\" (2Rs 23:21). O texto afirma que \"nunca se celebrou tal Páscoa como esta desde os dias dos juízes\" (2Rs 23:22), e Crônicas diz o mesmo: \"desde os dias do profeta Samuel\" (2Cr 35:18). A reforma de Josias levou o povo de volta à Palavra e às festas que ela ordenava.",
       "divergence_note": null,
@@ -1490,7 +1497,6 @@
     },
     {
       "external_id": "festas-judaicas-0049",
-      "type": "multiple_choice",
       "text": "O que a Lei previa para quem estivesse impuro por causa de um morto, ou em viagem distante, na data da Páscoa?",
       "options": [
         {
@@ -1510,7 +1516,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Homens impuros por causa de um morto perguntaram a Moisés por que seriam privados da Páscoa (Nm 9:6-7). Deus respondeu com uma provisão: quem estivesse impuro ou em viagem distante a celebraria no segundo mês, \"no dia catorze, de tarde\" (Nm 9:10-11). Já quem estava limpo, não estava de viagem e deixava de celebrá-la era extirpado do seu povo (Nm 9:13).",
       "divergence_note": null,
       "reference": {

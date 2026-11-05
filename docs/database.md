@@ -20,7 +20,6 @@ erDiagram
     achievements ||--o{ user_achievements : granted
     categories ||--o{ questions : contains
     questions ||--o{ question_options : has
-    questions ||--o{ question_answers : accepts
     quiz_sessions ||--o{ quiz_session_questions : includes
     quiz_sessions ||--o{ quiz_answers : records
     questions ||--o{ quiz_session_questions : appears_in
@@ -74,7 +73,6 @@ erDiagram
 |---|---|---|
 | id | UUID PK | |
 | external_id | VARCHAR UNIQUE | slug do seed (`personagens-0001`) — upsert idempotente |
-| type | ENUM(multiple_choice, open_answer) | |
 | text | TEXT | enunciado |
 | explanation | TEXT | sempre presente; cita ARC quando útil |
 | divergence_note | TEXT NULL | preenchida quando há divergência entre interpretações cristãs ou base em tradição |
@@ -89,13 +87,9 @@ erDiagram
 
 Índices: `(category_id, difficulty)`, `(testament)`.
 
-### question_options *(múltipla escolha — exatamente 4 por pergunta, 1 correta)*
+### question_options *(exatamente 4 por pergunta, 1 correta)*
 `id UUID PK, question_id FK CASCADE, text TEXT, is_correct BOOL, position INT`
 Constraint de aplicação (validada no seed): 4 opções, exatamente 1 `is_correct`.
-
-### question_answers *(resposta aberta — variações aceitas)*
-`id UUID PK, question_id FK CASCADE, text VARCHAR, position INT`
-`position = 0` é a resposta canônica exibida no feedback.
 
 ### quiz_sessions
 | Coluna | Tipo | Notas |
@@ -120,8 +114,7 @@ Constraint de aplicação (validada no seed): 4 opções, exatamente 1 `is_corre
 | id | UUID PK | |
 | session_id | UUID FK CASCADE | |
 | question_id | UUID FK | |
-| selected_option_id | UUID NULL | múltipla escolha |
-| answer_text | TEXT NULL | resposta aberta (como digitada) |
+| selected_option_id | UUID NULL | nulo quando o tempo estourou |
 | is_correct | BOOL | |
 | time_spent_seconds | INT NULL | |
 | answered_at | TIMESTAMPTZ | |
@@ -200,13 +193,11 @@ UNIQUE `(user_id, date)`. `date` já convertida para o fuso do usuário.
 2. **`quiz_session_questions` separada de `quiz_answers`** — as perguntas são sorteadas
    e congeladas na criação da sessão; recarregar a página não sorteia de novo e o
    backend valida que a resposta pertence à sessão.
-3. **Respostas aceitas em tabela própria** — permite N variações por pergunta aberta
-   ("Simão Pedro", "Pedro", "Cefas") sem JSON opaco, e futura curadoria via admin.
-4. **`external_id` nas perguntas** — o seed roda quantas vezes for preciso (upsert);
+3. **`external_id` nas perguntas** — o seed roda quantas vezes for preciso (upsert);
    edições no JSON atualizam a pergunta sem duplicar nem perder histórico de respostas.
-5. **Enums nativos do Postgres** para `difficulty`, `type`, `testament`, `role` —
+4. **Enums nativos do Postgres** para `difficulty`, `testament`, `role` —
    integridade no banco, não só na aplicação.
-6. **`users.tutorial_completed_at` com backfill** — a migration `c1d2e3f4a5b6` cria a
+5. **`users.tutorial_completed_at` com backfill** — a migration `c1d2e3f4a5b6` cria a
    coluna nula e preenche `now()` em todas as contas existentes: só quem se cadastra
    depois do deploy vê o tutorial. Cadastros novos nascem com null; o
    `POST /users/me/tutorial` grava a data uma única vez (idempotente). Timestamp em

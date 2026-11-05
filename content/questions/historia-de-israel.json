@@ -3,7 +3,6 @@
   "questions": [
     {
       "external_id": "historia-de-israel-0001",
-      "type": "multiple_choice",
       "text": "Com quem Deus fez a aliança prometendo: \"far-te-ei uma grande nação... e em ti serão benditas todas as famílias da terra\"?",
       "options": [
         {
@@ -23,7 +22,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O chamado de Abrão em Gênesis 12:1-3 é o ponto de partida da história de Israel e do plano da redenção. Paulo vê nessa promessa o evangelho antecipado: \"em ti serão benditas todas as nações\" (Gl 3:8).",
       "divergence_note": null,
       "reference": {
@@ -36,7 +34,6 @@
     },
     {
       "external_id": "historia-de-israel-0002",
-      "type": "multiple_choice",
       "text": "Como a família de Jacó foi parar no Egito, onde Israel se tornaria uma nação numerosa?",
       "options": [
         {
@@ -56,7 +53,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Vendido pelos irmãos, José subiu de escravo a governador do Egito e, na grande fome, instalou a família em Gósen (Gn 47:11). Ele mesmo interpreta a história: \"vós bem intentastes mal contra mim, porém Deus o intentou para bem\" (Gn 50:20).",
       "divergence_note": null,
       "reference": {
@@ -69,13 +65,24 @@
     },
     {
       "external_id": "historia-de-israel-0003",
-      "type": "open_answer",
       "text": "Quantos anos Israel peregrinou no deserto entre o Egito e a terra prometida?",
-      "options": null,
-      "accepted_answers": [
-        "40",
-        "Quarenta",
-        "Quarenta anos"
+      "options": [
+        {
+          "text": "40",
+          "correct": true
+        },
+        {
+          "text": "7",
+          "correct": false
+        },
+        {
+          "text": "12",
+          "correct": false
+        },
+        {
+          "text": "70",
+          "correct": false
+        }
       ],
       "explanation": "Pela incredulidade diante do relatório dos espias, aquela geração vagou \"quarenta anos\" no deserto, \"um ano por cada dia\" dos quarenta dias de espionagem (Nm 14:33-34). Só Josué e Calebe entraram na terra.",
       "divergence_note": null,
@@ -89,7 +96,6 @@
     },
     {
       "external_id": "historia-de-israel-0004",
-      "type": "multiple_choice",
       "text": "Quem sucedeu Moisés na liderança de Israel e conduziu a conquista de Canaã?",
       "options": [
         {
@@ -109,7 +115,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Moisés, meu servo, é morto; levanta-te, pois, agora, passa este Jordão\" (Js 1:2). A Josué, ajudador de Moisés desde a juventude, Deus prometeu: \"como fui com Moisés, assim serei contigo\" (Js 1:5).",
       "divergence_note": null,
       "reference": {
@@ -122,7 +127,6 @@
     },
     {
       "external_id": "historia-de-israel-0005",
-      "type": "multiple_choice",
       "text": "Qual ciclo se repete continuamente no livro dos Juízes?",
       "options": [
         {
@@ -142,7 +146,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Israel \"fazia o que parecia reto aos seus olhos\" (Jz 21:25), caía nas mãos dos opressores, clamava, e Deus levantava um juiz libertador — e o ciclo recomeçava, cada vez mais fundo. O livro prepara a pergunta pelo rei segundo o coração de Deus.",
       "divergence_note": null,
       "reference": {
@@ -155,7 +158,6 @@
     },
     {
       "external_id": "historia-de-israel-0006",
-      "type": "multiple_choice",
       "text": "Qual império conquistou Samaria e pôs fim ao reino do Norte em 722 a.C.?",
       "options": [
         {
@@ -175,7 +177,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Subiu o rei da Assíria por toda a terra... e tomou a Samaria, e transportou a Israel para a Assíria\" (2Rs 17:5-6). O texto bíblico explica a causa: a idolatria persistente apesar dos avisos de \"todos os profetas\" (2Rs 17:13-18).",
       "divergence_note": null,
       "reference": {
@@ -188,13 +189,24 @@
     },
     {
       "external_id": "historia-de-israel-0007",
-      "type": "open_answer",
       "text": "Quantos anos duraria o cativeiro babilônico, segundo a profecia de Jeremias?",
-      "options": null,
-      "accepted_answers": [
-        "70",
-        "Setenta",
-        "Setenta anos"
+      "options": [
+        {
+          "text": "70",
+          "correct": true
+        },
+        {
+          "text": "40",
+          "correct": false
+        },
+        {
+          "text": "50",
+          "correct": false
+        },
+        {
+          "text": "120",
+          "correct": false
+        }
       ],
       "explanation": "\"Estas nações servirão ao rei de Babilônia setenta anos\" (Jr 25:11). Foi lendo essa profecia que Daniel se pôs a orar pelo fim do exílio (Dn 9:2), e Ciro decretou o retorno \"para que se cumprisse a palavra do Senhor, pela boca de Jeremias\" (2Cr 36:22).",
       "divergence_note": null,
@@ -208,7 +220,6 @@
     },
     {
       "external_id": "historia-de-israel-0008",
-      "type": "multiple_choice",
       "text": "Quem liderou a reconstrução dos muros de Jerusalém após o exílio, concluída em 52 dias?",
       "options": [
         {
@@ -228,7 +239,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Copeiro do rei Artaxerxes, Neemias obteve licença para reconstruir os muros e resistiu ao escárnio e às ciladas dos inimigos: \"os muros se acabaram... em cinquenta e dois dias\" (Ne 6:15). Zorobabel liderara antes a reconstrução do templo; Esdras, a reforma espiritual.",
       "divergence_note": null,
       "reference": {
@@ -241,7 +251,6 @@
     },
     {
       "external_id": "historia-de-israel-0009",
-      "type": "multiple_choice",
       "text": "Qual foi a primeira cidade conquistada por Israel em Canaã?",
       "options": [
         {
@@ -261,7 +270,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Depois de atravessar o Jordão, Israel rodeou Jericó por sete dias, e ao toque das buzinas \"o muro caiu abaixo\" (Js 6:20). Ai veio em seguida — com a derrota inicial por causa do pecado de Acã (Js 7).",
       "divergence_note": null,
       "reference": {
@@ -274,7 +282,6 @@
     },
     {
       "external_id": "historia-de-israel-0010",
-      "type": "multiple_choice",
       "text": "Segundo Êxodo 12:40, quanto tempo os filhos de Israel habitaram no Egito?",
       "options": [
         {
@@ -294,7 +301,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"O tempo que os filhos de Israel habitaram no Egito foi de quatrocentos e trinta anos\" (Êx 12:40; cf. Gl 3:17). Gênesis 15:13 arredonda para 400 anos ao anunciar a aflição — os dois números convivem no próprio texto.",
       "divergence_note": null,
       "reference": {
@@ -308,7 +314,6 @@
     },
     {
       "external_id": "historia-de-israel-0011",
-      "type": "multiple_choice",
       "text": "Após a morte de Salomão, em quantos reinos Israel se dividiu?",
       "options": [
         {
@@ -328,7 +333,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "A dureza de Roboão dividiu o reino: dez tribos seguiram Jeroboão (Israel) e duas ficaram com Judá (1Rs 12:16-20).",
       "divergence_note": null,
       "reference": {
@@ -341,7 +345,6 @@
     },
     {
       "external_id": "historia-de-israel-0012",
-      "type": "multiple_choice",
       "text": "Qual império levou o reino do Norte (Israel) ao cativeiro?",
       "options": [
         {
@@ -361,7 +364,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Samaria caiu diante da Assíria, que deportou Israel (2Rs 17:6) por causa da idolatria.",
       "divergence_note": null,
       "reference": {
@@ -375,7 +377,6 @@
     },
     {
       "external_id": "historia-de-israel-0013",
-      "type": "multiple_choice",
       "text": "Qual rei persa decretou o retorno dos judeus e a reconstrução do templo?",
       "options": [
         {
@@ -395,7 +396,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Assim diz Ciro, rei da Pérsia... ele me encarregou de lhe edificar uma casa em Jerusalém' (Ed 1:2).",
       "divergence_note": null,
       "reference": {
@@ -409,11 +409,24 @@
     },
     {
       "external_id": "historia-de-israel-0014",
-      "type": "open_answer",
       "text": "Quem liderou a reconstrução dos muros de Jerusalém em 52 dias?",
-      "options": null,
-      "accepted_answers": [
-        "Neemias"
+      "options": [
+        {
+          "text": "Neemias",
+          "correct": true
+        },
+        {
+          "text": "Esdras",
+          "correct": false
+        },
+        {
+          "text": "Zorobabel",
+          "correct": false
+        },
+        {
+          "text": "Ageu",
+          "correct": false
+        }
       ],
       "explanation": "Neemias, copeiro do rei persa, reconstruiu os muros apesar da oposição, terminando em 52 dias (Ne 6:15).",
       "divergence_note": null,
@@ -428,7 +441,6 @@
     },
     {
       "external_id": "historia-de-israel-0015",
-      "type": "multiple_choice",
       "text": "Qual juíza liderou Israel junto com Baraque contra Sísera?",
       "options": [
         {
@@ -448,7 +460,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Débora, profetisa e juíza, encorajou Baraque; a vitória sobre Sísera é celebrada em seu cântico (Jz 4-5).",
       "divergence_note": null,
       "reference": {
@@ -461,7 +472,6 @@
     },
     {
       "external_id": "historia-de-israel-0016",
-      "type": "multiple_choice",
       "text": "Quem reconstruiu o altar e lançou os fundamentos do segundo templo após o exílio?",
       "options": [
         {
@@ -481,7 +491,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Zorobabel, com o sacerdote Josué, restaurou o culto e reergueu o templo (Ed 3:8-10).",
       "divergence_note": null,
       "reference": {
@@ -494,7 +503,6 @@
     },
     {
       "external_id": "historia-de-israel-0017",
-      "type": "multiple_choice",
       "text": "Qual rei babilônico destruiu o templo de Jerusalém?",
       "options": [
         {
@@ -514,7 +522,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Nabucodonosor tomou Jerusalém e queimou a casa do SENHOR (2Rs 25:9), iniciando os 70 anos de exílio.",
       "divergence_note": null,
       "reference": {
@@ -528,7 +535,6 @@
     },
     {
       "external_id": "historia-de-israel-0018",
-      "type": "multiple_choice",
       "text": "Quem conduziu Israel na travessia do Jordão e na conquista de Canaã?",
       "options": [
         {
@@ -548,7 +554,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Após Moisés, Josué liderou a entrada na terra prometida, começando pela queda de Jericó (Js 1:2; 6).",
       "divergence_note": null,
       "reference": {
@@ -562,7 +567,6 @@
     },
     {
       "external_id": "historia-de-israel-0019",
-      "type": "multiple_choice",
       "text": "Quem foi o sumo sacerdote e escriba que ensinou a Lei ao povo após o retorno?",
       "options": [
         {
@@ -582,7 +586,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Esdras leu e explicou a Lei diante do povo, promovendo avivamento espiritual (Ne 8:1-8).",
       "divergence_note": null,
       "reference": {
@@ -595,7 +598,6 @@
     },
     {
       "external_id": "historia-de-israel-0020",
-      "type": "multiple_choice",
       "text": "Qual foi a capital do reino do Norte (Israel) após a divisão?",
       "options": [
         {
@@ -615,7 +617,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Onri comprou o monte e edificou Samaria como capital de Israel (1Rs 16:24).",
       "divergence_note": null,
       "reference": {
@@ -628,7 +629,6 @@
     },
     {
       "external_id": "historia-de-israel-0021",
-      "type": "multiple_choice",
       "text": "Após a divisão do reino, quantas tribos permaneceram com a casa de Davi (reino de Judá)?",
       "options": [
         {
@@ -648,7 +648,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Ajuntou toda a casa de Judá e a tribo de Benjamim' (1Rs 12:21); as outras dez formaram o reino do Norte.",
       "divergence_note": null,
       "reference": {
@@ -661,7 +660,6 @@
     },
     {
       "external_id": "historia-de-israel-0022",
-      "type": "multiple_choice",
       "text": "Qual rei do Norte casou-se com Jezabel e promoveu o culto a Baal em Israel?",
       "options": [
         {
@@ -681,7 +679,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Tomou por mulher a Jezabel... e serviu a Baal' (1Rs 16:31), levando Israel a grande apostasia.",
       "divergence_note": null,
       "reference": {
@@ -695,7 +692,6 @@
     },
     {
       "external_id": "historia-de-israel-0023",
-      "type": "multiple_choice",
       "text": "Que pedido do povo desagradou a Samuel e inaugurou a monarquia?",
       "options": [
         {
@@ -715,7 +711,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Dá-nos um rei para que nos julgue, como todas as nações'; Deus disse a Samuel: 'não te rejeitaram a ti, mas a mim' (1Sm 8:5-7).",
       "divergence_note": null,
       "reference": {
@@ -728,7 +723,6 @@
     },
     {
       "external_id": "historia-de-israel-0024",
-      "type": "multiple_choice",
       "text": "Que povo hostilizou Neemias e zombou da reconstrução dos muros?",
       "options": [
         {
@@ -748,7 +742,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Sambalate, o horonita, e Tobias, o amonita, zombaram e conspiraram contra a obra (Ne 2:19; 4:1-3).",
       "divergence_note": null,
       "reference": {
@@ -761,7 +754,6 @@
     },
     {
       "external_id": "historia-de-israel-0025",
-      "type": "multiple_choice",
       "text": "Que reforma Esdras conduziu ao voltar a Jerusalém?",
       "options": [
         {
@@ -781,7 +773,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Esdras liderou o povo ao arrependimento pelos casamentos mistos que ameaçavam a identidade da aliança (Ed 9:1-3; 10:1-3).",
       "divergence_note": null,
       "reference": {
@@ -794,7 +785,6 @@
     },
     {
       "external_id": "historia-de-israel-0026",
-      "type": "multiple_choice",
       "text": "Onde a arca ficou por vinte anos após voltar dos filisteus?",
       "options": [
         {
@@ -814,7 +804,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'A arca ficou em Quiriate-Jearim... e passaram-se vinte anos' até Samuel chamar o povo ao arrependimento (1Sm 7:1-2).",
       "divergence_note": null,
       "reference": {
@@ -827,13 +816,24 @@
     },
     {
       "external_id": "historia-de-israel-0027",
-      "type": "open_answer",
       "text": "Que tribo não recebeu herança de terra, tendo o SENHOR como sua herança?",
-      "options": null,
-      "accepted_answers": [
-        "Levi",
-        "Tribo de Levi",
-        "Os levitas"
+      "options": [
+        {
+          "text": "Levi",
+          "correct": true
+        },
+        {
+          "text": "Judá",
+          "correct": false
+        },
+        {
+          "text": "Benjamim",
+          "correct": false
+        },
+        {
+          "text": "Efraim",
+          "correct": false
+        }
       ],
       "explanation": "'A tribo de Levi não recebeu herança... o SENHOR é a sua herança' (Dt 18:1-2; Js 13:14), servindo no santuário.",
       "divergence_note": null,
@@ -847,7 +847,6 @@
     },
     {
       "external_id": "historia-de-israel-0028",
-      "type": "multiple_choice",
       "text": "Que aliança Josué renovou com o povo em Siquém antes de morrer?",
       "options": [
         {
@@ -867,7 +866,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Eu e a minha casa serviremos ao SENHOR' (Js 24:15); o povo respondeu e Josué fez concerto em Siquém (Js 24:25).",
       "divergence_note": null,
       "reference": {
@@ -880,7 +878,6 @@
     },
     {
       "external_id": "historia-de-israel-0029",
-      "type": "multiple_choice",
       "text": "O que caracterizava o período dos juízes, segundo a frase que encerra o livro?",
       "options": [
         {
@@ -900,7 +897,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Naqueles dias não havia rei em Israel; cada um fazia o que parecia reto aos seus olhos' (Jz 21:25).",
       "divergence_note": null,
       "reference": {
@@ -913,7 +909,6 @@
     },
     {
       "external_id": "historia-de-israel-0030",
-      "type": "multiple_choice",
       "text": "Que aliança Deus fez com Davi por meio do profeta Natã?",
       "options": [
         {
@@ -933,7 +928,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'A tua casa e o teu reino serão firmados para sempre diante de ti' (2Sm 7:16) — promessa cumprida em Cristo.",
       "divergence_note": null,
       "reference": {
@@ -946,7 +940,6 @@
     },
     {
       "external_id": "historia-de-israel-0031",
-      "type": "multiple_choice",
       "text": "Por que o reino do Norte caiu diante da Assíria, segundo 2 Reis 17?",
       "options": [
         {
@@ -966,7 +959,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Os filhos de Israel pecaram contra o SENHOR seu Deus... e temeram outros deuses' (2Rs 17:7-8) — o exílio é apresentado como juízo.",
       "divergence_note": null,
       "reference": {
@@ -979,12 +971,24 @@
     },
     {
       "external_id": "historia-de-israel-0032",
-      "type": "open_answer",
       "text": "Que rainha judia arriscou a vida diante do rei persa para salvar o seu povo?",
-      "options": null,
-      "accepted_answers": [
-        "Ester",
-        "A rainha Ester"
+      "options": [
+        {
+          "text": "Ester",
+          "correct": true
+        },
+        {
+          "text": "Vasti",
+          "correct": false
+        },
+        {
+          "text": "Rute",
+          "correct": false
+        },
+        {
+          "text": "Abigail",
+          "correct": false
+        }
       ],
       "explanation": "'Se perecer, pereci' (Et 4:16); Ester intercedeu e o povo foi livrado do decreto de Hamã.",
       "divergence_note": null,
@@ -998,7 +1002,6 @@
     },
     {
       "external_id": "historia-de-israel-0033",
-      "type": "multiple_choice",
       "text": "Que rei de Judá foi cegado e levado à Babilônia depois de ver os filhos mortos?",
       "options": [
         {
@@ -1018,7 +1021,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Os babilônios 'lhe vazaram os olhos e o ataram com cadeias de bronze' após matar seus filhos (2Rs 25:7) — o último rei de Judá.",
       "divergence_note": null,
       "reference": {
@@ -1031,7 +1033,6 @@
     },
     {
       "external_id": "historia-de-israel-0034",
-      "type": "multiple_choice",
       "text": "Quem foi o último juiz de Israel, também profeta, antes da monarquia?",
       "options": [
         {
@@ -1051,7 +1052,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Samuel julgou a Israel todos os dias da sua vida' (1Sm 7:15), até ungir Saul por ordem de Deus.",
       "divergence_note": null,
       "reference": {
@@ -1064,7 +1064,6 @@
     },
     {
       "external_id": "historia-de-israel-0035",
-      "type": "multiple_choice",
       "text": "Que governador Nabucodonosor deixou sobre o povo que ficou em Judá, assassinado em Mispa?",
       "options": [
         {
@@ -1084,7 +1083,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Gedalias foi morto por Ismael e os que restaram fugiram para o Egito (2Rs 25:22-26).",
       "divergence_note": null,
       "reference": {
@@ -1097,7 +1095,6 @@
     },
     {
       "external_id": "historia-de-israel-0036",
-      "type": "multiple_choice",
       "text": "Que rei da Assíria cercou Samaria por três anos e levou Israel cativo?",
       "options": [
         {
@@ -1117,7 +1114,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Salmanasar, rei da Assíria, subiu contra Samaria e a cercou... e transportou Israel para a Assíria' (2Rs 17:3-6).",
       "divergence_note": null,
       "reference": {
@@ -1130,7 +1126,6 @@
     },
     {
       "external_id": "historia-de-israel-0037",
-      "type": "multiple_choice",
       "text": "Que filho de Gideão matou seus setenta irmãos e se fez rei em Siquém?",
       "options": [
         {
@@ -1150,7 +1145,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Abimeleque matou os irmãos sobre uma pedra; só Jotão escapou e proferiu a parábola das árvores (Jz 9:1-6).",
       "divergence_note": null,
       "reference": {
@@ -1163,7 +1157,6 @@
     },
     {
       "external_id": "historia-de-israel-0038",
-      "type": "multiple_choice",
       "text": "Que tribo quase foi extinta em Israel após a guerra provocada pelo crime em Gibeá?",
       "options": [
         {
@@ -1183,7 +1176,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Restaram seiscentos homens de Benjamim, e Israel lamentou: 'hoje é cortada uma tribo de Israel' (Jz 20:47; 21:6).",
       "divergence_note": null,
       "reference": {
@@ -1196,12 +1188,24 @@
     },
     {
       "external_id": "historia-de-israel-0039",
-      "type": "open_answer",
       "text": "Qual rei persa, em Esdras 6, confirmou o decreto de Ciro e fez concluir o templo?",
-      "options": null,
-      "accepted_answers": [
-        "Dario",
-        "Dario I"
+      "options": [
+        {
+          "text": "Dario",
+          "correct": true
+        },
+        {
+          "text": "Ciro",
+          "correct": false
+        },
+        {
+          "text": "Artaxerxes",
+          "correct": false
+        },
+        {
+          "text": "Assuero",
+          "correct": false
+        }
       ],
       "explanation": "Dario achou o rolo do decreto em Ecbátana e ordenou que a obra prosseguisse às custas do tesouro real (Ed 6:1-12).",
       "divergence_note": null,
@@ -1215,7 +1219,6 @@
     },
     {
       "external_id": "historia-de-israel-0040",
-      "type": "multiple_choice",
       "text": "Qual rei conquistou Jerusalém dos jebuseus e a fez capital de Israel?",
       "options": [
         {
@@ -1235,7 +1238,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Davi tomou a fortaleza de Sião, 'e habitou na fortaleza, e chamou-a a cidade de Davi' (2Sm 5:6-9).",
       "divergence_note": null,
       "reference": {
@@ -1248,7 +1250,6 @@
     },
     {
       "external_id": "historia-de-israel-0041",
-      "type": "multiple_choice",
       "text": "Que povo, com cidades como Gate e Asdode, foi inimigo constante de Israel nos dias de Sansão, Saul e Davi?",
       "options": [
         {
@@ -1268,7 +1269,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Os filisteus dominavam a costa com cinco cidades (Js 13:3) e oprimiram Israel até serem subjugados por Davi (2Sm 8:1).",
       "divergence_note": null,
       "reference": {
@@ -1281,7 +1281,6 @@
     },
     {
       "external_id": "historia-de-israel-0042",
-      "type": "multiple_choice",
       "text": "Qual rei da Pérsia tomou Ester por rainha?",
       "options": [
         {
@@ -1301,7 +1300,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'O rei amou a Ester mais do que a todas as mulheres... e a fez rainha em lugar de Vasti' (Et 2:17).",
       "divergence_note": null,
       "reference": {
@@ -1314,7 +1312,6 @@
     },
     {
       "external_id": "historia-de-israel-0043",
-      "type": "multiple_choice",
       "text": "Quem foi o último rei de Israel (reino do Norte), no trono quando Samaria caiu?",
       "options": [
         {
@@ -1334,7 +1331,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'No ano nono de Oseias, o rei da Assíria tomou Samaria e transportou Israel' (2Rs 17:6) — não confundir com o profeta Oseias.",
       "divergence_note": null,
       "reference": {
@@ -1347,7 +1343,6 @@
     },
     {
       "external_id": "historia-de-israel-0044",
-      "type": "multiple_choice",
       "text": "Como o SENHOR guiava o povo de Israel pelo deserto, de dia e de noite, depois da saída do Egito?",
       "options": [
         {
@@ -1367,7 +1362,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Logo após a saída do Egito, \"o SENHOR ia adiante deles, de dia numa coluna de nuvem, para os guiar pelo caminho, e de noite numa coluna de fogo, para os alumiar\" (Êx 13:21). No mar Vermelho, a mesma coluna se pôs entre Israel e os egípcios: escuridão para uns, luz para os outros (Êx 14:19-20). Paulo recorda que os pais \"estiveram todos debaixo da nuvem\" (1Co 10:1).",
       "divergence_note": null,
       "reference": {
@@ -1380,14 +1374,24 @@
     },
     {
       "external_id": "historia-de-israel-0045",
-      "type": "open_answer",
       "text": "Que fruta os espias enviados por Moisés trouxeram do vale de Escol, num cacho tão grande que dois homens o carregaram?",
-      "options": null,
-      "accepted_answers": [
-        "Uvas",
-        "Uva",
-        "Cacho de uvas",
-        "Um cacho de uvas"
+      "options": [
+        {
+          "text": "Uvas",
+          "correct": true
+        },
+        {
+          "text": "Figos",
+          "correct": false
+        },
+        {
+          "text": "Tâmaras",
+          "correct": false
+        },
+        {
+          "text": "Azeitonas",
+          "correct": false
+        }
       ],
       "explanation": "Os espias \"cortaram um ramo de vide com um cacho de uvas, o qual trouxeram dois homens sobre uma verga\", além de romãs e figos, e o lugar foi chamado vale de Escol \"por causa do cacho\" (Nm 13:23-24) — em hebraico, escol significa cacho. Mesmo com essa prova da boa terra, só Josué e Calebe animaram o povo; os outros dez espias infamaram a terra (Nm 13:30-33; 14:6-9). Moisés lembraria depois que, ao chegar ao vale de Escol, eles \"descorajaram o coração dos filhos de Israel\" (Nm 32:9).",
       "divergence_note": null,
@@ -1401,14 +1405,24 @@
     },
     {
       "external_id": "historia-de-israel-0046",
-      "type": "open_answer",
       "text": "Além do maná, que aves Deus fez cobrir o arraial de Israel no deserto, para que o povo comesse carne?",
-      "options": null,
-      "accepted_answers": [
-        "Codornizes",
-        "Codorniz",
-        "Codornas",
-        "Codorna"
+      "options": [
+        {
+          "text": "Codornizes",
+          "correct": true
+        },
+        {
+          "text": "Pombas",
+          "correct": false
+        },
+        {
+          "text": "Perdizes",
+          "correct": false
+        },
+        {
+          "text": "Corvos",
+          "correct": false
+        }
       ],
       "explanation": "Quando o povo murmurou com saudade das panelas de carne do Egito, o SENHOR prometeu: \"Entre as duas tardes, comereis carne, e, pela manhã, vos fartareis de pão\" (Êx 16:3,12). \"E aconteceu que, à tarde, subiram codornizes e cobriram o arraial\", e na manhã seguinte apareceu o maná (Êx 16:13-15). Em Números 11, as codornizes voltam num episódio de juízo contra a cobiça do povo (Nm 11:31-34).",
       "divergence_note": null,
@@ -1422,7 +1436,6 @@
     },
     {
       "external_id": "historia-de-israel-0047",
-      "type": "multiple_choice",
       "text": "Como os judeus passaram a trabalhar na reconstrução dos muros de Jerusalém, diante das ameaças dos inimigos nos dias de Neemias?",
       "options": [
         {
@@ -1442,7 +1455,6 @@
           "correct": true
         }
       ],
-      "accepted_answers": null,
       "explanation": "Diante das ameaças de Sambalate e seus aliados, o povo orou e pôs guarda de dia e de noite (Ne 4:9). Desde então, metade dos moços de Neemias trabalhava e a outra metade ficava armada (Ne 4:16); os que edificavam o muro e os que carregavam as cargas trabalhavam de modo que \"cada um com uma mão fazia a obra e na outra tinha as armas\", e cada edificador trazia a sua espada cingida aos lombos (Ne 4:17-18). Oração e vigilância andaram juntas até a conclusão do muro (Ne 6:15).",
       "divergence_note": null,
       "reference": {
@@ -1455,7 +1467,6 @@
     },
     {
       "external_id": "historia-de-israel-0048",
-      "type": "multiple_choice",
       "text": "Quando o maná, que sustentou Israel durante os quarenta anos no deserto, deixou de cair?",
       "options": [
         {
@@ -1475,7 +1486,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Acampados em Gilgal, os israelitas celebraram a Páscoa e comeram do trigo da terra; \"e cessou o maná no dia seguinte, depois que comeram do trigo da terra\" (Js 5:10-12). Deus, que por quarenta anos dera o pão do céu \"até que chegaram aos termos da terra de Canaã\" (Êx 16:35), passou a sustentar o povo com os frutos da terra prometida: a peregrinação havia terminado.",
       "divergence_note": null,
       "reference": {
@@ -1488,7 +1498,6 @@
     },
     {
       "external_id": "historia-de-israel-0049",
-      "type": "multiple_choice",
       "text": "Quais cidades de tesouros (armazéns) os israelitas escravizados edificaram para Faraó, segundo Êxodo 1?",
       "options": [
         {
@@ -1508,7 +1517,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Um novo rei, \"que não conhecera a José\", temeu o crescimento de Israel, e os egípcios puseram sobre o povo maiorais de tributos; os israelitas \"edificaram a Faraó cidades de tesouros, Pitom e Ramessés\" (Êx 1:8-11). Foi justamente de Ramessés que os filhos de Israel partiram para Sucote no êxodo (Êx 12:37): o lugar erguido com trabalho escravo virou ponto de partida da liberdade.",
       "divergence_note": null,
       "reference": {

@@ -3,7 +3,6 @@
   "questions": [
     {
       "external_id": "doutrinas-0001",
-      "type": "multiple_choice",
       "text": "Segundo Efésios 2:8-9, somos salvos pela graça, por meio de quê?",
       "options": [
         {
@@ -23,7 +22,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Porque pela graça sois salvos, por meio da fé; e isto não vem de vós, é dom de Deus. Não vem das obras, para que ninguém se glorie\" (Ef 2:8-9). As boas obras são fruto da salvação, não sua causa (Ef 2:10).",
       "divergence_note": null,
       "reference": {
@@ -36,7 +34,6 @@
     },
     {
       "external_id": "doutrinas-0002",
-      "type": "multiple_choice",
       "text": "Na ordem do batismo em Mateus 28:19, em nome de quem os discípulos deviam batizar?",
       "options": [
         {
@@ -56,7 +53,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Batizando-as em nome do Pai, e do Filho, e do Espírito Santo\" (Mt 28:19) — \"nome\" no singular, três pessoas. É um dos textos clássicos da doutrina da Trindade: um só Deus em três pessoas.",
       "divergence_note": null,
       "reference": {
@@ -69,7 +65,6 @@
     },
     {
       "external_id": "doutrinas-0003",
-      "type": "multiple_choice",
       "text": "O que Jesus disse a Nicodemos ser necessário para ver o Reino de Deus?",
       "options": [
         {
@@ -89,7 +84,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Na verdade, na verdade te digo que aquele que não nascer de novo não pode ver o Reino de Deus\" (Jo 3:3). O novo nascimento é obra do Espírito (Jo 3:5-8) — regeneração, não reforma moral.",
       "divergence_note": null,
       "reference": {
@@ -102,7 +96,6 @@
     },
     {
       "external_id": "doutrinas-0004",
-      "type": "multiple_choice",
       "text": "Como João 1:14 expressa a doutrina da encarnação?",
       "options": [
         {
@@ -122,7 +115,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"E o Verbo se fez carne, e habitou entre nós, e vimos a sua glória\" (Jo 1:14). O mesmo Verbo que \"era Deus\" (Jo 1:1) assumiu verdadeira humanidade — Jesus é plenamente Deus e plenamente homem.",
       "divergence_note": null,
       "reference": {
@@ -135,7 +127,6 @@
     },
     {
       "external_id": "doutrinas-0005",
-      "type": "multiple_choice",
       "text": "Segundo Romanos 3:23, qual é o alcance do pecado entre os homens?",
       "options": [
         {
@@ -155,7 +146,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Após demonstrar que judeus e gentios estão debaixo do pecado, Paulo conclui: \"todos pecaram e destituídos estão da glória de Deus\" (Rm 3:23). A universalidade do pecado é o pano de fundo da universalidade da oferta da graça (Rm 3:24).",
       "divergence_note": null,
       "reference": {
@@ -168,7 +158,6 @@
     },
     {
       "external_id": "doutrinas-0006",
-      "type": "multiple_choice",
       "text": "O que significa a doutrina da justificação?",
       "options": [
         {
@@ -188,7 +177,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Justificação é ato judicial: \"sendo justificados gratuitamente pela sua graça, pela redenção que há em Cristo Jesus\" (Rm 3:24). Deus não ignora o pecado — ele foi punido em Cristo, \"para que ele seja justo e justificador daquele que tem fé em Jesus\" (Rm 3:26).",
       "divergence_note": null,
       "reference": {
@@ -201,13 +189,24 @@
     },
     {
       "external_id": "doutrinas-0007",
-      "type": "open_answer",
       "text": "Complete a afirmação de Paulo sobre a origem das Escrituras: \"Toda a Escritura é divinamente...\"",
-      "options": null,
-      "accepted_answers": [
-        "Inspirada",
-        "Soprada",
-        "Inspirada por Deus"
+      "options": [
+        {
+          "text": "Inspirada",
+          "correct": true
+        },
+        {
+          "text": "Revelada",
+          "correct": false
+        },
+        {
+          "text": "Escrita",
+          "correct": false
+        },
+        {
+          "text": "Preservada",
+          "correct": false
+        }
       ],
       "explanation": "\"Toda a Escritura é divinamente inspirada, e proveitosa para ensinar, para redarguir, para corrigir, para instruir em justiça\" (2Tm 3:16). O termo grego significa literalmente \"soprada por Deus\" — a Escritura é a própria palavra de Deus em palavras humanas.",
       "divergence_note": null,
@@ -221,7 +220,6 @@
     },
     {
       "external_id": "doutrinas-0008",
-      "type": "multiple_choice",
       "text": "Em 1 Coríntios 15, o que Paulo aponta como consequência se Cristo não tivesse ressuscitado?",
       "options": [
         {
@@ -241,7 +239,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Se Cristo não ressuscitou, logo é vã a nossa pregação, e também é vã a vossa fé\" (1Co 15:14). A ressurreição corporal de Cristo é o alicerce do evangelho e a garantia da nossa: ele é \"as primícias dos que dormem\" (1Co 15:20).",
       "divergence_note": null,
       "reference": {
@@ -254,7 +251,6 @@
     },
     {
       "external_id": "doutrinas-0009",
-      "type": "multiple_choice",
       "text": "Qual pessoa da Trindade Jesus prometeu enviar como \"outro Consolador\" para estar conosco para sempre?",
       "options": [
         {
@@ -274,7 +270,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Eu rogarei ao Pai, e ele vos dará outro Consolador, para que fique convosco para sempre: o Espírito de verdade\" (Jo 14:16-17). O Espírito ensina, lembra as palavras de Cristo (Jo 14:26) e convence o mundo do pecado (Jo 16:8).",
       "divergence_note": null,
       "reference": {
@@ -287,7 +282,6 @@
     },
     {
       "external_id": "doutrinas-0010",
-      "type": "multiple_choice",
       "text": "Quais são as duas ordenanças que Cristo instituiu para a igreja praticar?",
       "options": [
         {
@@ -307,7 +301,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jesus ordenou batizar os discípulos (Mt 28:19) e instituiu a Ceia: \"fazei isto em memória de mim\" (Lc 22:19; 1Co 11:24-25). Ambas proclamam visivelmente o evangelho — união com Cristo na morte e ressurreição, e comunhão no seu sacrifício.",
       "divergence_note": "As tradições cristãs divergem sobre o número e a natureza desses ritos: evangélicos falam de duas ordenanças (símbolos); católicos e ortodoxos, de sete sacramentos (meios de graça); e há divergência sobre o modo do batismo (imersão × aspersão) e sobre a presença de Cristo na Ceia. O dado bíblico comum: Cristo instituiu o batismo e a Ceia.",
       "reference": {
@@ -320,7 +313,6 @@
     },
     {
       "external_id": "doutrinas-0011",
-      "type": "multiple_choice",
       "text": "Segundo Romanos, o que é 'o salário do pecado'?",
       "options": [
         {
@@ -340,7 +332,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'O salário do pecado é a morte, mas o dom gratuito de Deus é a vida eterna' (Rm 6:23).",
       "divergence_note": null,
       "reference": {
@@ -353,7 +344,6 @@
     },
     {
       "external_id": "doutrinas-0012",
-      "type": "multiple_choice",
       "text": "Por meio de que somos justificados, segundo Paulo, e não pelas obras da lei?",
       "options": [
         {
@@ -373,7 +363,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Concluímos que o homem é justificado pela fé, sem as obras da lei' (Rm 3:28; Gl 2:16).",
       "divergence_note": null,
       "reference": {
@@ -386,7 +375,6 @@
     },
     {
       "external_id": "doutrinas-0013",
-      "type": "multiple_choice",
       "text": "Que ordenança Jesus deu em Mateus 28, batizando 'em nome do Pai, do Filho e do Espírito Santo'?",
       "options": [
         {
@@ -406,7 +394,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "A fórmula batismal única com três pessoas e um só nome fundamenta a doutrina da Trindade (Mt 28:19).",
       "divergence_note": null,
       "reference": {
@@ -419,7 +406,6 @@
     },
     {
       "external_id": "doutrinas-0014",
-      "type": "multiple_choice",
       "text": "O que Jesus disse ser necessário para 'ver o reino de Deus'?",
       "options": [
         {
@@ -439,7 +425,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "A Nicodemos, Jesus declarou: 'quem não nascer de novo não pode ver o reino de Deus' (Jo 3:3) — regeneração pelo Espírito.",
       "divergence_note": null,
       "reference": {
@@ -453,7 +438,6 @@
     },
     {
       "external_id": "doutrinas-0015",
-      "type": "multiple_choice",
       "text": "Em 1 Coríntios 15, o que Paulo chama de 'primícias dos que dormem'?",
       "options": [
         {
@@ -473,7 +457,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Cristo ressuscitou como primícias, garantia da ressurreição dos crentes (1Co 15:20-22).",
       "divergence_note": null,
       "reference": {
@@ -486,12 +469,24 @@
     },
     {
       "external_id": "doutrinas-0016",
-      "type": "open_answer",
       "text": "Que termo teológico descreve o Verbo que 'se fez carne e habitou entre nós'?",
-      "options": null,
-      "accepted_answers": [
-        "Encarnação",
-        "Encarnacao"
+      "options": [
+        {
+          "text": "Encarnação",
+          "correct": true
+        },
+        {
+          "text": "Ascensão",
+          "correct": false
+        },
+        {
+          "text": "Transfiguração",
+          "correct": false
+        },
+        {
+          "text": "Expiação",
+          "correct": false
+        }
       ],
       "explanation": "A encarnação é o Filho eterno assumindo a natureza humana sem deixar de ser Deus (Jo 1:14).",
       "divergence_note": null,
@@ -505,7 +500,6 @@
     },
     {
       "external_id": "doutrinas-0017",
-      "type": "multiple_choice",
       "text": "Segundo 1 João, quem é 'a propiciação pelos nossos pecados'?",
       "options": [
         {
@@ -525,7 +519,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Ele é a propiciação pelos nossos pecados, e não somente pelos nossos, mas também pelos de todo o mundo' (1Jo 2:2).",
       "divergence_note": null,
       "reference": {
@@ -538,7 +531,6 @@
     },
     {
       "external_id": "doutrinas-0018",
-      "type": "multiple_choice",
       "text": "O que Jesus prometeu que o Consolador (Espírito Santo) faria aos discípulos?",
       "options": [
         {
@@ -558,7 +550,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'O Consolador, o Espírito Santo... vos ensinará todas as coisas e vos fará lembrar de tudo' (Jo 14:26).",
       "divergence_note": null,
       "reference": {
@@ -571,7 +562,6 @@
     },
     {
       "external_id": "doutrinas-0019",
-      "type": "multiple_choice",
       "text": "Em João 10:28, o que Jesus diz dar às suas ovelhas, das quais 'ninguém as arrebatará'?",
       "options": [
         {
@@ -591,7 +581,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jesus afirma a segurança das ovelhas na sua mão e na do Pai (Jo 10:28-29).",
       "divergence_note": "A interpretação divide as tradições cristãs: o calvinismo lê como perseverança/preservação incondicional dos eleitos; o arminianismo entende que a segurança permanece enquanto se permanece em Cristo, admitindo apostasia. A pergunta trata do que o texto afirma (Cristo dá a vida eterna e guarda os seus).",
       "reference": {
@@ -604,7 +593,6 @@
     },
     {
       "external_id": "doutrinas-0020",
-      "type": "multiple_choice",
       "text": "Que aliança Deus estabeleceu com Davi quanto ao seu trono?",
       "options": [
         {
@@ -624,7 +612,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'O teu trono será estabelecido para sempre' (2Sm 7:16) — promessa cumprida em Cristo, filho de Davi.",
       "divergence_note": null,
       "reference": {
@@ -637,13 +624,24 @@
     },
     {
       "external_id": "doutrinas-0021",
-      "type": "open_answer",
       "text": "Que termo grego descreve Cristo 'esvaziando-se' ao assumir a forma de servo (Filipenses 2)?",
-      "options": null,
-      "accepted_answers": [
-        "Kenosis",
-        "Quenose",
-        "Esvaziamento"
+      "options": [
+        {
+          "text": "Kenosis",
+          "correct": true
+        },
+        {
+          "text": "Logos",
+          "correct": false
+        },
+        {
+          "text": "Parousia",
+          "correct": false
+        },
+        {
+          "text": "Theosis",
+          "correct": false
+        }
       ],
       "explanation": "De 'ekénosen' — 'a si mesmo se esvaziou, tomando a forma de servo' (Fp 2:7); a kenosis descreve a humilhação do Filho.",
       "divergence_note": null,
@@ -657,7 +655,6 @@
     },
     {
       "external_id": "doutrinas-0022",
-      "type": "multiple_choice",
       "text": "Que expressão teológica descreve as duas naturezas, divina e humana, em uma só pessoa de Cristo?",
       "options": [
         {
@@ -677,7 +674,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Cristo é plenamente Deus e plenamente homem numa só pessoa; 'nele habita toda a plenitude da divindade' (Cl 2:9; Jo 1:14).",
       "divergence_note": null,
       "reference": {
@@ -690,7 +686,6 @@
     },
     {
       "external_id": "doutrinas-0023",
-      "type": "multiple_choice",
       "text": "Segundo Efésios 1, quando Deus escolheu os que são dele em Cristo?",
       "options": [
         {
@@ -710,7 +705,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Como também nos elegeu nele antes da fundação do mundo, para que fôssemos santos' (Ef 1:4).",
       "divergence_note": "As tradições cristãs divergem sobre como entender a eleição: o calvinismo a lê como incondicional; o arminianismo, como fundada na presciência divina da fé. A pergunta trata do que o texto afirma sobre o momento.",
       "reference": {
@@ -723,7 +717,6 @@
     },
     {
       "external_id": "doutrinas-0024",
-      "type": "multiple_choice",
       "text": "Que doutrina descreve o processo pelo qual o crente é progressivamente conformado a Cristo?",
       "options": [
         {
@@ -743,7 +736,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "A justificação é declarada de uma vez; a santificação é a obra contínua do Espírito, 'de glória em glória' (2Co 3:18; 1Ts 4:3).",
       "divergence_note": null,
       "reference": {
@@ -756,7 +748,6 @@
     },
     {
       "external_id": "doutrinas-0025",
-      "type": "multiple_choice",
       "text": "Segundo Atos 4:12, em quem há salvação?",
       "options": [
         {
@@ -776,7 +767,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Em nenhum outro há salvação, porque também debaixo do céu nenhum outro nome há... pelo qual devamos ser salvos' (At 4:12).",
       "divergence_note": null,
       "reference": {
@@ -789,7 +779,6 @@
     },
     {
       "external_id": "doutrinas-0026",
-      "type": "multiple_choice",
       "text": "O que a Ceia do Senhor proclama, segundo 1 Coríntios 11?",
       "options": [
         {
@@ -809,7 +798,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Todas as vezes que comerdes este pão e beberdes este cálice anunciais a morte do Senhor, até que venha' (1Co 11:26).",
       "divergence_note": "As tradições cristãs divergem sobre o modo da presença de Cristo na Ceia (memorial, presença espiritual, consubstanciação, transubstanciação). A pergunta trata do que o texto declara: a Ceia anuncia a morte do Senhor até que ele venha.",
       "reference": {
@@ -822,13 +810,24 @@
     },
     {
       "external_id": "doutrinas-0027",
-      "type": "open_answer",
       "text": "Que palavra descreve a obra pela qual o Espírito dá vida nova ao pecador, também chamada 'novo nascimento'?",
-      "options": null,
-      "accepted_answers": [
-        "Regeneração",
-        "Regeneracao",
-        "Novo nascimento"
+      "options": [
+        {
+          "text": "Regeneração",
+          "correct": true
+        },
+        {
+          "text": "Justificação",
+          "correct": false
+        },
+        {
+          "text": "Santificação",
+          "correct": false
+        },
+        {
+          "text": "Glorificação",
+          "correct": false
+        }
       ],
       "explanation": "'Ele nos salvou... pela lavagem da regeneração e da renovação do Espírito Santo' (Tt 3:5; cf. Jo 3:3-8).",
       "divergence_note": null,
@@ -842,7 +841,6 @@
     },
     {
       "external_id": "doutrinas-0028",
-      "type": "multiple_choice",
       "text": "Que doutrina o 'Espírito de adoção, pelo qual clamamos: Aba, Pai' descreve?",
       "options": [
         {
@@ -862,7 +860,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Não recebestes o espírito de escravidão, para outra vez estardes em temor, mas recebestes o espírito de adoção' (Rm 8:15-16).",
       "divergence_note": null,
       "reference": {
@@ -875,7 +872,6 @@
     },
     {
       "external_id": "doutrinas-0029",
-      "type": "multiple_choice",
       "text": "Em Romanos 8:30, o que se segue à justificação na chamada 'cadeia de ouro'?",
       "options": [
         {
@@ -895,7 +891,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Aos que justificou, a estes também glorificou' (Rm 8:30) — a obra começada por Deus é levada até o fim.",
       "divergence_note": null,
       "reference": {
@@ -908,7 +903,6 @@
     },
     {
       "external_id": "doutrinas-0030",
-      "type": "multiple_choice",
       "text": "Segundo o Salmo 139, para onde alguém poderia fugir da presença de Deus?",
       "options": [
         {
@@ -928,7 +922,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Se subir ao céu, lá tu estás; se fizer no Seol a minha cama, eis que tu ali estás' (Sl 139:7-10) — a onipresença divina.",
       "divergence_note": null,
       "reference": {
@@ -941,7 +934,6 @@
     },
     {
       "external_id": "doutrinas-0031",
-      "type": "multiple_choice",
       "text": "Segundo Romanos 8:28, para quem todas as coisas contribuem juntamente para o bem?",
       "options": [
         {
@@ -961,7 +953,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O versículo não promete ausência de sofrimento, mas que Deus o encaminha para o bem dos seus, conformando-os a Cristo (Rm 8:28-29).",
       "divergence_note": null,
       "reference": {
@@ -974,13 +965,24 @@
     },
     {
       "external_id": "doutrinas-0032",
-      "type": "open_answer",
       "text": "Que doutrina 1 Coríntios 15 ensina ao contrastar o corpo semeado em corrupção com o ressuscitado em incorrupção?",
-      "options": null,
-      "accepted_answers": [
-        "Ressurreição do corpo",
-        "A ressurreição do corpo",
-        "Ressurreição dos mortos"
+      "options": [
+        {
+          "text": "Ressurreição do corpo",
+          "correct": true
+        },
+        {
+          "text": "Imortalidade da alma",
+          "correct": false
+        },
+        {
+          "text": "Justificação pela fé",
+          "correct": false
+        },
+        {
+          "text": "Santificação progressiva",
+          "correct": false
+        }
       ],
       "explanation": "'Semeia-se em corrupção, ressuscitará em incorrupção... semeia-se corpo natural, ressuscitará corpo espiritual' (1Co 15:42-44).",
       "divergence_note": null,
@@ -994,7 +996,6 @@
     },
     {
       "external_id": "doutrinas-0033",
-      "type": "multiple_choice",
       "text": "Segundo Hebreus 9:27, o que está ordenado aos homens depois de morrerem uma só vez?",
       "options": [
         {
@@ -1014,7 +1015,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Aos homens está ordenado morrerem uma vez, vindo depois disso o juízo' (Hb 9:27).",
       "divergence_note": null,
       "reference": {
@@ -1027,7 +1027,6 @@
     },
     {
       "external_id": "doutrinas-0034",
-      "type": "multiple_choice",
       "text": "Segundo 1 Timóteo 2:5, quem é o único mediador entre Deus e os homens?",
       "options": [
         {
@@ -1047,7 +1046,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Há um só Deus e um só mediador entre Deus e os homens, Jesus Cristo, homem' (1Tm 2:5).",
       "divergence_note": null,
       "reference": {
@@ -1060,7 +1058,6 @@
     },
     {
       "external_id": "doutrinas-0035",
-      "type": "multiple_choice",
       "text": "Segundo Tiago 1, de onde vem a tentação para o mal?",
       "options": [
         {
@@ -1080,7 +1077,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Deus não pode ser tentado pelo mal e a ninguém tenta. Cada um é tentado, quando atraído pela sua própria concupiscência' (Tg 1:13-14).",
       "divergence_note": null,
       "reference": {
@@ -1093,7 +1089,6 @@
     },
     {
       "external_id": "doutrinas-0036",
-      "type": "multiple_choice",
       "text": "Que atributo de Deus Malaquias 3:6 afirma: 'Eu, o SENHOR, não mudo'?",
       "options": [
         {
@@ -1113,7 +1108,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Porque Deus não muda, suas promessas permanecem: 'por isso vós, filhos de Jacó, não sois consumidos' (Ml 3:6; cf. Tg 1:17).",
       "divergence_note": null,
       "reference": {
@@ -1126,7 +1120,6 @@
     },
     {
       "external_id": "doutrinas-0037",
-      "type": "multiple_choice",
       "text": "Segundo Hebreus 1:1-2, por meio de quem Deus falou 'nestes últimos dias'?",
       "options": [
         {
@@ -1146,7 +1139,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Havendo Deus antigamente falado pelos profetas... a nós falou-nos nestes últimos dias pelo Filho' (Hb 1:1-2) — a revelação definitiva.",
       "divergence_note": null,
       "reference": {
@@ -1159,13 +1151,24 @@
     },
     {
       "external_id": "doutrinas-0038",
-      "type": "open_answer",
       "text": "Segundo 2 Coríntios 5:21, o que Deus fez de Cristo por nós, ele que não conheceu pecado?",
-      "options": null,
-      "accepted_answers": [
-        "Pecado",
-        "Fez pecado",
-        "Ele o fez pecado"
+      "options": [
+        {
+          "text": "Pecado",
+          "correct": true
+        },
+        {
+          "text": "Justiça",
+          "correct": false
+        },
+        {
+          "text": "Maldição",
+          "correct": false
+        },
+        {
+          "text": "Servo",
+          "correct": false
+        }
       ],
       "explanation": "'Aquele que não conheceu pecado, o fez pecado por nós, para que nele fôssemos feitos justiça de Deus' (2Co 5:21) — a grande troca.",
       "divergence_note": null,
@@ -1179,7 +1182,6 @@
     },
     {
       "external_id": "doutrinas-0039",
-      "type": "multiple_choice",
       "text": "Segundo João 3:16, o que Deus deu por amar o mundo?",
       "options": [
         {
@@ -1199,7 +1201,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça' (Jo 3:16).",
       "divergence_note": null,
       "reference": {
@@ -1212,7 +1213,6 @@
     },
     {
       "external_id": "doutrinas-0040",
-      "type": "multiple_choice",
       "text": "Segundo 1 João 1:9, o que Deus faz se confessarmos os nossos pecados?",
       "options": [
         {
@@ -1232,7 +1232,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Se confessarmos os nossos pecados, ele é fiel e justo para nos perdoar os pecados e nos purificar de toda injustiça' (1Jo 1:9).",
       "divergence_note": null,
       "reference": {
@@ -1245,7 +1244,6 @@
     },
     {
       "external_id": "doutrinas-0041",
-      "type": "multiple_choice",
       "text": "Como se chama a doutrina de um só Deus em três pessoas — Pai, Filho e Espírito Santo?",
       "options": [
         {
@@ -1265,7 +1263,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O termo não está na Bíblia, mas resume o que ela ensina: um só Deus (Dt 6:4) revelado como Pai, Filho e Espírito (Mt 28:19; 2Co 13:13).",
       "divergence_note": null,
       "reference": {
@@ -1278,7 +1275,6 @@
     },
     {
       "external_id": "doutrinas-0042",
-      "type": "multiple_choice",
       "text": "Segundo Efésios 2:10, para que fomos criados em Cristo Jesus?",
       "options": [
         {
@@ -1298,7 +1294,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Salvos pela graça (Ef 2:8-9) e 'criados em Cristo Jesus para as boas obras, as quais Deus preparou' (Ef 2:10) — obras como fruto, não raiz.",
       "divergence_note": null,
       "reference": {
@@ -1311,7 +1306,6 @@
     },
     {
       "external_id": "doutrinas-0043",
-      "type": "multiple_choice",
       "text": "Como Hebreus 4:12 descreve a Palavra de Deus?",
       "options": [
         {
@@ -1331,7 +1325,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'A palavra de Deus é viva e eficaz, e mais penetrante do que espada alguma de dois gumes' (Hb 4:12).",
       "divergence_note": null,
       "reference": {
@@ -1344,13 +1337,24 @@
     },
     {
       "external_id": "doutrinas-0044",
-      "type": "open_answer",
       "text": "Que expressão latina descreve a criação 'do nada', sem matéria preexistente, ensinada em Hebreus 11:3?",
-      "options": null,
-      "accepted_answers": [
-        "Ex nihilo",
-        "Criação ex nihilo",
-        "Creatio ex nihilo"
+      "options": [
+        {
+          "text": "Ex nihilo",
+          "correct": true
+        },
+        {
+          "text": "Imago Dei",
+          "correct": false
+        },
+        {
+          "text": "Ex opere operato",
+          "correct": false
+        },
+        {
+          "text": "Sola gratia",
+          "correct": false
+        }
       ],
       "explanation": "'O que se vê não foi feito do que é aparente' (Hb 11:3) — Deus criou pela palavra, não a partir de algo que já existia.",
       "divergence_note": null,
@@ -1364,16 +1368,24 @@
     },
     {
       "external_id": "doutrinas-0045",
-      "type": "open_answer",
       "text": "Segundo Jeremias 17:9, o que é enganoso \"mais do que todas as coisas, e perverso\"?",
-      "options": null,
-      "accepted_answers": [
-        "Coração",
-        "O coração",
-        "Coração humano",
-        "O coração humano",
-        "Coração do homem",
-        "O coração do homem"
+      "options": [
+        {
+          "text": "O coração",
+          "correct": true
+        },
+        {
+          "text": "A língua",
+          "correct": false
+        },
+        {
+          "text": "Os olhos",
+          "correct": false
+        },
+        {
+          "text": "O mundo",
+          "correct": false
+        }
       ],
       "explanation": "\"Enganoso é o coração, mais do que todas as coisas, e perverso; quem o conhecerá?\" (Jr 17:9). A resposta vem no versículo seguinte: \"Eu, o SENHOR, esquadrinho o coração\" (Jr 17:10) — só Deus conhece o homem por dentro. Jesus ensina algo semelhante: \"do interior do coração dos homens saem os maus pensamentos\" (Mc 7:21).",
       "divergence_note": null,
@@ -1387,7 +1399,6 @@
     },
     {
       "external_id": "doutrinas-0046",
-      "type": "multiple_choice",
       "text": "Segundo Romanos 8:26, o que o Espírito faz quando não sabemos o que havemos de pedir como convém?",
       "options": [
         {
@@ -1407,7 +1418,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"O Espírito ajuda as nossas fraquezas; porque não sabemos o que havemos de pedir como convém, mas o mesmo Espírito intercede por nós com gemidos inexprimíveis\" (Rm 8:26). Ele intercede \"segundo Deus\" (Rm 8:27), e no mesmo capítulo Cristo, à direita de Deus, \"também intercede por nós\" (Rm 8:34) — o crente fraco na oração não ora sozinho.",
       "divergence_note": null,
       "reference": {

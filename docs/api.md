@@ -52,8 +52,8 @@ nenhum aparelho. "Rever tutorial" no Perfil abre de novo só no cliente, sem cha
 | Método | Rota | Descrição |
 |---|---|---|
 | POST | `/quizzes` | Cria sessão. Body: `{mode, question_count, testament?, category_ids?: int[], difficulty?, timer_seconds?: 15\|30}`. Sorteia e congela as perguntas (fila inteligente). `mode=review` ignora filtros e puxa da fila SRS. |
-| GET | `/quizzes/{id}` | Estado da sessão + perguntas (**sem** gabarito: opções vêm sem `is_correct`; abertas vêm sem respostas aceitas). Inclui `timer_seconds` e `combo` (acertos seguidos até agora — retomar a sessão mantém o combo). |
-| POST | `/quizzes/{id}/answers` | Responde uma pergunta. Body: `{question_id, selected_option_id?, answer_text?, timed_out?, time_spent_seconds}`. `timed_out=true` (tempo estourado) conta como erro. Retorna correção + explicação + referência + `combo`/`combo_bonus_xp` (ver **Combo**). |
+| GET | `/quizzes/{id}` | Estado da sessão + perguntas (**sem** gabarito: opções vêm sem `is_correct`). Inclui `timer_seconds` e `combo` (acertos seguidos até agora — retomar a sessão mantém o combo). |
+| POST | `/quizzes/{id}/answers` | Responde uma pergunta. Body: `{question_id, selected_option_id?, timed_out?, time_spent_seconds}`. `timed_out=true` (tempo estourado) conta como erro. Retorna correção + explicação + referência + `combo`/`combo_bonus_xp` (ver **Combo**). |
 | POST | `/quizzes/{id}/complete` | Fecha a sessão: consolida XP (+bônus), atualiza stats/streak/atividade diária, agenda SRS, avalia conquistas. Retorna o resumo. |
 | POST | `/quizzes/{id}/abandon` | Abandona a sessão sem terminar: aplica **apenas** as penalidades das respostas erradas e descarta o XP ganho (streak não conta). Retorna `{answered_count, wrong_count, xp_penalty}`. |
 | GET | `/quizzes?limit=5` | Histórico de sessões concluídas — **máximo de 5 itens** (teto da API). |
@@ -62,8 +62,7 @@ nenhum aparelho. "Rever tutorial" no Perfil abre de novo só no cliente, sem cha
 // 200 POST /quizzes/{id}/answers  (feedback imediato)
 {
   "is_correct": true,
-  "correct_option_id": "…",            // múltipla escolha
-  "correct_answer": "Melquisedeque",   // resposta aberta (canônica)
+  "correct_option_id": "…",
   "explanation": "Melquisedeque, rei de Salém e sacerdote do Deus Altíssimo…",
   "reference": { "book": "genesis", "book_name": "Gênesis", "chapter": 14, "verse_start": 18, "verse_end": 20, "display": "Gênesis 14:18-20" },
   "divergence_note": null,
@@ -299,7 +298,7 @@ real — o front-end separado (bundle `/admin`) é conveniência, não proteçã
 | GET | `/admin/categories` | Categorias (id, slug, nome, ícone) para os filtros/edição. |
 | GET | `/admin/questions?search&category_id&difficulty&type&limit&offset` | Lista paginada de perguntas. |
 | GET | `/admin/questions/{id}` | Detalhe completo (enunciado, explicação, referência, opções, respostas). |
-| PATCH | `/admin/questions/{id}` | Edita campos enviados (`exclude_unset`). Valida MC (4 opções, 1 correta) e aberta (≥1 resposta). `type` e `category_id` são imutáveis. |
+| PATCH | `/admin/questions/{id}` | Edita campos enviados (`exclude_unset`). Valida as alternativas (4 opções, 1 correta). `category_id` é imutável. |
 | GET | `/admin/content/status` | Compara o banco com `content/questions/*.json`: `{mode: github\|local, dirty_files}`. |
 | GET | `/admin/announcements` | Todas as novidades: rascunhos primeiro, depois as publicadas da mais nova para a mais antiga. |
 | POST | `/admin/announcements` | Body: `{title (≤120), body (≤2000), kind, published}`. `published=false` salva como rascunho. 201. |

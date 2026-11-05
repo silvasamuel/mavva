@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 
 from app.models import Duel, QuestionOption, User
 from app.services import duel_service
-from tests.factories import make_category, make_mc_question, make_open_question
+from tests.factories import make_category, make_mc_question
 from tests.helpers import register_and_login
 
 
@@ -730,28 +730,3 @@ class TestPendingRequestBadge:
         request_id = auth_client.get("/api/v1/friends").json()["incoming"][0]["id"]
         auth_client.post(f"/api/v1/friends/requests/{request_id}/accept")
         assert auth_client.get("/api/v1/dashboard").json()["friend_requests"] == 0
-
-
-class TestDuelQuestionTypes:
-    def test_duels_only_draw_multiple_choice(self, auth_client: TestClient, db: Session):
-        category = make_category(db)
-        for _ in range(10):
-            make_mc_question(db, category)
-        for _ in range(10):
-            make_open_question(db, category)
-
-        duel = auth_client.post("/api/v1/duels", json={}).json()
-        quiz = auth_client.get(f"/api/v1/quizzes/{duel['my_session_id']}").json()
-        assert len(quiz["questions"]) == 10
-        assert {q["type"] for q in quiz["questions"]} == {"multiple_choice"}
-        assert all(len(q["options"]) == 4 for q in quiz["questions"])
-
-    def test_duel_needs_enough_multiple_choice_questions(
-        self, auth_client: TestClient, db: Session
-    ):
-        category = make_category(db)
-        for _ in range(3):
-            make_mc_question(db, category)
-        for _ in range(20):
-            make_open_question(db, category)  # plenty of questions, too few MC
-        assert auth_client.post("/api/v1/duels", json={}).status_code == 400

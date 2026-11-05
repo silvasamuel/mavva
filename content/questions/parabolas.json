@@ -3,7 +3,6 @@
   "questions": [
     {
       "external_id": "parabolas-0001",
-      "type": "multiple_choice",
       "text": "Na parábola do semeador, segundo a explicação do próprio Jesus, o que representa a semente?",
       "options": [
         {
@@ -23,7 +22,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jesus mesmo interpreta: \"a semente é a palavra de Deus\" (Lc 8:11). Os quatro solos são os corações que a recebem — a diferença nunca está na semente, mas no terreno.",
       "divergence_note": null,
       "reference": {
@@ -36,7 +34,6 @@
     },
     {
       "external_id": "parabolas-0002",
-      "type": "multiple_choice",
       "text": "Na parábola do filho pródigo, o que o pai fez quando viu o filho voltando ainda longe?",
       "options": [
         {
@@ -56,7 +53,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Vendo-o ainda de longe, seu pai se compadeceu e, correndo, lançou-se-lhe ao pescoço e o beijou\" (Lc 15:20). O pai correndo — algo indigno para um patriarca oriental — é o retrato do coração de Deus para com o pecador que retorna.",
       "divergence_note": null,
       "reference": {
@@ -69,7 +65,6 @@
     },
     {
       "external_id": "parabolas-0003",
-      "type": "multiple_choice",
       "text": "Na parábola contada por Jesus, quem socorreu o homem ferido na estrada de Jerusalém a Jericó?",
       "options": [
         {
@@ -89,7 +84,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O sacerdote e o levita passaram de largo; foi um samaritano — desprezado pelos judeus — quem se compadeceu e cuidou do ferido (Lc 10:33-34). Jesus inverte a pergunta \"quem é o meu próximo?\" para \"de quem eu me faço próximo?\".",
       "divergence_note": null,
       "reference": {
@@ -102,12 +96,24 @@
     },
     {
       "external_id": "parabolas-0004",
-      "type": "open_answer",
       "text": "Na parábola da ovelha perdida, quantas ovelhas o pastor deixou para ir atrás da que se perdeu?",
-      "options": null,
-      "accepted_answers": [
-        "99",
-        "noventa e nove"
+      "options": [
+        {
+          "text": "99",
+          "correct": true
+        },
+        {
+          "text": "100",
+          "correct": false
+        },
+        {
+          "text": "90",
+          "correct": false
+        },
+        {
+          "text": "70",
+          "correct": false
+        }
       ],
       "explanation": "O pastor deixa as noventa e nove no deserto e vai atrás da perdida até encontrá-la (Lc 15:4). Jesus conclui: \"haverá alegria no céu por um pecador que se arrepende\" (Lc 15:7).",
       "divergence_note": null,
@@ -121,7 +127,6 @@
     },
     {
       "external_id": "parabolas-0005",
-      "type": "multiple_choice",
       "text": "Na parábola dos talentos, o que fez o servo que recebeu um talento?",
       "options": [
         {
@@ -141,7 +146,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Com medo, o servo escondeu o talento na terra (Mt 25:18,25) e foi chamado de \"mau e negligente\". A parábola ensina que os dons do Senhor existem para ser investidos no Reino até que ele volte.",
       "divergence_note": null,
       "reference": {
@@ -154,7 +158,6 @@
     },
     {
       "external_id": "parabolas-0006",
-      "type": "multiple_choice",
       "text": "Segundo Jesus, quem é comparado ao homem prudente que edificou a sua casa sobre a rocha?",
       "options": [
         {
@@ -174,7 +177,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Todo aquele, pois, que escuta estas minhas palavras, e as pratica, assemelhá-lo-ei ao homem prudente, que edificou a sua casa sobre a rocha\" (Mt 7:24). A diferença entre as duas casas não era a tempestade — ambas a enfrentaram — mas o fundamento.",
       "divergence_note": null,
       "reference": {
@@ -187,7 +189,6 @@
     },
     {
       "external_id": "parabolas-0007",
-      "type": "multiple_choice",
       "text": "Na parábola das dez virgens, o que faltou às cinco insensatas?",
       "options": [
         {
@@ -207,7 +208,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "As insensatas levaram lâmpadas mas não levaram azeite, e quando o noivo chegou estavam despreparadas (Mt 25:3,10). A conclusão de Jesus: \"Vigiai, pois, porque não sabeis o dia nem a hora\" (Mt 25:13).",
       "divergence_note": null,
       "reference": {
@@ -220,7 +220,6 @@
     },
     {
       "external_id": "parabolas-0008",
-      "type": "multiple_choice",
       "text": "Na explicação da parábola do joio, o que representa a ceifa?",
       "options": [
         {
@@ -240,7 +239,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jesus interpreta: \"a ceifa é o fim do mundo, e os ceifeiros são os anjos\" (Mt 13:39). Trigo e joio crescem juntos até lá — o juízo definitivo pertence a Deus, não a nós, e acontecerá no tempo dele.",
       "divergence_note": null,
       "reference": {
@@ -253,13 +251,24 @@
     },
     {
       "external_id": "parabolas-0009",
-      "type": "open_answer",
       "text": "Qual grão Jesus usou para ilustrar o Reino dos céus que começa pequeno e se torna grande?",
-      "options": null,
-      "accepted_answers": [
-        "Mostarda",
-        "Grão de mostarda",
-        "Semente de mostarda"
+      "options": [
+        {
+          "text": "Mostarda",
+          "correct": true
+        },
+        {
+          "text": "Trigo",
+          "correct": false
+        },
+        {
+          "text": "Cevada",
+          "correct": false
+        },
+        {
+          "text": "Joio",
+          "correct": false
+        }
       ],
       "explanation": "O grão de mostarda é \"a menor de todas as sementes\", mas cresce até virar árvore onde as aves se aninham (Mt 13:31-32). Assim é o Reino: começa desprezível aos olhos humanos e cresce irresistivelmente.",
       "divergence_note": null,
@@ -273,7 +282,6 @@
     },
     {
       "external_id": "parabolas-0010",
-      "type": "multiple_choice",
       "text": "Na história do rico e Lázaro, para onde Lázaro foi levado pelos anjos ao morrer?",
       "options": [
         {
@@ -293,7 +301,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Morreu o mendigo e foi levado pelos anjos para o seio de Abraão\" (Lc 16:22) — expressão judaica para a comunhão com os justos após a morte. O contraste com o rico atormentado adverte sobre a irreversibilidade do destino eterno.",
       "divergence_note": "Intérpretes cristãos divergem se o relato é parábola ou caso real (Lázaro é o único personagem nomeado numa narrativa desse tipo), e sobre quanto da imagem descreve literalmente o estado intermediário. Todos concordam no ponto central: há destinos distintos e definitivos após a morte.",
       "reference": {
@@ -306,7 +313,6 @@
     },
     {
       "external_id": "parabolas-0011",
-      "type": "multiple_choice",
       "text": "Na parábola dos dois filhos, qual fez a vontade do pai?",
       "options": [
         {
@@ -326,7 +332,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jesus ensina que obedecer vale mais que prometer: o filho que se arrependeu e foi fez a vontade do pai (Mt 21:28-31).",
       "divergence_note": null,
       "reference": {
@@ -339,7 +344,6 @@
     },
     {
       "external_id": "parabolas-0012",
-      "type": "multiple_choice",
       "text": "Na parábola do rico insensato, o que Deus lhe disse ao planejar celeiros maiores?",
       "options": [
         {
@@ -359,7 +363,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O rico acumulou para si e não para com Deus; naquela noite morreria (Lc 12:20), advertência contra a cobiça.",
       "divergence_note": null,
       "reference": {
@@ -372,7 +375,6 @@
     },
     {
       "external_id": "parabolas-0013",
-      "type": "multiple_choice",
       "text": "Na parábola do fariseu e do publicano, quem voltou justificado?",
       "options": [
         {
@@ -392,7 +394,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O publicano que clamou por misericórdia desceu justificado, e não o fariseu que confiava na própria justiça (Lc 18:14).",
       "divergence_note": null,
       "reference": {
@@ -405,7 +406,6 @@
     },
     {
       "external_id": "parabolas-0014",
-      "type": "multiple_choice",
       "text": "Na parábola dos trabalhadores da vinha, quanto receberam os da última hora?",
       "options": [
         {
@@ -425,7 +425,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Todos receberam um denário, mostrando a graça soberana do dono: 'não posso fazer o que quiser?' (Mt 20:9-15).",
       "divergence_note": null,
       "reference": {
@@ -438,7 +437,6 @@
     },
     {
       "external_id": "parabolas-0015",
-      "type": "multiple_choice",
       "text": "Na parábola da rede, o que os pescadores fazem ao puxá-la cheia?",
       "options": [
         {
@@ -458,7 +456,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "A rede recolhe de toda espécie; no fim, os anjos separarão os maus dos justos (Mt 13:47-49).",
       "divergence_note": null,
       "reference": {
@@ -471,7 +468,6 @@
     },
     {
       "external_id": "parabolas-0016",
-      "type": "multiple_choice",
       "text": "Na parábola da figueira estéril, por quantos anos o dono buscou fruto?",
       "options": [
         {
@@ -491,7 +487,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O dono buscou fruto por três anos e concedeu mais um de paciência antes de cortá-la (Lc 13:6-9) — chamada ao arrependimento.",
       "divergence_note": null,
       "reference": {
@@ -504,7 +499,6 @@
     },
     {
       "external_id": "parabolas-0017",
-      "type": "multiple_choice",
       "text": "Na parábola do tesouro escondido, o que o homem faz ao encontrá-lo?",
       "options": [
         {
@@ -524,7 +518,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Pela alegria, vende tudo para adquirir o campo (Mt 13:44) — o Reino vale todo sacrifício.",
       "divergence_note": null,
       "reference": {
@@ -537,13 +530,24 @@
     },
     {
       "external_id": "parabolas-0018",
-      "type": "open_answer",
       "text": "Na parábola do bom samaritano, qual foi o primeiro que passou sem ajudar o ferido?",
-      "options": null,
-      "accepted_answers": [
-        "Sacerdote",
-        "O sacerdote",
-        "Um sacerdote"
+      "options": [
+        {
+          "text": "Um sacerdote",
+          "correct": true
+        },
+        {
+          "text": "Um levita",
+          "correct": false
+        },
+        {
+          "text": "Um samaritano",
+          "correct": false
+        },
+        {
+          "text": "Um publicano",
+          "correct": false
+        }
       ],
       "explanation": "O sacerdote passou de largo, seguido do levita; só o samaritano se compadeceu (Lc 10:31-33).",
       "divergence_note": null,
@@ -557,7 +561,6 @@
     },
     {
       "external_id": "parabolas-0019",
-      "type": "multiple_choice",
       "text": "Na parábola do administrador infiel, por que o senhor o elogiou?",
       "options": [
         {
@@ -577,7 +580,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O senhor louvou a astúcia prudente do mordomo, e Jesus conclui sobre o uso sábio das riquezas (Lc 16:8-9).",
       "divergence_note": null,
       "reference": {
@@ -590,7 +592,6 @@
     },
     {
       "external_id": "parabolas-0020",
-      "type": "multiple_choice",
       "text": "Na parábola do credor incompassivo, o que o rei perdoou ao servo?",
       "options": [
         {
@@ -610,7 +611,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Perdoado de dívida impagável, o servo não perdoou uma pequena a seu conservo — quadro do perdão que recebemos e devemos dar (Mt 18:24-33).",
       "divergence_note": null,
       "reference": {
@@ -623,7 +623,6 @@
     },
     {
       "external_id": "parabolas-0021",
-      "type": "multiple_choice",
       "text": "Na parábola do grande banquete, quem acabou sendo trazido à festa?",
       "options": [
         {
@@ -643,7 +642,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Diante das desculpas dos convidados, o senhor mandou trazer os pobres e depois compelir os que estavam pelos caminhos (Lc 14:21-23).",
       "divergence_note": null,
       "reference": {
@@ -656,7 +654,6 @@
     },
     {
       "external_id": "parabolas-0022",
-      "type": "multiple_choice",
       "text": "Na parábola do fermento, a que Jesus compara o Reino dos céus?",
       "options": [
         {
@@ -676,7 +673,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'O Reino dos céus é semelhante ao fermento, que uma mulher toma e introduz em três medidas de farinha, até que tudo esteja levedado' (Mt 13:33).",
       "divergence_note": null,
       "reference": {
@@ -689,7 +685,6 @@
     },
     {
       "external_id": "parabolas-0023",
-      "type": "multiple_choice",
       "text": "Na parábola das ovelhas e dos bodes, com base em que os povos são separados?",
       "options": [
         {
@@ -709,7 +704,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Quando o fizestes a um destes meus pequeninos irmãos, a mim o fizestes' (Mt 25:40) — a fé verdadeira se prova em misericórdia.",
       "divergence_note": null,
       "reference": {
@@ -722,7 +716,6 @@
     },
     {
       "external_id": "parabolas-0024",
-      "type": "multiple_choice",
       "text": "Na parábola da semente que cresce por si, o que o lavrador faz depois de semear?",
       "options": [
         {
@@ -742,7 +735,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'A terra por si mesma frutifica' (Mc 4:26-28) — o crescimento do Reino é obra de Deus, não do esforço humano.",
       "divergence_note": null,
       "reference": {
@@ -755,13 +747,24 @@
     },
     {
       "external_id": "parabolas-0025",
-      "type": "open_answer",
       "text": "Na parábola da moeda perdida, o que a mulher faz ao encontrá-la?",
-      "options": null,
-      "accepted_answers": [
-        "Convoca as amigas e vizinhas",
-        "Chama as amigas",
-        "Convida as vizinhas para se alegrarem"
+      "options": [
+        {
+          "text": "Convoca as amigas e vizinhas",
+          "correct": true
+        },
+        {
+          "text": "Guarda a moeda num cofre",
+          "correct": false
+        },
+        {
+          "text": "Oferece a moeda no templo",
+          "correct": false
+        },
+        {
+          "text": "Dá a moeda aos pobres",
+          "correct": false
+        }
       ],
       "explanation": "'Convoca as amigas e vizinhas, dizendo: Alegrai-vos comigo' (Lc 15:9); assim há alegria entre os anjos por um pecador que se arrepende.",
       "divergence_note": null,
@@ -775,7 +778,6 @@
     },
     {
       "external_id": "parabolas-0026",
-      "type": "multiple_choice",
       "text": "Na parábola do juiz iníquo, o que a viúva conseguiu com sua insistência?",
       "options": [
         {
@@ -795,7 +797,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jesus contou 'que importa orar sempre e nunca desfalecer' (Lc 18:1-8): se o juiz injusto cede, quanto mais o Pai justo.",
       "divergence_note": null,
       "reference": {
@@ -808,7 +809,6 @@
     },
     {
       "external_id": "parabolas-0027",
-      "type": "multiple_choice",
       "text": "Na parábola dos dois devedores, quem amará mais aquele que perdoa?",
       "options": [
         {
@@ -828,7 +828,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jesus aplicou a lição à mulher que lhe ungiu os pés: 'aquele a quem pouco se perdoa pouco ama' (Lc 7:41-47).",
       "divergence_note": null,
       "reference": {
@@ -841,7 +840,6 @@
     },
     {
       "external_id": "parabolas-0028",
-      "type": "multiple_choice",
       "text": "Na parábola da pérola de grande valor, o que o negociante faz?",
       "options": [
         {
@@ -861,7 +859,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Tendo achado uma pérola de grande valor, foi, vendeu tudo quanto tinha e comprou-a' (Mt 13:45-46) — o Reino vale tudo.",
       "divergence_note": null,
       "reference": {
@@ -874,7 +871,6 @@
     },
     {
       "external_id": "parabolas-0029",
-      "type": "multiple_choice",
       "text": "Na parábola das bodas, por que um convidado foi lançado fora?",
       "options": [
         {
@@ -894,7 +890,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Amigo, como entraste aqui, não tendo veste nupcial?' (Mt 22:11-13); muitos são chamados, poucos escolhidos.",
       "divergence_note": null,
       "reference": {
@@ -907,13 +902,24 @@
     },
     {
       "external_id": "parabolas-0030",
-      "type": "open_answer",
       "text": "Na parábola dos vinhateiros maus, quem o dono da vinha enviou por último?",
-      "options": null,
-      "accepted_answers": [
-        "O filho",
-        "Seu filho",
-        "O próprio filho"
+      "options": [
+        {
+          "text": "O filho",
+          "correct": true
+        },
+        {
+          "text": "Um servo",
+          "correct": false
+        },
+        {
+          "text": "O mordomo",
+          "correct": false
+        },
+        {
+          "text": "Um vizinho",
+          "correct": false
+        }
       ],
       "explanation": "'Enviou-lhes, finalmente, seu filho, dizendo: Terão respeito a meu filho' — mas o mataram (Mt 21:37-39).",
       "divergence_note": null,
@@ -927,7 +933,6 @@
     },
     {
       "external_id": "parabolas-0031",
-      "type": "multiple_choice",
       "text": "Na parábola do amigo à meia-noite, o que o homem pedia com insistência?",
       "options": [
         {
@@ -947,7 +952,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Amigo, empresta-me três pães' (Lc 11:5) — pela importunação ele recebe; quanto mais o Pai dará aos que pedem.",
       "divergence_note": null,
       "reference": {
@@ -960,7 +964,6 @@
     },
     {
       "external_id": "parabolas-0032",
-      "type": "multiple_choice",
       "text": "Na parábola dos servos vigilantes, o que o senhor faz ao voltar e achá-los acordados?",
       "options": [
         {
@@ -980,7 +983,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Cingir-se-á, e os fará assentar à mesa, e, chegando-se, os servirá' (Lc 12:37) — o Senhor que serve.",
       "divergence_note": null,
       "reference": {
@@ -993,7 +995,6 @@
     },
     {
       "external_id": "parabolas-0033",
-      "type": "multiple_choice",
       "text": "Na parábola da torre, por que Jesus diz que se deve calcular a despesa antes de construir?",
       "options": [
         {
@@ -1013,7 +1014,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Qual de vós, querendo edificar uma torre, não se assenta primeiro a fazer as contas?' (Lc 14:28-30) — sobre o custo do discipulado.",
       "divergence_note": null,
       "reference": {
@@ -1026,7 +1026,6 @@
     },
     {
       "external_id": "parabolas-0034",
-      "type": "multiple_choice",
       "text": "Na parábola do servo que voltou do campo (Lucas 17), o que o servo deve dizer após fazer tudo?",
       "options": [
         {
@@ -1046,7 +1045,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Depois de haverdes feito tudo o que vos foi mandado, dizei: Somos servos inúteis' (Lc 17:10) — serviço sem pretensão de mérito.",
       "divergence_note": null,
       "reference": {
@@ -1059,7 +1057,6 @@
     },
     {
       "external_id": "parabolas-0035",
-      "type": "multiple_choice",
       "text": "Na parábola das minas (Lucas 19), quanto recebeu cada um dos dez servos?",
       "options": [
         {
@@ -1079,7 +1076,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Chamando dez servos seus, deu-lhes dez minas' — uma a cada um, para negociar até ele voltar (Lc 19:13).",
       "divergence_note": null,
       "reference": {
@@ -1092,14 +1088,24 @@
     },
     {
       "external_id": "parabolas-0036",
-      "type": "open_answer",
       "text": "Na parábola do trigo e do joio, quem semeou o joio no campo?",
-      "options": null,
-      "accepted_answers": [
-        "O inimigo",
-        "Um inimigo",
-        "O diabo",
-        "O maligno"
+      "options": [
+        {
+          "text": "O inimigo",
+          "correct": true
+        },
+        {
+          "text": "O semeador",
+          "correct": false
+        },
+        {
+          "text": "Os servos",
+          "correct": false
+        },
+        {
+          "text": "Os ceifeiros",
+          "correct": false
+        }
       ],
       "explanation": "'Vindo o seu inimigo, semeou joio no meio do trigo' (Mt 13:25); Jesus explica: 'o inimigo que o semeou é o diabo' (Mt 13:39).",
       "divergence_note": null,
@@ -1113,7 +1119,6 @@
     },
     {
       "external_id": "parabolas-0037",
-      "type": "multiple_choice",
       "text": "Na parábola do filho pródigo, o que o filho mais novo pediu ao pai antes de partir?",
       "options": [
         {
@@ -1133,7 +1138,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Pai, dá-me a parte dos bens que me pertence' — e ele repartiu os bens (Lc 15:12).",
       "divergence_note": null,
       "reference": {
@@ -1146,7 +1150,6 @@
     },
     {
       "external_id": "parabolas-0038",
-      "type": "multiple_choice",
       "text": "Na parábola do semeador, o que aconteceu com a semente que caiu entre espinhos?",
       "options": [
         {
@@ -1166,7 +1169,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Crescendo com ela os espinhos, a sufocaram' — os cuidados, riquezas e deleites da vida (Lc 8:7,14).",
       "divergence_note": null,
       "reference": {
@@ -1179,7 +1181,6 @@
     },
     {
       "external_id": "parabolas-0039",
-      "type": "multiple_choice",
       "text": "Na parábola do bom samaritano, o que o samaritano fez pelo homem ferido?",
       "options": [
         {
@@ -1199,7 +1200,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Atou-lhe as feridas com azeite e vinho, levou-o no seu animal e deu dois denários ao hospedeiro (Lc 10:34-35).",
       "divergence_note": null,
       "reference": {
@@ -1212,7 +1212,6 @@
     },
     {
       "external_id": "parabolas-0040",
-      "type": "multiple_choice",
       "text": "Na parábola da ovelha perdida, o que o pastor faz ao encontrá-la?",
       "options": [
         {
@@ -1232,7 +1231,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Achando-a, põe-na sobre os seus ombros, gostoso; e... convoca os amigos e vizinhos: Alegrai-vos comigo' (Lc 15:5-6).",
       "divergence_note": null,
       "reference": {
@@ -1245,7 +1243,6 @@
     },
     {
       "external_id": "parabolas-0041",
-      "type": "multiple_choice",
       "text": "Na parábola do rico e Lázaro, o que o rico pediu a Abraão do lugar de tormento?",
       "options": [
         {
@@ -1265,7 +1262,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Manda a Lázaro que molhe na água a ponta do seu dedo'; depois: 'manda-o a casa de meu pai' (Lc 16:24-28).",
       "divergence_note": null,
       "reference": {
@@ -1278,7 +1274,6 @@
     },
     {
       "external_id": "parabolas-0042",
-      "type": "multiple_choice",
       "text": "Na parábola do fariseu e do publicano, o que o publicano orou?",
       "options": [
         {
@@ -1298,7 +1293,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'O publicano, estando em pé, de longe... batia no peito, dizendo: Ó Deus, tem misericórdia de mim, pecador!' (Lc 18:13).",
       "divergence_note": null,
       "reference": {
@@ -1311,7 +1305,6 @@
     },
     {
       "external_id": "parabolas-0043",
-      "type": "multiple_choice",
       "text": "Na parábola do filho pródigo, que trabalho o filho mais novo conseguiu quando veio uma grande fome sobre aquela terra?",
       "options": [
         {
@@ -1331,7 +1324,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Depois de desperdiçar tudo \"vivendo dissolutamente\", o filho mais novo passou necessidade e foi mandado para os campos \"a apascentar porcos\" — e desejava comer das bolotas que os porcos comiam (Lc 15:13-16). Para um judeu, o porco era animal imundo (Lv 11:7), sinal do fundo do poço a que ele chegara. Foi ali que ele caiu em si e decidiu voltar para o pai (Lc 15:17-18).",
       "divergence_note": null,
       "reference": {
@@ -1344,14 +1336,24 @@
     },
     {
       "external_id": "parabolas-0044",
-      "type": "open_answer",
       "text": "Na parábola da dracma perdida, quantas dracmas a mulher tinha antes de perder uma?",
-      "options": null,
-      "accepted_answers": [
-        "10",
-        "dez",
-        "10 dracmas",
-        "dez dracmas"
+      "options": [
+        {
+          "text": "10",
+          "correct": true
+        },
+        {
+          "text": "7",
+          "correct": false
+        },
+        {
+          "text": "12",
+          "correct": false
+        },
+        {
+          "text": "100",
+          "correct": false
+        }
       ],
       "explanation": "\"Qual a mulher que, tendo dez dracmas, se perder uma dracma, não acende a candeia, e varre a casa, e busca com diligência até a achar?\" (Lc 15:8). A dracma era uma moeda grega de prata que, segundo os historiadores, valia mais ou menos o salário de um dia, como o denário. A parábola faz parte da resposta de Jesus aos fariseus e escribas que murmuravam porque ele recebia pecadores e comia com eles (Lc 15:1-2).",
       "divergence_note": null,
@@ -1365,7 +1367,6 @@
     },
     {
       "external_id": "parabolas-0045",
-      "type": "multiple_choice",
       "text": "De onde Jesus contou a parábola do semeador à grande multidão reunida junto ao mar?",
       "options": [
         {
@@ -1385,7 +1386,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Ajuntou-se tanta gente que Jesus, \"entrando num barco, se assentou; e toda a multidão estava em pé na praia\" (Mt 13:2). Dali \"falou-lhe de muitas coisas por parábolas\", a começar pela do semeador (Mt 13:3). Marcos registra a mesma cena (Mc 4:1), e, em outra ocasião, Jesus também ensinou a multidão do barco de Simão (Lc 5:3).",
       "divergence_note": null,
       "reference": {

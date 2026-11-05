@@ -37,8 +37,7 @@ marcado como tal. Divergências entre interpretações cristãs são indicadas n
 - JWT de acesso (curto) + refresh token com rotação
 
 **Quiz**
-- Múltipla escolha: 4 alternativas, 1 correta
-- Resposta aberta: aceita variações de escrita (acentos, caixa, pequenos erros de digitação)
+- Toda pergunta é de múltipla escolha: 4 alternativas, 1 correta
 - Filtros: testamento (AT / NT / Bíblia inteira), categorias (múltipla escolha), dificuldade
 - Timer opcional por pergunta (15s ou 30s, escolhido ao montar o estudo); o tempo corre
   apenas enquanto se responde — a explicação é lida sem pressa; tempo estourado conta como erro

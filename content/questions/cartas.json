@@ -3,7 +3,6 @@
   "questions": [
     {
       "external_id": "cartas-0001",
-      "type": "multiple_choice",
       "text": "Em qual carta está o famoso capítulo sobre o amor: \"ainda que eu falasse as línguas dos homens e dos anjos...\"?",
       "options": [
         {
@@ -23,7 +22,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "1 Coríntios 13 está no centro da discussão sobre dons espirituais (caps. 12-14): sem amor, o dom mais espetacular \"nada seria\". \"Agora, pois, permanecem a fé, a esperança e o amor... mas o maior destes é o amor\" (1Co 13:13).",
       "divergence_note": null,
       "reference": {
@@ -36,7 +34,6 @@
     },
     {
       "external_id": "cartas-0002",
-      "type": "multiple_choice",
       "text": "Qual carta Paulo escreveu intercedendo por Onésimo, um escravo fugido que se converteu?",
       "options": [
         {
@@ -56,7 +53,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Paulo devolve Onésimo a Filemom pedindo que o receba \"não já como servo, antes... como irmão amado\" (Fm 1:16), e se oferece para pagar qualquer dívida — retrato vivo da intercessão de Cristo por nós.",
       "divergence_note": null,
       "reference": {
@@ -69,7 +65,6 @@
     },
     {
       "external_id": "cartas-0003",
-      "type": "multiple_choice",
       "text": "Qual carta, escrita da prisão, repete insistentemente o tema da alegria: \"Regozijai-vos sempre no Senhor\"?",
       "options": [
         {
@@ -89,7 +84,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Preso, Paulo escreve aos filipenses a carta mais alegre do Novo Testamento: \"Regozijai-vos sempre no Senhor; outra vez digo, regozijai-vos\" (Fp 4:4). A alegria cristã não depende das circunstâncias, mas de Cristo: \"para mim o viver é Cristo\" (Fp 1:21).",
       "divergence_note": null,
       "reference": {
@@ -102,7 +96,6 @@
     },
     {
       "external_id": "cartas-0004",
-      "type": "multiple_choice",
       "text": "Em qual carta Paulo lista o fruto do Espírito: amor, gozo, paz, longanimidade...?",
       "options": [
         {
@@ -122,7 +115,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Mas o fruto do Espírito é: amor, gozo, paz, longanimidade, benignidade, bondade, fé, mansidão, temperança\" (Gl 5:22-23). O fruto (singular) contrasta com as obras da carne listadas antes — caráter que o Espírito produz, não desempenho humano.",
       "divergence_note": null,
       "reference": {
@@ -135,7 +127,6 @@
     },
     {
       "external_id": "cartas-0005",
-      "type": "multiple_choice",
       "text": "Em qual carta Paulo descreve a armadura de Deus, peça por peça?",
       "options": [
         {
@@ -155,7 +146,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Revesti-vos de toda a armadura de Deus\" (Ef 6:11): cinto da verdade, couraça da justiça, calçado do evangelho, escudo da fé, capacete da salvação e espada do Espírito. A luta \"não é contra a carne e o sangue\" (Ef 6:12).",
       "divergence_note": null,
       "reference": {
@@ -168,7 +158,6 @@
     },
     {
       "external_id": "cartas-0006",
-      "type": "multiple_choice",
       "text": "Quais cartas são conhecidas como \"epístolas pastorais\"?",
       "options": [
         {
@@ -188,7 +177,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Escritas a dois pastores jovens — Timóteo em Éfeso e Tito em Creta — tratam da organização da igreja: requisitos de presbíteros e diáconos, combate a falsos mestres e conduta \"na casa de Deus\" (1Tm 3:15).",
       "divergence_note": null,
       "reference": {
@@ -201,12 +189,24 @@
     },
     {
       "external_id": "cartas-0007",
-      "type": "open_answer",
       "text": "Quantas epístolas do apóstolo João o Novo Testamento contém?",
-      "options": null,
-      "accepted_answers": [
-        "3",
-        "Três"
+      "options": [
+        {
+          "text": "3",
+          "correct": true
+        },
+        {
+          "text": "2",
+          "correct": false
+        },
+        {
+          "text": "4",
+          "correct": false
+        },
+        {
+          "text": "5",
+          "correct": false
+        }
       ],
       "explanation": "1, 2 e 3 João. A primeira combate os que negavam a encarnação (\"Jesus Cristo veio em carne\", 1Jo 4:2); a segunda e a terceira são bilhetes curtos sobre a verdade e a hospitalidade — os dois livros mais curtos do NT (2 João tem menos versículos; 3 João, menos palavras no original).",
       "divergence_note": null,
@@ -220,7 +220,6 @@
     },
     {
       "external_id": "cartas-0008",
-      "type": "multiple_choice",
       "text": "Qual carta afirma que \"a fé, se não tiver as obras, é morta em si mesma\"?",
       "options": [
         {
@@ -240,7 +239,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Tiago 2:17 confronta a fé que não passa de palavras. Não contradiz Paulo: Paulo trata de como somos justificados diante de Deus (pela fé), Tiago de como a fé verdadeira se mostra diante dos homens (pelas obras) — a fé genuína sempre frutifica.",
       "divergence_note": null,
       "reference": {
@@ -253,7 +251,6 @@
     },
     {
       "external_id": "cartas-0009",
-      "type": "multiple_choice",
       "text": "A quem Pedro dirige sua primeira carta?",
       "options": [
         {
@@ -273,7 +270,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Pedro... aos estrangeiros dispersos no Ponto, Galácia, Capadócia, Ásia e Bitínia\" (1Pe 1:1) — cristãos sofrendo perseguição em regiões da atual Turquia. O tema da carta: esperança viva e conduta santa em meio ao sofrimento.",
       "divergence_note": null,
       "reference": {
@@ -286,7 +282,6 @@
     },
     {
       "external_id": "cartas-0010",
-      "type": "multiple_choice",
       "text": "Em qual carta Paulo, perto do fim da vida, escreve: \"Combati o bom combate, acabei a carreira, guardei a fé\"?",
       "options": [
         {
@@ -306,7 +301,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "2 Timóteo é considerada a última carta de Paulo, escrita da prisão romana à espera da execução: \"já estou sendo oferecido por aspersão de sacrifício, e o tempo da minha partida está próximo\" (2Tm 4:6-7). Um testamento espiritual ao seu filho na fé.",
       "divergence_note": null,
       "reference": {
@@ -319,7 +313,6 @@
     },
     {
       "external_id": "cartas-0011",
-      "type": "multiple_choice",
       "text": "Em qual carta está o chamado 'hino ao amor' — 'o amor é sofredor, é benigno'?",
       "options": [
         {
@@ -339,7 +332,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "1 Coríntios 13 descreve o amor (ágape) como o caminho supremo, sem o qual todo dom é vazio (1Co 13:1-4).",
       "divergence_note": null,
       "reference": {
@@ -353,11 +345,24 @@
     },
     {
       "external_id": "cartas-0012",
-      "type": "open_answer",
       "text": "Em qual carta Paulo escreve 'posso todas as coisas naquele que me fortalece'?",
-      "options": null,
-      "accepted_answers": [
-        "Filipenses"
+      "options": [
+        {
+          "text": "Filipenses",
+          "correct": true
+        },
+        {
+          "text": "Efésios",
+          "correct": false
+        },
+        {
+          "text": "Colossenses",
+          "correct": false
+        },
+        {
+          "text": "2 Timóteo",
+          "correct": false
+        }
       ],
       "explanation": "Paulo escreve de Filipenses, mesmo preso, sobre o contentamento em qualquer situação por meio de Cristo (Fp 4:13).",
       "divergence_note": null,
@@ -371,7 +376,6 @@
     },
     {
       "external_id": "cartas-0013",
-      "type": "multiple_choice",
       "text": "Qual carta ensina que 'a fé sem obras é morta'?",
       "options": [
         {
@@ -391,7 +395,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Tiago mostra que a fé genuína se comprova em obras: 'a fé, se não tiver as obras, é morta em si mesma' (Tg 2:17).",
       "divergence_note": null,
       "reference": {
@@ -405,7 +408,6 @@
     },
     {
       "external_id": "cartas-0014",
-      "type": "multiple_choice",
       "text": "Em qual carta Paulo lista o fruto do Espírito — amor, gozo, paz, longanimidade?",
       "options": [
         {
@@ -425,7 +427,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Gálatas 5:22-23 contrasta as obras da carne com o fruto do Espírito, marca da vida transformada.",
       "divergence_note": null,
       "reference": {
@@ -439,7 +440,6 @@
     },
     {
       "external_id": "cartas-0015",
-      "type": "multiple_choice",
       "text": "A quem Paulo chamou de 'meu verdadeiro filho na fé' nas cartas pastorais?",
       "options": [
         {
@@ -459,7 +459,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Paulo dirige duas cartas a Timóteo, seu discípulo, chamando-o de 'meu verdadeiro filho na fé' (1Tm 1:2).",
       "divergence_note": null,
       "reference": {
@@ -472,7 +471,6 @@
     },
     {
       "external_id": "cartas-0016",
-      "type": "multiple_choice",
       "text": "Qual carta afirma que 'toda a Escritura é divinamente inspirada'?",
       "options": [
         {
@@ -492,7 +490,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Toda a Escritura é divinamente inspirada e proveitosa para ensinar' (2Tm 3:16), base da suficiência das Escrituras.",
       "divergence_note": null,
       "reference": {
@@ -505,7 +502,6 @@
     },
     {
       "external_id": "cartas-0017",
-      "type": "multiple_choice",
       "text": "Em qual carta está 'pela graça sois salvos, por meio da fé... dom de Deus'?",
       "options": [
         {
@@ -525,7 +521,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Efésios 2:8-9 resume a salvação pela graça mediante a fé, não por obras, para que ninguém se glorie.",
       "divergence_note": null,
       "reference": {
@@ -538,7 +533,6 @@
     },
     {
       "external_id": "cartas-0018",
-      "type": "multiple_choice",
       "text": "Qual carta apresenta Cristo como sumo sacerdote 'segundo a ordem de Melquisedeque'?",
       "options": [
         {
@@ -558,7 +552,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Hebreus 7 mostra Cristo como sacerdote eterno, superior a Arão, segundo a ordem de Melquisedeque.",
       "divergence_note": null,
       "reference": {
@@ -571,7 +564,6 @@
     },
     {
       "external_id": "cartas-0019",
-      "type": "multiple_choice",
       "text": "Qual carta chama os cristãos de 'pedras vivas' edificadas em casa espiritual?",
       "options": [
         {
@@ -591,7 +583,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Pedro descreve os crentes como pedras vivas sobre Cristo, a pedra angular, formando um sacerdócio real (1Pe 2:5-9).",
       "divergence_note": null,
       "reference": {
@@ -604,11 +595,24 @@
     },
     {
       "external_id": "cartas-0020",
-      "type": "open_answer",
       "text": "Em qual curta carta Paulo intercede por Onésimo, escravo fugido convertido?",
-      "options": null,
-      "accepted_answers": [
-        "Filemom"
+      "options": [
+        {
+          "text": "Filemom",
+          "correct": true
+        },
+        {
+          "text": "Tito",
+          "correct": false
+        },
+        {
+          "text": "2 João",
+          "correct": false
+        },
+        {
+          "text": "Judas",
+          "correct": false
+        }
       ],
       "explanation": "Paulo pede a Filemom que receba Onésimo 'não já como servo, mas como irmão amado' (Fm 1:16).",
       "divergence_note": null,
@@ -623,11 +627,24 @@
     },
     {
       "external_id": "cartas-0021",
-      "type": "open_answer",
       "text": "Qual diaconisa da igreja de Cencreia Paulo recomenda, tida como portadora da carta aos Romanos?",
-      "options": null,
-      "accepted_answers": [
-        "Febe"
+      "options": [
+        {
+          "text": "Febe",
+          "correct": true
+        },
+        {
+          "text": "Priscila",
+          "correct": false
+        },
+        {
+          "text": "Júnia",
+          "correct": false
+        },
+        {
+          "text": "Lídia",
+          "correct": false
+        }
       ],
       "explanation": "'Recomendo-vos Febe, nossa irmã, que serve na igreja de Cencreia' (Rm 16:1) — provável portadora da epístola.",
       "divergence_note": null,
@@ -641,7 +658,6 @@
     },
     {
       "external_id": "cartas-0022",
-      "type": "multiple_choice",
       "text": "A qual igreja Paulo escreveu afirmando que muitos ali nunca tinham visto o seu rosto?",
       "options": [
         {
@@ -661,7 +677,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Quão grande combate tenho por vós... e por quantos não viram o meu rosto' (Cl 2:1); Paulo não fundou aquela igreja.",
       "divergence_note": null,
       "reference": {
@@ -674,7 +689,6 @@
     },
     {
       "external_id": "cartas-0023",
-      "type": "multiple_choice",
       "text": "Segundo Romanos 8, o que 'nos separará do amor de Cristo'?",
       "options": [
         {
@@ -694,7 +708,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Nem a morte, nem a vida... nem alguma outra criatura nos poderá separar do amor de Deus, que está em Cristo Jesus' (Rm 8:38-39).",
       "divergence_note": null,
       "reference": {
@@ -707,7 +720,6 @@
     },
     {
       "external_id": "cartas-0024",
-      "type": "multiple_choice",
       "text": "Que imagem Paulo usa em 1 Coríntios 12 para descrever a igreja e seus dons?",
       "options": [
         {
@@ -727,7 +739,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Porque assim como o corpo é um e tem muitos membros... assim é Cristo' (1Co 12:12); cada dom serve ao todo.",
       "divergence_note": null,
       "reference": {
@@ -740,7 +751,6 @@
     },
     {
       "external_id": "cartas-0025",
-      "type": "multiple_choice",
       "text": "Em Filipenses 2, qual atitude Paulo pede que haja em nós, a mesma que houve em Cristo?",
       "options": [
         {
@@ -760,7 +770,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'De sorte que haja em vós o mesmo sentimento que houve também em Cristo Jesus', que se humilhou até à morte de cruz (Fp 2:5-8).",
       "divergence_note": null,
       "reference": {
@@ -773,7 +782,6 @@
     },
     {
       "external_id": "cartas-0026",
-      "type": "multiple_choice",
       "text": "Segundo Hebreus 11, o que é a fé?",
       "options": [
         {
@@ -793,7 +801,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Ora, a fé é o firme fundamento das coisas que se esperam e a prova das que se não veem' (Hb 11:1).",
       "divergence_note": null,
       "reference": {
@@ -806,12 +813,24 @@
     },
     {
       "external_id": "cartas-0027",
-      "type": "open_answer",
       "text": "Segundo 1 João 4, qual afirmação sobre a natureza de Deus é repetida no capítulo?",
-      "options": null,
-      "accepted_answers": [
-        "Deus é amor",
-        "Deus e amor"
+      "options": [
+        {
+          "text": "Deus é amor",
+          "correct": true
+        },
+        {
+          "text": "Deus é luz",
+          "correct": false
+        },
+        {
+          "text": "Deus é espírito",
+          "correct": false
+        },
+        {
+          "text": "Deus é fiel",
+          "correct": false
+        }
       ],
       "explanation": "'Aquele que não ama não conhece a Deus, porque Deus é amor' (1Jo 4:8,16).",
       "divergence_note": null,
@@ -825,7 +844,6 @@
     },
     {
       "external_id": "cartas-0028",
-      "type": "multiple_choice",
       "text": "Em qual carta Paulo repreende: 'Ó insensatos gálatas, quem vos fascinou?'",
       "options": [
         {
@@ -845,7 +863,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Paulo confronta os que voltavam à lei depois de começar no Espírito (Gl 3:1-3), defendendo a justificação pela fé.",
       "divergence_note": null,
       "reference": {
@@ -858,7 +875,6 @@
     },
     {
       "external_id": "cartas-0029",
-      "type": "multiple_choice",
       "text": "Qual carta apresenta Cristo como 'a imagem do Deus invisível, o primogênito de toda a criação'?",
       "options": [
         {
@@ -878,7 +894,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Colossenses 1:15-17 exalta a supremacia de Cristo: nele foram criadas todas as coisas e nele tudo subsiste.",
       "divergence_note": null,
       "reference": {
@@ -891,7 +906,6 @@
     },
     {
       "external_id": "cartas-0030",
-      "type": "multiple_choice",
       "text": "Em qual carta está o trio de ordens: 'Regozijai-vos sempre. Orai sem cessar. Em tudo dai graças'?",
       "options": [
         {
@@ -911,7 +925,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Porque esta é a vontade de Deus em Cristo Jesus para convosco' (1Ts 5:16-18).",
       "divergence_note": null,
       "reference": {
@@ -924,7 +937,6 @@
     },
     {
       "external_id": "cartas-0031",
-      "type": "multiple_choice",
       "text": "Em qual carta Paulo relata ter ouvido: 'A minha graça te basta, porque o meu poder se aperfeiçoa na fraqueza'?",
       "options": [
         {
@@ -944,7 +956,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Paulo pediu três vezes que o espinho na carne se afastasse; a resposta foi a suficiência da graça (2Co 12:8-9).",
       "divergence_note": null,
       "reference": {
@@ -957,13 +968,24 @@
     },
     {
       "external_id": "cartas-0032",
-      "type": "open_answer",
       "text": "Qual carta breve exorta a 'batalhar pela fé que uma vez foi dada aos santos'?",
-      "options": null,
-      "accepted_answers": [
-        "Judas",
-        "Carta de Judas",
-        "Epístola de Judas"
+      "options": [
+        {
+          "text": "Judas",
+          "correct": true
+        },
+        {
+          "text": "2 Pedro",
+          "correct": false
+        },
+        {
+          "text": "3 João",
+          "correct": false
+        },
+        {
+          "text": "Filemom",
+          "correct": false
+        }
       ],
       "explanation": "Judas escreve com urgência contra falsos mestres infiltrados na igreja (Jd 1:3-4).",
       "divergence_note": null,
@@ -977,7 +999,6 @@
     },
     {
       "external_id": "cartas-0033",
-      "type": "multiple_choice",
       "text": "Em qual carta Paulo diz desejar visitar a igreja a caminho da Espanha, sem nunca ter estado lá?",
       "options": [
         {
@@ -997,7 +1018,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Quando partir para a Espanha irei ter convosco' (Rm 15:24,28) — Paulo escreve a uma igreja que ainda não conhecia pessoalmente.",
       "divergence_note": null,
       "reference": {
@@ -1010,7 +1030,6 @@
     },
     {
       "external_id": "cartas-0034",
-      "type": "multiple_choice",
       "text": "Qual carta de João é dirigida a 'Gaio, o amado'?",
       "options": [
         {
@@ -1030,7 +1049,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'O ancião ao amado Gaio, a quem em verdade eu amo' (3Jo 1:1); a carta elogia a hospitalidade e repreende Diótrefes.",
       "divergence_note": null,
       "reference": {
@@ -1043,7 +1061,6 @@
     },
     {
       "external_id": "cartas-0035",
-      "type": "multiple_choice",
       "text": "Em qual carta Paulo escreve que 'a letra mata, mas o espírito vivifica'?",
       "options": [
         {
@@ -1063,7 +1080,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Contrastando o ministério da lei com o do Espírito, Paulo afirma: 'a letra mata e o espírito vivifica' (2Co 3:6).",
       "divergence_note": null,
       "reference": {
@@ -1076,7 +1092,6 @@
     },
     {
       "external_id": "cartas-0036",
-      "type": "multiple_choice",
       "text": "Qual carta manda 'não desprezar as profecias', mas 'examinar tudo e reter o bem'?",
       "options": [
         {
@@ -1096,7 +1111,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Não desprezeis as profecias. Examinai tudo. Retende o bem' (1Ts 5:20-21) — discernimento sem apagar o Espírito.",
       "divergence_note": null,
       "reference": {
@@ -1109,7 +1123,6 @@
     },
     {
       "external_id": "cartas-0037",
-      "type": "multiple_choice",
       "text": "Qual carta compara a língua a um 'fogo' e a um 'mundo de iniquidade' que nenhum homem pode domar?",
       "options": [
         {
@@ -1129,7 +1142,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'A língua também é um fogo... nenhum homem a pode domar' (Tg 3:6-8); pequena como o leme, governa o navio inteiro.",
       "divergence_note": null,
       "reference": {
@@ -1142,13 +1154,24 @@
     },
     {
       "external_id": "cartas-0038",
-      "type": "open_answer",
       "text": "Em qual carta Pedro fala de 'novos céus e nova terra, em que habita a justiça'?",
-      "options": null,
-      "accepted_answers": [
-        "2 Pedro",
-        "Segunda Pedro",
-        "2Pedro"
+      "options": [
+        {
+          "text": "2 Pedro",
+          "correct": true
+        },
+        {
+          "text": "1 Pedro",
+          "correct": false
+        },
+        {
+          "text": "Judas",
+          "correct": false
+        },
+        {
+          "text": "Hebreus",
+          "correct": false
+        }
       ],
       "explanation": "'Aguardamos novos céus e nova terra, em que habita a justiça' (2Pe 3:13) — a esperança que sustenta a santidade.",
       "divergence_note": null,
@@ -1162,7 +1185,6 @@
     },
     {
       "external_id": "cartas-0039",
-      "type": "multiple_choice",
       "text": "Em qual carta Paulo escreve 'nem judeu nem grego, nem servo nem livre... todos vós sois um em Cristo'?",
       "options": [
         {
@@ -1182,7 +1204,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Não há judeu nem grego; não há servo nem livre; não há macho nem fêmea; porque todos vós sois um em Cristo Jesus' (Gl 3:28).",
       "divergence_note": null,
       "reference": {
@@ -1195,7 +1216,6 @@
     },
     {
       "external_id": "cartas-0040",
-      "type": "multiple_choice",
       "text": "Qual carta compara falsos mestres a 'fontes sem água' e cita o caminho de Balaão?",
       "options": [
         {
@@ -1215,7 +1235,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Estes são fontes sem água, nuvens levadas pela força do vento... seguindo o caminho de Balaão' (2Pe 2:15-17).",
       "divergence_note": null,
       "reference": {
@@ -1228,7 +1247,6 @@
     },
     {
       "external_id": "cartas-0041",
-      "type": "multiple_choice",
       "text": "Qual é a carta mais curta de Paulo, com um único capítulo?",
       "options": [
         {
@@ -1248,7 +1266,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Filemom tem 25 versículos — um apelo pessoal em favor de Onésimo, 'não já como servo, mas como irmão amado' (Fm 1:16).",
       "divergence_note": null,
       "reference": {
@@ -1261,11 +1278,24 @@
     },
     {
       "external_id": "cartas-0042",
-      "type": "open_answer",
       "text": "Na carta de Tiago, qual personagem do Antigo Testamento é lembrado como exemplo de paciência no sofrimento: \"Ouvistes qual foi a paciência de ___\"?",
-      "options": null,
-      "accepted_answers": [
-        "Jó"
+      "options": [
+        {
+          "text": "Jó",
+          "correct": true
+        },
+        {
+          "text": "Abraão",
+          "correct": false
+        },
+        {
+          "text": "Davi",
+          "correct": false
+        },
+        {
+          "text": "Elias",
+          "correct": false
+        }
       ],
       "explanation": "Tiago exorta irmãos que sofriam a ser pacientes \"até a vinda do Senhor\" (Tg 5:7) e, além dos profetas, aponta o exemplo de Jó: \"Ouvistes qual foi a paciência de Jó, e vistes o fim que o Senhor lhe deu; porque o Senhor é muito misericordioso e piedoso\" (Tg 5:11). O fim da história — o Senhor lhe acrescentou \"outro tanto em dobro a tudo quanto dantes possuía\" (Jó 42:10) — mostra que o sofrimento do justo não tem a última palavra.",
       "divergence_note": null,
@@ -1279,7 +1309,6 @@
     },
     {
       "external_id": "cartas-0043",
-      "type": "multiple_choice",
       "text": "Segundo 1 Timóteo 6:10, o que é a raiz de toda espécie de males?",
       "options": [
         {
@@ -1299,7 +1328,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Paulo aponta \"o amor do dinheiro\" como a raiz de toda espécie de males — cobiça pela qual alguns \"se desviaram da fé\" (1Tm 6:10). Ele não condena o dinheiro em si, mas a cobiça que domina o coração; a ideia popular de que o dinheiro é a raiz de todos os males distorce o versículo. O antídoto vem pouco antes: \"é grande ganho a piedade com contentamento\" (1Tm 6:6).",
       "divergence_note": null,
       "reference": {
@@ -1312,7 +1340,6 @@
     },
     {
       "external_id": "cartas-0044",
-      "type": "multiple_choice",
       "text": "Qual mandamento Paulo chama, em Efésios 6, de \"o primeiro mandamento com promessa\"?",
       "options": [
         {
@@ -1332,7 +1359,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Ao ensinar os filhos a obedecer aos pais \"no Senhor, porque isto é justo\" (Ef 6:1), Paulo retoma o mandamento de Êxodo 20:12 e destaca a sua promessa: \"Honra a teu pai e a tua mãe que é o primeiro mandamento com promessa; para que te vá bem, e vivas muito tempo sobre a terra\" (Ef 6:2-3). Logo em seguida, equilibra a relação: \"E vós, pais, não provoqueis a ira a vossos filhos\" (Ef 6:4).",
       "divergence_note": null,
       "reference": {
@@ -1345,7 +1371,6 @@
     },
     {
       "external_id": "cartas-0045",
-      "type": "multiple_choice",
       "text": "Em qual carta está escrito: \"Jesus Cristo é o mesmo ontem, e hoje, e eternamente\"?",
       "options": [
         {
@@ -1365,7 +1390,6 @@
           "correct": true
         }
       ],
-      "accepted_answers": null,
       "explanation": "O versículo (Hb 13:8) aparece entre duas exortações: lembrar-se dos pastores que anunciaram a palavra de Deus e imitar a sua fé (Hb 13:7) e não se deixar levar \"por doutrinas várias e estranhas\" (Hb 13:9). Os líderes passam, mas Cristo permanece — o mesmo Filho de quem a carta já dissera: \"tu és o mesmo, e os teus anos não acabarão\" (Hb 1:12).",
       "divergence_note": null,
       "reference": {
@@ -1378,12 +1402,24 @@
     },
     {
       "external_id": "cartas-0046",
-      "type": "open_answer",
       "text": "Qual pregador Paulo menciona em 1 Coríntios 3:6: \"Eu plantei; ___ regou; mas Deus deu o crescimento\"?",
-      "options": null,
-      "accepted_answers": [
-        "Apolo",
-        "Apolos"
+      "options": [
+        {
+          "text": "Apolo",
+          "correct": true
+        },
+        {
+          "text": "Cefas",
+          "correct": false
+        },
+        {
+          "text": "Timóteo",
+          "correct": false
+        },
+        {
+          "text": "Barnabé",
+          "correct": false
+        }
       ],
       "explanation": "Os coríntios se dividiam em partidos, uns dizendo ser de Paulo e outros de Apolo (1Co 1:12; 3:4), e Paulo responde que ambos eram apenas servos: um plantou, o outro regou, \"mas Deus deu o crescimento\" (1Co 3:6). Apolo, judeu de Alexandria \"eloquente e poderoso nas Escrituras\", havia ministrado em Corinto depois de Paulo (At 18:24,27-28; 19:1). O ponto é que quem planta e quem rega nada são sem Deus, \"que dá o crescimento\" (1Co 3:7).",
       "divergence_note": null,
@@ -1397,7 +1433,6 @@
     },
     {
       "external_id": "cartas-0047",
-      "type": "multiple_choice",
       "text": "Em qual carta Paulo escreve que \"Deus ama ao que dá com alegria\"?",
       "options": [
         {
@@ -1417,7 +1452,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Nos capítulos 8 e 9 de 2 Coríntios, Paulo organiza uma coleta para os santos — os cristãos pobres de Jerusalém (Rm 15:26). Com a imagem da semeadura (\"o que semeia pouco, pouco também ceifará\", 2Co 9:6), ensina que a oferta deve ser voluntária: \"não com tristeza ou por necessidade; porque Deus ama ao que dá com alegria\" (2Co 9:7). E conclui apontando a maior dádiva: \"Graças a Deus pois pelo seu dom inefável\" (2Co 9:15).",
       "divergence_note": null,
       "reference": {

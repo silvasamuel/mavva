@@ -3,7 +3,6 @@
   "questions": [
     {
       "external_id": "milagres-0001",
-      "type": "multiple_choice",
       "text": "Dos dez leprosos que Jesus curou a caminho de Jerusalém, quem voltou para agradecer?",
       "options": [
         {
@@ -23,7 +22,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"E um deles, vendo que estava são, voltou glorificando a Deus... e este era samaritano\" (Lc 17:15-16). Jesus pergunta: \"Não foram dez os limpos? E os nove, onde estão?\" — o estrangeiro deu o exemplo de gratidão.",
       "divergence_note": null,
       "reference": {
@@ -36,7 +34,6 @@
     },
     {
       "external_id": "milagres-0002",
-      "type": "multiple_choice",
       "text": "Quantos pães e peixes Jesus usou para alimentar cerca de cinco mil homens?",
       "options": [
         {
@@ -56,7 +53,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Um menino tinha cinco pães de cevada e dois peixinhos (Jo 6:9). Jesus deu graças, distribuiu, todos comeram e ainda sobraram doze cestos — o único milagre relatado nos quatro Evangelhos. Os sete pães pertencem à outra multiplicação, a dos quatro mil (Mt 15:34).",
       "divergence_note": null,
       "reference": {
@@ -69,13 +65,24 @@
     },
     {
       "external_id": "milagres-0003",
-      "type": "open_answer",
       "text": "Quantos dias Lázaro estava no sepulcro quando Jesus o ressuscitou?",
-      "options": null,
-      "accepted_answers": [
-        "4",
-        "Quatro",
-        "Quatro dias"
+      "options": [
+        {
+          "text": "4",
+          "correct": true
+        },
+        {
+          "text": "3",
+          "correct": false
+        },
+        {
+          "text": "7",
+          "correct": false
+        },
+        {
+          "text": "2",
+          "correct": false
+        }
       ],
       "explanation": "Quando Jesus chegou a Betânia, Lázaro \"já havia quatro dias que estava na sepultura\" (Jo 11:17). Marta ainda adverte: \"já cheira mal\" (Jo 11:39) — o detalhe sublinha que não havia dúvida da morte, engrandecendo o sinal.",
       "divergence_note": null,
@@ -89,7 +96,6 @@
     },
     {
       "external_id": "milagres-0004",
-      "type": "multiple_choice",
       "text": "Qual profeta orou, e um machado de ferro emprestado flutuou nas águas do Jordão?",
       "options": [
         {
@@ -109,7 +115,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Um dos filhos dos profetas deixou cair no Jordão o machado emprestado; Eliseu lançou um pau na água \"e fez flutuar o ferro\" (2Rs 6:6). O milagre mostra o cuidado de Deus até com as pequenas aflições dos seus servos.",
       "divergence_note": null,
       "reference": {
@@ -122,7 +127,6 @@
     },
     {
       "external_id": "milagres-0005",
-      "type": "multiple_choice",
       "text": "O que aconteceu com as águas do mar Vermelho quando Moisés estendeu a sua mão sobre elas?",
       "options": [
         {
@@ -142,7 +146,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"O Senhor fez retirar o mar por um forte vento oriental toda aquela noite; e o mar tornou-se em seco, e as águas foram partidas\" (Êx 14:21). Israel passou em seco, e as mesmas águas cobriram o exército de Faraó.",
       "divergence_note": null,
       "reference": {
@@ -155,7 +158,6 @@
     },
     {
       "external_id": "milagres-0006",
-      "type": "multiple_choice",
       "text": "Na cura do paralítico descido pelo telhado, o que Jesus disse primeiro ao doente?",
       "options": [
         {
@@ -175,7 +177,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Antes de curar o corpo, Jesus tratou da necessidade maior: \"Filho, perdoados estão os teus pecados\" (Mc 2:5). A cura física veio em seguida, como prova visível de que \"o Filho do homem tem na terra poder para perdoar pecados\" (Mc 2:10-11).",
       "divergence_note": null,
       "reference": {
@@ -188,13 +189,24 @@
     },
     {
       "external_id": "milagres-0007",
-      "type": "open_answer",
       "text": "Qual apóstolo andou sobre as águas ao encontro de Jesus antes de começar a afundar?",
-      "options": null,
-      "accepted_answers": [
-        "Pedro",
-        "Simão Pedro",
-        "Simão"
+      "options": [
+        {
+          "text": "Pedro",
+          "correct": true
+        },
+        {
+          "text": "João",
+          "correct": false
+        },
+        {
+          "text": "Tiago",
+          "correct": false
+        },
+        {
+          "text": "André",
+          "correct": false
+        }
       ],
       "explanation": "Pedro pediu: \"Senhor, se és tu, manda-me ir ter contigo por cima das águas\" (Mt 14:28). Andou, mas ao ver o vento forte temeu e começou a afundar; Jesus o segurou dizendo: \"Homem de pouca fé, por que duvidaste?\" (Mt 14:31).",
       "divergence_note": null,
@@ -208,7 +220,6 @@
     },
     {
       "external_id": "milagres-0008",
-      "type": "multiple_choice",
       "text": "Qual foi a décima e última praga enviada sobre o Egito?",
       "options": [
         {
@@ -228,7 +239,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "À meia-noite o Senhor feriu todo primogênito do Egito, de Faraó ao cativo (Êx 12:29). Israel foi poupado pelo sangue do cordeiro nos umbrais — origem da Páscoa e figura que o Novo Testamento aplica a Cristo, \"nosso Cordeiro pascal\" (1Co 5:7).",
       "divergence_note": null,
       "reference": {
@@ -241,7 +251,6 @@
     },
     {
       "external_id": "milagres-0009",
-      "type": "multiple_choice",
       "text": "No monte Carmelo, o que o fogo do Senhor consumiu além do holocausto de Elias?",
       "options": [
         {
@@ -261,7 +270,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Então caiu fogo do Senhor, e consumiu o holocausto, e a lenha, e as pedras, e o pó, e ainda lambeu a água que estava no rego\" (1Rs 18:38). O excesso deliberado — Elias havia encharcado tudo três vezes — tirou qualquer dúvida de quem é Deus em Israel.",
       "divergence_note": null,
       "reference": {
@@ -274,7 +282,6 @@
     },
     {
       "external_id": "milagres-0010",
-      "type": "multiple_choice",
       "text": "Em Atos, que milagre acompanhou a oração de Paulo e Silas na prisão de Filipos?",
       "options": [
         {
@@ -294,7 +301,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Enquanto oravam e cantavam hinos à meia-noite, \"sobreveio tão grande terremoto, que os alicerces do cárcere se moveram\" (At 16:26). O episódio termina com a conversão do carcereiro e sua casa. A libertação por um anjo aconteceu com Pedro (At 12), não aqui.",
       "divergence_note": null,
       "reference": {
@@ -307,7 +313,6 @@
     },
     {
       "external_id": "milagres-0011",
-      "type": "multiple_choice",
       "text": "Que milagre Jesus fez para pagar o imposto do templo?",
       "options": [
         {
@@ -327,7 +332,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jesus mandou Pedro pescar; na boca do primeiro peixe haveria um estáter para pagar por ambos (Mt 17:27).",
       "divergence_note": null,
       "reference": {
@@ -340,7 +344,6 @@
     },
     {
       "external_id": "milagres-0012",
-      "type": "multiple_choice",
       "text": "Quem Jesus ressuscitou depois de já estar quatro dias no sepulcro?",
       "options": [
         {
@@ -360,7 +363,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Diante do túmulo, Jesus clamou 'Lázaro, vem para fora' e o ressuscitou (Jo 11:43-44), declarando-se a ressurreição e a vida.",
       "divergence_note": null,
       "reference": {
@@ -373,7 +375,6 @@
     },
     {
       "external_id": "milagres-0013",
-      "type": "multiple_choice",
       "text": "Como Jesus acalmou a tempestade no mar da Galileia?",
       "options": [
         {
@@ -393,7 +394,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jesus repreendeu o vento e disse ao mar 'Cala-te, aquieta-te'; fez-se grande bonança e os discípulos temeram (Mc 4:39).",
       "divergence_note": null,
       "reference": {
@@ -406,11 +406,24 @@
     },
     {
       "external_id": "milagres-0014",
-      "type": "open_answer",
       "text": "Qual profeta multiplicou o azeite da viúva para pagar suas dívidas?",
-      "options": null,
-      "accepted_answers": [
-        "Eliseu"
+      "options": [
+        {
+          "text": "Eliseu",
+          "correct": true
+        },
+        {
+          "text": "Elias",
+          "correct": false
+        },
+        {
+          "text": "Samuel",
+          "correct": false
+        },
+        {
+          "text": "Isaías",
+          "correct": false
+        }
       ],
       "explanation": "Eliseu mandou a viúva encher vasilhas com o pouco azeite que tinha; o azeite não faltou até encher todas (2Rs 4:1-7).",
       "divergence_note": null,
@@ -424,7 +437,6 @@
     },
     {
       "external_id": "milagres-0015",
-      "type": "multiple_choice",
       "text": "Que praga do Egito cobriu a terra de trevas por três dias?",
       "options": [
         {
@@ -444,7 +456,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "A nona praga foram trevas espessas sobre o Egito por três dias, mas havia luz onde habitavam os israelitas (Êx 10:22-23).",
       "divergence_note": null,
       "reference": {
@@ -457,7 +468,6 @@
     },
     {
       "external_id": "milagres-0016",
-      "type": "multiple_choice",
       "text": "Qual profeta fez o machado de ferro flutuar sobre a água?",
       "options": [
         {
@@ -477,7 +487,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Quando o ferro de um machado caiu no Jordão, Eliseu lançou um pau na água e o ferro veio à tona (2Rs 6:5-7).",
       "divergence_note": null,
       "reference": {
@@ -491,7 +500,6 @@
     },
     {
       "external_id": "milagres-0017",
-      "type": "multiple_choice",
       "text": "O que aconteceu com a mão de Moisés como sinal diante do povo?",
       "options": [
         {
@@ -511,7 +519,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Deus deu a Moisés o sinal da mão que ficava leprosa e era restaurada, para autenticar seu chamado (Êx 4:6-7).",
       "divergence_note": null,
       "reference": {
@@ -524,12 +531,24 @@
     },
     {
       "external_id": "milagres-0018",
-      "type": "open_answer",
       "text": "Que parte do corpo Jesus tocou para curar o servo cujo membro Pedro havia cortado?",
-      "options": null,
-      "accepted_answers": [
-        "Orelha",
-        "A orelha"
+      "options": [
+        {
+          "text": "Orelha",
+          "correct": true
+        },
+        {
+          "text": "Mão",
+          "correct": false
+        },
+        {
+          "text": "Olho",
+          "correct": false
+        },
+        {
+          "text": "Pé",
+          "correct": false
+        }
       ],
       "explanation": "Ao prenderem Jesus, Pedro cortou a orelha de Malco; Jesus a tocou e o curou (Lc 22:50-51), o último milagre antes da cruz.",
       "divergence_note": null,
@@ -543,7 +562,6 @@
     },
     {
       "external_id": "milagres-0019",
-      "type": "multiple_choice",
       "text": "Como os três amigos de Daniel sobreviveram à fornalha ardente?",
       "options": [
         {
@@ -563,7 +581,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Nabucodonosor viu quatro homens soltos no fogo, 'e o aspecto do quarto é semelhante ao Filho de Deus' (Dn 3:25); saíram ilesos.",
       "divergence_note": null,
       "reference": {
@@ -576,7 +593,6 @@
     },
     {
       "external_id": "milagres-0020",
-      "type": "multiple_choice",
       "text": "Qual foi a primeira praga que transformou as águas do Nilo?",
       "options": [
         {
@@ -596,7 +612,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Na primeira praga, Arão estendeu a vara e as águas do Nilo se tornaram sangue, e os peixes morreram (Êx 7:20-21).",
       "divergence_note": null,
       "reference": {
@@ -609,7 +624,6 @@
     },
     {
       "external_id": "milagres-0021",
-      "type": "multiple_choice",
       "text": "Qual profeta multiplicou vinte pães de cevada para alimentar cem homens, com sobras?",
       "options": [
         {
@@ -629,7 +643,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Dá ao povo, para que coma... e ainda sobejará' (2Rs 4:42-44); Eliseu antecipa a multiplicação feita por Jesus.",
       "divergence_note": null,
       "reference": {
@@ -642,12 +655,24 @@
     },
     {
       "external_id": "milagres-0022",
-      "type": "open_answer",
       "text": "Qual discípula Pedro ressuscitou em Jope, também chamada Dorcas?",
-      "options": null,
-      "accepted_answers": [
-        "Tabita",
-        "Dorcas"
+      "options": [
+        {
+          "text": "Tabita",
+          "correct": true
+        },
+        {
+          "text": "Lídia",
+          "correct": false
+        },
+        {
+          "text": "Priscila",
+          "correct": false
+        },
+        {
+          "text": "Febe",
+          "correct": false
+        }
       ],
       "explanation": "'Tabita, levanta-te. Ela abriu os olhos' (At 9:40); conhecida pelas boas obras, também chamada Dorcas.",
       "divergence_note": null,
@@ -661,7 +686,6 @@
     },
     {
       "external_id": "milagres-0023",
-      "type": "multiple_choice",
       "text": "Que sinal Deus deu a Gideão usando um velo de lã?",
       "options": [
         {
@@ -681,7 +705,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Gideão pediu orvalho apenas no velo e, depois, apenas no chão; Deus atendeu nas duas noites (Jz 6:36-40).",
       "divergence_note": null,
       "reference": {
@@ -694,7 +717,6 @@
     },
     {
       "external_id": "milagres-0024",
-      "type": "multiple_choice",
       "text": "O que aconteceu quando Eliseu lançou sal na fonte de Jericó?",
       "options": [
         {
@@ -714,7 +736,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Assim ficaram sãs aquelas águas até ao dia de hoje, conforme a palavra que Eliseu tinha dito' (2Rs 2:21-22).",
       "divergence_note": null,
       "reference": {
@@ -727,7 +748,6 @@
     },
     {
       "external_id": "milagres-0025",
-      "type": "multiple_choice",
       "text": "Que milagre libertou Pedro da prisão de Herodes?",
       "options": [
         {
@@ -747,7 +767,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Eis que sobreveio o anjo do Senhor... e caíram-lhe das mãos as cadeias'; a porta de ferro abriu-se por si mesma (At 12:7-10).",
       "divergence_note": null,
       "reference": {
@@ -760,7 +779,6 @@
     },
     {
       "external_id": "milagres-0026",
-      "type": "multiple_choice",
       "text": "Que sinal acompanhou a morte de Jesus no templo?",
       "options": [
         {
@@ -780,7 +798,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'E eis que o véu do templo se rasgou em dois, de alto a baixo' (Mt 27:51) — o caminho ao Santo dos Santos foi aberto (Hb 10:19-20).",
       "divergence_note": null,
       "reference": {
@@ -794,7 +811,6 @@
     },
     {
       "external_id": "milagres-0027",
-      "type": "multiple_choice",
       "text": "O que Jesus fez ao ver a viúva de Naim levando o filho único para sepultar?",
       "options": [
         {
@@ -814,7 +830,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Moço, a ti te digo: Levanta-te. E o defunto assentou-se e começou a falar' (Lc 7:13-15) — o Senhor 'moveu-se de íntima compaixão'.",
       "divergence_note": null,
       "reference": {
@@ -827,7 +842,6 @@
     },
     {
       "external_id": "milagres-0028",
-      "type": "multiple_choice",
       "text": "Que sinal precedeu a libertação de Paulo e Silas na prisão de Filipos?",
       "options": [
         {
@@ -847,7 +861,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Enquanto oravam e cantavam louvores à meia-noite, o terremoto abriu as portas e soltou as prisões de todos (At 16:25-26).",
       "divergence_note": null,
       "reference": {
@@ -861,7 +874,6 @@
     },
     {
       "external_id": "milagres-0029",
-      "type": "multiple_choice",
       "text": "Que milagre Jesus operou com a sogra de Pedro?",
       "options": [
         {
@@ -881,7 +893,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Repreendeu a febre, e esta a deixou; e, levantando-se logo, servia-os' (Lc 4:38-39).",
       "divergence_note": null,
       "reference": {
@@ -894,7 +905,6 @@
     },
     {
       "external_id": "milagres-0030",
-      "type": "multiple_choice",
       "text": "Como o cego de nascença recuperou a vista, segundo João 9?",
       "options": [
         {
@@ -914,7 +924,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Vai, lava-te no tanque de Siloé. Foi, pois, e lavou-se, e voltou vendo' (Jo 9:6-7).",
       "divergence_note": null,
       "reference": {
@@ -927,17 +936,24 @@
     },
     {
       "external_id": "milagres-0031",
-      "type": "open_answer",
       "text": "Que parte da veste de Jesus a mulher com fluxo de sangue tocou para ser curada?",
-      "options": null,
-      "accepted_answers": [
-        "A orla",
-        "A orla da veste",
-        "A borda",
-        "A franja",
-        "orla",
-        "borda",
-        "barra"
+      "options": [
+        {
+          "text": "A orla",
+          "correct": true
+        },
+        {
+          "text": "A manga",
+          "correct": false
+        },
+        {
+          "text": "O cinto",
+          "correct": false
+        },
+        {
+          "text": "A gola",
+          "correct": false
+        }
       ],
       "explanation": "'Se eu tão-somente tocar na sua veste, ficarei sã'; Jesus disse: 'A tua fé te salvou' (Mt 9:20-22).",
       "divergence_note": null,
@@ -951,7 +967,6 @@
     },
     {
       "external_id": "milagres-0032",
-      "type": "multiple_choice",
       "text": "Que árvore Jesus amaldiçoou por ter folhas e nenhum fruto, e ela secou até a raiz?",
       "options": [
         {
@@ -971,7 +986,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Nunca mais coma alguém fruto de ti'; no dia seguinte 'viram que a figueira se havia secado desde as raízes' (Mc 11:14,20).",
       "divergence_note": null,
       "reference": {
@@ -984,7 +998,6 @@
     },
     {
       "external_id": "milagres-0033",
-      "type": "multiple_choice",
       "text": "Que milagre Jesus fez em Caná pela segunda vez, a pedido de um oficial do rei?",
       "options": [
         {
@@ -1004,7 +1017,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Vai, o teu filho vive'; o oficial soube que a febre o deixara na mesma hora (Jo 4:46-53) — o segundo sinal em Caná.",
       "divergence_note": null,
       "reference": {
@@ -1017,7 +1029,6 @@
     },
     {
       "external_id": "milagres-0034",
-      "type": "multiple_choice",
       "text": "Quantas pessoas Jesus alimentou com sete pães e alguns peixinhos, na segunda multiplicação?",
       "options": [
         {
@@ -1037,7 +1048,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Os que comeram eram quatro mil homens, além de mulheres e crianças', e sobraram sete cestos (Mt 15:34-38).",
       "divergence_note": null,
       "reference": {
@@ -1050,7 +1060,6 @@
     },
     {
       "external_id": "milagres-0035",
-      "type": "multiple_choice",
       "text": "Que sinais Deus operou pela sombra de Pedro e pelos lenços de Paulo, segundo Atos?",
       "options": [
         {
@@ -1070,7 +1079,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Traziam os doentes 'para que ao menos a sombra de Pedro cobrisse alguns' (At 5:15); lenços de Paulo curavam (At 19:12).",
       "divergence_note": null,
       "reference": {
@@ -1083,7 +1091,6 @@
     },
     {
       "external_id": "milagres-0036",
-      "type": "multiple_choice",
       "text": "Que milagre acompanhou a batalha de Josué contra os amorreus, além de o sol se deter?",
       "options": [
         {
@@ -1103,7 +1110,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'O SENHOR lançou do céu grandes pedras... mais morreram da saraiva do que os filhos de Israel mataram à espada' (Js 10:11).",
       "divergence_note": null,
       "reference": {
@@ -1116,11 +1122,24 @@
     },
     {
       "external_id": "milagres-0037",
-      "type": "open_answer",
       "text": "Qual profeta fez descer fogo do céu para consumir os soldados enviados pelo rei Acazias?",
-      "options": null,
-      "accepted_answers": [
-        "Elias"
+      "options": [
+        {
+          "text": "Elias",
+          "correct": true
+        },
+        {
+          "text": "Eliseu",
+          "correct": false
+        },
+        {
+          "text": "Moisés",
+          "correct": false
+        },
+        {
+          "text": "Samuel",
+          "correct": false
+        }
       ],
       "explanation": "'Se eu sou homem de Deus, desça fogo do céu e te consuma a ti e aos teus cinquenta' — e assim foi, duas vezes (2Rs 1:10-12).",
       "divergence_note": null,
@@ -1134,7 +1153,6 @@
     },
     {
       "external_id": "milagres-0038",
-      "type": "multiple_choice",
       "text": "Como Moisés fez sair água da rocha em Refidim?",
       "options": [
         {
@@ -1154,7 +1172,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Ferirás a rocha, e dela sairão águas, para que o povo beba' (Êx 17:6) — em Horebe, diante dos anciãos.",
       "divergence_note": null,
       "reference": {
@@ -1167,7 +1184,6 @@
     },
     {
       "external_id": "milagres-0039",
-      "type": "multiple_choice",
       "text": "Que animal Deus fez falar para repreender o profeta Balaão?",
       "options": [
         {
@@ -1187,7 +1203,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Abriu o SENHOR a boca da jumenta, e ela disse a Balaão: Que te fiz eu, que me espancaste?' (Nm 22:28).",
       "divergence_note": null,
       "reference": {
@@ -1200,7 +1215,6 @@
     },
     {
       "external_id": "milagres-0040",
-      "type": "multiple_choice",
       "text": "Qual foi a segunda praga sobre o Egito?",
       "options": [
         {
@@ -1220,7 +1234,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Farei que rãs cubram a tua terra... subirão e entrarão na tua casa' (Êx 8:2-6).",
       "divergence_note": null,
       "reference": {
@@ -1233,7 +1246,6 @@
     },
     {
       "external_id": "milagres-0041",
-      "type": "multiple_choice",
       "text": "O que aconteceu com a vara de Arão diante de Faraó?",
       "options": [
         {
@@ -1253,7 +1265,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Arão lançou a sua vara diante de Faraó, e tornou-se em serpente... mas a vara de Arão tragou as varas deles' (Êx 7:10-12).",
       "divergence_note": null,
       "reference": {
@@ -1266,7 +1277,6 @@
     },
     {
       "external_id": "milagres-0042",
-      "type": "multiple_choice",
       "text": "Que sinal confirmou o sacerdócio de Arão quando as varas das tribos foram postas no tabernáculo?",
       "options": [
         {
@@ -1286,7 +1296,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'A vara de Arão... brotara, e produzira gomos, e dera flores, e amadurecera amêndoas' (Nm 17:8) — guardada depois na arca.",
       "divergence_note": null,
       "reference": {
@@ -1299,7 +1308,6 @@
     },
     {
       "external_id": "milagres-0043",
-      "type": "multiple_choice",
       "text": "O que havia de extraordinário na sarça que Moisés viu junto ao monte Horebe?",
       "options": [
         {
@@ -1319,7 +1327,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O Anjo do Senhor apareceu a Moisés numa chama de fogo no meio de uma sarça, \"e eis que a sarça ardia no fogo, e a sarça não se consumia\" (Êx 3:2). Quando Moisés se aproximou para ver \"esta grande visão\", Deus o chamou do meio da sarça e o enviou a Faraó para tirar Israel do Egito (Êx 3:3-10).",
       "divergence_note": null,
       "reference": {
@@ -1332,7 +1339,6 @@
     },
     {
       "external_id": "milagres-0044",
-      "type": "multiple_choice",
       "text": "O que não se acabou na casa da viúva de Sarepta durante a seca, conforme a palavra de Elias?",
       "options": [
         {
@@ -1352,7 +1358,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "A viúva tinha apenas \"um punhado de farinha numa panela, e um pouco de azeite numa botija\", mas, conforme a palavra de Elias, fez primeiro um bolo para o profeta (1Rs 17:12-15). E assim foi: \"Da panela a farinha se não acabou, e da botija o azeite não faltou\", como o Senhor dissera por meio de Elias (1Rs 17:16). Jesus lembrou essa estrangeira de Sidom como exemplo da graça de Deus alcançando os de fora (Lc 4:25-26).",
       "divergence_note": null,
       "reference": {
@@ -1365,28 +1370,24 @@
     },
     {
       "external_id": "milagres-0045",
-      "type": "open_answer",
       "text": "Com que Elias feriu as águas do Jordão, que se dividiram para ele e Eliseu passarem em seco?",
-      "options": null,
-      "accepted_answers": [
-        "Capa",
-        "A capa",
-        "Sua capa",
-        "A sua capa",
-        "Com a capa",
-        "Com sua capa",
-        "Com a sua capa",
-        "Capa de Elias",
-        "A capa de Elias",
-        "Manto",
-        "O manto",
-        "Seu manto",
-        "O seu manto",
-        "Com o manto",
-        "Com seu manto",
-        "Com o seu manto",
-        "Manto de Elias",
-        "O manto de Elias"
+      "options": [
+        {
+          "text": "A capa",
+          "correct": true
+        },
+        {
+          "text": "O cajado",
+          "correct": false
+        },
+        {
+          "text": "O sal",
+          "correct": false
+        },
+        {
+          "text": "A mão",
+          "correct": false
+        }
       ],
       "explanation": "\"Então Elias tomou a sua capa, e a dobrou, e feriu as águas, as quais se dividiram para as duas bandas; e passaram ambos em seco\" (2Rs 2:8). Depois que Elias subiu ao céu, Eliseu tomou a capa que lhe caíra, feriu o Jordão perguntando \"Onde está o Senhor, Deus de Elias?\", e as águas se dividiram de novo (2Rs 2:13-14).",
       "divergence_note": null,
@@ -1400,7 +1401,6 @@
     },
     {
       "external_id": "milagres-0046",
-      "type": "multiple_choice",
       "text": "O que aconteceu com a estátua de Dagom quando os filisteus puseram a arca de Deus no templo desse deus, em Asdode?",
       "options": [
         {
@@ -1420,7 +1420,6 @@
           "correct": true
         }
       ],
-      "accepted_answers": null,
       "explanation": "Na manhã seguinte, \"Dagom estava caído com o rosto em terra, diante da arca do Senhor\"; posto de volta no lugar, no outro dia apareceu caído de novo, com a cabeça e as palmas das mãos cortadas sobre o limiar (1Sm 5:3-4). O ídolo prostrado mostrava que o Deus de Israel não fora derrotado, embora a arca tivesse sido capturada.",
       "divergence_note": null,
       "reference": {

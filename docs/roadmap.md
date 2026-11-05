@@ -6,7 +6,7 @@
 
 - [x] Documentação: PRD, arquitetura, banco, API, frontend
 - [ ] Infra: monorepo, Docker/docker-compose, CI, pre-commit, lint/format
-- [ ] Backend: auth (JWT + refresh + reset de senha), quiz, correção aberta,
+- [ ] Backend: auth (JWT + refresh + reset de senha), quiz,
       gamificação (XP/nível/streak/meta), SRS, dashboard, conquistas
 - [ ] Seeds: 23 categorias, conquistas, banco de perguntas (meta 400–600 curadas)
 - [ ] Frontend: login/cadastro/recuperação, dashboard completo, fluxo de quiz,

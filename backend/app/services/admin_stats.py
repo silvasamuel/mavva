@@ -29,7 +29,6 @@ from app.models.enums import (
     FriendshipStatus,
     QuestionFlagStatus,
     QuestionProposalStatus,
-    QuestionType,
     QuizMode,
     Testament,
 )
@@ -86,7 +85,6 @@ def dashboard(db: Session) -> AdminDashboardOut:
     (
         questions_total,
         questions_active,
-        questions_open,
         questions_old,
         questions_easy,
         questions_medium,
@@ -96,7 +94,6 @@ def dashboard(db: Session) -> AdminDashboardOut:
         select(
             func.count(),
             func.count().filter(Question.is_active.is_(True)),
-            func.count().filter(Question.type == QuestionType.OPEN_ANSWER),
             func.count().filter(Question.testament == Testament.OLD),
             func.count().filter(Question.difficulty == Difficulty.EASY),
             func.count().filter(Question.difficulty == Difficulty.MEDIUM),
@@ -162,7 +159,6 @@ def dashboard(db: Session) -> AdminDashboardOut:
             total=questions_total_n,
             active=questions_active_n,
             inactive=questions_total_n - questions_active_n,
-            open_answer=_n(questions_open),
             old_testament=_n(questions_old),
             easy=_n(questions_easy),
             medium=_n(questions_medium),

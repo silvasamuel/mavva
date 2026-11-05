@@ -3,12 +3,24 @@
   "questions": [
     {
       "external_id": "organizacao-da-biblia-0001",
-      "type": "open_answer",
       "text": "Quantos livros a Bíblia protestante contém ao todo?",
-      "options": null,
-      "accepted_answers": [
-        "66",
-        "Sessenta e seis"
+      "options": [
+        {
+          "text": "66",
+          "correct": true
+        },
+        {
+          "text": "73",
+          "correct": false
+        },
+        {
+          "text": "39",
+          "correct": false
+        },
+        {
+          "text": "27",
+          "correct": false
+        }
       ],
       "explanation": "São 39 livros no Antigo Testamento e 27 no Novo, totalizando 66 — escritos ao longo de cerca de 1.500 anos, por dezenas de autores, com uma única história: a redenção em Cristo.",
       "divergence_note": "Bíblias católicas incluem 7 livros deuterocanônicos no AT (Tobias, Judite, 1-2 Macabeus, Sabedoria, Eclesiástico, Baruque), somando 73. A contagem de 66 segue o cânon hebraico, adotado pelas igrejas protestantes.",
@@ -22,7 +34,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0002",
-      "type": "multiple_choice",
       "text": "Como Jesus se referiu às três divisões da Bíblia hebraica em Lucas 24:44?",
       "options": [
         {
@@ -42,7 +53,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Convinha que se cumprisse tudo o que de mim estava escrito na lei de Moisés, e nos profetas, e nos salmos\" (Lc 24:44) — as três seções da Bíblia hebraica (Torá, Nevi'im, Ketuvim), sendo Salmos o primeiro e maior livro dos \"Escritos\".",
       "divergence_note": null,
       "reference": {
@@ -55,7 +65,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0003",
-      "type": "multiple_choice",
       "text": "Quais evangelhos são chamados de \"sinóticos\"?",
       "options": [
         {
@@ -75,7 +84,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Mateus, Marcos e Lucas compartilham estrutura, episódios e até frases inteiras — por isso \"sinóticos\" (vistos em conjunto). João segue caminho próprio, com longos discursos e sinais selecionados \"para que creiais\" (Jo 20:31).",
       "divergence_note": null,
       "reference": {
@@ -88,7 +96,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0004",
-      "type": "multiple_choice",
       "text": "Quais são os livros poéticos e de sabedoria do Antigo Testamento?",
       "options": [
         {
@@ -108,7 +115,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Os cinco livros poéticos ficam entre os históricos e os proféticos: Jó (sofrimento), Salmos (oração e louvor), Provérbios (sabedoria prática), Eclesiastes (o sentido da vida \"debaixo do sol\") e Cantares (amor conjugal).",
       "divergence_note": null,
       "reference": {
@@ -121,7 +127,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0005",
-      "type": "multiple_choice",
       "text": "Por que Isaías, Jeremias, Ezequiel e Daniel são chamados \"profetas maiores\"?",
       "options": [
         {
@@ -141,7 +146,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Maiores\" e \"menores\" referem-se apenas ao tamanho dos escritos: Isaías tem 66 capítulos, Obadias tem 21 versículos. Lamentações costuma ser contado junto aos maiores por acompanhar Jeremias (daí os \"5 profetas maiores\"), e os doze menores formavam um único rolo (\"O Livro dos Doze\") na Bíblia hebraica.",
       "divergence_note": null,
       "reference": {
@@ -154,7 +158,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0006",
-      "type": "multiple_choice",
       "text": "Quais são o primeiro e o último livro da Bíblia?",
       "options": [
         {
@@ -174,7 +177,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Gênesis abre com a criação e a queda; Apocalipse fecha com a nova criação, onde a árvore da vida reaparece (Ap 22:2) e a maldição é desfeita (Ap 22:3). O fim responde ao princípio — a Bíblia é uma história completa.",
       "divergence_note": null,
       "reference": {
@@ -187,7 +189,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0007",
-      "type": "multiple_choice",
       "text": "O que são as \"epístolas gerais\" (ou católicas) do Novo Testamento?",
       "options": [
         {
@@ -207,7 +208,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Gerais\" ou \"católicas\" (= universais) porque não se dirigem a uma igreja local nomeada, como as de Paulo. Tiago escreve \"às doze tribos que andam dispersas\" (Tg 1:1); Pedro, \"aos estrangeiros dispersos\" (1Pe 1:1).",
       "divergence_note": null,
       "reference": {
@@ -220,12 +220,24 @@
     },
     {
       "external_id": "organizacao-da-biblia-0008",
-      "type": "open_answer",
       "text": "Quantos livros compõem o Antigo Testamento na Bíblia protestante?",
-      "options": null,
-      "accepted_answers": [
-        "39",
-        "Trinta e nove"
+      "options": [
+        {
+          "text": "39",
+          "correct": true
+        },
+        {
+          "text": "27",
+          "correct": false
+        },
+        {
+          "text": "46",
+          "correct": false
+        },
+        {
+          "text": "42",
+          "correct": false
+        }
       ],
       "explanation": "39 livros: 5 da Lei, 12 históricos, 5 poéticos, 5 profetas maiores e 12 menores. O cânon hebraico contém os mesmos textos agrupados em 24 rolos (Samuel, Reis e Crônicas unidos, os Doze num só livro).",
       "divergence_note": null,
@@ -239,7 +251,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0009",
-      "type": "multiple_choice",
       "text": "As divisões em capítulos e versículos fazem parte dos textos originais da Bíblia?",
       "options": [
         {
@@ -259,7 +270,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Os manuscritos originais eram texto corrido. Segundo os historiadores, a divisão em capítulos é atribuída a Estêvão Langton (século XIII) e a versificação impressa a Robert Estienne (século XVI). São ferramentas úteis de referência — mas não inspiradas, e às vezes cortam o texto em pontos infelizes.",
       "divergence_note": null,
       "reference": {
@@ -272,7 +282,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0010",
-      "type": "multiple_choice",
       "text": "Qual livro do Novo Testamento é narrativo e conta a história da igreja primitiva, ligando os Evangelhos às epístolas?",
       "options": [
         {
@@ -292,7 +301,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Atos continua o relato de Lucas \"acerca de tudo que Jesus começou, não só a fazer, mas a ensinar\" (At 1:1), narrando trinta anos de expansão do evangelho de Jerusalém a Roma — o cenário histórico em que as epístolas foram escritas.",
       "divergence_note": null,
       "reference": {
@@ -305,7 +313,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0011",
-      "type": "multiple_choice",
       "text": "Quantos livros tem a Bíblia protestante ao todo?",
       "options": [
         {
@@ -325,7 +332,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "A Bíblia protestante tem 66 livros: 39 no Antigo Testamento e 27 no Novo (Gn 1:1 abre o cânon).",
       "divergence_note": null,
       "reference": {
@@ -339,7 +345,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0012",
-      "type": "multiple_choice",
       "text": "Como se chama a primeira divisão do AT, com os cinco livros de Moisés?",
       "options": [
         {
@@ -359,7 +364,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Pentateuco ('cinco rolos') reúne Gênesis a Deuteronômio, a Lei de Moisés (Gn 1:1).",
       "divergence_note": null,
       "reference": {
@@ -372,7 +376,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0013",
-      "type": "multiple_choice",
       "text": "Quantos evangelhos há no Novo Testamento?",
       "options": [
         {
@@ -392,7 +395,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Mateus, Marcos, Lucas e João narram a vida de Cristo sob quatro perspectivas (Mt 1:1).",
       "divergence_note": null,
       "reference": {
@@ -405,7 +407,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0014",
-      "type": "multiple_choice",
       "text": "Como são chamados Mateus, Marcos e Lucas por sua semelhança de conteúdo?",
       "options": [
         {
@@ -425,7 +426,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Sinóticos' (ver em conjunto) descreve os três evangelhos com estrutura e relatos paralelos (Lc 1:1-4).",
       "divergence_note": null,
       "reference": {
@@ -438,7 +438,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0015",
-      "type": "multiple_choice",
       "text": "Quantos livros tem o Antigo Testamento na Bíblia protestante?",
       "options": [
         {
@@ -458,7 +457,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O AT protestante tem 39 livros, da Lei aos Profetas (Gn 1:1).",
       "divergence_note": null,
       "reference": {
@@ -472,7 +470,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0016",
-      "type": "multiple_choice",
       "text": "Como se chamam os profetas curtos, de Oseias a Malaquias?",
       "options": [
         {
@@ -492,7 +489,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Os doze profetas menores (Os a Ml) recebem esse nome pela extensão, não pela importância (Os 1:1).",
       "divergence_note": null,
       "reference": {
@@ -505,7 +501,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0017",
-      "type": "multiple_choice",
       "text": "Como se chama o grupo de livros como Jó, Salmos, Provérbios e Eclesiastes?",
       "options": [
         {
@@ -525,7 +520,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Os livros poéticos/sapienciais tratam de louvor, sofrimento e sabedoria (Jó 1:1).",
       "divergence_note": null,
       "reference": {
@@ -538,7 +532,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0018",
-      "type": "multiple_choice",
       "text": "Quantos livros tem o Novo Testamento?",
       "options": [
         {
@@ -558,7 +551,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O NT reúne 27 livros: evangelhos, Atos, cartas e Apocalipse (Mt 1:1 abre o NT).",
       "divergence_note": null,
       "reference": {
@@ -572,7 +564,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0019",
-      "type": "multiple_choice",
       "text": "Como se chamam Isaías, Jeremias, Ezequiel e Daniel?",
       "options": [
         {
@@ -592,7 +583,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "São chamados 'maiores' pela extensão de seus livros, não por hierarquia (Is 1:1).",
       "divergence_note": null,
       "reference": {
@@ -606,7 +596,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0020",
-      "type": "multiple_choice",
       "text": "A que testamento pertence o livro dos Salmos?",
       "options": [
         {
@@ -626,7 +615,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Salmos integra os livros poéticos do Antigo Testamento (Sl 1:1).",
       "divergence_note": null,
       "reference": {
@@ -639,7 +627,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0021",
-      "type": "multiple_choice",
       "text": "Quantos capítulos tem o Salmo mais curto da Bíblia, o Salmo 117?",
       "options": [
         {
@@ -659,7 +646,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O Salmo 117 tem apenas dois versículos, convocando todas as nações a louvarem o SENHOR (Sl 117:1-2).",
       "divergence_note": null,
       "reference": {
@@ -673,7 +659,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0022",
-      "type": "multiple_choice",
       "text": "Qual é a divisão histórica do Antigo Testamento, de Josué a Ester?",
       "options": [
         {
@@ -693,7 +678,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "De Josué a Ester, os livros narram a conquista, os juízes, a monarquia, o exílio e o retorno (Js 1:1).",
       "divergence_note": null,
       "reference": {
@@ -706,7 +690,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0023",
-      "type": "multiple_choice",
       "text": "Quais cartas do Novo Testamento são chamadas 'epístolas da prisão'?",
       "options": [
         {
@@ -726,7 +709,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Nelas Paulo se identifica como prisioneiro, escrevendo do cárcere (Ef 3:1; Fp 1:13; Cl 4:18; Fm 1:1).",
       "divergence_note": null,
       "reference": {
@@ -739,7 +721,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0024",
-      "type": "multiple_choice",
       "text": "Em que parte da Bíblia está o livro de Atos?",
       "options": [
         {
@@ -759,7 +740,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Atos faz a ponte entre a vida de Jesus e as cartas, narrando a expansão da igreja (At 1:1-8).",
       "divergence_note": null,
       "reference": {
@@ -772,7 +752,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0025",
-      "type": "multiple_choice",
       "text": "Quantos Salmos compõem o saltério?",
       "options": [
         {
@@ -792,7 +771,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O livro dos Salmos reúne 150 cânticos, dividido tradicionalmente em cinco livros (Sl 150:6 encerra o saltério).",
       "divergence_note": null,
       "reference": {
@@ -805,7 +783,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0026",
-      "type": "multiple_choice",
       "text": "Qual é o versículo central da estrutura da Bíblia protestante em capítulos?",
       "options": [
         {
@@ -825,7 +802,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O Salmo 117 é o capítulo mais curto e fica próximo do centro da Bíblia em capítulos — curiosidade de estrutura, não de doutrina (Sl 118:8).",
       "divergence_note": null,
       "reference": {
@@ -839,13 +815,24 @@
     },
     {
       "external_id": "organizacao-da-biblia-0027",
-      "type": "open_answer",
       "text": "Como se chama o conjunto dos 27 livros que compõem a segunda parte da Bíblia?",
-      "options": null,
-      "accepted_answers": [
-        "Novo Testamento",
-        "O Novo Testamento",
-        "NT"
+      "options": [
+        {
+          "text": "Novo Testamento",
+          "correct": true
+        },
+        {
+          "text": "Antigo Testamento",
+          "correct": false
+        },
+        {
+          "text": "Evangelhos",
+          "correct": false
+        },
+        {
+          "text": "Epístolas",
+          "correct": false
+        }
       ],
       "explanation": "O Novo Testamento reúne evangelhos, Atos, cartas e Apocalipse, centrados em Cristo e na nova aliança (Hb 9:15).",
       "divergence_note": null,
@@ -859,7 +846,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0028",
-      "type": "multiple_choice",
       "text": "Quantos capítulos tem o livro de Apocalipse?",
       "options": [
         {
@@ -879,7 +865,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Apocalipse tem 22 capítulos e encerra o cânon com 'Ora vem, Senhor Jesus' (Ap 22:20-21).",
       "divergence_note": null,
       "reference": {
@@ -892,7 +877,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0029",
-      "type": "multiple_choice",
       "text": "Quantos livros formam o Pentateuco?",
       "options": [
         {
@@ -912,7 +896,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Gênesis, Êxodo, Levítico, Números e Deuteronômio — a Torá, a Lei de Moisés (Gn 1:1; Dt 34:12).",
       "divergence_note": null,
       "reference": {
@@ -925,7 +908,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0030",
-      "type": "multiple_choice",
       "text": "Quais são os quatro livros chamados 'profetas maiores'?",
       "options": [
         {
@@ -945,7 +927,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "A designação vem da extensão dos livros, não de importância; Lamentações costuma acompanhar Jeremias (Is 1:1; Dn 1:1).",
       "divergence_note": null,
       "reference": {
@@ -958,7 +939,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0031",
-      "type": "multiple_choice",
       "text": "Em quantos livros o saltério é tradicionalmente dividido?",
       "options": [
         {
@@ -978,7 +958,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Cada bloco termina com uma doxologia (Sl 41:13; 72:19; 89:52; 106:48; 150:6), numa divisão que ecoa o Pentateuco.",
       "divergence_note": null,
       "reference": {
@@ -991,13 +970,24 @@
     },
     {
       "external_id": "organizacao-da-biblia-0032",
-      "type": "open_answer",
       "text": "Como se chama a lista de livros reconhecidos como Escritura pela igreja?",
-      "options": null,
-      "accepted_answers": [
-        "Cânon",
-        "Canon",
-        "O cânon"
+      "options": [
+        {
+          "text": "Cânon",
+          "correct": true
+        },
+        {
+          "text": "Apócrifos",
+          "correct": false
+        },
+        {
+          "text": "Septuaginta",
+          "correct": false
+        },
+        {
+          "text": "Credo",
+          "correct": false
+        }
       ],
       "explanation": "O cânon reúne os livros reconhecidos como inspirados; Paulo já trata os escritos como 'Escritura' (2Tm 3:16; 2Pe 3:15-16).",
       "divergence_note": null,
@@ -1011,7 +1001,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0033",
-      "type": "multiple_choice",
       "text": "Quais livros recontam a história de Israel desde Adão, com foco em Judá e no templo?",
       "options": [
         {
@@ -1031,7 +1020,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Crônicas abre com genealogias desde Adão (1Cr 1:1) e encerra com o decreto de Ciro (2Cr 36:23).",
       "divergence_note": null,
       "reference": {
@@ -1044,7 +1032,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0034",
-      "type": "multiple_choice",
       "text": "Quantas cartas do Novo Testamento são tradicionalmente atribuídas a Paulo?",
       "options": [
         {
@@ -1064,7 +1051,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "De Romanos a Filemom são treze cartas com o nome de Paulo; Hebreus é anônima (Rm 1:1; Fm 1:1).",
       "divergence_note": "Algumas tradições contam catorze incluindo Hebreus, cuja autoria paulina foi defendida na antiguidade; o próprio texto de Hebreus não nomeia autor.",
       "reference": {
@@ -1077,7 +1063,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0035",
-      "type": "multiple_choice",
       "text": "Em que ordem aparecem os quatro evangelhos no Novo Testamento?",
       "options": [
         {
@@ -1097,7 +1082,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "A ordem canônica tradicional coloca os três sinóticos primeiro e João por último (Mt 1:1; Jo 1:1).",
       "divergence_note": null,
       "reference": {
@@ -1110,7 +1094,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0036",
-      "type": "multiple_choice",
       "text": "Quantas cartas de Pedro o Novo Testamento contém?",
       "options": [
         {
@@ -1130,7 +1113,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "1 Pedro fala aos que sofrem; 2 Pedro alerta contra falsos mestres e reafirma a volta do Senhor (1Pe 1:1; 2Pe 1:1).",
       "divergence_note": null,
       "reference": {
@@ -1143,7 +1125,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0037",
-      "type": "multiple_choice",
       "text": "Que livro encerra a Bíblia hebraica (Tanakh), numa ordem diferente da cristã?",
       "options": [
         {
@@ -1163,7 +1144,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Na Bíblia hebraica os Escritos terminam em Crônicas; a ordem cristã põe Malaquias por último, apontando ao precursor (Ml 4:5-6).",
       "divergence_note": null,
       "reference": {
@@ -1176,14 +1156,24 @@
     },
     {
       "external_id": "organizacao-da-biblia-0038",
-      "type": "open_answer",
       "text": "Qual é o livro com menos versículos do Novo Testamento, com apenas treze?",
-      "options": null,
-      "accepted_answers": [
-        "2 João",
-        "Segunda João",
-        "2Joao",
-        "2 Joao"
+      "options": [
+        {
+          "text": "2 João",
+          "correct": true
+        },
+        {
+          "text": "3 João",
+          "correct": false
+        },
+        {
+          "text": "Filemom",
+          "correct": false
+        },
+        {
+          "text": "Judas",
+          "correct": false
+        }
       ],
       "explanation": "2 João tem treze versículos — o livro mais curto em versículos do NT (2Jo 1:1-13); 3 João tem menos palavras.",
       "divergence_note": null,
@@ -1197,7 +1187,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0039",
-      "type": "multiple_choice",
       "text": "Em quantas partes principais a Bíblia se divide?",
       "options": [
         {
@@ -1217,7 +1206,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O Antigo Testamento (39 livros) e o Novo (27) — 'a antiga e a nova aliança' (Hb 8:13; 9:15).",
       "divergence_note": null,
       "reference": {
@@ -1230,7 +1218,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0040",
-      "type": "multiple_choice",
       "text": "Qual é o capítulo mais longo da Bíblia?",
       "options": [
         {
@@ -1250,7 +1237,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O Salmo 119 é um acróstico em que cada bloco de oito versículos começa com uma letra do alfabeto hebraico, celebrando a Lei do SENHOR (Sl 119:1).",
       "divergence_note": null,
       "reference": {
@@ -1263,7 +1249,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0041",
-      "type": "multiple_choice",
       "text": "Quantos versículos tem o Salmo 119?",
       "options": [
         {
@@ -1283,7 +1268,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Vinte e duas letras hebraicas vezes oito versículos: 176 (Sl 119:176 encerra: 'desgarrei-me como ovelha perdida').",
       "divergence_note": null,
       "reference": {
@@ -1296,7 +1280,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0042",
-      "type": "multiple_choice",
       "text": "Quantos livros do Novo Testamento são tradicionalmente atribuídos ao apóstolo João?",
       "options": [
         {
@@ -1316,7 +1299,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O evangelho, três cartas e o Apocalipse (Jo 21:24; 1Jo 1:1; Ap 1:1) — cinco livros.",
       "divergence_note": "A autoria joanina dos cinco livros é a tradição da igreja antiga; estudiosos debatem se um mesmo João escreveu todos.",
       "reference": {
@@ -1329,7 +1311,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0043",
-      "type": "multiple_choice",
       "text": "Para quais duas igrejas Paulo escreveu duas cartas canônicas cada?",
       "options": [
         {
@@ -1349,7 +1330,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "1 e 2 Coríntios, 1 e 2 Tessalonicenses; a Timóteo também escreveu duas, mas a uma pessoa (1Co 1:1; 1Ts 1:1).",
       "divergence_note": null,
       "reference": {
@@ -1362,15 +1342,24 @@
     },
     {
       "external_id": "organizacao-da-biblia-0044",
-      "type": "open_answer",
       "text": "Na ordem da Bíblia, qual livro vem logo depois de Rute?",
-      "options": null,
-      "accepted_answers": [
-        "1 Samuel",
-        "Primeiro Samuel",
-        "1Samuel",
-        "I Samuel",
-        "1º Samuel"
+      "options": [
+        {
+          "text": "1 Samuel",
+          "correct": true
+        },
+        {
+          "text": "Juízes",
+          "correct": false
+        },
+        {
+          "text": "1 Reis",
+          "correct": false
+        },
+        {
+          "text": "Ester",
+          "correct": false
+        }
       ],
       "explanation": "Depois de Juízes e Rute vêm 1 e 2 Samuel. A passagem é natural: Rute termina com a genealogia que chega a Davi (Rt 4:17-22), e 1 Samuel começa com a história do nascimento do profeta que ungiria esse mesmo Davi como rei (1Sm 1:20; 16:13).",
       "divergence_note": null,
@@ -1384,14 +1373,24 @@
     },
     {
       "external_id": "organizacao-da-biblia-0045",
-      "type": "open_answer",
       "text": "Quantos capítulos tem o livro de Provérbios?",
-      "options": null,
-      "accepted_answers": [
-        "31",
-        "Trinta e um",
-        "31 capítulos",
-        "Trinta e um capítulos"
+      "options": [
+        {
+          "text": "31",
+          "correct": true
+        },
+        {
+          "text": "30",
+          "correct": false
+        },
+        {
+          "text": "28",
+          "correct": false
+        },
+        {
+          "text": "150",
+          "correct": false
+        }
       ],
       "explanation": "Provérbios tem 31 capítulos — por isso muitos leitores o percorrem num capítulo por dia ao longo do mês. O livro termina com o poema da mulher virtuosa (Pv 31:10-31), um acróstico em que cada versículo começa, em ordem, com uma letra do alfabeto hebraico.",
       "divergence_note": null,
@@ -1405,7 +1404,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0046",
-      "type": "multiple_choice",
       "text": "Na ordem da Bíblia, qual livro vem logo depois de 2 Crônicas?",
       "options": [
         {
@@ -1425,7 +1423,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Depois de 1 e 2 Crônicas vêm Esdras, Neemias e Ester. A costura entre os livros é visível: 2 Crônicas termina com o decreto de Ciro que permitia a volta dos exilados a Jerusalém (2Cr 36:22-23), e Esdras começa repetindo esse mesmo decreto (Ed 1:1-3) — a história passa do exílio ao retorno sem interrupção.",
       "divergence_note": null,
       "reference": {
@@ -1438,7 +1435,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0047",
-      "type": "multiple_choice",
       "text": "Na ordem da Bíblia, qual livro vem imediatamente antes do Apocalipse?",
       "options": [
         {
@@ -1458,7 +1454,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "A epístola de Judas, que vem logo depois das três cartas de João, é o penúltimo livro da Bíblia. Ela termina com uma das doxologias mais conhecidas do Novo Testamento — \"àquele que é poderoso para vos guardar de tropeçar\" (Jd 1:24) — antes de o Apocalipse encerrar o cânon.",
       "divergence_note": null,
       "reference": {
@@ -1471,7 +1466,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0048",
-      "type": "multiple_choice",
       "text": "Quantos capítulos tem o Evangelho de João?",
       "options": [
         {
@@ -1491,7 +1485,6 @@
           "correct": true
         }
       ],
-      "accepted_answers": null,
       "explanation": "João tem 21 capítulos; Mateus tem 28, Lucas 24 e Marcos 16. O capítulo 20 parece um encerramento, com a declaração do propósito do livro (Jo 20:31), mas o 21 ainda narra a pesca milagrosa e a restauração de Pedro — \"Apascenta as minhas ovelhas\" (Jo 21:17) — antes das palavras finais (Jo 21:24-25).",
       "divergence_note": null,
       "reference": {
@@ -1504,7 +1497,6 @@
     },
     {
       "external_id": "organizacao-da-biblia-0049",
-      "type": "multiple_choice",
       "text": "Quantos livros do Novo Testamento têm um só capítulo?",
       "options": [
         {
@@ -1524,7 +1516,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "São quatro, todos cartas curtas: Filemom, 2 João, 3 João e Judas. Em 2 e 3 João, o autor explica a brevidade: tinha muito que escrever, mas preferia falar \"de boca a boca\" (2Jo 1:12; 3Jo 1:13-14). No Antigo Testamento, o único livro de um só capítulo é Obadias.",
       "divergence_note": null,
       "reference": {

@@ -1,7 +1,6 @@
 // Mirrors backend Pydantic schemas (backend/app/schemas).
 
 export type Difficulty = 'easy' | 'medium' | 'hard' | 'expert'
-export type QuestionType = 'multiple_choice' | 'open_answer'
 export type Testament = 'old' | 'new'
 export type QuizMode = 'practice' | 'review' | 'duel'
 
@@ -256,7 +255,6 @@ export interface QuestionOption {
 export interface QuizQuestion {
   id: string
   position: number
-  type: QuestionType
   text: string
   difficulty: Difficulty
   category_name: string
@@ -289,8 +287,7 @@ export interface QuizAbandonResult {
 
 export interface AnswerFeedback {
   is_correct: boolean
-  correct_option_id: string | null
-  correct_answer: string | null
+  correct_option_id: string
   explanation: string
   divergence_note: string | null
   reference: BibleReference
@@ -418,10 +415,8 @@ export type FlagReason = 'wrong_text' | 'wrong_answer' | 'wrong_reference' | 'ot
 
 export interface QuestionDraft {
   category_id: number
-  type: QuestionType
   text: string
-  options: { text: string; correct: boolean }[] | null
-  accepted_answers: string[] | null
+  options: { text: string; correct: boolean }[]
   explanation: string
   divergence_note: string | null
   book: string

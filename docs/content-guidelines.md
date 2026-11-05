@@ -26,11 +26,10 @@ O seed valida o schema automaticamente; a curadoria teológica é humana (Samuel
 
 - **Enunciado autossuficiente:** entendível sem contexto externo. Evitar "No capítulo
   que lemos…".
-- **Múltipla escolha:** 4 alternativas plausíveis do mesmo domínio (distratores reais,
-  não absurdos), exatamente 1 correta, sem "todas as anteriores"/"nenhuma das anteriores".
-- **Resposta aberta:** respostas curtas (1–4 palavras — nomes, lugares, números).
-  Listar todas as variações aceitáveis em `accepted_answers` ("Pedro", "Simão Pedro",
-  "Cefas"). Nunca usar resposta aberta para conceitos que exigem frase.
+- **Alternativas:** toda pergunta é de múltipla escolha, com 4 alternativas plausíveis
+  do mesmo domínio (distratores reais, não absurdos), exatamente 1 correta, sem
+  "todas as anteriores"/"nenhuma das anteriores". A correta vem primeiro no arquivo;
+  o app embaralha por sessão.
 - **Explicação ensina, não só confirma:** 2–4 frases; dá o contexto, cita o versículo
   quando agrega e aponta uma conexão bíblica maior quando natural.
 - **Dificuldade honesta:**
@@ -49,15 +48,13 @@ Um arquivo por categoria: `content/questions/<categoria>.json`.
   "questions": [
     {
       "external_id": "personagens-0001",        // único, imutável, sequencial por categoria
-      "type": "multiple_choice",                 // ou "open_answer"
       "text": "Quem intercedeu junto a Davi para impedi-lo de derramar sangue, tornando-se depois sua esposa?",
-      "options": [                               // só p/ multiple_choice: 4 itens, 1 correct
+      "options": [                               // 4 itens, exatamente 1 correct
         { "text": "Abigail", "correct": true },
         { "text": "Mical", "correct": false },
         { "text": "Bate-Seba", "correct": false },
         { "text": "Ainoã", "correct": false }
       ],
-      "accepted_answers": null,                  // só p/ open_answer: ["Abigail"]
       "explanation": "Abigail, mulher de Nabal, saiu ao encontro de Davi com provisões e o convenceu a não se vingar. Após a morte de Nabal, Davi a tomou por esposa (1Sm 25:32-42).",
       "divergence_note": null,
       "reference": { "book": "1samuel", "chapter": 25, "verse_start": 23, "verse_end": 35 },
@@ -71,13 +68,12 @@ Validações automáticas do seed (falha = CI vermelho):
 - `external_id` único global e prefixado pela categoria do arquivo
 - `book` existe no catálogo dos 66 livros; `chapter ≥ 1`; `verse_start ≥ 1`;
   `verse_end ≥ verse_start` quando presente
-- `multiple_choice`: exatamente 4 opções e exatamente 1 correta
-- `open_answer`: `accepted_answers` com ≥1 item, todos não vazios
+- exatamente 4 opções e exatamente 1 correta
+- nenhuma chave além das listadas acima (um campo desconhecido reprova o arquivo)
 - `explanation` não vazia; `difficulty` e demais enums válidos
 
 ## 4. Distribuição-alvo do banco inicial (400–600)
 
 - Cobertura: **todas as 23 categorias** com ≥10 perguntas cada
 - Dificuldade: ~45% fácil · 30% médio · 15% difícil · 10% especialista
-- Tipo: ~75% múltipla escolha · 25% resposta aberta
 - Testamento: ~55% AT · 45% NT (proporcional ao volume das Escrituras, com reforço em Evangelhos)

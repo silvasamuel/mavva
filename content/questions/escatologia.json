@@ -3,7 +3,6 @@
   "questions": [
     {
       "external_id": "escatologia-0001",
-      "type": "multiple_choice",
       "text": "Que promessa Jesus fez aos discípulos em João 14 sobre o seu retorno?",
       "options": [
         {
@@ -23,7 +22,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Vou preparar-vos lugar... virei outra vez, e vos levarei para mim mesmo, para que onde eu estiver estejais vós também\" (Jo 14:2-3). A segunda vinda é promessa pessoal de Cristo, esperança central da igreja.",
       "divergence_note": null,
       "reference": {
@@ -36,7 +34,6 @@
     },
     {
       "external_id": "escatologia-0002",
-      "type": "multiple_choice",
       "text": "Na ascensão, o que os dois varões vestidos de branco disseram sobre como Jesus voltaria?",
       "options": [
         {
@@ -56,7 +53,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Esse Jesus... há de vir assim como para o céu o vistes ir\" (At 1:11) — pessoal, visível e corporalmente. Apocalipse ecoa: \"eis que vem com as nuvens, e todo olho o verá\" (Ap 1:7).",
       "divergence_note": null,
       "reference": {
@@ -69,7 +65,6 @@
     },
     {
       "external_id": "escatologia-0003",
-      "type": "multiple_choice",
       "text": "Segundo 1 Tessalonicenses 4:16, quem ressuscitará primeiro na vinda do Senhor?",
       "options": [
         {
@@ -89,7 +84,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Os que morreram em Cristo ressuscitarão primeiro; depois nós, os que ficarmos vivos, seremos arrebatados juntamente com eles nas nuvens, a encontrar o Senhor nos ares\" (1Ts 4:16-17). Paulo escreve para consolar quanto aos irmãos falecidos.",
       "divergence_note": "Cristãos ortodoxos divergem sobre o momento desse arrebatamento em relação à tribulação (pré, meso ou pós-tribulacionismo). O texto afirma com clareza a ordem: mortos em Cristo primeiro, depois os vivos — o restante é debate interpretativo legítimo.",
       "reference": {
@@ -102,13 +96,24 @@
     },
     {
       "external_id": "escatologia-0004",
-      "type": "open_answer",
       "text": "Por quantos anos, segundo Apocalipse 20, Satanás ficará preso enquanto Cristo reina com os seus?",
-      "options": null,
-      "accepted_answers": [
-        "1000",
-        "Mil",
-        "Mil anos"
+      "options": [
+        {
+          "text": "1000",
+          "correct": true
+        },
+        {
+          "text": "70",
+          "correct": false
+        },
+        {
+          "text": "7",
+          "correct": false
+        },
+        {
+          "text": "490",
+          "correct": false
+        }
       ],
       "explanation": "Apocalipse 20:2-6 menciona seis vezes o período de \"mil anos\": Satanás preso, e os que participam da primeira ressurreição reinando com Cristo.",
       "divergence_note": "O sentido do milênio divide as principais tradições: pré-milenistas esperam reino literal futuro após a volta de Cristo; amilenistas o entendem como o reinado atual de Cristo entre a primeira e a segunda vinda; pós-milenistas, como era de expansão do evangelho antes da volta. Todas são posições cristãs históricas e ortodoxas.",
@@ -122,7 +127,6 @@
     },
     {
       "external_id": "escatologia-0005",
-      "type": "multiple_choice",
       "text": "O que João viu descendo do céu em Apocalipse 21, \"adereçada como uma esposa ataviada para o seu marido\"?",
       "options": [
         {
@@ -142,7 +146,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Vi a santa cidade, a nova Jerusalém, que de Deus descia do céu\" (Ap 21:2). O ponto alto não é o lugar, mas a presença: \"o tabernáculo de Deus está com os homens... e ele habitará com eles\" (Ap 21:3).",
       "divergence_note": null,
       "reference": {
@@ -155,7 +158,6 @@
     },
     {
       "external_id": "escatologia-0006",
-      "type": "multiple_choice",
       "text": "Em Apocalipse 20, diante de que os mortos são julgados no juízo do grande trono branco?",
       "options": [
         {
@@ -175,7 +177,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Abriram-se os livros... e outro livro se abriu, que é o da vida; e os mortos foram julgados... segundo as suas obras\" (Ap 20:12). O destino final depende do livro da vida: \"aquele que não foi achado escrito no livro da vida foi lançado no lago de fogo\" (Ap 20:15).",
       "divergence_note": null,
       "reference": {
@@ -188,7 +189,6 @@
     },
     {
       "external_id": "escatologia-0007",
-      "type": "multiple_choice",
       "text": "Como Paulo chama, em 2 Tessalonicenses 2, a figura que se opõe a Deus e deve ser revelada antes do dia do Senhor?",
       "options": [
         {
@@ -208,7 +208,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Não chegará sem que antes venha a apostasia, e se manifeste o homem do pecado, o filho da perdição\" (2Ts 2:3), que \"se assenta como Deus no templo de Deus\". O Senhor o desfará \"pelo assopro da sua boca\" (2Ts 2:8).",
       "divergence_note": "A identificação do \"homem do pecado\" com o Anticristo de 1 João e a besta de Apocalipse 13, e o sentido de \"templo de Deus\", variam entre intérpretes sérios (futurista, historicista, preterista). A pergunta se limita ao título que o próprio texto usa.",
       "reference": {
@@ -221,7 +220,6 @@
     },
     {
       "external_id": "escatologia-0008",
-      "type": "multiple_choice",
       "text": "Segundo 2 Pedro 3:10, como virá o dia do Senhor?",
       "options": [
         {
@@ -241,7 +239,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"O dia do Senhor virá como o ladrão de noite\" (2Pe 3:10; cf. 1Ts 5:2; Mt 24:43-44). A demora não é tardança, mas paciência: Deus \"não quer que alguns se percam, senão que todos venham a arrepender-se\" (2Pe 3:9).",
       "divergence_note": null,
       "reference": {
@@ -254,7 +251,6 @@
     },
     {
       "external_id": "escatologia-0009",
-      "type": "multiple_choice",
       "text": "Sobre o dia e a hora da sua vinda, o que Jesus afirmou em Mateus 24:36?",
       "options": [
         {
@@ -274,7 +270,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Daquele dia e hora ninguém sabe, nem os anjos do céu, mas unicamente meu Pai\" (Mt 24:36). Toda tentativa de marcar datas contraria a palavra do próprio Jesus; a postura ordenada é vigiar (Mt 24:42).",
       "divergence_note": null,
       "reference": {
@@ -287,7 +282,6 @@
     },
     {
       "external_id": "escatologia-0010",
-      "type": "multiple_choice",
       "text": "Segundo Apocalipse 21:4, o que não existirá mais no estado eterno?",
       "options": [
         {
@@ -307,7 +301,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Deus limpará de seus olhos toda a lágrima; e não haverá mais morte, nem pranto, nem clamor, nem dor; porque já as primeiras coisas são passadas\" (Ap 21:4). A esperança cristã não é fuga do mundo, mas a renovação de todas as coisas (Ap 21:5).",
       "divergence_note": null,
       "reference": {
@@ -320,7 +313,6 @@
     },
     {
       "external_id": "escatologia-0011",
-      "type": "multiple_choice",
       "text": "Segundo 1 Tessalonicenses 4, o Senhor descerá do céu com que sinais?",
       "options": [
         {
@@ -340,7 +332,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'O mesmo Senhor descerá do céu com alarido, com voz de arcanjo e com a trombeta de Deus' (1Ts 4:16).",
       "divergence_note": null,
       "reference": {
@@ -353,7 +344,6 @@
     },
     {
       "external_id": "escatologia-0012",
-      "type": "multiple_choice",
       "text": "Quantos anos de reinado são mencionados em Apocalipse 20, o chamado 'milênio'?",
       "options": [
         {
@@ -373,7 +363,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Apocalipse 20:4 fala do reinado de mil anos com Cristo.",
       "divergence_note": "As tradições cristãs divergem: o pré-milenismo entende um reino literal de mil anos após a volta de Cristo; o pós-milenismo, um período de triunfo do evangelho antes da volta; o amilenismo, um reinado espiritual presente. A pergunta trata do dado do texto (mil anos), não de qual escola é a correta.",
       "reference": {
@@ -387,7 +376,6 @@
     },
     {
       "external_id": "escatologia-0013",
-      "type": "multiple_choice",
       "text": "Qual cidade desce do céu 'como noiva adereçada para o seu esposo'?",
       "options": [
         {
@@ -407,7 +395,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Vi a santa cidade, a nova Jerusalém, que descia do céu' (Ap 21:2) — a habitação eterna de Deus com os homens.",
       "divergence_note": null,
       "reference": {
@@ -421,7 +408,6 @@
     },
     {
       "external_id": "escatologia-0014",
-      "type": "multiple_choice",
       "text": "Segundo Apocalipse 20, o que é lançado no lago de fogo junto com a morte?",
       "options": [
         {
@@ -441,7 +427,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'E a morte e o inferno foram lançados no lago de fogo' (Ap 20:14) — a segunda morte.",
       "divergence_note": null,
       "reference": {
@@ -454,13 +439,24 @@
     },
     {
       "external_id": "escatologia-0015",
-      "type": "open_answer",
       "text": "O que Jesus disse que ninguém sabe sobre a sua volta, 'nem os anjos'?",
-      "options": null,
-      "accepted_answers": [
-        "O dia e a hora",
-        "Dia e hora",
-        "O dia nem a hora"
+      "options": [
+        {
+          "text": "O dia e a hora",
+          "correct": true
+        },
+        {
+          "text": "O lugar",
+          "correct": false
+        },
+        {
+          "text": "Os sinais",
+          "correct": false
+        },
+        {
+          "text": "Quem será salvo",
+          "correct": false
+        }
       ],
       "explanation": "'Daquele dia e hora ninguém sabe, nem os anjos... senão meu Pai' (Mt 24:36) — contra qualquer datação.",
       "divergence_note": null,
@@ -475,7 +471,6 @@
     },
     {
       "external_id": "escatologia-0016",
-      "type": "multiple_choice",
       "text": "Em Daniel 7, quem recebe 'domínio, glória e reino' vindo com as nuvens do céu?",
       "options": [
         {
@@ -495,7 +490,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Vinha um como o filho do homem... e foi-lhe dado o domínio' (Dn 7:13-14), título que Jesus aplica a si.",
       "divergence_note": null,
       "reference": {
@@ -508,7 +502,6 @@
     },
     {
       "external_id": "escatologia-0017",
-      "type": "multiple_choice",
       "text": "Segundo 1 Coríntios 15:52, quando seremos transformados?",
       "options": [
         {
@@ -528,7 +521,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Num momento, num abrir e fechar de olhos, ante a última trombeta... seremos transformados' (1Co 15:52).",
       "divergence_note": null,
       "reference": {
@@ -541,7 +533,6 @@
     },
     {
       "external_id": "escatologia-0018",
-      "type": "multiple_choice",
       "text": "Segundo Apocalipse 7, quantos são selados 'de todas as tribos dos filhos de Israel'?",
       "options": [
         {
@@ -561,7 +552,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Ap 7:4 registra 144 mil selados, 12 mil de cada tribo.",
       "divergence_note": "Há divergência entre as tradições cristãs se o número é literal (um remanescente étnico de Israel) ou simbólico (a totalidade do povo de Deus). A pergunta trata do dado do texto.",
       "reference": {
@@ -574,7 +564,6 @@
     },
     {
       "external_id": "escatologia-0019",
-      "type": "multiple_choice",
       "text": "O que Jesus chamou de 'princípio das dores' nos sinais do fim?",
       "options": [
         {
@@ -594,7 +583,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Haverá fomes, e pestes, e terremotos... mas todas estas coisas são o princípio das dores' (Mt 24:7-8).",
       "divergence_note": null,
       "reference": {
@@ -607,7 +595,6 @@
     },
     {
       "external_id": "escatologia-0020",
-      "type": "multiple_choice",
       "text": "Em Apocalipse 21, o que 'já não haverá' na cidade eterna?",
       "options": [
         {
@@ -627,7 +614,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Deus limpará de seus olhos toda a lágrima... nem haverá mais morte, nem pranto' (Ap 21:4).",
       "divergence_note": null,
       "reference": {
@@ -641,7 +627,6 @@
     },
     {
       "external_id": "escatologia-0021",
-      "type": "multiple_choice",
       "text": "Quantos anciãos João viu assentados em tronos ao redor do trono de Deus?",
       "options": [
         {
@@ -661,7 +646,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Ao redor do trono havia vinte e quatro tronos, e... vinte e quatro anciãos assentados' (Ap 4:4).",
       "divergence_note": null,
       "reference": {
@@ -674,7 +658,6 @@
     },
     {
       "external_id": "escatologia-0022",
-      "type": "multiple_choice",
       "text": "Qual é o número da besta mencionado em Apocalipse 13?",
       "options": [
         {
@@ -694,7 +677,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'É o número de um homem, e o seu número é seiscentos e sessenta e seis' (Ap 13:18).",
       "divergence_note": "As tradições cristãs divergem quanto ao significado do número (identificação histórica, como Nero via gematria, ou símbolo da imperfeição/idolatria humana). A pergunta trata do dado do texto.",
       "reference": {
@@ -707,7 +689,6 @@
     },
     {
       "external_id": "escatologia-0025",
-      "type": "multiple_choice",
       "text": "Como Pedro descreve a demora da volta do Senhor em 2 Pedro 3?",
       "options": [
         {
@@ -727,7 +708,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'O Senhor não retarda a sua promessa... mas é longânimo para conosco, não querendo que alguns se percam' (2Pe 3:9).",
       "divergence_note": null,
       "reference": {
@@ -740,7 +720,6 @@
     },
     {
       "external_id": "escatologia-0026",
-      "type": "multiple_choice",
       "text": "Que imagem Jesus usou para dizer que virá quando não se espera?",
       "options": [
         {
@@ -760,7 +739,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'O dia do Senhor virá como o ladrão de noite' (1Ts 5:2; cf. Mt 24:43) — daí a ordem de vigiar.",
       "divergence_note": null,
       "reference": {
@@ -773,13 +751,24 @@
     },
     {
       "external_id": "escatologia-0027",
-      "type": "open_answer",
       "text": "Segundo Apocalipse 21, quem será o templo da cidade eterna?",
-      "options": null,
-      "accepted_answers": [
-        "Deus e o Cordeiro",
-        "O Senhor Deus e o Cordeiro",
-        "Deus Todo-Poderoso e o Cordeiro"
+      "options": [
+        {
+          "text": "Deus e o Cordeiro",
+          "correct": true
+        },
+        {
+          "text": "O Espírito e a Noiva",
+          "correct": false
+        },
+        {
+          "text": "Os vinte e quatro anciãos",
+          "correct": false
+        },
+        {
+          "text": "Um novo templo de ouro puro",
+          "correct": false
+        }
       ],
       "explanation": "'Nela não vi templo, porque o seu templo é o Senhor Deus Todo-Poderoso e o Cordeiro' (Ap 21:22).",
       "divergence_note": null,
@@ -793,7 +782,6 @@
     },
     {
       "external_id": "escatologia-0028",
-      "type": "multiple_choice",
       "text": "Que celebração Apocalipse 19 anuncia entre Cristo e a sua igreja?",
       "options": [
         {
@@ -813,7 +801,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Vieram as bodas do Cordeiro, e já a sua esposa se aprontou' (Ap 19:7-9); a igreja é a noiva.",
       "divergence_note": null,
       "reference": {
@@ -826,7 +813,6 @@
     },
     {
       "external_id": "escatologia-0029",
-      "type": "multiple_choice",
       "text": "Em Apocalipse 5, quem foi achado digno de abrir o livro selado com sete selos?",
       "options": [
         {
@@ -846,7 +832,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "João chorava porque ninguém era digno; então ouviu do Leão de Judá e viu 'um Cordeiro como havendo sido morto' (Ap 5:4-6).",
       "divergence_note": null,
       "reference": {
@@ -859,7 +844,6 @@
     },
     {
       "external_id": "escatologia-0030",
-      "type": "multiple_choice",
       "text": "Em João 5, para que ressuscitam os que praticaram o mal?",
       "options": [
         {
@@ -879,7 +863,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Os que fizeram o bem sairão para a ressurreição da vida; e os que fizeram o mal, para a ressurreição da condenação' (Jo 5:28-29).",
       "divergence_note": null,
       "reference": {
@@ -892,7 +875,6 @@
     },
     {
       "external_id": "escatologia-0031",
-      "type": "multiple_choice",
       "text": "Que sinal Jesus disse que apareceria no céu antes de todas as tribos da terra o verem vindo?",
       "options": [
         {
@@ -912,7 +894,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Então aparecerá no céu o sinal do Filho do homem... vindo sobre as nuvens do céu, com poder e grande glória' (Mt 24:30).",
       "divergence_note": null,
       "reference": {
@@ -925,14 +906,24 @@
     },
     {
       "external_id": "escatologia-0032",
-      "type": "open_answer",
       "text": "Que palavra descreve o estado dos que morrem em Cristo, segundo Paulo, aguardando a ressurreição?",
-      "options": null,
-      "accepted_answers": [
-        "Dormem",
-        "Dormir",
-        "Adormecidos",
-        "Que dormem"
+      "options": [
+        {
+          "text": "Dormem",
+          "correct": true
+        },
+        {
+          "text": "Vigiam",
+          "correct": false
+        },
+        {
+          "text": "Pereceram",
+          "correct": false
+        },
+        {
+          "text": "Vagueiam",
+          "correct": false
+        }
       ],
       "explanation": "'Não quero que sejais ignorantes acerca dos que já dormem' (1Ts 4:13) — imagem que aponta ao despertar da ressurreição.",
       "divergence_note": null,
@@ -946,7 +937,6 @@
     },
     {
       "external_id": "escatologia-0033",
-      "type": "multiple_choice",
       "text": "Segundo Mateus 25:31, quem acompanha o Filho do homem quando ele vier em sua glória?",
       "options": [
         {
@@ -966,7 +956,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Quando o Filho do homem vier em sua glória, e todos os santos anjos com ele, então se assentará no trono' (Mt 25:31).",
       "divergence_note": null,
       "reference": {
@@ -979,7 +968,6 @@
     },
     {
       "external_id": "escatologia-0034",
-      "type": "multiple_choice",
       "text": "Segundo 1 João 3:2, o que acontecerá conosco quando Cristo se manifestar?",
       "options": [
         {
@@ -999,7 +987,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Sabemos que, quando ele se manifestar, seremos semelhantes a ele; porque assim como é o veremos' (1Jo 3:2).",
       "divergence_note": null,
       "reference": {
@@ -1012,7 +999,6 @@
     },
     {
       "external_id": "escatologia-0035",
-      "type": "multiple_choice",
       "text": "Em Apocalipse 22, que árvore está junto ao rio da água da vida, dando fruto todo mês?",
       "options": [
         {
@@ -1032,7 +1018,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'De uma e de outra banda do rio, estava a árvore da vida, que produz doze frutos' (Ap 22:2) — a volta ao que o Éden perdeu.",
       "divergence_note": null,
       "reference": {
@@ -1045,7 +1030,6 @@
     },
     {
       "external_id": "escatologia-0036",
-      "type": "multiple_choice",
       "text": "Segundo Romanos 8, o que a criação inteira espera 'gemendo'?",
       "options": [
         {
@@ -1065,7 +1049,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'A ardente expectação da criatura espera a manifestação dos filhos de Deus... libertada da servidão da corrupção' (Rm 8:19-21).",
       "divergence_note": null,
       "reference": {
@@ -1078,7 +1061,6 @@
     },
     {
       "external_id": "escatologia-0037",
-      "type": "multiple_choice",
       "text": "Que dois exemplos do Antigo Testamento Jesus usou em Lucas 17 para a vinda repentina do Filho do homem?",
       "options": [
         {
@@ -1098,7 +1080,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Como aconteceu nos dias de Noé... como também aconteceu nos dias de Ló' — comiam, bebiam, e o juízo veio de repente (Lc 17:26-30).",
       "divergence_note": null,
       "reference": {
@@ -1111,12 +1092,24 @@
     },
     {
       "external_id": "escatologia-0038",
-      "type": "open_answer",
       "text": "Qual é a última palavra de Jesus registrada em Apocalipse 22:20: 'Certamente cedo ___'?",
-      "options": null,
-      "accepted_answers": [
-        "Venho",
-        "venho"
+      "options": [
+        {
+          "text": "Venho",
+          "correct": true
+        },
+        {
+          "text": "Reinarei",
+          "correct": false
+        },
+        {
+          "text": "Julgarei",
+          "correct": false
+        },
+        {
+          "text": "Voltarei",
+          "correct": false
+        }
       ],
       "explanation": "'Certamente cedo venho. Amém. Ora vem, Senhor Jesus!' (Ap 22:20) — promessa e oração que encerram a Bíblia.",
       "divergence_note": null,
@@ -1130,7 +1123,6 @@
     },
     {
       "external_id": "escatologia-0039",
-      "type": "multiple_choice",
       "text": "Segundo 1 Coríntios 15:26, qual é 'o último inimigo' a ser aniquilado?",
       "options": [
         {
@@ -1150,7 +1142,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'O último inimigo que há de ser aniquilado é a morte' (1Co 15:26) — vencida na ressurreição final.",
       "divergence_note": null,
       "reference": {
@@ -1163,7 +1154,6 @@
     },
     {
       "external_id": "escatologia-0040",
-      "type": "multiple_choice",
       "text": "Segundo Filipenses 2:10-11, o que todo joelho e toda língua farão diante do nome de Jesus?",
       "options": [
         {
@@ -1183,7 +1173,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Ao nome de Jesus se dobre todo joelho... e toda língua confesse que Jesus Cristo é o Senhor, para glória de Deus Pai' (Fp 2:10-11).",
       "divergence_note": null,
       "reference": {
@@ -1196,7 +1185,6 @@
     },
     {
       "external_id": "escatologia-0041",
-      "type": "multiple_choice",
       "text": "Como Apocalipse 20 chama a ressurreição dos que reinam com Cristo mil anos?",
       "options": [
         {
@@ -1216,7 +1204,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Esta é a primeira ressurreição. Bem-aventurado e santo aquele que tem parte na primeira ressurreição' (Ap 20:5-6).",
       "divergence_note": "As tradições divergem sobre a natureza dessa ressurreição e do milênio (pré-, pós- e amilenismo). A pergunta trata do nome que o texto usa.",
       "reference": {
@@ -1229,7 +1216,6 @@
     },
     {
       "external_id": "escatologia-0042",
-      "type": "multiple_choice",
       "text": "Segundo Mateus 24:14, o que acontecerá antes de vir o fim?",
       "options": [
         {
@@ -1249,7 +1235,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Este evangelho do reino será pregado em todo o mundo, em testemunho a todas as gentes, e então virá o fim' (Mt 24:14).",
       "divergence_note": null,
       "reference": {
@@ -1262,12 +1247,24 @@
     },
     {
       "external_id": "escatologia-0043",
-      "type": "open_answer",
       "text": "Que palavra grega para a 'vinda' de Cristo Paulo usa em 1 Tessalonicenses 4:15?",
-      "options": null,
-      "accepted_answers": [
-        "Parousia",
-        "Parusia"
+      "options": [
+        {
+          "text": "Parousia",
+          "correct": true
+        },
+        {
+          "text": "Epiphaneia",
+          "correct": false
+        },
+        {
+          "text": "Apokalypsis",
+          "correct": false
+        },
+        {
+          "text": "Kairos",
+          "correct": false
+        }
       ],
       "explanation": "Parousia significa 'presença, chegada' — a vinda pessoal do Senhor: 'nós, os que ficarmos vivos para a vinda do Senhor' (1Ts 4:15).",
       "divergence_note": null,
@@ -1281,16 +1278,24 @@
     },
     {
       "external_id": "escatologia-0044",
-      "type": "open_answer",
       "text": "Complete a declaração de Jó em meio ao sofrimento: \"Porque eu sei que o meu ___ vive, e que por fim se levantará sobre a terra\" (Jó 19:25).",
-      "options": null,
-      "accepted_answers": [
-        "Redentor",
-        "O meu Redentor",
-        "Meu Redentor",
-        "Defensor",
-        "O meu Defensor",
-        "Meu Defensor"
+      "options": [
+        {
+          "text": "Redentor",
+          "correct": true
+        },
+        {
+          "text": "Salvador",
+          "correct": false
+        },
+        {
+          "text": "Senhor",
+          "correct": false
+        },
+        {
+          "text": "Pastor",
+          "correct": false
+        }
       ],
       "explanation": "Rejeitado até pelos mais próximos (Jó 19:13-19), Jó declara que o seu Redentor vive e que, \"ainda em minha carne\", verá a Deus (Jó 19:25-26). \"Redentor\" traduz o hebraico goel, o parente próximo que resgatava e defendia o familiar, papel que Boaz assume em Rute 4 (onde a ARC diz \"remidor\").",
       "divergence_note": "Muitos cristãos, desde os primeiros séculos, leem estes versículos como esperança na ressurreição e aplicam o título de Redentor a Cristo; outros intérpretes entendem que Jó espera ser vindicado por Deus, nesta vida ou depois da morte, sem referência direta à ressurreição (a expressão hebraica traduzida por \"em minha carne\" também pode ser lida no sentido de ver a Deus já sem o corpo). A pergunta trata apenas das palavras do texto.",
@@ -1304,7 +1309,6 @@
     },
     {
       "external_id": "escatologia-0045",
-      "type": "multiple_choice",
       "text": "Em Mateus 24:27, Jesus compara a vinda do Filho do Homem a algo que \"sai do oriente e se mostra até ao ocidente\". A quê?",
       "options": [
         {
@@ -1324,7 +1328,6 @@
           "correct": true
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jesus adverte: se disserem que o Cristo está \"no deserto\", \"não saiais\"; se disserem que está \"no interior da casa\", \"não acrediteis\" (Mt 24:26), \"porque, assim como o relâmpago sai do oriente e se mostra até ao ocidente, assim será também a vinda do Filho do Homem\" (Mt 24:27). Ao contrário de um Cristo escondido, a vinda será como o relâmpago que ilumina o céu de uma extremidade à outra (cf. Lc 17:24) — por isso não se deve dar crédito a falsos cristos (Mt 24:23-24).",
       "divergence_note": null,
       "reference": {
@@ -1337,7 +1340,6 @@
     },
     {
       "external_id": "escatologia-0046",
-      "type": "multiple_choice",
       "text": "Segundo Apocalipse 19:16, que nome está escrito na veste e na coxa do cavaleiro do cavalo branco?",
       "options": [
         {
@@ -1357,7 +1359,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O cavaleiro que surge do céu aberto chama-se \"Fiel e Verdadeiro\" e \"a Palavra de Deus\" (Ap 19:11,13), e na sua veste e na sua coxa está escrito: \"Rei dos Reis e Senhor dos Senhores\" (Ap 19:16). O mesmo título, em ordem inversa, é dado ao Cordeiro que vence os dez reis aliados da besta (Ap 17:12-14).",
       "divergence_note": null,
       "reference": {
@@ -1370,7 +1371,6 @@
     },
     {
       "external_id": "escatologia-0047",
-      "type": "multiple_choice",
       "text": "Segundo 2 Coríntios 5:10, diante de que todos devemos comparecer, para que cada um receba segundo o que tiver feito por meio do corpo?",
       "options": [
         {
@@ -1390,7 +1390,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Porque todos devemos comparecer ante o tribunal de Cristo, para que cada um receba segundo o que tiver feito por meio do corpo, ou bem ou mal\" (2Co 5:10). Paulo se inclui nesse \"todos\" e tira daí o desejo de agradar ao Senhor (2Co 5:9); e em Romanos 14:12 afirma que \"cada um de nós dará conta de si mesmo a Deus\".",
       "divergence_note": "Há divergência sobre se o tribunal de Cristo é um julgamento distinto, só dos crentes e voltado a galardões (leitura comum no dispensacionalismo), ou o mesmo juízo final descrito em Mateus 25 e Apocalipse 20. A pergunta trata apenas do que o texto afirma.",
       "reference": {
@@ -1403,17 +1402,24 @@
     },
     {
       "external_id": "escatologia-0048",
-      "type": "open_answer",
       "text": "Complete o desafio de Paulo à morte em 1 Coríntios 15:55: \"Onde está, ó morte, o teu ___?\"",
-      "options": null,
-      "accepted_answers": [
-        "Aguilhão",
-        "O teu aguilhão",
-        "O seu aguilhão",
-        "Ferrão",
-        "O teu ferrão",
-        "Poder de ferir",
-        "O seu poder de ferir"
+      "options": [
+        {
+          "text": "Aguilhão",
+          "correct": true
+        },
+        {
+          "text": "Reino",
+          "correct": false
+        },
+        {
+          "text": "Domínio",
+          "correct": false
+        },
+        {
+          "text": "Terror",
+          "correct": false
+        }
       ],
       "explanation": "Paulo celebra a ressurreição com palavras dos profetas: \"Tragada foi a morte na vitória\" (1Co 15:54; cf. Is 25:8) e o desafio à morte inspirado em Oseias 13:14. Em seguida explica que \"o aguilhão da morte é o pecado\", mas \"graças a Deus que nos dá a vitória por nosso Senhor Jesus Cristo\" (1Co 15:56-57). \"Aguilhão\", aqui, tem o sentido de ferrão.",
       "divergence_note": null,
@@ -1427,7 +1433,6 @@
     },
     {
       "external_id": "escatologia-0049",
-      "type": "multiple_choice",
       "text": "Na visão de Isaías 2:2-4 sobre \"os últimos dias\", o que os povos farão com as suas espadas e lanças?",
       "options": [
         {
@@ -1447,7 +1452,6 @@
           "correct": true
         }
       ],
-      "accepted_answers": null,
       "explanation": "Isaías vê as nações subindo ao monte do SENHOR para aprender os seus caminhos; ele julgará entre elas, \"e estes converterão as suas espadas em enxadões e as suas lanças em foices; não levantará espada nação contra nação, nem aprenderão mais a guerrear\" (Is 2:4). Miqueias 4:3 traz a mesma profecia, e Joel 3:10 usa a imagem ao contrário, num chamado à guerra: \"Forjai espadas das vossas enxadas\".",
       "divergence_note": "Cristãos divergem sobre quando e como essa paz se cumpre: pré-milenistas esperam o cumprimento literal no reino milenar de Cristo na terra; amilenistas costumam vê-lo em parte na reunião das nações pelo evangelho e plenamente na nova criação; pós-milenistas, no avanço progressivo do Reino na história antes da volta de Cristo. A pergunta trata apenas do que o texto diz.",
       "reference": {

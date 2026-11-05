@@ -4,7 +4,7 @@ from typing import Any, Literal
 
 from pydantic import BaseModel, Field, model_validator
 
-from app.models.enums import Difficulty, QuestionType, QuizMode, Testament
+from app.models.enums import Difficulty, QuizMode, Testament
 
 
 class QuizCreateRequest(BaseModel):
@@ -35,12 +35,11 @@ class QuestionOut(BaseModel):
 
     id: uuid.UUID
     position: int
-    type: QuestionType
     text: str
     difficulty: Difficulty
     category_name: str
     category_icon: str
-    options: list[QuestionOptionOut] = []
+    options: list[QuestionOptionOut]
     answered: bool = False
     timer_remaining: int | None = None
 
@@ -70,18 +69,13 @@ class PresentQuestionResponse(BaseModel):
 class AnswerRequest(BaseModel):
     question_id: uuid.UUID
     selected_option_id: uuid.UUID | None = None
-    answer_text: str | None = Field(default=None, max_length=200)
     time_spent_seconds: int | None = Field(default=None, ge=0, le=3600)
     timed_out: bool = False
 
     @model_validator(mode="after")
-    def exactly_one_answer_kind(self) -> "AnswerRequest":
-        if (
-            not self.timed_out
-            and self.selected_option_id is None
-            and not (self.answer_text or "").strip()
-        ):
-            raise ValueError("Envie selected_option_id, answer_text ou timed_out")
+    def option_or_timeout(self) -> "AnswerRequest":
+        if not self.timed_out and self.selected_option_id is None:
+            raise ValueError("Envie selected_option_id ou timed_out")
         return self
 
 
@@ -93,8 +87,7 @@ class QuizAbandonResponse(BaseModel):
 
 class AnswerFeedback(BaseModel):
     is_correct: bool
-    correct_option_id: uuid.UUID | None
-    correct_answer: str | None
+    correct_option_id: uuid.UUID
     explanation: str
     divergence_note: str | None
     reference: BibleReference

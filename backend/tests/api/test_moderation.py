@@ -19,7 +19,6 @@ def _promote_to_admin(db: Session, email: str = "samuel@teste.com") -> None:
 def _draft(category_id: int) -> dict:
     return {
         "category_id": category_id,
-        "type": "multiple_choice",
         "text": "Quem construiu a arca segundo o livro de Gênesis?",
         "options": [
             {"text": "Noé", "correct": True},

@@ -4,7 +4,7 @@ from typing import Annotated, Literal
 
 from pydantic import BaseModel, Field, StringConstraints, model_validator
 
-from app.models.enums import Difficulty, QuestionType, Testament, UserRole
+from app.models.enums import Difficulty, Testament, UserRole
 
 # --- Dashboard ---
 
@@ -20,7 +20,6 @@ class AdminDashboardQuestions(BaseModel):
     total: int
     active: int
     inactive: int
-    open_answer: int
     old_testament: int
     easy: int
     medium: int
@@ -196,14 +195,9 @@ class AdminOption(BaseModel):
     is_correct: bool
 
 
-class AdminAnswer(BaseModel):
-    text: Annotated[str, StringConstraints(min_length=1, max_length=120)]
-
-
 class AdminQuestionListItem(BaseModel):
     id: uuid.UUID
     external_id: str
-    type: QuestionType
     text: str
     difficulty: Difficulty
     category_id: int
@@ -221,7 +215,6 @@ class AdminQuestionList(BaseModel):
 class AdminQuestionDetail(BaseModel):
     id: uuid.UUID
     external_id: str
-    type: QuestionType
     text: str
     explanation: str
     divergence_note: str | None
@@ -234,15 +227,14 @@ class AdminQuestionDetail(BaseModel):
     category_id: int
     is_active: bool
     options: list[AdminOption]
-    accepted_answers: list[AdminAnswer]
 
 
 class AdminQuestionUpdate(BaseModel):
     """Every field optional — only what is sent gets updated.
 
-    `type` and `category_id` are immutable: external_id is prefixed by the
-    category slug, so moving a question across categories would break the
-    content-file invariants (revisit if the need ever arises).
+    `category_id` is immutable: external_id is prefixed by the category slug,
+    so moving a question across categories would break the content-file
+    invariants (revisit if the need ever arises).
     """
 
     text: str | None = Field(default=None, min_length=10)
@@ -255,7 +247,6 @@ class AdminQuestionUpdate(BaseModel):
     difficulty: Difficulty | None = None
     is_active: bool | None = None
     options: list[AdminOption] | None = None
-    accepted_answers: list[AdminAnswer] | None = None
 
     @model_validator(mode="after")
     def verse_range_ordered(self) -> "AdminQuestionUpdate":

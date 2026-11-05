@@ -3,7 +3,6 @@
   "questions": [
     {
       "external_id": "profetas-0001",
-      "type": "multiple_choice",
       "text": "Como Deus sustentou Elias junto ao ribeiro de Querite durante a seca?",
       "options": [
         {
@@ -23,7 +22,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Os corvos lhe traziam pão e carne pela manhã, como também pão e carne à noite; e bebia do ribeiro\" (1Rs 17:6). O anjo com pão veio depois, a caminho de Horebe (1Rs 19:5-6), e a viúva foi a fase seguinte, em Sarepta (1Rs 17:9).",
       "divergence_note": null,
       "reference": {
@@ -36,7 +34,6 @@
     },
     {
       "external_id": "profetas-0002",
-      "type": "multiple_choice",
       "text": "No ano da morte de qual rei Isaías viu o Senhor assentado sobre um alto e sublime trono?",
       "options": [
         {
@@ -56,7 +53,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"No ano em que morreu o rei Uzias, eu vi ao Senhor assentado sobre um alto e sublime trono\" (Is 6:1). A visão dos serafins clamando \"Santo, Santo, Santo\" marcou a comissão do profeta: \"Eis-me aqui, envia-me a mim\" (Is 6:8).",
       "divergence_note": null,
       "reference": {
@@ -69,7 +65,6 @@
     },
     {
       "external_id": "profetas-0003",
-      "type": "multiple_choice",
       "text": "Qual profeta é conhecido como o \"profeta chorão\" e testemunhou a destruição de Jerusalém?",
       "options": [
         {
@@ -89,7 +84,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jeremias profetizou por décadas o juízo sobre Judá, foi perseguido e preso, e viu a cidade cair em 586 a.C. \"Quem dera... os meus olhos uma fonte de lágrimas\" (Jr 9:1) — e Lamentações registra seu pranto sobre as ruínas.",
       "divergence_note": null,
       "reference": {
@@ -102,12 +96,24 @@
     },
     {
       "external_id": "profetas-0004",
-      "type": "open_answer",
       "text": "Qual profeta interpretou a escrita \"MENE, MENE, TEQUEL, UFARSIM\" que apareceu na parede durante o banquete de Belsazar?",
-      "options": null,
-      "accepted_answers": [
-        "Daniel",
-        "Profeta Daniel"
+      "options": [
+        {
+          "text": "Daniel",
+          "correct": true
+        },
+        {
+          "text": "Ezequiel",
+          "correct": false
+        },
+        {
+          "text": "Jeremias",
+          "correct": false
+        },
+        {
+          "text": "Ageu",
+          "correct": false
+        }
       ],
       "explanation": "Enquanto Belsazar profanava os utensílios do templo, dedos de mão humana escreveram na parede. Daniel interpretou: Deus contou, pesou e dividiu o reino (Dn 5:25-28). \"Naquela mesma noite\" Babilônia caiu diante dos medos e persas (Dn 5:30-31).",
       "divergence_note": null,
@@ -121,7 +127,6 @@
     },
     {
       "external_id": "profetas-0005",
-      "type": "multiple_choice",
       "text": "Qual profeta recebeu de Deus a ordem de casar-se com uma mulher que lhe seria infiel, como retrato de Israel?",
       "options": [
         {
@@ -141,7 +146,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Deus ordenou a Oseias tomar Gômer por mulher (Os 1:2-3) e depois amá-la de novo apesar do adultério (Os 3:1) — encenação viva do amor de Deus por Israel idólatra: \"eu os farei amar de boa vontade\" (Os 14:4).",
       "divergence_note": null,
       "reference": {
@@ -154,7 +158,6 @@
     },
     {
       "external_id": "profetas-0006",
-      "type": "multiple_choice",
       "text": "Qual profeta teve a visão do vale de ossos secos que tornaram a viver?",
       "options": [
         {
@@ -174,7 +177,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "No exílio, Ezequiel profetizou aos ossos e \"entrou neles o espírito, e viveram\" (Ez 37:10). Deus mesmo interpreta: \"estes ossos são toda a casa de Israel\" (Ez 37:11) — promessa de restauração ao povo que se via morto e sem esperança.",
       "divergence_note": null,
       "reference": {
@@ -187,7 +189,6 @@
     },
     {
       "external_id": "profetas-0007",
-      "type": "multiple_choice",
       "text": "Qual profeta era boiadeiro e colhedor de sicômoros em Tecoa antes de ser chamado?",
       "options": [
         {
@@ -207,7 +208,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Não sou profeta, nem filho de profeta, mas boiadeiro e cultivador de sicômoros\" (Am 7:14). Do interior de Judá, Amós foi enviado ao próspero reino do Norte para denunciar a injustiça social: \"corra o juízo como as águas\" (Am 5:24).",
       "divergence_note": null,
       "reference": {
@@ -220,7 +220,6 @@
     },
     {
       "external_id": "profetas-0008",
-      "type": "multiple_choice",
       "text": "Segundo Malaquias, quem Deus prometeu enviar antes do grande e terrível dia do Senhor?",
       "options": [
         {
@@ -240,7 +239,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Eis que eu vos enviarei o profeta Elias\" (Ml 4:5) — última promessa do Antigo Testamento. Jesus a aplica a João Batista, que veio \"no espírito e virtude de Elias\" (Mt 11:14; Lc 1:17).",
       "divergence_note": "Alguns intérpretes entendem que a promessa se cumpriu integralmente em João Batista; outros esperam um cumprimento adicional antes da segunda vinda. O texto de Mt 11:14 é o dado bíblico central.",
       "reference": {
@@ -253,12 +251,24 @@
     },
     {
       "external_id": "profetas-0009",
-      "type": "open_answer",
       "text": "Qual profeta ungiu tanto Saul quanto Davi como reis de Israel?",
-      "options": null,
-      "accepted_answers": [
-        "Samuel",
-        "Profeta Samuel"
+      "options": [
+        {
+          "text": "Samuel",
+          "correct": true
+        },
+        {
+          "text": "Natã",
+          "correct": false
+        },
+        {
+          "text": "Elias",
+          "correct": false
+        },
+        {
+          "text": "Gade",
+          "correct": false
+        }
       ],
       "explanation": "Samuel, último juiz e profeta, ungiu Saul (1Sm 10:1) e, após a rejeição deste, ungiu Davi em Belém (1Sm 16:13). Foi consagrado a Deus desde criança, quando respondeu: \"Fala, porque o teu servo ouve\" (1Sm 3:10).",
       "divergence_note": null,
@@ -272,7 +282,6 @@
     },
     {
       "external_id": "profetas-0010",
-      "type": "multiple_choice",
       "text": "Qual profeta questionou a Deus por usar os caldeus, mais ímpios que Judá, como instrumento de juízo?",
       "options": [
         {
@@ -292,7 +301,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Habacuque pergunta como um Deus santo pode calar \"quando o ímpio devora aquele que é mais justo do que ele\" (Hc 1:13). A resposta atravessa a Escritura: \"o justo pela sua fé viverá\" (Hc 2:4), citada em Romanos, Gálatas e Hebreus.",
       "divergence_note": null,
       "reference": {
@@ -305,7 +313,6 @@
     },
     {
       "external_id": "profetas-0011",
-      "type": "multiple_choice",
       "text": "Qual profeta foi engolido por um grande peixe após fugir de Deus?",
       "options": [
         {
@@ -325,7 +332,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jonas fugiu de Nínive rumo a Társis; lançado ao mar, foi tragado por um grande peixe e ali orou por três dias (Jn 1:17-2:10).",
       "divergence_note": null,
       "reference": {
@@ -338,7 +344,6 @@
     },
     {
       "external_id": "profetas-0012",
-      "type": "multiple_choice",
       "text": "Qual profeta viu o Senhor no templo e disse 'Eis-me aqui, envia-me'?",
       "options": [
         {
@@ -358,7 +363,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Na visão do trono, Isaías teve os lábios purificados por uma brasa e respondeu ao chamado: 'Eis-me aqui, envia-me' (Is 6:8).",
       "divergence_note": null,
       "reference": {
@@ -371,7 +375,6 @@
     },
     {
       "external_id": "profetas-0013",
-      "type": "multiple_choice",
       "text": "Qual profeta profetizou sobre o vale de ossos secos que ganharam vida?",
       "options": [
         {
@@ -391,7 +394,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Ezequiel profetizou aos ossos secos e eles se cobriram de carne e receberam fôlego — figura da restauração de Israel (Ez 37:1-10).",
       "divergence_note": null,
       "reference": {
@@ -405,11 +407,24 @@
     },
     {
       "external_id": "profetas-0014",
-      "type": "open_answer",
       "text": "Qual profeta é chamado 'o profeta chorão' por lamentar a queda de Jerusalém?",
-      "options": null,
-      "accepted_answers": [
-        "Jeremias"
+      "options": [
+        {
+          "text": "Jeremias",
+          "correct": true
+        },
+        {
+          "text": "Ezequiel",
+          "correct": false
+        },
+        {
+          "text": "Isaías",
+          "correct": false
+        },
+        {
+          "text": "Daniel",
+          "correct": false
+        }
       ],
       "explanation": "Jeremias profetizou o juízo sobre Judá e lamentou a destruição de Jerusalém, tradicionalmente associado ao livro de Lamentações (Jr 9:1).",
       "divergence_note": null,
@@ -424,7 +439,6 @@
     },
     {
       "external_id": "profetas-0015",
-      "type": "multiple_choice",
       "text": "Qual profeta desafiou os profetas de Baal no monte Carmelo?",
       "options": [
         {
@@ -444,7 +458,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Elias desafiou 450 profetas de Baal; o fogo do SENHOR caiu e consumiu o holocausto, e o povo confessou 'O SENHOR é Deus' (1Rs 18:38-39).",
       "divergence_note": null,
       "reference": {
@@ -457,7 +470,6 @@
     },
     {
       "external_id": "profetas-0016",
-      "type": "multiple_choice",
       "text": "Qual profeta anunciou que o Messias nasceria em Belém?",
       "options": [
         {
@@ -477,7 +489,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'E tu, Belém Efrata... de ti me sairá o que será Senhor em Israel' (Mq 5:2), citado pelos sábios em Mateus 2:6.",
       "divergence_note": null,
       "reference": {
@@ -490,7 +501,6 @@
     },
     {
       "external_id": "profetas-0017",
-      "type": "multiple_choice",
       "text": "A quem Deus ordenou que profetizasse contra Nínive, capital da Assíria?",
       "options": [
         {
@@ -510,7 +520,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jonas foi enviado a pregar contra Nínive; após a pregação, a cidade se arrependeu e Deus a poupou (Jn 3:1-10). Naum profetizaria sua queda depois.",
       "divergence_note": null,
       "reference": {
@@ -524,11 +533,24 @@
     },
     {
       "external_id": "profetas-0018",
-      "type": "open_answer",
       "text": "Qual profeta previu o derramamento do Espírito 'sobre toda a carne', citado por Pedro em Pentecostes?",
-      "options": null,
-      "accepted_answers": [
-        "Joel"
+      "options": [
+        {
+          "text": "Joel",
+          "correct": true
+        },
+        {
+          "text": "Amós",
+          "correct": false
+        },
+        {
+          "text": "Oseias",
+          "correct": false
+        },
+        {
+          "text": "Zacarias",
+          "correct": false
+        }
       ],
       "explanation": "Joel profetizou: 'derramarei o meu Espírito sobre toda a carne' (Jl 2:28), cumprido em Pentecostes e citado por Pedro (At 2:16-17).",
       "divergence_note": null,
@@ -542,7 +564,6 @@
     },
     {
       "external_id": "profetas-0019",
-      "type": "multiple_choice",
       "text": "Qual foi o último profeta do Antigo Testamento, que anunciou a vinda de Elias?",
       "options": [
         {
@@ -562,7 +583,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Malaquias encerra o Antigo Testamento anunciando o mensageiro e a vinda de 'Elias' antes do grande dia do SENHOR (Ml 4:5), cumprido em João Batista.",
       "divergence_note": null,
       "reference": {
@@ -575,7 +595,6 @@
     },
     {
       "external_id": "profetas-0020",
-      "type": "multiple_choice",
       "text": "Qual profeta comprou um campo como sinal de esperança mesmo durante o cerco de Jerusalém?",
       "options": [
         {
@@ -595,7 +614,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jeremias comprou o campo de Anatote como sinal de que 'ainda se comprarão casas, campos e vinhas nesta terra' após o exílio (Jr 32:15).",
       "divergence_note": null,
       "reference": {
@@ -608,7 +626,6 @@
     },
     {
       "external_id": "profetas-0021",
-      "type": "multiple_choice",
       "text": "Qual profeta teve visões de um prumo e de um cesto de frutos de verão contra Israel?",
       "options": [
         {
@@ -628,7 +645,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Amós viu o prumo (Am 7:7-8) e o cesto de frutos de verão (Am 8:1-2), sinais do juízo iminente sobre Israel.",
       "divergence_note": null,
       "reference": {
@@ -641,7 +657,6 @@
     },
     {
       "external_id": "profetas-0022",
-      "type": "multiple_choice",
       "text": "Qual profeta usou um jugo de madeira, depois quebrado pelo falso profeta Hananias?",
       "options": [
         {
@@ -661,7 +676,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jeremias andava com um jugo simbolizando a servidão à Babilônia; Hananias o quebrou, mas a palavra de Deus prevaleceu (Jr 28:10-11).",
       "divergence_note": null,
       "reference": {
@@ -674,7 +688,6 @@
     },
     {
       "external_id": "profetas-0023",
-      "type": "multiple_choice",
       "text": "Qual foi o nome dado ao filho que a virgem conceberia, segundo o sinal anunciado por Isaías a Acaz?",
       "options": [
         {
@@ -694,7 +707,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Eis que a virgem conceberá e dará à luz um filho, e chamará o seu nome Emanuel' (Is 7:14), citado em Mateus 1:23.",
       "divergence_note": null,
       "reference": {
@@ -707,7 +719,6 @@
     },
     {
       "external_id": "profetas-0024",
-      "type": "multiple_choice",
       "text": "Qual profeta foi chamado ainda jovem e disse: 'Ah, Senhor DEUS! Eis que não sei falar'?",
       "options": [
         {
@@ -727,7 +738,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Deus respondeu: 'Antes que te formasse no ventre te conheci' e tocou-lhe a boca (Jr 1:5-9).",
       "divergence_note": null,
       "reference": {
@@ -740,7 +750,6 @@
     },
     {
       "external_id": "profetas-0025",
-      "type": "multiple_choice",
       "text": "Que visão Zacarias teve envolvendo um candeeiro de ouro e duas oliveiras?",
       "options": [
         {
@@ -760,7 +769,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "A palavra que a acompanha é célebre: 'Não por força nem por poder, mas pelo meu Espírito, diz o SENHOR' (Zc 4:2-6).",
       "divergence_note": null,
       "reference": {
@@ -773,11 +781,24 @@
     },
     {
       "external_id": "profetas-0026",
-      "type": "open_answer",
       "text": "Qual profeta anunciou que o SENHOR requer 'praticar a justiça, amar a beneficência e andar humildemente'?",
-      "options": null,
-      "accepted_answers": [
-        "Miqueias"
+      "options": [
+        {
+          "text": "Miqueias",
+          "correct": true
+        },
+        {
+          "text": "Amós",
+          "correct": false
+        },
+        {
+          "text": "Oseias",
+          "correct": false
+        },
+        {
+          "text": "Malaquias",
+          "correct": false
+        }
       ],
       "explanation": "'Ele te declarou, ó homem, o que é bom... senão que pratiques a justiça, e ames a beneficência, e andes humildemente com o teu Deus' (Mq 6:8).",
       "divergence_note": null,
@@ -791,7 +812,6 @@
     },
     {
       "external_id": "profetas-0027",
-      "type": "multiple_choice",
       "text": "Contra qual povo Obadias, o menor livro do AT, dirigiu a sua profecia?",
       "options": [
         {
@@ -811,7 +831,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Obadias anuncia o juízo sobre Edom pela violência contra o irmão Jacó no dia da calamidade de Jerusalém (Ob 1:10).",
       "divergence_note": null,
       "reference": {
@@ -824,7 +843,6 @@
     },
     {
       "external_id": "profetas-0028",
-      "type": "multiple_choice",
       "text": "Que ordem incomum Deus deu a Ezequiel envolvendo um rolo escrito?",
       "options": [
         {
@@ -844,7 +862,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Come este rolo e vai, fala à casa de Israel'; ele o comeu, e foi na sua boca doce como mel (Ez 3:1-3).",
       "divergence_note": null,
       "reference": {
@@ -857,7 +874,6 @@
     },
     {
       "external_id": "profetas-0029",
-      "type": "multiple_choice",
       "text": "Que resposta Elias ouviu no monte Horebe depois do vento, do terremoto e do fogo?",
       "options": [
         {
@@ -877,7 +893,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'O SENHOR não estava no vento... nem no terremoto... nem no fogo; e depois do fogo uma voz mansa e delicada' (1Rs 19:11-12).",
       "divergence_note": null,
       "reference": {
@@ -890,7 +905,6 @@
     },
     {
       "external_id": "profetas-0030",
-      "type": "multiple_choice",
       "text": "O que o profeta Natã pediu a Davi que fizesse depois da parábola da cordeirinha?",
       "options": [
         {
@@ -910,7 +924,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Tu és este homem' (2Sm 12:7); Davi confessou: 'Pequei contra o SENHOR' (2Sm 12:13).",
       "divergence_note": null,
       "reference": {
@@ -923,7 +936,6 @@
     },
     {
       "external_id": "profetas-0031",
-      "type": "multiple_choice",
       "text": "Que sinal Jeremias usou ao esconder um cinto junto ao Eufrates?",
       "options": [
         {
@@ -943,7 +955,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O cinto estragado mostrava como o SENHOR faria apodrecer a soberba de Judá, que se apegara a ele como um cinto (Jr 13:1-11).",
       "divergence_note": null,
       "reference": {
@@ -956,11 +967,24 @@
     },
     {
       "external_id": "profetas-0032",
-      "type": "open_answer",
       "text": "Qual profeta declarou: 'Ainda que a figueira não floresça... eu me alegrarei no SENHOR'?",
-      "options": null,
-      "accepted_answers": [
-        "Habacuque"
+      "options": [
+        {
+          "text": "Habacuque",
+          "correct": true
+        },
+        {
+          "text": "Naum",
+          "correct": false
+        },
+        {
+          "text": "Sofonias",
+          "correct": false
+        },
+        {
+          "text": "Ageu",
+          "correct": false
+        }
       ],
       "explanation": "Depois de questionar os caminhos de Deus, Habacuque termina em adoração e confiança (Hc 3:17-18).",
       "divergence_note": null,
@@ -974,7 +998,6 @@
     },
     {
       "external_id": "profetas-0033",
-      "type": "multiple_choice",
       "text": "Qual profeta viu um carneiro de dois chifres e um bode, explicados como Média-Pérsia e Grécia?",
       "options": [
         {
@@ -994,7 +1017,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'O carneiro que viste com dois chifres são os reis da Média e da Pérsia; e o bode peludo é o rei da Grécia' (Dn 8:20-21).",
       "divergence_note": null,
       "reference": {
@@ -1007,7 +1029,6 @@
     },
     {
       "external_id": "profetas-0034",
-      "type": "multiple_choice",
       "text": "Quem anunciou a Jeroboão, em Betel, que um rei chamado Josias queimaria ossos sobre aquele altar?",
       "options": [
         {
@@ -1027,7 +1048,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Eis que um filho nascerá à casa de Davi, cujo nome será Josias' (1Rs 13:1-2) — cumprido três séculos depois (2Rs 23:15-16).",
       "divergence_note": null,
       "reference": {
@@ -1040,7 +1060,6 @@
     },
     {
       "external_id": "profetas-0035",
-      "type": "multiple_choice",
       "text": "Qual profeta viu quatro carros saindo dentre dois montes de bronze e coroou o sumo sacerdote Josué?",
       "options": [
         {
@@ -1060,7 +1079,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "As visões de Zacarias 6 culminam na coroação de Josué, figura do 'Renovo' que edificará o templo (Zc 6:1-13).",
       "divergence_note": null,
       "reference": {
@@ -1073,7 +1091,6 @@
     },
     {
       "external_id": "profetas-0036",
-      "type": "multiple_choice",
       "text": "Qual profetisa foi consultada em nome do rei Josias após a descoberta do Livro da Lei?",
       "options": [
         {
@@ -1093,7 +1110,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Os enviados de Josias 'foram a Hulda, a profetisa', que confirmou o juízo, mas prometeu paz ao rei (2Rs 22:14-20).",
       "divergence_note": null,
       "reference": {
@@ -1106,7 +1122,6 @@
     },
     {
       "external_id": "profetas-0037",
-      "type": "multiple_choice",
       "text": "Qual profeta anunciou o 'dia do SENHOR' com gafanhotos e a promessa 'restituirei os anos'?",
       "options": [
         {
@@ -1126,7 +1141,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Restituir-vos-ei os anos que foram consumidos pelo gafanhoto' (Jl 2:25) — juízo e restauração no mesmo livro.",
       "divergence_note": null,
       "reference": {
@@ -1139,11 +1153,24 @@
     },
     {
       "external_id": "profetas-0038",
-      "type": "open_answer",
       "text": "Qual profeta menor encerra com Deus 'se alegrando com cânticos' sobre seu povo restaurado?",
-      "options": null,
-      "accepted_answers": [
-        "Sofonias"
+      "options": [
+        {
+          "text": "Sofonias",
+          "correct": true
+        },
+        {
+          "text": "Naum",
+          "correct": false
+        },
+        {
+          "text": "Obadias",
+          "correct": false
+        },
+        {
+          "text": "Malaquias",
+          "correct": false
+        }
       ],
       "explanation": "'O SENHOR teu Deus está no meio de ti... se alegrará em ti com cânticos' (Sf 3:17) — após anunciar o grande dia do SENHOR.",
       "divergence_note": null,
@@ -1157,7 +1184,6 @@
     },
     {
       "external_id": "profetas-0039",
-      "type": "multiple_choice",
       "text": "Qual profeta anunciou o 'Sol da justiça' que traria 'salvação nas suas asas'?",
       "options": [
         {
@@ -1177,7 +1203,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Para vós que temeis o meu nome nascerá o Sol da justiça, e cura trará nas suas asas' (Ml 4:2).",
       "divergence_note": null,
       "reference": {
@@ -1190,7 +1215,6 @@
     },
     {
       "external_id": "profetas-0040",
-      "type": "multiple_choice",
       "text": "Qual profeta mandou Josafá e Jeorão cavarem valas em Moabe, que Deus encheu de água?",
       "options": [
         {
@@ -1210,7 +1234,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Fazei neste vale muitas covas... este vale se encherá de água' — e Deus deu vitória sobre Moabe (2Rs 3:16-20).",
       "divergence_note": null,
       "reference": {
@@ -1223,7 +1246,6 @@
     },
     {
       "external_id": "profetas-0041",
-      "type": "multiple_choice",
       "text": "Qual profeta rasgou uma capa em doze pedaços diante de Jeroboão, anunciando a divisão do reino?",
       "options": [
         {
@@ -1243,7 +1265,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Aías rasgou a capa nova: 'toma dez pedaços... porque eu rasgarei o reino da mão de Salomão' (1Rs 11:29-31).",
       "divergence_note": null,
       "reference": {
@@ -1256,12 +1277,24 @@
     },
     {
       "external_id": "profetas-0042",
-      "type": "open_answer",
       "text": "Qual profeta anunciou que \"os que esperam no Senhor renovarão as suas forças, subirão com asas como águias\"?",
-      "options": null,
-      "accepted_answers": [
-        "Isaías",
-        "Profeta Isaías"
+      "options": [
+        {
+          "text": "Isaías",
+          "correct": true
+        },
+        {
+          "text": "Jeremias",
+          "correct": false
+        },
+        {
+          "text": "Ezequiel",
+          "correct": false
+        },
+        {
+          "text": "Oseias",
+          "correct": false
+        }
       ],
       "explanation": "A promessa está em Isaías 40, capítulo que abre com \"Consolai, consolai o meu povo\" (Is 40:1). Ao povo cansado, que dizia que o seu caminho estava encoberto ao Senhor, Deus responde que ele \"nem se cansa nem se fatiga\" e dá forças ao cansado (Is 40:27-29) — e os que nele esperam \"correrão e não se cansarão; caminharão, e não se fatigarão\" (Is 40:31).",
       "divergence_note": null,
@@ -1275,12 +1308,24 @@
     },
     {
       "external_id": "profetas-0043",
-      "type": "open_answer",
       "text": "Qual profeta disse ao rei Saul: \"Eis que o obedecer é melhor do que o sacrificar\"?",
-      "options": null,
-      "accepted_answers": [
-        "Samuel",
-        "Profeta Samuel"
+      "options": [
+        {
+          "text": "Samuel",
+          "correct": true
+        },
+        {
+          "text": "Natã",
+          "correct": false
+        },
+        {
+          "text": "Aías",
+          "correct": false
+        },
+        {
+          "text": "Gade",
+          "correct": false
+        }
       ],
       "explanation": "Saul e o povo pouparam o rei Agague e o melhor das ovelhas e das vacas de Amaleque, contra a ordem de Deus, e Saul alegou que os animais seriam oferecidos ao Senhor (1Sm 15:9,15). Samuel respondeu: \"Eis que o obedecer é melhor do que o sacrificar; e o atender melhor é do que a gordura de carneiros\" (1Sm 15:22). Por ter rejeitado a palavra do Senhor, Saul foi rejeitado como rei (1Sm 15:23,26).",
       "divergence_note": null,
@@ -1294,7 +1339,6 @@
     },
     {
       "external_id": "profetas-0044",
-      "type": "multiple_choice",
       "text": "O que Jonas fazia enquanto a grande tempestade ameaçava despedaçar o navio que ia para Társis?",
       "options": [
         {
@@ -1314,7 +1358,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Enquanto os marinheiros clamavam cada um ao seu deus e aliviavam o navio, \"Jonas, porém, desceu aos lugares do porão, e se deitou, e dormia um profundo sono\" (Jn 1:5). O mestre do navio precisou acordá-lo: \"Levanta-te, invoca o teu Deus\" (Jn 1:6) — o profeta em fuga dormia, enquanto os pagãos oravam.",
       "divergence_note": null,
       "reference": {
@@ -1327,7 +1370,6 @@
     },
     {
       "external_id": "profetas-0045",
-      "type": "multiple_choice",
       "text": "A quem foi dirigida originalmente a promessa \"eu bem sei os pensamentos que penso de vós... pensamentos de paz e não de mal\"?",
       "options": [
         {
@@ -1347,7 +1389,6 @@
           "correct": true
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jeremias enviou essa carta de Jerusalém aos anciãos do cativeiro, aos sacerdotes, aos profetas e \"a todo o povo que Nabucodonosor havia transportado de Jerusalém\" para a Babilônia (Jr 29:1). Deus mandou os exilados edificarem casas e orarem pela paz da cidade, pois só depois de setenta anos na Babilônia os traria de volta (Jr 29:5-10). A famosa promessa de Jr 29:11 foi feita a um povo que ainda esperaria décadas no exílio.",
       "divergence_note": null,
       "reference": {
@@ -1360,7 +1401,6 @@
     },
     {
       "external_id": "profetas-0046",
-      "type": "multiple_choice",
       "text": "Debaixo de que árvore Elias se assentou e pediu a morte, ao fugir da ameaça de Jezabel?",
       "options": [
         {
@@ -1380,7 +1420,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Ameaçado por Jezabel depois do Carmelo, Elias foi ao deserto, \"se assentou debaixo de um zimbro; e pediu em seu ânimo a morte\" (1Rs 19:4). Antes de lhe falar no Horebe, Deus o deixou dormir e mandou um anjo alimentá-lo duas vezes, dando-lhe forças para a longa caminhada (1Rs 19:5-8).",
       "divergence_note": null,
       "reference": {

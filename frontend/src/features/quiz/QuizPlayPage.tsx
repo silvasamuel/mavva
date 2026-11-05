@@ -23,7 +23,6 @@ import { ReportQuestionModal } from '@/features/moderation/ReportQuestionModal'
 interface AnswerPayload {
   question_id: string
   selected_option_id?: string
-  answer_text?: string
   timed_out?: boolean
 }
 
@@ -52,7 +51,6 @@ export function QuizPlayPage() {
   const currentIndex = index ?? Math.max(0, firstUnanswered)
 
   const [selectedOption, setSelectedOption] = useState<string | null>(null)
-  const [answerText, setAnswerText] = useState('')
   const [feedback, setFeedback] = useState<AnswerFeedback | null>(null)
   const [timedOut, setTimedOut] = useState(false)
   const [error, setError] = useState('')
@@ -115,7 +113,6 @@ export function QuizPlayPage() {
         setCombo(null)
         setTimedOut(false)
         setSelectedOption(null)
-        setAnswerText('')
         setRemaining(null)
         setReportOpen(false)
         setError('')
@@ -199,16 +196,10 @@ export function QuizPlayPage() {
     setError('')
     if (!question || feedback || submitAnswer.isPending) return
     if (submittedIds.current.has(question.id)) return
-    if (question.type === 'multiple_choice') {
-      if (!selectedOption) return
-      submittedIds.current.add(question.id)
-      submitAnswer.mutate({ question_id: question.id, selected_option_id: selectedOption })
-    } else {
-      if (!answerText.trim()) return
-      submittedIds.current.add(question.id)
-      submitAnswer.mutate({ question_id: question.id, answer_text: answerText })
-    }
-  }, [question, feedback, selectedOption, answerText, submitAnswer])
+    if (!selectedOption) return
+    submittedIds.current.add(question.id)
+    submitAnswer.mutate({ question_id: question.id, selected_option_id: selectedOption })
+  }, [question, feedback, selectedOption, submitAnswer])
 
   const handleNext = useCallback(() => {
     if (completeQuiz.isPending) return
@@ -218,7 +209,6 @@ export function QuizPlayPage() {
     setFeedback(null)
     setTimedOut(false)
     setSelectedOption(null)
-    setAnswerText('')
     setRemaining(null)
     setReportOpen(false)
     questionStartedAt.current = Date.now()
@@ -250,7 +240,7 @@ export function QuizPlayPage() {
         return
       }
 
-      if (feedback || submitAnswer.isPending || question?.type !== 'multiple_choice') return
+      if (feedback || submitAnswer.isPending) return
       if (event.key.length !== 1) return
       const index = event.key.toUpperCase().charCodeAt(0) - 65
       if (index < 0 || index >= displayOptions.length) return
@@ -267,7 +257,6 @@ export function QuizPlayPage() {
     handleNext,
     handleSubmit,
     submitAnswer.isPending,
-    question?.type,
     displayOptions,
   ])
 
@@ -403,77 +392,51 @@ export function QuizPlayPage() {
             </div>
 
             <h1 className="text-xl font-extrabold leading-snug md:text-2xl">{question.text}</h1>
+            <div className="grid gap-3" role="radiogroup" aria-label="Alternativas">
+              {displayOptions.map((option, optionIndex) => {
+                const isSelected = selectedOption === option.id
+                const isCorrectOption = feedback?.correct_option_id === option.id
+                const isWrongPick = feedback && isSelected && !feedback.is_correct
 
-            {question.type === 'multiple_choice' ? (
-              <div className="grid gap-3" role="radiogroup" aria-label="Alternativas">
-                {displayOptions.map((option, optionIndex) => {
-                  const isSelected = selectedOption === option.id
-                  const isCorrectOption = feedback?.correct_option_id === option.id
-                  const isWrongPick = feedback && isSelected && !feedback.is_correct
+                let styles = 'border-sand-200 bg-white hover:bg-sand-50'
+                if (!feedback && isSelected)
+                  styles = 'border-leaf-500 bg-leaf-50 ring-1 ring-leaf-300'
+                if (isCorrectOption) styles = 'border-leaf-600 bg-leaf-100'
+                if (isWrongPick) styles = 'border-red-400 bg-red-50'
 
-                  let styles = 'border-sand-200 bg-white hover:bg-sand-50'
-                  if (!feedback && isSelected)
-                    styles = 'border-leaf-500 bg-leaf-50 ring-1 ring-leaf-300'
-                  if (isCorrectOption) styles = 'border-leaf-600 bg-leaf-100'
-                  if (isWrongPick) styles = 'border-red-400 bg-red-50'
-
-                  return (
-                    <motion.button
-                      key={option.id}
-                      role="radio"
-                      aria-checked={isSelected}
-                      aria-keyshortcuts={String.fromCharCode(65 + optionIndex)}
-                      disabled={Boolean(feedback)}
-                      onClick={() => setSelectedOption(option.id)}
-                      animate={isWrongPick ? { x: [0, -8, 8, -5, 5, 0] } : {}}
-                      transition={{ duration: 0.4 }}
-                      className={`flex items-center gap-3 rounded-2xl border-2 px-4 py-3.5 text-left text-sm font-bold transition-colors disabled:cursor-default ${styles}`}
-                    >
-                      <span
-                        className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-xs font-extrabold ${
-                          isCorrectOption
-                            ? 'bg-leaf-500 text-white'
-                            : isWrongPick
-                              ? 'bg-red-400 text-white'
-                              : 'bg-sand-100 text-sand-500'
-                        }`}
-                        aria-hidden
-                      >
-                        {isCorrectOption
-                          ? '✓'
+                return (
+                  <motion.button
+                    key={option.id}
+                    role="radio"
+                    aria-checked={isSelected}
+                    aria-keyshortcuts={String.fromCharCode(65 + optionIndex)}
+                    disabled={Boolean(feedback)}
+                    onClick={() => setSelectedOption(option.id)}
+                    animate={isWrongPick ? { x: [0, -8, 8, -5, 5, 0] } : {}}
+                    transition={{ duration: 0.4 }}
+                    className={`flex items-center gap-3 rounded-2xl border-2 px-4 py-3.5 text-left text-sm font-bold transition-colors disabled:cursor-default ${styles}`}
+                  >
+                    <span
+                      className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-xs font-extrabold ${
+                        isCorrectOption
+                          ? 'bg-leaf-500 text-white'
                           : isWrongPick
-                            ? '✗'
-                            : String.fromCharCode(65 + optionIndex)}
-                      </span>
-                      {option.text}
-                    </motion.button>
-                  )
-                })}
-              </div>
-            ) : (
-              <input
-                autoFocus
-                value={answerText}
-                disabled={Boolean(feedback)}
-                onChange={(e) => setAnswerText(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && !feedback && handleSubmit()}
-                placeholder="Digite sua resposta…"
-                aria-label="Sua resposta"
-                // The keyboard covers "Responder" on phones, so its return key
-                // submits; no autocorrect rewriting Bible names.
-                enterKeyHint="send"
-                autoComplete="off"
-                autoCorrect="off"
-                spellCheck={false}
-                className={`rounded-2xl border-2 bg-white px-4 py-4 text-lg font-bold focus-visible:ring-0 ${
-                  feedback
-                    ? feedback.is_correct
-                      ? 'border-leaf-500 bg-leaf-50'
-                      : 'border-red-400 bg-red-50'
-                    : 'border-sand-200 focus:border-leaf-500'
-                }`}
-              />
-            )}
+                            ? 'bg-red-400 text-white'
+                            : 'bg-sand-100 text-sand-500'
+                      }`}
+                      aria-hidden
+                    >
+                      {isCorrectOption
+                        ? '✓'
+                        : isWrongPick
+                          ? '✗'
+                          : String.fromCharCode(65 + optionIndex)}
+                    </span>
+                    {option.text}
+                  </motion.button>
+                )
+              })}
+            </div>
 
             {error && (
               <p
@@ -494,9 +457,7 @@ export function QuizPlayPage() {
                 className="relative"
                 onClick={handleSubmit}
                 loading={submitAnswer.isPending}
-                disabled={
-                  question.type === 'multiple_choice' ? !selectedOption : !answerText.trim()
-                }
+                disabled={!selectedOption}
               >
                 Responder
                 {/* Keyboard hint: meaningless on a touchscreen. */}
@@ -569,11 +530,6 @@ export function QuizPlayPage() {
                       </p>
                     )}
                   </motion.div>
-                )}
-                {!feedback.is_correct && feedback.correct_answer && (
-                  <p className="text-center text-lg font-extrabold">
-                    Resposta: {feedback.correct_answer}
-                  </p>
                 )}
                 <p className="text-center text-sm font-bold leading-relaxed text-white/90">
                   {feedback.explanation}

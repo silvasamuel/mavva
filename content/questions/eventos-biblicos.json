@@ -3,14 +3,24 @@
   "questions": [
     {
       "external_id": "eventos-biblicos-0001",
-      "type": "open_answer",
       "text": "Durante quantos dias e noites choveu sobre a terra no dilúvio?",
-      "options": null,
-      "accepted_answers": [
-        "40",
-        "Quarenta",
-        "Quarenta dias",
-        "Quarenta dias e quarenta noites"
+      "options": [
+        {
+          "text": "40",
+          "correct": true
+        },
+        {
+          "text": "7",
+          "correct": false
+        },
+        {
+          "text": "70",
+          "correct": false
+        },
+        {
+          "text": "150",
+          "correct": false
+        }
       ],
       "explanation": "\"Houve chuva sobre a terra quarenta dias e quarenta noites\" (Gn 7:12). As águas prevaleceram muito mais tempo — Noé passou mais de um ano dentro da arca até a terra secar (Gn 8:13-14).",
       "divergence_note": null,
@@ -24,7 +34,6 @@
     },
     {
       "external_id": "eventos-biblicos-0002",
-      "type": "multiple_choice",
       "text": "O que Deus fez na torre de Babel para deter a construção?",
       "options": [
         {
@@ -44,7 +53,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Confundamos ali a sua língua, para que não entenda um a língua do outro\" (Gn 11:7). Sem comunicação, a obra parou e os povos se espalharam. No Pentecostes, o sinal das línguas reverte simbolicamente Babel: todos ouvem \"as grandezas de Deus\" na própria língua (At 2:11).",
       "divergence_note": null,
       "reference": {
@@ -57,7 +65,6 @@
     },
     {
       "external_id": "eventos-biblicos-0003",
-      "type": "multiple_choice",
       "text": "O que aconteceu no dia de Pentecostes, em Atos 2?",
       "options": [
         {
@@ -77,7 +84,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Todos foram cheios do Espírito Santo, e começaram a falar noutras línguas\" (At 2:4), com o som de vento impetuoso e línguas como que de fogo. A pregação de Pedro converteu cerca de três mil — o nascimento da igreja.",
       "divergence_note": null,
       "reference": {
@@ -90,7 +96,6 @@
     },
     {
       "external_id": "eventos-biblicos-0004",
-      "type": "multiple_choice",
       "text": "O que o povo fez ao pé do Sinai enquanto Moisés recebia as tábuas da Lei no monte?",
       "options": [
         {
@@ -110,7 +115,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Vendo que Moisés tardava, o povo pediu deuses a Arão, que fez o bezerro de ouro: \"este é o teu deus, ó Israel, que te tirou da terra do Egito\" (Êx 32:4). Moisés desceu, quebrou as tábuas e destruiu o ídolo — apostasia ao pé do próprio monte da aliança.",
       "divergence_note": null,
       "reference": {
@@ -123,7 +127,6 @@
     },
     {
       "external_id": "eventos-biblicos-0005",
-      "type": "multiple_choice",
       "text": "O que aconteceu quando Salomão terminou a oração de dedicação do templo?",
       "options": [
         {
@@ -143,7 +146,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Desceu o fogo do céu, e consumiu o holocausto e os sacrifícios; e a glória do Senhor encheu a casa\" (2Cr 7:1). Os sacerdotes nem podiam entrar — Deus confirmava habitar no meio do seu povo, como antes no tabernáculo (Êx 40:34-35).",
       "divergence_note": null,
       "reference": {
@@ -156,7 +158,6 @@
     },
     {
       "external_id": "eventos-biblicos-0006",
-      "type": "multiple_choice",
       "text": "No batismo de Jesus, o que se ouviu e se viu do céu?",
       "options": [
         {
@@ -176,7 +177,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Viu o Espírito de Deus descendo como pomba... e eis que uma voz dos céus dizia: Este é o meu Filho amado, em quem me comprazo\" (Mt 3:16-17). As três pessoas da Trindade manifestas na abertura do ministério de Jesus.",
       "divergence_note": null,
       "reference": {
@@ -189,7 +189,6 @@
     },
     {
       "external_id": "eventos-biblicos-0007",
-      "type": "multiple_choice",
       "text": "Qual evento marcou a entrada do evangelho na casa dos gentios, com o Espírito descendo sobre não judeus?",
       "options": [
         {
@@ -209,7 +208,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Em Cesareia, enquanto Pedro ainda falava, \"caiu o Espírito Santo sobre todos os que ouviam a palavra\" (At 10:44) — gentios incircuncisos. O episódio, precedido pela visão do lençol, convenceu a igreja: \"também aos gentios deu Deus o arrependimento para a vida\" (At 11:18).",
       "divergence_note": null,
       "reference": {
@@ -222,7 +220,6 @@
     },
     {
       "external_id": "eventos-biblicos-0008",
-      "type": "multiple_choice",
       "text": "Em quantos dias Deus criou os céus e a terra, descansando no seguinte?",
       "options": [
         {
@@ -242,7 +239,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Em seis dias fez o Senhor os céus e a terra... e ao sétimo dia descansou\" (Êx 20:11, resumindo Gn 1-2). O descanso do sétimo dia fundamenta o sábado e aponta para o descanso que resta ao povo de Deus (Hb 4:9-10).",
       "divergence_note": "Cristãos fiéis à Escritura divergem sobre a natureza dos \"dias\" de Gênesis 1 (dias literais, eras, estrutura literária). Todos confessam o essencial: Deus criou tudo do nada, com propósito e bondade.",
       "reference": {
@@ -255,7 +251,6 @@
     },
     {
       "external_id": "eventos-biblicos-0009",
-      "type": "multiple_choice",
       "text": "Como Sansão causou mais destruição na sua morte do que em vida?",
       "options": [
         {
@@ -275,7 +270,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Cego e escarnecido na festa de Dagom, Sansão orou, abraçou as colunas centrais e \"foram mais os que matou na sua morte do que os que matara na sua vida\" (Jz 16:30). As outras alternativas são façanhas suas em vida (Jz 15:4-5,15; 16:3).",
       "divergence_note": null,
       "reference": {
@@ -288,7 +282,6 @@
     },
     {
       "external_id": "eventos-biblicos-0010",
-      "type": "multiple_choice",
       "text": "O que aconteceu no templo no momento em que Jesus morreu na cruz?",
       "options": [
         {
@@ -308,7 +301,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Eis que o véu do templo se rasgou em dois, de alto a baixo\" (Mt 27:51) — o véu que fechava o Santo dos Santos. Hebreus interpreta: pelo sangue de Jesus temos agora \"ousadia para entrar no santuário\", por um \"novo e vivo caminho\" (Hb 10:19-20).",
       "divergence_note": null,
       "reference": {
@@ -321,7 +313,6 @@
     },
     {
       "external_id": "eventos-biblicos-0011",
-      "type": "multiple_choice",
       "text": "Que evento em Babel resultou na confusão das línguas?",
       "options": [
         {
@@ -341,7 +332,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Deus confundiu a língua dos que erguiam a torre e os espalhou pela terra (Gn 11:7-9).",
       "divergence_note": null,
       "reference": {
@@ -355,7 +345,6 @@
     },
     {
       "external_id": "eventos-biblicos-0012",
-      "type": "multiple_choice",
       "text": "Que evento estabeleceu a aliança no Sinai com a entrega da Lei?",
       "options": [
         {
@@ -375,7 +364,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "No Sinai, entre trovões e fumaça, Deus desceu e deu a Lei a Moisés (Êx 19:18-20; 20:1).",
       "divergence_note": null,
       "reference": {
@@ -388,7 +376,6 @@
     },
     {
       "external_id": "eventos-biblicos-0013",
-      "type": "multiple_choice",
       "text": "Qual evento abriu caminho pelas águas para Israel fugir do Egito?",
       "options": [
         {
@@ -408,7 +395,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Moisés estendeu a mão e o SENHOR fez o mar recuar, e Israel passou em seco (Êx 14:21-22).",
       "divergence_note": null,
       "reference": {
@@ -421,7 +407,6 @@
     },
     {
       "external_id": "eventos-biblicos-0014",
-      "type": "multiple_choice",
       "text": "Qual evento levou Judá ao cativeiro e destruiu o templo de Salomão?",
       "options": [
         {
@@ -441,7 +426,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Nabucodonosor tomou Jerusalém, queimou o templo e levou o povo cativo (2Rs 25:8-11).",
       "divergence_note": null,
       "reference": {
@@ -454,13 +438,24 @@
     },
     {
       "external_id": "eventos-biblicos-0015",
-      "type": "open_answer",
       "text": "Que evento restaurou os judeus à terra após o decreto de um rei persa?",
-      "options": null,
-      "accepted_answers": [
-        "Retorno do exílio",
-        "O retorno do exilio",
-        "Retorno do cativeiro"
+      "options": [
+        {
+          "text": "Retorno do exílio",
+          "correct": true
+        },
+        {
+          "text": "O êxodo do Egito",
+          "correct": false
+        },
+        {
+          "text": "A conquista de Canaã",
+          "correct": false
+        },
+        {
+          "text": "A queda de Jericó",
+          "correct": false
+        }
       ],
       "explanation": "Ciro, rei da Pérsia, decretou o retorno e a reconstrução do templo, cumprindo a profecia (Ed 1:1-3).",
       "divergence_note": null,
@@ -474,7 +469,6 @@
     },
     {
       "external_id": "eventos-biblicos-0016",
-      "type": "multiple_choice",
       "text": "Qual evento revelou Jesus resplandecente ao lado de Moisés e Elias?",
       "options": [
         {
@@ -494,7 +488,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "No monte, o rosto de Jesus resplandeceu como o sol e a voz do Pai o confirmou (Mt 17:2-5).",
       "divergence_note": null,
       "reference": {
@@ -507,7 +500,6 @@
     },
     {
       "external_id": "eventos-biblicos-0017",
-      "type": "multiple_choice",
       "text": "Qual evento derrubou os muros de Jericó?",
       "options": [
         {
@@ -527,7 +519,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Ao sétimo dia, após rodearem a cidade e ao som das trombetas e do brado, os muros caíram (Js 6:20).",
       "divergence_note": null,
       "reference": {
@@ -540,7 +531,6 @@
     },
     {
       "external_id": "eventos-biblicos-0018",
-      "type": "multiple_choice",
       "text": "Qual evento inaugurou a igreja com línguas de fogo e muitos idiomas?",
       "options": [
         {
@@ -560,7 +550,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "No Pentecostes, o Espírito desceu e os discípulos falaram em outras línguas; três mil se converteram (At 2:3-4,41).",
       "divergence_note": null,
       "reference": {
@@ -573,7 +562,6 @@
     },
     {
       "external_id": "eventos-biblicos-0019",
-      "type": "multiple_choice",
       "text": "Qual evento marcou o primeiro dia da criação em Gênesis?",
       "options": [
         {
@@ -593,7 +581,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Disse Deus: Haja luz; e houve luz' (Gn 1:3) — o primeiro ato criador nomeado.",
       "divergence_note": null,
       "reference": {
@@ -606,7 +593,6 @@
     },
     {
       "external_id": "eventos-biblicos-0020",
-      "type": "multiple_choice",
       "text": "Qual evento pôs fim à vida no mundo antigo, salvando apenas oito pessoas?",
       "options": [
         {
@@ -626,7 +612,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O dilúvio cobriu a terra; só Noé e sua família (oito pessoas) se salvaram na arca (Gn 7:23; 1Pe 3:20).",
       "divergence_note": null,
       "reference": {
@@ -639,7 +624,6 @@
     },
     {
       "external_id": "eventos-biblicos-0021",
-      "type": "multiple_choice",
       "text": "O que Deus instituiu ao chamar Abrão para sair de Ur?",
       "options": [
         {
@@ -659,7 +643,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Sai da tua terra... e far-te-ei uma grande nação' (Gn 12:1-2) — o chamado que inaugura a história do povo da promessa.",
       "divergence_note": null,
       "reference": {
@@ -672,7 +655,6 @@
     },
     {
       "external_id": "eventos-biblicos-0022",
-      "type": "multiple_choice",
       "text": "O que aconteceu em Sinai enquanto Moisés estava no monte?",
       "options": [
         {
@@ -692,7 +674,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Impaciente, o povo pediu deuses a Arão, que fundiu um bezerro de ouro (Êx 32:1-4); Moisés quebrou as tábuas ao descer.",
       "divergence_note": null,
       "reference": {
@@ -706,7 +687,6 @@
     },
     {
       "external_id": "eventos-biblicos-0023",
-      "type": "multiple_choice",
       "text": "Que evento marcou a entrada da arca do concerto em Jerusalém sob Davi?",
       "options": [
         {
@@ -726,7 +706,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Davi saltava com todas as suas forças diante do SENHOR'; Mical o desprezou por isso (2Sm 6:14-16).",
       "divergence_note": null,
       "reference": {
@@ -739,7 +718,6 @@
     },
     {
       "external_id": "eventos-biblicos-0024",
-      "type": "multiple_choice",
       "text": "O que os discípulos faziam quando o Espírito Santo desceu no Pentecostes?",
       "options": [
         {
@@ -759,7 +737,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Estando todos reunidos no mesmo lugar', veio do céu um som como de vento impetuoso (At 2:1-2).",
       "divergence_note": null,
       "reference": {
@@ -772,14 +749,24 @@
     },
     {
       "external_id": "eventos-biblicos-0025",
-      "type": "open_answer",
       "text": "Que acordo Jônatas fez com Davi, apesar de ser filho de Saul?",
-      "options": null,
-      "accepted_answers": [
-        "Um pacto",
-        "Um pacto de amizade",
-        "Aliança",
-        "Um concerto"
+      "options": [
+        {
+          "text": "Um pacto de amizade",
+          "correct": true
+        },
+        {
+          "text": "Um acordo de casamento com Mical",
+          "correct": false
+        },
+        {
+          "text": "Uma divisão do reino",
+          "correct": false
+        },
+        {
+          "text": "Um juramento de vingança contra Saul",
+          "correct": false
+        }
       ],
       "explanation": "'Jônatas fez concerto com Davi, porque o amava como à sua própria alma' (1Sm 18:3), protegendo-o da ira de Saul.",
       "divergence_note": null,
@@ -793,7 +780,6 @@
     },
     {
       "external_id": "eventos-biblicos-0026",
-      "type": "multiple_choice",
       "text": "O que Deus fez descer sobre Sodoma e Gomorra em juízo?",
       "options": [
         {
@@ -813,7 +799,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Fez o SENHOR chover enxofre e fogo... e destruiu aquelas cidades' (Gn 19:24-25); a mulher de Ló olhou para trás e virou estátua de sal.",
       "divergence_note": null,
       "reference": {
@@ -826,7 +811,6 @@
     },
     {
       "external_id": "eventos-biblicos-0027",
-      "type": "multiple_choice",
       "text": "Que sinal Deus deu quando Israel atravessou o Jordão em seco?",
       "options": [
         {
@@ -846,7 +830,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "As águas que desciam pararam quando os pés dos sacerdotes com a arca tocaram a beira do Jordão (Js 3:15-16).",
       "divergence_note": null,
       "reference": {
@@ -859,7 +842,6 @@
     },
     {
       "external_id": "eventos-biblicos-0028",
-      "type": "multiple_choice",
       "text": "O que aconteceu quando Uzá tocou na arca para segurá-la?",
       "options": [
         {
@@ -879,7 +861,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'A ira do SENHOR se acendeu contra Uzá, e Deus o feriu ali por esta imprudência' (2Sm 6:6-7) — a santidade de Deus não é banal.",
       "divergence_note": null,
       "reference": {
@@ -892,7 +873,6 @@
     },
     {
       "external_id": "eventos-biblicos-0029",
-      "type": "multiple_choice",
       "text": "O que a pomba trouxe a Noé, mostrando que as águas haviam baixado?",
       "options": [
         {
@@ -912,7 +892,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'A pomba voltou a ele à tarde; e eis, arrancada, uma folha de oliveira no seu bico' (Gn 8:11); na terceira vez ela não voltou mais.",
       "divergence_note": null,
       "reference": {
@@ -925,13 +904,24 @@
     },
     {
       "external_id": "eventos-biblicos-0030",
-      "type": "open_answer",
       "text": "Que castigo caiu sobre Israel quando o povo murmurou e foi mordido no deserto?",
-      "options": null,
-      "accepted_answers": [
-        "Serpentes ardentes",
-        "Serpentes",
-        "As serpentes ardentes"
+      "options": [
+        {
+          "text": "Serpentes ardentes",
+          "correct": true
+        },
+        {
+          "text": "Fogo do SENHOR",
+          "correct": false
+        },
+        {
+          "text": "Uma praga de gafanhotos",
+          "correct": false
+        },
+        {
+          "text": "A terra se abriu",
+          "correct": false
+        }
       ],
       "explanation": "O SENHOR enviou serpentes ardentes; a cura veio ao olhar para a serpente de bronze na haste (Nm 21:6-9).",
       "divergence_note": null,
@@ -945,7 +935,6 @@
     },
     {
       "external_id": "eventos-biblicos-0031",
-      "type": "multiple_choice",
       "text": "O que aconteceu com os egípcios que perseguiram Israel pelo meio do mar?",
       "options": [
         {
@@ -965,7 +954,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'As águas tornaram e cobriram os carros e os cavaleiros de todo o exército de Faraó... não ficou nem um deles' (Êx 14:28).",
       "divergence_note": null,
       "reference": {
@@ -978,7 +966,6 @@
     },
     {
       "external_id": "eventos-biblicos-0032",
-      "type": "multiple_choice",
       "text": "O que Josué mandou fazer com as doze pedras tiradas do leito do Jordão?",
       "options": [
         {
@@ -998,7 +985,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Levantou Josué em Gilgal as doze pedras', para que os filhos perguntassem e ouvissem o que o SENHOR fizera (Js 4:20-24).",
       "divergence_note": null,
       "reference": {
@@ -1011,7 +997,6 @@
     },
     {
       "external_id": "eventos-biblicos-0033",
-      "type": "multiple_choice",
       "text": "O que aconteceu no monte Carmelo depois de o fogo consumir o sacrifício de Elias?",
       "options": [
         {
@@ -1031,7 +1016,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Elias orou sete vezes; uma nuvem subiu do mar e 'houve uma grande chuva' (1Rs 18:41-45), fim de três anos e meio de seca.",
       "divergence_note": null,
       "reference": {
@@ -1044,7 +1028,6 @@
     },
     {
       "external_id": "eventos-biblicos-0034",
-      "type": "multiple_choice",
       "text": "O que aconteceu na mesma noite em que Daniel interpretou a escrita na parede?",
       "options": [
         {
@@ -1064,7 +1047,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Naquela mesma noite foi morto Belsazar, rei dos caldeus. E Dario, o medo, ocupou o reino' (Dn 5:30-31).",
       "divergence_note": null,
       "reference": {
@@ -1077,7 +1059,6 @@
     },
     {
       "external_id": "eventos-biblicos-0035",
-      "type": "multiple_choice",
       "text": "Que aviso levou José a fugir com Maria e o menino para o Egito?",
       "options": [
         {
@@ -1097,7 +1078,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Apareceu um anjo do Senhor a José em sonhos... foge para o Egito, porque Herodes há de procurar o menino para o matar' (Mt 2:13).",
       "divergence_note": null,
       "reference": {
@@ -1110,7 +1090,6 @@
     },
     {
       "external_id": "eventos-biblicos-0036",
-      "type": "multiple_choice",
       "text": "O que aconteceu no instante em que Pedro negou Jesus pela terceira vez?",
       "options": [
         {
@@ -1130,7 +1109,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Estando ele ainda a falar, cantou o galo. E, virando-se o Senhor, olhou para Pedro... e Pedro chorou amargamente' (Lc 22:60-62).",
       "divergence_note": null,
       "reference": {
@@ -1143,13 +1121,24 @@
     },
     {
       "external_id": "eventos-biblicos-0037",
-      "type": "open_answer",
       "text": "Que fenômeno cobriu o Sinai quando Deus desceu para falar: 'trovões, relâmpagos e uma espessa ___'?",
-      "options": null,
-      "accepted_answers": [
-        "Nuvem",
-        "Uma nuvem",
-        "Nuvem espessa"
+      "options": [
+        {
+          "text": "Nuvem",
+          "correct": true
+        },
+        {
+          "text": "Neblina",
+          "correct": false
+        },
+        {
+          "text": "Escuridão",
+          "correct": false
+        },
+        {
+          "text": "Tempestade",
+          "correct": false
+        }
       ],
       "explanation": "'Houve trovões e relâmpagos sobre o monte e uma espessa nuvem... e todo o povo estremeceu' (Êx 19:16).",
       "divergence_note": null,
@@ -1163,7 +1152,6 @@
     },
     {
       "external_id": "eventos-biblicos-0038",
-      "type": "multiple_choice",
       "text": "Quantos espias Moisés enviou para reconhecer a terra de Canaã?",
       "options": [
         {
@@ -1183,7 +1171,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Envia homens que espiem a terra de Canaã... de cada tribo de seus pais enviareis um homem' (Nm 13:2).",
       "divergence_note": null,
       "reference": {
@@ -1196,7 +1183,6 @@
     },
     {
       "external_id": "eventos-biblicos-0039",
-      "type": "multiple_choice",
       "text": "Com que arma improvisada Sansão matou mil filisteus?",
       "options": [
         {
@@ -1216,7 +1202,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Achou uma queixada fresca de um jumento... e feriu com ela mil homens' (Jz 15:15).",
       "divergence_note": null,
       "reference": {
@@ -1229,7 +1214,6 @@
     },
     {
       "external_id": "eventos-biblicos-0040",
-      "type": "multiple_choice",
       "text": "Quantas pedras Davi escolheu no ribeiro antes de enfrentar Golias?",
       "options": [
         {
@@ -1249,7 +1233,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Escolheu para si cinco seixos do ribeiro e pô-los no alforje' (1Sm 17:40) — bastou uma.",
       "divergence_note": null,
       "reference": {
@@ -1262,7 +1245,6 @@
     },
     {
       "external_id": "eventos-biblicos-0041",
-      "type": "multiple_choice",
       "text": "O que aconteceu a Coré, Datã e Abirão ao se rebelarem contra Moisés?",
       "options": [
         {
@@ -1282,7 +1264,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'A terra abriu a sua boca e os tragou com as suas casas' (Nm 16:31-33) — juízo sobre a rebelião contra o sacerdócio.",
       "divergence_note": null,
       "reference": {
@@ -1295,7 +1276,6 @@
     },
     {
       "external_id": "eventos-biblicos-0042",
-      "type": "multiple_choice",
       "text": "Que alimento Deus fez cair do céu para sustentar Israel no deserto?",
       "options": [
         {
@@ -1315,7 +1295,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Eis que vos farei chover pão dos céus'; o povo o chamou maná — 'como semente de coentro, branco' (Êx 16:4,31).",
       "divergence_note": null,
       "reference": {
@@ -1328,7 +1307,6 @@
     },
     {
       "external_id": "eventos-biblicos-0043",
-      "type": "multiple_choice",
       "text": "Na batalha contra os amalequitas em Refidim, quem sustentou as mãos de Moisés até o pôr do sol, para que Israel prevalecesse?",
       "options": [
         {
@@ -1348,7 +1326,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Enquanto Josué pelejava, Moisés subiu ao cume do outeiro com a vara de Deus: \"quando Moisés levantava a sua mão, Israel prevalecia; mas, quando ele abaixava a sua mão, Amaleque prevalecia\" (Êx 17:11). Quando as mãos de Moisés ficaram pesadas, puseram-lhe uma pedra para se assentar, e Arão e Hur sustentaram as suas mãos, um de cada lado, até que o sol se pôs (Êx 17:12). Depois da vitória, Moisés ergueu um altar e o chamou \"O SENHOR é minha bandeira\" (Êx 17:15).",
       "divergence_note": null,
       "reference": {
@@ -1361,7 +1338,6 @@
     },
     {
       "external_id": "eventos-biblicos-0044",
-      "type": "multiple_choice",
       "text": "O que Daniel pediu para comer e beber na corte da Babilônia, para não se contaminar com a porção do manjar do rei?",
       "options": [
         {
@@ -1381,7 +1357,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Daniel \"assentou no seu coração não se contaminar com a porção do manjar do rei\" e propôs ao despenseiro um teste de dez dias, pedindo que lhes dessem legumes a comer e água a beber (Dn 1:8-12). Ao fim do prazo, ele e seus três companheiros pareciam mais saudáveis e nutridos que todos os jovens que comiam do manjar do rei (Dn 1:15). A fidelidade nas pequenas escolhas preparou Daniel para as grandes provas que viriam.",
       "divergence_note": null,
       "reference": {
@@ -1394,7 +1369,6 @@
     },
     {
       "external_id": "eventos-biblicos-0045",
-      "type": "multiple_choice",
       "text": "Como Jacó conseguiu enganar o pai, Isaque, que já não enxergava, para receber a bênção destinada a Esaú?",
       "options": [
         {
@@ -1414,7 +1388,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Foi Rebeca quem armou o plano: ela vestiu Jacó com as roupas de gala de Esaú e, \"com as peles dos cabritos\", cobriu-lhe as mãos e a lisura do pescoço (Gn 27:6-16). Isaque desconfiou — \"A voz é a voz de Jacó, porém as mãos são as mãos de Esaú\" —, mas, apalpando as mãos cabeludas, o abençoou (Gn 27:22-23). O engano custou caro: Jacó teve de fugir da ira do irmão e, anos depois, foi ele o enganado por Labão (Gn 27:41-43; 29:25).",
       "divergence_note": null,
       "reference": {
@@ -1427,7 +1400,6 @@
     },
     {
       "external_id": "eventos-biblicos-0046",
-      "type": "multiple_choice",
       "text": "O que Deus pôs ao oriente do jardim do Éden, depois de lançar fora o homem, para guardar o caminho da árvore da vida?",
       "options": [
         {
@@ -1447,7 +1419,6 @@
           "correct": true
         }
       ],
-      "accepted_answers": null,
       "explanation": "Depois da queda, o SENHOR Deus lançou o homem fora do jardim e \"pôs querubins ao oriente do jardim do Éden e uma espada inflamada que andava ao redor, para guardar o caminho da árvore da vida\" (Gn 3:23-24). O acesso perdido no Éden reaparece restaurado no fim da Escritura: na nova Jerusalém, a árvore da vida está no meio da praça, junto ao rio (Ap 22:2).",
       "divergence_note": null,
       "reference": {

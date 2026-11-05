@@ -22,11 +22,6 @@ class ReviewOrder(StrEnum):
     LAPSES = "lapses"
 
 
-class QuestionType(StrEnum):
-    MULTIPLE_CHOICE = "multiple_choice"
-    OPEN_ANSWER = "open_answer"
-
-
 class Testament(StrEnum):
     OLD = "old"
     NEW = "new"

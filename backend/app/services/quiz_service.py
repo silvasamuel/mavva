@@ -19,8 +19,8 @@ from app.models import (
     User,
     UserStats,
 )
-from app.models.enums import Difficulty, QuestionType, QuizMode, Testament
-from app.services import achievement_service, answer_checker, srs
+from app.models.enums import Difficulty, QuizMode, Testament
+from app.services import achievement_service, srs
 from app.services.gamification import (
     PERFECT_SESSION_BONUS,
     SESSION_COMPLETE_BONUS,
@@ -186,8 +186,7 @@ def ensure_current_timer(db: Session, session: QuizSession) -> None:
 @dataclass
 class AnswerResult:
     is_correct: bool
-    correct_option_id: uuid.UUID | None
-    correct_answer: str | None
+    correct_option_id: uuid.UUID
     explanation: str
     divergence_note: str | None
     question: Question
@@ -212,7 +211,6 @@ def submit_answer(
     *,
     question_id: uuid.UUID,
     selected_option_id: uuid.UUID | None,
-    answer_text: str | None,
     time_spent_seconds: int | None,
     timed_out: bool = False,
 ) -> AnswerResult:
@@ -230,27 +228,19 @@ def submit_answer(
     if any(a.question_id == question_id for a in session.answers):
         raise QuizError("Esta pergunta já foi respondida")
 
-    correct_option: QuestionOption | None = None
-    if question.type == QuestionType.MULTIPLE_CHOICE:
-        correct_option = next(o for o in question.options if o.is_correct)
+    correct_option: QuestionOption = next(o for o in question.options if o.is_correct)
 
     if timed_out:
         # Time ran out with no answer — counts as a miss.
         is_correct = False
         selected_option_id = None
-        answer_text = None
-    elif question.type == QuestionType.MULTIPLE_CHOICE:
+    else:
         if selected_option_id is None:
             raise QuizError("Selecione uma alternativa")
         selected = next((o for o in question.options if o.id == selected_option_id), None)
         if selected is None:
             raise QuizError("Alternativa inválida para esta pergunta")
         is_correct = selected.is_correct
-    else:
-        if not answer_text or not answer_text.strip():
-            raise QuizError("Digite uma resposta")
-        accepted = [a.text for a in question.accepted_answers]
-        is_correct = answer_checker.is_answer_correct(answer_text, accepted)
 
     # Hits in a row in this session, this answer included — rebuilt from the
     # stored answers (in answer order), never taken from the client.
@@ -269,7 +259,6 @@ def submit_answer(
             session_id=session.id,
             question_id=question.id,
             selected_option_id=selected_option_id,
-            answer_text=answer_text,
             is_correct=is_correct,
             time_spent_seconds=time_spent_seconds,
             # The column default, now(), is the transaction start: answers sharing
@@ -292,15 +281,9 @@ def submit_answer(
     )
     db.flush()
 
-    canonical_answer = (
-        question.accepted_answers[0].text
-        if question.type == QuestionType.OPEN_ANSWER and question.accepted_answers
-        else None
-    )
     return AnswerResult(
         is_correct=is_correct,
-        correct_option_id=correct_option.id if correct_option else None,
-        correct_answer=canonical_answer,
+        correct_option_id=correct_option.id,
         explanation=question.explanation,
         divergence_note=question.divergence_note,
         question=question,
