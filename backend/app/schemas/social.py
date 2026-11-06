@@ -26,6 +26,8 @@ class PublicUser(BaseModel):
     duel_wins: int
     duel_losses: int
     duel_draws: int
+    # Badge next to the rank: the player has made an approved Pix donation.
+    is_supporter: bool = False
 
 
 RelationStatus = Literal["none", "pending_sent", "pending_received", "friends"]

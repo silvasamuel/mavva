@@ -98,6 +98,9 @@ class TestFollowTheCharge:
         me = client.get("/api/v1/users/me", headers=headers).json()
         assert me["is_supporter"] is True
         assert me["supporter_since"] is not None
+        # The badge travels with the public profile too (HUD card, ranking).
+        profile = client.get(f"/api/v1/players/{me['id']}", headers=headers).json()
+        assert profile["user"]["is_supporter"] is True
 
         summary = client.get("/api/v1/support/me", headers=headers).json()
         assert summary["is_supporter"] is True

@@ -7,6 +7,7 @@ import { Modal } from '@/components/ui/Modal'
 import { SeasonTrophies } from '@/components/SeasonTrophies'
 import { EloTile } from '@/components/EloTile'
 import { RankBadge } from '@/components/RankBadge'
+import { SupporterBadge } from '@/components/SupporterBadge'
 import { formatPercent } from '@/lib/format'
 import { AchievementGlyph, AppIcons, CategoryGlyph, Glyph, type Icon } from '@/lib/icons'
 
@@ -292,6 +293,7 @@ function ProfileBody({ profile }: { profile: PlayerProfile }) {
           <h2 className="text-xl font-extrabold text-ink">{user.name}</h2>
           <p className="text-sm font-semibold text-sand-500">@{user.username}</p>
         </div>
+        {user.is_supporter && <SupporterBadge size="md" />}
         {relation && (
           <span className="rounded-full bg-leaf-100 px-3 py-0.5 text-xs font-extrabold text-leaf-700">
             {relation}
@@ -344,6 +346,7 @@ function ProfileSkeleton({ user }: { user?: PublicUser }) {
               <h2 className="text-xl font-extrabold text-ink">{user.name}</h2>
               <p className="text-sm font-semibold text-sand-500">@{user.username}</p>
             </div>
+            {user.is_supporter && <SupporterBadge size="md" />}
           </>
         ) : (
           <>

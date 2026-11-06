@@ -1,4 +1,5 @@
 import { RankBadge } from '@/components/RankBadge'
+import { SupporterBadge } from '@/components/SupporterBadge'
 import { ProgressBar } from '@/components/ui/ProgressBar'
 import { AppIcons, Glyph } from '@/lib/icons'
 import { nextRankCopy, rankFromLevel, rankProgress } from '@/lib/ranks'
@@ -11,6 +12,7 @@ export function GameHud({
   xpForNext,
   streak,
   loading,
+  supporter = false,
   onOpenProfile,
 }: {
   rankCode?: string
@@ -20,6 +22,8 @@ export function GameHud({
   xpForNext?: number
   streak?: number
   loading?: boolean
+  /** Mavva Apoiador: gold trim on the panel and the XP bar, plus the badge. */
+  supporter?: boolean
   /** Makes the badge a button that opens the player's own profile card. */
   onOpenProfile?: () => void
 }) {
@@ -28,7 +32,13 @@ export function GameHud({
   const next = band.maxLevel != null ? rankFromLevel(band.maxLevel + 1) : null
   const elo = rankProgress(level ?? 1, band.minLevel, next?.minLevel ?? null)
   return (
-    <div className="flex items-center gap-3 rounded-2xl bg-white/80 px-3 py-2 shadow-card backdrop-blur-md">
+    <div
+      className={`flex items-center gap-3 rounded-2xl px-3 py-2 shadow-card backdrop-blur-md ${
+        supporter
+          ? 'bg-gradient-to-r from-grain-50 via-white/90 to-white/80 ring-2 ring-grain-300'
+          : 'bg-white/80'
+      }`}
+    >
       {onOpenProfile ? (
         <button
           type="button"
@@ -43,19 +53,24 @@ export function GameHud({
         <RankBadge code={rankCode ?? 'semente'} size="sm" />
       )}
       <div className="min-w-0 flex-1">
-        <div className="flex items-baseline gap-2">
+        <div className="flex items-center gap-2">
           <p className="truncate text-sm font-extrabold leading-none">
             {loading ? '…' : (rankName ?? 'Semente')}
           </p>
           <p className="text-xs font-extrabold uppercase tracking-wide text-sand-500">
             Nv {loading ? '–' : (level ?? 1)}
           </p>
+          {supporter && <SupporterBadge />}
         </div>
         <ProgressBar
           value={xpInto ?? 0}
           max={xpForNext ?? 1}
-          className="mt-1.5 h-2"
-          color="bg-grain-400"
+          className={`mt-1.5 h-2 ${supporter ? 'ring-1 ring-grain-200' : ''}`}
+          color={
+            supporter
+              ? 'bg-gradient-to-r from-grain-300 via-grain-400 to-grain-500 shadow-[0_0_8px_0_#f3cb57]'
+              : 'bg-grain-400'
+          }
         />
         <p className="mt-1 truncate text-xs font-extrabold text-sand-500">
           {nextRankCopy(elo.remaining, next?.name ?? null)}

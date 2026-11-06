@@ -42,6 +42,7 @@ def _public(user: User) -> PublicUser:
         duel_wins=stats.duel_wins if stats else 0,
         duel_losses=stats.duel_losses if stats else 0,
         duel_draws=stats.duel_draws if stats else 0,
+        is_supporter=user.is_supporter,
     )
 
 

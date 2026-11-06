@@ -80,6 +80,8 @@ export interface PublicUser {
   duel_wins: number
   duel_losses: number
   duel_draws: number
+  /** Shows the Apoiador badge next to the rank (approved Pix donation). */
+  is_supporter?: boolean
 }
 
 export type RelationStatus = 'none' | 'pending_sent' | 'pending_received' | 'friends'

@@ -6,6 +6,7 @@ import type { SupportPayment, SupportSummary } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
 import { Spinner } from '@/components/ui/Spinner'
+import { SupporterBadge } from '@/components/SupporterBadge'
 import { useAuth } from '@/features/auth/AuthContext'
 import { formatDate, formatReais } from '@/lib/format'
 import { AppIcons, Glyph } from '@/lib/icons'
@@ -158,7 +159,10 @@ export function SupportPage() {
             <Glyph as={AppIcons.heart} className="h-7 w-7" />
           </span>
           <div>
-            <p className="font-extrabold text-ink">Você é Mavva Apoiador</p>
+            <p className="flex items-center gap-2 font-extrabold text-ink">
+              Você é Mavva Apoiador
+              <SupporterBadge />
+            </p>
             <p className="text-sm font-semibold text-sand-500">
               Desde {formatDate(supporterSince)}
               {summary.data && summary.data.total_cents > 0
@@ -307,12 +311,67 @@ export function SupportPage() {
           >
             Gerar Pix{valid && chosen != null ? ` de ${formatReais(chosen)}` : ''}
           </Button>
-          <p className="mt-3 text-center text-xs font-semibold text-sand-400">
-            Pagamento processado pelo Mercado Pago. Apoiadores ganham um selo no perfil e, em breve,
-            benefícios como criar ligas.
-          </p>
         </Card>
       )}
+
+      {!summary.isPending && <SupportPerks supporter={!!supporterSince} />}
     </div>
+  )
+}
+
+const PERKS_NOW = [
+  'Selo de Apoiador ao lado do seu elo, no topo e no perfil',
+  'Barra de XP e painel dourados',
+] as const
+
+const PERKS_SOON = [
+  'Criar ligas só para convidados e disputar com a sua turma',
+  'Adicionar as suas próprias perguntas à liga',
+  'Mavva sem anúncios, para sempre',
+] as const
+
+/** What a donation unlocks today and what the support is paying for next. */
+function SupportPerks({ supporter }: { supporter: boolean }) {
+  return (
+    <section
+      aria-labelledby="support-perks"
+      className="relative overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-leaf-800 via-leaf-600 to-leaf-700 p-5 text-white shadow-[0_8px_0_0_#184220] sm:p-6"
+    >
+      <div className="pointer-events-none absolute inset-0" aria-hidden>
+        <div className="animate-soft-glow absolute -right-10 -top-12 h-44 w-44 rounded-full bg-grain-300/30 blur-2xl" />
+        <div className="absolute -bottom-16 -left-8 h-40 w-40 rounded-full bg-white/10 blur-xl" />
+      </div>
+      <div className="relative">
+        <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-grain-200">
+          {supporter ? 'Seu apoio em ação' : 'O que o seu apoio destrava'}
+        </p>
+        <h2 id="support-perks" className="mt-1 text-xl font-extrabold leading-tight">
+          Mavva Apoiador
+        </h2>
+        <ul className="mt-4 space-y-2">
+          {PERKS_NOW.map((perk) => (
+            <li key={perk} className="flex items-start gap-2.5 text-sm font-bold">
+              <Glyph as={AppIcons.check} className="mt-0.5 h-5 w-5 shrink-0 text-grain-200" />
+              {perk}
+            </li>
+          ))}
+        </ul>
+        <p className="mt-4 text-xs font-extrabold uppercase tracking-[0.18em] text-grain-200">
+          Em breve, com o apoio de vocês
+        </p>
+        <ul className="mt-2 space-y-2">
+          {PERKS_SOON.map((perk) => (
+            <li key={perk} className="flex items-start gap-2.5 text-sm font-bold text-white/85">
+              <Glyph as={AppIcons.sparkle} className="mt-0.5 h-5 w-5 shrink-0 text-grain-200" />
+              {perk}
+            </li>
+          ))}
+        </ul>
+        <p className="mt-5 flex items-center gap-1.5 text-xs font-bold text-white/70">
+          <Glyph as={AppIcons.lock} className="h-4 w-4" />
+          Pagamento seguro, processado pelo Mercado Pago.
+        </p>
+      </div>
+    </section>
   )
 }
