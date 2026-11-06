@@ -6,13 +6,13 @@ Validation runs even without a database (`--validate-only`) so CI can gate conte
 import json
 from pathlib import Path
 
-from pydantic import BaseModel, Field, field_validator, model_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 from sqlalchemy import select
 from sqlalchemy.orm import Session, selectinload
 
 from app.data.books import BOOKS
-from app.models import Question, QuestionAnswer, QuestionOption
-from app.models.enums import Difficulty, QuestionType
+from app.models import Question, QuestionOption
+from app.models.enums import Difficulty
 
 
 class ReferenceIn(BaseModel):
@@ -41,11 +41,12 @@ class OptionIn(BaseModel):
 
 
 class QuestionIn(BaseModel):
+    # Unknown keys fail validation, so a stale field can't linger in the bank unnoticed.
+    model_config = ConfigDict(extra="forbid")
+
     external_id: str = Field(min_length=3, max_length=60)
-    type: QuestionType
     text: str = Field(min_length=10)
-    options: list[OptionIn] | None = None
-    accepted_answers: list[str] | None = None
+    options: list[OptionIn]
     explanation: str = Field(min_length=10)
     divergence_note: str | None = None
     reference: ReferenceIn
@@ -53,17 +54,11 @@ class QuestionIn(BaseModel):
     is_active: bool = True
 
     @model_validator(mode="after")
-    def type_specific_fields(self) -> "QuestionIn":
-        if self.type == QuestionType.MULTIPLE_CHOICE:
-            if not self.options or len(self.options) != 4:
-                raise ValueError("multiple_choice exige exatamente 4 alternativas")
-            if sum(1 for o in self.options if o.correct) != 1:
-                raise ValueError("multiple_choice exige exatamente 1 alternativa correta")
-        else:
-            if not self.accepted_answers or not all(a.strip() for a in self.accepted_answers):
-                raise ValueError("open_answer exige accepted_answers não vazias")
-            if self.options:
-                raise ValueError("open_answer não deve ter alternativas")
+    def four_options_one_correct(self) -> "QuestionIn":
+        if len(self.options) != 4:
+            raise ValueError("a pergunta exige exatamente 4 alternativas")
+        if sum(1 for o in self.options if o.correct) != 1:
+            raise ValueError("a pergunta exige exatamente 1 alternativa correta")
         return self
 
 
@@ -104,8 +99,8 @@ def load_content_files(content_dir: Path) -> list[QuestionFileIn]:
     return parsed
 
 
-def sync_options(question: Question, incoming: list[OptionIn] | None) -> None:
-    wanted = incoming or []
+def sync_options(question: Question, incoming: list[OptionIn]) -> None:
+    wanted = incoming
     by_position = {option.position: option for option in question.options}
     for index, option_in in enumerate(wanted):
         current = by_position.pop(index, None)
@@ -120,29 +115,12 @@ def sync_options(question: Question, incoming: list[OptionIn] | None) -> None:
         question.options.remove(leftover)
 
 
-def sync_accepted_answers(question: Question, incoming: list[str] | None) -> None:
-    wanted = [text.strip() for text in incoming or [] if text.strip()]
-    by_position = {answer.position: answer for answer in question.accepted_answers}
-    for index, text in enumerate(wanted):
-        current = by_position.pop(index, None)
-        if current is None:
-            question.accepted_answers.append(QuestionAnswer(text=text, position=index))
-        else:
-            current.text = text
-    for leftover in by_position.values():
-        question.accepted_answers.remove(leftover)
-
-
 def seed_questions(db: Session, content_dir: Path, category_ids: dict[str, int]) -> tuple[int, int]:
     """Upserts by external_id. Returns (created, updated)."""
     files = load_content_files(content_dir)
     existing = {
         q.external_id: q
-        for q in db.scalars(
-            select(Question).options(
-                selectinload(Question.options), selectinload(Question.accepted_answers)
-            )
-        )
+        for q in db.scalars(select(Question).options(selectinload(Question.options)))
     }
     created = updated = 0
     for file_in in files:
@@ -156,7 +134,6 @@ def seed_questions(db: Session, content_dir: Path, category_ids: dict[str, int])
                 created += 1
             else:
                 updated += 1
-            question.type = q_in.type
             question.text = q_in.text
             question.explanation = q_in.explanation
             question.divergence_note = q_in.divergence_note
@@ -172,11 +149,6 @@ def seed_questions(db: Session, content_dir: Path, category_ids: dict[str, int])
             # Upsert in place so option UUIDs survive a no-op reseed (every
             # Render boot runs this). Deleting and recreating them would 400
             # in-flight quizzes that still hold the old alternative ids.
-            if q_in.type == QuestionType.MULTIPLE_CHOICE:
-                sync_options(question, q_in.options)
-                question.accepted_answers.clear()
-            else:
-                question.options.clear()
-                sync_accepted_answers(question, q_in.accepted_answers)
+            sync_options(question, q_in.options)
     db.flush()
     return created, updated

@@ -11,7 +11,6 @@ from app.models.enums import (
     QuestionFlagReason,
     QuestionFlagStatus,
     QuestionProposalStatus,
-    QuestionType,
 )
 from app.seeds.questions import OptionIn
 
@@ -20,10 +19,8 @@ class QuestionDraft(BaseModel):
     """Player- or admin-authored question body (no external_id until approved)."""
 
     category_id: int
-    type: QuestionType
     text: str = Field(min_length=10)
-    options: list[OptionIn] | None = None
-    accepted_answers: list[str] | None = None
+    options: list[OptionIn]
     explanation: str = Field(min_length=10)
     divergence_note: str | None = None
     book: str
@@ -33,19 +30,13 @@ class QuestionDraft(BaseModel):
     difficulty: Difficulty
 
     @model_validator(mode="after")
-    def type_specific_fields(self) -> "QuestionDraft":
+    def verses_and_options(self) -> "QuestionDraft":
         if self.verse_end is not None and self.verse_end < self.verse_start:
             raise ValueError("verse_end não pode ser menor que verse_start")
-        if self.type == QuestionType.MULTIPLE_CHOICE:
-            if not self.options or len(self.options) != 4:
-                raise ValueError("multiple_choice exige exatamente 4 alternativas")
-            if sum(1 for o in self.options if o.correct) != 1:
-                raise ValueError("multiple_choice exige exatamente 1 alternativa correta")
-        else:
-            if not self.accepted_answers or not all(a.strip() for a in self.accepted_answers):
-                raise ValueError("open_answer exige accepted_answers não vazias")
-            if self.options:
-                raise ValueError("open_answer não deve ter alternativas")
+        if len(self.options) != 4:
+            raise ValueError("a pergunta exige exatamente 4 alternativas")
+        if sum(1 for o in self.options if o.correct) != 1:
+            raise ValueError("a pergunta exige exatamente 1 alternativa correta")
         return self
 
 

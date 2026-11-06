@@ -10,7 +10,6 @@ const dashboard: AdminDashboard = {
     total: 900,
     active: 880,
     inactive: 20,
-    open_answer: 90,
     old_testament: 500,
     easy: 300,
     medium: 300,

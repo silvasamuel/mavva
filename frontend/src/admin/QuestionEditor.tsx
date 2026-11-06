@@ -44,8 +44,7 @@ export function QuestionEditor({
       onSaved?.()
       onClose()
     },
-    onError: (err) =>
-      setError(err instanceof ApiError ? err.message : 'Não foi possível salvar.'),
+    onError: (err) => setError(err instanceof ApiError ? err.message : 'Não foi possível salvar.'),
   })
 
   function handleSave() {
@@ -61,9 +60,8 @@ export function QuestionEditor({
       verse_end: form.verse_end,
       difficulty: form.difficulty,
       is_active: form.is_active,
+      options: form.options,
     }
-    if (form.type === 'multiple_choice') payload.options = form.options
-    else payload.accepted_answers = form.accepted_answers
     save.mutate(payload)
   }
 
@@ -96,9 +94,7 @@ export function QuestionEditor({
           </div>
         ) : (
           <div className="space-y-4">
-            <p className="text-xs font-bold text-sand-400">
-              {form.external_id} · {form.type === 'multiple_choice' ? 'Múltipla escolha' : 'Resposta aberta'}
-            </p>
+            <p className="text-xs font-bold text-sand-400">{form.external_id}</p>
 
             <div className="space-y-1.5">
               <label className="block text-sm font-bold text-sand-700">Enunciado</label>
@@ -110,84 +106,40 @@ export function QuestionEditor({
               />
             </div>
 
-            {form.type === 'multiple_choice' ? (
-              <div className="space-y-2">
-                <label className="block text-sm font-bold text-sand-700">
-                  Alternativas (marque a correta)
-                </label>
-                {form.options.map((opt, i) => (
-                  <div key={i} className="flex items-center gap-2">
-                    <input
-                      type="radio"
-                      name="correct"
-                      checked={opt.is_correct}
-                      aria-label={`Alternativa ${i + 1} correta`}
-                      onChange={() =>
-                        setForm({
-                          ...form,
-                          options: form.options.map((o, j) => ({ ...o, is_correct: j === i })),
-                        })
-                      }
-                      className="h-5 w-5 accent-leaf-500"
-                    />
-                    <input
-                      value={opt.text}
-                      onChange={(e) =>
-                        setForm({
-                          ...form,
-                          options: form.options.map((o, j) =>
-                            j === i ? { ...o, text: e.target.value } : o
-                          ),
-                        })
-                      }
-                      className={`${FIELD} ${opt.is_correct ? 'border-leaf-400 bg-leaf-50' : ''}`}
-                    />
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div className="space-y-2">
-                <label className="block text-sm font-bold text-sand-700">
-                  Respostas aceitas (a primeira é a canônica)
-                </label>
-                {form.accepted_answers.map((ans, i) => (
-                  <div key={i} className="flex items-center gap-2">
-                    <input
-                      value={ans.text}
-                      onChange={(e) =>
-                        setForm({
-                          ...form,
-                          accepted_answers: form.accepted_answers.map((a, j) =>
-                            j === i ? { text: e.target.value } : a
-                          ),
-                        })
-                      }
-                      className={FIELD}
-                    />
-                    <button
-                      aria-label="Remover resposta"
-                      onClick={() =>
-                        setForm({
-                          ...form,
-                          accepted_answers: form.accepted_answers.filter((_, j) => j !== i),
-                        })
-                      }
-                      className="rounded-xl bg-red-50 px-3 py-2 text-sm font-bold text-red-600"
-                    >
-                      ✕
-                    </button>
-                  </div>
-                ))}
-                <button
-                  onClick={() =>
-                    setForm({ ...form, accepted_answers: [...form.accepted_answers, { text: '' }] })
-                  }
-                  className="text-sm font-bold text-leaf-600 hover:underline"
-                >
-                  + Adicionar resposta
-                </button>
-              </div>
-            )}
+            <div className="space-y-2">
+              <label className="block text-sm font-bold text-sand-700">
+                Alternativas (marque a correta)
+              </label>
+              {form.options.map((opt, i) => (
+                <div key={i} className="flex items-center gap-2">
+                  <input
+                    type="radio"
+                    name="correct"
+                    checked={opt.is_correct}
+                    aria-label={`Alternativa ${i + 1} correta`}
+                    onChange={() =>
+                      setForm({
+                        ...form,
+                        options: form.options.map((o, j) => ({ ...o, is_correct: j === i })),
+                      })
+                    }
+                    className="h-5 w-5 accent-leaf-500"
+                  />
+                  <input
+                    value={opt.text}
+                    onChange={(e) =>
+                      setForm({
+                        ...form,
+                        options: form.options.map((o, j) =>
+                          j === i ? { ...o, text: e.target.value } : o
+                        ),
+                      })
+                    }
+                    className={`${FIELD} ${opt.is_correct ? 'border-leaf-400 bg-leaf-50' : ''}`}
+                  />
+                </div>
+              ))}
+            </div>
 
             <div className="space-y-1.5">
               <label className="block text-sm font-bold text-sand-700">Explicação</label>
@@ -249,7 +201,10 @@ export function QuestionEditor({
                 <select
                   value={form.difficulty}
                   onChange={(e) =>
-                    setForm({ ...form, difficulty: e.target.value as AdminQuestionDetail['difficulty'] })
+                    setForm({
+                      ...form,
+                      difficulty: e.target.value as AdminQuestionDetail['difficulty'],
+                    })
                   }
                   className={FIELD}
                 >
@@ -273,7 +228,10 @@ export function QuestionEditor({
             </label>
 
             {error && (
-              <p role="alert" className="rounded-xl bg-red-50 px-3 py-2 text-sm font-bold text-red-700">
+              <p
+                role="alert"
+                className="rounded-xl bg-red-50 px-3 py-2 text-sm font-bold text-red-700"
+              >
                 {error}
               </p>
             )}

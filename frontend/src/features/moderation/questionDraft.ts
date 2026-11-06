@@ -1,4 +1,4 @@
-import type { QuestionDraft, QuestionType } from '@/types/api'
+import type { QuestionDraft } from '@/types/api'
 
 export const EMPTY_OPTIONS = [
   { text: '', correct: true },
@@ -10,10 +10,8 @@ export const EMPTY_OPTIONS = [
 export function emptyDraft(categoryId: number, book: string): QuestionDraft {
   return {
     category_id: categoryId,
-    type: 'multiple_choice',
     text: '',
     options: EMPTY_OPTIONS.map((option) => ({ ...option })),
-    accepted_answers: null,
     explanation: '',
     divergence_note: null,
     book,
@@ -25,18 +23,13 @@ export function emptyDraft(categoryId: number, book: string): QuestionDraft {
 }
 
 export function draftFromPayload(payload: QuestionDraft, fallback: QuestionDraft): QuestionDraft {
-  const type: QuestionType = payload.type === 'open_answer' ? 'open_answer' : 'multiple_choice'
   return {
     ...fallback,
     ...payload,
-    type,
     options:
-      type === 'multiple_choice'
-        ? payload.options?.length === 4
-          ? payload.options.map((option) => ({ text: option.text, correct: Boolean(option.correct) }))
-          : EMPTY_OPTIONS.map((option) => ({ ...option }))
-        : null,
-    accepted_answers: type === 'open_answer' ? payload.accepted_answers ?? [''] : null,
+      payload.options?.length === 4
+        ? payload.options.map((option) => ({ text: option.text, correct: Boolean(option.correct) }))
+        : EMPTY_OPTIONS.map((option) => ({ ...option })),
     divergence_note: payload.divergence_note ?? null,
     verse_end: payload.verse_end ?? null,
   }
@@ -55,16 +48,11 @@ export function validateDraft(draft: QuestionDraft): string | null {
   if (draft.verse_end != null && draft.verse_end < draft.verse_start) {
     return 'O versículo final não pode ser menor que o inicial.'
   }
-  if (draft.type === 'multiple_choice') {
-    const options = draft.options ?? []
-    if (options.length !== 4 || options.some((option) => !option.text.trim())) {
-      return 'Preencha as 4 alternativas.'
-    }
-    if (options.filter((option) => option.correct).length !== 1) {
-      return 'Marque exatamente 1 alternativa correta.'
-    }
-  } else if (!(draft.accepted_answers ?? []).map((answer) => answer.trim()).filter(Boolean).length) {
-    return 'Informe pelo menos uma resposta aceita.'
+  if (draft.options.length !== 4 || draft.options.some((option) => !option.text.trim())) {
+    return 'Preencha as 4 alternativas.'
+  }
+  if (draft.options.filter((option) => option.correct).length !== 1) {
+    return 'Marque exatamente 1 alternativa correta.'
   }
   return null
 }
@@ -76,10 +64,6 @@ export function toApiDraft(draft: QuestionDraft): QuestionDraft {
     explanation: draft.explanation.trim(),
     divergence_note: draft.divergence_note?.trim() || null,
     verse_end: draft.verse_end || null,
-    options: draft.type === 'multiple_choice' ? draft.options : null,
-    accepted_answers:
-      draft.type === 'open_answer'
-        ? (draft.accepted_answers ?? []).map((answer) => answer.trim()).filter(Boolean)
-        : null,
+    options: draft.options.map((option) => ({ ...option, text: option.text.trim() })),
   }
 }

@@ -4,8 +4,8 @@ import itertools
 
 from sqlalchemy.orm import Session
 
-from app.models import Category, Question, QuestionAnswer, QuestionOption
-from app.models.enums import Difficulty, QuestionType, Testament
+from app.models import Category, Question, QuestionOption
+from app.models.enums import Difficulty, Testament
 
 _counter = itertools.count(1)
 
@@ -27,7 +27,6 @@ def make_mc_question(
     n = next(_counter)
     question = Question(
         external_id=f"{category.slug}-{n:04d}",
-        type=QuestionType.MULTIPLE_CHOICE,
         text=f"Pergunta de múltipla escolha número {n}?",
         explanation="Explicação da pergunta com contexto bíblico.",
         testament=testament,
@@ -42,31 +41,6 @@ def make_mc_question(
         QuestionOption(text="Alternativa B", is_correct=False, position=1),
         QuestionOption(text="Alternativa C", is_correct=False, position=2),
         QuestionOption(text="Alternativa D", is_correct=False, position=3),
-    ]
-    db.add(question)
-    db.flush()
-    return question
-
-
-def make_open_question(
-    db: Session, category: Category, *, difficulty: Difficulty = Difficulty.MEDIUM
-) -> Question:
-    n = next(_counter)
-    question = Question(
-        external_id=f"{category.slug}-{n:04d}",
-        type=QuestionType.OPEN_ANSWER,
-        text=f"Pergunta aberta número {n}: qual é a resposta?",
-        explanation="Explicação da pergunta aberta.",
-        testament=Testament.NEW,
-        book="joao",
-        chapter=3,
-        verse_start=16,
-        difficulty=difficulty,
-        category=category,
-    )
-    question.accepted_answers = [
-        QuestionAnswer(text="Jesus Cristo", position=0),
-        QuestionAnswer(text="Jesus", position=1),
     ]
     db.add(question)
     db.flush()

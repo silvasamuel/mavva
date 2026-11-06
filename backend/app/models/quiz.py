@@ -2,7 +2,7 @@ import uuid
 from datetime import datetime
 from typing import Any
 
-from sqlalchemy import Enum, ForeignKey, Text, UniqueConstraint, func
+from sqlalchemy import Enum, ForeignKey, UniqueConstraint, func
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
@@ -74,7 +74,6 @@ class QuizAnswer(Base):
     selected_option_id: Mapped[uuid.UUID | None] = mapped_column(
         ForeignKey("question_options.id", ondelete="SET NULL"), default=None
     )
-    answer_text: Mapped[str | None] = mapped_column(Text, default=None)
     is_correct: Mapped[bool]
     time_spent_seconds: Mapped[int | None] = mapped_column(default=None)
     answered_at: Mapped[datetime] = mapped_column(server_default=func.now())

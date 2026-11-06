@@ -19,10 +19,9 @@ from app.models.enums import (
     QuestionFlagReason,
     QuestionFlagStatus,
     QuestionProposalStatus,
-    QuestionType,
 )
 from app.schemas.moderation import QuestionDraft
-from app.seeds.questions import sync_accepted_answers, sync_options
+from app.seeds.questions import sync_options
 
 MAX_PENDING_PROPOSALS = 5
 MAX_OPEN_SUGGESTIONS = 5
@@ -235,7 +234,6 @@ def _create_question(db: Session, draft: QuestionDraft) -> Question:
     book = BOOKS[draft.book]
     question = Question(
         external_id=next_external_id(db, category.slug),
-        type=draft.type,
         text=draft.text,
         explanation=draft.explanation,
         divergence_note=draft.divergence_note,
@@ -250,9 +248,6 @@ def _create_question(db: Session, draft: QuestionDraft) -> Question:
     )
     db.add(question)
     db.flush()
-    if draft.type == QuestionType.MULTIPLE_CHOICE:
-        sync_options(question, draft.options)
-    else:
-        sync_accepted_answers(question, draft.accepted_answers)
+    sync_options(question, draft.options)
     db.flush()
     return question

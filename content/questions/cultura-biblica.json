@@ -3,7 +3,6 @@
   "questions": [
     {
       "external_id": "cultura-biblica-0001",
-      "type": "multiple_choice",
       "text": "Na parábola dos trabalhadores da vinha, qual era o salário combinado por um dia de trabalho?",
       "options": [
         {
@@ -23,7 +22,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Ajustou com os trabalhadores a um dinheiro [denário] por dia\" (Mt 20:2) — o denário era o pagamento típico da diária de um trabalhador rural. Saber isso ilumina outras cenas: os 200 denários para alimentar a multidão (Jo 6:7) eram meses de salário.",
       "divergence_note": null,
       "reference": {
@@ -36,7 +34,6 @@
     },
     {
       "external_id": "cultura-biblica-0002",
-      "type": "multiple_choice",
       "text": "Quais eram os três produtos agrícolas básicos da terra de Israel, resumidos na bênção de \"trigo, mosto e azeite\"?",
       "options": [
         {
@@ -56,7 +53,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"O teu grão, e o teu mosto, e o teu azeite\" (Dt 7:13) resumem a agricultura de Israel: pão do trigo e da cevada, vinho da uva, azeite da oliveira — daí a força das imagens da videira (Jo 15) e da oliveira (Rm 11) nas Escrituras.",
       "divergence_note": null,
       "reference": {
@@ -69,7 +65,6 @@
     },
     {
       "external_id": "cultura-biblica-0003",
-      "type": "multiple_choice",
       "text": "Por que Jesus disse que não se põe vinho novo em odres velhos?",
       "options": [
         {
@@ -89,7 +84,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Odres eram peles de animais; as velhas perdiam a elasticidade e \"rompem-se os odres, e entorna-se o vinho\" (Mt 9:17). A imagem defende a novidade do evangelho, que não cabe nos moldes do judaísmo farisaico.",
       "divergence_note": null,
       "reference": {
@@ -102,7 +96,6 @@
     },
     {
       "external_id": "cultura-biblica-0004",
-      "type": "multiple_choice",
       "text": "O que a Lei mandava deixar no campo durante a colheita, provisão que beneficiou Rute?",
       "options": [
         {
@@ -122,7 +115,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Não segarás totalmente os cantos do teu campo... para o pobre e para o estrangeiro as deixarás\" (Lv 19:9-10). A respiga era a previdência social de Israel — e foi respigando no campo de Boaz que Rute sustentou Noemi (Rt 2:2-3).",
       "divergence_note": null,
       "reference": {
@@ -135,7 +127,6 @@
     },
     {
       "external_id": "cultura-biblica-0005",
-      "type": "multiple_choice",
       "text": "Segundo João 10, como as ovelhas reconheciam o seu pastor?",
       "options": [
         {
@@ -155,7 +146,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"As ovelhas ouvem a sua voz, e chama pelo nome às suas ovelhas... e elas o seguem, porque conhecem a sua voz\" (Jo 10:3-4). Pastores orientais iam à frente do rebanho — imagem que Jesus toma: \"Eu sou o bom Pastor\" (Jo 10:11).",
       "divergence_note": null,
       "reference": {
@@ -168,7 +158,6 @@
     },
     {
       "external_id": "cultura-biblica-0006",
-      "type": "multiple_choice",
       "text": "Que moedas a viúva pobre lançou na arca do templo, no gesto elogiado por Jesus?",
       "options": [
         {
@@ -188,7 +177,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Uma pobre viúva deitou duas pequenas moedas\" (Mc 12:42) — leptos, a menor moeda de cobre. Jesus a declara a maior ofertante: \"deu tudo o que tinha, todo o seu sustento\" (Mc 12:44). O valor da oferta se mede pelo que resta, não pelo que se dá.",
       "divergence_note": null,
       "reference": {
@@ -201,7 +189,6 @@
     },
     {
       "external_id": "cultura-biblica-0007",
-      "type": "multiple_choice",
       "text": "Nos tempos de Rute, como se confirmava publicamente uma transação de resgate em Israel?",
       "options": [
         {
@@ -221,7 +208,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Havia de antes este costume em Israel... o homem descalçava o sapato e o dava ao seu próximo\" (Rt 4:7). Foi assim, à porta da cidade e diante dos anciãos, que Boaz adquiriu o direito de resgatar Rute (Rt 4:8-10).",
       "divergence_note": null,
       "reference": {
@@ -234,7 +220,6 @@
     },
     {
       "external_id": "cultura-biblica-0008",
-      "type": "multiple_choice",
       "text": "O que era um \"talento\" no Novo Testamento?",
       "options": [
         {
@@ -254,7 +239,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O talento era medida de peso (cerca de 30 kg) usada como unidade monetária enorme — na parábola, o servo devia \"dez mil talentos\" (Mt 18:24), dívida impagável de propósito. O sentido moderno de \"talento\" como aptidão nasceu justamente da parábola de Mt 25.",
       "divergence_note": null,
       "reference": {
@@ -267,7 +251,6 @@
     },
     {
       "external_id": "cultura-biblica-0009",
-      "type": "multiple_choice",
       "text": "Por que os poços eram pontos de encontro tão importantes nas narrativas bíblicas?",
       "options": [
         {
@@ -287,7 +270,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Junto a poços, o servo de Abraão encontrou Rebeca (Gn 24), Jacó encontrou Raquel (Gn 29), Moisés encontrou Zípora (Êx 2) — e Jesus, a samaritana, a quem ofereceu \"água viva\" (Jo 4:10-14). Onde a vida dependia da água, Deus marcava encontros.",
       "divergence_note": null,
       "reference": {
@@ -300,12 +282,24 @@
     },
     {
       "external_id": "cultura-biblica-0010",
-      "type": "open_answer",
       "text": "Que tempero Jesus usou como imagem dos seus discípulos: \"vós sois o ___ da terra\"?",
-      "options": null,
-      "accepted_answers": [
-        "Sal",
-        "O sal"
+      "options": [
+        {
+          "text": "Sal",
+          "correct": true
+        },
+        {
+          "text": "Fermento",
+          "correct": false
+        },
+        {
+          "text": "Mel",
+          "correct": false
+        },
+        {
+          "text": "Azeite",
+          "correct": false
+        }
       ],
       "explanation": "\"Vós sois o sal da terra; e se o sal for insípido, com que se há de salgar?\" (Mt 5:13). O sal conservava alimentos e selava pactos (\"aliança de sal\", Nm 18:19) — os discípulos preservam e temperam o mundo onde estão.",
       "divergence_note": null,
@@ -319,7 +313,6 @@
     },
     {
       "external_id": "cultura-biblica-0011",
-      "type": "multiple_choice",
       "text": "A quanto equivalia um denário no tempo de Jesus?",
       "options": [
         {
@@ -339,7 +332,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Na parábola dos trabalhadores, o denário é o pagamento combinado por um dia (Mt 20:2), moeda romana de prata.",
       "divergence_note": null,
       "reference": {
@@ -352,7 +344,6 @@
     },
     {
       "external_id": "cultura-biblica-0012",
-      "type": "multiple_choice",
       "text": "Qual era a profissão de Paulo que o sustentava durante o ministério?",
       "options": [
         {
@@ -372,7 +363,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Paulo trabalhava com Áquila e Priscila fazendo tendas para não pesar sobre as igrejas (At 18:3).",
       "divergence_note": null,
       "reference": {
@@ -385,7 +375,6 @@
     },
     {
       "external_id": "cultura-biblica-0013",
-      "type": "multiple_choice",
       "text": "Qual instrumento de cordas Davi tocava para aliviar Saul?",
       "options": [
         {
@@ -405,7 +394,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Davi tomava a harpa e a tocava; então Saul sentia alívio' (1Sm 16:23).",
       "divergence_note": null,
       "reference": {
@@ -418,7 +406,6 @@
     },
     {
       "external_id": "cultura-biblica-0014",
-      "type": "multiple_choice",
       "text": "Qual árvore, de fruto e óleo essenciais, dá nome ao monte a leste de Jerusalém?",
       "options": [
         {
@@ -438,7 +425,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O Monte das Oliveiras, coberto de oliveiras, foi lugar frequente de Jesus (Zc 14:4; Mt 21:1).",
       "divergence_note": null,
       "reference": {
@@ -451,7 +437,6 @@
     },
     {
       "external_id": "cultura-biblica-0015",
-      "type": "multiple_choice",
       "text": "Que tecido tingido, artigo de luxo, Lídia comercializava em Filipos?",
       "options": [
         {
@@ -471,7 +456,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Lídia, vendedora de púrpura' (At 16:14), corante caro extraído de moluscos, símbolo de riqueza e realeza.",
       "divergence_note": null,
       "reference": {
@@ -484,12 +468,24 @@
     },
     {
       "external_id": "cultura-biblica-0016",
-      "type": "open_answer",
       "text": "Que utensílios de pastoreio, citados no Salmo 23, traziam conforto às ovelhas?",
-      "options": null,
-      "accepted_answers": [
-        "Vara e cajado",
-        "A vara e o cajado"
+      "options": [
+        {
+          "text": "Vara e cajado",
+          "correct": true
+        },
+        {
+          "text": "Funda e bornal",
+          "correct": false
+        },
+        {
+          "text": "Rede e anzol",
+          "correct": false
+        },
+        {
+          "text": "Jugo e arado",
+          "correct": false
+        }
       ],
       "explanation": "'A tua vara e o teu cajado me consolam' (Sl 23:4) — instrumentos de proteção e direção do pastor.",
       "divergence_note": null,
@@ -503,7 +499,6 @@
     },
     {
       "external_id": "cultura-biblica-0017",
-      "type": "multiple_choice",
       "text": "Qual peça de vestuário, rasgada em público, expressava luto profundo entre os hebreus?",
       "options": [
         {
@@ -523,7 +518,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jó, ao saber das tragédias, 'rasgou o seu manto' em sinal de dor (Jó 1:20).",
       "divergence_note": null,
       "reference": {
@@ -537,7 +531,6 @@
     },
     {
       "external_id": "cultura-biblica-0018",
-      "type": "multiple_choice",
       "text": "Que material era usado como 'papel' para cartas no mundo bíblico, além do pergaminho?",
       "options": [
         {
@@ -557,7 +550,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "João menciona escrever 'com papel e tinta' (2Jo 1:12) — o papel da época era o papiro, feito de junco.",
       "divergence_note": null,
       "reference": {
@@ -570,7 +562,6 @@
     },
     {
       "external_id": "cultura-biblica-0019",
-      "type": "multiple_choice",
       "text": "Qual grão, além da cevada, era base do pão em Israel, colhido na época de Rute?",
       "options": [
         {
@@ -590,7 +581,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Rute respigou 'até ao fim da sega das cevadas e do trigo' (Rt 2:23), os dois cereais básicos.",
       "divergence_note": null,
       "reference": {
@@ -603,12 +593,24 @@
     },
     {
       "external_id": "cultura-biblica-0020",
-      "type": "open_answer",
       "text": "Que bebida, sinal de alegria e celebração, Jesus produziu a partir da água em Caná?",
-      "options": null,
-      "accepted_answers": [
-        "Vinho",
-        "O vinho"
+      "options": [
+        {
+          "text": "Vinho",
+          "correct": true
+        },
+        {
+          "text": "Leite",
+          "correct": false
+        },
+        {
+          "text": "Vinagre",
+          "correct": false
+        },
+        {
+          "text": "Mel",
+          "correct": false
+        }
       ],
       "explanation": "Jesus transformou água em vinho de boa qualidade nas bodas de Caná (Jo 2:9-10).",
       "divergence_note": null,
@@ -622,7 +624,6 @@
     },
     {
       "external_id": "cultura-biblica-0021",
-      "type": "multiple_choice",
       "text": "Que animal era o principal meio de transporte de cargas nas caravanas do Oriente?",
       "options": [
         {
@@ -642,7 +643,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Camelos carregavam as especiarias dos ismaelitas que compraram José (Gn 37:25) e os presentes da rainha de Sabá (1Rs 10:2).",
       "divergence_note": null,
       "reference": {
@@ -655,7 +655,6 @@
     },
     {
       "external_id": "cultura-biblica-0022",
-      "type": "multiple_choice",
       "text": "Como se moía o grão nas casas de Israel?",
       "options": [
         {
@@ -675,7 +674,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Duas mulheres estarão moendo no moinho' (Mt 24:41); a Lei proibia tomar a mó em penhor, por ser meio de vida (Dt 24:6).",
       "divergence_note": null,
       "reference": {
@@ -688,7 +686,6 @@
     },
     {
       "external_id": "cultura-biblica-0023",
-      "type": "multiple_choice",
       "text": "Que uso tinha o azeite de oliva além de alimento?",
       "options": [
         {
@@ -708,7 +705,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O azeite alimentava as lâmpadas do santuário (Êx 27:20), ungia reis (1Sm 16:13) e tratava feridas (Lc 10:34).",
       "divergence_note": null,
       "reference": {
@@ -721,7 +717,6 @@
     },
     {
       "external_id": "cultura-biblica-0024",
-      "type": "multiple_choice",
       "text": "Por que a hospitalidade era um dever sagrado no mundo bíblico?",
       "options": [
         {
@@ -741,7 +736,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Abraão recebeu três visitantes (Gn 18:1-8) e Hebreus lembra: 'alguns, hospedando-a, sem o saberem, hospedaram anjos' (Hb 13:2).",
       "divergence_note": null,
       "reference": {
@@ -754,13 +748,24 @@
     },
     {
       "external_id": "cultura-biblica-0025",
-      "type": "open_answer",
       "text": "Que material era usado para escrever rolos duráveis, feito de pele de animal?",
-      "options": null,
-      "accepted_answers": [
-        "Pergaminho",
-        "Couro",
-        "Pergaminhos"
+      "options": [
+        {
+          "text": "Pergaminho",
+          "correct": true
+        },
+        {
+          "text": "Papiro",
+          "correct": false
+        },
+        {
+          "text": "Argila",
+          "correct": false
+        },
+        {
+          "text": "Cera",
+          "correct": false
+        }
       ],
       "explanation": "Paulo pede a Timóteo que traga 'os livros, principalmente os pergaminhos' (2Tm 4:13).",
       "divergence_note": null,
@@ -774,7 +779,6 @@
     },
     {
       "external_id": "cultura-biblica-0026",
-      "type": "multiple_choice",
       "text": "Por que Deus mandou Moisés tirar as sandálias diante da sarça?",
       "options": [
         {
@@ -794,7 +798,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Tira os teus sapatos dos teus pés, porque o lugar em que tu estás é terra santa' (Êx 3:5).",
       "divergence_note": null,
       "reference": {
@@ -807,7 +810,6 @@
     },
     {
       "external_id": "cultura-biblica-0027",
-      "type": "multiple_choice",
       "text": "Que imagem do trabalho agrícola Jesus usou ao dizer 'o meu jugo é suave'?",
       "options": [
         {
@@ -827,7 +829,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Tomai sobre vós o meu jugo... porque o meu jugo é suave e o meu fardo é leve' (Mt 11:29-30) — aprender com Cristo em vez de carregar sozinho.",
       "divergence_note": null,
       "reference": {
@@ -840,7 +841,6 @@
     },
     {
       "external_id": "cultura-biblica-0028",
-      "type": "multiple_choice",
       "text": "Como eram os sepulcros das famílias mais abastadas no tempo de Jesus?",
       "options": [
         {
@@ -860,7 +860,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "José de Arimateia pôs o corpo 'no seu sepulcro novo, que havia aberto em rocha, e rolou uma grande pedra para a porta' (Mt 27:60).",
       "divergence_note": null,
       "reference": {
@@ -873,7 +872,6 @@
     },
     {
       "external_id": "cultura-biblica-0029",
-      "type": "multiple_choice",
       "text": "Que elementos compunham a vinha bem cuidada da canção de Isaías?",
       "options": [
         {
@@ -893,7 +891,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O amado cercou a vinha, edificou uma torre e cavou um lagar, esperando uvas boas (Is 5:1-2) — figura retomada por Jesus (Mt 21:33).",
       "divergence_note": null,
       "reference": {
@@ -906,13 +903,24 @@
     },
     {
       "external_id": "cultura-biblica-0030",
-      "type": "open_answer",
       "text": "Que instrumento os pescadores da Galileia lançavam ao mar, citado no chamado dos primeiros discípulos?",
-      "options": null,
-      "accepted_answers": [
-        "Rede",
-        "As redes",
-        "Redes"
+      "options": [
+        {
+          "text": "Rede",
+          "correct": true
+        },
+        {
+          "text": "Anzol",
+          "correct": false
+        },
+        {
+          "text": "Arpão",
+          "correct": false
+        },
+        {
+          "text": "Cesto",
+          "correct": false
+        }
       ],
       "explanation": "'Lançavam a rede ao mar, porque eram pescadores'; Jesus os chamou para serem pescadores de homens (Mt 4:18-19).",
       "divergence_note": null,
@@ -926,7 +934,6 @@
     },
     {
       "external_id": "cultura-biblica-0031",
-      "type": "multiple_choice",
       "text": "Que instrumento convocava o povo e anunciava as festas em Israel, por ordem de Números 10?",
       "options": [
         {
@@ -946,7 +953,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Faze-te duas trombetas de prata... para a convocação da congregação e para a partida dos arraiais' (Nm 10:2,10).",
       "divergence_note": null,
       "reference": {
@@ -959,7 +965,6 @@
     },
     {
       "external_id": "cultura-biblica-0032",
-      "type": "multiple_choice",
       "text": "Que bebida foi oferecida a Jesus na cruz, numa esponja?",
       "options": [
         {
@@ -979,7 +984,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Tomando uma esponja, embebeu-a em vinagre e... deu-lhe de beber' (Mt 27:48), cumprindo o Salmo 69:21.",
       "divergence_note": null,
       "reference": {
@@ -992,7 +996,6 @@
     },
     {
       "external_id": "cultura-biblica-0033",
-      "type": "multiple_choice",
       "text": "Que peça de roupa de Jesus os soldados sortearam, por ser tecida sem costura?",
       "options": [
         {
@@ -1012,7 +1015,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'A túnica não tinha costura... disseram: Lancemos sortes sobre ela' (Jo 19:23-24), cumprindo o Salmo 22:18.",
       "divergence_note": null,
       "reference": {
@@ -1025,7 +1027,6 @@
     },
     {
       "external_id": "cultura-biblica-0034",
-      "type": "multiple_choice",
       "text": "Debaixo de que objeto Jesus disse que ninguém acende uma candeia para escondê-la?",
       "options": [
         {
@@ -1045,7 +1046,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Não se acende a candeia e se coloca debaixo do alqueire, mas no velador' (Mt 5:15) — o alqueire era medida de grãos.",
       "divergence_note": null,
       "reference": {
@@ -1058,7 +1058,6 @@
     },
     {
       "external_id": "cultura-biblica-0035",
-      "type": "multiple_choice",
       "text": "Que objetos o pai deu ao filho pródigo, restaurando sua dignidade de filho?",
       "options": [
         {
@@ -1078,7 +1077,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Trazei a melhor roupa... ponde-lhe um anel na mão e alparcas nos pés' (Lc 15:22) — anel e sandálias eram sinais de filho, não de servo.",
       "divergence_note": null,
       "reference": {
@@ -1091,12 +1089,24 @@
     },
     {
       "external_id": "cultura-biblica-0036",
-      "type": "open_answer",
       "text": "Que produto medicinal Gileade exportava, lembrado em 'não há bálsamo em Gileade?'",
-      "options": null,
-      "accepted_answers": [
-        "Bálsamo",
-        "Balsamo"
+      "options": [
+        {
+          "text": "Bálsamo",
+          "correct": true
+        },
+        {
+          "text": "Mirra",
+          "correct": false
+        },
+        {
+          "text": "Nardo",
+          "correct": false
+        },
+        {
+          "text": "Incenso",
+          "correct": false
+        }
       ],
       "explanation": "'Porventura não há bálsamo em Gileade? Ou não há lá médico?' (Jr 8:22) — o bálsamo era remédio famoso da região.",
       "divergence_note": null,
@@ -1110,7 +1120,6 @@
     },
     {
       "external_id": "cultura-biblica-0037",
-      "type": "multiple_choice",
       "text": "Qual era o ofício de José, esposo de Maria?",
       "options": [
         {
@@ -1130,7 +1139,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Em Nazaré perguntavam: 'Não é este o filho do carpinteiro?' (Mt 13:55); Marcos chama o próprio Jesus de carpinteiro (Mc 6:3).",
       "divergence_note": null,
       "reference": {
@@ -1143,7 +1151,6 @@
     },
     {
       "external_id": "cultura-biblica-0038",
-      "type": "multiple_choice",
       "text": "Qual era o ofício de Simão, em cuja casa Pedro se hospedou em Jope?",
       "options": [
         {
@@ -1163,7 +1170,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Está hospedado com um certo Simão, curtidor, que tem a sua casa junto do mar' (At 10:6) — ofício impuro para muitos judeus.",
       "divergence_note": null,
       "reference": {
@@ -1176,7 +1182,6 @@
     },
     {
       "external_id": "cultura-biblica-0039",
-      "type": "multiple_choice",
       "text": "Quanto valia o perfume de nardo derramado sobre Jesus, segundo a queixa de Judas?",
       "options": [
         {
@@ -1196,7 +1201,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Por que não se vendeu este unguento por trezentos denários e não se deu aos pobres?' (Jo 12:5) — quase um ano de salário.",
       "divergence_note": null,
       "reference": {
@@ -1209,7 +1213,6 @@
     },
     {
       "external_id": "cultura-biblica-0040",
-      "type": "multiple_choice",
       "text": "Por quanto Abraão comprou a caverna de Macpela para sepultar Sara?",
       "options": [
         {
@@ -1229,7 +1232,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Abraão pesou a Efrom 'quatrocentos siclos de prata, correntes entre mercadores' (Gn 23:15-16) — a primeira posse em Canaã.",
       "divergence_note": null,
       "reference": {
@@ -1242,7 +1244,6 @@
     },
     {
       "external_id": "cultura-biblica-0041",
-      "type": "multiple_choice",
       "text": "De que material eram feitas as tábuas dos Dez Mandamentos?",
       "options": [
         {
@@ -1262,7 +1263,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Deu a Moisés... as duas tábuas do testemunho, tábuas de pedra, escritas pelo dedo de Deus' (Êx 31:18).",
       "divergence_note": null,
       "reference": {
@@ -1275,13 +1275,24 @@
     },
     {
       "external_id": "cultura-biblica-0042",
-      "type": "open_answer",
       "text": "Que unidade de medida, baseada no antebraço, Deus usou para dar a Noé as dimensões da arca?",
-      "options": null,
-      "accepted_answers": [
-        "Côvado",
-        "Côvados",
-        "Cúbito"
+      "options": [
+        {
+          "text": "Côvado",
+          "correct": true
+        },
+        {
+          "text": "Palmo",
+          "correct": false
+        },
+        {
+          "text": "Braça",
+          "correct": false
+        },
+        {
+          "text": "Estádio",
+          "correct": false
+        }
       ],
       "explanation": "\"De trezentos côvados o comprimento da arca, e de cinquenta côvados a sua largura, e de trinta côvados a sua altura\" (Gn 6:15). O côvado ia do cotovelo à ponta dos dedos e media aproximadamente 45 centímetros (o valor exato variava), o que dá uma arca de uns 135 metros de comprimento. A mesma unidade mede o tabernáculo, o templo e até a altura de Golias (1Sm 17:4).",
       "divergence_note": null,
@@ -1295,7 +1306,6 @@
     },
     {
       "external_id": "cultura-biblica-0043",
-      "type": "multiple_choice",
       "text": "O que Faraó tirou da própria mão e pôs na mão de José, como sinal da autoridade que lhe dava sobre o Egito?",
       "options": [
         {
@@ -1315,7 +1325,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"E tirou Faraó o anel da sua mão, e o pôs na mão de José\" (Gn 41:42), além de vesti-lo de linho fino e pôr-lhe um colar de ouro. O anel de sinete servia para selar documentos em nome do dono — quem o usava falava pelo rei. Assuero fez o mesmo, primeiro com Hamã e depois com Mardoqueu (Et 3:10; 8:2).",
       "divergence_note": null,
       "reference": {
@@ -1328,7 +1337,6 @@
     },
     {
       "external_id": "cultura-biblica-0044",
-      "type": "multiple_choice",
       "text": "Deus mandou Jeremias à casa de um artesão para ensinar que Israel estava em suas mãos. Qual era o ofício desse artesão?",
       "options": [
         {
@@ -1348,7 +1356,6 @@
           "correct": true
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jeremias desceu à casa do oleiro e o viu trabalhando \"sobre as rodas\": quando o vaso de barro se quebrou em sua mão, ele \"tornou a fazer dele outro vaso\" (Jr 18:3-4). Então veio a palavra: \"como o barro na mão do oleiro, assim sois vós na minha mão, ó casa de Israel\" (Jr 18:6). Paulo retoma a imagem do oleiro e do barro ao falar da soberania de Deus (Rm 9:20-21).",
       "divergence_note": null,
       "reference": {
@@ -1361,14 +1368,24 @@
     },
     {
       "external_id": "cultura-biblica-0045",
-      "type": "open_answer",
       "text": "Onde Maria deitou o menino Jesus logo após o nascimento, porque não havia lugar para eles na estalagem?",
-      "options": null,
-      "accepted_answers": [
-        "Manjedoura",
-        "Numa manjedoura",
-        "Uma manjedoura",
-        "Cocho"
+      "options": [
+        {
+          "text": "Manjedoura",
+          "correct": true
+        },
+        {
+          "text": "Berço",
+          "correct": false
+        },
+        {
+          "text": "Cesta de juncos",
+          "correct": false
+        },
+        {
+          "text": "Esteira no chão",
+          "correct": false
+        }
       ],
       "explanation": "Maria \"envolveu-o em panos, e deitou-o numa manjedoura, porque não havia lugar para eles na estalagem\" (Lc 2:7). A manjedoura era o cocho onde se punha a comida dos animais — e esse detalhe humilde foi o sinal dado aos pastores para encontrarem o Salvador (Lc 2:12). A palavra grega traduzida por \"estalagem\" é a mesma que Lucas usa para o \"aposento\" da última ceia (Lc 22:11).",
       "divergence_note": null,

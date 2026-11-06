@@ -3,7 +3,6 @@
   "questions": [
     {
       "external_id": "teologia-biblica-0001",
-      "type": "multiple_choice",
       "text": "Qual sinal Deus deu da sua aliança com Noé, prometendo nunca mais destruir a terra com dilúvio?",
       "options": [
         {
@@ -23,7 +22,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"O meu arco tenho posto nas nuvens; este será por sinal da aliança entre mim e a terra\" (Gn 9:13). Cada aliança bíblica traz um sinal: o arco (Noé), a circuncisão (Abraão), o sábado (Sinai), o cálice (nova aliança).",
       "divergence_note": null,
       "reference": {
@@ -36,7 +34,6 @@
     },
     {
       "external_id": "teologia-biblica-0002",
-      "type": "multiple_choice",
       "text": "Como João Batista apresentou Jesus, ligando-o a todo o sistema de sacrifícios do Antigo Testamento?",
       "options": [
         {
@@ -56,7 +53,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Eis o Cordeiro de Deus\" (Jo 1:29) reúne o cordeiro pascal (Êx 12), o cordeiro do sacrifício diário e o cordeiro de Isaías 53:7. O fio corre até o Apocalipse, onde o Cordeiro está no centro do trono (Ap 5:6).",
       "divergence_note": null,
       "reference": {
@@ -69,7 +65,6 @@
     },
     {
       "external_id": "teologia-biblica-0003",
-      "type": "multiple_choice",
       "text": "Segundo Gênesis 1:27, o que distingue o ser humano de toda a criação?",
       "options": [
         {
@@ -89,7 +84,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Criou Deus o homem à sua imagem; à imagem de Deus o criou; homem e mulher os criou\" (Gn 1:27). Daí decorrem a dignidade de toda vida humana (Gn 9:6) e a vocação de representar Deus governando a criação (Gn 1:28).",
       "divergence_note": null,
       "reference": {
@@ -102,7 +96,6 @@
     },
     {
       "external_id": "teologia-biblica-0004",
-      "type": "multiple_choice",
       "text": "Qual versículo de Gênesis é chamado de \"protoevangelho\", a primeira promessa do Redentor?",
       "options": [
         {
@@ -122,7 +115,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Ainda no Éden, Deus anuncia à serpente: \"porei inimizade entre ti e a mulher... esta te ferirá a cabeça, e tu lhe ferirás o calcanhar\" (Gn 3:15) — o evangelho em semente: o Descendente esmagaria a serpente sendo ferido no processo (cf. Rm 16:20).",
       "divergence_note": null,
       "reference": {
@@ -135,7 +127,6 @@
     },
     {
       "external_id": "teologia-biblica-0005",
-      "type": "multiple_choice",
       "text": "Qual era o tema central da pregação de Jesus, segundo Marcos 1:15?",
       "options": [
         {
@@ -155,7 +146,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"O tempo está cumprido, e o Reino de Deus está próximo. Arrependei-vos, e crede no evangelho\" (Mc 1:15). O Reino — o governo de Deus irrompendo em Cristo — atravessa as parábolas, o Sermão do Monte e a oração \"venha o teu Reino\".",
       "divergence_note": null,
       "reference": {
@@ -168,7 +158,6 @@
     },
     {
       "external_id": "teologia-biblica-0006",
-      "type": "multiple_choice",
       "text": "Qual profeta anunciou a nova aliança, em que Deus escreveria a sua lei no coração do povo?",
       "options": [
         {
@@ -188,7 +177,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Eis que dias vêm... em que farei uma aliança nova... porei a minha lei no seu interior, e a escreverei no seu coração\" (Jr 31:31-33). Jesus a inaugura na Ceia: \"este cálice é a nova aliança no meu sangue\" (Lc 22:20; cf. Hb 8).",
       "divergence_note": null,
       "reference": {
@@ -201,7 +189,6 @@
     },
     {
       "external_id": "teologia-biblica-0007",
-      "type": "multiple_choice",
       "text": "Como o tema da habitação de Deus com os homens progride ao longo da Escritura?",
       "options": [
         {
@@ -221,7 +208,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Deus andava no Éden (Gn 3:8), habitou no tabernáculo (Êx 40) e no templo (2Cr 7), \"tabernaculou\" entre nós em Cristo (Jo 1:14), habita a igreja pelo Espírito (1Co 3:16) e consumará tudo na nova Jerusalém: \"o tabernáculo de Deus está com os homens\" (Ap 21:3).",
       "divergence_note": null,
       "reference": {
@@ -234,7 +220,6 @@
     },
     {
       "external_id": "teologia-biblica-0008",
-      "type": "multiple_choice",
       "text": "Como Pedro descreve a igreja, aplicando-lhe títulos dados a Israel no Sinai?",
       "options": [
         {
@@ -254,7 +239,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "1 Pedro 2:9 retoma Êxodo 19:5-6 (\"reino sacerdotal e povo santo\") e o aplica à igreja de judeus e gentios — todo crente tem acesso sacerdotal a Deus e a vocação de \"anunciar as virtudes daquele que vos chamou das trevas\".",
       "divergence_note": null,
       "reference": {
@@ -267,7 +251,6 @@
     },
     {
       "external_id": "teologia-biblica-0009",
-      "type": "multiple_choice",
       "text": "Qual imagem do Salmo 118, aplicada a Jesus por ele mesmo e pelos apóstolos, descreve o Messias rejeitado que se tornou fundamento?",
       "options": [
         {
@@ -287,7 +270,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"A pedra que os edificadores rejeitaram tornou-se a cabeça da esquina\" (Sl 118:22). Jesus a aplica a si mesmo diante dos líderes (Mt 21:42), e Pedro a repete ao Sinédrio (At 4:11) e na sua carta (1Pe 2:7) — a rejeição estava no plano, e dela Deus fez o alicerce.",
       "divergence_note": null,
       "reference": {
@@ -300,7 +282,6 @@
     },
     {
       "external_id": "teologia-biblica-0010",
-      "type": "multiple_choice",
       "text": "Segundo Hebreus 4, o que o descanso do sábado e a entrada em Canaã prefiguravam?",
       "options": [
         {
@@ -320,7 +301,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Resta ainda um repouso para o povo de Deus\" (Hb 4:9): nem o sétimo dia nem Josué deram o descanso final — ambos apontavam para o descanso da fé em Cristo, que convida: \"vinde a mim... e eu vos aliviarei\" (Mt 11:28).",
       "divergence_note": "Cristãos divergem sobre a aplicação atual do mandamento do sábado (guarda do sábado, domingo como dia do Senhor, ou cumprimento pleno em Cristo). A pergunta se limita ao argumento explícito de Hebreus 4.",
       "reference": {
@@ -333,7 +313,6 @@
     },
     {
       "external_id": "teologia-biblica-0011",
-      "type": "multiple_choice",
       "text": "Qual foi o sinal da aliança de Deus com Noé de nunca mais destruir a terra por dilúvio?",
       "options": [
         {
@@ -353,7 +332,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'O meu arco tenho posto nas nuvens... por sinal do concerto' (Gn 9:13-15).",
       "divergence_note": null,
       "reference": {
@@ -367,13 +345,24 @@
     },
     {
       "external_id": "teologia-biblica-0012",
-      "type": "open_answer",
       "text": "Qual promessa Deus fez a Abraão sobre 'todas as famílias da terra'?",
-      "options": null,
-      "accepted_answers": [
-        "Serão abençoadas",
-        "Seriam abençoadas",
-        "Bencao"
+      "options": [
+        {
+          "text": "Serão abençoadas",
+          "correct": true
+        },
+        {
+          "text": "Serão julgadas",
+          "correct": false
+        },
+        {
+          "text": "Serão reunidas em Jerusalém",
+          "correct": false
+        },
+        {
+          "text": "Receberão a lei",
+          "correct": false
+        }
       ],
       "explanation": "'Em ti serão benditas todas as famílias da terra' (Gn 12:3) — promessa cumprida em Cristo (Gl 3:8).",
       "divergence_note": null,
@@ -387,7 +376,6 @@
     },
     {
       "external_id": "teologia-biblica-0013",
-      "type": "multiple_choice",
       "text": "O que o cordeiro pascal prefigura, segundo Paulo em 1 Coríntios?",
       "options": [
         {
@@ -407,7 +395,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Cristo, nossa páscoa, foi sacrificado por nós' (1Co 5:7) — o cordeiro do Êxodo aponta para a cruz.",
       "divergence_note": null,
       "reference": {
@@ -420,7 +407,6 @@
     },
     {
       "external_id": "teologia-biblica-0014",
-      "type": "multiple_choice",
       "text": "O que a serpente de bronze levantada por Moisés prefigura, segundo Jesus?",
       "options": [
         {
@@ -440,7 +426,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Como Moisés levantou a serpente... assim importa que o Filho do homem seja levantado' (Jo 3:14-15).",
       "divergence_note": null,
       "reference": {
@@ -453,7 +438,6 @@
     },
     {
       "external_id": "teologia-biblica-0015",
-      "type": "multiple_choice",
       "text": "Que conceito descreve Cristo como aquele por quem 'muitos serão feitos justos', em contraste com Adão?",
       "options": [
         {
@@ -473,7 +457,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Romanos 5:18-19 contrasta a desobediência de Adão (condenação) com a obediência de Cristo (justificação).",
       "divergence_note": null,
       "reference": {
@@ -486,7 +469,6 @@
     },
     {
       "external_id": "teologia-biblica-0016",
-      "type": "multiple_choice",
       "text": "Qual 'nova aliança' Jeremias anunciou, com a lei escrita no coração?",
       "options": [
         {
@@ -506,7 +488,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Porei a minha lei no seu interior e a escreverei no seu coração' (Jr 31:33), cumprida em Cristo (Hb 8).",
       "divergence_note": null,
       "reference": {
@@ -520,7 +501,6 @@
     },
     {
       "external_id": "teologia-biblica-0017",
-      "type": "multiple_choice",
       "text": "Que tema percorre a Escritura como a habitação de Deus com o homem?",
       "options": [
         {
@@ -540,7 +520,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "De 'habitarei no meio deles' (Êx 25:8) ao Verbo que 'habitou entre nós' (Jo 1:14) até Ap 21:3, Deus busca habitar com seu povo.",
       "divergence_note": null,
       "reference": {
@@ -554,7 +533,6 @@
     },
     {
       "external_id": "teologia-biblica-0018",
-      "type": "multiple_choice",
       "text": "Segundo Hebreus, que 'repouso' resta ao povo de Deus, ligando o sábado e Canaã?",
       "options": [
         {
@@ -574,7 +552,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Resta ainda um repouso para o povo de Deus' (Hb 4:9) — descanso pleno alcançado em Cristo.",
       "divergence_note": null,
       "reference": {
@@ -588,7 +565,6 @@
     },
     {
       "external_id": "teologia-biblica-0019",
-      "type": "multiple_choice",
       "text": "Qual aliança teve a circuncisão como sinal no corpo?",
       "options": [
         {
@@ -608,7 +584,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Circuncidareis a carne do vosso prepúcio; e isto será por sinal do concerto' (Gn 17:11).",
       "divergence_note": null,
       "reference": {
@@ -621,7 +596,6 @@
     },
     {
       "external_id": "teologia-biblica-0020",
-      "type": "multiple_choice",
       "text": "Quem é apresentado como o 'Cordeiro de Deus que tira o pecado do mundo'?",
       "options": [
         {
@@ -641,7 +615,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "João Batista aponta para Jesus: 'Eis o Cordeiro de Deus, que tira o pecado do mundo' (Jo 1:29), unindo Êxodo e Isaías 53.",
       "divergence_note": null,
       "reference": {
@@ -655,7 +628,6 @@
     },
     {
       "external_id": "teologia-biblica-0021",
-      "type": "multiple_choice",
       "text": "Que tema liga o sacrifício de Isaque ao monte onde 'o SENHOR proverá'?",
       "options": [
         {
@@ -675,7 +647,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Deus proverá para si o cordeiro' (Gn 22:8); Abraão chamou o lugar de 'O SENHOR proverá' (Gn 22:14).",
       "divergence_note": null,
       "reference": {
@@ -688,7 +659,6 @@
     },
     {
       "external_id": "teologia-biblica-0022",
-      "type": "multiple_choice",
       "text": "Como Isaías 53 descreve o Servo que sofre?",
       "options": [
         {
@@ -708,7 +678,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Ele foi ferido pelas nossas transgressões e moído pelas nossas iniquidades... e o SENHOR fez cair sobre ele a iniquidade de nós todos' (Is 53:5-6).",
       "divergence_note": null,
       "reference": {
@@ -721,7 +690,6 @@
     },
     {
       "external_id": "teologia-biblica-0023",
-      "type": "multiple_choice",
       "text": "Que papel o tabernáculo cumpria na teologia do Antigo Testamento?",
       "options": [
         {
@@ -741,7 +709,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'E me farão um santuário, e habitarei no meio deles' (Êx 25:8) — sombra do que se cumpre em Cristo e na nova Jerusalém.",
       "divergence_note": null,
       "reference": {
@@ -754,7 +721,6 @@
     },
     {
       "external_id": "teologia-biblica-0024",
-      "type": "multiple_choice",
       "text": "O que o sábado do Antigo Testamento aponta, segundo o Novo?",
       "options": [
         {
@@ -774,7 +740,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "As festas e o sábado são 'sombras das coisas futuras, mas o corpo é de Cristo' (Cl 2:16-17; cf. Hb 4:9-10).",
       "divergence_note": "As tradições cristãs divergem sobre a observância do sábado/domingo hoje (sabatistas, dominicais e os que veem liberdade cristã). A pergunta trata da leitura tipológica que o próprio NT faz.",
       "reference": {
@@ -787,7 +752,6 @@
     },
     {
       "external_id": "teologia-biblica-0025",
-      "type": "multiple_choice",
       "text": "Que promessa Deus repetiu a Isaque e a Jacó, confirmando a aliança feita com Abraão?",
       "options": [
         {
@@ -807,7 +771,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "A Isaque (Gn 26:3-4) e a Jacó em Betel (Gn 28:13-14) Deus renovou a mesma promessa: terra, descendência e bênção às nações.",
       "divergence_note": null,
       "reference": {
@@ -820,7 +783,6 @@
     },
     {
       "external_id": "teologia-biblica-0026",
-      "type": "multiple_choice",
       "text": "Que figura do Antigo Testamento Hebreus usa para explicar o santuário celestial?",
       "options": [
         {
@@ -840,7 +802,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Os sacerdotes serviam 'ao exemplar e sombra das coisas celestiais'; Cristo entrou no próprio céu (Hb 8:5; 9:24).",
       "divergence_note": null,
       "reference": {
@@ -853,7 +814,6 @@
     },
     {
       "external_id": "teologia-biblica-0027",
-      "type": "multiple_choice",
       "text": "Como Paulo relaciona a lei ao evangelho em Gálatas 3?",
       "options": [
         {
@@ -873,7 +833,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'A lei nos serviu de aio, para nos conduzir a Cristo, para que pela fé fôssemos justificados' (Gl 3:24).",
       "divergence_note": null,
       "reference": {
@@ -886,7 +845,6 @@
     },
     {
       "external_id": "teologia-biblica-0028",
-      "type": "multiple_choice",
       "text": "Que tema une o maná no deserto e a declaração 'eu sou o pão da vida'?",
       "options": [
         {
@@ -906,7 +864,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Vossos pais comeram o maná no deserto e morreram... eu sou o pão vivo que desceu do céu' (Jo 6:49-51).",
       "divergence_note": null,
       "reference": {
@@ -919,13 +876,24 @@
     },
     {
       "external_id": "teologia-biblica-0029",
-      "type": "open_answer",
       "text": "Que palavra descreve o resgate pago para libertar alguém, aplicada à obra de Cristo?",
-      "options": null,
-      "accepted_answers": [
-        "Redenção",
-        "Redencao",
-        "Resgate"
+      "options": [
+        {
+          "text": "Redenção",
+          "correct": true
+        },
+        {
+          "text": "Justificação",
+          "correct": false
+        },
+        {
+          "text": "Propiciação",
+          "correct": false
+        },
+        {
+          "text": "Reconciliação",
+          "correct": false
+        }
       ],
       "explanation": "'O Filho do homem não veio para ser servido, mas para servir e dar a sua vida em resgate de muitos' (Mc 10:45; cf. Ef 1:7).",
       "divergence_note": null,
@@ -939,7 +907,6 @@
     },
     {
       "external_id": "teologia-biblica-0030",
-      "type": "multiple_choice",
       "text": "Que instituição Êxodo 31 chama de 'sinal perpétuo' entre Deus e os filhos de Israel?",
       "options": [
         {
@@ -959,7 +926,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Guardarão os filhos de Israel o sábado... sinal perpétuo entre mim e os filhos de Israel' (Êx 31:16-17).",
       "divergence_note": null,
       "reference": {
@@ -972,7 +938,6 @@
     },
     {
       "external_id": "teologia-biblica-0031",
-      "type": "multiple_choice",
       "text": "Segundo 1 Coríntios 10:4, quem era a 'pedra espiritual' que deu água a Israel no deserto?",
       "options": [
         {
@@ -992,7 +957,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Beberam todos de uma mesma bebida espiritual, porque bebiam da pedra espiritual que os seguia; e a pedra era Cristo' (1Co 10:4).",
       "divergence_note": null,
       "reference": {
@@ -1005,7 +969,6 @@
     },
     {
       "external_id": "teologia-biblica-0032",
-      "type": "multiple_choice",
       "text": "O que Hebreus 10 diz que os sacrifícios anuais não podiam fazer, mas Cristo fez 'uma vez para sempre'?",
       "options": [
         {
@@ -1025,7 +988,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'A lei... nunca pode aperfeiçoar os que a ela se chegam'; Cristo, 'com uma só oblação, aperfeiçoou para sempre os santificados' (Hb 10:1,14).",
       "divergence_note": null,
       "reference": {
@@ -1038,7 +1000,6 @@
     },
     {
       "external_id": "teologia-biblica-0033",
-      "type": "multiple_choice",
       "text": "Que 'sinal de Jonas' Jesus aplicou a si mesmo em Mateus 12?",
       "options": [
         {
@@ -1058,7 +1019,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Como Jonas esteve três dias e três noites no ventre da baleia, assim estará o Filho do homem no seio da terra' (Mt 12:40).",
       "divergence_note": null,
       "reference": {
@@ -1071,7 +1031,6 @@
     },
     {
       "external_id": "teologia-biblica-0034",
-      "type": "multiple_choice",
       "text": "Em Colossenses 2, de que a circuncisão é apresentada como figura para o cristão?",
       "options": [
         {
@@ -1091,7 +1050,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Nele também estais circuncidados com a circuncisão não feita por mão... sepultados com ele no batismo' (Cl 2:11-12).",
       "divergence_note": "As tradições cristãs divergem sobre as implicações desse texto para o batismo (de infantes ou de crentes). A pergunta trata da conexão que o próprio texto faz.",
       "reference": {
@@ -1104,14 +1062,24 @@
     },
     {
       "external_id": "teologia-biblica-0035",
-      "type": "open_answer",
       "text": "Como se chama a revelação de Deus por meio da criação, descrita em Romanos 1:20 e Salmo 19?",
-      "options": null,
-      "accepted_answers": [
-        "Revelação geral",
-        "Revelação natural",
-        "Revelacao geral",
-        "Revelacao natural"
+      "options": [
+        {
+          "text": "Revelação geral",
+          "correct": true
+        },
+        {
+          "text": "Revelação especial",
+          "correct": false
+        },
+        {
+          "text": "Inspiração",
+          "correct": false
+        },
+        {
+          "text": "Iluminação",
+          "correct": false
+        }
       ],
       "explanation": "'As suas coisas invisíveis... se entendem e claramente se veem pelas coisas que estão criadas' (Rm 1:20); 'os céus manifestam a glória de Deus' (Sl 19:1).",
       "divergence_note": null,
@@ -1125,7 +1093,6 @@
     },
     {
       "external_id": "teologia-biblica-0036",
-      "type": "multiple_choice",
       "text": "Que título Paulo dá a Cristo em Colossenses 1:18 em relação à igreja?",
       "options": [
         {
@@ -1145,7 +1112,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Ele é a cabeça do corpo, da igreja; é o princípio e o primogênito dentre os mortos' (Cl 1:18).",
       "divergence_note": null,
       "reference": {
@@ -1158,7 +1124,6 @@
     },
     {
       "external_id": "teologia-biblica-0037",
-      "type": "multiple_choice",
       "text": "Que imagem do Antigo Testamento Jesus aplica a si em João 10: 'eu sou o bom ___'?",
       "options": [
         {
@@ -1178,7 +1143,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Eu sou o bom Pastor; o bom Pastor dá a sua vida pelas ovelhas' (Jo 10:11) — o SENHOR-pastor do Salmo 23 e de Ezequiel 34.",
       "divergence_note": null,
       "reference": {
@@ -1191,7 +1155,6 @@
     },
     {
       "external_id": "teologia-biblica-0038",
-      "type": "multiple_choice",
       "text": "Segundo Hebreus 10:20, o que o véu do templo representava?",
       "options": [
         {
@@ -1211,7 +1174,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Pelo novo e vivo caminho que ele nos consagrou, pelo véu, isto é, pela sua carne' (Hb 10:20).",
       "divergence_note": null,
       "reference": {
@@ -1224,7 +1186,6 @@
     },
     {
       "external_id": "teologia-biblica-0039",
-      "type": "multiple_choice",
       "text": "Que nome divino Jesus aplicou a si ao dizer 'antes que Abraão existisse, eu sou'?",
       "options": [
         {
@@ -1244,7 +1205,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Antes que Abraão existisse, eu sou' (Jo 8:58) ecoa Êxodo 3:14 — por isso pegaram pedras para apedrejá-lo.",
       "divergence_note": null,
       "reference": {
@@ -1257,7 +1217,6 @@
     },
     {
       "external_id": "teologia-biblica-0040",
-      "type": "multiple_choice",
       "text": "Que aliança Hebreus 8:13 declara 'envelhecida' e prestes a desaparecer?",
       "options": [
         {
@@ -1277,7 +1236,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Dizendo Nova aliança, envelheceu a primeira. Ora, o que foi tornado velho e se envelhece perto está de acabar' (Hb 8:13).",
       "divergence_note": null,
       "reference": {
@@ -1290,7 +1248,6 @@
     },
     {
       "external_id": "teologia-biblica-0041",
-      "type": "multiple_choice",
       "text": "Gênesis 15:6 diz de Abrão: \"E creu ele no SENHOR\". O que o mesmo versículo afirma logo em seguida?",
       "options": [
         {
@@ -1310,7 +1267,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"E creu ele no SENHOR, e foi-lhe imputado isto por justiça\" (Gn 15:6). Abrão creu na promessa de uma descendência incontável como as estrelas (Gn 15:5), anos antes da circuncisão e do novo nome (Gn 17). Paulo cita o versículo para mostrar que a fé foi imputada a Abraão como justiça quando ele ainda era incircunciso (Rm 4:3,9-11), e Tiago também o cita (Tg 2:23).",
       "divergence_note": "Tradições cristãs leem de modos diferentes o uso que Paulo (Rm 4) e Tiago (Tg 2:21-24) fazem deste versículo: na leitura protestante, Deus declara justo o crente somente pela fé, e as obras demonstram essa fé; na católica e na ortodoxa, a justificação pela graça inclui também a renovação interior, e a fé coopera com as obras (Tg 2:22). A pergunta trata apenas do que Gênesis 15:6 diz.",
       "reference": {
@@ -1323,7 +1279,6 @@
     },
     {
       "external_id": "teologia-biblica-0042",
-      "type": "multiple_choice",
       "text": "Em Êxodo 24, depois que o povo prometeu obedecer a tudo o que o SENHOR havia falado, como Moisés confirmou a aliança do Sinai?",
       "options": [
         {
@@ -1343,7 +1298,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Moisés espargiu metade do sangue sobre o altar, leu o livro do concerto ao povo e, depois que este prometeu obedecer, espargiu o restante sobre o povo, dizendo: \"Eis aqui o sangue do concerto que o SENHOR tem feito convosco\" (Êx 24:6-8) — \"concerto\" é aliança, na linguagem da ARC. Na última ceia, Jesus ecoa essa fórmula: \"isto é o meu sangue, o sangue do Novo Testamento\" (Mt 26:28), ou seja, da nova aliança; Hebreus 9:19-20 relembra a cena do Sinai.",
       "divergence_note": null,
       "reference": {
@@ -1356,7 +1310,6 @@
     },
     {
       "external_id": "teologia-biblica-0043",
-      "type": "multiple_choice",
       "text": "No tabernáculo, o que era o propiciatório?",
       "options": [
         {
@@ -1376,7 +1329,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Também farás um propiciatório de ouro puro... E porás o propiciatório em cima da arca\" (Êx 25:17,21), com um querubim de ouro em cada extremidade (Êx 25:18-19). Dali, \"do meio dos dois querubins\", Deus falaria com Moisés (Êx 25:22), e sobre o propiciatório o sumo sacerdote espargia o sangue no Dia da Expiação (Lv 16:14-15). No grego do Novo Testamento, a palavra traduzida por \"propiciação\" em Romanos 3:25 é hilasterion, a mesma que Hebreus 9:5 usa para o propiciatório.",
       "divergence_note": null,
       "reference": {
@@ -1389,7 +1341,6 @@
     },
     {
       "external_id": "teologia-biblica-0044",
-      "type": "multiple_choice",
       "text": "Em Levítico 19:2, que razão Deus dá para a ordem \"Santos sereis\"?",
       "options": [
         {
@@ -1409,7 +1360,6 @@
           "correct": true
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Santos sereis, porque eu, o SENHOR, vosso Deus, sou santo\" (Lv 19:2). A santidade do povo nasce do caráter de Deus e se mostra no cotidiano: o capítulo trata de colheita, salários, justiça nos julgamentos e amor ao próximo (Lv 19:9-18). Pedro repete a ordem aos cristãos: \"Sede santos, porque eu sou santo\" (1Pe 1:16).",
       "divergence_note": null,
       "reference": {
@@ -1423,7 +1373,6 @@
     },
     {
       "external_id": "teologia-biblica-0045",
-      "type": "multiple_choice",
       "text": "Qual promessa de Deuteronômio 18:15 o apóstolo Pedro aplica a Jesus em Atos 3:22?",
       "options": [
         {
@@ -1443,7 +1392,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Moisés anunciou: \"O SENHOR, teu Deus, te despertará um profeta do meio de ti, de teus irmãos, como eu; a ele ouvireis\" (Dt 18:15). Essa expectativa aparece quando os enviados questionam João Batista por que batizava, se não era \"o Cristo, nem Elias, nem o profeta\" (Jo 1:25), e quando a multidão diz de Jesus: \"Este é verdadeiramente o profeta que devia vir ao mundo\" (Jo 6:14). Pedro aplica a promessa a Cristo (At 3:22-23).",
       "divergence_note": null,
       "reference": {
@@ -1456,7 +1404,6 @@
     },
     {
       "external_id": "teologia-biblica-0046",
-      "type": "multiple_choice",
       "text": "Em Isaías 9:6, qual destes títulos aparece no nome dado ao menino que \"nos nasceu\"?",
       "options": [
         {
@@ -1476,7 +1423,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Porque um menino nos nasceu, um filho se nos deu; e o principado está sobre os seus ombros\"; entre os títulos do seu nome estão \"Deus Forte\" e \"Príncipe da Paz\" (Is 9:6), e \"do incremento deste principado e da paz não haverá fim, sobre o trono de Davi\" (Is 9:7). O anjo ecoa essa promessa ao anunciar que o filho de Maria \"será chamado Filho do Altíssimo\" e receberá \"o trono de Davi\" (Lc 1:32); já \"Emanuel\" vem do sinal de Isaías 7:14.",
       "divergence_note": null,
       "reference": {
@@ -1489,14 +1435,24 @@
     },
     {
       "external_id": "teologia-biblica-0047",
-      "type": "open_answer",
       "text": "Complete a promessa de Deus em Ezequiel 36:26: \"tirarei o coração de pedra da vossa carne e vos darei um coração de ___\".",
-      "options": null,
-      "accepted_answers": [
-        "Carne",
-        "De carne",
-        "Coração de carne",
-        "Um coração de carne"
+      "options": [
+        {
+          "text": "Carne",
+          "correct": true
+        },
+        {
+          "text": "Ouro",
+          "correct": false
+        },
+        {
+          "text": "Fogo",
+          "correct": false
+        },
+        {
+          "text": "Ferro",
+          "correct": false
+        }
       ],
       "explanation": "Deus promete uma transformação interior: \"vos darei um coração novo e porei dentro de vós um espírito novo\" e \"porei dentro de vós o meu espírito\" (Ez 36:26-27). A promessa ecoa a nova aliança anunciada em Jeremias 31:31-33, com a lei escrita no coração, e Paulo retoma a imagem ao dizer que os coríntios são \"a carta de Cristo\", escrita \"não em tábuas de pedra, mas nas tábuas de carne do coração\" (2Co 3:3).",
       "divergence_note": null,
@@ -1510,24 +1466,24 @@
     },
     {
       "external_id": "teologia-biblica-0048",
-      "type": "open_answer",
       "text": "Em Mateus 5:17, Jesus diz que não veio destruir a lei ou os profetas. Para que ele diz ter vindo?",
-      "options": null,
-      "accepted_answers": [
-        "Cumprir",
-        "Para cumprir",
-        "Cumpri-los",
-        "Para cumpri-los",
-        "Cumpri-la",
-        "Para cumpri-la",
-        "Cumprir a lei",
-        "Para cumprir a lei",
-        "Cumprir a lei e os profetas",
-        "Para cumprir a lei e os profetas",
-        "Dar-lhes pleno cumprimento",
-        "Para dar-lhes pleno cumprimento",
-        "Dar o seu sentido completo",
-        "Para dar o seu sentido completo"
+      "options": [
+        {
+          "text": "Cumprir",
+          "correct": true
+        },
+        {
+          "text": "Substituir",
+          "correct": false
+        },
+        {
+          "text": "Renovar",
+          "correct": false
+        },
+        {
+          "text": "Julgar",
+          "correct": false
+        }
       ],
       "explanation": "\"Não cuideis que vim destruir a lei ou os profetas; não vim ab-rogar, mas cumprir\" (Mt 5:17) — ab-rogar é anular. Em seguida, Jesus afirma que \"nem um jota ou um til se omitirá da lei sem que tudo seja cumprido\" (Mt 5:18). Depois de ressuscitar, \"começando por Moisés e por todos os profetas\", explicou aos discípulos de Emaús \"o que dele se achava em todas as Escrituras\" (Lc 24:27).",
       "divergence_note": "Intérpretes divergem sobre o sentido de \"cumprir\" aqui (realizar o que a Lei e os Profetas anunciavam, obedecer-lhes plenamente ou revelar o seu sentido pleno) e, daí, sobre como a Lei de Moisés se aplica aos cristãos, por exemplo quanto ao sábado. A pergunta trata apenas da palavra que o texto usa.",

@@ -4,7 +4,7 @@ from sqlalchemy import Enum, ForeignKey, Index, String, Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.base import Base, TimestampMixin
-from app.models.enums import Difficulty, QuestionType, Testament
+from app.models.enums import Difficulty, Testament
 
 
 def _enum(enum_cls: type, name: str) -> Enum:
@@ -33,7 +33,6 @@ class Question(TimestampMixin, Base):
 
     id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
     external_id: Mapped[str] = mapped_column(String(60), unique=True)
-    type: Mapped[QuestionType] = mapped_column(_enum(QuestionType, "question_type"))
     text: Mapped[str] = mapped_column(Text)
     explanation: Mapped[str] = mapped_column(Text)
     divergence_note: Mapped[str | None] = mapped_column(Text, default=None)
@@ -54,11 +53,6 @@ class Question(TimestampMixin, Base):
         cascade="all, delete-orphan",
         order_by="QuestionOption.position",
     )
-    accepted_answers: Mapped[list["QuestionAnswer"]] = relationship(
-        back_populates="question",
-        cascade="all, delete-orphan",
-        order_by="QuestionAnswer.position",
-    )
 
 
 class QuestionOption(Base):
@@ -73,18 +67,3 @@ class QuestionOption(Base):
     position: Mapped[int] = mapped_column(default=0)
 
     question: Mapped[Question] = relationship(back_populates="options")
-
-
-class QuestionAnswer(Base):
-    """Accepted answer variations for open-answer questions (position 0 = canonical)."""
-
-    __tablename__ = "question_answers"
-
-    id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
-    question_id: Mapped[uuid.UUID] = mapped_column(
-        ForeignKey("questions.id", ondelete="CASCADE"), index=True
-    )
-    text: Mapped[str] = mapped_column(String(120))
-    position: Mapped[int] = mapped_column(default=0)
-
-    question: Mapped[Question] = relationship(back_populates="accepted_answers")

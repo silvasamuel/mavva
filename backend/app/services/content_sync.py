@@ -18,7 +18,6 @@ from sqlalchemy.orm import Session, selectinload
 
 from app.core.config import get_settings
 from app.models import Category, Question
-from app.models.enums import QuestionType
 
 GITHUB_API = "https://api.github.com"
 CONTENT_PR_BRANCH = "content/admin-publish"
@@ -39,7 +38,7 @@ def serialize_category(db: Session, category: Category) -> dict[str, Any] | None
     questions = db.scalars(
         select(Question)
         .where(Question.category_id == category.id)
-        .options(selectinload(Question.options), selectinload(Question.accepted_answers))
+        .options(selectinload(Question.options))
         .order_by(Question.external_id)
     ).all()
     if not questions:
@@ -48,16 +47,8 @@ def serialize_category(db: Session, category: Category) -> dict[str, Any] | None
     for q in questions:
         item: dict[str, Any] = {
             "external_id": q.external_id,
-            "type": q.type.value,
             "text": q.text,
-            "options": (
-                [{"text": o.text, "correct": o.is_correct} for o in q.options]
-                if q.type == QuestionType.MULTIPLE_CHOICE
-                else None
-            ),
-            "accepted_answers": (
-                [a.text for a in q.accepted_answers] if q.type == QuestionType.OPEN_ANSWER else None
-            ),
+            "options": [{"text": o.text, "correct": o.is_correct} for o in q.options],
             "explanation": q.explanation,
             "divergence_note": q.divergence_note,
             "reference": {

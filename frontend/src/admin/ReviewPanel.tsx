@@ -16,12 +16,7 @@ import {
 } from '@/features/moderation/questionDraft'
 import { QuestionEditor } from './QuestionEditor'
 import { AppIcons, Glyph } from '@/lib/icons'
-import type {
-  AdminCategory,
-  AdminFlag,
-  AdminProposal,
-  AdminReviewInbox,
-} from './types'
+import type { AdminCategory, AdminFlag, AdminProposal, AdminReviewInbox } from './types'
 
 export function ReviewPanel() {
   const queryClient = useQueryClient()
@@ -159,8 +154,7 @@ export function ReviewPanel() {
             <Card key={proposal.id} className="space-y-3">
               <p className="font-extrabold text-ink">{proposal.payload.text}</p>
               <p className="text-xs font-semibold text-sand-400">
-                @{proposal.author_username} · {formatRelativeDate(proposal.created_at)} ·{' '}
-                {proposal.payload.type === 'multiple_choice' ? 'Múltipla escolha' : 'Resposta aberta'}
+                @{proposal.author_username} · {formatRelativeDate(proposal.created_at)}
               </p>
               <div className="flex flex-wrap gap-2">
                 <Button onClick={() => setEditing(proposal)}>Editar e aprovar</Button>
@@ -193,9 +187,7 @@ export function ReviewPanel() {
               </p>
               <Button
                 variant="secondary"
-                loading={
-                  reviewSuggestion.isPending && reviewSuggestion.variables === suggestion.id
-                }
+                loading={reviewSuggestion.isPending && reviewSuggestion.variables === suggestion.id}
                 onClick={() => reviewSuggestion.mutate(suggestion.id)}
               >
                 Concluir
@@ -243,7 +235,10 @@ function ProposalEditor({
   onApproved: () => void
   onError: (message: string) => void
 }) {
-  const fallback = emptyDraft(categories[0]?.id ?? proposal.payload.category_id, books[0]?.slug ?? 'genesis')
+  const fallback = emptyDraft(
+    categories[0]?.id ?? proposal.payload.category_id,
+    books[0]?.slug ?? 'genesis'
+  )
   const [draft, setDraft] = useState(() => draftFromPayload(proposal.payload, fallback))
   const [localError, setLocalError] = useState('')
 
@@ -302,7 +297,10 @@ function ProposalEditor({
           books={books}
         />
         {localError && (
-          <p role="alert" className="mt-4 rounded-xl bg-red-50 px-3 py-2 text-sm font-bold text-red-700">
+          <p
+            role="alert"
+            className="mt-4 rounded-xl bg-red-50 px-3 py-2 text-sm font-bold text-red-700"
+          >
             {localError}
           </p>
         )}

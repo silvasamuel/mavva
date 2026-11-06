@@ -3,7 +3,6 @@
   "questions": [
     {
       "external_id": "geografia-biblica-0001",
-      "type": "multiple_choice",
       "text": "Por quais outros nomes o mar da Galileia é chamado nas Escrituras?",
       "options": [
         {
@@ -23,7 +22,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Lucas o chama \"lago de Genesaré\" (Lc 5:1) e João, \"mar de Tiberíades\" (Jo 6:1; 21:1) — no AT, era o \"mar de Quinerete\" (Nm 34:11). O mesmo lago, cenário da pesca, das tempestades acalmadas e de boa parte do ministério de Jesus.",
       "divergence_note": null,
       "reference": {
@@ -36,7 +34,6 @@
     },
     {
       "external_id": "geografia-biblica-0002",
-      "type": "multiple_choice",
       "text": "Em qual monte Moisés recebeu as tábuas da Lei?",
       "options": [
         {
@@ -56,7 +53,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Deus desceu sobre o monte Sinai em fogo e ali deu a Moisés as tábuas do testemunho (Êx 19:20; 31:18). O mesmo monte é chamado Horebe em outras passagens (Dt 4:10). No Carmelo Elias enfrentou os profetas de Baal; do Nebo Moisés viu a terra prometida.",
       "divergence_note": null,
       "reference": {
@@ -69,12 +65,24 @@
     },
     {
       "external_id": "geografia-biblica-0003",
-      "type": "open_answer",
       "text": "Para qual grande cidade Deus enviou o profeta Jonas?",
-      "options": null,
-      "accepted_answers": [
-        "Nínive",
-        "Ninive"
+      "options": [
+        {
+          "text": "Nínive",
+          "correct": true
+        },
+        {
+          "text": "Társis",
+          "correct": false
+        },
+        {
+          "text": "Babilônia",
+          "correct": false
+        },
+        {
+          "text": "Damasco",
+          "correct": false
+        }
       ],
       "explanation": "\"Levanta-te, vai à grande cidade de Nínive, e clama contra ela\" (Jn 1:2). Nínive era a capital da Assíria, inimiga cruel de Israel — por isso Jonas fugiu para o lado oposto, rumo a Társis.",
       "divergence_note": null,
@@ -88,7 +96,6 @@
     },
     {
       "external_id": "geografia-biblica-0004",
-      "type": "multiple_choice",
       "text": "A caminho de qual cidade Saulo de Tarso teve o encontro com Cristo que mudou sua vida?",
       "options": [
         {
@@ -108,7 +115,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Chegando perto de Damasco, subitamente o cercou um resplendor de luz do céu\" (At 9:3). Saulo ia prender cristãos na cidade; entrou nela cego e saiu apóstolo de Jesus Cristo.",
       "divergence_note": null,
       "reference": {
@@ -121,7 +127,6 @@
     },
     {
       "external_id": "geografia-biblica-0005",
-      "type": "multiple_choice",
       "text": "De qual cidade Abraão saiu quando Deus o chamou, antes de habitar em Harã?",
       "options": [
         {
@@ -141,7 +146,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Eu sou o Senhor, que te tirei de Ur dos caldeus\" (Gn 15:7). A família de Abraão saiu de Ur, na Mesopotâmia, deteve-se em Harã e dali Abraão partiu para Canaã aos 75 anos (Gn 12:4-5).",
       "divergence_note": null,
       "reference": {
@@ -154,7 +158,6 @@
     },
     {
       "external_id": "geografia-biblica-0006",
-      "type": "multiple_choice",
       "text": "De qual monte Jesus subiu ao céu diante dos discípulos?",
       "options": [
         {
@@ -174,7 +177,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Após a ascensão, os discípulos \"voltaram para Jerusalém, do monte chamado das Oliveiras, o qual está perto de Jerusalém\" (At 1:12). O mesmo monte onde Jesus orou no Getsêmani e por onde entrou na cidade no Domingo de Ramos.",
       "divergence_note": null,
       "reference": {
@@ -187,7 +189,6 @@
     },
     {
       "external_id": "geografia-biblica-0007",
-      "type": "multiple_choice",
       "text": "Qual mar é chamado nas Escrituras de \"mar Salgado\"?",
       "options": [
         {
@@ -207,7 +208,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O mar Morto aparece como \"mar Salgado\" desde Gênesis 14:3, marcando a fronteira oriental de Judá (Js 15:5). Sem saída para outras águas, sua salinidade extrema impede a vida — daí o nome moderno.",
       "divergence_note": null,
       "reference": {
@@ -220,7 +220,6 @@
     },
     {
       "external_id": "geografia-biblica-0008",
-      "type": "multiple_choice",
       "text": "Quais dois rios que saíam do Éden ainda são conhecidos pelos mesmos nomes hoje?",
       "options": [
         {
@@ -240,7 +239,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Dos quatro braços do rio do Éden — Pisom, Giom, Hidéquel e Eufrates (Gn 2:11-14) — o Hidéquel é o Tigre, e o Eufrates conserva o nome. Ambos atravessam a Mesopotâmia, o \"entre rios\".",
       "divergence_note": null,
       "reference": {
@@ -253,7 +251,6 @@
     },
     {
       "external_id": "geografia-biblica-0009",
-      "type": "multiple_choice",
       "text": "Em que região ficavam Nazaré e Cafarnaum, centros do ministério de Jesus?",
       "options": [
         {
@@ -273,7 +270,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jesus cresceu em Nazaré e fez de Cafarnaum, à beira do mar da Galileia, a base do seu ministério (Mt 4:13). Assim se cumpriu Isaías: \"a Galileia das nações... o povo que andava em trevas viu uma grande luz\" (Mt 4:15-16).",
       "divergence_note": null,
       "reference": {
@@ -286,7 +282,6 @@
     },
     {
       "external_id": "geografia-biblica-0010",
-      "type": "multiple_choice",
       "text": "Em qual monte Salomão edificou o templo, o mesmo onde Abraão fora provado com Isaque?",
       "options": [
         {
@@ -306,7 +301,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Começou Salomão a edificar a casa do Senhor em Jerusalém, no monte Moriá, onde o Senhor aparecera a Davi\" (2Cr 3:1). Gênesis 22:2 situa na \"terra de Moriá\" o sacrifício de Isaque — o altar e o templo se encontram no mesmo lugar.",
       "divergence_note": null,
       "reference": {
@@ -319,7 +313,6 @@
     },
     {
       "external_id": "geografia-biblica-0011",
-      "type": "multiple_choice",
       "text": "Em que rio Naamã mergulhou sete vezes e foi curado da lepra?",
       "options": [
         {
@@ -339,7 +332,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Por ordem de Eliseu, Naamã lavou-se sete vezes no Jordão e ficou limpo (2Rs 5:14).",
       "divergence_note": null,
       "reference": {
@@ -352,7 +344,6 @@
     },
     {
       "external_id": "geografia-biblica-0012",
-      "type": "multiple_choice",
       "text": "Em que monte Josué ordenou que o sol parasse durante a batalha?",
       "options": [
         {
@@ -372,7 +363,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Sol, detém-te em Gibeom' (Js 10:12); o sol se deteve até Israel vencer os amorreus.",
       "divergence_note": null,
       "reference": {
@@ -385,7 +375,6 @@
     },
     {
       "external_id": "geografia-biblica-0013",
-      "type": "multiple_choice",
       "text": "Qual cidade filisteia era a terra natal do gigante Golias?",
       "options": [
         {
@@ -405,7 +394,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Saiu... um homem chamado Golias, de Gate' (1Sm 17:4), morto por Davi no vale de Elá.",
       "divergence_note": null,
       "reference": {
@@ -418,7 +406,6 @@
     },
     {
       "external_id": "geografia-biblica-0014",
-      "type": "multiple_choice",
       "text": "Em que monte a arca de Noé repousou após o dilúvio?",
       "options": [
         {
@@ -438,7 +425,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Repousou a arca... sobre os montes de Ararate' (Gn 8:4).",
       "divergence_note": null,
       "reference": {
@@ -451,7 +437,6 @@
     },
     {
       "external_id": "geografia-biblica-0015",
-      "type": "multiple_choice",
       "text": "Para qual cidade, capital da Assíria, Jonas foi enviado a pregar?",
       "options": [
         {
@@ -471,7 +456,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Levanta-te, vai à grande cidade de Nínive' (Jn 1:2); após a pregação, a cidade se arrependeu.",
       "divergence_note": null,
       "reference": {
@@ -485,7 +469,6 @@
     },
     {
       "external_id": "geografia-biblica-0016",
-      "type": "multiple_choice",
       "text": "Qual cidade foi destruída junto com Sodoma por fogo do céu?",
       "options": [
         {
@@ -505,7 +488,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Fez o SENHOR chover... enxofre e fogo sobre Sodoma e Gomorra' (Gn 19:24).",
       "divergence_note": null,
       "reference": {
@@ -518,7 +500,6 @@
     },
     {
       "external_id": "geografia-biblica-0017",
-      "type": "multiple_choice",
       "text": "Qual mar/lago foi cenário da pesca dos discípulos e de milagres de Jesus?",
       "options": [
         {
@@ -538,7 +519,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Junto ao mar da Galileia Jesus chamou pescadores e acalmou tempestades (Mt 4:18; Mc 4:39).",
       "divergence_note": null,
       "reference": {
@@ -551,13 +531,24 @@
     },
     {
       "external_id": "geografia-biblica-0018",
-      "type": "open_answer",
       "text": "Em que monte Moisés recebeu os Dez Mandamentos?",
-      "options": null,
-      "accepted_answers": [
-        "Sinai",
-        "Monte Sinai",
-        "Horebe"
+      "options": [
+        {
+          "text": "Monte Sinai",
+          "correct": true
+        },
+        {
+          "text": "Monte Nebo",
+          "correct": false
+        },
+        {
+          "text": "Monte Carmelo",
+          "correct": false
+        },
+        {
+          "text": "Monte Moriá",
+          "correct": false
+        }
       ],
       "explanation": "No Sinai (também chamado Horebe), Deus desceu em fogo e entregou a Lei a Moisés (Êx 19:20; 20:1).",
       "divergence_note": null,
@@ -572,7 +563,6 @@
     },
     {
       "external_id": "geografia-biblica-0019",
-      "type": "multiple_choice",
       "text": "Qual foi a primeira cidade conquistada por Israel em Canaã, com muros derrubados?",
       "options": [
         {
@@ -592,7 +582,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jericó, fortificada, teve seus muros derrubados ao brado e som das trombetas (Js 6:1-2,20).",
       "divergence_note": null,
       "reference": {
@@ -606,7 +595,6 @@
     },
     {
       "external_id": "geografia-biblica-0020",
-      "type": "multiple_choice",
       "text": "Em que deserto/região João Batista pregava e batizava no Jordão?",
       "options": [
         {
@@ -626,7 +614,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Naqueles dias apareceu João Batista pregando no deserto da Judeia' (Mt 3:1), batizando no Jordão.",
       "divergence_note": null,
       "reference": {
@@ -639,13 +626,24 @@
     },
     {
       "external_id": "geografia-biblica-0021",
-      "type": "open_answer",
       "text": "Em que vale Davi enfrentou e matou Golias?",
-      "options": null,
-      "accepted_answers": [
-        "Vale de Elá",
-        "Elá",
-        "Vale do Carvalho"
+      "options": [
+        {
+          "text": "Vale de Elá",
+          "correct": true
+        },
+        {
+          "text": "Vale de Jezreel",
+          "correct": false
+        },
+        {
+          "text": "Vale de Josafá",
+          "correct": false
+        },
+        {
+          "text": "Vale dos Refains",
+          "correct": false
+        }
       ],
       "explanation": "Os filisteus e Israel acamparam no vale de Elá quando Davi derrotou Golias (1Sm 17:2,19).",
       "divergence_note": null,
@@ -659,7 +657,6 @@
     },
     {
       "external_id": "geografia-biblica-0022",
-      "type": "multiple_choice",
       "text": "Qual cidade é chamada nas Escrituras de 'cidade das palmeiras'?",
       "options": [
         {
@@ -679,7 +676,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jericó é assim descrita (Dt 34:3; 2Cr 28:15), oásis fértil no vale do Jordão.",
       "divergence_note": null,
       "reference": {
@@ -692,7 +688,6 @@
     },
     {
       "external_id": "geografia-biblica-0023",
-      "type": "multiple_choice",
       "text": "Em que monte Moisés viu a terra prometida antes de morrer?",
       "options": [
         {
@@ -712,7 +707,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Subiu Moisés das campinas de Moabe ao monte Nebo, ao cume de Pisga'; ali o SENHOR lhe mostrou toda a terra (Dt 34:1-4).",
       "divergence_note": null,
       "reference": {
@@ -725,7 +719,6 @@
     },
     {
       "external_id": "geografia-biblica-0024",
-      "type": "multiple_choice",
       "text": "Qual cidade foi a primeira capital do reino de Davi, antes de Jerusalém?",
       "options": [
         {
@@ -745,7 +738,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Davi reinou sete anos e meio sobre Judá em Hebrom, antes de tomar Jerusalém (2Sm 5:4-5).",
       "divergence_note": null,
       "reference": {
@@ -758,7 +750,6 @@
     },
     {
       "external_id": "geografia-biblica-0025",
-      "type": "multiple_choice",
       "text": "Em que cidade Paulo discursou no Areópago sobre o 'Deus desconhecido'?",
       "options": [
         {
@@ -778,7 +769,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Paulo, estando no meio do Areópago, disse: ...achei um altar em que estava escrito: AO DEUS DESCONHECIDO' (At 17:22-23).",
       "divergence_note": null,
       "reference": {
@@ -791,7 +781,6 @@
     },
     {
       "external_id": "geografia-biblica-0026",
-      "type": "multiple_choice",
       "text": "Qual mar/lago da Palestina é tão salgado que nele não há vida?",
       "options": [
         {
@@ -811,7 +800,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Chamado 'mar Salgado' nas Escrituras, marca o limite oriental de Canaã (Nm 34:12; Js 15:5).",
       "divergence_note": null,
       "reference": {
@@ -825,12 +813,24 @@
     },
     {
       "external_id": "geografia-biblica-0027",
-      "type": "open_answer",
       "text": "Em que cidade da Galileia Jesus foi criado e é chamado 'nazareno'?",
-      "options": null,
-      "accepted_answers": [
-        "Nazaré",
-        "Nazare"
+      "options": [
+        {
+          "text": "Nazaré",
+          "correct": true
+        },
+        {
+          "text": "Cafarnaum",
+          "correct": false
+        },
+        {
+          "text": "Belém",
+          "correct": false
+        },
+        {
+          "text": "Caná",
+          "correct": false
+        }
       ],
       "explanation": "'E foi habitar numa cidade chamada Nazaré, para que se cumprisse... Ele será chamado nazareno' (Mt 2:23).",
       "divergence_note": null,
@@ -844,7 +844,6 @@
     },
     {
       "external_id": "geografia-biblica-0028",
-      "type": "multiple_choice",
       "text": "Em que região Jesus curou o endemoninhado cujos demônios entraram numa manada de porcos?",
       "options": [
         {
@@ -864,7 +863,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Ao chegar à outra banda do mar, Jesus libertou o homem, e os porcos se precipitaram no mar (Mc 5:1-13).",
       "divergence_note": null,
       "reference": {
@@ -877,7 +875,6 @@
     },
     {
       "external_id": "geografia-biblica-0029",
-      "type": "multiple_choice",
       "text": "Qual cidade da Ásia Menor abrigava o templo de Diana e recebeu uma carta de Paulo?",
       "options": [
         {
@@ -897,7 +894,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O tumulto dos ourives em Éfeso girou em torno do templo de Diana (At 19:23-28); a igreja de lá recebeu Efésios.",
       "divergence_note": null,
       "reference": {
@@ -910,7 +906,6 @@
     },
     {
       "external_id": "geografia-biblica-0030",
-      "type": "multiple_choice",
       "text": "Onde Jesus foi tentado pelo diabo depois do batismo?",
       "options": [
         {
@@ -930,7 +925,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Foi Jesus levado pelo Espírito ao deserto, para ser tentado pelo diabo' (Mt 4:1); uma das tentações se deu no pináculo do templo.",
       "divergence_note": null,
       "reference": {
@@ -943,7 +937,6 @@
     },
     {
       "external_id": "geografia-biblica-0031",
-      "type": "multiple_choice",
       "text": "Que vale, junto a Jerusalém, é citado como cenário de juízo em Joel?",
       "options": [
         {
@@ -963,7 +956,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Farei descer todas as nações ao vale de Josafá; e ali com elas entrarei em juízo' (Jl 3:2,12).",
       "divergence_note": null,
       "reference": {
@@ -976,11 +968,24 @@
     },
     {
       "external_id": "geografia-biblica-0032",
-      "type": "open_answer",
       "text": "Em que aldeia moravam Marta, Maria e Lázaro, perto de Jerusalém?",
-      "options": null,
-      "accepted_answers": [
-        "Betânia"
+      "options": [
+        {
+          "text": "Betânia",
+          "correct": true
+        },
+        {
+          "text": "Betel",
+          "correct": false
+        },
+        {
+          "text": "Emaús",
+          "correct": false
+        },
+        {
+          "text": "Betfagé",
+          "correct": false
+        }
       ],
       "explanation": "'Estava enfermo um certo Lázaro, de Betânia, aldeia de Maria e de Marta, sua irmã' (Jo 11:1).",
       "divergence_note": null,
@@ -994,7 +999,6 @@
     },
     {
       "external_id": "geografia-biblica-0033",
-      "type": "multiple_choice",
       "text": "Em que cidade Paulo foi apedrejado e arrastado para fora como morto, na primeira viagem?",
       "options": [
         {
@@ -1014,7 +1018,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Em Listra, Judeus de Antioquia e Icônio 'apedrejaram a Paulo e o arrastaram para fora da cidade, cuidando que estivesse morto' (At 14:19).",
       "divergence_note": null,
       "reference": {
@@ -1027,7 +1030,6 @@
     },
     {
       "external_id": "geografia-biblica-0034",
-      "type": "multiple_choice",
       "text": "Junto a que rio Ezequiel estava entre os cativos quando teve suas visões?",
       "options": [
         {
@@ -1047,7 +1049,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Estando eu no meio dos cativos, junto ao rio Quebar, abriram-se os céus, e eu vi visões de Deus' (Ez 1:1).",
       "divergence_note": null,
       "reference": {
@@ -1060,7 +1061,6 @@
     },
     {
       "external_id": "geografia-biblica-0035",
-      "type": "multiple_choice",
       "text": "Que cidade da Galileia Jesus tomou como base do ministério, chamada 'a sua cidade'?",
       "options": [
         {
@@ -1080,7 +1080,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Deixando Nazaré, foi habitar em Cafarnaum' (Mt 4:13); Mateus a chama de 'sua cidade' (Mt 9:1).",
       "divergence_note": null,
       "reference": {
@@ -1093,7 +1092,6 @@
     },
     {
       "external_id": "geografia-biblica-0036",
-      "type": "multiple_choice",
       "text": "Que planície costeira, célebre pela beleza, dá nome à 'rosa de Sarom'?",
       "options": [
         {
@@ -1113,7 +1111,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Eu sou a rosa de Sarom, o lírio dos vales' (Ct 2:1); Sarom é a planície entre Jope e o Carmelo.",
       "divergence_note": null,
       "reference": {
@@ -1126,7 +1123,6 @@
     },
     {
       "external_id": "geografia-biblica-0037",
-      "type": "multiple_choice",
       "text": "Em que ilha Paulo naufragou a caminho de Roma, sendo bem recebido pelos habitantes?",
       "options": [
         {
@@ -1146,7 +1142,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Souberam que a ilha se chamava Malta. E os bárbaros usaram conosco de não pouca humanidade' (At 28:1-2).",
       "divergence_note": null,
       "reference": {
@@ -1159,13 +1154,24 @@
     },
     {
       "external_id": "geografia-biblica-0038",
-      "type": "open_answer",
       "text": "Que porto no mar Vermelho, junto a Elate, abrigou a frota de Salomão?",
-      "options": null,
-      "accepted_answers": [
-        "Eziom-Geber",
-        "Eziom Geber",
-        "Eziongeber"
+      "options": [
+        {
+          "text": "Eziom-Geber",
+          "correct": true
+        },
+        {
+          "text": "Jope",
+          "correct": false
+        },
+        {
+          "text": "Tiro",
+          "correct": false
+        },
+        {
+          "text": "Ofir",
+          "correct": false
+        }
       ],
       "explanation": "'O rei Salomão fez naus em Eziom-Geber, que está junto a Elate, à praia do mar Vermelho' (1Rs 9:26).",
       "divergence_note": null,
@@ -1179,7 +1185,6 @@
     },
     {
       "external_id": "geografia-biblica-0039",
-      "type": "multiple_choice",
       "text": "Em que cidade Jesus nasceu?",
       "options": [
         {
@@ -1199,7 +1204,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Jesus nasceu em Belém da Judeia, no tempo do rei Herodes' (Mt 2:1), a cidade de Davi (Lc 2:4).",
       "divergence_note": null,
       "reference": {
@@ -1212,7 +1216,6 @@
     },
     {
       "external_id": "geografia-biblica-0040",
-      "type": "multiple_choice",
       "text": "Em que região da Palestina ficavam Jerusalém e Belém?",
       "options": [
         {
@@ -1232,7 +1235,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Belém e Jerusalém ficam na Judeia, ao sul; a Galileia, ao norte, era a região de Nazaré (Mt 2:1; Lc 2:4).",
       "divergence_note": null,
       "reference": {
@@ -1245,7 +1247,6 @@
     },
     {
       "external_id": "geografia-biblica-0041",
-      "type": "multiple_choice",
       "text": "Em que monte, segundo a tradição, Jesus foi transfigurado?",
       "options": [
         {
@@ -1265,7 +1266,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Os evangelhos dizem apenas 'um alto monte' (Mt 17:1); a tradição cristã, desde os primeiros séculos, aponta o Tabor, na Galileia.",
       "divergence_note": "O texto bíblico não nomeia o monte da transfiguração. O Tabor é a identificação tradicional; alguns estudiosos propõem o Hermom, perto de Cesareia de Filipe.",
       "reference": {
@@ -1278,7 +1278,6 @@
     },
     {
       "external_id": "geografia-biblica-0042",
-      "type": "multiple_choice",
       "text": "Para que país José foi levado como escravo pelos mercadores?",
       "options": [
         {
@@ -1298,7 +1297,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Os midianitas venderam José no Egito a Potifar, eunuco de Faraó' (Gn 37:36).",
       "divergence_note": null,
       "reference": {
@@ -1311,13 +1309,24 @@
     },
     {
       "external_id": "geografia-biblica-0043",
-      "type": "open_answer",
       "text": "Em que lugar Deus plantou um jardim no Oriente e colocou nele o homem que havia formado, segundo Gênesis 2:8?",
-      "options": null,
-      "accepted_answers": [
-        "Éden",
-        "No Éden",
-        "Jardim do Éden"
+      "options": [
+        {
+          "text": "Éden",
+          "correct": true
+        },
+        {
+          "text": "Canaã",
+          "correct": false
+        },
+        {
+          "text": "Ararate",
+          "correct": false
+        },
+        {
+          "text": "Sinar",
+          "correct": false
+        }
       ],
       "explanation": "\"E plantou o SENHOR Deus um jardim no Éden, da banda do Oriente, e pôs ali o homem que tinha formado\" (Gn 2:8). O texto distingue a região, Éden, do jardim plantado nela, que um rio saído do Éden regava (Gn 2:10). A Septuaginta, antiga tradução grega, chamou o jardim de paradeisos, origem da palavra \"paraíso\", que aparece na promessa de Jesus na cruz (Lc 23:43).",
       "divergence_note": null,
@@ -1331,7 +1340,6 @@
     },
     {
       "external_id": "geografia-biblica-0044",
-      "type": "multiple_choice",
       "text": "De que região vieram os cedros usados por Salomão na construção do templo, graças a um acordo com Hirão, rei de Tiro?",
       "options": [
         {
@@ -1351,7 +1359,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Salomão pediu a Hirão que mandasse cortar cedros do Líbano, pois ninguém sabia cortar madeira como os sidônios (1Rs 5:6); as toras desciam até o mar e seguiam em jangadas até o lugar combinado (1Rs 5:9). Alto, aromático e resistente, o cedro do Líbano era uma das madeiras mais valorizadas do antigo Oriente — \"crescerá como o cedro no Líbano\", diz o salmo sobre o justo (Sl 92:12).",
       "divergence_note": null,
       "reference": {
@@ -1364,7 +1371,6 @@
     },
     {
       "external_id": "geografia-biblica-0045",
-      "type": "multiple_choice",
       "text": "Em que região do Egito Faraó permitiu que Jacó e sua família habitassem, quando vieram de Canaã fugindo da fome?",
       "options": [
         {
@@ -1384,7 +1390,6 @@
           "correct": true
         }
       ],
-      "accepted_answers": null,
       "explanation": "José mandou dizer ao pai: \"habitarás na terra de Gósen, e estarás perto de mim\" (Gn 45:10), e Faraó confirmou: \"no melhor da terra faze habitar teu pai e teus irmãos; habitem na terra de Gósen\" (Gn 47:6). Como pastores, ficavam ali à parte dos egípcios, pois \"todo o pastor de ovelhas é abominação para os egípcios\" (Gn 46:34). Séculos depois, Deus poupou Gósen durante as pragas: lá \"não havia saraiva\" (Êx 9:26).",
       "divergence_note": null,
       "reference": {
@@ -1397,7 +1402,6 @@
     },
     {
       "external_id": "geografia-biblica-0046",
-      "type": "multiple_choice",
       "text": "Qual das sete igrejas do Apocalipse foi repreendida por não ser nem fria nem quente, mas morna?",
       "options": [
         {
@@ -1417,7 +1421,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "A carta \"ao anjo da igreja que está em Laodiceia\" (Ap 3:14) declara: \"Assim, porque és morno e não és frio nem quente, vomitar-te-ei da minha boca\" (Ap 3:16). A igreja daquela cidade próspera da Ásia Menor julgava-se rica e sem falta de nada (Ap 3:17). Segundo muitos estudiosos, a imagem alude à água da cidade, que chegava morna por aqueduto, em contraste com as fontes quentes de Hierápolis e a água fria de Colossos, cidades vizinhas (cf. Cl 4:13).",
       "divergence_note": null,
       "reference": {

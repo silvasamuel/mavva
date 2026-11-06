@@ -61,7 +61,7 @@ HTTP (api/v1/*)  →  Services (regra de negócio)  →  Models/DB (SQLAlchemy)
 ```
 
 - **Routers** só traduzem HTTP ↔ domínio: validam com Pydantic, chamam serviço, retornam schema.
-- **Services** concentram regras: seleção de perguntas, correção de resposta aberta,
+- **Services** concentram regras: seleção de perguntas, correção das respostas,
   XP/nível/streak, SM-2, conquistas. São funções/classes puras que recebem a `Session` —
   testáveis diretamente.
 - **Models** não contêm regra de negócio (apenas relacionamentos e constraints).
@@ -78,13 +78,6 @@ HTTP (api/v1/*)  →  Services (regra de negócio)  →  Models/DB (SQLAlchemy)
   (header `X-Client: mobile`), pois apps nativos não usam cookies.
 - **Recuperação de senha:** token de uso único (hasheado no banco), expira em 30 min.
   Em dev o link é logado no console; em produção, e-mail via SMTP (Resend/Brevo free tier).
-
-### Correção de resposta aberta
-
-1. Normalização: minúsculas, remoção de acentos (NFD), pontuação e espaços duplicados.
-2. Comparação contra a lista de respostas aceitas da pergunta.
-3. Tolerância a erro de digitação: distância de Levenshtein via `rapidfuzz`
-   (≤1 para respostas curtas, proporcional para longas — `ratio ≥ 90`).
 
 ### Painel admin (segurança)
 
@@ -147,7 +140,7 @@ HTTP (api/v1/*)  →  Services (regra de negócio)  →  Models/DB (SQLAlchemy)
 
 | Camada | Ferramenta | O que cobre |
 |---|---|---|
-| Backend unit | pytest | gamificação (XP/nível/streak), SM-2, normalização de resposta aberta |
+| Backend unit | pytest | gamificação (XP/nível/streak), SM-2, seed do banco de perguntas |
 | Backend integração | pytest + httpx + Postgres (docker) | fluxos de auth, quiz completo, dashboard |
 | Frontend unit | vitest + testing-library | componentes de quiz, utils |
 | E2E (fase 2) | Playwright | fluxo login → quiz → dashboard |

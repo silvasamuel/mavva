@@ -13,7 +13,7 @@ from sqlalchemy import func, select
 from sqlalchemy.orm import Session, selectinload
 
 from app.models import Duel, Question, QuizAnswer, QuizSession, QuizSessionQuestion, User, UserStats
-from app.models.enums import DuelMode, DuelStatus, QuestionType, QuizMode
+from app.models.enums import DuelMode, DuelStatus, QuizMode
 from app.services import achievement_service, friendship_service
 from app.services.gamification import (
     level_from_total_xp,
@@ -46,7 +46,7 @@ def _draw_question_ids(db: Session) -> list[uuid.UUID]:
     ids = list(
         db.scalars(
             select(Question.id)
-            .where(Question.is_active, Question.type == QuestionType.MULTIPLE_CHOICE)
+            .where(Question.is_active)
             .order_by(func.random())
             .limit(QUESTION_COUNT)
         )

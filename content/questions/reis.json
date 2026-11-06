@@ -3,7 +3,6 @@
   "questions": [
     {
       "external_id": "reis-0001",
-      "type": "multiple_choice",
       "text": "Quem foi o primeiro rei de Israel, ungido pelo profeta Samuel?",
       "options": [
         {
@@ -23,7 +22,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Atendendo ao pedido do povo por um rei \"como todas as nações\", Deus indicou Saul, da tribo de Benjamim, e Samuel o ungiu (1Sm 10:1). Seu reinado começou bem, mas a desobediência lhe custou o trono (1Sm 15:23).",
       "divergence_note": null,
       "reference": {
@@ -36,7 +34,6 @@
     },
     {
       "external_id": "reis-0002",
-      "type": "multiple_choice",
       "text": "O que Salomão pediu a Deus quando lhe foi oferecido qualquer coisa em sonho, em Gibeão?",
       "options": [
         {
@@ -56,7 +53,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Salomão pediu \"um coração entendido para julgar a teu povo, para que prudentemente discirna entre o bem e o mal\" (1Rs 3:9). A resposta agradou ao Senhor, que lhe deu também o que não pedira: riquezas e glória sem igual entre os reis.",
       "divergence_note": null,
       "reference": {
@@ -69,7 +65,6 @@
     },
     {
       "external_id": "reis-0003",
-      "type": "multiple_choice",
       "text": "Após a morte de Salomão, o reino se dividiu. Quem reinou sobre as dez tribos do Norte?",
       "options": [
         {
@@ -89,7 +84,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Quando Roboão respondeu com dureza ao povo, dez tribos romperam com a casa de Davi e fizeram rei a Jeroboão (1Rs 12:16,20). Roboão ficou com Judá (e Benjamim), no Sul. A divisão cumpriu a palavra do profeta Aías (1Rs 11:29-31).",
       "divergence_note": null,
       "reference": {
@@ -102,12 +96,24 @@
     },
     {
       "external_id": "reis-0004",
-      "type": "open_answer",
       "text": "Qual rei de Judá, ainda menino de oito anos, começou a reinar e mais tarde encontrou o Livro da Lei no templo?",
-      "options": null,
-      "accepted_answers": [
-        "Josias",
-        "Rei Josias"
+      "options": [
+        {
+          "text": "Josias",
+          "correct": true
+        },
+        {
+          "text": "Joás",
+          "correct": false
+        },
+        {
+          "text": "Ezequias",
+          "correct": false
+        },
+        {
+          "text": "Manassés",
+          "correct": false
+        }
       ],
       "explanation": "Josias tinha oito anos quando começou a reinar (2Rs 22:1). No 18º ano do seu reinado, durante a reforma do templo, o sacerdote Hilquias achou o Livro da Lei, e a leitura provocou uma das maiores reformas espirituais de Judá (2Rs 23).",
       "divergence_note": null,
@@ -121,7 +127,6 @@
     },
     {
       "external_id": "reis-0005",
-      "type": "multiple_choice",
       "text": "Qual rei de Israel casou-se com Jezabel e introduziu oficialmente o culto a Baal no reino do Norte?",
       "options": [
         {
@@ -141,7 +146,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Acabe, filho de Onri, \"tomou por mulher a Jezabel\" e \"foi e serviu a Baal, e o adorou\", erguendo-lhe altar em Samaria (1Rs 16:31-32). O texto resume: fez \"pior do que todos os que foram antes dele\" — cenário do ministério de Elias.",
       "divergence_note": null,
       "reference": {
@@ -154,7 +158,6 @@
     },
     {
       "external_id": "reis-0006",
-      "type": "multiple_choice",
       "text": "Qual rei de Judá foi ferido com lepra por entrar no templo para queimar incenso, ofício reservado aos sacerdotes?",
       "options": [
         {
@@ -174,7 +177,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Fortalecido, Uzias \"exaltou-se o seu coração\" e usurpou o incenso; a lepra brotou-lhe na testa diante dos sacerdotes, e ele ficou leproso até morrer, morando em casa separada (2Cr 26:16-21). Foi no ano da sua morte que Isaías viu o trono do Senhor (Is 6:1).",
       "divergence_note": null,
       "reference": {
@@ -187,7 +189,6 @@
     },
     {
       "external_id": "reis-0007",
-      "type": "multiple_choice",
       "text": "Qual rei da Babilônia levou Judá ao cativeiro e destruiu o templo de Jerusalém?",
       "options": [
         {
@@ -207,7 +208,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "No reinado de Zedequias, os exércitos de Nabucodonosor queimaram a casa do Senhor e derrubaram os muros de Jerusalém (2Rs 25:8-10). Senaqueribe foi o assírio detido nos dias de Ezequias; Ciro, o persa que depois autorizou o retorno.",
       "divergence_note": null,
       "reference": {
@@ -220,13 +220,24 @@
     },
     {
       "external_id": "reis-0008",
-      "type": "open_answer",
       "text": "Quantos anos Davi reinou ao todo sobre Israel e Judá?",
-      "options": null,
-      "accepted_answers": [
-        "40",
-        "Quarenta",
-        "Quarenta anos"
+      "options": [
+        {
+          "text": "40",
+          "correct": true
+        },
+        {
+          "text": "33",
+          "correct": false
+        },
+        {
+          "text": "7",
+          "correct": false
+        },
+        {
+          "text": "70",
+          "correct": false
+        }
       ],
       "explanation": "\"Foram os dias que Davi reinou sobre Israel quarenta anos: sete anos reinou em Hebrom, e em Jerusalém reinou trinta e três anos\" (1Rs 2:11). O mesmo total de quarenta anos se repete em Saul (At 13:21) e Salomão (1Rs 11:42).",
       "divergence_note": null,
@@ -241,7 +252,6 @@
     },
     {
       "external_id": "reis-0009",
-      "type": "multiple_choice",
       "text": "Qual rei persa decretou que os judeus podiam voltar do exílio e reconstruir o templo?",
       "options": [
         {
@@ -261,7 +271,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"No primeiro ano de Ciro, rei da Pérsia... fez passar pregão por todo o seu reino\" autorizando a subida a Jerusalém para edificar a casa do Senhor (Ed 1:1-3). Isaías já o havia nomeado mais de um século antes (Is 44:28).",
       "divergence_note": null,
       "reference": {
@@ -274,7 +283,6 @@
     },
     {
       "external_id": "reis-0010",
-      "type": "multiple_choice",
       "text": "Qual rei de Judá reinou mais tempo — cinquenta e cinco anos — e é lembrado pela grande maldade, apesar de ter se arrependido no fim?",
       "options": [
         {
@@ -294,7 +302,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Manassés reinou 55 anos e encheu Jerusalém de idolatria e sangue inocente (2Rs 21:1-16). Crônicas registra o desfecho surpreendente: levado cativo à Babilônia, humilhou-se, e Deus o restaurou ao trono (2Cr 33:11-13) — testemunho de que não há pecador além do alcance da graça.",
       "divergence_note": null,
       "reference": {
@@ -307,7 +314,6 @@
     },
     {
       "external_id": "reis-0011",
-      "type": "multiple_choice",
       "text": "Qual rei pediu sabedoria a Deus em vez de riquezas ou vida longa?",
       "options": [
         {
@@ -327,7 +333,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Em Gibeão, Salomão pediu 'um coração entendido' para julgar o povo; Deus lhe deu sabedoria, riquezas e honra (1Rs 3:9-13).",
       "divergence_note": null,
       "reference": {
@@ -340,7 +345,6 @@
     },
     {
       "external_id": "reis-0012",
-      "type": "multiple_choice",
       "text": "Qual foi o primeiro rei do Reino do Norte após a divisão do reino?",
       "options": [
         {
@@ -360,7 +364,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jeroboão, filho de Nebate, tornou-se rei das dez tribos do Norte e ergueu bezerros de ouro em Betel e Dã (1Rs 12:20,28).",
       "divergence_note": null,
       "reference": {
@@ -374,7 +377,6 @@
     },
     {
       "external_id": "reis-0013",
-      "type": "multiple_choice",
       "text": "Qual rei de Judá reformou o culto após achar o Livro da Lei no templo?",
       "options": [
         {
@@ -394,7 +396,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Ao encontrarem o Livro da Lei, Josias rasgou as vestes e liderou uma grande reforma, celebrando a Páscoa como não se via desde os juízes (2Rs 22-23).",
       "divergence_note": null,
       "reference": {
@@ -408,12 +409,24 @@
     },
     {
       "external_id": "reis-0014",
-      "type": "open_answer",
       "text": "Qual rainha malvada, esposa de Acabe, perseguiu o profeta Elias?",
-      "options": null,
-      "accepted_answers": [
-        "Jezabel",
-        "Jesabel"
+      "options": [
+        {
+          "text": "Jezabel",
+          "correct": true
+        },
+        {
+          "text": "Atalia",
+          "correct": false
+        },
+        {
+          "text": "Herodias",
+          "correct": false
+        },
+        {
+          "text": "Vasti",
+          "correct": false
+        }
       ],
       "explanation": "Jezabel promoveu o culto a Baal e ameaçou matar Elias (1Rs 19:1-2); seu fim cumpriu a profecia de Elias (2Rs 9:33-37).",
       "divergence_note": null,
@@ -427,7 +440,6 @@
     },
     {
       "external_id": "reis-0015",
-      "type": "multiple_choice",
       "text": "Qual rei viu a mão escrever na parede 'Mene, Mene, Tequel, Ufarsim'?",
       "options": [
         {
@@ -447,7 +459,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Durante seu banquete profano, Belsazar viu a mão escrever o juízo; Daniel o interpretou, e naquela noite o rei foi morto (Dn 5:25-30).",
       "divergence_note": null,
       "reference": {
@@ -460,7 +471,6 @@
     },
     {
       "external_id": "reis-0016",
-      "type": "multiple_choice",
       "text": "Quantos anos tinha Josias quando começou a reinar em Judá?",
       "options": [
         {
@@ -480,7 +490,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Josias tinha oito anos ao subir ao trono e reinou trinta e um anos, fazendo o que era reto aos olhos do SENHOR (2Rs 22:1-2).",
       "divergence_note": null,
       "reference": {
@@ -494,7 +503,6 @@
     },
     {
       "external_id": "reis-0017",
-      "type": "multiple_choice",
       "text": "Qual rei de Judá foi curado e teve a sombra do relógio recuada dez graus?",
       "options": [
         {
@@ -514,7 +522,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Após a oração de Ezequias, Deus prolongou sua vida em quinze anos e deu como sinal o recuo da sombra (2Rs 20:9-11).",
       "divergence_note": null,
       "reference": {
@@ -527,7 +534,6 @@
     },
     {
       "external_id": "reis-0018",
-      "type": "multiple_choice",
       "text": "Quem foi o pai do rei Salomão?",
       "options": [
         {
@@ -547,7 +553,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Salomão era filho de Davi e Bate-Seba (2Sm 12:24) e herdou o trono conforme a promessa de Deus a Davi.",
       "divergence_note": null,
       "reference": {
@@ -560,7 +565,6 @@
     },
     {
       "external_id": "reis-0019",
-      "type": "multiple_choice",
       "text": "Qual rei ergueu um bezerro de ouro em Betel e outro em Dã?",
       "options": [
         {
@@ -580,7 +584,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Para impedir o povo de ir a Jerusalém, Jeroboão fez dois bezerros de ouro (1Rs 12:28-29), pecado que marcou o Reino do Norte.",
       "divergence_note": null,
       "reference": {
@@ -593,7 +596,6 @@
     },
     {
       "external_id": "reis-0020",
-      "type": "multiple_choice",
       "text": "Qual foi o primeiro rei de Israel, da tribo de Benjamim?",
       "options": [
         {
@@ -613,7 +615,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Saul, filho de Quis, da tribo de Benjamim, foi ungido por Samuel como o primeiro rei de Israel (1Sm 10:1,21).",
       "divergence_note": null,
       "reference": {
@@ -627,7 +628,6 @@
     },
     {
       "external_id": "reis-0021",
-      "type": "multiple_choice",
       "text": "Qual rei de Judá foi escondido por seis anos e coroado aos sete pelo sacerdote Joiada?",
       "options": [
         {
@@ -647,7 +647,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Protegido de Atalia, Joás foi ocultado no templo e proclamado rei aos sete anos por Joiada (2Rs 11:3-4,21).",
       "divergence_note": null,
       "reference": {
@@ -660,7 +659,6 @@
     },
     {
       "external_id": "reis-0022",
-      "type": "multiple_choice",
       "text": "Qual rei de Israel comprou o monte de Samaria de Semer e ali edificou a capital?",
       "options": [
         {
@@ -680,7 +678,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Comprou o monte de Samaria de Semer... e edificou no monte' (1Rs 16:24), tornando Samaria capital do Norte.",
       "divergence_note": null,
       "reference": {
@@ -693,7 +690,6 @@
     },
     {
       "external_id": "reis-0023",
-      "type": "multiple_choice",
       "text": "Qual rei visitou Salomão atraída pela fama de sua sabedoria?",
       "options": [
         {
@@ -713,7 +709,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "A rainha de Sabá veio prová-lo com perguntas difíceis e reconheceu que nem a metade lhe fora contada (1Rs 10:1-7).",
       "divergence_note": null,
       "reference": {
@@ -726,7 +721,6 @@
     },
     {
       "external_id": "reis-0024",
-      "type": "multiple_choice",
       "text": "Qual mulher usurpou o trono de Judá matando a descendência real?",
       "options": [
         {
@@ -746,7 +740,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Morto Acazias, Atalia destruiu a descendência real e reinou seis anos, até Joás ser proclamado (2Rs 11:1-3).",
       "divergence_note": null,
       "reference": {
@@ -759,7 +752,6 @@
     },
     {
       "external_id": "reis-0025",
-      "type": "multiple_choice",
       "text": "Quem foi ungido por ordem de Eliseu para destruir a casa de Acabe?",
       "options": [
         {
@@ -779,7 +771,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Um dos filhos dos profetas ungiu Jeú por ordem de Eliseu para ferir a casa de Acabe (2Rs 9:6-7).",
       "divergence_note": null,
       "reference": {
@@ -792,7 +783,6 @@
     },
     {
       "external_id": "reis-0026",
-      "type": "multiple_choice",
       "text": "Qual rei de Judá mostrou todos os seus tesouros aos enviados da Babilônia?",
       "options": [
         {
@@ -812,7 +802,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Ezequias mostrou tudo aos embaixadores, e Isaías anunciou que aquilo seria levado à Babilônia (2Rs 20:13-17).",
       "divergence_note": null,
       "reference": {
@@ -825,7 +814,6 @@
     },
     {
       "external_id": "reis-0027",
-      "type": "multiple_choice",
       "text": "Qual rei de Israel se entristeceu por não conseguir a vinha de Nabote?",
       "options": [
         {
@@ -845,7 +833,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Acabe ficou triste e indignado por Nabote recusar vender a vinha herdada dos pais; Jezabel a tomou por meio de falso testemunho (1Rs 21:3-4,15).",
       "divergence_note": null,
       "reference": {
@@ -858,7 +845,6 @@
     },
     {
       "external_id": "reis-0028",
-      "type": "multiple_choice",
       "text": "Que sinal o SENHOR deu a Gideão contra os midianitas — e a qual rei Israel pediu depois?",
       "options": [
         {
@@ -878,7 +864,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Gideão recusou reinar: 'o SENHOR sobre vós dominará' (Jz 8:23); só depois Israel exigiu um rei de Samuel (1Sm 8:5).",
       "divergence_note": null,
       "reference": {
@@ -892,7 +877,6 @@
     },
     {
       "external_id": "reis-0029",
-      "type": "multiple_choice",
       "text": "Qual rei de Judá reformou o culto, mas foi repreendido por se aliar à Síria?",
       "options": [
         {
@@ -912,7 +896,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Asa tirou os ídolos, mas confiou no rei da Síria em vez do SENHOR e foi repreendido pelo vidente Hanani (2Cr 16:7-9).",
       "divergence_note": null,
       "reference": {
@@ -925,7 +908,6 @@
     },
     {
       "external_id": "reis-0030",
-      "type": "multiple_choice",
       "text": "Que resposta insensata Roboão deu ao povo, causando a divisão do reino?",
       "options": [
         {
@@ -945,7 +927,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Rejeitando os anciãos, seguiu os jovens: 'meu pai vos castigou com açoites, eu, porém, vos castigarei com escorpiões' (1Rs 12:13-14).",
       "divergence_note": null,
       "reference": {
@@ -958,7 +939,6 @@
     },
     {
       "external_id": "reis-0031",
-      "type": "multiple_choice",
       "text": "Qual rei de Judá recebeu de Isaías a promessa de livramento diante de Senaqueribe?",
       "options": [
         {
@@ -978,7 +958,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Ezequias estendeu a carta do assírio diante do SENHOR; o anjo feriu o acampamento e Senaqueribe voltou (2Rs 19:14-16,35-36).",
       "divergence_note": null,
       "reference": {
@@ -991,12 +970,24 @@
     },
     {
       "external_id": "reis-0032",
-      "type": "open_answer",
       "text": "Qual filho de Davi tentou usurpar o trono e morreu preso pelos cabelos num carvalho?",
-      "options": null,
-      "accepted_answers": [
-        "Absalão",
-        "Absalao"
+      "options": [
+        {
+          "text": "Absalão",
+          "correct": true
+        },
+        {
+          "text": "Adonias",
+          "correct": false
+        },
+        {
+          "text": "Amnom",
+          "correct": false
+        },
+        {
+          "text": "Salomão",
+          "correct": false
+        }
       ],
       "explanation": "Absalão conspirou contra o pai; fugindo na batalha, sua cabeça prendeu-se no carvalho e Joabe o matou (2Sm 18:9-15).",
       "divergence_note": null,
@@ -1010,7 +1001,6 @@
     },
     {
       "external_id": "reis-0033",
-      "type": "multiple_choice",
       "text": "Qual rei de Judá, filho de Josias, queimou o rolo de Jeremias pedaço a pedaço?",
       "options": [
         {
@@ -1030,7 +1020,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jeudi lia três ou quatro colunas, 'e o rei as cortava com um canivete e as lançava no fogo' (Jr 36:23).",
       "divergence_note": null,
       "reference": {
@@ -1043,7 +1032,6 @@
     },
     {
       "external_id": "reis-0034",
-      "type": "multiple_choice",
       "text": "Qual rei de Israel, filho de Acabe, consultou Baal-Zebube e foi repreendido por Elias?",
       "options": [
         {
@@ -1063,7 +1051,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Porventura não há Deus em Israel, para irdes consultar a Baal-Zebube?... da cama a que subiste não descerás' (2Rs 1:2-4).",
       "divergence_note": null,
       "reference": {
@@ -1076,7 +1063,6 @@
     },
     {
       "external_id": "reis-0035",
-      "type": "multiple_choice",
       "text": "Qual rei de Judá, levado em cadeias à Babilônia, humilhou-se e foi restaurado ao trono?",
       "options": [
         {
@@ -1096,7 +1082,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Orou-lhe, e Deus se aplacou para com ele... e o tornou a trazer a Jerusalém, ao seu reino' (2Cr 33:11-13).",
       "divergence_note": null,
       "reference": {
@@ -1109,7 +1094,6 @@
     },
     {
       "external_id": "reis-0036",
-      "type": "multiple_choice",
       "text": "Qual rei de Israel reinou apenas sete dias e morreu incendiando o próprio palácio?",
       "options": [
         {
@@ -1129,7 +1113,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Zinri reinou sete dias em Tirza'; cercado, 'queimou sobre si a casa do rei' (1Rs 16:15-18).",
       "divergence_note": null,
       "reference": {
@@ -1142,7 +1125,6 @@
     },
     {
       "external_id": "reis-0037",
-      "type": "multiple_choice",
       "text": "Qual rei de Judá venceu moabitas e amonitas com cantores à frente do exército?",
       "options": [
         {
@@ -1162,7 +1144,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Quando começaram a cantar e a dar louvores, o SENHOR pôs emboscadas contra os filhos de Amom e de Moabe' (2Cr 20:21-22).",
       "divergence_note": null,
       "reference": {
@@ -1175,11 +1156,24 @@
     },
     {
       "external_id": "reis-0038",
-      "type": "open_answer",
       "text": "Qual rei da Babilônia sonhou com uma grande estátua de ouro, prata, bronze e ferro, interpretada por Daniel?",
-      "options": null,
-      "accepted_answers": [
-        "Nabucodonosor"
+      "options": [
+        {
+          "text": "Nabucodonosor",
+          "correct": true
+        },
+        {
+          "text": "Belsazar",
+          "correct": false
+        },
+        {
+          "text": "Dario",
+          "correct": false
+        },
+        {
+          "text": "Ciro",
+          "correct": false
+        }
       ],
       "explanation": "A estátua representava reinos sucessivos, e a pedra que a esmiuçou, o reino eterno de Deus (Dn 2:31-45).",
       "divergence_note": null,
@@ -1193,7 +1187,6 @@
     },
     {
       "external_id": "reis-0039",
-      "type": "multiple_choice",
       "text": "Qual rei de Judá sacrificou o próprio filho no fogo e fechou as portas do templo, pai de Ezequias?",
       "options": [
         {
@@ -1213,7 +1206,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Acaz 'até fez passar pelo fogo a seu filho' (2Rs 16:3) e 'fechou as portas da casa do SENHOR' (2Cr 28:24).",
       "divergence_note": null,
       "reference": {
@@ -1226,7 +1218,6 @@
     },
     {
       "external_id": "reis-0040",
-      "type": "multiple_choice",
       "text": "Qual rei do Egito matou Josias na batalha de Megido?",
       "options": [
         {
@@ -1246,7 +1237,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Faraó Neco... o matou em Megido, logo que o viu' (2Rs 23:29) — o fim trágico do rei reformador.",
       "divergence_note": null,
       "reference": {
@@ -1259,7 +1249,6 @@
     },
     {
       "external_id": "reis-0041",
-      "type": "multiple_choice",
       "text": "Qual rei de Israel foi pastor de ovelhas em Belém antes de ser ungido?",
       "options": [
         {
@@ -1279,7 +1268,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Quando Samuel chegou, Davi 'apascenta as ovelhas'; foi trazido do campo e ungido diante dos irmãos (1Sm 16:11-13).",
       "divergence_note": null,
       "reference": {
@@ -1292,7 +1280,6 @@
     },
     {
       "external_id": "reis-0042",
-      "type": "multiple_choice",
       "text": "Sob qual rei de Israel os profetas Amós e Oseias ministraram, num tempo de prosperidade?",
       "options": [
         {
@@ -1312,7 +1299,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Palavras de Amós... nos dias de Jeroboão, filho de Joás, rei de Israel' (Am 1:1; cf. Os 1:1) — riqueza com injustiça.",
       "divergence_note": null,
       "reference": {
@@ -1325,12 +1311,24 @@
     },
     {
       "external_id": "reis-0043",
-      "type": "open_answer",
       "text": "Qual rei mandou trazer uma espada e ordenou dividir ao meio um menino vivo para descobrir qual de duas mulheres era a verdadeira mãe?",
-      "options": null,
-      "accepted_answers": [
-        "Salomão",
-        "Rei Salomão"
+      "options": [
+        {
+          "text": "Salomão",
+          "correct": true
+        },
+        {
+          "text": "Davi",
+          "correct": false
+        },
+        {
+          "text": "Roboão",
+          "correct": false
+        },
+        {
+          "text": "Ezequias",
+          "correct": false
+        }
       ],
       "explanation": "Duas mulheres disputavam o mesmo bebê, e o rei ordenou: \"Dividi em duas partes o menino vivo\" (1Rs 3:25). A verdadeira mãe, com o coração enternecido, preferiu entregar o filho a vê-lo morrer, e Salomão sentenciou: \"Dai a esta o menino vivo... porque esta é sua mãe\" (1Rs 3:26-27). Todo o Israel reconheceu \"que havia nele a sabedoria de Deus, para fazer justiça\" (1Rs 3:28).",
       "divergence_note": null,
@@ -1344,7 +1342,6 @@
     },
     {
       "external_id": "reis-0044",
-      "type": "multiple_choice",
       "text": "O que o jovem Saul estava procurando quando foi ao encontro do profeta Samuel pela primeira vez?",
       "options": [
         {
@@ -1364,7 +1361,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"Perderam-se as jumentas de Quis, pai de Saul\", e o pai mandou o filho buscá-las (1Sm 9:3). Depois de percorrerem várias terras sem achá-las, o moço sugeriu consultar o homem de Deus que havia na cidade (1Sm 9:4-6). Samuel, a quem o SENHOR revelara na véspera a vinda do homem que ele ungiria (1Sm 9:15-16), avisou que as jumentas, perdidas havia três dias, já tinham sido achadas (1Sm 9:20) — uma busca comum virou o caminho para o trono.",
       "divergence_note": null,
       "reference": {
@@ -1377,7 +1373,6 @@
     },
     {
       "external_id": "reis-0045",
-      "type": "multiple_choice",
       "text": "O que Davi fez quando Saul entrou, sem saber, na caverna onde ele e seus homens estavam escondidos, no deserto de En-Gedi?",
       "options": [
         {
@@ -1397,7 +1392,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Os homens de Davi viram ali o dia em que Deus lhe entregava o inimigo, mas ele apenas \"cortou a orla do manto de Saul\" — e ainda assim o coração lhe doeu (1Sm 24:4-5). Davi se recusou a estender a mão contra \"o ungido do SENHOR\" (1Sm 24:6) e deixou a causa com Deus. Diante da prova, Saul chorou e reconheceu: \"Mais justo és do que eu\" (1Sm 24:17).",
       "divergence_note": null,
       "reference": {
@@ -1410,7 +1404,6 @@
     },
     {
       "external_id": "reis-0046",
-      "type": "multiple_choice",
       "text": "Segundo o discurso de Paulo em Atos 13, a qual rei Deus se referiu como \"varão conforme o meu coração\"?",
       "options": [
         {
@@ -1430,7 +1423,6 @@
           "correct": true
         }
       ],
-      "accepted_answers": null,
       "explanation": "Pregando na sinagoga de Antioquia da Pisídia, Paulo resumiu a história de Israel: depois de retirar Saul, Deus levantou Davi, de quem testemunhou: \"Achei a Davi, filho de Jessé, varão conforme o meu coração\" (At 13:22). A frase retoma o aviso de Samuel a Saul, de que o SENHOR já buscara \"um homem segundo o seu coração\" (1Sm 13:14). E Paulo acrescenta que da descendência de Davi Deus levantou Jesus como Salvador (At 13:23).",
       "divergence_note": null,
       "reference": {
@@ -1443,7 +1435,6 @@
     },
     {
       "external_id": "reis-0047",
-      "type": "multiple_choice",
       "text": "Quando Davi voltava de ferir os filisteus, que refrão as mulheres de Israel cantavam, despertando o ciúme do rei Saul?",
       "options": [
         {
@@ -1463,7 +1454,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "As mulheres saíram de todas as cidades de Israel cantando e dançando: \"Saul feriu os seus milhares, porém Davi, os seus dez milhares\" (1Sm 18:6-7). \"Então, Saul se indignou muito\", e \"desde aquele dia em diante, Saul tinha Davi em suspeita\" (1Sm 18:8-9). A inveja logo virou perseguição: no dia seguinte, Saul atirou a lança para encravar Davi na parede (1Sm 18:10-11).",
       "divergence_note": null,
       "reference": {
@@ -1476,7 +1466,6 @@
     },
     {
       "external_id": "reis-0048",
-      "type": "multiple_choice",
       "text": "Segundo 1 Reis 11, quantas mulheres e concubinas teve o rei Salomão, que lhe perverteram o coração na velhice?",
       "options": [
         {
@@ -1496,7 +1485,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "\"E tinha setecentas mulheres, princesas, e trezentas concubinas\", e as suas mulheres lhe perverteram o coração (1Rs 11:3). Muitas vinham de nações das quais o SENHOR dissera que desviariam o coração de Israel para outros deuses — e foi o que aconteceu na velhice do rei (1Rs 11:2,4). Por isso Deus anunciou que rasgaria o reino da mão do seu filho, origem da divisão entre Israel e Judá (1Rs 11:11-13).",
       "divergence_note": null,
       "reference": {
@@ -1509,7 +1497,6 @@
     },
     {
       "external_id": "reis-0049",
-      "type": "multiple_choice",
       "text": "Que objeto feito por Moisés o rei Ezequias despedaçou, porque os israelitas lhe queimavam incenso?",
       "options": [
         {
@@ -1529,7 +1516,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Ezequias \"fez em pedaços a serpente de metal que Moisés fizera, porquanto até àquele dia os filhos de Israel lhe queimavam incenso\", e o objeto era chamado Neustã (2Rs 18:4). A serpente que um dia fora instrumento de cura no deserto (Nm 21:8-9) tinha virado ídolo. Elogiado por confiar no SENHOR como nenhum outro rei de Judá (2Rs 18:5), Ezequias não poupou nem mesmo um objeto venerável que passara a roubar a glória devida a Deus.",
       "divergence_note": null,
       "reference": {

@@ -1,7 +1,6 @@
-import type { BibleBook, Category, Difficulty, QuestionDraft, QuestionType } from '@/types/api'
+import type { BibleBook, Category, Difficulty, QuestionDraft } from '@/types/api'
 import { Input } from '@/components/ui/Input'
 import { DIFFICULTY_LABELS } from '@/lib/format'
-import { EMPTY_OPTIONS } from './questionDraft'
 
 const FIELD =
   // 16px on touchscreens so iOS doesn't zoom in on focus; 14px with a mouse.
@@ -18,47 +17,21 @@ export function QuestionDraftForm({
   categories: Pick<Category, 'id' | 'name' | 'icon'>[]
   books: BibleBook[]
 }) {
-  function setType(type: QuestionType) {
-    if (type === 'multiple_choice') {
-      onChange({
-        ...draft,
-        type,
-        options: EMPTY_OPTIONS.map((option) => ({ ...option })),
-        accepted_answers: null,
-      })
-      return
-    }
-    onChange({ ...draft, type, options: null, accepted_answers: [''] })
-  }
-
   return (
     <div className="space-y-4">
-      <div className="grid gap-3 sm:grid-cols-2">
-        <div className="space-y-1.5">
-          <label className="block text-sm font-bold text-sand-700">Categoria</label>
-          <select
-            value={draft.category_id}
-            onChange={(event) => onChange({ ...draft, category_id: Number(event.target.value) })}
-            className={FIELD}
-          >
-            {categories.map((category) => (
-              <option key={category.id} value={category.id}>
-                {category.icon} {category.name}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="space-y-1.5">
-          <label className="block text-sm font-bold text-sand-700">Tipo</label>
-          <select
-            value={draft.type}
-            onChange={(event) => setType(event.target.value as QuestionType)}
-            className={FIELD}
-          >
-            <option value="multiple_choice">Múltipla escolha</option>
-            <option value="open_answer">Resposta aberta</option>
-          </select>
-        </div>
+      <div className="space-y-1.5">
+        <label className="block text-sm font-bold text-sand-700">Categoria</label>
+        <select
+          value={draft.category_id}
+          onChange={(event) => onChange({ ...draft, category_id: Number(event.target.value) })}
+          className={FIELD}
+        >
+          {categories.map((category) => (
+            <option key={category.id} value={category.id}>
+              {category.icon} {category.name}
+            </option>
+          ))}
+        </select>
       </div>
 
       <div className="space-y-1.5">
@@ -71,97 +44,46 @@ export function QuestionDraftForm({
         />
       </div>
 
-      {draft.type === 'multiple_choice' ? (
-        <div className="space-y-2">
-          <label className="block text-sm font-bold text-sand-700">
-            Alternativas (marque a correta)
-          </label>
-          {(draft.options ?? EMPTY_OPTIONS).map((option, index) => (
-            <div key={index} className="flex items-center gap-2">
-              {/* Padding around the 20px radio makes a finger-sized target. */}
-              <label className="-m-2.5 shrink-0 cursor-pointer p-2.5">
-                <input
-                  type="radio"
-                  name="correct"
-                  checked={option.correct}
-                  aria-label={`Alternativa ${index + 1} correta`}
-                  onChange={() =>
-                    onChange({
-                      ...draft,
-                      options: (draft.options ?? []).map((item, itemIndex) => ({
-                        ...item,
-                        correct: itemIndex === index,
-                      })),
-                    })
-                  }
-                  className="h-5 w-5 accent-leaf-500"
-                />
-              </label>
+      <div className="space-y-2">
+        <label className="block text-sm font-bold text-sand-700">
+          Alternativas (marque a correta)
+        </label>
+        {draft.options.map((option, index) => (
+          <div key={index} className="flex items-center gap-2">
+            {/* Padding around the 20px radio makes a finger-sized target. */}
+            <label className="-m-2.5 shrink-0 cursor-pointer p-2.5">
               <input
-                value={option.text}
-                onChange={(event) =>
+                type="radio"
+                name="correct"
+                checked={option.correct}
+                aria-label={`Alternativa ${index + 1} correta`}
+                onChange={() =>
                   onChange({
                     ...draft,
-                    options: (draft.options ?? []).map((item, itemIndex) =>
-                      itemIndex === index ? { ...item, text: event.target.value } : item
-                    ),
+                    options: draft.options.map((item, itemIndex) => ({
+                      ...item,
+                      correct: itemIndex === index,
+                    })),
                   })
                 }
-                className={`${FIELD} ${option.correct ? 'border-leaf-400 bg-leaf-50' : ''}`}
+                className="h-5 w-5 accent-leaf-500"
               />
-            </div>
-          ))}
-        </div>
-      ) : (
-        <div className="space-y-2">
-          <label className="block text-sm font-bold text-sand-700">
-            Respostas aceitas (a primeira é a canônica)
-          </label>
-          {(draft.accepted_answers ?? ['']).map((answer, index) => (
-            <div key={index} className="flex items-center gap-2">
-              <input
-                value={answer}
-                onChange={(event) =>
-                  onChange({
-                    ...draft,
-                    accepted_answers: (draft.accepted_answers ?? []).map((item, itemIndex) =>
-                      itemIndex === index ? event.target.value : item
-                    ),
-                  })
-                }
-                className={FIELD}
-              />
-              <button
-                type="button"
-                aria-label="Remover resposta"
-                onClick={() =>
-                  onChange({
-                    ...draft,
-                    accepted_answers: (draft.accepted_answers ?? []).filter(
-                      (_, itemIndex) => itemIndex !== index
-                    ),
-                  })
-                }
-                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-red-50 text-sm font-bold text-red-600"
-              >
-                ✕
-              </button>
-            </div>
-          ))}
-          <button
-            type="button"
-            onClick={() =>
-              onChange({
-                ...draft,
-                accepted_answers: [...(draft.accepted_answers ?? []), ''],
-              })
-            }
-            className="py-2 text-sm font-bold text-leaf-600 hover:underline"
-          >
-            + Adicionar resposta
-          </button>
-        </div>
-      )}
+            </label>
+            <input
+              value={option.text}
+              onChange={(event) =>
+                onChange({
+                  ...draft,
+                  options: draft.options.map((item, itemIndex) =>
+                    itemIndex === index ? { ...item, text: event.target.value } : item
+                  ),
+                })
+              }
+              className={`${FIELD} ${option.correct ? 'border-leaf-400 bg-leaf-50' : ''}`}
+            />
+          </div>
+        ))}
+      </div>
 
       <div className="space-y-1.5">
         <label className="block text-sm font-bold text-sand-700">Explicação</label>
@@ -174,7 +96,9 @@ export function QuestionDraftForm({
       </div>
 
       <div className="space-y-1.5">
-        <label className="block text-sm font-bold text-sand-700">Nota de divergência (opcional)</label>
+        <label className="block text-sm font-bold text-sand-700">
+          Nota de divergência (opcional)
+        </label>
         <textarea
           value={draft.divergence_note ?? ''}
           rows={2}
@@ -231,9 +155,7 @@ export function QuestionDraftForm({
         <label className="block text-sm font-bold text-sand-700">Dificuldade</label>
         <select
           value={draft.difficulty}
-          onChange={(event) =>
-            onChange({ ...draft, difficulty: event.target.value as Difficulty })
-          }
+          onChange={(event) => onChange({ ...draft, difficulty: event.target.value as Difficulty })}
           className={FIELD}
         >
           {Object.entries(DIFFICULTY_LABELS).map(([value, label]) => (

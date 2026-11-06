@@ -9,7 +9,7 @@ from app.models import Category, User
 from app.models.enums import UserRole
 from app.seeds.questions import QuestionFileIn
 from app.services import content_sync
-from tests.factories import make_category, make_mc_question, make_open_question
+from tests.factories import make_category, make_mc_question
 
 
 def _promote_to_admin(db: Session, email: str = "samuel@teste.com") -> None:
@@ -23,7 +23,7 @@ class TestSerializer:
         """Whatever we write back must be valid input for the seed."""
         category = make_category(db)
         make_mc_question(db, category)
-        question = make_open_question(db, category)
+        question = make_mc_question(db, category)
         question.is_active = False
         db.flush()
 

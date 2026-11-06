@@ -5,7 +5,6 @@ from fastapi import APIRouter, HTTPException, status
 from app.core.deps import CurrentUser, DbDep
 from app.data.books import BOOKS, format_reference
 from app.models import Question, QuizSession
-from app.models.enums import QuestionType
 from app.schemas.quiz import (
     AnswerFeedback,
     AnswerRequest,
@@ -62,7 +61,6 @@ def _session_out(session: QuizSession, duel_id: uuid.UUID | None = None) -> Quiz
             QuestionOut(
                 id=sq.question.id,
                 position=sq.position,
-                type=sq.question.type,
                 text=sq.question.text,
                 difficulty=sq.question.difficulty,
                 category_name=sq.question.category.name,
@@ -72,9 +70,7 @@ def _session_out(session: QuizSession, duel_id: uuid.UUID | None = None) -> Quiz
                     for o in option_shuffle.shuffled_for(
                         sq.question.options, session.id, sq.question.id
                     )
-                ]
-                if sq.question.type == QuestionType.MULTIPLE_CHOICE
-                else [],
+                ],
                 answered=sq.question.id in answered_ids,
                 timer_remaining=(
                     None
@@ -164,7 +160,6 @@ def submit_answer(
             session_id,
             question_id=body.question_id,
             selected_option_id=body.selected_option_id,
-            answer_text=body.answer_text,
             time_spent_seconds=body.time_spent_seconds,
             timed_out=body.timed_out,
         )
@@ -174,7 +169,6 @@ def submit_answer(
     return AnswerFeedback(
         is_correct=result.is_correct,
         correct_option_id=result.correct_option_id,
-        correct_answer=result.correct_answer,
         explanation=result.explanation,
         divergence_note=result.divergence_note,
         reference=_reference(result.question),

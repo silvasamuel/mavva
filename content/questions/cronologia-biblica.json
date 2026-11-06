@@ -3,7 +3,6 @@
   "questions": [
     {
       "external_id": "cronologia-biblica-0001",
-      "type": "multiple_choice",
       "text": "Qual destes eventos aconteceu primeiro?",
       "options": [
         {
@@ -23,7 +22,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "A ordem de Gênesis: dilúvio (caps. 6-9), torre de Babel (cap. 11), chamado de Abraão (cap. 12) — e o êxodo só séculos depois (Êxodo). Babel acontece entre os descendentes de Noé, e Abraão descende de Sem (Gn 11:10-26).",
       "divergence_note": null,
       "reference": {
@@ -36,7 +34,6 @@
     },
     {
       "external_id": "cronologia-biblica-0002",
-      "type": "multiple_choice",
       "text": "Qual é a ordem correta dos patriarcas?",
       "options": [
         {
@@ -56,7 +53,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Abraão gerou Isaque (Gn 21), Isaque gerou Jacó (Gn 25), e Jacó gerou os doze, entre eles José (Gn 30). \"Deus de Abraão, de Isaque e de Jacó\" tornou-se o próprio nome pelo qual Deus se apresenta (Êx 3:6).",
       "divergence_note": null,
       "reference": {
@@ -69,7 +65,6 @@
     },
     {
       "external_id": "cronologia-biblica-0003",
-      "type": "multiple_choice",
       "text": "Qual é a ordem correta dos três primeiros reis de Israel?",
       "options": [
         {
@@ -89,7 +84,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Saul foi o primeiro rei (1Sm 10), sucedido por Davi (2Sm 5) e depois por Salomão, filho de Davi (1Rs 1). Cada um reinou cerca de quarenta anos, cobrindo o século de ouro do reino unido.",
       "divergence_note": null,
       "reference": {
@@ -102,7 +96,6 @@
     },
     {
       "external_id": "cronologia-biblica-0004",
-      "type": "multiple_choice",
       "text": "Qual período vem entre a conquista de Canaã e o primeiro rei de Israel?",
       "options": [
         {
@@ -122,7 +115,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Depois de Josué, \"levantou o Senhor juízes\" (Jz 2:16) — de Otniel a Sansão e Samuel — até que o povo pediu um rei (1Sm 8:5). O deserto veio antes da conquista; Babilônia e Pérsia, séculos depois da monarquia.",
       "divergence_note": null,
       "reference": {
@@ -135,7 +127,6 @@
     },
     {
       "external_id": "cronologia-biblica-0005",
-      "type": "multiple_choice",
       "text": "Quais profetas ministraram durante o exílio na Babilônia?",
       "options": [
         {
@@ -155,7 +146,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Daniel foi levado a Babilônia na primeira deportação (Dn 1:1-6) e Ezequiel na segunda, ministrando entre os cativos junto ao rio Quebar (Ez 1:1-3). Isaías e Amós vieram antes do exílio; Ageu e Zacarias, depois do retorno.",
       "divergence_note": null,
       "reference": {
@@ -168,14 +158,24 @@
     },
     {
       "external_id": "cronologia-biblica-0006",
-      "type": "open_answer",
       "text": "Aproximadamente quantos anos de silêncio profético separam Malaquias do Novo Testamento?",
-      "options": null,
-      "accepted_answers": [
-        "400",
-        "Quatrocentos",
-        "400 anos",
-        "Quatrocentos anos"
+      "options": [
+        {
+          "text": "400",
+          "correct": true
+        },
+        {
+          "text": "70",
+          "correct": false
+        },
+        {
+          "text": "200",
+          "correct": false
+        },
+        {
+          "text": "600",
+          "correct": false
+        }
       ],
       "explanation": "Entre Malaquias (c. 430 a.C.) e João Batista há cerca de quatro séculos sem profeta em Israel — o \"período interbíblico\", em que se sucederam os impérios persa, grego e romano. O silêncio se quebra com o anjo anunciando o precursor prometido pelo próprio Malaquias (Lc 1:13-17; Ml 3:1).",
       "divergence_note": null,
@@ -189,7 +189,6 @@
     },
     {
       "external_id": "cronologia-biblica-0007",
-      "type": "multiple_choice",
       "text": "Quantos dias após a ressurreição Jesus subiu ao céu, segundo Atos 1?",
       "options": [
         {
@@ -209,7 +208,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jesus \"apresentou-se vivo... sendo visto por eles por espaço de quarenta dias\" (At 1:3) antes da ascensão. O Espírito desceu no Pentecostes, cinquenta dias após a Páscoa — dez dias depois da subida do Senhor.",
       "divergence_note": null,
       "reference": {
@@ -222,7 +220,6 @@
     },
     {
       "external_id": "cronologia-biblica-0008",
-      "type": "multiple_choice",
       "text": "Qual evento veio primeiro no ministério terreno de Jesus?",
       "options": [
         {
@@ -242,7 +239,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O batismo abre o ministério público de Jesus, aos \"quase trinta anos\" (Lc 3:21-23), seguido da tentação no deserto. A transfiguração ocorre no meio do caminho; a entrada triunfal e a Ceia, na semana final.",
       "divergence_note": null,
       "reference": {
@@ -255,7 +251,6 @@
     },
     {
       "external_id": "cronologia-biblica-0009",
-      "type": "multiple_choice",
       "text": "Em que ordem os impérios dominaram Israel/Judá, conforme a narrativa bíblica?",
       "options": [
         {
@@ -275,7 +270,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "A Assíria levou o reino do Norte (2Rs 17); a Babilônia, Judá (2Rs 25); a Pérsia autorizou o retorno (Ed 1); a Grécia domina o período interbíblico — antevista nas visões de Daniel (Dn 8:21) — e Roma governa nos dias de Jesus (Lc 2:1).",
       "divergence_note": null,
       "reference": {
@@ -288,7 +282,6 @@
     },
     {
       "external_id": "cronologia-biblica-0010",
-      "type": "multiple_choice",
       "text": "João Batista começou a pregar antes ou durante o ministério público de Jesus?",
       "options": [
         {
@@ -308,7 +301,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "João veio \"preparar o caminho do Senhor\" (Mt 3:3, citando Isaías 40:3), pregando e batizando antes de Jesus se manifestar. O próprio João resume a transição: \"é necessário que ele cresça e que eu diminua\" (Jo 3:30).",
       "divergence_note": null,
       "reference": {
@@ -321,7 +313,6 @@
     },
     {
       "external_id": "cronologia-biblica-0011",
-      "type": "multiple_choice",
       "text": "Quantos anos Israel peregrinou no deserto antes de entrar em Canaã?",
       "options": [
         {
@@ -341,7 +332,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Por causa da incredulidade, a geração do êxodo peregrinou 40 anos até morrer no deserto (Nm 14:33-34).",
       "divergence_note": null,
       "reference": {
@@ -354,7 +344,6 @@
     },
     {
       "external_id": "cronologia-biblica-0012",
-      "type": "multiple_choice",
       "text": "Quantos anos durou o cativeiro babilônico profetizado por Jeremias?",
       "options": [
         {
@@ -374,7 +363,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Estas nações servirão ao rei de Babilônia setenta anos' (Jr 25:11), cumprido no decreto de Ciro.",
       "divergence_note": null,
       "reference": {
@@ -387,7 +375,6 @@
     },
     {
       "external_id": "cronologia-biblica-0013",
-      "type": "multiple_choice",
       "text": "Por quantos dias Jesus apareceu aos discípulos entre a ressurreição e a ascensão?",
       "options": [
         {
@@ -407,7 +394,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Aos quais também, depois de ter padecido, se apresentou vivo... aparecendo-lhes por espaço de quarenta dias' (At 1:3).",
       "divergence_note": null,
       "reference": {
@@ -421,7 +407,6 @@
     },
     {
       "external_id": "cronologia-biblica-0014",
-      "type": "multiple_choice",
       "text": "Quantos anos tinha Abraão quando Isaque nasceu?",
       "options": [
         {
@@ -441,7 +426,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Abraão tinha cem anos quando lhe nasceu Isaque' (Gn 21:5) — o filho da promessa na velhice.",
       "divergence_note": null,
       "reference": {
@@ -454,7 +438,6 @@
     },
     {
       "external_id": "cronologia-biblica-0015",
-      "type": "multiple_choice",
       "text": "Quantos anos, ao todo, Jacó serviu a Labão pelas filhas e pelo gado?",
       "options": [
         {
@@ -474,7 +457,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Vinte anos estive em tua casa: catorze anos te servi por tuas duas filhas e seis anos por teu gado' (Gn 31:41).",
       "divergence_note": null,
       "reference": {
@@ -487,7 +469,6 @@
     },
     {
       "external_id": "cronologia-biblica-0016",
-      "type": "multiple_choice",
       "text": "Quantos anos reinou o rei Davi ao todo?",
       "options": [
         {
@@ -507,7 +488,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Trinta anos tinha Davi... e reinou quarenta anos' (2Sm 5:4) — sete em Hebrom e trinta e três em Jerusalém.",
       "divergence_note": null,
       "reference": {
@@ -520,14 +500,24 @@
     },
     {
       "external_id": "cronologia-biblica-0017",
-      "type": "open_answer",
       "text": "Em quantos dias Deus criou os céus e a terra?",
-      "options": null,
-      "accepted_answers": [
-        "6",
-        "seis",
-        "6 dias",
-        "seis dias"
+      "options": [
+        {
+          "text": "6",
+          "correct": true
+        },
+        {
+          "text": "7",
+          "correct": false
+        },
+        {
+          "text": "3",
+          "correct": false
+        },
+        {
+          "text": "40",
+          "correct": false
+        }
       ],
       "explanation": "'Em seis dias fez o SENHOR os céus e a terra... e ao sétimo dia descansou' (Êx 20:11; Gn 2:2).",
       "divergence_note": null,
@@ -541,7 +531,6 @@
     },
     {
       "external_id": "cronologia-biblica-0018",
-      "type": "multiple_choice",
       "text": "Quantos dias caiu chuva sobre a terra no dilúvio?",
       "options": [
         {
@@ -561,7 +550,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'E houve chuva sobre a terra quarenta dias e quarenta noites' (Gn 7:12); as águas prevaleceram 150 dias.",
       "divergence_note": null,
       "reference": {
@@ -574,7 +562,6 @@
     },
     {
       "external_id": "cronologia-biblica-0019",
-      "type": "multiple_choice",
       "text": "Quantas 'semanas' foram determinadas na profecia de Daniel 9?",
       "options": [
         {
@@ -594,7 +581,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Setenta semanas estão determinadas sobre o teu povo' (Dn 9:24), profecia messiânica.",
       "divergence_note": "As tradições cristãs divergem sobre a interpretação das setenta semanas (contagem, se apontam ao primeiro advento e/ou a eventos futuros). A pergunta trata do número dado no texto.",
       "reference": {
@@ -607,7 +593,6 @@
     },
     {
       "external_id": "cronologia-biblica-0020",
-      "type": "multiple_choice",
       "text": "Quantos anos reinou Salomão sobre Israel?",
       "options": [
         {
@@ -627,7 +612,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'O tempo que Salomão reinou em Jerusalém sobre todo o Israel foram quarenta anos' (1Rs 11:42).",
       "divergence_note": null,
       "reference": {
@@ -640,7 +624,6 @@
     },
     {
       "external_id": "cronologia-biblica-0021",
-      "type": "multiple_choice",
       "text": "Segundo Êxodo 12:40, quantos anos os israelitas habitaram no Egito?",
       "options": [
         {
@@ -660,7 +643,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'A habitação dos filhos de Israel... foi de quatrocentos e trinta anos' (Êx 12:40).",
       "divergence_note": null,
       "reference": {
@@ -673,7 +655,6 @@
     },
     {
       "external_id": "cronologia-biblica-0022",
-      "type": "multiple_choice",
       "text": "Com cerca de quantos anos Jesus começou o seu ministério, segundo Lucas?",
       "options": [
         {
@@ -693,7 +674,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Jesus... começava a ser de quase trinta anos' (Lc 3:23) ao iniciar o ministério.",
       "divergence_note": null,
       "reference": {
@@ -706,7 +686,6 @@
     },
     {
       "external_id": "cronologia-biblica-0023",
-      "type": "multiple_choice",
       "text": "Quanto tempo durou a construção do templo de Salomão?",
       "options": [
         {
@@ -726,7 +705,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'E em sete anos o edificou e o acabou' (1Rs 6:38), começando no quarto ano do seu reinado.",
       "divergence_note": null,
       "reference": {
@@ -739,7 +717,6 @@
     },
     {
       "external_id": "cronologia-biblica-0024",
-      "type": "multiple_choice",
       "text": "Quantos dias Moisés permaneceu no monte Sinai recebendo a Lei?",
       "options": [
         {
@@ -759,7 +736,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Esteve ali com o SENHOR quarenta dias e quarenta noites; não comeu pão nem bebeu água' (Êx 34:28).",
       "divergence_note": null,
       "reference": {
@@ -772,7 +748,6 @@
     },
     {
       "external_id": "cronologia-biblica-0025",
-      "type": "multiple_choice",
       "text": "Quantos anos Noé tinha quando veio o dilúvio sobre a terra?",
       "options": [
         {
@@ -792,7 +767,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Tinha Noé seiscentos anos de idade quando o dilúvio das águas veio sobre a terra' (Gn 7:6).",
       "divergence_note": null,
       "reference": {
@@ -805,7 +779,6 @@
     },
     {
       "external_id": "cronologia-biblica-0026",
-      "type": "multiple_choice",
       "text": "Quantos dias durou a jornada de Elias até o monte Horebe, sustentado pela comida do anjo?",
       "options": [
         {
@@ -825,7 +798,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Com a força daquela comida caminhou quarenta dias e quarenta noites até Horebe, o monte de Deus' (1Rs 19:8).",
       "divergence_note": null,
       "reference": {
@@ -838,13 +810,24 @@
     },
     {
       "external_id": "cronologia-biblica-0027",
-      "type": "open_answer",
       "text": "Em que dia da semana Jesus ressuscitou, segundo os evangelhos?",
-      "options": null,
-      "accepted_answers": [
-        "Primeiro dia da semana",
-        "Domingo",
-        "No primeiro dia da semana"
+      "options": [
+        {
+          "text": "Primeiro dia da semana",
+          "correct": true
+        },
+        {
+          "text": "Sábado",
+          "correct": false
+        },
+        {
+          "text": "Sexta-feira",
+          "correct": false
+        },
+        {
+          "text": "Terceiro dia da semana",
+          "correct": false
+        }
       ],
       "explanation": "'E, no primeiro dia da semana, muito de madrugada, foram ao sepulcro' (Lc 24:1) — daí a igreja reunir-se nesse dia (At 20:7).",
       "divergence_note": null,
@@ -858,7 +841,6 @@
     },
     {
       "external_id": "cronologia-biblica-0028",
-      "type": "multiple_choice",
       "text": "Quantos anos viveu Moisés, segundo Deuteronômio?",
       "options": [
         {
@@ -878,7 +860,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Era Moisés da idade de cento e vinte anos quando morreu; os seus olhos nunca se escureceram' (Dt 34:7).",
       "divergence_note": null,
       "reference": {
@@ -891,7 +872,6 @@
     },
     {
       "external_id": "cronologia-biblica-0029",
-      "type": "multiple_choice",
       "text": "Quantos anos viveu Josué, servo do SENHOR?",
       "options": [
         {
@@ -911,7 +891,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Josué, filho de Num, servo do SENHOR, faleceu, sendo da idade de cento e dez anos' (Js 24:29).",
       "divergence_note": null,
       "reference": {
@@ -924,7 +903,6 @@
     },
     {
       "external_id": "cronologia-biblica-0030",
-      "type": "multiple_choice",
       "text": "Quanto tempo Jonas ficou no ventre do grande peixe?",
       "options": [
         {
@@ -944,7 +922,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Esteve Jonas três dias e três noites nas entranhas do peixe' (Jn 1:17), sinal que Jesus aplicou a si (Mt 12:40).",
       "divergence_note": null,
       "reference": {
@@ -957,7 +934,6 @@
     },
     {
       "external_id": "cronologia-biblica-0031",
-      "type": "multiple_choice",
       "text": "Por quanto tempo os israelitas rodearam Jericó antes de os muros caírem?",
       "options": [
         {
@@ -977,7 +953,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Rodearam uma vez por dia durante seis dias e sete vezes no sétimo, quando os muros caíram (Js 6:3-4,15-16).",
       "divergence_note": null,
       "reference": {
@@ -990,14 +965,24 @@
     },
     {
       "external_id": "cronologia-biblica-0032",
-      "type": "open_answer",
       "text": "Quantos anos Jacó viveu na terra do Egito antes de morrer?",
-      "options": null,
-      "accepted_answers": [
-        "17",
-        "dezessete",
-        "17 anos",
-        "dezessete anos"
+      "options": [
+        {
+          "text": "17",
+          "correct": true
+        },
+        {
+          "text": "7",
+          "correct": false
+        },
+        {
+          "text": "20",
+          "correct": false
+        },
+        {
+          "text": "40",
+          "correct": false
+        }
       ],
       "explanation": "'Jacó viveu na terra do Egito dezessete anos', completando cento e quarenta e sete anos de vida (Gn 47:28).",
       "divergence_note": null,
@@ -1011,7 +996,6 @@
     },
     {
       "external_id": "cronologia-biblica-0033",
-      "type": "multiple_choice",
       "text": "Quantos anos viveu Adão, segundo Gênesis 5?",
       "options": [
         {
@@ -1031,7 +1015,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Foram todos os dias que Adão viveu novecentos e trinta anos, e morreu' (Gn 5:5).",
       "divergence_note": null,
       "reference": {
@@ -1044,7 +1027,6 @@
     },
     {
       "external_id": "cronologia-biblica-0034",
-      "type": "multiple_choice",
       "text": "Quanto tempo Davi reinou em Hebrom antes de reinar sobre todo o Israel?",
       "options": [
         {
@@ -1064,7 +1046,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Em Hebrom reinou sobre Judá sete anos e seis meses, e em Jerusalém reinou trinta e três anos' (2Sm 5:5).",
       "divergence_note": null,
       "reference": {
@@ -1077,7 +1058,6 @@
     },
     {
       "external_id": "cronologia-biblica-0035",
-      "type": "multiple_choice",
       "text": "Segundo Gálatas 1, quantos anos depois da conversão Paulo subiu a Jerusalém para ver Pedro?",
       "options": [
         {
@@ -1097,7 +1077,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Depois, passados três anos, fui a Jerusalém para ver a Pedro' (Gl 1:18); catorze anos depois subiu de novo (Gl 2:1).",
       "divergence_note": null,
       "reference": {
@@ -1110,7 +1089,6 @@
     },
     {
       "external_id": "cronologia-biblica-0036",
-      "type": "multiple_choice",
       "text": "Há quantos anos o paralítico do tanque de Betesda estava enfermo?",
       "options": [
         {
@@ -1130,7 +1108,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Estava ali um homem que, havia trinta e oito anos, se achava enfermo' (Jo 5:5).",
       "divergence_note": null,
       "reference": {
@@ -1143,7 +1120,6 @@
     },
     {
       "external_id": "cronologia-biblica-0037",
-      "type": "multiple_choice",
       "text": "Quantos anos tinha Ana, a profetisa viúva, quando viu o menino Jesus no templo?",
       "options": [
         {
@@ -1163,7 +1139,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Era viúva, de quase oitenta e quatro anos, e não se afastava do templo' (Lc 2:37).",
       "divergence_note": null,
       "reference": {
@@ -1176,14 +1151,24 @@
     },
     {
       "external_id": "cronologia-biblica-0038",
-      "type": "open_answer",
       "text": "Quantos anos tinha Sara quando Isaque nasceu?",
-      "options": null,
-      "accepted_answers": [
-        "90",
-        "noventa",
-        "90 anos",
-        "noventa anos"
+      "options": [
+        {
+          "text": "90",
+          "correct": true
+        },
+        {
+          "text": "100",
+          "correct": false
+        },
+        {
+          "text": "75",
+          "correct": false
+        },
+        {
+          "text": "127",
+          "correct": false
+        }
       ],
       "explanation": "Abraão riu: 'dará à luz Sara da idade de noventa anos?' (Gn 17:17) — e Deus cumpriu a promessa (Gn 21:2).",
       "divergence_note": null,
@@ -1197,7 +1182,6 @@
     },
     {
       "external_id": "cronologia-biblica-0039",
-      "type": "multiple_choice",
       "text": "Com que idade Jesus ficou no templo entre os doutores, enquanto os pais o procuravam?",
       "options": [
         {
@@ -1217,7 +1201,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Tendo ele já doze anos, subiram a Jerusalém, segundo o costume' e o acharam no templo (Lc 2:42-46).",
       "divergence_note": null,
       "reference": {
@@ -1230,7 +1213,6 @@
     },
     {
       "external_id": "cronologia-biblica-0040",
-      "type": "multiple_choice",
       "text": "Quantos anos José tinha quando foi vendido pelos irmãos?",
       "options": [
         {
@@ -1250,7 +1232,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'José, sendo de dezessete anos, apascentava as ovelhas com seus irmãos' (Gn 37:2) — pouco antes de ser vendido.",
       "divergence_note": null,
       "reference": {
@@ -1263,7 +1244,6 @@
     },
     {
       "external_id": "cronologia-biblica-0041",
-      "type": "multiple_choice",
       "text": "Quantos anos José tinha quando se apresentou diante de Faraó?",
       "options": [
         {
@@ -1283,7 +1263,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'José era da idade de trinta anos quando se apresentou a Faraó' (Gn 41:46) — treze anos entre a venda e a exaltação.",
       "divergence_note": null,
       "reference": {
@@ -1296,7 +1275,6 @@
     },
     {
       "external_id": "cronologia-biblica-0042",
-      "type": "multiple_choice",
       "text": "Quantos anos Enoque viveu antes de Deus o tomar?",
       "options": [
         {
@@ -1316,7 +1294,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Foram todos os dias de Enoque trezentos e sessenta e cinco anos. E andou Enoque com Deus; e não apareceu mais' (Gn 5:23-24).",
       "divergence_note": null,
       "reference": {
@@ -1329,7 +1306,6 @@
     },
     {
       "external_id": "cronologia-biblica-0043",
-      "type": "multiple_choice",
       "text": "Quantos anos Noé viveu ao todo?",
       "options": [
         {
@@ -1349,7 +1325,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Foram todos os dias de Noé novecentos e cinquenta anos, e morreu' (Gn 9:29) — 350 anos depois do dilúvio.",
       "divergence_note": null,
       "reference": {
@@ -1362,7 +1337,6 @@
     },
     {
       "external_id": "cronologia-biblica-0044",
-      "type": "multiple_choice",
       "text": "Qual destes acontecimentos da saída do Egito ocorreu primeiro?",
       "options": [
         {
@@ -1382,7 +1356,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Israel atravessou o mar Vermelho logo depois de sair do Egito (Êx 14); só \"ao terceiro mês\" chegou ao deserto do Sinai (Êx 19:1), onde recebeu os Dez Mandamentos (Êx 20). O bezerro de ouro foi feito enquanto Moisés estava no monte (Êx 32), e os espias foram enviados depois da partida do Sinai, já no deserto de Parã (Nm 10:11-12; 13:1-3).",
       "divergence_note": null,
       "reference": {
@@ -1395,21 +1368,24 @@
     },
     {
       "external_id": "cronologia-biblica-0045",
-      "type": "open_answer",
       "text": "Em que dia da criação Deus fez o homem, segundo Gênesis 1?",
-      "options": null,
-      "accepted_answers": [
-        "6",
-        "Seis",
-        "Sexto",
-        "O sexto",
-        "Sexto dia",
-        "O sexto dia",
-        "No sexto dia",
-        "6º",
-        "6º dia",
-        "Dia 6",
-        "Dia seis"
+      "options": [
+        {
+          "text": "Sexto dia",
+          "correct": true
+        },
+        {
+          "text": "Quinto dia",
+          "correct": false
+        },
+        {
+          "text": "Terceiro dia",
+          "correct": false
+        },
+        {
+          "text": "Sétimo dia",
+          "correct": false
+        }
       ],
       "explanation": "No sexto dia Deus fez os animais da terra e, por fim, disse: \"Façamos o homem à nossa imagem\" (Gn 1:24-26). Criados o homem e a mulher, \"viu Deus tudo quanto tinha feito, e eis que era muito bom; e foi a tarde e a manhã: o dia sexto\" (Gn 1:31). O ser humano foi a última obra da criação antes do descanso do sétimo dia (Gn 2:2).",
       "divergence_note": null,

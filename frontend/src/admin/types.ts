@@ -3,7 +3,6 @@ import type {
   Difficulty,
   FlagReason,
   QuestionDraft,
-  QuestionType,
   Testament,
 } from '@/types/api'
 
@@ -107,7 +106,6 @@ export interface AdminDashboard {
     total: number
     active: number
     inactive: number
-    open_answer: number
     old_testament: number
     easy: number
     medium: number
@@ -178,14 +176,9 @@ export interface AdminOption {
   is_correct: boolean
 }
 
-export interface AdminAnswer {
-  text: string
-}
-
 export interface AdminQuestionListItem {
   id: string
   external_id: string
-  type: QuestionType
   text: string
   difficulty: Difficulty
   category_id: number
@@ -203,7 +196,6 @@ export interface AdminQuestionList {
 export interface AdminQuestionDetail {
   id: string
   external_id: string
-  type: QuestionType
   text: string
   explanation: string
   divergence_note: string | null
@@ -216,7 +208,6 @@ export interface AdminQuestionDetail {
   category_id: number
   is_active: boolean
   options: AdminOption[]
-  accepted_answers: AdminAnswer[]
 }
 
 export interface AdminCategory {
@@ -237,7 +228,6 @@ export interface AdminQuestionUpdate {
   difficulty?: Difficulty
   is_active?: boolean
   options?: AdminOption[]
-  accepted_answers?: AdminAnswer[]
 }
 
 export interface ContentStatus {

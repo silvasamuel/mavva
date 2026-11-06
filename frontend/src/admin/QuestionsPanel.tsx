@@ -16,7 +16,6 @@ export function QuestionsPanel() {
   const [search, setSearch] = useState('')
   const [categoryId, setCategoryId] = useState<number | ''>('')
   const [difficulty, setDifficulty] = useState('')
-  const [type, setType] = useState('')
   const [offset, setOffset] = useState(0)
   const [editingId, setEditingId] = useState<string | null>(null)
   // The input updates on every keystroke; the request only fires once typing pauses.
@@ -31,7 +30,6 @@ export function QuestionsPanel() {
   if (debouncedSearch) params.set('search', debouncedSearch)
   if (categoryId !== '') params.set('category_id', String(categoryId))
   if (difficulty) params.set('difficulty', difficulty)
-  if (type) params.set('type', type)
 
   const { data, isLoading } = useQuery({
     queryKey: ['admin', 'questions', params.toString()],
@@ -45,7 +43,7 @@ export function QuestionsPanel() {
 
   return (
     <div className="space-y-4">
-      <div className="grid gap-3 sm:grid-cols-[2fr_1fr_1fr_1fr]">
+      <div className="grid gap-3 sm:grid-cols-[2fr_1fr_1fr]">
         <Input
           label="Buscar (texto ou id)"
           placeholder="ex: quem construiu a arca"
@@ -91,21 +89,6 @@ export function QuestionsPanel() {
             ))}
           </select>
         </div>
-        <div className="space-y-1.5">
-          <label className="block text-sm font-bold text-sand-700">Tipo</label>
-          <select
-            value={type}
-            onChange={(e) => {
-              setType(e.target.value)
-              resetPaging()
-            }}
-            className="w-full rounded-2xl border-2 border-sand-200 bg-white px-4 py-3 text-sm font-semibold focus:border-leaf-500"
-          >
-            <option value="">Todos</option>
-            <option value="multiple_choice">Múltipla escolha</option>
-            <option value="open_answer">Aberta</option>
-          </select>
-        </div>
       </div>
 
       {isLoading || !data ? (
@@ -119,7 +102,6 @@ export function QuestionsPanel() {
               <tr>
                 <th className="px-4 py-3">Pergunta</th>
                 <th className="px-4 py-3">Categoria</th>
-                <th className="px-4 py-3">Tipo</th>
                 <th className="px-4 py-3">Nível</th>
                 <th className="px-4 py-3"></th>
               </tr>
@@ -135,9 +117,6 @@ export function QuestionsPanel() {
                     </p>
                   </td>
                   <td className="px-4 py-3 font-semibold">{q.category_name}</td>
-                  <td className="px-4 py-3 text-xs font-bold text-sand-500">
-                    {q.type === 'multiple_choice' ? 'Múltipla' : 'Aberta'}
-                  </td>
                   <td className="px-4 py-3 font-semibold">{DIFFICULTY_LABELS[q.difficulty]}</td>
                   <td className="px-4 py-3 text-right">
                     <button

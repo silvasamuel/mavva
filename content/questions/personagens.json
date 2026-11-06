@@ -3,7 +3,6 @@
   "questions": [
     {
       "external_id": "personagens-0001",
-      "type": "multiple_choice",
       "text": "Quem foi lançado na cova dos leões por continuar orando ao seu Deus, desobedecendo ao decreto do rei?",
       "options": [
         {
@@ -23,7 +22,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Daniel orava três vezes ao dia voltado para Jerusalém, mesmo sabendo do decreto de Dario. Deus enviou o seu anjo e fechou a boca dos leões (Dn 6:22), e o próprio rei reconheceu: \"o Deus de Daniel é o Deus vivo\".",
       "divergence_note": null,
       "reference": {
@@ -36,7 +34,6 @@
     },
     {
       "external_id": "personagens-0002",
-      "type": "multiple_choice",
       "text": "Quem vendeu o seu direito de primogenitura por um prato de lentilhas?",
       "options": [
         {
@@ -56,7 +53,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Esaú, faminto ao voltar do campo, desprezou a primogenitura e a vendeu a Jacó por um cozinhado de lentilhas (Gn 25:34). Hebreus 12:16 o cita como advertência contra tratar as coisas sagradas como profanas.",
       "divergence_note": null,
       "reference": {
@@ -69,12 +65,24 @@
     },
     {
       "external_id": "personagens-0003",
-      "type": "open_answer",
       "text": "Qual era o nome da esposa de Abraão, mãe de Isaque?",
-      "options": null,
-      "accepted_answers": [
-        "Sara",
-        "Sarai"
+      "options": [
+        {
+          "text": "Sara",
+          "correct": true
+        },
+        {
+          "text": "Rebeca",
+          "correct": false
+        },
+        {
+          "text": "Raquel",
+          "correct": false
+        },
+        {
+          "text": "Agar",
+          "correct": false
+        }
       ],
       "explanation": "Sara (antes chamada Sarai) deu à luz Isaque na velhice, conforme a promessa de Deus (Gn 21:2-3). Ela é lembrada em Hebreus 11:11 como exemplo de fé no Deus que cumpre o que promete.",
       "divergence_note": null,
@@ -88,7 +96,6 @@
     },
     {
       "external_id": "personagens-0004",
-      "type": "multiple_choice",
       "text": "Quem interpretou os sonhos de Faraó sobre as sete vacas gordas e as sete vacas magras?",
       "options": [
         {
@@ -108,7 +115,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "José declarou que a interpretação pertence a Deus (Gn 41:16) e anunciou sete anos de fartura seguidos de sete anos de fome. Por isso foi elevado a governador do Egito, preservando muitas vidas (Gn 50:20).",
       "divergence_note": null,
       "reference": {
@@ -121,7 +127,6 @@
     },
     {
       "external_id": "personagens-0005",
-      "type": "multiple_choice",
       "text": "Qual profeta confrontou o rei Davi após o seu pecado com Bate-Seba, dizendo \"Tu és este homem\"?",
       "options": [
         {
@@ -141,7 +146,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Natã contou a Davi a parábola da cordeirinha do pobre e aplicou o juízo: \"Tu és este homem\" (2Sm 12:7). Davi se arrependeu, e o Salmo 51 registra sua confissão.",
       "divergence_note": null,
       "reference": {
@@ -154,12 +158,24 @@
     },
     {
       "external_id": "personagens-0006",
-      "type": "open_answer",
       "text": "Quem era a sogra de Rute, a quem ela declarou: \"o teu povo é o meu povo, o teu Deus é o meu Deus\"?",
-      "options": null,
-      "accepted_answers": [
-        "Noemi",
-        "Naomi"
+      "options": [
+        {
+          "text": "Noemi",
+          "correct": true
+        },
+        {
+          "text": "Orfa",
+          "correct": false
+        },
+        {
+          "text": "Raabe",
+          "correct": false
+        },
+        {
+          "text": "Ana",
+          "correct": false
+        }
       ],
       "explanation": "Noemi voltou de Moabe para Belém acompanhada de Rute, que se recusou a abandoná-la (Rt 1:16). Deus honrou essa lealdade: Rute casou-se com Boaz e entrou na genealogia de Davi e de Cristo (Mt 1:5).",
       "divergence_note": null,
@@ -173,7 +189,6 @@
     },
     {
       "external_id": "personagens-0007",
-      "type": "multiple_choice",
       "text": "Quem foi arrebatado ao céu num redemoinho, acompanhado de um carro de fogo com cavalos de fogo?",
       "options": [
         {
@@ -193,7 +208,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Elias subiu ao céu num redemoinho diante de Eliseu, que recebeu porção dobrada do seu espírito (2Rs 2:9-11). Junto com Enoque (Gn 5:24), é um dos dois homens que a Escritura registra não terem passado pela morte.",
       "divergence_note": null,
       "reference": {
@@ -206,7 +220,6 @@
     },
     {
       "external_id": "personagens-0008",
-      "type": "multiple_choice",
       "text": "Qual juiz de Israel derrotou o exército midianita com apenas 300 homens?",
       "options": [
         {
@@ -226,7 +239,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Deus reduziu o exército de Gideão de 32 mil para 300 homens, \"para que Israel não se glorie contra mim, dizendo: A minha mão me livrou\" (Jz 7:2). A vitória veio com trombetas, cântaros e tochas — e pertenceu ao SENHOR.",
       "divergence_note": null,
       "reference": {
@@ -239,7 +251,6 @@
     },
     {
       "external_id": "personagens-0009",
-      "type": "multiple_choice",
       "text": "Quem era o sacerdote em Siló quando o menino Samuel ouviu a voz de Deus pela primeira vez?",
       "options": [
         {
@@ -259,7 +270,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O menino Samuel servia ao SENHOR perante Eli (1Sm 3:1). Foi Eli quem percebeu que era Deus quem chamava o menino e o ensinou a responder: \"Fala, SENHOR, porque o teu servo ouve\" (1Sm 3:9).",
       "divergence_note": null,
       "reference": {
@@ -272,11 +282,24 @@
     },
     {
       "external_id": "personagens-0010",
-      "type": "open_answer",
       "text": "Qual rei de Judá, estando doente à morte, orou ao SENHOR e teve sua vida prolongada em quinze anos?",
-      "options": null,
-      "accepted_answers": [
-        "Ezequias"
+      "options": [
+        {
+          "text": "Ezequias",
+          "correct": true
+        },
+        {
+          "text": "Josias",
+          "correct": false
+        },
+        {
+          "text": "Uzias",
+          "correct": false
+        },
+        {
+          "text": "Acaz",
+          "correct": false
+        }
       ],
       "explanation": "Ezequias chorou e orou, e Deus respondeu pelo profeta Isaías: \"eis que acrescentarei aos teus dias quinze anos\" (2Rs 20:5-6). Como sinal, a sombra do relógio de Acaz voltou dez graus atrás.",
       "divergence_note": null,
@@ -290,7 +313,6 @@
     },
     {
       "external_id": "personagens-0011",
-      "type": "multiple_choice",
       "text": "Quem foi vendido pelos irmãos por vinte moedas de prata a mercadores ismaelitas?",
       "options": [
         {
@@ -310,7 +332,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Os irmãos, movidos por inveja, venderam José por vinte moedas de prata (Gn 37:28). O que planejaram para o mal, Deus tornou em bem para preservar muitos (Gn 50:20).",
       "divergence_note": null,
       "reference": {
@@ -323,7 +344,6 @@
     },
     {
       "external_id": "personagens-0012",
-      "type": "multiple_choice",
       "text": "Qual mulher escondeu os dois espias israelitas em Jericó e foi poupada na conquista?",
       "options": [
         {
@@ -343,7 +363,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Raabe escondeu os espias e confessou a fé no Deus de Israel (Js 2). Foi poupada, entrou na genealogia de Cristo (Mt 1:5) e é exemplo de fé em Hebreus 11:31.",
       "divergence_note": null,
       "reference": {
@@ -356,7 +375,6 @@
     },
     {
       "external_id": "personagens-0013",
-      "type": "multiple_choice",
       "text": "Quem sucedeu Moisés na liderança e conduziu Israel à travessia do Jordão?",
       "options": [
         {
@@ -376,7 +394,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Josué, filho de Num, foi comissionado por Deus para introduzir Israel na terra prometida (Js 1:2-6). Sob sua liderança o Jordão se abriu como fizera o Mar Vermelho.",
       "divergence_note": null,
       "reference": {
@@ -390,7 +407,6 @@
     },
     {
       "external_id": "personagens-0014",
-      "type": "multiple_choice",
       "text": "Qual profeta ungiu tanto Saul quanto Davi como reis de Israel?",
       "options": [
         {
@@ -410,7 +426,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Samuel ungiu Saul (1Sm 10:1) e depois Davi (1Sm 16:13), sendo o elo entre o período dos juízes e a monarquia. Foi profeta, juiz e sacerdote.",
       "divergence_note": null,
       "reference": {
@@ -424,7 +439,6 @@
     },
     {
       "external_id": "personagens-0015",
-      "type": "multiple_choice",
       "text": "Quem, sendo eunuco etíope, foi batizado por Filipe após entender Isaías?",
       "options": [
         {
@@ -444,7 +458,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O eunuco, alto oficial da rainha Candace, lia Isaías 53 quando Filipe lhe explicou o evangelho de Jesus e o batizou (At 8:27-38).",
       "divergence_note": null,
       "reference": {
@@ -457,12 +470,24 @@
     },
     {
       "external_id": "personagens-0016",
-      "type": "open_answer",
       "text": "Qual era o nome do irmão de Moisés que foi seu porta-voz e primeiro sumo sacerdote?",
-      "options": null,
-      "accepted_answers": [
-        "Arão",
-        "Aarão"
+      "options": [
+        {
+          "text": "Arão",
+          "correct": true
+        },
+        {
+          "text": "Josué",
+          "correct": false
+        },
+        {
+          "text": "Hur",
+          "correct": false
+        },
+        {
+          "text": "Eleazar",
+          "correct": false
+        }
       ],
       "explanation": "Arão falou por Moisés diante de Faraó (Êx 4:14-16) e foi consagrado o primeiro sumo sacerdote de Israel (Êx 28:1).",
       "divergence_note": null,
@@ -476,7 +501,6 @@
     },
     {
       "external_id": "personagens-0017",
-      "type": "multiple_choice",
       "text": "Quem era o rei de Salém, sacerdote do Deus Altíssimo, que abençoou Abraão?",
       "options": [
         {
@@ -496,7 +520,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Melquisedeque abençoou Abraão e recebeu o dízimo (Gn 14:18-20). Hebreus 7 o apresenta como tipo de Cristo, sacerdote eterno.",
       "divergence_note": null,
       "reference": {
@@ -509,7 +532,6 @@
     },
     {
       "external_id": "personagens-0018",
-      "type": "multiple_choice",
       "text": "Qual discípulo duvidou da ressurreição até ver as marcas nas mãos de Jesus?",
       "options": [
         {
@@ -529,7 +551,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Tomé disse que só creria ao ver as chagas; ao encontrar o Cristo ressurreto, exclamou: 'Senhor meu, e Deus meu!' (Jo 20:28).",
       "divergence_note": null,
       "reference": {
@@ -542,11 +563,24 @@
     },
     {
       "external_id": "personagens-0019",
-      "type": "open_answer",
       "text": "Qual profeta se casou com Gômer, uma mulher infiel, como sinal do amor de Deus por Israel?",
-      "options": null,
-      "accepted_answers": [
-        "Oseias"
+      "options": [
+        {
+          "text": "Oseias",
+          "correct": true
+        },
+        {
+          "text": "Amós",
+          "correct": false
+        },
+        {
+          "text": "Jonas",
+          "correct": false
+        },
+        {
+          "text": "Ezequiel",
+          "correct": false
+        }
       ],
       "explanation": "O casamento de Oseias com Gômer retratou a fidelidade de Deus diante da infidelidade de Israel (Os 1:2; 3:1).",
       "divergence_note": null,
@@ -560,7 +594,6 @@
     },
     {
       "external_id": "personagens-0020",
-      "type": "multiple_choice",
       "text": "Quem foi a primeira pessoa a quem Jesus apareceu após ressuscitar?",
       "options": [
         {
@@ -580,7 +613,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jesus apareceu primeiro a Maria Madalena junto ao sepulcro, e ela anunciou aos discípulos: 'Vi o Senhor' (Jo 20:14-18).",
       "divergence_note": null,
       "reference": {
@@ -593,7 +625,6 @@
     },
     {
       "external_id": "personagens-0021",
-      "type": "multiple_choice",
       "text": "Qual foi o pai de Noé, que ao dá-lo à luz profetizou alívio do trabalho da terra amaldiçoada?",
       "options": [
         {
@@ -613,7 +644,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Chamou-lhe Noé, dizendo: Este nos consolará' (Gn 5:28-29). Lameque, filho de Matusalém, foi pai de Noé.",
       "divergence_note": null,
       "reference": {
@@ -626,12 +656,24 @@
     },
     {
       "external_id": "personagens-0022",
-      "type": "open_answer",
       "text": "Que juiz de Israel fez um voto precipitado que envolveu a sua própria filha?",
-      "options": null,
-      "accepted_answers": [
-        "Jefté",
-        "Jefte"
+      "options": [
+        {
+          "text": "Jefté",
+          "correct": true
+        },
+        {
+          "text": "Gideão",
+          "correct": false
+        },
+        {
+          "text": "Sansão",
+          "correct": false
+        },
+        {
+          "text": "Baraque",
+          "correct": false
+        }
       ],
       "explanation": "Jefté prometeu oferecer o que primeiro saísse de casa se vencesse; foi sua filha quem o recebeu (Jz 11:30-39).",
       "divergence_note": null,
@@ -645,7 +687,6 @@
     },
     {
       "external_id": "personagens-0023",
-      "type": "multiple_choice",
       "text": "Quem cortou os cabelos de Sansão, entregando-o aos filisteus?",
       "options": [
         {
@@ -665,7 +706,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Dalila descobriu que a força de Sansão estava no voto de nazireu e o traiu; ele foi preso pelos filisteus (Jz 16:19-21).",
       "divergence_note": null,
       "reference": {
@@ -678,7 +718,6 @@
     },
     {
       "external_id": "personagens-0024",
-      "type": "multiple_choice",
       "text": "Qual sacerdote ficou mudo até o nascimento do filho por duvidar do anjo?",
       "options": [
         {
@@ -698,7 +737,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Zacarias duvidou da promessa de Gabriel e ficou sem falar até dar ao filho o nome de João (Lc 1:20,63-64).",
       "divergence_note": null,
       "reference": {
@@ -711,7 +749,6 @@
     },
     {
       "external_id": "personagens-0025",
-      "type": "multiple_choice",
       "text": "Qual mulher orou em silêncio no templo e foi julgada embriagada por Eli?",
       "options": [
         {
@@ -731,7 +768,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Ana orava movendo os lábios sem voz; Eli a repreendeu, mas ela pediu um filho e recebeu Samuel (1Sm 1:13-17).",
       "divergence_note": null,
       "reference": {
@@ -744,7 +780,6 @@
     },
     {
       "external_id": "personagens-0026",
-      "type": "multiple_choice",
       "text": "Quem se separou de Paulo por causa de João Marcos antes da segunda viagem?",
       "options": [
         {
@@ -764,7 +799,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Houve entre eles tal desavença que se apartaram um do outro': Barnabé levou Marcos, e Paulo seguiu com Silas (At 15:37-40).",
       "divergence_note": null,
       "reference": {
@@ -777,11 +811,24 @@
     },
     {
       "external_id": "personagens-0027",
-      "type": "open_answer",
       "text": "Qual fariseu, príncipe dos judeus, procurou Jesus de noite?",
-      "options": null,
-      "accepted_answers": [
-        "Nicodemos"
+      "options": [
+        {
+          "text": "Nicodemos",
+          "correct": true
+        },
+        {
+          "text": "José de Arimateia",
+          "correct": false
+        },
+        {
+          "text": "Gamaliel",
+          "correct": false
+        },
+        {
+          "text": "Caifás",
+          "correct": false
+        }
       ],
       "explanation": "Nicodemos foi a Jesus à noite e ouviu sobre o novo nascimento (Jo 3:1-3); mais tarde ajudou no sepultamento (Jo 19:39).",
       "divergence_note": null,
@@ -795,7 +842,6 @@
     },
     {
       "external_id": "personagens-0028",
-      "type": "multiple_choice",
       "text": "Quem foi o homem que Deus declarou 'sincero e reto, temente a Deus e desviando-se do mal'?",
       "options": [
         {
@@ -815,7 +861,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Assim Jó é apresentado (Jó 1:1,8), antes das provações que o levaram a dizer: 'ainda que ele me mate, nele esperarei' (Jó 13:15).",
       "divergence_note": null,
       "reference": {
@@ -828,7 +873,6 @@
     },
     {
       "external_id": "personagens-0029",
-      "type": "multiple_choice",
       "text": "Qual mulher de Israel matou Sísera cravando-lhe uma estaca na têmpora?",
       "options": [
         {
@@ -848,7 +892,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Jael, mulher de Héber, acolheu Sísera em sua tenda e o matou, cumprindo a palavra de Débora (Jz 4:21-22).",
       "divergence_note": null,
       "reference": {
@@ -861,7 +904,6 @@
     },
     {
       "external_id": "personagens-0030",
-      "type": "multiple_choice",
       "text": "Quem foi o servo fiel de Elias que se tornou seu sucessor?",
       "options": [
         {
@@ -881,7 +923,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Elias lançou seu manto sobre Eliseu, que 'deitava água sobre as mãos de Elias' e recebeu porção dobrada do seu espírito (1Rs 19:19; 2Rs 3:11).",
       "divergence_note": null,
       "reference": {
@@ -894,7 +935,6 @@
     },
     {
       "external_id": "personagens-0031",
-      "type": "multiple_choice",
       "text": "Qual carcereiro perguntou 'que é necessário que eu faça para me salvar?'",
       "options": [
         {
@@ -914,7 +954,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Após o terremoto que abriu a prisão, ouviu de Paulo e Silas: 'Crê no Senhor Jesus Cristo e serás salvo, tu e a tua casa' (At 16:30-31).",
       "divergence_note": null,
       "reference": {
@@ -927,12 +966,24 @@
     },
     {
       "external_id": "personagens-0032",
-      "type": "open_answer",
       "text": "Qual mulher de Corinto, junto ao marido Áquila, instruiu Apolo no caminho de Deus?",
-      "options": null,
-      "accepted_answers": [
-        "Priscila",
-        "Prisca"
+      "options": [
+        {
+          "text": "Priscila",
+          "correct": true
+        },
+        {
+          "text": "Lídia",
+          "correct": false
+        },
+        {
+          "text": "Febe",
+          "correct": false
+        },
+        {
+          "text": "Dorcas",
+          "correct": false
+        }
       ],
       "explanation": "'Priscila e Áquila... lhe declararam mais precisamente o caminho de Deus' (At 18:26), aperfeiçoando o ensino de Apolo.",
       "divergence_note": null,
@@ -946,7 +997,6 @@
     },
     {
       "external_id": "personagens-0033",
-      "type": "multiple_choice",
       "text": "Quem foi a mãe de Moisés, que o escondeu num cesto no Nilo?",
       "options": [
         {
@@ -966,7 +1016,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Anrão tomou por mulher a Joquebede... e ela lhe deu a Arão e a Moisés' (Êx 6:20; cf. Êx 2:2-3).",
       "divergence_note": null,
       "reference": {
@@ -979,7 +1028,6 @@
     },
     {
       "external_id": "personagens-0034",
-      "type": "multiple_choice",
       "text": "Quem era o comandante do exército de Davi, que matou Abner e Amasa?",
       "options": [
         {
@@ -999,7 +1047,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Joabe, filho de Zeruia, general de Davi, vingou-se de Abner (2Sm 3:27) e matou Amasa (2Sm 20:10).",
       "divergence_note": null,
       "reference": {
@@ -1012,7 +1059,6 @@
     },
     {
       "external_id": "personagens-0035",
-      "type": "multiple_choice",
       "text": "Que mágico e falso profeta Paulo enfrentou em Chipre, deixando-o cego por um tempo?",
       "options": [
         {
@@ -1032,7 +1078,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Ó filho do diabo... eis aí a mão do Senhor sobre ti, e ficarás cego' (At 13:6-11) — e o procônsul creu.",
       "divergence_note": null,
       "reference": {
@@ -1045,7 +1090,6 @@
     },
     {
       "external_id": "personagens-0036",
-      "type": "multiple_choice",
       "text": "Que mordomo do rei Acabe temia ao SENHOR e escondeu cem profetas em cavernas?",
       "options": [
         {
@@ -1065,7 +1109,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Obadias, o mordomo... temia muito ao SENHOR' e sustentou cem profetas com pão e água quando Jezabel os matava (1Rs 18:3-4).",
       "divergence_note": "Este Obadias, mordomo de Acabe, não deve ser confundido com o profeta autor do livro de Obadias; a Bíblia não os identifica.",
       "reference": {
@@ -1078,7 +1121,6 @@
     },
     {
       "external_id": "personagens-0037",
-      "type": "multiple_choice",
       "text": "Qual rei filisteu de Gate recebeu Davi fugitivo, diante de quem Davi fingiu loucura?",
       "options": [
         {
@@ -1098,7 +1140,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Com medo de Aquis, Davi 'fazia-se de doido... e deixava correr saliva pela barba' (1Sm 21:10-15).",
       "divergence_note": null,
       "reference": {
@@ -1111,11 +1152,24 @@
     },
     {
       "external_id": "personagens-0038",
-      "type": "open_answer",
       "text": "Qual mulher, esposa de Nabal, apaziguou Davi com provisões e depois se tornou sua esposa?",
-      "options": null,
-      "accepted_answers": [
-        "Abigail"
+      "options": [
+        {
+          "text": "Abigail",
+          "correct": true
+        },
+        {
+          "text": "Mical",
+          "correct": false
+        },
+        {
+          "text": "Bate-Seba",
+          "correct": false
+        },
+        {
+          "text": "Ainoã",
+          "correct": false
+        }
       ],
       "explanation": "Abigail saiu ao encontro de Davi e o dissuadiu de se vingar; após a morte de Nabal, Davi a tomou por mulher (1Sm 25:23-42).",
       "divergence_note": null,
@@ -1129,7 +1183,6 @@
     },
     {
       "external_id": "personagens-0039",
-      "type": "multiple_choice",
       "text": "Quem construiu a arca por ordem de Deus para escapar do dilúvio?",
       "options": [
         {
@@ -1149,7 +1202,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Faze para ti uma arca de madeira de gofer' (Gn 6:14); Noé 'fez conforme a tudo o que Deus lhe mandou' (Gn 6:22).",
       "divergence_note": null,
       "reference": {
@@ -1162,7 +1214,6 @@
     },
     {
       "external_id": "personagens-0040",
-      "type": "multiple_choice",
       "text": "Quem matou o gigante Golias com uma funda e uma pedra?",
       "options": [
         {
@@ -1182,7 +1233,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Tomou uma pedra e com a funda lha atirou, e feriu o filisteu na testa' (1Sm 17:49).",
       "divergence_note": null,
       "reference": {
@@ -1195,7 +1245,6 @@
     },
     {
       "external_id": "personagens-0041",
-      "type": "multiple_choice",
       "text": "Quem foi a primeira mulher, formada da costela de Adão?",
       "options": [
         {
@@ -1215,7 +1264,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Da costela que tirou do homem formou uma mulher'; Adão a chamou Eva, 'porque era a mãe de todos os viventes' (Gn 2:22; 3:20).",
       "divergence_note": null,
       "reference": {
@@ -1228,7 +1276,6 @@
     },
     {
       "external_id": "personagens-0042",
-      "type": "multiple_choice",
       "text": "Qual filho de Adão foi morto pelo próprio irmão?",
       "options": [
         {
@@ -1248,7 +1295,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Caim se levantou contra o seu irmão Abel, e o matou' (Gn 4:8) — o sangue de Abel clama da terra (Hb 12:24).",
       "divergence_note": null,
       "reference": {
@@ -1261,7 +1307,6 @@
     },
     {
       "external_id": "personagens-0043",
-      "type": "multiple_choice",
       "text": "Quem se transformou em estátua de sal ao olhar para trás?",
       "options": [
         {
@@ -1281,7 +1326,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'A mulher de Ló olhou para trás e ficou convertida numa estátua de sal' (Gn 19:26); Jesus a cita como advertência (Lc 17:32).",
       "divergence_note": null,
       "reference": {
@@ -1294,7 +1338,6 @@
     },
     {
       "external_id": "personagens-0044",
-      "type": "multiple_choice",
       "text": "Quais eram os três amigos de Daniel lançados na fornalha ardente?",
       "options": [
         {
@@ -1314,7 +1357,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Hananias, Misael e Azarias receberam na Babilônia os nomes Sadraque, Mesaque e Abednego (Dn 1:7; 3:20-25).",
       "divergence_note": null,
       "reference": {
@@ -1327,7 +1369,6 @@
     },
     {
       "external_id": "personagens-0045",
-      "type": "multiple_choice",
       "text": "Qual espia, junto com Josué, creu que Israel venceria e recebeu Hebrom por herança?",
       "options": [
         {
@@ -1347,7 +1388,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Calebe disse: 'Subamos animosamente e possuamo-la em herança' (Nm 13:30); aos 85 anos recebeu Hebrom (Js 14:6-14).",
       "divergence_note": null,
       "reference": {
@@ -1360,7 +1400,6 @@
     },
     {
       "external_id": "personagens-0046",
-      "type": "multiple_choice",
       "text": "Quem foi a esposa de Moisés, filha do sacerdote de Midiã?",
       "options": [
         {
@@ -1380,7 +1419,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "Reuel (Jetro) 'deu a Moisés sua filha Zípora' (Êx 2:21), que lhe deu Gérson e Eliézer.",
       "divergence_note": null,
       "reference": {
@@ -1393,7 +1431,6 @@
     },
     {
       "external_id": "personagens-0047",
-      "type": "multiple_choice",
       "text": "Que animal Sansão despedaçou com as próprias mãos a caminho de Timna?",
       "options": [
         {
@@ -1413,7 +1450,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Um filho de leão... e ele o fendeu de alto a baixo, como quem fende um cabrito' (Jz 14:5-6) — e depois achou mel na carcaça.",
       "divergence_note": null,
       "reference": {
@@ -1426,7 +1462,6 @@
     },
     {
       "external_id": "personagens-0048",
-      "type": "multiple_choice",
       "text": "Quantos filhos Jó tinha antes da provação?",
       "options": [
         {
@@ -1446,7 +1481,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "'Nasceram-lhe sete filhos e três filhas' (Jó 1:2); todos morreram, e Deus lhe deu de novo sete filhos e três filhas (Jó 42:13).",
       "divergence_note": null,
       "reference": {
@@ -1459,7 +1493,6 @@
     },
     {
       "external_id": "personagens-0049",
-      "type": "multiple_choice",
       "text": "Quem encontrou o menino Moisés numa arca de juncos, à beira do rio, e mais tarde o adotou como filho?",
       "options": [
         {
@@ -1479,7 +1512,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "A filha de Faraó desceu a lavar-se no rio, viu a arca no meio dos juncos e, ao abri-la, \"moveu-se de compaixão dele\" (Êx 2:5-6). Por sugestão da irmã do menino, a própria mãe foi chamada para criá-lo (Êx 2:7-9). Já crescido, ele foi levado à princesa, que o adotou e lhe deu o nome de Moisés (Êx 2:10); anos depois, porém, pela fé, ele \"recusou ser chamado filho da filha de Faraó\" (Hb 11:24).",
       "divergence_note": null,
       "reference": {
@@ -1492,12 +1524,24 @@
     },
     {
       "external_id": "personagens-0050",
-      "type": "open_answer",
       "text": "Qual oficial de Faraó, capitão da guarda, comprou José como escravo no Egito?",
-      "options": null,
-      "accepted_answers": [
-        "Potifar",
-        "Putifar"
+      "options": [
+        {
+          "text": "Potifar",
+          "correct": true
+        },
+        {
+          "text": "Potifera",
+          "correct": false
+        },
+        {
+          "text": "O copeiro-mor",
+          "correct": false
+        },
+        {
+          "text": "O padeiro-mor",
+          "correct": false
+        }
       ],
       "explanation": "José foi levado ao Egito e comprado por \"Potifar, eunuco de Faraó, capitão da guarda\" (Gn 39:1). Como o SENHOR fazia prosperar tudo o que José fazia, Potifar o pôs sobre toda a sua casa (Gn 39:2-4). Falsamente acusado pela mulher do seu senhor, José foi lançado no cárcere; ainda assim, o SENHOR estava com ele e lhe deu graça aos olhos do carcereiro-mor (Gn 39:19-21).",
       "divergence_note": null,
@@ -1511,12 +1555,24 @@
     },
     {
       "external_id": "personagens-0051",
-      "type": "open_answer",
       "text": "Qual patriarca o próprio Deus chama de \"meu amigo\" nas Escrituras?",
-      "options": null,
-      "accepted_answers": [
-        "Abraão",
-        "Abrão"
+      "options": [
+        {
+          "text": "Abraão",
+          "correct": true
+        },
+        {
+          "text": "Isaque",
+          "correct": false
+        },
+        {
+          "text": "Jacó",
+          "correct": false
+        },
+        {
+          "text": "Noé",
+          "correct": false
+        }
       ],
       "explanation": "Pela boca de Isaías, o SENHOR fala da \"semente de Abraão, meu amigo\" (Is 41:8), e o rei Josafá também ora lembrando \"Abraão, teu amigo\" (2Cr 20:7). Tiago liga o título à fé do patriarca, que creu em Deus e \"foi chamado o amigo de Deus\" (Tg 2:23).",
       "divergence_note": null,
@@ -1530,7 +1586,6 @@
     },
     {
       "external_id": "personagens-0052",
-      "type": "multiple_choice",
       "text": "Quem deu nome a todo o gado, às aves dos céus e a todos os animais do campo, antes mesmo da criação da mulher?",
       "options": [
         {
@@ -1550,7 +1605,6 @@
           "correct": false
         }
       ],
-      "accepted_answers": null,
       "explanation": "O SENHOR Deus trouxe os animais \"a Adão, para este ver como lhes chamaria; e tudo o que Adão chamou a toda a alma vivente, isso foi o seu nome\" (Gn 2:19). Ao nomeá-los, o homem exercia o domínio que Deus lhe confiara (Gn 1:28); mas, entre todos eles, \"não se achava adjutora que estivesse como diante dele\" (Gn 2:20), o que prepara a criação da mulher (Gn 2:21-22).",
       "divergence_note": null,
       "reference": {
@@ -1563,7 +1617,6 @@
     },
     {
       "external_id": "personagens-0053",
-      "type": "multiple_choice",
       "text": "Qual juiz canhoto, da tribo de Benjamim, livrou Israel matando Eglom, o rei dos moabitas?",
       "options": [
         {
@@ -1583,7 +1636,6 @@
           "correct": true
         }
       ],
-      "accepted_answers": null,
       "explanation": "Depois de dezoito anos servindo a Eglom, rei dos moabitas, Israel clamou, e o SENHOR levantou como libertador Eúde, filho de Gera, benjamita e canhoto (Jz 3:14-15). Ao levar um presente a Eglom, ele escondeu uma espada de dois fios sob as vestes, na coxa direita, e matou o rei a sós no seu cenáculo (Jz 3:16-22). Em seguida convocou Israel à batalha, e a terra sossegou oitenta anos (Jz 3:27-30).",
       "divergence_note": null,
       "reference": {

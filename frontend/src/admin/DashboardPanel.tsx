@@ -72,7 +72,6 @@ export function DashboardPanel({
         <CardTitle>Banco de perguntas</CardTitle>
         <div className="grid gap-3 sm:grid-cols-3">
           <MiniStat label="Inativas" value={questions.inactive} nested />
-          <MiniStat label="Resposta aberta" value={questions.open_answer} nested />
           <MiniStat
             label="Antigo / Novo Testamento"
             value={`${fmt(questions.old_testament)} / ${fmt(newTestament)}`}
@@ -101,7 +100,11 @@ export function DashboardPanel({
           <MiniStat label="Perguntas respondidas" value={activity.questions_answered} nested />
           <MiniStat label="Precisão geral" value={formatPercent(activity.accuracy)} nested />
           <MiniStat label="XP na temporada" value={activity.total_xp} nested />
-          <MiniStat label="Recorde de streak" value={`${fmt(activity.longest_streak)} dias`} nested />
+          <MiniStat
+            label="Recorde de streak"
+            value={`${fmt(activity.longest_streak)} dias`}
+            nested
+          />
           <MiniStat label="Nível mais alto na temporada" value={activity.max_level} nested />
           <MiniStat
             label="Duelos"
@@ -145,7 +148,11 @@ function HeroStat({
   )
   if (onClick) {
     return (
-      <button type="button" onClick={onClick} className={`rounded-3xl bg-white p-5 shadow-card ${className}`}>
+      <button
+        type="button"
+        onClick={onClick}
+        className={`rounded-3xl bg-white p-5 shadow-card ${className}`}
+      >
         {inner}
       </button>
     )
@@ -165,7 +172,11 @@ function MiniStat({
   nested?: boolean
 }) {
   return (
-    <div className={nested ? 'rounded-2xl bg-sand-50 px-4 py-3' : 'rounded-3xl bg-white px-4 py-4 shadow-card'}>
+    <div
+      className={
+        nested ? 'rounded-2xl bg-sand-50 px-4 py-3' : 'rounded-3xl bg-white px-4 py-4 shadow-card'
+      }
+    >
       <p className="text-xs font-extrabold uppercase tracking-wide text-sand-500">{label}</p>
       <p className="mt-1 text-xl font-extrabold text-ink">
         {typeof value === 'number' ? fmt(value) : value}
