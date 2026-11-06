@@ -54,7 +54,7 @@ export function AdminApp() {
           <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-leaf-500 text-white">
             <Glyph as={AppIcons.lock} className="h-4 w-4" />
           </span>
-          <span className="text-lg font-extrabold tracking-tight">mavva · admin</span>
+          <span className="text-lg font-extrabold tracking-tight">Mavva · admin</span>
         </div>
         <div className="flex items-center gap-4">
           <span className="hidden text-sm font-semibold text-sand-500 sm:inline">

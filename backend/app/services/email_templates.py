@@ -87,7 +87,7 @@ def _shell(*, preheader: str, heading: str, body_html: str) -> str:
                    style="display:block; margin:0 auto;">
               <div style="font-family:{FONT_STACK}; font-weight:800; font-size:22px; color:#ffffff;
                           letter-spacing:-0.02em; margin-top:6px;">
-                mavva
+                Mavva
               </div>
             </td>
           </tr>
