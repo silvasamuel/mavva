@@ -80,3 +80,12 @@ export const SUGGESTION_KIND_LABELS = {
   feature: 'Nova funcionalidade',
   correction: 'Correção',
 } as const
+
+/** Whole reais from cents, pt-BR style: 1000 → "R$ 10,00". */
+export function formatReais(cents: number): string {
+  // Intl separates "R$" with a no-break space; a plain one reads the same and
+  // matches what players type or search for.
+  return (cents / 100)
+    .toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+    .replace(/\u00a0/g, ' ')
+}

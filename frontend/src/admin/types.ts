@@ -6,7 +6,7 @@ import type {
   Testament,
 } from '@/types/api'
 
-export type AdminTab = 'home' | 'activity' | 'review' | 'questions' | 'users' | 'news'
+export type AdminTab = 'home' | 'activity' | 'review' | 'questions' | 'users' | 'news' | 'support'
 
 export interface AdminAnnouncement {
   id: string
@@ -283,4 +283,39 @@ export interface AdminReviewInbox {
   flags: AdminFlag[]
   proposals: AdminProposal[]
   suggestions: AdminSuggestion[]
+}
+
+// --- Donations ("Apoie o Mavva") ---
+
+export interface AdminDonor {
+  user_id: string
+  username: string
+  name: string
+  total_cents: number
+  donations: number
+  last_donation_at: string
+  supporter_until: string | null
+  is_supporter: boolean
+}
+
+export interface AdminSupportPayment {
+  id: string
+  user_id: string
+  username: string
+  name: string
+  amount_cents: number
+  status: 'pending' | 'approved' | 'expired' | 'cancelled'
+  provider: string
+  provider_payment_id: string
+  created_at: string
+  approved_at: string | null
+}
+
+export interface AdminSupport {
+  total_cents: number
+  approved_count: number
+  pending_count: number
+  active_supporters: number
+  donors: AdminDonor[]
+  recent: AdminSupportPayment[]
 }

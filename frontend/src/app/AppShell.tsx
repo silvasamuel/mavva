@@ -104,6 +104,7 @@ export function AppShell({ children }: { children?: ReactNode }) {
           duel_wins: data.duels.wins,
           duel_losses: data.duels.losses,
           duel_draws: data.duels.draws,
+          is_supporter: user.is_supporter,
         }
       : null
 
@@ -173,6 +174,7 @@ export function AppShell({ children }: { children?: ReactNode }) {
                 xpInto={data?.stats.xp_into_level}
                 xpForNext={data?.stats.xp_for_next_level}
                 streak={streak}
+                supporter={user?.is_supporter ?? false}
                 onOpenProfile={user ? () => setProfileOpen(true) : undefined}
               />
             </div>

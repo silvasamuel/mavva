@@ -50,6 +50,9 @@ function makeUser(overrides: Partial<User> = {}): User {
     review_session_size: 10,
     review_max_interval_days: null,
     tutorial_completed: true,
+    is_supporter: false,
+    supporter_since: null,
+    supporter_until: null,
     ...overrides,
   }
 }
@@ -110,9 +113,7 @@ describe('ReviewPage', () => {
 
   it('mentions the max interval when one is set', async () => {
     currentUser = makeUser({ review_max_interval_days: 30 })
-    get.mockResolvedValue(
-      summary({ spacing_preview: { ...PREVIEW, balanced: [1, 3, 8, 21, 30] } })
-    )
+    get.mockResolvedValue(summary({ spacing_preview: { ...PREVIEW, balanced: [1, 3, 8, 21, 30] } }))
     renderPage()
     expect(await screen.findByText(/nenhum intervalo passa de 30 dias/i)).toBeInTheDocument()
   })

@@ -37,7 +37,7 @@ export function AdminLogin({
         <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-leaf-500 text-white">
           <Glyph as={AppIcons.lock} className="h-5 w-5" />
         </span>
-        <span className="text-2xl font-extrabold tracking-tight">mavva · admin</span>
+        <span className="text-2xl font-extrabold tracking-tight">Mavva · admin</span>
       </div>
 
       {forbidden ? (

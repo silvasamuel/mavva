@@ -1,7 +1,7 @@
 """Admin-only API. Every route depends on AdminUser (403 for non-admins)."""
 
 import uuid
-from datetime import date
+from datetime import UTC, date, datetime
 from typing import Any
 
 from fastapi import APIRouter, HTTPException, Query, status
@@ -25,11 +25,14 @@ from app.schemas.admin import (
     AdminActivityOut,
     AdminCategoryOut,
     AdminDashboardOut,
+    AdminDonorOut,
     AdminOption,
     AdminQuestionDetail,
     AdminQuestionList,
     AdminQuestionListItem,
     AdminQuestionUpdate,
+    AdminSupportOut,
+    AdminSupportPaymentOut,
     AdminUserDetail,
     AdminUserList,
     AdminUserOut,
@@ -52,6 +55,7 @@ from app.services import (
     auth_service,
     content_sync,
     moderation_service,
+    support_service,
     user_service,
 )
 from app.services.content_sync import ContentSyncError
@@ -487,6 +491,50 @@ def review_suggestion(suggestion_id: uuid.UUID, _admin: AdminUser, db: DbDep) ->
     except ModerationError as error:
         raise HTTPException(error.status_code, error.message) from error
     db.commit()
+
+
+# --- Donations ("Apoie o Mavva") ---
+
+
+@router.get("/support", response_model=AdminSupportOut)
+def support_overview(_admin: AdminUser, db: DbDep) -> AdminSupportOut:
+    """Totals, how much each player gave and the latest Pix charges."""
+    info = support_service.admin_overview(db)
+    now = datetime.now(UTC)
+    return AdminSupportOut(
+        total_cents=info.total_cents,
+        approved_count=info.approved_count,
+        pending_count=info.pending_count,
+        active_supporters=info.active_supporters,
+        donors=[
+            AdminDonorOut(
+                user_id=d.user_id,
+                username=d.username,
+                name=d.name,
+                total_cents=d.total_cents,
+                donations=d.donations,
+                last_donation_at=d.last_donation_at,
+                supporter_until=d.supporter_until,
+                is_supporter=d.supporter_until is not None and d.supporter_until > now,
+            )
+            for d in info.donors
+        ],
+        recent=[
+            AdminSupportPaymentOut(
+                id=payment.id,
+                user_id=user.id,
+                username=user.username,
+                name=user.name,
+                amount_cents=payment.amount_cents,
+                status=payment.status.value,
+                provider=payment.provider,
+                provider_payment_id=payment.provider_payment_id,
+                created_at=payment.created_at,
+                approved_at=payment.approved_at,
+            )
+            for payment, user in info.recent
+        ],
+    )
 
 
 # --- Announcements ("Novidades") ---

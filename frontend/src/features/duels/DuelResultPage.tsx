@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
 import { Spinner } from '@/components/ui/Spinner'
 import { RankBadge } from '@/components/RankBadge'
+import { SupporterBadge } from '@/components/SupporterBadge'
 import { formatStudyTime } from '@/lib/format'
 import { AppIcons, Glyph, type Icon } from '@/lib/icons'
 
@@ -77,8 +78,9 @@ export function DuelResultPage() {
           <div className="text-center">
             <p className="text-xs font-extrabold uppercase tracking-wide text-sand-500">Você</p>
             {duel.me.user && (
-              <div className="mt-1 flex justify-center">
+              <div className="mt-1 flex flex-col items-center gap-1">
                 <RankBadge code={duel.me.user.rank.code} size="sm" />
+                {duel.me.user.is_supporter && <SupporterBadge />}
               </div>
             )}
             <motion.p
@@ -101,8 +103,9 @@ export function DuelResultPage() {
               {rival ? `@${rival.username}` : 'Rival'}
             </p>
             {rival && (
-              <div className="mt-1 flex justify-center">
+              <div className="mt-1 flex flex-col items-center gap-1">
                 <RankBadge code={rival.rank.code} size="sm" />
+                {rival.is_supporter && <SupporterBadge />}
               </div>
             )}
             <p className="text-4xl font-extrabold text-sand-500">
@@ -118,7 +121,9 @@ export function DuelResultPage() {
       {duel.xp_change != null && (
         <Card
           className={`flex items-center justify-between ${
-            duel.xp_change >= 0 ? 'bg-grain-50 ring-1 ring-grain-200' : 'bg-red-50 ring-1 ring-red-200'
+            duel.xp_change >= 0
+              ? 'bg-grain-50 ring-1 ring-grain-200'
+              : 'bg-red-50 ring-1 ring-red-200'
           }`}
         >
           <p className="font-extrabold">

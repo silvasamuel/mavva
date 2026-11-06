@@ -23,6 +23,38 @@ export interface User {
   review_max_interval_days: number | null
   /** False until the player finishes or skips the first-login tutorial. */
   tutorial_completed: boolean
+  /** True while the "Mavva Apoiador" badge lasts (every R$ 30 donated = 30 days). */
+  is_supporter: boolean
+  supporter_since: string | null
+  supporter_until: string | null
+}
+
+// --- Apoie o Mavva (Pix donations) ---
+
+export type SupportPaymentStatus = 'pending' | 'approved' | 'expired' | 'cancelled'
+
+export interface SupportPayment {
+  id: string
+  amount_cents: number
+  status: SupportPaymentStatus
+  /** Badge days this charge grants once approved. */
+  supporter_days: number
+  /** "mercadopago", or "fake" when the API runs without credentials (dev). */
+  provider: string
+  /** Pix "copia e cola" payload; the QR code is rendered from it. */
+  qr_code: string
+  ticket_url: string | null
+  expires_at: string
+  approved_at: string | null
+  created_at: string
+}
+
+export interface SupportSummary {
+  is_supporter: boolean
+  supporter_since: string | null
+  supporter_until: string | null
+  total_cents: number
+  last_payment: SupportPayment | null
 }
 
 // --- Social: friends and duels ---
@@ -52,6 +84,8 @@ export interface PublicUser {
   duel_wins: number
   duel_losses: number
   duel_draws: number
+  /** Shows the Apoiador badge next to the rank (approved Pix donation). */
+  is_supporter?: boolean
 }
 
 export type RelationStatus = 'none' | 'pending_sent' | 'pending_received' | 'friends'
@@ -128,6 +162,7 @@ export interface SeasonPodium {
     name: string
     final_xp: number
     rank: { code: string; name: string }
+    is_supporter?: boolean
   }[]
 }
 

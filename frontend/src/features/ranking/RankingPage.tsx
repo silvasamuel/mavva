@@ -17,6 +17,7 @@ import type {
 import { MonthPrize } from '@/components/MonthPrize'
 import { PlayerProfileModal } from '@/components/PlayerProfileModal'
 import { RankBadge } from '@/components/RankBadge'
+import { SupporterBadge } from '@/components/SupporterBadge'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
 import { Spinner } from '@/components/ui/Spinner'
@@ -84,8 +85,11 @@ function PlayerRow({
         </span>
         <RankBadge code={user.rank.code} size="sm" />
         <div className="min-w-0 flex-1">
-          <p className="truncate font-extrabold text-ink">
-            {isMe ? `Você · @${user.username}` : `@${user.username}`}
+          <p className="flex items-center gap-1.5 font-extrabold text-ink">
+            <span className="truncate">
+              {isMe ? `Você · @${user.username}` : `@${user.username}`}
+            </span>
+            {user.is_supporter && <SupporterBadge />}
           </p>
           <p className="truncate text-xs font-semibold text-sand-500">{detail}</p>
         </div>

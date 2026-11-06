@@ -11,6 +11,7 @@ import { QuestionsPanel } from './QuestionsPanel'
 import { ReviewPanel } from './ReviewPanel'
 import { PublishBar } from './PublishBar'
 import { AnnouncementsPanel } from './AnnouncementsPanel'
+import { SupportPanel } from './SupportPanel'
 import type { AdminDashboard, AdminTab } from './types'
 import { AppIcons, Glyph } from '@/lib/icons'
 
@@ -21,6 +22,7 @@ const TABS: { value: AdminTab; label: string; icon: typeof AppIcons.home }[] = [
   { value: 'questions', label: 'Perguntas', icon: AppIcons.study },
   { value: 'users', label: 'Usuários', icon: AppIcons.users },
   { value: 'news', label: 'Novidades', icon: AppIcons.bell },
+  { value: 'support', label: 'Doações', icon: AppIcons.heart },
 ]
 
 export function AdminApp() {
@@ -52,10 +54,12 @@ export function AdminApp() {
           <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-leaf-500 text-white">
             <Glyph as={AppIcons.lock} className="h-4 w-4" />
           </span>
-          <span className="text-lg font-extrabold tracking-tight">mavva · admin</span>
+          <span className="text-lg font-extrabold tracking-tight">Mavva · admin</span>
         </div>
         <div className="flex items-center gap-4">
-          <span className="hidden text-sm font-semibold text-sand-500 sm:inline">{user?.email}</span>
+          <span className="hidden text-sm font-semibold text-sand-500 sm:inline">
+            {user?.email}
+          </span>
           <button
             onClick={logout}
             className="rounded-xl bg-sand-100 px-3 py-1.5 text-xs font-extrabold uppercase text-sand-600 hover:bg-sand-200"
@@ -97,13 +101,17 @@ export function AdminApp() {
             </div>
           )
         ) : tab === 'activity' ? (
-          user ? <ActivityPanel adminId={user.id} /> : null
+          user ? (
+            <ActivityPanel adminId={user.id} />
+          ) : null
         ) : tab === 'review' ? (
           <ReviewPanel />
         ) : tab === 'questions' ? (
           <QuestionsPanel />
         ) : tab === 'news' ? (
           <AnnouncementsPanel />
+        ) : tab === 'support' ? (
+          <SupportPanel />
         ) : user ? (
           <UsersPanel adminId={user.id} />
         ) : null}

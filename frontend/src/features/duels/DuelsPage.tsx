@@ -9,6 +9,7 @@ import { Card, CardTitle } from '@/components/ui/Card'
 import { Spinner } from '@/components/ui/Spinner'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { RankBadge } from '@/components/RankBadge'
+import { SupporterBadge } from '@/components/SupporterBadge'
 import { Modal } from '@/components/ui/Modal'
 import { formatPercent, formatRelativeDate } from '@/lib/format'
 import { AppIcons, Glyph } from '@/lib/icons'
@@ -53,8 +54,7 @@ function DuelCard({ duel, onPlay }: { duel: Duel; onPlay: (duel: Duel) => void }
                 />
                 {duel.mode === 'friend' ? 'Amigo' : 'Aleatório'}
               </span>{' '}
-              ·{' '}
-              {formatRelativeDate(duel.created_at)}
+              · {formatRelativeDate(duel.created_at)}
             </span>
           </div>
           <p className="mt-1 truncate font-extrabold text-ink">
@@ -65,9 +65,7 @@ function DuelCard({ duel, onPlay }: { duel: Duel; onPlay: (duel: Duel) => void }
               {duel.me.correct} <span className="text-sand-400">×</span>{' '}
               {duel.rival.finished ? duel.rival.correct : '—'}
               {duel.xp_change != null && (
-                <span
-                  className={`ml-2 ${duel.xp_change >= 0 ? 'text-grain-700' : 'text-red-600'}`}
-                >
+                <span className={`ml-2 ${duel.xp_change >= 0 ? 'text-grain-700' : 'text-red-600'}`}>
                   {duel.xp_change > 0 ? `+${duel.xp_change}` : duel.xp_change} XP
                 </span>
               )}
@@ -206,7 +204,10 @@ export function DuelsPage() {
                   <div className="flex min-w-0 flex-1 items-start gap-3">
                     <RankBadge code={friend.rank.code} size="sm" />
                     <div className="min-w-0">
-                      <p className="truncate font-extrabold text-ink">{friend.name}</p>
+                      <p className="flex items-center gap-1.5 font-extrabold text-ink">
+                        <span className="truncate">{friend.name}</span>
+                        {friend.is_supporter && <SupporterBadge />}
+                      </p>
                       <p className="truncate text-xs font-semibold text-sand-500">
                         @{friend.username}
                       </p>
@@ -241,7 +242,10 @@ export function DuelsPage() {
         </div>
 
         {error && (
-          <p role="alert" className="rounded-2xl bg-red-50 px-4 py-3 text-sm font-bold text-red-700">
+          <p
+            role="alert"
+            className="rounded-2xl bg-red-50 px-4 py-3 text-sm font-bold text-red-700"
+          >
             {error}
           </p>
         )}

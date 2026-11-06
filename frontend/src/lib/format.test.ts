@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { formatDays, formatPercent, formatSeasonEnd, formatStudyTime } from './format'
+import { formatDays, formatPercent, formatReais, formatSeasonEnd, formatStudyTime } from './format'
 
 describe('formatStudyTime', () => {
   it('shows seconds under a minute', () => {
@@ -44,5 +44,13 @@ describe('formatSeasonEnd', () => {
     expect(formatSeasonEnd(2)).toBe('termina em 2 dias')
     expect(formatSeasonEnd(1)).toBe('último dia')
     expect(formatSeasonEnd(0)).toBe('último dia')
+  })
+})
+
+describe('formatReais', () => {
+  it('writes cents as Brazilian currency with a plain space', () => {
+    expect(formatReais(1000)).toBe('R$ 10,00')
+    expect(formatReais(1550)).toBe('R$ 15,50')
+    expect(formatReais(100_000)).toBe('R$ 1.000,00')
   })
 })

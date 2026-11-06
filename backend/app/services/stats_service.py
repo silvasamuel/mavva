@@ -158,6 +158,7 @@ def _podium_payload(db: Session, season: Any) -> dict[str, Any] | None:
                 "name": users[r.user_id].name,
                 "final_xp": r.final_xp,
                 "rank": rank_payload(r.final_level),
+                "is_supporter": users[r.user_id].is_supporter,
             }
             for r in results
             if r.user_id in users

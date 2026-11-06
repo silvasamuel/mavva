@@ -11,6 +11,7 @@ from app.api.v1 import (
     quizzes,
     ranking,
     social,
+    support,
     users,
 )
 
@@ -27,4 +28,5 @@ api_router.include_router(social.players_router)
 api_router.include_router(ranking.router)
 api_router.include_router(moderation.router)
 api_router.include_router(notifications.router)
+api_router.include_router(support.router)
 api_router.include_router(admin.router)

@@ -281,6 +281,25 @@ Assim quem acabou de chegar não recebe o histórico inteiro como novidade.
 
 O dashboard traz `notifications_unread` para o badge do sino.
 
+## Apoie o Mavva (ofertas via Pix)
+
+Doações por Pix pelo Mercado Pago (API de Orders, via o SDK oficial `mercadopago`).
+Cada R$ 30 (ou fração) de oferta aprovada mantém o selo de **Mavva Apoiador** por 30 dias
+(R$ 1–30 → 30 dias, R$ 31–60 → 60, …), somando ao prazo ainda em vigor; `users.supporter_since`
+guarda a primeira oferta e `users.supporter_until` até quando o selo vale. `UserOut` expõe
+`is_supporter`, `supporter_since` e `supporter_until`; `PublicUser` expõe `is_supporter`. Sem `MERCADOPAGO_ACCESS_TOKEN` a API
+usa um provedor simulado (`provider = "fake"`), que só é aprovado pela rota de simulação —
+nunca em produção. Com credenciais de **teste** e `MERCADOPAGO_SANDBOX_AUTO_APPROVE=true`,
+a order vai com `payer.first_name = "APRO"` e o sandbox aprova o Pix sozinho.
+
+| Método | Rota | Descrição |
+|---|---|---|
+| GET | `/support/me` | `{is_supporter, supporter_since, supporter_until, total_cents, last_payment}`. O último Pix volta para a tela retomar um pendente depois de recarregar. |
+| POST | `/support/payments` | `{amount_cents}` (mínimo 500, ou seja, R$ 5; sem teto). Cria a order Pix no provedor (`provider_payment_id` guarda o id `ORD…`) e devolve `{id, amount_cents, status, supporter_days, provider, qr_code, ticket_url, expires_at, approved_at, created_at}`. `qr_code` é o "copia e cola"; o QR é desenhado a partir dele. Expira em 30 min. 502 se o provedor falhar. Limite: 10/min. |
+| GET | `/support/payments/{id}` | Estado atual; enquanto pendente consulta o provedor a cada chamada (a tela faz polling a cada 5 s). `status`: `pending`, `approved`, `expired`, `cancelled`. Só o dono vê (404 para os demais). |
+| POST | `/support/payments/{id}/simulate` | **Apenas desenvolvimento** (provedor simulado): aprova o Pix como se tivesse sido pago. 404 em produção. |
+| POST | `/support/webhooks/mercadopago` | Chamado pelo Mercado Pago para o evento **Order** (`?data.id=ORD…&type=order`; URL configurada no painel de Webhooks). Só diz *qual* order olhar: o status vem sempre de um GET novo no provedor, então uma chamada forjada não aprova nada. Com `MERCADOPAGO_WEBHOOK_SECRET` valida o header `x-signature` (HMAC-SHA256 de `id:{data.id minúsculo};request-id:{x-request-id};ts:{ts};`). Responde 200 para ids desconhecidos; 503 pede nova tentativa se o provedor estiver fora. |
+
 ## Admin (requer `role = admin`)
 
 Toda rota abaixo passa pela dependência `AdminUser` no backend: **403** para
@@ -300,6 +319,7 @@ real — o front-end separado (bundle `/admin`) é conveniência, não proteçã
 | GET | `/admin/questions/{id}` | Detalhe completo (enunciado, explicação, referência, opções, respostas). |
 | PATCH | `/admin/questions/{id}` | Edita campos enviados (`exclude_unset`). Valida as alternativas (4 opções, 1 correta). `category_id` é imutável. |
 | GET | `/admin/content/status` | Compara o banco com `content/questions/*.json`: `{mode: github\|local, dirty_files}`. |
+| GET | `/admin/support` | Doações: `{total_cents, approved_count, pending_count, active_supporters, donors[], recent[]}`. `donors` traz o total por usuário (maior primeiro), número de ofertas, última e até quando vale o selo; `recent` as 30 últimas cobranças Pix com status. |
 | GET | `/admin/announcements` | Todas as novidades: rascunhos primeiro, depois as publicadas da mais nova para a mais antiga. |
 | POST | `/admin/announcements` | Body: `{title (≤120), body (≤2000), kind, published}`. `published=false` salva como rascunho. 201. |
 | PATCH | `/admin/announcements/{id}` | Edita os campos enviados. `published: true` publica (a data é gravada só na primeira vez — corrigir um texto depois não volta a marcar como não lido); `false` volta a rascunho. 404 se não existir. |

@@ -17,4 +17,14 @@ describe('GameHud', () => {
     render(<GameHud rankCode="broto" rankName="Broto" level={6} />)
     expect(screen.queryByRole('button', { name: 'Ver meu perfil' })).not.toBeInTheDocument()
   })
+
+  it('wears the Apoiador badge for supporters', () => {
+    render(<GameHud rankCode="broto" rankName="Broto" level={6} supporter />)
+    expect(screen.getByTitle('Mavva Apoiador')).toHaveTextContent('Apoiador')
+  })
+
+  it('shows no badge for everyone else', () => {
+    render(<GameHud rankCode="broto" rankName="Broto" level={6} />)
+    expect(screen.queryByTitle('Mavva Apoiador')).not.toBeInTheDocument()
+  })
 })
