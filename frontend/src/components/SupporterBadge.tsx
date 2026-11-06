@@ -5,6 +5,23 @@ const SIZE = {
   md: 'gap-1.5 px-2.5 py-1 text-xs',
 } as const
 
+/** Gold bezel around a rank avatar: part of the supporter skin. */
+export function SupporterFrame({
+  children,
+  className = '',
+}: {
+  children: React.ReactNode
+  className?: string
+}) {
+  return (
+    <span
+      className={`inline-flex rounded-2xl bg-gradient-to-br from-grain-200 via-grain-400 to-grain-600 p-[3px] shadow-[0_0_12px_-2px_#f3cb57] ${className}`}
+    >
+      <span className="inline-flex rounded-[0.8rem] bg-grain-50 p-0.5">{children}</span>
+    </span>
+  )
+}
+
 /** Gold "Apoiador" pill shown next to the rank of players who donated. */
 export function SupporterBadge({ size = 'sm' }: { size?: keyof typeof SIZE }) {
   return (

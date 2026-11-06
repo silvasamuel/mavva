@@ -363,6 +363,7 @@ const PERKS_SOON = [
   'Criar ligas só para convidados e disputar com a sua turma',
   'Adicionar as suas próprias perguntas à liga',
   'Mavva sem anúncios, para sempre',
+  'Missões diárias',
   'Aplicativos Android e iOS',
 ] as const
 
