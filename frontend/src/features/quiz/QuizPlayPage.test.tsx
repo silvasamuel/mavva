@@ -7,6 +7,10 @@ import type { AnswerFeedback, QuizQuestion, QuizSession } from '@/types/api'
 import { playCombo } from '@/lib/sfx'
 import { QuizPlayPage } from './QuizPlayPage'
 
+vi.mock('@/features/auth/AuthContext', () => ({
+  useAuth: () => ({ user: { id: 'u1', name: 'Maria', is_supporter: false } }),
+}))
+
 vi.mock('@/lib/sfx', () => ({
   playCombo: vi.fn(),
   playCorrect: vi.fn(),
