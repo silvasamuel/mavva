@@ -167,6 +167,7 @@ describe('QuizPlayPage report during a round', () => {
 
     const splash = await screen.findByRole('dialog', { name: 'Resposta correta' })
     expect(splash).toHaveTextContent('Personagens')
+    expect(splash).toHaveTextContent('RespostaNoé')
     const next = screen.getByRole('button', { name: /continuar/i })
     const report = screen.getByRole('button', { name: /há um problema nesta pergunta/i })
     // The link sits after the button, so a tap aimed at "Continuar" can't land on it.

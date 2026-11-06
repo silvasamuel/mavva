@@ -293,6 +293,11 @@ export function QuizPlayPage() {
   const comboShown = combo ?? session.combo ?? 0
   const comboBonus = feedback?.combo_bonus_xp ?? 0
   const baseXp = (feedback?.xp_earned ?? 0) - comboBonus
+  // The splash names the right answer whether the player hit or missed it;
+  // the server sends its id, the text is already here with the options.
+  const correctAnswer = feedback
+    ? displayOptions.find((option) => option.id === feedback.correct_option_id)?.text
+    : undefined
 
   return (
     <>
@@ -530,6 +535,14 @@ export function QuizPlayPage() {
                       </p>
                     )}
                   </motion.div>
+                )}
+                {correctAnswer && (
+                  <p className="text-center text-lg font-extrabold leading-snug">
+                    <span className="mr-1 text-xs font-extrabold uppercase tracking-wide text-white/70">
+                      Resposta
+                    </span>
+                    {correctAnswer}
+                  </p>
                 )}
                 <p className="text-center text-sm font-bold leading-relaxed text-white/90">
                   {feedback.explanation}
