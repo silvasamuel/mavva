@@ -281,6 +281,21 @@ Assim quem acabou de chegar não recebe o histórico inteiro como novidade.
 
 O dashboard traz `notifications_unread` para o badge do sino.
 
+## Apoie o Mavva (ofertas via Pix)
+
+Doações por Pix pelo Mercado Pago. A primeira oferta aprovada torna o jogador um
+**Mavva Apoiador** (`users.supporter_since`); `UserOut` expõe `is_supporter` e
+`supporter_since`. Sem `MERCADOPAGO_ACCESS_TOKEN` a API usa um provedor simulado
+(`provider = "fake"`), que só é aprovado pela rota de simulação — nunca em produção.
+
+| Método | Rota | Descrição |
+|---|---|---|
+| GET | `/support/me` | `{is_supporter, supporter_since, total_cents, last_payment}`. O último Pix volta para a tela retomar um pendente depois de recarregar. |
+| POST | `/support/payments` | `{amount_cents}` (100 a 100000). Cria a cobrança no provedor e devolve `{id, amount_cents, status, provider, qr_code, ticket_url, expires_at, approved_at, created_at}`. `qr_code` é o "copia e cola"; o QR é desenhado a partir dele. Expira em 30 min. 502 se o provedor falhar. Limite: 10/min. |
+| GET | `/support/payments/{id}` | Estado atual; enquanto pendente consulta o provedor a cada chamada (a tela faz polling a cada 5 s). `status`: `pending`, `approved`, `expired`, `cancelled`. Só o dono vê (404 para os demais). |
+| POST | `/support/payments/{id}/simulate` | **Apenas desenvolvimento** (provedor simulado): aprova o Pix como se tivesse sido pago. 404 em produção. |
+| POST | `/support/webhooks/mercadopago` | Chamado pelo Mercado Pago (`?data.id=…&type=payment`). Só diz *qual* pagamento olhar: o status vem sempre de um GET novo no provedor, então uma chamada forjada não aprova nada. Com `MERCADOPAGO_WEBHOOK_SECRET` valida o header `x-signature` (HMAC-SHA256 de `id:{data.id};request-id:{x-request-id};ts:{ts};`). Responde 200 para ids desconhecidos; 503 pede nova tentativa se o provedor estiver fora. |
+
 ## Admin (requer `role = admin`)
 
 Toda rota abaixo passa pela dependência `AdminUser` no backend: **403** para

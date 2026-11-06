@@ -43,6 +43,7 @@ erDiagram
 | season_start_seen / season_end_seen | INT NULL | número da última temporada cujo aviso de início / fim o jogador fechou; null = nunca |
 | notifications_seen_at | TIMESTAMPTZ NULL | última vez que abriu "Novidades"; null = conta a partir do cadastro |
 | podium_seen_season | INT NULL | última temporada cuja comemoração de pódio o jogador viu |
+| supporter_since | TIMESTAMPTZ NULL | primeira oferta Pix aprovada; não nulo = Mavva Apoiador |
 | created_at / updated_at | TIMESTAMPTZ | |
 
 ### refresh_tokens
@@ -155,6 +156,15 @@ as linhas entram num único `INSERT … SELECT`.
 published_at TIMESTAMPTZ NULL, created_by_id FK users (SET NULL), created_at, updated_at`
 `published_at` nulo = rascunho; índice em `published_at`. Não lido para um jogador =
 `published_at > coalesce(users.notifications_seen_at, users.created_at)`.
+
+### support_payments *(ofertas via Pix — "Apoie o Mavva")*
+`id UUID PK, user_id FK users (CASCADE), amount_cents INT, status ENUM(pending, approved,
+expired, cancelled), provider VARCHAR(20), provider_payment_id VARCHAR(64) UNIQUE,
+qr_code TEXT, ticket_url VARCHAR(500) NULL, expires_at TIMESTAMPTZ, approved_at TIMESTAMPTZ NULL,
+created_at, updated_at`
+`provider` é `mercadopago` ou `fake` (dev sem credenciais). Estados finais nunca voltam a
+mudar, então webhook repetido é inofensivo. A primeira aprovação grava
+`users.supporter_since` (o jogador vira Mavva Apoiador).
 
 ### daily_activities *(série temporal do gráfico de evolução + cálculo de streak)*
 `id UUID PK, user_id FK, date DATE, xp INT, questions INT, correct INT, time_seconds INT`

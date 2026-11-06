@@ -11,6 +11,7 @@ from app.models.quiz import QuizAnswer, QuizSession, QuizSessionQuestion
 from app.models.rate_limit import RateLimitBucket
 from app.models.season import Season, SeasonResult
 from app.models.social import Duel, Friendship
+from app.models.support import SupportPayment
 from app.models.user import (
     EmailVerificationToken,
     PasswordResetToken,
@@ -41,6 +42,7 @@ __all__ = [
     "ReviewItem",
     "Season",
     "SeasonResult",
+    "SupportPayment",
     "User",
     "UserAchievement",
     "UserStats",

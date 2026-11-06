@@ -22,6 +22,7 @@ import { DuelResultPage } from '@/features/duels/DuelResultPage'
 import { FriendsPage } from '@/features/friends/FriendsPage'
 import { RankingPage } from '@/features/ranking/RankingPage'
 import { SuggestQuestionPage } from '@/features/moderation/SuggestQuestionPage'
+import { SupportPage } from '@/features/support/SupportPage'
 import { PrivacyPage } from '@/features/legal/PrivacyPage'
 import { TermsPage } from '@/features/legal/TermsPage'
 import { TrackingConsent } from '@/features/legal/TrackingConsent'
@@ -76,6 +77,7 @@ export default function App() {
                 <Route path="/notifications" element={<NotificationsPage />} />
                 <Route path="/suggest" element={<SuggestQuestionPage />} />
                 <Route path="/profile" element={<ProfilePage />} />
+                <Route path="/apoie" element={<SupportPage />} />
               </Route>
             </Route>
 

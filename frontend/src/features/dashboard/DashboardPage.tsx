@@ -202,6 +202,37 @@ export function DashboardPage() {
         />
       </motion.div>
 
+      <motion.button
+        variants={enter}
+        type="button"
+        onClick={() => navigate('/apoie')}
+        className={`btn-press flex w-full items-center gap-3 rounded-3xl px-4 py-3 text-left ${
+          user?.is_supporter
+            ? 'border-grain-500 bg-grain-50'
+            : 'border-sand-300 bg-white/80 hover:border-grain-400 hover:bg-grain-50'
+        }`}
+      >
+        <span
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-grain-100 text-grain-700"
+          aria-hidden
+        >
+          <Glyph as={AppIcons.heart} className="h-6 w-6" />
+        </span>
+        <span className="flex-1">
+          <span className="block text-sm font-extrabold text-ink">
+            {user?.is_supporter ? 'Você é Mavva Apoiador' : 'Apoie o Mavva'}
+          </span>
+          <span className="block text-xs font-semibold text-sand-500">
+            {user?.is_supporter
+              ? 'Obrigado! Ofertar de novo via Pix'
+              : 'Oferte via Pix e ganhe o selo de Apoiador'}
+          </span>
+        </span>
+        <span className="rounded-full bg-grain-400 px-2.5 py-0.5 text-xs font-extrabold text-grain-900">
+          Pix
+        </span>
+      </motion.button>
+
       <motion.section
         variants={enter}
         className="rounded-3xl bg-white/75 px-4 py-4 shadow-card backdrop-blur-sm sm:px-5"

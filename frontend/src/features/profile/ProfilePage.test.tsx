@@ -23,6 +23,8 @@ const user: User = {
   review_session_size: 10,
   review_max_interval_days: null,
   tutorial_completed: true,
+  is_supporter: false,
+  supporter_since: null,
 }
 
 vi.mock('@/features/auth/AuthContext', () => ({

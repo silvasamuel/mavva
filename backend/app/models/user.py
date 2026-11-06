@@ -57,12 +57,18 @@ class User(TimestampMixin, Base):
     # Number of the last season whose podium celebration (1st, 2nd or 3rd) this
     # player has seen.
     podium_seen_season: Mapped[int | None] = mapped_column(default=None)
+    # First approved Pix donation; from then on the player is a "Mavva Apoiador".
+    supporter_since: Mapped[datetime | None] = mapped_column(default=None)
 
     stats: Mapped["UserStats"] = relationship(back_populates="user", cascade="all, delete-orphan")
 
     @property
     def tutorial_completed(self) -> bool:
         return self.tutorial_completed_at is not None
+
+    @property
+    def is_supporter(self) -> bool:
+        return self.supporter_since is not None
 
 
 class UserStats(Base):

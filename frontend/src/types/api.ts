@@ -23,6 +23,34 @@ export interface User {
   review_max_interval_days: number | null
   /** False until the player finishes or skips the first-login tutorial. */
   tutorial_completed: boolean
+  /** True after the first approved Pix donation ("Mavva Apoiador"). */
+  is_supporter: boolean
+  supporter_since: string | null
+}
+
+// --- Apoie o Mavva (Pix donations) ---
+
+export type SupportPaymentStatus = 'pending' | 'approved' | 'expired' | 'cancelled'
+
+export interface SupportPayment {
+  id: string
+  amount_cents: number
+  status: SupportPaymentStatus
+  /** "mercadopago", or "fake" when the API runs without credentials (dev). */
+  provider: string
+  /** Pix "copia e cola" payload; the QR code is rendered from it. */
+  qr_code: string
+  ticket_url: string | null
+  expires_at: string
+  approved_at: string | null
+  created_at: string
+}
+
+export interface SupportSummary {
+  is_supporter: boolean
+  supporter_since: string | null
+  total_cents: number
+  last_payment: SupportPayment | null
 }
 
 // --- Social: friends and duels ---

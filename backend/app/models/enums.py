@@ -93,3 +93,10 @@ class AnnouncementKind(StrEnum):
     IMPROVEMENT = "improvement"
     FIX = "fix"
     NOTICE = "notice"
+
+
+class SupportPaymentStatus(StrEnum):
+    PENDING = "pending"  # Pix issued, waiting for the transfer
+    APPROVED = "approved"  # money received
+    EXPIRED = "expired"  # nobody paid before the deadline
+    CANCELLED = "cancelled"  # refused, refunded or charged back by the provider

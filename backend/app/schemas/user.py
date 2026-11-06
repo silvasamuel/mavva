@@ -1,4 +1,5 @@
 import uuid
+from datetime import datetime
 from typing import Annotated, Literal
 
 from pydantic import BaseModel, ConfigDict, Field, StringConstraints
@@ -30,6 +31,8 @@ class UserOut(BaseModel):
     review_session_size: int
     review_max_interval_days: int | None
     tutorial_completed: bool
+    is_supporter: bool
+    supporter_since: datetime | None
 
 
 class RankOut(BaseModel):
