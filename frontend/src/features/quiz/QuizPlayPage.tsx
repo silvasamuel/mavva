@@ -15,6 +15,7 @@ import { Button } from '@/components/ui/Button'
 import { Spinner } from '@/components/ui/Spinner'
 import { ProgressBar } from '@/components/ui/ProgressBar'
 import { GameHud } from '@/components/GameHud'
+import { useAuth } from '@/features/auth/AuthContext'
 import { DIFFICULTY_LABELS } from '@/lib/format'
 import { playCombo, playCorrect, playWrong } from '@/lib/sfx'
 import { AppIcons, CategoryGlyph, Glyph } from '@/lib/icons'
@@ -27,6 +28,7 @@ interface AnswerPayload {
 }
 
 export function QuizPlayPage() {
+  const { user } = useAuth()
   const { sessionId } = useParams<{ sessionId: string }>()
   const navigate = useNavigate()
   const queryClient = useQueryClient()
@@ -313,6 +315,7 @@ export function QuizPlayPage() {
             xpInto={dash?.stats.xp_into_level}
             xpForNext={dash?.stats.xp_for_next_level}
             streak={dash?.stats.current_streak}
+            supporter={user?.is_supporter ?? false}
           />
         </div>
         {/* Top bar */}
