@@ -31,6 +31,7 @@ def create_charge(
         amount_cents=amount_cents,
         description="Apoio ao Mavva",
         payer_email=user.email,
+        payer_name=user.name,
         reference=str(payment_id),
     )
     payment = SupportPayment(

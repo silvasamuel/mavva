@@ -43,12 +43,16 @@ class Settings(BaseSettings):
     github_repo: str = "silvasamuel/mavva"
     github_branch: str = "main"
 
-    # Pix donations ("Apoie o Mavva") through Mercado Pago. Without an access
-    # token the API uses a simulated provider: charges are fake and can be
-    # approved from the page (development only). Never commit these values.
+    # Pix donations ("Apoie o Mavva") through Mercado Pago (Orders API via the
+    # official SDK). Without an access token the API uses a simulated provider:
+    # charges are fake and can be approved from the page (development only).
+    # Never commit these values.
     mercadopago_access_token: str | None = None
     # "Assinatura secreta" from the app's Webhooks panel; validates x-signature.
     mercadopago_webhook_secret: str | None = None
+    # With TEST credentials, sends payer.first_name = "APRO" so the sandbox
+    # approves the Pix by itself. Ignored in production.
+    mercadopago_sandbox_auto_approve: bool = False
 
     @property
     def is_production(self) -> bool:

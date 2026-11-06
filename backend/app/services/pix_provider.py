@@ -12,16 +12,18 @@ import uuid
 from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
 from enum import StrEnum
-from typing import Protocol
+from typing import Any, Protocol
 
-import httpx
+import mercadopago
+from mercadopago.config import RequestOptions
 
 from app.core.config import get_settings
 
 logger = logging.getLogger("mavva.pix")
 
 PIX_EXPIRES_IN = timedelta(minutes=30)
-MERCADOPAGO_API = "https://api.mercadopago.com"
+# ISO 8601 duration for the same window (Mercado Pago's minimum for Pix).
+PIX_EXPIRATION_TIME = "PT30M"
 
 
 class PixStatus(StrEnum):
@@ -47,20 +49,27 @@ class PixProvider(Protocol):
     name: str
 
     def create_charge(
-        self, *, amount_cents: int, description: str, payer_email: str, reference: str
+        self,
+        *,
+        amount_cents: int,
+        description: str,
+        payer_email: str,
+        payer_name: str,
+        reference: str,
     ) -> PixCharge: ...
 
     def fetch_status(self, provider_payment_id: str) -> PixStatus: ...
 
 
-# --- Mercado Pago ------------------------------------------------------------
+# --- Mercado Pago (Orders API) ---------------------------------------------------
 
-# https://www.mercadopago.com.br/developers/pt/reference/payments/_payments/post
-_MP_APPROVED = {"approved"}
-_MP_CANCELLED = {"cancelled", "rejected", "refunded", "charged_back"}
+# https://www.mercadopago.com.br/developers/pt/docs/checkout-api-orders/payment-management/status/order-status
+_MP_APPROVED = {"processed"}
+_MP_CANCELLED = {"canceled", "cancelled", "failed", "refunded", "charged_back"}
 
 
 def mercadopago_status(status: str) -> PixStatus:
+    """Order `status` → ours. `processed` is the only state where money arrived."""
     if status in _MP_APPROVED:
         return PixStatus.APPROVED
     if status in _MP_CANCELLED:
@@ -68,71 +77,98 @@ def mercadopago_status(status: str) -> PixStatus:
     return PixStatus.PENDING
 
 
+def _reais(amount_cents: int) -> str:
+    """The Orders API takes amounts as strings with two decimals: 1250 → "12.50"."""
+    return f"{amount_cents // 100}.{amount_cents % 100:02d}"
+
+
 class MercadoPagoPix:
     name = "mercadopago"
 
-    def __init__(self, access_token: str, notification_url: str | None) -> None:
-        self._token = access_token
-        self._notification_url = notification_url
-
-    def _headers(self, idempotency_key: str | None = None) -> dict[str, str]:
-        headers = {"Authorization": f"Bearer {self._token}"}
-        if idempotency_key:
-            headers["X-Idempotency-Key"] = idempotency_key
-        return headers
+    def __init__(
+        self, access_token: str, *, sandbox_auto_approve: bool = False, sdk: Any | None = None
+    ) -> None:
+        self._sdk = sdk if sdk is not None else mercadopago.SDK(access_token)
+        self._auto_approve = sandbox_auto_approve
 
     def create_charge(
-        self, *, amount_cents: int, description: str, payer_email: str, reference: str
+        self,
+        *,
+        amount_cents: int,
+        description: str,
+        payer_email: str,
+        payer_name: str,
+        reference: str,
     ) -> PixCharge:
         expires_at = datetime.now(UTC) + PIX_EXPIRES_IN
+        amount = _reais(amount_cents)
+        first_name = payer_name.split()[0] if payer_name.strip() else "Apoiador"
         body = {
-            "transaction_amount": round(amount_cents / 100, 2),
-            "description": description,
-            "payment_method_id": "pix",
-            "payer": {"email": payer_email},
+            "type": "online",
+            "total_amount": amount,
             "external_reference": reference,
-            # Mercado Pago wants the offset spelled out, not "Z".
-            "date_of_expiration": expires_at.strftime("%Y-%m-%dT%H:%M:%S.000+00:00"),
+            "processing_mode": "automatic",
+            "transactions": {
+                "payments": [
+                    {
+                        "amount": amount,
+                        "payment_method": {"id": "pix", "type": "bank_transfer"},
+                        "expiration_time": PIX_EXPIRATION_TIME,
+                    }
+                ]
+            },
+            # "APRO" is the sandbox's cue to approve the charge by itself.
+            "payer": {
+                "email": payer_email,
+                "first_name": "APRO" if self._auto_approve else first_name,
+            },
         }
-        if self._notification_url:
-            body["notification_url"] = self._notification_url
+        options = RequestOptions()
+        options.custom_headers = {"x-idempotency-key": reference}
         try:
-            response = httpx.post(
-                f"{MERCADOPAGO_API}/v1/payments",
-                headers=self._headers(idempotency_key=reference),
-                json=body,
-                timeout=15,
-            )
-            response.raise_for_status()
-        except httpx.HTTPError as error:
-            logger.warning("Mercado Pago refused the Pix charge: %s", error)
+            result = self._sdk.order().create(body, options)
+        except Exception as error:  # the SDK raises on network and parsing errors
+            logger.warning("Mercado Pago call failed: %s", str(error)[:200])
             raise PixProviderError from error
-        data = response.json()
-        transaction = (data.get("point_of_interaction") or {}).get("transaction_data") or {}
-        qr_code = transaction.get("qr_code")
-        if not qr_code:
-            logger.warning("Mercado Pago answered without a Pix code (payment %s)", data.get("id"))
+        if result.get("status") not in (200, 201):
+            logger.warning(
+                "Mercado Pago refused the Pix order (%s): %s",
+                result.get("status"),
+                _error_summary(result.get("response")),
+            )
+            raise PixProviderError(f"status {result.get('status')}")
+        order = result.get("response") or {}
+        payments = (order.get("transactions") or {}).get("payments") or []
+        method = (payments[0].get("payment_method") if payments else None) or {}
+        qr_code = method.get("qr_code")
+        if not order.get("id") or not qr_code:
+            logger.warning("Mercado Pago answered without a Pix code (order %s)", order.get("id"))
             raise PixProviderError("missing qr_code")
         return PixCharge(
             provider=self.name,
-            provider_payment_id=str(data["id"]),
+            provider_payment_id=str(order["id"]),
             qr_code=qr_code,
-            ticket_url=transaction.get("ticket_url"),
+            ticket_url=method.get("ticket_url"),
             expires_at=expires_at,
         )
 
     def fetch_status(self, provider_payment_id: str) -> PixStatus:
         try:
-            response = httpx.get(
-                f"{MERCADOPAGO_API}/v1/payments/{provider_payment_id}",
-                headers=self._headers(),
-                timeout=10,
-            )
-            response.raise_for_status()
-        except httpx.HTTPError as error:
-            logger.warning("Mercado Pago status lookup failed: %s", error)
+            result = self._sdk.order().get(provider_payment_id)
+        except Exception as error:
+            logger.warning("Mercado Pago status lookup failed: %s", str(error)[:200])
             raise PixProviderError from error
-        return mercadopago_status(str(response.json().get("status", "")))
+        if result.get("status") != 200:
+            logger.warning("Mercado Pago status lookup answered %s", result.get("status"))
+            raise PixProviderError(f"status {result.get('status')}")
+        order = result.get("response") or {}
+        return mercadopago_status(str(order.get("status", "")))
+
+
+def _error_summary(response: Any) -> str:
+    if isinstance(response, dict):
+        return str(response.get("message") or response.get("errors") or response)[:200]
+    return str(response)[:200]
 
 
 def verify_mercadopago_signature(
@@ -142,7 +178,8 @@ def verify_mercadopago_signature(
 
     Mercado Pago signs `id:{data.id};request-id:{x-request-id};ts:{ts};` with
     HMAC-SHA256 using the app's secret; `ts` and the hex digest (`v1`) travel
-    in the header as `ts=...,v1=...`.
+    in the header as `ts=...,v1=...`. The id is compared in lowercase and a
+    part whose value is missing is left out of the manifest, as documented.
     """
     if not x_signature:
         return False
@@ -153,7 +190,12 @@ def verify_mercadopago_signature(
     ts, v1 = parts.get("ts"), parts.get("v1")
     if not ts or not v1:
         return False
-    manifest = f"id:{data_id.lower()};request-id:{x_request_id or ''};ts:{ts};"
+    manifest = ""
+    if data_id:
+        manifest += f"id:{data_id.lower()};"
+    if x_request_id:
+        manifest += f"request-id:{x_request_id};"
+    manifest += f"ts:{ts};"
     expected = hmac.new(secret.encode(), manifest.encode(), hashlib.sha256).hexdigest()
     return hmac.compare_digest(expected, v1)
 
@@ -170,11 +212,17 @@ class FakePix:
         self._status: dict[str, PixStatus] = {}
 
     def create_charge(
-        self, *, amount_cents: int, description: str, payer_email: str, reference: str
+        self,
+        *,
+        amount_cents: int,
+        description: str,
+        payer_email: str,
+        payer_name: str,
+        reference: str,
     ) -> PixCharge:
         payment_id = f"fake-{uuid.uuid4().hex[:12]}"
         self._status[payment_id] = PixStatus.PENDING
-        amount = f"{amount_cents / 100:.2f}"
+        amount = _reais(amount_cents)
         qr_code = (
             "00020126360014br.gov.bcb.pix0114+5500000000000"
             f"52040000530398654{len(amount):02d}{amount}5802BR5905MAVVA6009SAO PAULO"
@@ -203,6 +251,8 @@ def get_pix_provider() -> PixProvider:
     if settings.mercadopago_access_token:
         return MercadoPagoPix(
             settings.mercadopago_access_token,
-            notification_url=f"{settings.public_origin}/api/v1/support/webhooks/mercadopago",
+            sandbox_auto_approve=(
+                settings.mercadopago_sandbox_auto_approve and not settings.is_production
+            ),
         )
     return _fake
