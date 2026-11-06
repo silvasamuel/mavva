@@ -33,6 +33,7 @@ class UserOut(BaseModel):
     tutorial_completed: bool
     is_supporter: bool
     supporter_since: datetime | None
+    supporter_until: datetime | None
 
 
 class RankOut(BaseModel):

@@ -19,7 +19,13 @@ vi.mock('@/lib/api', async () => {
 
 vi.mock('@/features/auth/AuthContext', () => ({
   useAuth: () => ({
-    user: { id: 'u1', name: 'Maria', is_supporter: false, supporter_since: null },
+    user: {
+      id: 'u1',
+      name: 'Maria',
+      is_supporter: false,
+      supporter_since: null,
+      supporter_until: null,
+    },
     updateUser,
   }),
 }))
@@ -29,6 +35,7 @@ function pending(overrides: Partial<SupportPayment> = {}): SupportPayment {
     id: 'p1',
     amount_cents: 1000,
     status: 'pending',
+    supporter_days: 30,
     provider: 'fake',
     qr_code: '00020126MAVVA6304FAKE',
     ticket_url: null,
@@ -40,7 +47,13 @@ function pending(overrides: Partial<SupportPayment> = {}): SupportPayment {
 }
 
 function summary(last: SupportPayment | null = null): SupportSummary {
-  return { is_supporter: false, supporter_since: null, total_cents: 0, last_payment: last }
+  return {
+    is_supporter: false,
+    supporter_since: null,
+    supporter_until: null,
+    total_cents: 0,
+    last_payment: last,
+  }
 }
 
 function renderPage() {
@@ -67,7 +80,7 @@ describe('SupportPage', () => {
     post.mockResolvedValue(pending({ amount_cents: 2000 }))
     renderPage()
 
-    await user.click(await screen.findByRole('radio', { name: 'R$ 20,00' }))
+    await user.click(await screen.findByRole('radio', { name: 'R$ 20,00 +30 dias' }))
     await user.click(screen.getByRole('button', { name: 'Gerar Pix de R$ 20,00' }))
 
     expect(post).toHaveBeenCalledWith('/support/payments', { amount_cents: 2000 })
@@ -90,6 +103,15 @@ describe('SupportPage', () => {
     const open = pending()
     get.mockImplementation((path: string) => {
       if (path === '/support/me') return Promise.resolve(summary(open))
+      if (path === '/users/me') {
+        return Promise.resolve({
+          id: 'u1',
+          name: 'Maria',
+          is_supporter: true,
+          supporter_since: '2026-11-06T12:00:00Z',
+          supporter_until: '2026-12-06T12:00:00Z',
+        })
+      }
       return Promise.resolve(open)
     })
     post.mockResolvedValue({
@@ -103,10 +125,10 @@ describe('SupportPage', () => {
     await user.click(await screen.findByRole('button', { name: 'Simular pagamento (dev)' }))
 
     expect(await screen.findByText('Oferta recebida!')).toBeInTheDocument()
-    expect(screen.getByRole('status')).toHaveTextContent('Mavva Apoiador')
+    expect(screen.getByRole('status')).toHaveTextContent('ganhou 30 dias')
     await waitFor(() =>
       expect(updateUser).toHaveBeenCalledWith(
-        expect.objectContaining({ is_supporter: true, supporter_since: '2026-11-06T12:00:00Z' })
+        expect.objectContaining({ is_supporter: true, supporter_until: '2026-12-06T12:00:00Z' })
       )
     )
   })

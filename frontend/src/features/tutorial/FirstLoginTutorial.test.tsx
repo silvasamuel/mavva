@@ -43,6 +43,7 @@ function makeUser(overrides: Partial<User> = {}): User {
     tutorial_completed: false,
     is_supporter: false,
     supporter_since: null,
+    supporter_until: null,
     ...overrides,
   }
 }

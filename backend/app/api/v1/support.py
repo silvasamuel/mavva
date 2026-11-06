@@ -10,7 +10,12 @@ from app.core.config import get_settings
 from app.core.deps import CurrentUser, DbDep
 from app.core.ratelimit import limiter
 from app.models import SupportPayment
-from app.schemas.support import SupportPaymentCreate, SupportPaymentOut, SupportSummaryOut
+from app.schemas.support import (
+    SupportPaymentCreate,
+    SupportPaymentOut,
+    SupportSummaryOut,
+    payment_out,
+)
 from app.services import support_service
 from app.services.pix_provider import (
     FakePix,
@@ -36,10 +41,9 @@ def my_support(user: CurrentUser, db: DbDep) -> SupportSummaryOut:
     return SupportSummaryOut(
         is_supporter=info.is_supporter,
         supporter_since=info.supporter_since,
+        supporter_until=info.supporter_until,
         total_cents=info.total_cents,
-        last_payment=(
-            SupportPaymentOut.model_validate(info.last_payment) if info.last_payment else None
-        ),
+        last_payment=payment_out(info.last_payment) if info.last_payment else None,
     )
 
 
@@ -56,7 +60,7 @@ def create_payment(
             "Não foi possível gerar o Pix agora. Tente de novo em instantes.",
         ) from error
     db.commit()
-    return SupportPaymentOut.model_validate(payment)
+    return payment_out(payment)
 
 
 def _own_payment(db: DbDep, user: CurrentUser, payment_id: uuid.UUID) -> SupportPayment:
@@ -76,7 +80,7 @@ def payment_status(payment_id: uuid.UUID, user: CurrentUser, db: DbDep) -> Suppo
         changed = False  # keep showing "pending"; the next poll or the webhook settles it
     if changed:
         db.commit()
-    return SupportPaymentOut.model_validate(payment)
+    return payment_out(payment)
 
 
 @router.post("/payments/{payment_id}/simulate", response_model=SupportPaymentOut)
@@ -89,7 +93,7 @@ def simulate_approval(payment_id: uuid.UUID, user: CurrentUser, db: DbDep) -> Su
     provider.approve(payment.provider_payment_id)
     if support_service.sync_with_provider(db, payment, provider):
         db.commit()
-    return SupportPaymentOut.model_validate(payment)
+    return payment_out(payment)
 
 
 @router.post("/webhooks/mercadopago", include_in_schema=False)

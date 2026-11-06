@@ -98,6 +98,9 @@ class TestFollowTheCharge:
         me = client.get("/api/v1/users/me", headers=headers).json()
         assert me["is_supporter"] is True
         assert me["supporter_since"] is not None
+        until = datetime.fromisoformat(me["supporter_until"])
+        assert timedelta(days=29) < until - datetime.now(UTC) <= timedelta(days=30)
+        assert approved.json()["supporter_days"] == 30
         # The badge travels with the public profile too (HUD card, ranking).
         profile = client.get(f"/api/v1/players/{me['id']}", headers=headers).json()
         assert profile["user"]["is_supporter"] is True
@@ -117,7 +120,40 @@ class TestFollowTheCharge:
         client.post(f"/api/v1/support/payments/{second['id']}/simulate", headers=headers)
         me = client.get("/api/v1/users/me", headers=headers).json()
         assert me["supporter_since"] == since
-        assert client.get("/api/v1/support/me", headers=headers).json()["total_cents"] == 1200
+        summary = client.get("/api/v1/support/me", headers=headers).json()
+        assert summary["total_cents"] == 1200
+        # Two R$ 30-or-less donations stack to 60 days.
+        until = datetime.fromisoformat(summary["supporter_until"])
+        assert timedelta(days=59) < until - datetime.now(UTC) <= timedelta(days=60)
+
+    def test_bigger_donations_buy_more_days(self, client: TestClient) -> None:
+        headers = _login(client)
+        payment = _create(client, headers, 3100)
+        approved = client.post(
+            f"/api/v1/support/payments/{payment['id']}/simulate", headers=headers
+        )
+        assert approved.json()["supporter_days"] == 60
+        until = datetime.fromisoformat(
+            client.get("/api/v1/users/me", headers=headers).json()["supporter_until"]
+        )
+        assert timedelta(days=59) < until - datetime.now(UTC) <= timedelta(days=60)
+
+    def test_an_expired_badge_restarts_from_today(self, client: TestClient, db: Session) -> None:
+        headers = _login(client)
+        me = client.get("/api/v1/users/me", headers=headers).json()
+        user = db.get(User, me["id"])
+        assert user is not None
+        user.supporter_since = datetime.now(UTC) - timedelta(days=90)
+        user.supporter_until = datetime.now(UTC) - timedelta(days=60)
+        db.flush()
+        assert client.get("/api/v1/users/me", headers=headers).json()["is_supporter"] is False
+
+        payment = _create(client, headers, 500)
+        client.post(f"/api/v1/support/payments/{payment['id']}/simulate", headers=headers)
+        me = client.get("/api/v1/users/me", headers=headers).json()
+        assert me["is_supporter"] is True
+        until = datetime.fromisoformat(me["supporter_until"])
+        assert timedelta(days=29) < until - datetime.now(UTC) <= timedelta(days=30)
 
     def test_simulation_is_hidden_in_production(
         self, client: TestClient, monkeypatch: pytest.MonkeyPatch
@@ -174,6 +210,7 @@ class TestFollowTheCharge:
         assert empty == {
             "is_supporter": False,
             "supporter_since": None,
+            "supporter_until": None,
             "total_cents": 0,
             "last_payment": None,
         }
@@ -309,7 +346,29 @@ class TestWebhook:
 
 
 def test_user_model_exposes_supporter_flag(db: Session) -> None:
-    user = User(email="x@y.z", username="xyz", name="X", hashed_password="h", supporter_since=None)
+    user = User(email="x@y.z", username="xyz", name="X", hashed_password="h")
     assert user.is_supporter is False
     user.supporter_since = datetime.now(UTC)
+    user.supporter_until = datetime.now(UTC) + timedelta(days=1)
     assert user.is_supporter is True
+    user.supporter_until = datetime.now(UTC) - timedelta(seconds=1)
+    assert user.is_supporter is False
+
+
+@pytest.mark.parametrize(
+    ("cents", "days"),
+    [
+        (100, 30),
+        (1000, 30),
+        (3000, 30),
+        (3001, 60),
+        (3100, 60),
+        (6000, 60),
+        (6001, 90),
+        (100_000, 1020),
+    ],
+)
+def test_supporter_days_tiers(cents: int, days: int) -> None:
+    from app.services.support_service import supporter_days
+
+    assert supporter_days(cents) == days

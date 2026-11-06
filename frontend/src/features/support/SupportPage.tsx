@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { QRCodeSVG } from 'qrcode.react'
 import { api, ApiError } from '@/lib/api'
-import type { SupportPayment, SupportSummary } from '@/types/api'
+import type { SupportPayment, SupportSummary, User } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
 import { Spinner } from '@/components/ui/Spinner'
@@ -16,6 +16,13 @@ const PRESETS = [500, 1000, 2000, 5000]
 const MIN_CENTS = 100
 const MAX_CENTS = 100_000
 const POLL_MS = 5000
+/** Mirrors the API: every R$ 30 (or part of it) keeps the badge 30 more days. */
+const TIER_CENTS = 3000
+const DAYS_PER_TIER = 30
+
+function badgeDays(cents: number): number {
+  return Math.ceil(cents / TIER_CENTS) * DAYS_PER_TIER
+}
 
 function parseReais(raw: string): number | null {
   const normalized = raw.replace(/[^\d,.]/g, '').replace(',', '.')
@@ -81,13 +88,19 @@ export function SupportPage() {
     }
   }, [poll.data, payment?.status])
 
-  // Once paid, the HUD and the profile learn about the badge right away.
+  // Once paid, the HUD and the profile learn about the badge (and its new end
+  // date) right away.
+  const celebratedId = useRef<string | null>(null)
   useEffect(() => {
-    if (payment?.status !== 'approved') return
+    if (payment?.status !== 'approved' || celebratedId.current === payment.id) return
+    celebratedId.current = payment.id
     void queryClient.invalidateQueries({ queryKey: ['support', 'me'] })
-    if (user && !user.is_supporter) {
-      updateUser({ ...user, is_supporter: true, supporter_since: payment.approved_at })
-    }
+    void api
+      .get<User>('/users/me')
+      .then((me) => updateUser(me))
+      .catch(() => {
+        if (user) updateUser({ ...user, is_supporter: true })
+      })
   }, [payment, user, updateUser, queryClient])
 
   useEffect(() => {
@@ -138,6 +151,8 @@ export function SupportPage() {
   }
 
   const supporterSince = summary.data?.supporter_since ?? user?.supporter_since ?? null
+  const supporterUntil = summary.data?.supporter_until ?? user?.supporter_until ?? null
+  const supporterActive = !!supporterUntil && new Date(supporterUntil).getTime() > now
   const expired = payment?.status === 'expired'
 
   return (
@@ -150,8 +165,10 @@ export function SupportPage() {
         </p>
       </header>
 
-      {supporterSince && (
-        <Card className="flex items-center gap-4 ring-2 ring-grain-300">
+      {supporterSince && supporterUntil && (
+        <Card
+          className={`flex items-center gap-4 ring-2 ${supporterActive ? 'ring-grain-300' : 'ring-sand-200'}`}
+        >
           <span
             className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-grain-100 text-grain-700"
             aria-hidden
@@ -160,13 +177,15 @@ export function SupportPage() {
           </span>
           <div>
             <p className="flex items-center gap-2 font-extrabold text-ink">
-              Você é Mavva Apoiador
-              <SupporterBadge />
+              {supporterActive ? 'Você é Mavva Apoiador' : 'Seu selo de Apoiador venceu'}
+              {supporterActive && <SupporterBadge />}
             </p>
             <p className="text-sm font-semibold text-sand-500">
-              Desde {formatDate(supporterSince)}
+              {supporterActive
+                ? `Selo válido até ${formatDate(supporterUntil)}`
+                : `Valeu até ${formatDate(supporterUntil)} · uma nova oferta renova`}
               {summary.data && summary.data.total_cents > 0
-                ? ` · ${formatReais(summary.data.total_cents)} em ofertas`
+                ? ` · ${formatReais(summary.data.total_cents)} em ofertas desde ${formatDate(supporterSince)}`
                 : ''}
             </p>
           </div>
@@ -188,8 +207,9 @@ export function SupportPage() {
             </span>
             <h2 className="mt-4 text-xl font-extrabold text-ink">Oferta recebida!</h2>
             <p className="mt-1 text-sm font-semibold text-sand-600">
-              {formatReais(payment.amount_cents)} · obrigado por manter o Mavva no ar. Você agora é
-              Mavva Apoiador.
+              {formatReais(payment.amount_cents)} · obrigado por manter o Mavva no ar. Seu selo de
+              Apoiador ganhou {payment.supporter_days} dias
+              {user?.supporter_until ? `, até ${formatDate(user.supporter_until)}` : ''}.
             </p>
             <Button className="mt-5" variant="secondary" onClick={() => setPayment(null)}>
               Ofertar de novo
@@ -276,6 +296,11 @@ export function SupportPage() {
                   }`}
                 >
                   {formatReais(cents)}
+                  <span
+                    className={`mt-0.5 block text-[10px] font-bold ${selected ? 'text-white/80' : 'text-sand-500'}`}
+                  >
+                    +{badgeDays(cents)} dias
+                  </span>
                 </button>
               )
             })}
@@ -311,6 +336,12 @@ export function SupportPage() {
           >
             Gerar Pix{valid && chosen != null ? ` de ${formatReais(chosen)}` : ''}
           </Button>
+          {valid && chosen != null && (
+            <p className="mt-2 text-center text-xs font-bold text-sand-500">
+              Garante o selo de Apoiador por {badgeDays(chosen)} dias
+              {supporterActive ? ', somados ao prazo atual' : ''}.
+            </p>
+          )}
         </Card>
       )}
 
@@ -322,6 +353,7 @@ export function SupportPage() {
 const PERKS_NOW = [
   'Selo de Apoiador ao lado do seu elo, no topo e no perfil',
   'Barra de XP e painel dourados',
+  'Cada R$ 30 de oferta mantém o selo por 30 dias, somando com o prazo que já tem',
 ] as const
 
 const PERKS_SOON = [

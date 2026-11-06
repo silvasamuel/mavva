@@ -9,7 +9,7 @@ import { ProgressRing } from '@/components/ui/ProgressRing'
 import { Spinner } from '@/components/ui/Spinner'
 import { RankLadder } from '@/components/RankLadder'
 import { AppIcons, CategoryGlyph, Glyph, type Icon } from '@/lib/icons'
-import { formatPercent, formatRelativeDate } from '@/lib/format'
+import { formatDate, formatPercent, formatRelativeDate } from '@/lib/format'
 import { useAuth } from '@/features/auth/AuthContext'
 import { EvolutionChart } from './EvolutionChart'
 import { SeasonCard } from './SeasonCard'
@@ -162,8 +162,8 @@ export function DashboardPage() {
           </span>
           <span className="block text-xs font-semibold text-sand-500">
             {user?.is_supporter
-              ? 'Obrigado! Ofertar de novo via Pix'
-              : 'Oferte via Pix e ganhe o selo de Apoiador'}
+              ? `Selo até ${formatDate(user.supporter_until)} · ofertar de novo estende`
+              : 'Oferte via Pix e ganhe 30 dias de selo a cada R$ 30'}
           </span>
         </span>
         <span className="rounded-full bg-grain-400 px-2.5 py-0.5 text-xs font-extrabold text-grain-900">
@@ -174,29 +174,6 @@ export function DashboardPage() {
       <motion.div variants={enter}>
         <SeasonCard data={data} />
       </motion.div>
-
-      <motion.div variants={enter}>
-        <RankLadder currentCode={stats.rank.code} level={stats.level} />
-      </motion.div>
-
-      {data.friend_requests > 0 && (
-        <motion.button
-          variants={enter}
-          type="button"
-          onClick={() => navigate('/friends')}
-          className="btn-press flex w-full items-center gap-3 rounded-3xl border-grain-500 bg-grain-50 px-4 py-3 text-left"
-        >
-          <Glyph as={AppIcons.friends} className="h-7 w-7 text-grain-700" />
-          <span className="flex-1 text-sm font-extrabold text-ink">
-            {data.friend_requests === 1
-              ? 'Alguém quer ser seu amigo'
-              : `${data.friend_requests} pedidos de amizade`}
-          </span>
-          <span className="rounded-full bg-grain-400 px-2.5 py-0.5 text-xs font-extrabold text-grain-900">
-            {data.friend_requests}
-          </span>
-        </motion.button>
-      )}
 
       <motion.div variants={enter} className="grid grid-cols-3 gap-2.5 sm:gap-3">
         <ModeTile
@@ -232,6 +209,29 @@ export function DashboardPage() {
           onClick={() => navigate('/achievements')}
         />
       </motion.div>
+
+      <motion.div variants={enter}>
+        <RankLadder currentCode={stats.rank.code} level={stats.level} />
+      </motion.div>
+
+      {data.friend_requests > 0 && (
+        <motion.button
+          variants={enter}
+          type="button"
+          onClick={() => navigate('/friends')}
+          className="btn-press flex w-full items-center gap-3 rounded-3xl border-grain-500 bg-grain-50 px-4 py-3 text-left"
+        >
+          <Glyph as={AppIcons.friends} className="h-7 w-7 text-grain-700" />
+          <span className="flex-1 text-sm font-extrabold text-ink">
+            {data.friend_requests === 1
+              ? 'Alguém quer ser seu amigo'
+              : `${data.friend_requests} pedidos de amizade`}
+          </span>
+          <span className="rounded-full bg-grain-400 px-2.5 py-0.5 text-xs font-extrabold text-grain-900">
+            {data.friend_requests}
+          </span>
+        </motion.button>
+      )}
 
       <motion.section
         variants={enter}

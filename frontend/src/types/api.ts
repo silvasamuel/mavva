@@ -23,9 +23,10 @@ export interface User {
   review_max_interval_days: number | null
   /** False until the player finishes or skips the first-login tutorial. */
   tutorial_completed: boolean
-  /** True after the first approved Pix donation ("Mavva Apoiador"). */
+  /** True while the "Mavva Apoiador" badge lasts (every R$ 30 donated = 30 days). */
   is_supporter: boolean
   supporter_since: string | null
+  supporter_until: string | null
 }
 
 // --- Apoie o Mavva (Pix donations) ---
@@ -36,6 +37,8 @@ export interface SupportPayment {
   id: string
   amount_cents: number
   status: SupportPaymentStatus
+  /** Badge days this charge grants once approved. */
+  supporter_days: number
   /** "mercadopago", or "fake" when the API runs without credentials (dev). */
   provider: string
   /** Pix "copia e cola" payload; the QR code is rendered from it. */
@@ -49,6 +52,7 @@ export interface SupportPayment {
 export interface SupportSummary {
   is_supporter: boolean
   supporter_since: string | null
+  supporter_until: string | null
   total_cents: number
   last_payment: SupportPayment | null
 }

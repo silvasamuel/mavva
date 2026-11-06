@@ -1,8 +1,9 @@
 """Donations through Pix: issue a charge, follow it, crown the supporter."""
 
+import math
 import uuid
 from dataclasses import dataclass
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
@@ -13,12 +14,23 @@ from app.services.pix_provider import PixProvider, PixStatus
 
 MIN_AMOUNT_CENTS = 100
 MAX_AMOUNT_CENTS = 100_000
+# Every R$ 30 (or part of it) of an approved donation keeps the badge 30 days.
+TIER_CENTS = 3000
+DAYS_PER_TIER = 30
+
+
+def supporter_days(amount_cents: int) -> int:
+    """R$ 1 to 30 buys 30 days, R$ 31 to 60 buys 60, and so on."""
+    if amount_cents <= 0:
+        return 0
+    return math.ceil(amount_cents / TIER_CENTS) * DAYS_PER_TIER
 
 
 @dataclass
 class SupportSummary:
     is_supporter: bool
     supporter_since: datetime | None
+    supporter_until: datetime | None
     total_cents: int
     last_payment: SupportPayment | None
 
@@ -64,8 +76,14 @@ def apply_status(
         payment.status = SupportPaymentStatus.APPROVED
         payment.approved_at = now
         user = db.get(User, payment.user_id)
-        if user is not None and user.supporter_since is None:
-            user.supporter_since = now
+        if user is not None:
+            if user.supporter_since is None:
+                user.supporter_since = now
+            # Stack on the time still running; an expired badge restarts today.
+            base = (
+                user.supporter_until if user.supporter_until and user.supporter_until > now else now
+            )
+            user.supporter_until = base + timedelta(days=supporter_days(payment.amount_cents))
         return True
     if status == PixStatus.CANCELLED:
         payment.status = SupportPaymentStatus.CANCELLED
@@ -109,6 +127,7 @@ def summary(db: Session, user: User) -> SupportSummary:
     return SupportSummary(
         is_supporter=user.is_supporter,
         supporter_since=user.supporter_since,
+        supporter_until=user.supporter_until,
         total_cents=int(total or 0),
         last_payment=last,
     )

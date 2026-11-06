@@ -25,6 +25,7 @@ const user: User = {
   tutorial_completed: true,
   is_supporter: false,
   supporter_since: null,
+  supporter_until: null,
 }
 
 vi.mock('@/features/auth/AuthContext', () => ({

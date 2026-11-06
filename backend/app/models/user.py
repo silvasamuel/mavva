@@ -1,5 +1,5 @@
 import uuid
-from datetime import date, datetime
+from datetime import UTC, date, datetime
 
 from sqlalchemy import Date, Enum, ForeignKey, String, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
@@ -57,8 +57,11 @@ class User(TimestampMixin, Base):
     # Number of the last season whose podium celebration (1st, 2nd or 3rd) this
     # player has seen.
     podium_seen_season: Mapped[int | None] = mapped_column(default=None)
-    # First approved Pix donation; from then on the player is a "Mavva Apoiador".
+    # First approved Pix donation, and until when the "Mavva Apoiador" badge
+    # lasts: every R$ 30 (or part of it) donated adds 30 days, stacking on
+    # whatever is still running (see support_service.supporter_days).
     supporter_since: Mapped[datetime | None] = mapped_column(default=None)
+    supporter_until: Mapped[datetime | None] = mapped_column(default=None)
 
     stats: Mapped["UserStats"] = relationship(back_populates="user", cascade="all, delete-orphan")
 
@@ -68,7 +71,7 @@ class User(TimestampMixin, Base):
 
     @property
     def is_supporter(self) -> bool:
-        return self.supporter_since is not None
+        return self.supporter_until is not None and self.supporter_until > datetime.now(UTC)
 
 
 class UserStats(Base):
