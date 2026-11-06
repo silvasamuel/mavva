@@ -353,7 +353,6 @@ export function SupportPage() {
 const PERKS_NOW = [
   'Selo de Apoiador ao lado do seu elo, no topo e no perfil',
   'Barra de XP e painel dourados',
-  'Cada R$ 30 de oferta mantém o selo por 30 dias, somando com o prazo que já tem',
 ] as const
 
 const PERKS_SOON = [
