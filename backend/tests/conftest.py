@@ -4,6 +4,11 @@ import os
 os.environ.setdefault("DATABASE_URL", "postgresql+psycopg://mavva:mavva@localhost:5433/mavva_test")
 os.environ.setdefault("SECRET_KEY", "test-secret")
 os.environ.setdefault("RATE_LIMIT_ENABLED", "false")
+# Never talk to Mercado Pago from the test suite, whatever the developer's
+# local env file holds: the fake provider stands in (empty = unset).
+os.environ["MERCADOPAGO_ACCESS_TOKEN"] = ""
+os.environ["MERCADOPAGO_WEBHOOK_SECRET"] = ""
+os.environ["MERCADOPAGO_SANDBOX_AUTO_APPROVE"] = "false"
 
 from collections.abc import Generator
 

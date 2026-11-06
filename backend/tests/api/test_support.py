@@ -69,6 +69,40 @@ class TestCreateCharge:
         assert response.status_code == 502
         assert "Pix" in response.json()["detail"]
 
+    def test_production_without_credentials_refuses_instead_of_faking(
+        self, client: TestClient, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        from app.services import pix_provider
+
+        real = pix_provider.get_settings()
+        monkeypatch.setattr(
+            pix_provider,
+            "get_settings",
+            lambda: real.model_copy(update={"environment": "production"}),
+        )
+        headers = _login(client)
+        response = client.post(
+            "/api/v1/support/payments", json={"amount_cents": 500}, headers=headers
+        )
+        assert response.status_code == 502
+        # The summary still answers, just without asking the provider.
+        assert client.get("/api/v1/support/me", headers=headers).status_code == 200
+
+    def test_summary_survives_a_provider_outage(
+        self, client: TestClient, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        headers = _login(client)
+        payment = _create(client, headers)
+
+        def down() -> None:
+            raise PixProviderError
+
+        monkeypatch.setattr(support_api, "get_pix_provider", down)
+        response = client.get("/api/v1/support/me", headers=headers)
+        assert response.status_code == 200
+        assert response.json()["last_payment"]["id"] == payment["id"]
+        assert response.json()["last_payment"]["status"] == "pending"
+
     def test_requires_login(self, client: TestClient) -> None:
         assert (
             client.post("/api/v1/support/payments", json={"amount_cents": 500}).status_code == 401

@@ -33,11 +33,14 @@ router = APIRouter(prefix="/support", tags=["support"])
 def my_support(user: CurrentUser, db: DbDep) -> SupportSummaryOut:
     """Supporter status plus the latest charge, so a pending Pix survives a reload."""
     info = support_service.summary(db, user)
-    if info.last_payment is not None and support_service.sync_with_provider(
-        db, info.last_payment, get_pix_provider()
-    ):
-        db.commit()
-        info = support_service.summary(db, user)
+    if info.last_payment is not None:
+        try:
+            changed = support_service.sync_with_provider(db, info.last_payment, get_pix_provider())
+        except PixProviderError:
+            changed = False  # show what we know; the next poll settles it
+        if changed:
+            db.commit()
+            info = support_service.summary(db, user)
     return SupportSummaryOut(
         is_supporter=info.is_supporter,
         supporter_since=info.supporter_since,

@@ -247,6 +247,11 @@ _fake = FakePix()
 
 
 def get_pix_provider() -> PixProvider:
+    """The real provider when configured; the fake one only outside production.
+
+    Production without credentials refuses instead of issuing codes nobody can
+    pay: the page shows the generic "try again later" error.
+    """
     settings = get_settings()
     if settings.mercadopago_access_token:
         return MercadoPagoPix(
@@ -255,4 +260,7 @@ def get_pix_provider() -> PixProvider:
                 settings.mercadopago_sandbox_auto_approve and not settings.is_production
             ),
         )
+    if settings.is_production:
+        logger.error("MERCADOPAGO_ACCESS_TOKEN is not set; Pix donations are unavailable")
+        raise PixProviderError("provider not configured")
     return _fake
