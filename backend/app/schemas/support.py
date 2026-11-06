@@ -5,11 +5,12 @@ from typing import Any
 from pydantic import BaseModel, ConfigDict, Field
 
 from app.models.enums import SupportPaymentStatus
-from app.services.support_service import MAX_AMOUNT_CENTS, MIN_AMOUNT_CENTS, supporter_days
+from app.services.support_service import MIN_AMOUNT_CENTS, supporter_days
 
 
 class SupportPaymentCreate(BaseModel):
-    amount_cents: int = Field(ge=MIN_AMOUNT_CENTS, le=MAX_AMOUNT_CENTS)
+    # No ceiling: the provider enforces its own per-transaction limits.
+    amount_cents: int = Field(ge=MIN_AMOUNT_CENTS)
 
 
 class SupportPaymentOut(BaseModel):

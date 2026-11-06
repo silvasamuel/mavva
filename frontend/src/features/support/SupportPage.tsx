@@ -14,7 +14,6 @@ import { AppIcons, Glyph } from '@/lib/icons'
 /** Offered amounts, in cents; the custom box takes anything in the API's range. */
 const PRESETS = [500, 1000, 2000, 5000]
 const MIN_CENTS = 500
-const MAX_CENTS = 100_000
 const POLL_MS = 5000
 /** Mirrors the API: every R$ 30 (or part of it) keeps the badge 30 more days. */
 const TIER_CENTS = 3000
@@ -111,7 +110,7 @@ export function SupportPage() {
 
   const customCents = parseReais(custom)
   const chosen = custom ? customCents : amount
-  const valid = chosen != null && chosen >= MIN_CENTS && chosen <= MAX_CENTS
+  const valid = chosen != null && chosen >= MIN_CENTS
 
   async function createCharge() {
     if (!valid || chosen == null) return
@@ -319,7 +318,7 @@ export function SupportPage() {
           </label>
           {custom && !valid && (
             <p className="mt-2 text-xs font-bold text-red-600">
-              Escolha um valor entre {formatReais(MIN_CENTS)} e {formatReais(MAX_CENTS)}.
+              O valor mínimo é {formatReais(MIN_CENTS)}.
             </p>
           )}
           {error && (
