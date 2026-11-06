@@ -134,6 +134,42 @@ class AdminActivityOut(BaseModel):
     top_players: list[AdminActivityPlayer]
 
 
+# --- Donations ("Apoie o Mavva") ---
+
+
+class AdminDonorOut(BaseModel):
+    user_id: uuid.UUID
+    username: str
+    name: str
+    total_cents: int
+    donations: int
+    last_donation_at: datetime
+    supporter_until: datetime | None
+    is_supporter: bool
+
+
+class AdminSupportPaymentOut(BaseModel):
+    id: uuid.UUID
+    user_id: uuid.UUID
+    username: str
+    name: str
+    amount_cents: int
+    status: str  # pending, approved, expired, cancelled
+    provider: str
+    provider_payment_id: str
+    created_at: datetime
+    approved_at: datetime | None
+
+
+class AdminSupportOut(BaseModel):
+    total_cents: int  # every approved donation, all time
+    approved_count: int
+    pending_count: int
+    active_supporters: int  # badge still valid today
+    donors: list[AdminDonorOut]  # biggest total first
+    recent: list[AdminSupportPaymentOut]  # newest first, any status
+
+
 class AdminDashboardOut(BaseModel):
     users: AdminDashboardUsers
     questions: AdminDashboardQuestions

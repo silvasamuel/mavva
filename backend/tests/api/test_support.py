@@ -379,6 +379,66 @@ class TestWebhook:
         assert response.status_code == 503
 
 
+class TestAdminOverview:
+    URL = "/api/v1/admin/support"
+
+    def _admin(self, client: TestClient, db: Session) -> dict[str, str]:
+        from app.models.enums import UserRole
+
+        body = register_and_login(client, name="Admin", email="admin@teste.com")
+        user = db.get(User, body["user"]["id"])
+        assert user is not None
+        user.role = UserRole.ADMIN
+        db.flush()
+        return _auth(body["access_token"])
+
+    def test_regular_users_are_forbidden(self, client: TestClient) -> None:
+        headers = _login(client)
+        assert client.get(self.URL, headers=headers).status_code == 403
+
+    def test_totals_per_player_and_recent_charges(self, client: TestClient, db: Session) -> None:
+        admin = self._admin(client, db)
+        maria = _login(client, email="maria@teste.com")
+        first = _create(client, maria, 1000)
+        client.post(f"/api/v1/support/payments/{first['id']}/simulate", headers=maria)
+        second = _create(client, maria, 500)
+        client.post(f"/api/v1/support/payments/{second['id']}/simulate", headers=maria)
+        _create(client, maria, 700)  # still pending
+        joao = _login(client, email="joao@teste.com")
+        paid = _create(client, joao, 3100)
+        client.post(f"/api/v1/support/payments/{paid['id']}/simulate", headers=joao)
+
+        response = client.get(self.URL, headers=admin)
+        assert response.status_code == 200, response.text
+        body = response.json()
+        assert body["total_cents"] == 4600
+        assert body["approved_count"] == 3
+        assert body["pending_count"] == 1
+        assert body["active_supporters"] == 2
+        assert [d["username"] for d in body["donors"]] == [
+            d["username"] for d in sorted(body["donors"], key=lambda d: -d["total_cents"])
+        ]
+        top = body["donors"][0]
+        assert top["total_cents"] == 3100 and top["donations"] == 1 and top["is_supporter"]
+        maria_row = next(d for d in body["donors"] if d["total_cents"] == 1500)
+        assert maria_row["donations"] == 2
+        assert len(body["recent"]) == 4
+        assert body["recent"][0]["status"] == "approved"
+        assert {p["status"] for p in body["recent"]} == {"approved", "pending"}
+
+    def test_empty_overview(self, client: TestClient, db: Session) -> None:
+        admin = self._admin(client, db)
+        body = client.get(self.URL, headers=admin).json()
+        assert body == {
+            "total_cents": 0,
+            "approved_count": 0,
+            "pending_count": 0,
+            "active_supporters": 0,
+            "donors": [],
+            "recent": [],
+        }
+
+
 def test_user_model_exposes_supporter_flag(db: Session) -> None:
     user = User(email="x@y.z", username="xyz", name="X", hashed_password="h")
     assert user.is_supporter is False

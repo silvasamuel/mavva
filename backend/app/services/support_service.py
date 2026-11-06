@@ -5,7 +5,7 @@ import uuid
 from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
 
-from sqlalchemy import func, select
+from sqlalchemy import case, func, select
 from sqlalchemy.orm import Session
 
 from app.models import SupportPayment, User
@@ -107,6 +107,86 @@ def sync_with_provider(db: Session, payment: SupportPayment, provider: PixProvid
 def by_provider_id(db: Session, provider_payment_id: str) -> SupportPayment | None:
     return db.scalar(
         select(SupportPayment).where(SupportPayment.provider_payment_id == provider_payment_id)
+    )
+
+
+@dataclass
+class DonorRow:
+    user_id: uuid.UUID
+    username: str
+    name: str
+    total_cents: int
+    donations: int
+    last_donation_at: datetime
+    supporter_until: datetime | None
+
+
+@dataclass
+class AdminOverview:
+    total_cents: int
+    approved_count: int
+    pending_count: int
+    active_supporters: int
+    donors: list[DonorRow]  # biggest total first
+    recent: list[tuple[SupportPayment, User]]  # newest first, any status
+
+
+def admin_overview(db: Session, *, recent_limit: int = 30) -> AdminOverview:
+    """Everything the admin "Doações" panel shows: totals, per-player, latest charges."""
+    now = datetime.now(UTC)
+    approved = SupportPayment.status == SupportPaymentStatus.APPROVED
+    totals = db.execute(
+        select(
+            func.coalesce(func.sum(case((approved, SupportPayment.amount_cents), else_=0)), 0),
+            func.count(case((approved, 1))),
+            func.count(case((SupportPayment.status == SupportPaymentStatus.PENDING, 1))),
+        )
+    ).one()
+    active_supporters = db.scalar(
+        select(func.count()).select_from(User).where(User.supporter_until > now)
+    )
+    donor_rows = db.execute(
+        select(
+            User.id,
+            User.username,
+            User.name,
+            func.sum(SupportPayment.amount_cents),
+            func.count(SupportPayment.id),
+            func.max(SupportPayment.approved_at),
+            User.supporter_until,
+        )
+        .join(User, User.id == SupportPayment.user_id)
+        .where(approved)
+        .group_by(User.id)
+        .order_by(
+            func.sum(SupportPayment.amount_cents).desc(),
+            func.max(SupportPayment.approved_at).desc(),
+        )
+    ).all()
+    recent = db.execute(
+        select(SupportPayment, User)
+        .join(User, User.id == SupportPayment.user_id)
+        .order_by(SupportPayment.created_at.desc(), SupportPayment.id.desc())
+        .limit(recent_limit)
+    ).all()
+    return AdminOverview(
+        total_cents=int(totals[0] or 0),
+        approved_count=int(totals[1] or 0),
+        pending_count=int(totals[2] or 0),
+        active_supporters=int(active_supporters or 0),
+        donors=[
+            DonorRow(
+                user_id=row[0],
+                username=row[1],
+                name=row[2],
+                total_cents=int(row[3] or 0),
+                donations=int(row[4] or 0),
+                last_donation_at=row[5],
+                supporter_until=row[6],
+            )
+            for row in donor_rows
+        ],
+        recent=[(payment, user) for payment, user in recent],
     )
 
 

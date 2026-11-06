@@ -298,12 +298,17 @@ export function SupportPage() {
                   <span
                     className={`mt-0.5 block text-[10px] font-bold ${selected ? 'text-white/80' : 'text-sand-500'}`}
                   >
-                    +{badgeDays(cents)} dias
+                    selo por {badgeDays(cents)} dias
                   </span>
                 </button>
               )
             })}
           </div>
+          <p className="mt-2 text-xs font-semibold text-sand-500">
+            O selo de Apoiador vale 30 dias a cada R$ 30 ofertados: até R$ 30 são 30 dias, de R$ 31
+            a R$ 60 são 60 dias, e assim por diante. Ofertas novas somam ao prazo que ainda estiver
+            valendo.
+          </p>
           <label className="mt-3 block">
             <span className="text-xs font-extrabold uppercase tracking-wide text-sand-500">
               Ou outro valor (R$)
@@ -350,14 +355,15 @@ export function SupportPage() {
 }
 
 const PERKS_NOW = [
-  'Selo de Apoiador ao lado do seu elo, no topo e no perfil',
-  'Barra de XP e painel dourados',
+  'Selo de Apoiador visível para todos os usuários',
+  'Skin dourada de Apoiador no painel do jogo e na barra de XP',
 ] as const
 
 const PERKS_SOON = [
   'Criar ligas só para convidados e disputar com a sua turma',
   'Adicionar as suas próprias perguntas à liga',
   'Mavva sem anúncios, para sempre',
+  'Aplicativos Android e iOS',
 ] as const
 
 /** What a donation unlocks today and what the support is paying for next. */

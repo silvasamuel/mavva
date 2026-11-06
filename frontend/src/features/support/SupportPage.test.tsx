@@ -80,7 +80,7 @@ describe('SupportPage', () => {
     post.mockResolvedValue(pending({ amount_cents: 2000 }))
     renderPage()
 
-    await user.click(await screen.findByRole('radio', { name: 'R$ 20,00 +30 dias' }))
+    await user.click(await screen.findByRole('radio', { name: 'R$ 20,00 selo por 30 dias' }))
     await user.click(screen.getByRole('button', { name: 'Gerar Pix de R$ 20,00' }))
 
     expect(post).toHaveBeenCalledWith('/support/payments', { amount_cents: 2000 })
