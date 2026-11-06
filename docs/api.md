@@ -319,6 +319,7 @@ real — o front-end separado (bundle `/admin`) é conveniência, não proteçã
 | GET | `/admin/questions/{id}` | Detalhe completo (enunciado, explicação, referência, opções, respostas). |
 | PATCH | `/admin/questions/{id}` | Edita campos enviados (`exclude_unset`). Valida as alternativas (4 opções, 1 correta). `category_id` é imutável. |
 | GET | `/admin/content/status` | Compara o banco com `content/questions/*.json`: `{mode: github\|local, dirty_files}`. |
+| GET | `/admin/support` | Doações: `{total_cents, approved_count, pending_count, active_supporters, donors[], recent[]}`. `donors` traz o total por usuário (maior primeiro), número de ofertas, última e até quando vale o selo; `recent` as 30 últimas cobranças Pix com status. |
 | GET | `/admin/announcements` | Todas as novidades: rascunhos primeiro, depois as publicadas da mais nova para a mais antiga. |
 | POST | `/admin/announcements` | Body: `{title (≤120), body (≤2000), kind, published}`. `published=false` salva como rascunho. 201. |
 | PATCH | `/admin/announcements/{id}` | Edita os campos enviados. `published: true` publica (a data é gravada só na primeira vez — corrigir um texto depois não volta a marcar como não lido); `false` volta a rascunho. 404 se não existir. |
