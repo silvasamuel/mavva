@@ -33,9 +33,7 @@ Para que serve a sua oferta:
 O que você ganha ao ofertar:
 • O selo de Mavva Apoiador ao lado do seu elo, visível para todos os jogadores.
 • A skin dourada de Apoiador no painel do jogo e na barra de XP.
-• Em breve: criar ligas só para convidados, adicionar suas próprias perguntas à liga e missões diárias.
-
-Cada R$ 30 ofertados mantêm o selo por 30 dias, somando ao prazo que você já tiver. A oferta mínima é de R$ 5, e o pagamento é processado pelo Mercado Pago."""
+• Em breve: criar ligas só para convidados, adicionar suas próprias perguntas à liga e missões diárias."""
 
 
 def upgrade() -> None:
