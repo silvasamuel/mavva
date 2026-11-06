@@ -13,7 +13,7 @@ import { AppIcons, Glyph } from '@/lib/icons'
 
 /** Offered amounts, in cents; the custom box takes anything in the API's range. */
 const PRESETS = [500, 1000, 2000, 5000]
-const MIN_CENTS = 100
+const MIN_CENTS = 500
 const MAX_CENTS = 100_000
 const POLL_MS = 5000
 /** Mirrors the API: every R$ 30 (or part of it) keeps the badge 30 more days. */

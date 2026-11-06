@@ -41,7 +41,7 @@ class TestCreateCharge:
         expires = datetime.fromisoformat(payment["expires_at"])
         assert expires > datetime.now(UTC) + timedelta(minutes=20)
 
-    @pytest.mark.parametrize("amount", [0, 99, 100_001, -5])
+    @pytest.mark.parametrize("amount", [0, 499, 100_001, -5])
     def test_amount_bounds(self, client: TestClient, amount: int) -> None:
         headers = _login(client)
         response = client.post(

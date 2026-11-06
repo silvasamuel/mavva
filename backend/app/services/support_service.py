@@ -12,7 +12,7 @@ from app.models import SupportPayment, User
 from app.models.enums import SupportPaymentStatus
 from app.services.pix_provider import PixProvider, PixStatus
 
-MIN_AMOUNT_CENTS = 100
+MIN_AMOUNT_CENTS = 500
 MAX_AMOUNT_CENTS = 100_000
 # Every R$ 30 (or part of it) of an approved donation keeps the badge 30 days.
 TIER_CENTS = 3000

@@ -95,7 +95,7 @@ describe('SupportPage', () => {
     renderPage()
 
     await user.type(await screen.findByLabelText('Ou outro valor (R$)'), '0,50')
-    expect(screen.getByText(/entre R\$ 1,00 e R\$ 1.000,00/)).toBeInTheDocument()
+    expect(screen.getByText(/entre R\$ 5,00 e R\$ 1.000,00/)).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Gerar Pix' })).toBeDisabled()
   })
 

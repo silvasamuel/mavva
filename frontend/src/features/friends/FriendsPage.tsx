@@ -10,6 +10,7 @@ import { Spinner } from '@/components/ui/Spinner'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { PlayerProfileModal } from '@/components/PlayerProfileModal'
 import { RankBadge } from '@/components/RankBadge'
+import { SupporterBadge } from '@/components/SupporterBadge'
 import { Modal } from '@/components/ui/Modal'
 import { useAuth } from '@/features/auth/AuthContext'
 import { AppIcons, Glyph } from '@/lib/icons'
@@ -36,7 +37,10 @@ function PlayerRow({
       >
         <RankBadge code={user.rank.code} size="sm" />
         <div className="min-w-0 flex-1">
-          <p className="truncate font-extrabold text-ink">{user.name}</p>
+          <p className="flex items-center gap-1.5 font-extrabold text-ink">
+            <span className="truncate">{user.name}</span>
+            {user.is_supporter && <SupporterBadge />}
+          </p>
           <p className="truncate text-xs font-semibold text-sand-500">@{user.username}</p>
           <p className="text-xs font-semibold text-sand-400">
             {user.rank.name} · {user.duel_wins}V {user.duel_losses}D {user.duel_draws}E
@@ -77,7 +81,8 @@ export function FriendsPage() {
   }
 
   const sendRequest = useMutation({
-    mutationFn: (username: string) => api.post<{ message: string }>('/friends/requests', { username }),
+    mutationFn: (username: string) =>
+      api.post<{ message: string }>('/friends/requests', { username }),
     onSuccess: (response) => {
       setFeedback(response.message)
       setError('')
@@ -248,11 +253,7 @@ export function FriendsPage() {
         onClose={() => setOpenPlayer(null)}
       />
 
-      <Modal
-        open={removing != null}
-        onClose={() => setRemoving(null)}
-        label="Remover amigo"
-      >
+      <Modal open={removing != null} onClose={() => setRemoving(null)} label="Remover amigo">
         {removing && (
           <>
             <p className="text-lg font-extrabold">Remover {removing.name}?</p>

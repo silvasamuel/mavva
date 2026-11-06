@@ -162,6 +162,7 @@ export interface SeasonPodium {
     name: string
     final_xp: number
     rank: { code: string; name: string }
+    is_supporter?: boolean
   }[]
 }
 

@@ -1,5 +1,6 @@
 import type { AllTimePodium as AllTimePodiumData, PublicUser } from '@/types/api'
 import { RankBadge } from '@/components/RankBadge'
+import { SupporterBadge } from '@/components/SupporterBadge'
 import { AppIcons, Glyph } from '@/lib/icons'
 
 type Entry = AllTimePodiumData['podium'][number]
@@ -7,8 +8,18 @@ type Entry = AllTimePodiumData['podium'][number]
 // Gold, silver and bronze steps; the winner's is the tallest.
 // `order` lays them out 2-1-3 while the list still reads 1, 2, 3.
 const STEP: Record<number, { block: string; height: string; label: string; order: string }> = {
-  1: { block: 'bg-grain-400 text-grain-900 ring-grain-500', height: 'h-24', label: '1º', order: 'order-2' },
-  2: { block: 'bg-sand-200 text-sand-700 ring-sand-300', height: 'h-16', label: '2º', order: 'order-1' },
+  1: {
+    block: 'bg-grain-400 text-grain-900 ring-grain-500',
+    height: 'h-24',
+    label: '1º',
+    order: 'order-2',
+  },
+  2: {
+    block: 'bg-sand-200 text-sand-700 ring-sand-300',
+    height: 'h-16',
+    label: '2º',
+    order: 'order-1',
+  },
   3: {
     block: 'bg-[#E3A56E] text-[#5C3412] ring-[#C9844A]',
     height: 'h-12',
@@ -33,6 +44,7 @@ function Step({ entry, onOpen }: { entry: Entry; onOpen: (user: PublicUser) => v
         <span className="w-full truncate text-center text-sm font-extrabold text-ink">
           {entry.is_me ? 'Você' : `@${entry.user.username}`}
         </span>
+        {entry.user.is_supporter && <SupporterBadge />}
         <span className="text-xs font-extrabold tabular-nums text-leaf-700">
           {entry.score.toLocaleString('pt-BR')} XP
         </span>
