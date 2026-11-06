@@ -6,6 +6,7 @@ import { api } from '@/lib/api'
 import type { DashboardData } from '@/types/api'
 import { Logo } from '@/components/Logo'
 import { GameHud } from '@/components/GameHud'
+import { PlayerProfileModal } from '@/components/PlayerProfileModal'
 import { useAuth } from '@/features/auth/AuthContext'
 import { FirstLoginTutorial } from '@/features/tutorial/FirstLoginTutorial'
 import { PodiumCelebration } from '@/features/seasons/PodiumCelebration'
@@ -74,10 +75,12 @@ function Badge({ count, loading }: { count: number; loading?: boolean }) {
 }
 
 export function AppShell({ children }: { children?: ReactNode }) {
-  const { logout } = useAuth()
+  const { user, logout } = useAuth()
   const navigate = useNavigate()
   const location = useLocation()
   const [moreOpen, setMoreOpen] = useState(false)
+  // The HUD badge opens the player's own card, the same one the ranking shows.
+  const [profileOpen, setProfileOpen] = useState(false)
   const { data, isPending } = useQuery({
     queryKey: ['dashboard'],
     queryFn: () => api.get<DashboardData>('/dashboard'),
@@ -89,6 +92,20 @@ export function AppShell({ children }: { children?: ReactNode }) {
   )
   const notificationsUnread = data?.notifications_unread ?? 0
   const moreCount = (data?.reviews_due ?? 0) + friendRequests + notificationsUnread
+  // What the HUD already knows about the player, shown while the card loads.
+  const profilePreview =
+    user && data
+      ? {
+          id: user.id,
+          username: user.username,
+          name: user.name,
+          level: data.stats.level,
+          rank: { code: data.stats.rank.code, name: data.stats.rank.name },
+          duel_wins: data.duels.wins,
+          duel_losses: data.duels.losses,
+          duel_draws: data.duels.draws,
+        }
+      : null
 
   useEffect(() => {
     if (!moreOpen) return
@@ -156,6 +173,7 @@ export function AppShell({ children }: { children?: ReactNode }) {
                 xpInto={data?.stats.xp_into_level}
                 xpForNext={data?.stats.xp_for_next_level}
                 streak={streak}
+                onOpenProfile={user ? () => setProfileOpen(true) : undefined}
               />
             </div>
             {/* On phones "Novidades" lives under "Mais"; the bell keeps news in sight. */}
@@ -289,6 +307,11 @@ export function AppShell({ children }: { children?: ReactNode }) {
       {/* Mounted only in the shell, so it never covers quiz play or the auth pages. */}
       <FirstLoginTutorial />
       <PodiumCelebration />
+      <PlayerProfileModal
+        userId={profileOpen && user ? user.id : null}
+        preview={profilePreview}
+        onClose={() => setProfileOpen(false)}
+      />
     </div>
   )
 }

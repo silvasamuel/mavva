@@ -11,6 +11,7 @@ export function GameHud({
   xpForNext,
   streak,
   loading,
+  onOpenProfile,
 }: {
   rankCode?: string
   rankName?: string
@@ -19,6 +20,8 @@ export function GameHud({
   xpForNext?: number
   streak?: number
   loading?: boolean
+  /** Makes the badge a button that opens the player's own profile card. */
+  onOpenProfile?: () => void
 }) {
   const days = streak ?? 0
   const band = rankFromLevel(level ?? 1)
@@ -26,7 +29,19 @@ export function GameHud({
   const elo = rankProgress(level ?? 1, band.minLevel, next?.minLevel ?? null)
   return (
     <div className="flex items-center gap-3 rounded-2xl bg-white/80 px-3 py-2 shadow-card backdrop-blur-md">
-      <RankBadge code={rankCode ?? 'semente'} size="sm" />
+      {onOpenProfile ? (
+        <button
+          type="button"
+          aria-label="Ver meu perfil"
+          aria-haspopup="dialog"
+          onClick={onOpenProfile}
+          className="shrink-0 rounded-xl transition-transform hover:scale-105 active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-leaf-500"
+        >
+          <RankBadge code={rankCode ?? 'semente'} size="sm" />
+        </button>
+      ) : (
+        <RankBadge code={rankCode ?? 'semente'} size="sm" />
+      )}
       <div className="min-w-0 flex-1">
         <div className="flex items-baseline gap-2">
           <p className="truncate text-sm font-extrabold leading-none">
