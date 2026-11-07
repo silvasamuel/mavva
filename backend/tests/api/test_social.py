@@ -5,7 +5,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.models import Duel, QuestionOption, User
-from app.services import duel_service
+from app.services import duel_service, friendship_service
 from tests.factories import make_category, make_mc_question
 from tests.helpers import register_and_login
 
@@ -140,6 +140,79 @@ class TestFriendships:
 
         assert auth_client.delete(f"/api/v1/friends/{other['user']['id']}").status_code == 204
         assert auth_client.get("/api/v1/friends").json()["friends"] == []
+
+
+class TestFriendLimit:
+    @staticmethod
+    def _befriend(client: TestClient, inviter: dict[str, str], email: str) -> dict:
+        other = _register(client, email)
+        username = other["user"]["username"]
+        client.post("/api/v1/friends/requests", json={"username": username}, headers=inviter)
+        other_headers = _auth(other["access_token"])
+        request_id = client.get("/api/v1/friends", headers=other_headers).json()["incoming"][0][
+            "id"
+        ]
+        client.post(f"/api/v1/friends/requests/{request_id}/accept", headers=other_headers)
+        return other
+
+    def test_overview_reports_the_limit(self, auth_client: TestClient):
+        assert auth_client.get("/api/v1/friends").json()["limit"] == 70
+
+    def test_cannot_invite_past_the_limit(
+        self, auth_client: TestClient, client: TestClient, monkeypatch
+    ):
+        monkeypatch.setattr(friendship_service, "MAX_FRIENDS", 1)
+        self._befriend(client, auth_client.headers, "maria@teste.com")
+        _register(client, "pedro@teste.com")
+
+        response = auth_client.post("/api/v1/friends/requests", json={"username": "pedro"})
+        assert response.status_code == 400
+        assert response.json()["detail"] == "Você já tem 1 amigos, o limite"
+
+    def test_cannot_invite_someone_at_the_limit(
+        self, auth_client: TestClient, client: TestClient, monkeypatch
+    ):
+        monkeypatch.setattr(friendship_service, "MAX_FRIENDS", 1)
+        self._befriend(client, auth_client.headers, "maria@teste.com")
+        pedro = _register(client, "pedro@teste.com")
+
+        response = client.post(
+            "/api/v1/friends/requests",
+            json={"username": "samuel"},
+            headers=_auth(pedro["access_token"]),
+        )
+        assert response.status_code == 400
+        assert response.json()["detail"] == "@samuel já tem 1 amigos, o limite"
+
+    def test_cannot_accept_past_the_limit(
+        self, auth_client: TestClient, client: TestClient, monkeypatch
+    ):
+        monkeypatch.setattr(friendship_service, "MAX_FRIENDS", 1)
+        pedro = _register(client, "pedro@teste.com")
+        client.post(
+            "/api/v1/friends/requests",
+            json={"username": "samuel"},
+            headers=_auth(pedro["access_token"]),
+        )
+        self._befriend(client, auth_client.headers, "maria@teste.com")
+
+        request_id = auth_client.get("/api/v1/friends").json()["incoming"][0]["id"]
+        response = auth_client.post(f"/api/v1/friends/requests/{request_id}/accept")
+        assert response.status_code == 400
+        # Inviting back would auto-accept — the same cap applies.
+        again = auth_client.post("/api/v1/friends/requests", json={"username": "pedro"})
+        assert again.status_code == 400
+
+    def test_inactive_friends_free_their_slot(
+        self, auth_client: TestClient, client: TestClient, db: Session, monkeypatch
+    ):
+        monkeypatch.setattr(friendship_service, "MAX_FRIENDS", 1)
+        self._befriend(client, auth_client.headers, "maria@teste.com")
+        _register(client, "pedro@teste.com")
+        _set_active(db, "maria", False)
+
+        response = auth_client.post("/api/v1/friends/requests", json={"username": "pedro"})
+        assert response.status_code == 201
 
 
 class TestDuelCreation:
@@ -671,7 +744,7 @@ class TestDeactivatedAccounts:
 
         body = auth_client.get("/api/v1/friends").json()
 
-        assert body == {"friends": [], "incoming": [], "sent": []}
+        assert body == {"friends": [], "incoming": [], "sent": [], "limit": 70}
 
     def test_reactivating_brings_the_friendship_back(
         self, auth_client: TestClient, client: TestClient, db: Session

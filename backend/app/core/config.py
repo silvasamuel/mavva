@@ -33,6 +33,11 @@ class Settings(BaseSettings):
     resend_api_key: str | None = None
     email_from: str = "Mavva <contato@contato.mavva.com.br>"
 
+    # Daily review digest. Vercel Cron sends `Authorization: Bearer $CRON_SECRET`;
+    # without a secret the endpoint stays disabled.
+    cron_secret: str | None = None
+    admin_digest_email: str | None = None
+
     # Question bank location (mounted read-only in Docker)
     content_dir: Path = Path(__file__).resolve().parents[3] / "content"
 
