@@ -301,7 +301,7 @@ function FriendAction({ profile }: { profile: PlayerProfile }) {
 
   return (
     <div className="flex w-full flex-col items-center gap-2">
-      <Button loading={add.isPending} onClick={() => add.mutate()}>
+      <Button size="sm" loading={add.isPending} onClick={() => add.mutate()}>
         <Glyph as={AppIcons.addFriend} className="h-4 w-4" />
         {profile.relation === 'pending_received' ? 'Aceitar pedido' : 'Adicionar amigo'}
       </Button>
