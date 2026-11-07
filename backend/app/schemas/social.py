@@ -102,6 +102,7 @@ class FriendsOverview(BaseModel):
     friends: list[PublicUser]
     incoming: list[FriendRequestOut]
     sent: list[FriendRequestOut]
+    limit: int
 
 
 # --- Duels ---

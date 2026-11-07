@@ -1,5 +1,5 @@
 import { useId, useRef, useState, type KeyboardEvent, type ReactNode } from 'react'
-import { useQuery } from '@tanstack/react-query'
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { api, ApiError } from '@/lib/api'
 import type { PlayerProfile, PublicUser } from '@/types/api'
 import { Button } from '@/components/ui/Button'
@@ -281,6 +281,39 @@ function StatsPanel({ profile }: { profile: PlayerProfile }) {
   )
 }
 
+function FriendAction({ profile }: { profile: PlayerProfile }) {
+  const queryClient = useQueryClient()
+  const add = useMutation({
+    mutationFn: () =>
+      api.post<{ status: string; message: string }>('/friends/requests', {
+        username: profile.user.username,
+      }),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['player', profile.user.id] })
+      queryClient.invalidateQueries({ queryKey: ['friends'] })
+      queryClient.invalidateQueries({ queryKey: ['ranking', 'friends'] })
+      // The pending-request badge lives in the dashboard payload.
+      queryClient.invalidateQueries({ queryKey: ['dashboard'] })
+    },
+  })
+
+  if (profile.relation !== 'none' && profile.relation !== 'pending_received') return null
+
+  return (
+    <div className="flex w-full flex-col items-center gap-2">
+      <Button loading={add.isPending} onClick={() => add.mutate()}>
+        <Glyph as={AppIcons.addFriend} className="h-4 w-4" />
+        {profile.relation === 'pending_received' ? 'Aceitar pedido' : 'Adicionar amigo'}
+      </Button>
+      {add.isError && (
+        <p role="alert" className="text-sm font-bold text-red-600">
+          {add.error instanceof ApiError ? add.error.message : 'Não foi possível enviar o pedido.'}
+        </p>
+      )}
+    </div>
+  )
+}
+
 function ProfileBody({ profile }: { profile: PlayerProfile }) {
   const { user, stats } = profile
   const relation = RELATION_LABEL[profile.relation]
@@ -305,6 +338,7 @@ function ProfileBody({ profile }: { profile: PlayerProfile }) {
             {relation}
           </span>
         )}
+        <FriendAction key={profile.user.id} profile={profile} />
       </header>
 
       {/* Rank, level and total XP are on the leaderboard already; how far the

@@ -5,6 +5,7 @@ from app.api.v1 import (
     admin,
     auth,
     catalog,
+    cron,
     dashboard,
     moderation,
     notifications,
@@ -30,3 +31,4 @@ api_router.include_router(moderation.router)
 api_router.include_router(notifications.router)
 api_router.include_router(support.router)
 api_router.include_router(admin.router)
+api_router.include_router(cron.router)

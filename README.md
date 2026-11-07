@@ -95,6 +95,7 @@ editoriais: [docs/content-guidelines.md](docs/content-guidelines.md).
 | Backend | Vercel (mesmo projeto) | `FRONTEND_ORIGIN=https://mavva.com.br,https://mavva.vercel.app`. Render (`render.yaml`) continua como alternativa. |
 | Postgres | Neon | Criar projeto free e copiar a connection string. |
 | E-mail | Resend | `RESEND_API_KEY` (opcional; sem ela, links de reset vão para o log). |
+| Resumo diário de revisão | Vercel Cron (`vercel.json`) | `CRON_SECRET` (string aleatória, 16+ caracteres) e `ADMIN_DIGEST_EMAIL` (quem recebe). Sem o secret, a rota fica desligada. |
 
 O container de produção roda `alembic upgrade head && python -m app.seeds` no boot —
 migrations e conteúdo sempre em dia.

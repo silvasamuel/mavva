@@ -31,7 +31,7 @@ const joao: PublicUser = {
   duel_draws: 0,
 }
 
-const overview: FriendsOverview = { friends: [joao], incoming: [], sent: [] }
+const overview: FriendsOverview = { friends: [joao], incoming: [], sent: [], limit: 70 }
 
 const joaoProfile: PlayerProfile = {
   user: joao,

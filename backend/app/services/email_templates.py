@@ -175,6 +175,55 @@ def verification_email_html(to_name: str, link: str, expire_hours: int) -> str:
     )
 
 
+def review_digest_email_html(
+    *,
+    questions: tuple[int, int],
+    features: tuple[int, int],
+    corrections: tuple[int, int],
+    link: str,
+) -> str:
+    """Each count is `(pending, arrived in the last 24h)`."""
+
+    def row(label: str, total: int, new: int) -> str:
+        note = f"({new} nova{'s' if new != 1 else ''})" if new else ""
+        return f"""\
+      <tr>
+        <td style="padding:10px 0; border-bottom:1px solid #f3efe4; font-size:15px;
+                   font-weight:700;">{label}</td>
+        <td align="right" style="padding:10px 0; border-bottom:1px solid #f3efe4;
+                                 font-size:15px; font-weight:800; white-space:nowrap;">
+          {total}
+          <span style="font-size:12px; font-weight:700; color:{SAND_500};">{note}</span>
+        </td>
+      </tr>"""
+
+    rows = "".join(
+        row(label, total, new)
+        for label, (total, new) in (
+            ("Perguntas sugeridas", questions),
+            ("Novas funcionalidades", features),
+            ("Correções", corrections),
+        )
+    )
+    body = f"""\
+    <p style="margin:0 0 4px 0; font-size:18px; font-weight:800;">Bom dia! &#9728;&#65039;</p>
+    <p style="margin:0 0 16px 0; font-size:15px; font-weight:600; line-height:1.6;">
+      Estes itens estão esperando sua revisão no painel do Mavva:
+    </p>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+           style="font-family:{FONT_STACK}; color:{INK};">
+{rows}
+    </table>
+    {_button("Abrir revisão", link)}
+    {_fallback_link(link)}
+"""
+    return _shell(
+        preheader="Itens aguardando revisão no Mavva.",
+        heading="Revisão pendente — Mavva",
+        body_html=body,
+    )
+
+
 def password_reset_email_html(to_name: str, link: str, expire_minutes: int) -> str:
     name = html.escape(to_name)
     body = f"""\
