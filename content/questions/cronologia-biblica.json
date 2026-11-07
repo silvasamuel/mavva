@@ -1396,6 +1396,440 @@
         "verse_end": 31
       },
       "difficulty": "easy"
+    },
+    {
+      "external_id": "cronologia-biblica-0046",
+      "text": "Com que idade Abrão partiu de Harã rumo à terra de Canaã, segundo Gênesis 12:4?",
+      "options": [
+        {
+          "text": "Setenta e cinco anos",
+          "correct": true
+        },
+        {
+          "text": "Quarenta anos",
+          "correct": false
+        },
+        {
+          "text": "Noventa e nove anos",
+          "correct": false
+        },
+        {
+          "text": "Cem anos",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Assim, partiu Abrão, como o SENHOR lhe tinha dito... e era Abrão da idade de setenta e cinco anos, quando saiu de Harã\" (Gn 12:4). Aos noventa e nove recebeu o sinal da circuncisão (Gn 17:1, 24) e aos cem nasceu Isaque (Gn 21:5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 12,
+        "verse_start": 4,
+        "verse_end": 5
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cronologia-biblica-0047",
+      "text": "Segundo a interpretação de José para os sonhos de Faraó, quantos anos de fartura e quantos de fome viriam sobre o Egito?",
+      "options": [
+        {
+          "text": "Sete anos de fartura e sete anos de fome",
+          "correct": true
+        },
+        {
+          "text": "Três anos de fartura e três de fome",
+          "correct": false
+        },
+        {
+          "text": "Dez anos de fartura e cinco de fome",
+          "correct": false
+        },
+        {
+          "text": "Doze anos de fartura e doze de fome",
+          "correct": false
+        }
+      ],
+      "explanation": "As sete vacas gordas e as sete espigas cheias eram sete anos de grande fartura; as magras, sete anos de fome \"tão grave que a fartura não será conhecida\" (Gn 41:25-31). A repetição do sonho indicava que \"a coisa é determinada por Deus\" e viria depressa.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 41,
+        "verse_start": 25,
+        "verse_end": 32
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cronologia-biblica-0048",
+      "text": "Segundo Paulo em 1 Coríntios 15:4, em que dia Cristo ressuscitou, \"segundo as Escrituras\"?",
+      "options": [
+        {
+          "text": "Ao terceiro dia",
+          "correct": true
+        },
+        {
+          "text": "No sétimo dia",
+          "correct": false
+        },
+        {
+          "text": "No quadragésimo dia",
+          "correct": false
+        },
+        {
+          "text": "No mesmo dia da morte",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E que foi sepultado, e que ressuscitou ao terceiro dia, segundo as Escrituras\" (1Co 15:4). Jesus anunciara isso várias vezes (Mt 16:21; 17:23; 20:19) e apontou o sinal de Jonas: três dias e três noites (Mt 12:40).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1corintios",
+        "chapter": 15,
+        "verse_start": 3,
+        "verse_end": 4
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cronologia-biblica-0049",
+      "text": "Depois de quantos dias de busca José e Maria encontraram o menino Jesus no templo, sentado entre os doutores?",
+      "options": [
+        {
+          "text": "Três dias",
+          "correct": true
+        },
+        {
+          "text": "Um dia",
+          "correct": false
+        },
+        {
+          "text": "Sete dias",
+          "correct": false
+        },
+        {
+          "text": "Doze dias",
+          "correct": false
+        }
+      ],
+      "explanation": "Pensando que ele vinha na caravana, andaram um dia de caminho e voltaram a Jerusalém: \"e aconteceu que, passados três dias, o acharam no templo\" (Lc 2:44-46). Jesus respondeu: \"não sabeis que me convém tratar dos negócios de meu Pai?\"",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 2,
+        "verse_start": 41,
+        "verse_end": 49
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cronologia-biblica-0050",
+      "text": "Com que intervalo Noé soltava a pomba da arca para ver se as águas haviam baixado?",
+      "options": [
+        {
+          "text": "De sete em sete dias",
+          "correct": true
+        },
+        {
+          "text": "Todos os dias",
+          "correct": false
+        },
+        {
+          "text": "De quarenta em quarenta dias",
+          "correct": false
+        },
+        {
+          "text": "A cada lua nova",
+          "correct": false
+        }
+      ],
+      "explanation": "A pomba voltou sem pouso; \"esperou ainda outros sete dias\" e ela trouxe a folha de oliveira; \"esperou ainda outros sete dias\" e ela não voltou mais (Gn 8:8-12). Antes dela, Noé soltara um corvo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 8,
+        "verse_start": 6,
+        "verse_end": 12
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cronologia-biblica-0051",
+      "text": "Quantos anos tinha Isaque quando nasceram os gêmeos Esaú e Jacó?",
+      "options": [
+        {
+          "text": "Sessenta anos",
+          "correct": true
+        },
+        {
+          "text": "Quarenta anos",
+          "correct": false
+        },
+        {
+          "text": "Cem anos",
+          "correct": false
+        },
+        {
+          "text": "Oitenta anos",
+          "correct": false
+        }
+      ],
+      "explanation": "Isaque casou-se com Rebeca aos quarenta anos (Gn 25:20), orou pela esposa estéril, \"e era Isaque da idade de sessenta anos quando lhe nasceram\" os gêmeos (Gn 25:26). Vinte anos de espera entre o casamento e os filhos.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 25,
+        "verse_start": 20,
+        "verse_end": 26
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cronologia-biblica-0052",
+      "text": "Quantos anos tinham Moisés e Arão quando falaram a Faraó pela primeira vez, segundo Êxodo 7:7?",
+      "options": [
+        {
+          "text": "Moisés oitenta e Arão oitenta e três",
+          "correct": true
+        },
+        {
+          "text": "Moisés quarenta e Arão quarenta e três",
+          "correct": false
+        },
+        {
+          "text": "Moisés sessenta e Arão sessenta e cinco",
+          "correct": false
+        },
+        {
+          "text": "Moisés cem e Arão cento e três",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E Moisés era da idade de oitenta anos, e Arão da idade de oitenta e três anos, quando falaram a Faraó\" (Êx 7:7). Quarenta anos antes Moisés fugira do Egito (At 7:23-30); quarenta anos depois morreria aos cento e vinte.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 7,
+        "verse_start": 6,
+        "verse_end": 7
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cronologia-biblica-0053",
+      "text": "Segundo o discurso de Paulo em Antioquia da Pisídia (Atos 13:21), por quantos anos Saul reinou sobre Israel?",
+      "options": [
+        {
+          "text": "Quarenta anos",
+          "correct": true
+        },
+        {
+          "text": "Vinte anos",
+          "correct": false
+        },
+        {
+          "text": "Sete anos",
+          "correct": false
+        },
+        {
+          "text": "Doze anos",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Pediram um rei, e Deus lhes deu, por quarenta anos, a Saul, filho de Quis, varão da tribo de Benjamim\" (At 13:21). O Antigo Testamento não registra o total do reinado de Saul; o número vem de Paulo, e também é citado pelo historiador Josefo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 13,
+        "verse_start": 21,
+        "verse_end": 22
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cronologia-biblica-0054",
+      "text": "Quanto tempo Jacó teve de esperar, depois de casar-se com Lia, para receber Raquel como esposa?",
+      "options": [
+        {
+          "text": "Uma semana, embora depois tenha servido mais sete anos por ela",
+          "correct": true
+        },
+        {
+          "text": "Sete anos, sem nenhum serviço adicional",
+          "correct": false
+        },
+        {
+          "text": "Um ano inteiro",
+          "correct": false
+        },
+        {
+          "text": "Até o nascimento do primeiro filho de Lia",
+          "correct": false
+        }
+      ],
+      "explanation": "Labão disse: \"Cumpre a semana desta; então, te daremos também a outra, pelo serviço que ainda outros sete anos servires comigo\" (Gn 29:27). Jacó completou os sete dias das bodas de Lia e recebeu Raquel em seguida, pagando os sete anos depois (Gn 29:28-30).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 29,
+        "verse_start": 21,
+        "verse_end": 30
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cronologia-biblica-0055",
+      "text": "Quantos anos viveu Sara, a única mulher cuja idade ao morrer é registrada na Bíblia?",
+      "options": [
+        {
+          "text": "Cento e vinte e sete anos",
+          "correct": true
+        },
+        {
+          "text": "Noventa anos",
+          "correct": false
+        },
+        {
+          "text": "Cento e setenta e cinco anos",
+          "correct": false
+        },
+        {
+          "text": "Cem anos",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E foi a vida de Sara cento e vinte e sete anos\" (Gn 23:1). Ela morreu em Hebrom, e Abraão comprou a caverna de Macpela para sepultá-la — a primeira porção da terra prometida que a família possuiu (Gn 23:17-20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 23,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cronologia-biblica-0056",
+      "text": "Por quanto tempo Paulo ficou em Corinto na segunda viagem, \"ensinando entre eles a palavra de Deus\"?",
+      "options": [
+        {
+          "text": "Um ano e seis meses",
+          "correct": true
+        },
+        {
+          "text": "Três meses",
+          "correct": false
+        },
+        {
+          "text": "Dois anos",
+          "correct": false
+        },
+        {
+          "text": "Três anos",
+          "correct": false
+        }
+      ],
+      "explanation": "Depois da visão em que o Senhor disse \"não temas... porque tenho muito povo nesta cidade\", Paulo \"ficou ali um ano e seis meses\" (At 18:9-11). Foi nesse período que escreveu as cartas aos Tessalonicenses.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 18,
+        "verse_start": 9,
+        "verse_end": 11
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cronologia-biblica-0057",
+      "text": "Em que ano do reinado de Ezequias Senaqueribe, rei da Assíria, subiu contra as cidades fortificadas de Judá?",
+      "options": [
+        {
+          "text": "No décimo quarto ano",
+          "correct": true
+        },
+        {
+          "text": "No sexto ano",
+          "correct": false
+        },
+        {
+          "text": "No vigésimo nono ano",
+          "correct": false
+        },
+        {
+          "text": "No primeiro ano",
+          "correct": false
+        }
+      ],
+      "explanation": "\"No ano décimo quarto do rei Ezequias, subiu Senaqueribe... contra todas as cidades fortificadas de Judá e as tomou\" (2Rs 18:13). Pouco antes, no sexto ano de Ezequias, Samaria havia caído (2Rs 18:10). O anjo do SENHOR feriu o exército assírio diante de Jerusalém.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 18,
+        "verse_start": 13,
+        "verse_end": 13
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cronologia-biblica-0058",
+      "text": "Por quantos anos Paulo ensinou em Éfeso, segundo o seu discurso aos presbíteros em Mileto?",
+      "options": [
+        {
+          "text": "Três anos",
+          "correct": true
+        },
+        {
+          "text": "Dezoito meses",
+          "correct": false
+        },
+        {
+          "text": "Dois anos",
+          "correct": false
+        },
+        {
+          "text": "Um ano",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Lembrando-vos de que, durante três anos, não cessei, noite e dia, de admoestar com lágrimas a cada um de vós\" (At 20:31). Atos 19 detalha três meses na sinagoga e dois anos na escola de Tirano; os \"três anos\" arredondam o período total.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 20,
+        "verse_start": 31,
+        "verse_end": 31
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cronologia-biblica-0059",
+      "text": "Segundo 1 Reis 6:1, quantos anos depois da saída do Egito Salomão começou a edificar o templo?",
+      "options": [
+        {
+          "text": "Quatrocentos e oitenta anos",
+          "correct": true
+        },
+        {
+          "text": "Quatrocentos e trinta anos",
+          "correct": false
+        },
+        {
+          "text": "Quatrocentos anos",
+          "correct": false
+        },
+        {
+          "text": "Quinhentos anos",
+          "correct": false
+        }
+      ],
+      "explanation": "\"No ano quatrocentos e oitenta, depois de saírem os filhos de Israel do Egito, no ano quarto do reinado de Salomão... começou a edificar a casa do SENHOR\" (1Rs 6:1). O versículo é a âncora de quem data o êxodo por volta de 1446 a.C.",
+      "divergence_note": "Estudiosos divergem sobre se os 480 anos são uma contagem exata (êxodo em c. 1446 a.C.) ou um número simbólico de doze gerações de quarenta anos (êxodo no século XIII a.C.). O texto dá o número; a datação é debate acadêmico.",
+      "reference": {
+        "book": "1reis",
+        "chapter": 6,
+        "verse_start": 1,
+        "verse_end": 1
+      },
+      "difficulty": "expert"
     }
   ]
 }

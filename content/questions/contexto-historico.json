@@ -1589,6 +1589,440 @@
         "verse_end": null
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "contexto-historico-0052",
+      "text": "Quem era governador da Síria quando se fez o recenseamento que levou José e Maria a Belém, segundo Lucas 2:2?",
+      "options": [
+        {
+          "text": "Cirênio (Quirino)",
+          "correct": true
+        },
+        {
+          "text": "Pilatos",
+          "correct": false
+        },
+        {
+          "text": "Gálio",
+          "correct": false
+        },
+        {
+          "text": "Festo",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Este primeiro alistamento foi feito sendo Cirênio presidente da Síria\" (Lc 2:2). Lucas ancora o nascimento de Jesus em nomes e cargos verificáveis — Augusto, Cirênio, Herodes — porque escreve \"com toda a exatidão\" para Teófilo (Lc 1:3). A Judeia dependia administrativamente da província da Síria.",
+      "divergence_note": "A datação do recenseamento de Cirênio em relação ao reinado de Herodes é discutida pelos historiadores; há propostas de harmonização, como traduzir Lucas 2:2 por \"este alistamento foi antes de Cirênio ser governador\". A pergunta trata apenas do nome registrado por Lucas.",
+      "reference": {
+        "book": "lucas",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": 5
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0053",
+      "text": "No vocabulário da Bíblia, quem são os \"gentios\"?",
+      "options": [
+        {
+          "text": "Os povos não judeus, as nações",
+          "correct": true
+        },
+        {
+          "text": "Os judeus da dispersão",
+          "correct": false
+        },
+        {
+          "text": "Os sacerdotes do templo",
+          "correct": false
+        },
+        {
+          "text": "Os convertidos ao cristianismo",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Gentios\" traduz o hebraico goyim e o grego ethne, \"nações\": todos os que não pertencem a Israel. Paulo lembra aos efésios que eram \"gentios na carne... separados da comunidade de Israel\" (Ef 2:11-12), e se apresenta como \"apóstolo dos gentios\" (Rm 11:13).",
+      "divergence_note": null,
+      "reference": {
+        "book": "efesios",
+        "chapter": 2,
+        "verse_start": 11,
+        "verse_end": 13
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "contexto-historico-0054",
+      "text": "Quem eram os \"prosélitos\" mencionados em Atos 2:10 e 13:43?",
+      "options": [
+        {
+          "text": "Gentios convertidos ao judaísmo, que aceitavam a circuncisão e a Lei",
+          "correct": true
+        },
+        {
+          "text": "Judeus nascidos fora da Palestina",
+          "correct": false
+        },
+        {
+          "text": "Sacerdotes aposentados do templo",
+          "correct": false
+        },
+        {
+          "text": "Soldados romanos simpatizantes dos judeus",
+          "correct": false
+        }
+      ],
+      "explanation": "Entre os ouvintes de Pentecostes havia \"romanos, tanto judeus como prosélitos\" (At 2:10). Nicolau, um dos sete diáconos, era \"prosélito de Antioquia\" (At 6:5). Jesus criticou fariseus que rodeavam mar e terra \"para fazer um prosélito\" e depois o corrompiam (Mt 23:15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 13,
+        "verse_start": 42,
+        "verse_end": 43
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "contexto-historico-0055",
+      "text": "Que rei, ao ouvir a defesa de Paulo em Cesareia, disse: \"Por pouco me queres persuadir a que me faça cristão\"?",
+      "options": [
+        {
+          "text": "Herodes Agripa II",
+          "correct": true
+        },
+        {
+          "text": "Herodes Antipas",
+          "correct": false
+        },
+        {
+          "text": "Festo",
+          "correct": false
+        },
+        {
+          "text": "Félix",
+          "correct": false
+        }
+      ],
+      "explanation": "Festo convidou Agripa II, bisneto de Herodes, o Grande, e sua irmã Berenice para ouvir Paulo (At 25:13-27). Após o discurso, Agripa deu a célebre resposta (At 26:28) e concluiu: \"bem podia soltar-se este homem, se não houvera apelado para César\" (At 26:32).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 26,
+        "verse_start": 24,
+        "verse_end": 32
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "contexto-historico-0056",
+      "text": "Por que os judeus disseram a Pilatos \"a nós não nos é lícito matar pessoa alguma\" (Jo 18:31)?",
+      "options": [
+        {
+          "text": "Sob o domínio romano, o Sinédrio não tinha autoridade para executar a pena de morte",
+          "correct": true
+        },
+        {
+          "text": "Era sábado, e a Lei proibia execuções",
+          "correct": false
+        },
+        {
+          "text": "Pilatos havia proibido julgamentos durante a Páscoa",
+          "correct": false
+        },
+        {
+          "text": "A Lei de Moisés não previa pena de morte",
+          "correct": false
+        }
+      ],
+      "explanation": "Roma reservava ao governador o ius gladii, o direito de executar. Por isso o Sinédrio precisou levar Jesus a Pilatos, e por isso ele morreu crucificado, pena romana, e não apedrejado — \"para que se cumprisse a palavra que Jesus tinha dito, significando de que morte havia de morrer\" (Jo 18:32; cf. Jo 12:32-33).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 18,
+        "verse_start": 28,
+        "verse_end": 32
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0057",
+      "text": "Que posto ocupava Cláudio Lísias, o oficial romano que livrou Paulo da multidão no templo e o enviou a Cesareia?",
+      "options": [
+        {
+          "text": "Tribuno, comandante da guarnição de Jerusalém",
+          "correct": true
+        },
+        {
+          "text": "Centurião da guarda de Pilatos",
+          "correct": false
+        },
+        {
+          "text": "Procurador da Judeia",
+          "correct": false
+        },
+        {
+          "text": "Procônsul da Síria",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Chegou a notícia ao tribuno da coorte\" (At 21:31), que desceu com soldados e prendeu Paulo com duas cadeias. O tribuno comandava a coorte aquartelada na fortaleza ao lado do templo; sua carta a Félix (At 23:26-30) revela o nome Cláudio Lísias.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 21,
+        "verse_start": 31,
+        "verse_end": 37
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0058",
+      "text": "Em Lucas 13:4, Jesus menciona uma tragédia recente em Jerusalém: uma torre que caiu e matou dezoito pessoas. Onde ficava essa torre?",
+      "options": [
+        {
+          "text": "Em Siloé",
+          "correct": true
+        },
+        {
+          "text": "No monte das Oliveiras",
+          "correct": false
+        },
+        {
+          "text": "Junto ao palácio de Herodes",
+          "correct": false
+        },
+        {
+          "text": "Na fortaleza Antônia",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Aqueles dezoito sobre os quais caiu a torre de Siloé e os matou, cuidais que foram mais culpados do que todos quantos homens habitam em Jerusalém?\" (Lc 13:4). Jesus rejeita a ligação automática entre tragédia e culpa pessoal, e chama todos ao arrependimento (Lc 13:5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 13,
+        "verse_start": 1,
+        "verse_end": 5
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0059",
+      "text": "Quem eram os \"gregos\" (helenistas) de Atos 6:1, cujas viúvas estavam sendo esquecidas na distribuição diária?",
+      "options": [
+        {
+          "text": "Judeus cristãos de língua e cultura gregas, vindos da dispersão",
+          "correct": true
+        },
+        {
+          "text": "Gentios gregos convertidos em Atenas",
+          "correct": false
+        },
+        {
+          "text": "Sacerdotes que haviam aderido à fé",
+          "correct": false
+        },
+        {
+          "text": "Samaritanos que falavam grego",
+          "correct": false
+        }
+      ],
+      "explanation": "A igreja de Jerusalém reunia \"hebreus\", judeus da terra que falavam aramaico, e \"gregos\", judeus da diáspora de língua grega (At 6:1). Para resolver a queixa, os apóstolos fizeram escolher sete homens — todos com nomes gregos, como Estêvão e Filipe (At 6:5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 6,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0060",
+      "text": "Segundo os historiadores, que comunidade judaica viveu isolada junto ao mar Morto e produziu os manuscritos encontrados em Qumran a partir de 1947?",
+      "options": [
+        {
+          "text": "Os essênios",
+          "correct": true
+        },
+        {
+          "text": "Os saduceus",
+          "correct": false
+        },
+        {
+          "text": "Os zelotes",
+          "correct": false
+        },
+        {
+          "text": "Os herodianos",
+          "correct": false
+        }
+      ],
+      "explanation": "Os essênios, não mencionados na Bíblia, viviam em pureza ritual aguardando a intervenção de Deus, e citavam Isaías 40:3 — \"voz do que clama no deserto: preparai o caminho do SENHOR\" — como razão de estarem no deserto. Os Manuscritos do Mar Morto incluem cópias de quase todos os livros do Antigo Testamento, mil anos mais antigas que as conhecidas até então.",
+      "divergence_note": null,
+      "reference": {
+        "book": "isaias",
+        "chapter": 40,
+        "verse_start": 3,
+        "verse_end": 5
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0061",
+      "text": "Que cidade à beira do mar da Galileia, mencionada em João 6:23, foi construída por Herodes Antipas e batizada em honra ao imperador?",
+      "options": [
+        {
+          "text": "Tiberíades",
+          "correct": true
+        },
+        {
+          "text": "Cesareia de Filipe",
+          "correct": false
+        },
+        {
+          "text": "Séforis",
+          "correct": false
+        },
+        {
+          "text": "Betsaida",
+          "correct": false
+        }
+      ],
+      "explanation": "Antipas fundou Tiberíades por volta de 20 d.C. como capital da Galileia, nomeando-a em honra a Tibério César. Como foi construída sobre um antigo cemitério, judeus piedosos a evitavam — talvez por isso os evangelhos nunca mostram Jesus entrando nela. Dela saíram os barcos de João 6:23.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 6,
+        "verse_start": 22,
+        "verse_end": 24
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0062",
+      "text": "Para onde os soldados romanos levaram Paulo depois de tirá-lo da multidão no templo, de cujas escadas ele falou ao povo em hebraico?",
+      "options": [
+        {
+          "text": "Para a fortaleza (Antônia), quartel romano ao lado do templo",
+          "correct": true
+        },
+        {
+          "text": "Para o palácio de Herodes",
+          "correct": false
+        },
+        {
+          "text": "Para o pretório de Pilatos",
+          "correct": false
+        },
+        {
+          "text": "Para a casa do sumo sacerdote",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Mandou que o levassem para a fortaleza... e, sucedendo chegar às escadas, foi carregado pelos soldados\" (At 21:34-35). A fortaleza Antônia, construída por Herodes e nomeada em honra a Marco Antônio, dominava o pátio do templo e abrigava a guarnição romana; dela Paulo pediu licença para falar ao povo (At 21:40).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 21,
+        "verse_start": 30,
+        "verse_end": 40
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0063",
+      "text": "O que era \"Corbã\", prática que Jesus denunciou em Marcos 7:11 como forma de invalidar o mandamento de honrar pai e mãe?",
+      "options": [
+        {
+          "text": "Declarar bens como oferta dedicada a Deus, isentando-se de usá-los para sustentar os pais",
+          "correct": true
+        },
+        {
+          "text": "Um imposto do templo cobrado dos filhos",
+          "correct": false
+        },
+        {
+          "text": "Um voto de silêncio dos fariseus",
+          "correct": false
+        },
+        {
+          "text": "A prática de lavar as mãos antes de comer",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Vós dizeis: Se um homem disser ao pai ou à mãe: Aquilo que poderias aproveitar de mim é Corbã, isto é, oferta ao Senhor\" (Mc 7:11). Jesus conclui que assim invalidavam \"a palavra de Deus pela vossa tradição\" (Mc 7:13). A palavra hebraica significa \"oferta\" ou \"dom\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 7,
+        "verse_start": 9,
+        "verse_end": 13
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "contexto-historico-0064",
+      "text": "Que cargo público tinha Erasto, mencionado por Paulo nas saudações de Romanos 16:23?",
+      "options": [
+        {
+          "text": "Procurador (tesoureiro) da cidade de Corinto",
+          "correct": true
+        },
+        {
+          "text": "Procônsul da Acaia",
+          "correct": false
+        },
+        {
+          "text": "Chefe da sinagoga de Corinto",
+          "correct": false
+        },
+        {
+          "text": "Capitão da guarda do templo",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Saúda-vos Erasto, procurador da cidade\" (Rm 16:23), escrito de Corinto. Uma inscrição em pavimento descoberta em Corinto registra um Erasto que custeou a obra em troca do cargo de edil — talvez a mesma pessoa, evidência de que havia cristãos entre a elite da cidade.",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 16,
+        "verse_start": 23,
+        "verse_end": 23
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "contexto-historico-0065",
+      "text": "Quem eram os \"principais da Ásia\" (asiarcas), amigos de Paulo, que lhe pediram para não entrar no teatro durante o tumulto de Éfeso?",
+      "options": [
+        {
+          "text": "Autoridades da província da Ásia, ligadas ao culto imperial e aos jogos públicos",
+          "correct": true
+        },
+        {
+          "text": "Os anciãos da sinagoga de Éfeso",
+          "correct": false
+        },
+        {
+          "text": "Os sacerdotes do templo de Diana",
+          "correct": false
+        },
+        {
+          "text": "Os magistrados do porto",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Também alguns dos principais da Ásia, que eram seus amigos, lhe rogaram que não se apresentasse no teatro\" (At 19:31). Os asiarcas eram homens ricos eleitos pelas cidades da província, responsáveis pelas festas e pelo culto ao imperador. Que fossem amigos de Paulo mostra que ele não era visto como ameaça política.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 19,
+        "verse_start": 29,
+        "verse_end": 31
+      },
+      "difficulty": "expert"
     }
   ]
 }

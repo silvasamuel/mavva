@@ -1525,6 +1525,440 @@
         "verse_end": 11
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "festas-judaicas-0050",
+      "text": "Segundo Êxodo 12:43-48, que condição o estrangeiro residente devia cumprir para poder comer a Páscoa com Israel?",
+      "options": [
+        {
+          "text": "Ser circuncidado, ele e todos os varões da sua casa — nenhum incircunciso comeria dela",
+          "correct": true
+        },
+        {
+          "text": "Pagar meio siclo ao santuário",
+          "correct": false
+        },
+        {
+          "text": "Morar na terra por pelo menos sete anos",
+          "correct": false
+        },
+        {
+          "text": "Oferecer um cordeiro extra pelos sacerdotes",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Nenhum estrangeiro comerá dela... Porém, se algum estrangeiro se hospedar contigo e quiser celebrar a Páscoa ao SENHOR, seja-lhe circuncidado todo macho, e então chegará a celebrá-la... nenhum incircunciso comerá dela\" (Êx 12:43-48). A Páscoa era refeição da aliança: aberta ao estrangeiro, mas só pela porta do sinal da aliança. Uma mesma lei valia para o natural e para o peregrino (v. 49).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 12,
+        "verse_start": 43,
+        "verse_end": 49
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "festas-judaicas-0051",
+      "text": "Como Deuteronômio 16:3 chama os pães asmos comidos na Páscoa, e por quê?",
+      "options": [
+        {
+          "text": "\"Pão da aflição\", porque Israel saiu do Egito apressadamente",
+          "correct": true
+        },
+        {
+          "text": "\"Pão dos anjos\", porque veio do céu",
+          "correct": false
+        },
+        {
+          "text": "\"Pão da proposição\", porque ficava diante do SENHOR",
+          "correct": false
+        },
+        {
+          "text": "\"Pão da promessa\", porque anunciava Canaã",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Sete dias comerás pães asmos, pão de aflição, porquanto apressadamente saíste da terra do Egito, para que te lembres do dia da tua saída do Egito todos os dias da tua vida\" (Dt 16:3). A massa não teve tempo de levedar (Êx 12:34, 39).",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 16,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "festas-judaicas-0052",
+      "text": "O que significa a palavra \"Páscoa\" (pessach), segundo a explicação de Êxodo 12:13 e 27?",
+      "options": [
+        {
+          "text": "\"Passar por cima\": o SENHOR passou pelas casas marcadas com sangue sem ferir",
+          "correct": true
+        },
+        {
+          "text": "\"Libertar\": o SENHOR libertou Israel",
+          "correct": false
+        },
+        {
+          "text": "\"Cordeiro\": o animal sacrificado",
+          "correct": false
+        },
+        {
+          "text": "\"Noite\": a noite da saída",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Vendo eu sangue, passarei por cima de vós, e não haverá entre vós praga de mortandade\" (Êx 12:13). O verbo hebraico pasach deu nome à festa: o sacrifício \"da Páscoa ao SENHOR, que passou as casas dos filhos de Israel\" (Êx 12:27).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 12,
+        "verse_start": 11,
+        "verse_end": 14
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "festas-judaicas-0053",
+      "text": "Em que dias do mês de Adar os judeus celebram Purim, segundo Ester 9:21?",
+      "options": [
+        {
+          "text": "Nos dias catorze e quinze",
+          "correct": true
+        },
+        {
+          "text": "No primeiro e no segundo",
+          "correct": false
+        },
+        {
+          "text": "No dia dez",
+          "correct": false
+        },
+        {
+          "text": "Nos dias sete e oito",
+          "correct": false
+        }
+      ],
+      "explanation": "Mardoqueu ordenou \"que guardassem o dia décimo quarto do mês de adar e o dia décimo quinto do mesmo, todos os anos\" (Et 9:21). Nas cidades sem muros se descansou no dia catorze; em Susã, cercada de muros, a luta durou mais um dia e se descansou no quinze (Et 9:17-19).",
+      "divergence_note": null,
+      "reference": {
+        "book": "ester",
+        "chapter": 9,
+        "verse_start": 20,
+        "verse_end": 22
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "festas-judaicas-0054",
+      "text": "Como se decidia, no Dia da Expiação, qual dos dois bodes seria sacrificado ao SENHOR e qual seria enviado ao deserto?",
+      "options": [
+        {
+          "text": "Lançando sortes sobre os dois bodes",
+          "correct": true
+        },
+        {
+          "text": "Pelo peso dos animais",
+          "correct": false
+        },
+        {
+          "text": "Pela escolha do sumo sacerdote",
+          "correct": false
+        },
+        {
+          "text": "Pela cor do pelo",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Arão lançará sortes sobre os dois bodes: uma pelo SENHOR e a outra pelo bode emissário\" (Lv 16:8). O primeiro era oferecido pelo pecado; sobre o segundo Arão confessava as iniquidades do povo e o enviava ao deserto (Lv 16:9-10, 21-22).",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 16,
+        "verse_start": 7,
+        "verse_end": 10
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "festas-judaicas-0055",
+      "text": "Segundo Zacarias 14:16, que festa as nações sobreviventes subirão a Jerusalém para celebrar ano após ano?",
+      "options": [
+        {
+          "text": "A festa dos Tabernáculos",
+          "correct": true
+        },
+        {
+          "text": "A Páscoa",
+          "correct": false
+        },
+        {
+          "text": "O Dia da Expiação",
+          "correct": false
+        },
+        {
+          "text": "A festa das Trombetas",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Todos os que restarem de todas as nações que vieram contra Jerusalém subirão de ano em ano para adorar o Rei, o SENHOR dos Exércitos, e para celebrarem a Festa dos Tabernáculos\" (Zc 14:16). A festa da colheita e da peregrinação torna-se imagem da reunião de todos os povos.",
+      "divergence_note": "Cristãos divergem sobre se Zacarias 14 descreve um reino milenar literal em Jerusalém, a era presente da igreja ou a consumação final em linguagem simbólica. A pergunta trata do que o texto diz, não de como se cumprirá.",
+      "reference": {
+        "book": "zacarias",
+        "chapter": 14,
+        "verse_start": 16,
+        "verse_end": 19
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "festas-judaicas-0056",
+      "text": "Além de não fazer obra alguma, o que a Lei ordenava ao povo no Dia da Expiação, \"aos dez do sétimo mês\"?",
+      "options": [
+        {
+          "text": "Afligir a alma — o que a tradição entende como jejum",
+          "correct": true
+        },
+        {
+          "text": "Habitar em cabanas",
+          "correct": false
+        },
+        {
+          "text": "Comer pães asmos",
+          "correct": false
+        },
+        {
+          "text": "Tocar trombetas por toda a terra",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Afligireis a vossa alma e nenhuma obra fareis... porque naquele dia se fará expiação por vós\" (Lv 16:29-30; 23:27-32). É o único jejum prescrito na Lei de Moisés; Atos 27:9 chama-o simplesmente de \"o jejum\". Hoje o dia é conhecido como Yom Kipur.",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 16,
+        "verse_start": 29,
+        "verse_end": 31
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "festas-judaicas-0057",
+      "text": "Durante a festa dos Tabernáculos, Jesus clamou em pé no templo: \"Se alguém tem sede, venha a mim e beba\". Em que dia da festa isso ocorreu, segundo João 7:37?",
+      "options": [
+        {
+          "text": "No último dia, o grande dia da festa",
+          "correct": true
+        },
+        {
+          "text": "No primeiro dia",
+          "correct": false
+        },
+        {
+          "text": "No sábado do meio da festa",
+          "correct": false
+        },
+        {
+          "text": "Na véspera, ao pôr do sol",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E, no último dia, o grande dia da festa, Jesus pôs-se em pé e clamou\" (Jo 7:37). Segundo a tradição judaica registrada na Mishná, nesse dia os sacerdotes traziam água de Siloé em procissão e a derramavam no altar — pano de fundo para a promessa dos \"rios de água viva\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 7,
+        "verse_start": 37,
+        "verse_end": 39
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "festas-judaicas-0058",
+      "text": "Por que a festa instituída nos dias de Ester recebeu o nome de Purim?",
+      "options": [
+        {
+          "text": "Por causa de \"pur\", a sorte que Hamã lançou para marcar o dia da destruição dos judeus",
+          "correct": true
+        },
+        {
+          "text": "Porque \"purim\" significa \"libertação\" em persa",
+          "correct": false
+        },
+        {
+          "text": "Em honra ao rei Assuero",
+          "correct": false
+        },
+        {
+          "text": "Porque era celebrada com purificações",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Hamã... tinha lançado pur, isto é, a sorte, para os assolar e destruir... Por isso aqueles dias se chamam Purim, do nome pur\" (Et 9:24-26; cf. 3:7). O dia marcado pela sorte para a ruína dos judeus tornou-se o dia da sua vitória.",
+      "divergence_note": null,
+      "reference": {
+        "book": "ester",
+        "chapter": 9,
+        "verse_start": 24,
+        "verse_end": 28
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "festas-judaicas-0059",
+      "text": "Que pena a Lei estabelecia para quem comesse pão levedado durante os sete dias dos Pães Asmos?",
+      "options": [
+        {
+          "text": "Ser eliminado (cortado) de Israel",
+          "correct": true
+        },
+        {
+          "text": "Pagar uma multa ao santuário",
+          "correct": false
+        },
+        {
+          "text": "Ficar impuro por sete dias",
+          "correct": false
+        },
+        {
+          "text": "Oferecer um cordeiro adicional",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Sete dias comereis pães asmos... porque qualquer que comer pão levedado, desde o primeiro até ao sétimo dia, aquela alma será cortada de Israel\" (Êx 12:15, 19). A severidade mostra o peso da memória do êxodo; Paulo usa o fermento como figura do pecado a ser removido (1Co 5:6-8).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 12,
+        "verse_start": 15,
+        "verse_end": 20
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "festas-judaicas-0060",
+      "text": "Que festa o povo celebrou nos dias de Esdras e Neemias, ao redescobrir na Lei que devia habitar em cabanas, \"como não tinham feito desde os dias de Josué\"?",
+      "options": [
+        {
+          "text": "A festa dos Tabernáculos",
+          "correct": true
+        },
+        {
+          "text": "A Páscoa",
+          "correct": false
+        },
+        {
+          "text": "Pentecostes",
+          "correct": false
+        },
+        {
+          "text": "Purim",
+          "correct": false
+        }
+      ],
+      "explanation": "Ao ler a Lei no sétimo mês, acharam escrito que deviam habitar em cabanas; fizeram-nas nos terraços, nos pátios e nas praças, \"e houve mui grande alegria\" (Ne 8:13-17). Esdras leu a Lei todos os dias da festa, e no oitavo houve assembleia solene.",
+      "divergence_note": null,
+      "reference": {
+        "book": "neemias",
+        "chapter": 8,
+        "verse_start": 13,
+        "verse_end": 18
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "festas-judaicas-0061",
+      "text": "Quantos cordeiros eram oferecidos diariamente no holocausto contínuo, segundo Números 28:3-4?",
+      "options": [
+        {
+          "text": "Dois: um pela manhã e outro à tarde",
+          "correct": true
+        },
+        {
+          "text": "Um por dia, ao meio-dia",
+          "correct": false
+        },
+        {
+          "text": "Sete, um a cada hora de culto",
+          "correct": false
+        },
+        {
+          "text": "Doze, um por tribo",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Dois cordeiros de um ano, sem mancha, cada dia, em contínuo holocausto; um cordeiro sacrificarás pela manhã e o outro cordeiro sacrificarás de tarde\" (Nm 28:3-4; Êx 29:38-39). As festas acrescentavam ofertas a esse ritmo diário; Jesus morreu na hora do sacrifício da tarde.",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 28,
+        "verse_start": 1,
+        "verse_end": 8
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "festas-judaicas-0062",
+      "text": "Quantas vezes, segundo Levítico 23, os israelitas deviam celebrar uma \"santa convocação\" durante os oito dias da festa dos Tabernáculos?",
+      "options": [
+        {
+          "text": "Duas: no primeiro dia e no oitavo",
+          "correct": true
+        },
+        {
+          "text": "Uma: apenas no primeiro dia",
+          "correct": false
+        },
+        {
+          "text": "Oito: uma a cada dia",
+          "correct": false
+        },
+        {
+          "text": "Três: no primeiro, quarto e oitavo",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Ao primeiro dia haverá santa convocação; nenhuma obra servil fareis... ao oitavo dia tereis santa convocação... dia de proibição é\" (Lv 23:35-36). Nos sete dias havia ofertas queimadas diárias, e no oitavo, chamado atzeret, uma assembleia solene de encerramento.",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 23,
+        "verse_start": 33,
+        "verse_end": 36
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "festas-judaicas-0063",
+      "text": "Qual festa Ezequias celebrou no segundo mês, em vez do primeiro, porque os sacerdotes não tinham se santificado em número suficiente e o povo não se reunira em Jerusalém?",
+      "options": [
+        {
+          "text": "A Páscoa",
+          "correct": true
+        },
+        {
+          "text": "Os Tabernáculos",
+          "correct": false
+        },
+        {
+          "text": "O Dia da Expiação",
+          "correct": false
+        },
+        {
+          "text": "As Semanas",
+          "correct": false
+        }
+      ],
+      "explanation": "2 Crônicas 30:2-3 registra a decisão, amparada na provisão da \"segunda Páscoa\" de Números 9:10-11 para quem estivesse impuro ou em viagem. Ezequias convidou até o remanescente do Norte, e \"houve grande alegria em Jerusalém; porque, desde os dias de Salomão... não houve tal\" (2Cr 30:26).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2cronicas",
+        "chapter": 30,
+        "verse_start": 1,
+        "verse_end": 5
+      },
+      "difficulty": "expert"
     }
   ]
 }

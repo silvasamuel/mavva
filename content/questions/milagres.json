@@ -1429,6 +1429,440 @@
         "verse_end": 4
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0047",
+      "text": "Nas bodas de Caná, quantas talhas de pedra Jesus mandou encher de água antes de transformá-la em vinho?",
+      "options": [
+        {
+          "text": "Seis",
+          "correct": true
+        },
+        {
+          "text": "Doze",
+          "correct": false
+        },
+        {
+          "text": "Três",
+          "correct": false
+        },
+        {
+          "text": "Sete",
+          "correct": false
+        }
+      ],
+      "explanation": "Havia ali \"seis talhas de pedra, postas para as purificações dos judeus\", cada uma com duas ou três metretas — algo em torno de cem litros cada (Jo 2:6). O mestre-sala estranhou que o melhor vinho tivesse sido guardado para o fim.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 2,
+        "verse_start": 6,
+        "verse_end": 10
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "milagres-0048",
+      "text": "O que Jesus disse ao homem da mão mirrada, curando-o num sábado na sinagoga diante dos fariseus?",
+      "options": [
+        {
+          "text": "\"Estende a tua mão\"",
+          "correct": true
+        },
+        {
+          "text": "\"Vai e lava-te\"",
+          "correct": false
+        },
+        {
+          "text": "\"Levanta-te, toma o teu leito\"",
+          "correct": false
+        },
+        {
+          "text": "\"Efatá\"",
+          "correct": false
+        }
+      ],
+      "explanation": "Jesus perguntou se era lícito no sábado fazer o bem ou o mal, salvar a vida ou matar — e eles calaram. Olhando-os com indignação e entristecido pela dureza dos seus corações, disse ao homem: \"Estende a tua mão\", e ela ficou sã (Mc 3:1-5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 3,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "milagres-0049",
+      "text": "O que aconteceu quando Pedro, depois de uma noite inteira sem pescar nada, lançou as redes a pedido de Jesus?",
+      "options": [
+        {
+          "text": "Apanharam tantos peixes que as redes se rompiam",
+          "correct": true
+        },
+        {
+          "text": "Pescaram um peixe com uma moeda na boca",
+          "correct": false
+        },
+        {
+          "text": "Não pescaram nada outra vez",
+          "correct": false
+        },
+        {
+          "text": "Uma tempestade virou o barco",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Sobre a tua palavra lançarei a rede\", disse Pedro. A pesca encheu dois barcos quase até afundarem, e ele caiu aos pés de Jesus: \"Senhor, ausenta-te de mim, que sou um homem pecador\". Jesus respondeu: \"de agora em diante serás pescador de homens\" (Lc 5:4-11).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 5,
+        "verse_start": 4,
+        "verse_end": 11
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "milagres-0050",
+      "text": "Que animal se prendeu à mão de Paulo em Malta, quando ele recolhia gravetos para a fogueira, sem lhe causar nenhum mal?",
+      "options": [
+        {
+          "text": "Uma víbora",
+          "correct": true
+        },
+        {
+          "text": "Um escorpião",
+          "correct": false
+        },
+        {
+          "text": "Um cão",
+          "correct": false
+        },
+        {
+          "text": "Uma aranha",
+          "correct": false
+        }
+      ],
+      "explanation": "Os habitantes da ilha pensaram que Paulo era um homicida castigado pela justiça divina; quando ele sacudiu a víbora no fogo e nada sofreu, passaram a dizer que era um deus (At 28:3-6). Depois Paulo curou o pai de Públio e outros enfermos da ilha.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 28,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "milagres-0051",
+      "text": "Que milagre Elias fez na casa da viúva de Sarepta, além da farinha e do azeite que não acabavam?",
+      "options": [
+        {
+          "text": "Ressuscitou o filho dela, estendendo-se três vezes sobre o menino",
+          "correct": true
+        },
+        {
+          "text": "Curou a viúva da lepra",
+          "correct": false
+        },
+        {
+          "text": "Fez chover sobre o seu campo",
+          "correct": false
+        },
+        {
+          "text": "Multiplicou o pão para a cidade",
+          "correct": false
+        }
+      ],
+      "explanation": "O filho da viúva adoeceu e morreu. Elias o levou ao quarto, clamou ao SENHOR e se estendeu três vezes sobre o menino; \"a alma do menino tornou a entrar nele\". A mulher confessou: \"agora sei que tu és homem de Deus\" (1Rs 17:17-24).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 17,
+        "verse_start": 17,
+        "verse_end": 24
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0052",
+      "text": "Como Moisés tornou potáveis as águas amargas de Mara, três dias depois da travessia do mar Vermelho?",
+      "options": [
+        {
+          "text": "Lançou nelas um lenho que o SENHOR lhe mostrou",
+          "correct": true
+        },
+        {
+          "text": "Feriu a fonte com a vara",
+          "correct": false
+        },
+        {
+          "text": "Lançou sal nas águas",
+          "correct": false
+        },
+        {
+          "text": "Orou e as águas se dividiram",
+          "correct": false
+        }
+      ],
+      "explanation": "O povo murmurou porque não podia beber. \"E ele clamou ao SENHOR, e o SENHOR mostrou-lhe um lenho que lançou nas águas, e as águas se tornaram doces\" (Êx 15:22-25). Ali Deus se revelou como \"o SENHOR, que te sara\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 15,
+        "verse_start": 22,
+        "verse_end": 26
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0053",
+      "text": "Qual cego, curado por Jesus em duas etapas, disse depois do primeiro toque: \"Vejo os homens, pois os vejo como árvores que andam\"?",
+      "options": [
+        {
+          "text": "O cego de Betsaida",
+          "correct": true
+        },
+        {
+          "text": "Bartimeu",
+          "correct": false
+        },
+        {
+          "text": "O cego de nascença em Jerusalém",
+          "correct": false
+        },
+        {
+          "text": "Os dois cegos de Jericó",
+          "correct": false
+        }
+      ],
+      "explanation": "Jesus tirou o homem para fora da aldeia de Betsaida, cuspiu-lhe nos olhos e impôs as mãos. Depois do segundo toque, \"ficou restabelecido e já via ao longe e distintamente a todos\" (Mc 8:22-26). É o único milagre gradual dos evangelhos.",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 8,
+        "verse_start": 22,
+        "verse_end": 26
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0054",
+      "text": "Qual praga do Egito os magos de Faraó não conseguiram imitar, confessando: \"Isto é o dedo de Deus\"?",
+      "options": [
+        {
+          "text": "Os piolhos",
+          "correct": true
+        },
+        {
+          "text": "As rãs",
+          "correct": false
+        },
+        {
+          "text": "As águas em sangue",
+          "correct": false
+        },
+        {
+          "text": "As trevas",
+          "correct": false
+        }
+      ],
+      "explanation": "Os magos haviam reproduzido os dois primeiros sinais com os seus encantamentos. Na terceira praga, quando Arão feriu o pó da terra e ele se tornou em piolhos, fracassaram e reconheceram a mão de Deus — mas Faraó endureceu o coração (Êx 8:16-19).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 8,
+        "verse_start": 16,
+        "verse_end": 19
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0055",
+      "text": "Que milagre Jesus fez pela mulher cananeia que insistiu: \"também os cachorrinhos comem das migalhas que caem da mesa dos seus senhores\"?",
+      "options": [
+        {
+          "text": "Libertou a filha dela de um demônio, à distância",
+          "correct": true
+        },
+        {
+          "text": "Curou-a de um fluxo de sangue",
+          "correct": false
+        },
+        {
+          "text": "Ressuscitou o filho dela",
+          "correct": false
+        },
+        {
+          "text": "Devolveu-lhe a visão",
+          "correct": false
+        }
+      ],
+      "explanation": "Na região de Tiro e Sidom, a mulher gentia pediu misericórdia pela filha \"miseravelmente endemoninhada\". Diante da sua fé e humildade, Jesus disse: \"Ó mulher, grande é a tua fé! Seja isso feito para contigo como tu desejas\" — e a filha sarou naquela hora (Mt 15:21-28).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 15,
+        "verse_start": 21,
+        "verse_end": 28
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0056",
+      "text": "Há quantos anos estava encurvada a mulher que Jesus curou na sinagoga, num sábado, chamando-a \"filha de Abraão\"?",
+      "options": [
+        {
+          "text": "Dezoito anos",
+          "correct": true
+        },
+        {
+          "text": "Doze anos",
+          "correct": false
+        },
+        {
+          "text": "Trinta e oito anos",
+          "correct": false
+        },
+        {
+          "text": "Sete anos",
+          "correct": false
+        }
+      ],
+      "explanation": "A mulher tinha \"um espírito de enfermidade\" havia dezoito anos e não podia endireitar-se. Ao ser criticado pelo principal da sinagoga, Jesus lembrou que todos desatam o boi no sábado para dar-lhe água — quanto mais a esta filha de Abraão, \"a quem Satanás tinha presa\" (Lc 13:10-17).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 13,
+        "verse_start": 10,
+        "verse_end": 17
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0057",
+      "text": "Qual é o único milagre de Jesus, antes da ressurreição, registrado nos quatro evangelhos?",
+      "options": [
+        {
+          "text": "A multiplicação dos pães para cinco mil",
+          "correct": true
+        },
+        {
+          "text": "A transformação da água em vinho",
+          "correct": false
+        },
+        {
+          "text": "A ressurreição de Lázaro",
+          "correct": false
+        },
+        {
+          "text": "O andar sobre as águas",
+          "correct": false
+        }
+      ],
+      "explanation": "A alimentação dos cinco mil aparece em Mateus 14, Marcos 6, Lucas 9 e João 6. Só João registra o menino com os cinco pães e dois peixes e o discurso do pão da vida que se seguiu em Cafarnaum (Jo 6:1-14, 26-35).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 6,
+        "verse_start": 1,
+        "verse_end": 14
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0058",
+      "text": "Segundo João 21, quantos grandes peixes havia na rede que os discípulos puxaram para a praia, depois que Jesus ressurreto lhes mandou lançá-la à direita do barco?",
+      "options": [
+        {
+          "text": "Cento e cinquenta e três",
+          "correct": true
+        },
+        {
+          "text": "Cento e vinte",
+          "correct": false
+        },
+        {
+          "text": "Setenta",
+          "correct": false
+        },
+        {
+          "text": "Cinco mil",
+          "correct": false
+        }
+      ],
+      "explanation": "João conta que a rede estava cheia de \"cento e cinquenta e três\" grandes peixes e, apesar disso, não se rompeu (Jo 21:11). Jesus já os esperava com brasas, peixe e pão — e, em seguida, restaurou Pedro três vezes.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 21,
+        "verse_start": 4,
+        "verse_end": 11
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "milagres-0059",
+      "text": "O que Eliseu lançou na panela de ensopado envenenado, em Gilgal, quando os filhos dos profetas gritaram \"há morte na panela\"?",
+      "options": [
+        {
+          "text": "Farinha",
+          "correct": true
+        },
+        {
+          "text": "Sal",
+          "correct": false
+        },
+        {
+          "text": "Azeite",
+          "correct": false
+        },
+        {
+          "text": "Um lenho",
+          "correct": false
+        }
+      ],
+      "explanation": "Em tempo de fome, alguém colheu colocíntidas silvestres e as cozinhou sem conhecê-las. Eliseu mandou trazer farinha, lançou-a na panela e disse: \"Dai de comer ao povo\" — \"e já não havia mal nenhum na panela\" (2Rs 4:38-41).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 4,
+        "verse_start": 38,
+        "verse_end": 41
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "milagres-0060",
+      "text": "Que milagre aconteceu junto aos ossos de Eliseu, depois da morte do profeta?",
+      "options": [
+        {
+          "text": "Um morto lançado na sepultura reviveu ao tocar nos ossos",
+          "correct": true
+        },
+        {
+          "text": "Os ossos brilharam durante a noite",
+          "correct": false
+        },
+        {
+          "text": "Nasceu uma fonte junto à sepultura",
+          "correct": false
+        },
+        {
+          "text": "Os ossos ficaram incorruptos por cem anos",
+          "correct": false
+        }
+      ],
+      "explanation": "Uns homens que sepultavam um morto viram uma tropa de moabitas e lançaram o corpo às pressas na sepultura de Eliseu. \"Tocando o homem nos ossos de Eliseu, reviveu e se levantou sobre os seus pés\" (2Rs 13:20-21) — um último sinal do profeta que pedira porção dobrada do espírito de Elias.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 13,
+        "verse_start": 20,
+        "verse_end": 21
+      },
+      "difficulty": "expert"
     }
   ]
 }

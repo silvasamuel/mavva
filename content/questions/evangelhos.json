@@ -1457,6 +1457,440 @@
         "verse_end": null
       },
       "difficulty": "easy"
+    },
+    {
+      "external_id": "evangelhos-0048",
+      "text": "Quem são os primeiros chamados de bem-aventurados no Sermão do Monte, \"porque deles é o reino dos céus\"?",
+      "options": [
+        {
+          "text": "Os pobres de espírito",
+          "correct": true
+        },
+        {
+          "text": "Os mansos",
+          "correct": false
+        },
+        {
+          "text": "Os limpos de coração",
+          "correct": false
+        },
+        {
+          "text": "Os misericordiosos",
+          "correct": false
+        }
+      ],
+      "explanation": "As bem-aventuranças abrem com \"Bem-aventurados os pobres de espírito\" (Mt 5:3). A mesma promessa fecha a lista, para os perseguidos por causa da justiça (v. 10), formando uma moldura em torno das oito.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 5,
+        "verse_start": 3,
+        "verse_end": 12
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "evangelhos-0049",
+      "text": "A que Jesus comparou a dificuldade de um rico entrar no reino de Deus?",
+      "options": [
+        {
+          "text": "A um camelo passar pelo fundo de uma agulha",
+          "correct": true
+        },
+        {
+          "text": "A um homem escalar um monte à noite",
+          "correct": false
+        },
+        {
+          "text": "A uma pedra flutuar sobre a água",
+          "correct": false
+        },
+        {
+          "text": "A um pássaro atravessar o mar",
+          "correct": false
+        }
+      ],
+      "explanation": "\"É mais fácil passar um camelo pelo fundo de uma agulha do que entrar um rico no Reino de Deus\" (Mt 19:24). Diante do espanto dos discípulos, Jesus completou: \"aos homens é isso impossível, mas a Deus tudo é possível\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 19,
+        "verse_start": 23,
+        "verse_end": 26
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "evangelhos-0050",
+      "text": "Quem disse a Jesus: \"Senhor, não sou digno de que entres debaixo do meu telhado, mas dize somente uma palavra, e o meu criado há de sarar\"?",
+      "options": [
+        {
+          "text": "Um centurião de Cafarnaum",
+          "correct": true
+        },
+        {
+          "text": "Jairo",
+          "correct": false
+        },
+        {
+          "text": "Nicodemos",
+          "correct": false
+        },
+        {
+          "text": "Zaqueu",
+          "correct": false
+        }
+      ],
+      "explanation": "O centurião entendia autoridade: \"também eu sou homem sob autoridade\". Jesus se maravilhou e disse não ter achado tanta fé \"nem mesmo em Israel\" (Mt 8:5-13). O servo foi curado naquela mesma hora.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 8,
+        "verse_start": 5,
+        "verse_end": 13
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "evangelhos-0051",
+      "text": "Segundo Lucas 23:34, o que Jesus orou a respeito dos que o crucificavam?",
+      "options": [
+        {
+          "text": "\"Pai, perdoa-lhes, porque não sabem o que fazem\"",
+          "correct": true
+        },
+        {
+          "text": "\"Pai, em tuas mãos entrego o meu espírito\"",
+          "correct": false
+        },
+        {
+          "text": "\"Deus meu, por que me desamparaste?\"",
+          "correct": false
+        },
+        {
+          "text": "\"Está consumado\"",
+          "correct": false
+        }
+      ],
+      "explanation": "A primeira das palavras da cruz é uma intercessão pelos algozes, enquanto os soldados repartiam as suas vestes. Lucas também registra \"Pai, nas tuas mãos entrego o meu espírito\" (23:46), a última palavra.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 23,
+        "verse_start": 33,
+        "verse_end": 34
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "evangelhos-0052",
+      "text": "O que Jesus disse quando os discípulos repreendiam os que lhe traziam crianças?",
+      "options": [
+        {
+          "text": "\"Deixai vir a mim os pequeninos... porque dos tais é o Reino de Deus\"",
+          "correct": true
+        },
+        {
+          "text": "\"Ide e ensinai todas as nações\"",
+          "correct": false
+        },
+        {
+          "text": "\"Não deis aos cães o que é santo\"",
+          "correct": false
+        },
+        {
+          "text": "\"Deixai os mortos sepultar os seus mortos\"",
+          "correct": false
+        }
+      ],
+      "explanation": "Jesus \"indignou-se\" com os discípulos e acrescentou que quem não receber o Reino \"como uma criança\" não entrará nele. Depois tomou as crianças nos braços e as abençoou (Mc 10:13-16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 10,
+        "verse_start": 13,
+        "verse_end": 16
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "evangelhos-0053",
+      "text": "O que Jesus fez ao encontrar no templo os que vendiam e compravam e os cambistas?",
+      "options": [
+        {
+          "text": "Expulsou-os e derrubou as mesas dos cambistas",
+          "correct": true
+        },
+        {
+          "text": "Pagou o imposto do templo por eles",
+          "correct": false
+        },
+        {
+          "text": "Pediu-lhes que vendessem fora dos muros",
+          "correct": false
+        },
+        {
+          "text": "Chamou os sacerdotes para julgá-los",
+          "correct": false
+        }
+      ],
+      "explanation": "Jesus derrubou as mesas dos cambistas e as cadeiras dos que vendiam pombas, citando Isaías e Jeremias: \"A minha casa será chamada casa de oração; mas vós a tendes convertido em covil de ladrões\" (Mt 21:12-13).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 21,
+        "verse_start": 12,
+        "verse_end": 13
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "evangelhos-0054",
+      "text": "Como se chamava o servo do sumo sacerdote cuja orelha direita Pedro cortou no Getsêmani?",
+      "options": [
+        {
+          "text": "Malco",
+          "correct": true
+        },
+        {
+          "text": "Alexandre",
+          "correct": false
+        },
+        {
+          "text": "Rufo",
+          "correct": false
+        },
+        {
+          "text": "Cleofas",
+          "correct": false
+        }
+      ],
+      "explanation": "Só João nomeia o servo, Malco, e identifica Pedro como quem desembainhou a espada (Jo 18:10). Lucas registra que Jesus lhe tocou a orelha e o curou (Lc 22:51), e Jesus ordenou: \"Embainha a tua espada\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 18,
+        "verse_start": 10,
+        "verse_end": 11
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "evangelhos-0055",
+      "text": "Segundo Lucas 8:2, de quantos demônios Maria Madalena havia sido liberta antes de passar a seguir Jesus?",
+      "options": [
+        {
+          "text": "Sete",
+          "correct": true
+        },
+        {
+          "text": "Três",
+          "correct": false
+        },
+        {
+          "text": "Doze",
+          "correct": false
+        },
+        {
+          "text": "Uma legião",
+          "correct": false
+        }
+      ],
+      "explanation": "Lucas menciona, entre as mulheres que serviam a Jesus com seus bens, \"Maria, chamada Madalena, da qual saíram sete demônios\", além de Joana, mulher de Cuza, e Susana (Lc 8:1-3). Marcos 16:9 repete o detalhe.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 8,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "evangelhos-0056",
+      "text": "Em que três línguas estava escrito o título que Pilatos mandou pôr sobre a cruz, \"Jesus Nazareno, o Rei dos Judeus\"?",
+      "options": [
+        {
+          "text": "Hebraico, grego e latim",
+          "correct": true
+        },
+        {
+          "text": "Hebraico, aramaico e grego",
+          "correct": false
+        },
+        {
+          "text": "Latim, grego e egípcio",
+          "correct": false
+        },
+        {
+          "text": "Aramaico, latim e siríaco",
+          "correct": false
+        }
+      ],
+      "explanation": "João 19:19-20 diz que muitos judeus leram o título, porque o lugar era perto da cidade e estava escrito \"em hebraico, grego e latim\". Os principais sacerdotes pediram que fosse mudado para \"ele disse: Sou o Rei dos Judeus\", e Pilatos respondeu: \"O que escrevi, escrevi\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 19,
+        "verse_start": 19,
+        "verse_end": 22
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "evangelhos-0057",
+      "text": "Quem pediu a Herodes a cabeça de João Batista num prato, instruída pela própria mãe?",
+      "options": [
+        {
+          "text": "A filha de Herodias",
+          "correct": true
+        },
+        {
+          "text": "Herodias",
+          "correct": false
+        },
+        {
+          "text": "Salomé, mulher de Zebedeu",
+          "correct": false
+        },
+        {
+          "text": "Joana, mulher de Cuza",
+          "correct": false
+        }
+      ],
+      "explanation": "Na festa de aniversário de Herodes, a filha de Herodias dançou e agradou tanto ao rei que ele jurou dar-lhe o que pedisse. Aconselhada pela mãe, que odiava João por ele condenar o casamento dela com Herodes, pediu a cabeça do Batista (Mc 6:21-28). A Bíblia não registra o nome da moça.",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 6,
+        "verse_start": 21,
+        "verse_end": 28
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "evangelhos-0058",
+      "text": "O que Jesus respondeu quando Pilatos lhe perguntou se ele era rei?",
+      "options": [
+        {
+          "text": "\"O meu Reino não é deste mundo\"",
+          "correct": true
+        },
+        {
+          "text": "\"Tu o dizes, mas não sou rei\"",
+          "correct": false
+        },
+        {
+          "text": "\"Só há um Rei, que está nos céus\"",
+          "correct": false
+        },
+        {
+          "text": "\"O meu Reino virá quando Roma cair\"",
+          "correct": false
+        }
+      ],
+      "explanation": "Jesus explicou que, se o seu Reino fosse deste mundo, os seus servos teriam lutado para impedir sua prisão. Afirmou ter vindo \"para dar testemunho da verdade\", ao que Pilatos respondeu: \"Que é a verdade?\" (Jo 18:33-38).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 18,
+        "verse_start": 33,
+        "verse_end": 38
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "evangelhos-0059",
+      "text": "Qual discípulo, quando Jesus decidiu voltar à Judeia para ir a Lázaro, disse aos outros: \"Vamos nós também, para morrermos com ele\"?",
+      "options": [
+        {
+          "text": "Tomé",
+          "correct": true
+        },
+        {
+          "text": "Pedro",
+          "correct": false
+        },
+        {
+          "text": "Filipe",
+          "correct": false
+        },
+        {
+          "text": "Judas Tadeu",
+          "correct": false
+        }
+      ],
+      "explanation": "Os discípulos lembraram que os judeus haviam tentado apedrejar Jesus pouco antes. Foi Tomé, \"chamado Dídimo\", quem demonstrou lealdade corajosa (Jo 11:7-16) — o mesmo que depois exigiria ver as marcas dos cravos.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 11,
+        "verse_start": 7,
+        "verse_end": 16
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "evangelhos-0060",
+      "text": "Qual é o nome do único discípulo identificado entre os dois que caminhavam para Emaús no dia da ressurreição?",
+      "options": [
+        {
+          "text": "Cléopas",
+          "correct": true
+        },
+        {
+          "text": "Natanael",
+          "correct": false
+        },
+        {
+          "text": "Cleofas, pai de Tiago",
+          "correct": false
+        },
+        {
+          "text": "Nicodemos",
+          "correct": false
+        }
+      ],
+      "explanation": "Lucas 24:18 nomeia Cléopas, que perguntou ao estranho se ele era o único peregrino em Jerusalém a ignorar o que acontecera. O companheiro permanece anônimo. Só reconheceram Jesus quando ele partiu o pão (Lc 24:30-31).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 24,
+        "verse_start": 13,
+        "verse_end": 35
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "evangelhos-0061",
+      "text": "Segundo João 19:39, que quantidade aproximada de mirra e aloés Nicodemos trouxe para o sepultamento de Jesus?",
+      "options": [
+        {
+          "text": "Quase cem arráteis",
+          "correct": true
+        },
+        {
+          "text": "Dez arráteis",
+          "correct": false
+        },
+        {
+          "text": "Trinta siclos",
+          "correct": false
+        },
+        {
+          "text": "Um alabastro",
+          "correct": false
+        }
+      ],
+      "explanation": "Nicodemos, \"aquele que anteriormente se dirigira a Jesus de noite\", trouxe \"quase cem arráteis\" (cerca de 33 kg) de mistura de mirra e aloés — quantidade digna de um sepultamento real. Com José de Arimateia, envolveu o corpo em lençóis com as especiarias (Jo 19:38-42).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 19,
+        "verse_start": 38,
+        "verse_end": 42
+      },
+      "difficulty": "expert"
     }
   ]
 }

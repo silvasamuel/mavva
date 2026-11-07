@@ -1645,6 +1645,440 @@
         "verse_end": 22
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "personagens-0054",
+      "text": "Qual homem rico de Belém, parente de Elimeleque, permitiu que Rute colhesse em seu campo e depois a tomou por esposa?",
+      "options": [
+        {
+          "text": "Boaz",
+          "correct": true
+        },
+        {
+          "text": "Elimeleque",
+          "correct": false
+        },
+        {
+          "text": "Obede",
+          "correct": false
+        },
+        {
+          "text": "Quiliom",
+          "correct": false
+        }
+      ],
+      "explanation": "Boaz era parente do marido falecido de Noemi e agiu como resgatador: tratou Rute com bondade na colheita e, diante dos anciãos na porta da cidade, a tomou por mulher. Do casamento nasceu Obede, avô de Davi (Rt 2:1; 4:13-17).",
+      "divergence_note": null,
+      "reference": {
+        "book": "rute",
+        "chapter": 4,
+        "verse_start": 9,
+        "verse_end": 13
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "personagens-0055",
+      "text": "Qual das irmãs de Lázaro se queixou a Jesus por estar sobrecarregada com o serviço, enquanto a outra ouvia sentada aos pés dele?",
+      "options": [
+        {
+          "text": "Marta",
+          "correct": true
+        },
+        {
+          "text": "Maria",
+          "correct": false
+        },
+        {
+          "text": "Salomé",
+          "correct": false
+        },
+        {
+          "text": "Joana",
+          "correct": false
+        }
+      ],
+      "explanation": "Marta andava \"distraída em muitos serviços\" e pediu que Jesus mandasse Maria ajudá-la. Jesus respondeu: \"Marta, Marta, estás ansiosa e afadigada com muitas coisas, mas uma só é necessária\" (Lc 10:40-42).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 10,
+        "verse_start": 38,
+        "verse_end": 42
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "personagens-0056",
+      "text": "Que homem justo e piedoso de Jerusalém, a quem o Espírito Santo revelara que não morreria antes de ver o Cristo, tomou o menino Jesus nos braços no templo?",
+      "options": [
+        {
+          "text": "Simeão",
+          "correct": true
+        },
+        {
+          "text": "Zacarias",
+          "correct": false
+        },
+        {
+          "text": "Nicodemos",
+          "correct": false
+        },
+        {
+          "text": "José de Arimateia",
+          "correct": false
+        }
+      ],
+      "explanation": "Simeão esperava \"a consolação de Israel\". Ao ver o menino, louvou a Deus: \"Agora, Senhor, despedes em paz o teu servo... pois já os meus olhos viram a tua salvação\" (Lc 2:25-32). Também anunciou a Maria que uma espada lhe traspassaria a alma.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 2,
+        "verse_start": 25,
+        "verse_end": 35
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "personagens-0057",
+      "text": "Qual judeu da corte de Susã descobriu uma conspiração contra o rei Assuero e, mais tarde, recusou-se a curvar-se diante de Hamã?",
+      "options": [
+        {
+          "text": "Mardoqueu",
+          "correct": true
+        },
+        {
+          "text": "Esdras",
+          "correct": false
+        },
+        {
+          "text": "Neemias",
+          "correct": false
+        },
+        {
+          "text": "Daniel",
+          "correct": false
+        }
+      ],
+      "explanation": "Mardoqueu, primo e tutor de Ester, denunciou o plano de Bigtã e Teres contra o rei — feito registrado nas crônicas e lembrado numa noite de insônia de Assuero (Et 2:21-23; 6:1-3). Sua recusa em se prostrar diante de Hamã desencadeou a trama contra os judeus (Et 3:2-6).",
+      "divergence_note": null,
+      "reference": {
+        "book": "ester",
+        "chapter": 2,
+        "verse_start": 21,
+        "verse_end": 23
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "personagens-0058",
+      "text": "Qual oficial do rei Assuero planejou exterminar todos os judeus do império e acabou pendurado na forca que havia preparado para Mardoqueu?",
+      "options": [
+        {
+          "text": "Hamã",
+          "correct": true
+        },
+        {
+          "text": "Bigtã",
+          "correct": false
+        },
+        {
+          "text": "Memucã",
+          "correct": false
+        },
+        {
+          "text": "Hegai",
+          "correct": false
+        }
+      ],
+      "explanation": "Hamã, o agagita, obteve um decreto para destruir os judeus. Ester o desmascarou num banquete, e o rei ordenou que fosse enforcado na forca de cinquenta côvados erguida para Mardoqueu (Et 7:9-10). \"Assim se apaziguou o furor do rei.\"",
+      "divergence_note": null,
+      "reference": {
+        "book": "ester",
+        "chapter": 7,
+        "verse_start": 1,
+        "verse_end": 10
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "personagens-0059",
+      "text": "Quem acusou José falsamente, guardando a roupa dele como prova, depois que ele se recusou a pecar com ela?",
+      "options": [
+        {
+          "text": "A mulher de Potifar",
+          "correct": true
+        },
+        {
+          "text": "A filha de Faraó",
+          "correct": false
+        },
+        {
+          "text": "A mulher do copeiro-mor",
+          "correct": false
+        },
+        {
+          "text": "Asenate",
+          "correct": false
+        }
+      ],
+      "explanation": "A mulher de Potifar tentou seduzir José dia após dia. Quando ele fugiu, deixando a roupa em suas mãos, ela o acusou de tentar violentá-la, e José foi lançado no cárcere (Gn 39:7-20). Ali, porém, \"o SENHOR estava com ele\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 39,
+        "verse_start": 7,
+        "verse_end": 20
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "personagens-0060",
+      "text": "Qual sogro de Moisés, sacerdote de Midiã, o aconselhou a nomear chefes de mil, de cem, de cinquenta e de dez para julgar o povo?",
+      "options": [
+        {
+          "text": "Jetro",
+          "correct": true
+        },
+        {
+          "text": "Labão",
+          "correct": false
+        },
+        {
+          "text": "Hobabe",
+          "correct": false
+        },
+        {
+          "text": "Balaque",
+          "correct": false
+        }
+      ],
+      "explanation": "Jetro visitou Moisés no deserto, viu que ele julgava sozinho o povo da manhã até à tarde e disse: \"Não é bom o que fazes... totalmente desfalecerás\". Moisés seguiu o conselho e delegou as causas menores (Êx 18:13-26).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 18,
+        "verse_start": 13,
+        "verse_end": 26
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "personagens-0061",
+      "text": "Qual soldado heteu, marido de Bate-Seba, Davi mandou colocar na frente da batalha mais dura para que morresse?",
+      "options": [
+        {
+          "text": "Urias",
+          "correct": true
+        },
+        {
+          "text": "Abner",
+          "correct": false
+        },
+        {
+          "text": "Amasa",
+          "correct": false
+        },
+        {
+          "text": "Itai",
+          "correct": false
+        }
+      ],
+      "explanation": "Depois de adulterar com Bate-Seba, Davi tentou encobrir o pecado e, por fim, enviou pelas mãos do próprio Urias a carta a Joabe: \"Ponde Urias na frente da maior força da peleja\" (2Sm 11:14-17). Urias morreu, e o profeta Natã confrontou o rei.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 11,
+        "verse_start": 14,
+        "verse_end": 17
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "personagens-0062",
+      "text": "Quem tomou escondido uma capa babilônica, prata e ouro do anátema de Jericó, provocando a derrota de Israel em Ai?",
+      "options": [
+        {
+          "text": "Acã",
+          "correct": true
+        },
+        {
+          "text": "Zinri",
+          "correct": false
+        },
+        {
+          "text": "Coré",
+          "correct": false
+        },
+        {
+          "text": "Datã",
+          "correct": false
+        }
+      ],
+      "explanation": "Acã, da tribo de Judá, confessou ter cobiçado e escondido os objetos debaixo da sua tenda. Ele e tudo o que tinha foram apedrejados no vale de Acor, e só então Israel venceu Ai (Js 7:1, 19-26).",
+      "divergence_note": null,
+      "reference": {
+        "book": "josue",
+        "chapter": 7,
+        "verse_start": 19,
+        "verse_end": 26
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "personagens-0063",
+      "text": "Qual servo de Eliseu correu atrás de Naamã para pedir prata e roupas às escondidas e, por isso, ficou leproso?",
+      "options": [
+        {
+          "text": "Geazi",
+          "correct": true
+        },
+        {
+          "text": "Elias",
+          "correct": false
+        },
+        {
+          "text": "Jeú",
+          "correct": false
+        },
+        {
+          "text": "Baná",
+          "correct": false
+        }
+      ],
+      "explanation": "Eliseu havia recusado qualquer presente de Naamã. Geazi mentiu ao sírio e depois ao profeta, mas Eliseu sabia de tudo: \"a lepra de Naamã se pegará a ti e à tua descendência para sempre\" (2Rs 5:20-27).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 5,
+        "verse_start": 20,
+        "verse_end": 27
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "personagens-0064",
+      "text": "Quem foi o pai de Sansão, a quem o Anjo do SENHOR apareceu e depois subiu ao céu na chama do altar?",
+      "options": [
+        {
+          "text": "Manoá",
+          "correct": true
+        },
+        {
+          "text": "Elcana",
+          "correct": false
+        },
+        {
+          "text": "Boaz",
+          "correct": false
+        },
+        {
+          "text": "Jessé",
+          "correct": false
+        }
+      ],
+      "explanation": "Manoá, da tribo de Dã, e sua mulher estéril receberam o anúncio de que o filho seria nazireu desde o ventre. Quando ofereceram o cabrito, o Anjo subiu na chama, e Manoá temeu morrer por ter visto a Deus (Jz 13:2-23).",
+      "divergence_note": null,
+      "reference": {
+        "book": "juizes",
+        "chapter": 13,
+        "verse_start": 2,
+        "verse_end": 23
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "personagens-0065",
+      "text": "Quais eram os nomes da avó e da mãe de Timóteo, lembradas por Paulo pela \"fé não fingida\" que habitou nelas primeiro?",
+      "options": [
+        {
+          "text": "Lóide e Eunice",
+          "correct": true
+        },
+        {
+          "text": "Febe e Priscila",
+          "correct": false
+        },
+        {
+          "text": "Trifena e Trifosa",
+          "correct": false
+        },
+        {
+          "text": "Júnia e Pérside",
+          "correct": false
+        }
+      ],
+      "explanation": "Paulo escreve: \"a fé não fingida que em ti há, a qual habitou primeiro em tua avó Lóide e em tua mãe Eunice\" (2Tm 1:5). Atos 16:1 acrescenta que a mãe de Timóteo era judia crente e o pai, grego.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2timoteo",
+        "chapter": 1,
+        "verse_start": 3,
+        "verse_end": 5
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "personagens-0066",
+      "text": "Quem foi o escriba que escreveu no rolo as palavras ditadas por Jeremias e as leu ao povo na casa do SENHOR?",
+      "options": [
+        {
+          "text": "Baruque",
+          "correct": true
+        },
+        {
+          "text": "Safã",
+          "correct": false
+        },
+        {
+          "text": "Esdras",
+          "correct": false
+        },
+        {
+          "text": "Seraías",
+          "correct": false
+        }
+      ],
+      "explanation": "Baruque, filho de Nerias, escreveu \"da boca de Jeremias\" todas as palavras do SENHOR e as leu no templo. Quando o rei Jeoaquim queimou o rolo, Jeremias ditou outro, acrescentando ainda muitas palavras semelhantes (Jr 36:4-32).",
+      "divergence_note": null,
+      "reference": {
+        "book": "jeremias",
+        "chapter": 36,
+        "verse_start": 4,
+        "verse_end": 8
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "personagens-0067",
+      "text": "Que etíope, eunuco da casa do rei Zedequias, intercedeu por Jeremias e o tirou da cisterna lamacenta com cordas e trapos velhos?",
+      "options": [
+        {
+          "text": "Ebede-Meleque",
+          "correct": true
+        },
+        {
+          "text": "Gedalias",
+          "correct": false
+        },
+        {
+          "text": "Seraías",
+          "correct": false
+        },
+        {
+          "text": "Nebuzaradã",
+          "correct": false
+        }
+      ],
+      "explanation": "Ebede-Meleque alertou o rei de que Jeremias morreria de fome na cisterna e, com trinta homens, o içou, pondo trapos sob suas axilas (Jr 38:7-13). Deus prometeu livrá-lo na queda de Jerusalém, \"porquanto confiaste em mim\" (Jr 39:15-18).",
+      "divergence_note": null,
+      "reference": {
+        "book": "jeremias",
+        "chapter": 38,
+        "verse_start": 7,
+        "verse_end": 13
+      },
+      "difficulty": "expert"
     }
   ]
 }

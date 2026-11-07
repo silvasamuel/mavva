@@ -1461,6 +1461,440 @@
         "verse_end": 15
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "costumes-judaicos-0048",
+      "text": "O que Abraão fez quando viu três homens em pé diante da sua tenda, nos carvalhais de Manre?",
+      "options": [
+        {
+          "text": "Correu ao encontro deles, inclinou-se à terra e ofereceu água, descanso e uma refeição",
+          "correct": true
+        },
+        {
+          "text": "Mandou os servos expulsá-los",
+          "correct": false
+        },
+        {
+          "text": "Escondeu Sara na tenda e fechou a entrada",
+          "correct": false
+        },
+        {
+          "text": "Pediu que mostrassem sinais de quem eram",
+          "correct": false
+        }
+      ],
+      "explanation": "Abraão correu, inclinou-se, ofereceu água para os pés e \"um bocado de pão\" — e serviu bolos de flor de farinha, um bezerro tenro, manteiga e leite (Gn 18:1-8). Hebreus 13:2 alude ao episódio: \"alguns, não o sabendo, hospedaram anjos\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 18,
+        "verse_start": 1,
+        "verse_end": 8
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "costumes-judaicos-0049",
+      "text": "Que ato de hospitalidade Simão, o fariseu, deixou de fazer a Jesus, conforme o próprio Jesus apontou ao comparar o anfitrião com a mulher pecadora?",
+      "options": [
+        {
+          "text": "Não lhe deu água para os pés, nem ósculo, nem ungiu a sua cabeça",
+          "correct": true
+        },
+        {
+          "text": "Não lhe ofereceu vinho",
+          "correct": false
+        },
+        {
+          "text": "Não o sentou à cabeceira",
+          "correct": false
+        },
+        {
+          "text": "Não lhe lavou as mãos",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Entrei em tua casa, e não me deste água para os pés... não me deste ósculo... não me ungiste a cabeça com óleo\" (Lc 7:44-46). Esses três gestos eram a cortesia básica a um hóspede honrado; a mulher supriu todos com lágrimas, beijos e unguento.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 7,
+        "verse_start": 36,
+        "verse_end": 47
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "costumes-judaicos-0050",
+      "text": "Segundo a contagem bíblica dos dias, quando começava e terminava um dia — por exemplo, o sábado?",
+      "options": [
+        {
+          "text": "De um pôr do sol ao pôr do sol seguinte",
+          "correct": true
+        },
+        {
+          "text": "Da meia-noite à meia-noite",
+          "correct": false
+        },
+        {
+          "text": "Do nascer do sol ao nascer do sol seguinte",
+          "correct": false
+        },
+        {
+          "text": "Do meio-dia ao meio-dia",
+          "correct": false
+        }
+      ],
+      "explanation": "Em Gênesis 1 cada dia é contado \"e foi a tarde e a manhã\"; e a Lei diz do Dia da Expiação: \"desde a tarde até à tarde celebrareis o vosso sábado\" (Lv 23:32). Por isso o corpo de Jesus foi sepultado às pressas antes do pôr do sol da sexta-feira (Lc 23:54; Jo 19:31).",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 23,
+        "verse_start": 32,
+        "verse_end": 32
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "costumes-judaicos-0051",
+      "text": "Que peça de roupa Jacó deu a José, provocando o ódio dos irmãos, que depois a mergulharam em sangue de bode?",
+      "options": [
+        {
+          "text": "Uma túnica de várias cores",
+          "correct": true
+        },
+        {
+          "text": "Um manto de pele de camelo",
+          "correct": false
+        },
+        {
+          "text": "Um cinto de linho fino",
+          "correct": false
+        },
+        {
+          "text": "Um turbante bordado",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Israel amava a José mais do que a todos os seus filhos... e fez-lhe uma túnica de várias cores\" (Gn 37:3). A túnica distinguia o filho favorito e talvez indicasse primogenitura. Os irmãos a usaram para enganar o pai: \"Conhece agora se esta é ou não a túnica de teu filho\" (Gn 37:31-33).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 37,
+        "verse_start": 3,
+        "verse_end": 4
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "costumes-judaicos-0052",
+      "text": "Que afronta Hanum, rei dos amonitas, fez aos servos de Davi, que por isso tiveram de ficar em Jericó \"até que a barba crescesse\"?",
+      "options": [
+        {
+          "text": "Rapou-lhes metade da barba e cortou-lhes as vestes até as nádegas",
+          "correct": true
+        },
+        {
+          "text": "Mandou açoitá-los na praça pública",
+          "correct": false
+        },
+        {
+          "text": "Cortou-lhes a mão direita",
+          "correct": false
+        },
+        {
+          "text": "Rapou-lhes a cabeça e os vestiu de saco",
+          "correct": false
+        }
+      ],
+      "explanation": "Davi enviara condolências pela morte de Naás, mas os príncipes amonitas convenceram Hanum de que eram espias. \"Tomou Hanum os servos de Davi, e lhes rapou metade da barba, e lhes cortou metade das vestes até às nádegas, e os despediu\" (2Sm 10:4). Para um israelita a barba era sinal de honra e maturidade (cf. Lv 19:27; Sl 133:2); o insulto deflagrou a guerra contra Amom e a Síria.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 10,
+        "verse_start": 1,
+        "verse_end": 5
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "costumes-judaicos-0053",
+      "text": "Que voto Paulo cumpriu em Cencreia, rapando a cabeça antes de embarcar para a Síria?",
+      "options": [
+        {
+          "text": "Um voto ao estilo nazireu, encerrado com o corte do cabelo",
+          "correct": true
+        },
+        {
+          "text": "Um voto de silêncio por quarenta dias",
+          "correct": false
+        },
+        {
+          "text": "Um voto de pobreza voluntária",
+          "correct": false
+        },
+        {
+          "text": "Um voto de jejum até chegar a Roma",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Tendo rapado a cabeça em Cencreia, porque tinha voto\" (At 18:18). Números 6 descreve o voto de nazireu, em que o cabelo não era cortado até o cumprimento. Anos depois, em Jerusalém, Paulo custeou o voto de outros quatro homens para mostrar que não desprezava a Lei (At 21:23-26).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 18,
+        "verse_start": 18,
+        "verse_end": 18
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "costumes-judaicos-0054",
+      "text": "Em que posição os convidados ficavam à mesa num banquete do tempo de Jesus, como se vê em João 13:23, com o discípulo amado \"reclinado no seio de Jesus\"?",
+      "options": [
+        {
+          "text": "Reclinados de lado em divãs, apoiados no braço esquerdo, com a cabeça voltada para a mesa",
+          "correct": true
+        },
+        {
+          "text": "Sentados em cadeiras altas ao redor de uma mesa alta",
+          "correct": false
+        },
+        {
+          "text": "Em pé, como na Páscoa do Egito",
+          "correct": false
+        },
+        {
+          "text": "Ajoelhados sobre tapetes",
+          "correct": false
+        }
+      ],
+      "explanation": "Os banquetes seguiam o costume greco-romano do triclínio: divãs em torno de uma mesa baixa, cada um recostado à esquerda e comendo com a direita. Quem estava à direita de alguém ficava com a cabeça próxima ao peito dele — daí João poder perguntar a Jesus em voz baixa quem era o traidor (Jo 13:23-25).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 13,
+        "verse_start": 21,
+        "verse_end": 26
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "costumes-judaicos-0055",
+      "text": "O que Jesus encontrou na casa de Jairo ao chegar para atender a menina morta, segundo Mateus 9:23?",
+      "options": [
+        {
+          "text": "Tocadores de flauta e a multidão em alvoroço, no pranto costumeiro",
+          "correct": true
+        },
+        {
+          "text": "A família em silêncio absoluto",
+          "correct": false
+        },
+        {
+          "text": "Sacerdotes oferecendo sacrifícios",
+          "correct": false
+        },
+        {
+          "text": "Médicos tentando reanimá-la",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Vendo os instrumentistas e o povo em alvoroço, disse-lhes: Retirai-vos, que a menina não está morta, mas dorme\" (Mt 9:23-24). O luto judaico começava imediatamente, com flautistas e carpideiras contratadas — até o mais pobre devia ter \"duas flautas e uma carpideira\", segundo a Mishná. Marcos acrescenta que \"riam-se dele\" (Mc 5:40).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 9,
+        "verse_start": 23,
+        "verse_end": 26
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "costumes-judaicos-0056",
+      "text": "Por que Boaz, na eira, pediu a Rute que estendesse a sua capa e lhe deu seis medidas de cevada antes do amanhecer?",
+      "options": [
+        {
+          "text": "Para que ela não voltasse de mãos vazias à sogra, e para que ninguém soubesse que uma mulher estivera na eira",
+          "correct": true
+        },
+        {
+          "text": "Como pagamento pelo trabalho na colheita",
+          "correct": false
+        },
+        {
+          "text": "Para cumprir a lei do levirato",
+          "correct": false
+        },
+        {
+          "text": "Como dote exigido por Noemi",
+          "correct": false
+        }
+      ],
+      "explanation": "Boaz protegeu a reputação de Rute (\"não se saiba que alguma mulher veio à eira\") e proveu para Noemi: \"Não vás vazia a tua sogra\" (Rt 3:14-17). Noemi entendeu o sinal: \"não descansará este homem até que conclua hoje este negócio\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "rute",
+        "chapter": 3,
+        "verse_start": 14,
+        "verse_end": 18
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "costumes-judaicos-0057",
+      "text": "Que sinal recebia o servo hebreu que, podendo sair livre, declarava \"amo a meu senhor... não quero sair forro\"?",
+      "options": [
+        {
+          "text": "A orelha furada com uma sovela junto à porta, tornando-se servo para sempre",
+          "correct": true
+        },
+        {
+          "text": "Um anel de ferro no pulso",
+          "correct": false
+        },
+        {
+          "text": "Uma marca a fogo na mão",
+          "correct": false
+        },
+        {
+          "text": "Um manto novo do senhor",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Então, seu senhor o levará aos juízes, e o fará chegar à porta... e o seu senhor lhe furará a orelha com uma sovela; e o servirá para sempre\" (Êx 21:5-6). Era servidão escolhida por amor — muitos leem o Salmo 40:6 (\"as orelhas me furaste\") à luz desse gesto.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 21,
+        "verse_start": 2,
+        "verse_end": 6
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "costumes-judaicos-0058",
+      "text": "Segundo Êxodo 21:28, o que se fazia com um boi que chifrasse e matasse um homem ou uma mulher?",
+      "options": [
+        {
+          "text": "Era apedrejado e a sua carne não podia ser comida; o dono ficava inocente, salvo se já fora avisado",
+          "correct": true
+        },
+        {
+          "text": "Era vendido e o dinheiro dado à família",
+          "correct": false
+        },
+        {
+          "text": "Era sacrificado no altar como expiação",
+          "correct": false
+        },
+        {
+          "text": "Era entregue à família da vítima",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Se algum boi escornear homem ou mulher, que morra, o boi será apedrejado certamente, e a sua carne se não comerá; mas o dono do boi será absolvido\" (Êx 21:28). Se o dono já sabia que o animal era perigoso e não o guardou, respondia com a própria vida ou com resgate (Êx 21:29-30). A lei levava a sério a santidade da vida humana.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 21,
+        "verse_start": 28,
+        "verse_end": 32
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "costumes-judaicos-0059",
+      "text": "Segundo Deuteronômio 22:8, o que se devia construir ao edificar uma casa nova, para não trazer culpa de sangue sobre ela?",
+      "options": [
+        {
+          "text": "Um parapeito em volta do telhado",
+          "correct": true
+        },
+        {
+          "text": "Um altar no pátio",
+          "correct": false
+        },
+        {
+          "text": "Uma cisterna coberta",
+          "correct": false
+        },
+        {
+          "text": "Um muro de pedras em torno do terreno",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Quando edificares uma casa nova, farás um parapeito no teu eirado, para que não ponhas culpa de sangue na tua casa, se alguém de alguma maneira cair dela\" (Dt 22:8). Os telhados planos eram usados para dormir, orar e trabalhar — como o de Simão, em Jope, onde Pedro teve a visão (At 10:9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 22,
+        "verse_start": 8,
+        "verse_end": 8
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "costumes-judaicos-0060",
+      "text": "Qual a origem do costume judaico de não comer o nervo da coxa dos animais, mencionado em Gênesis 32:32?",
+      "options": [
+        {
+          "text": "O anjo tocou a coxa de Jacó em Peniel, deslocando-a",
+          "correct": true
+        },
+        {
+          "text": "Moisés o proibiu depois do bezerro de ouro",
+          "correct": false
+        },
+        {
+          "text": "Era parte reservada aos sacerdotes",
+          "correct": false
+        },
+        {
+          "text": "Era sinal de luto pela morte de Raquel",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Por isso os filhos de Israel não comem o nervo encolhido, que está sobre a juntura da coxa, até ao dia de hoje; porquanto tocara a juntura da coxa de Jacó no nervo encolhido\" (Gn 32:32). O costume, chamado gid hanasheh, ainda é observado no judaísmo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 32,
+        "verse_start": 24,
+        "verse_end": 32
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "costumes-judaicos-0061",
+      "text": "Que declaração o israelita devia recitar ao entregar o cesto das primícias ao sacerdote, segundo Deuteronômio 26:5-10?",
+      "options": [
+        {
+          "text": "\"Arameu prestes a perecer foi meu pai, e desceu ao Egito...\" — um resumo da história da redenção",
+          "correct": true
+        },
+        {
+          "text": "O Decálogo inteiro",
+          "correct": false
+        },
+        {
+          "text": "A bênção sacerdotal de Números 6",
+          "correct": false
+        },
+        {
+          "text": "O cântico de Moisés",
+          "correct": false
+        }
+      ],
+      "explanation": "O ofertante recordava a origem humilde de Jacó, a escravidão no Egito, o clamor, o livramento \"com mão forte\" e a entrada na terra \"que mana leite e mel\", concluindo: \"eis que trago as primícias dos frutos da terra que tu, ó SENHOR, me deste\" (Dt 26:5-10). Culto e memória histórica andavam juntos.",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 26,
+        "verse_start": 1,
+        "verse_end": 11
+      },
+      "difficulty": "expert"
     }
   ]
 }

@@ -1525,6 +1525,440 @@
         "verse_end": 4
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "reis-0050",
+      "text": "Qual rei de Israel, ferido pelos flecheiros no monte Gilboa, lançou-se sobre a própria espada para não cair vivo nas mãos dos filisteus?",
+      "options": [
+        {
+          "text": "Saul",
+          "correct": true
+        },
+        {
+          "text": "Isbosete",
+          "correct": false
+        },
+        {
+          "text": "Abner",
+          "correct": false
+        },
+        {
+          "text": "Jônatas",
+          "correct": false
+        }
+      ],
+      "explanation": "Derrotado em Gilboa e vendo os filhos mortos, Saul pediu ao escudeiro que o matasse; como este não ousou, \"tomou Saul a espada e se lançou sobre ela\" (1Sm 31:1-6). Davi lamentou sua morte no cântico do arco (2Sm 1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 31,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "reis-0051",
+      "text": "Qual rei da Babilônia, por causa do orgulho, foi expulso do meio dos homens e comeu erva como os bois até reconhecer que o Altíssimo domina sobre os reinos?",
+      "options": [
+        {
+          "text": "Nabucodonosor",
+          "correct": true
+        },
+        {
+          "text": "Belsazar",
+          "correct": false
+        },
+        {
+          "text": "Evil-Merodaque",
+          "correct": false
+        },
+        {
+          "text": "Dario",
+          "correct": false
+        }
+      ],
+      "explanation": "Daniel 4 é o testemunho do próprio rei: enquanto se gabava da grande Babilônia, veio a sentença, e ele viveu como animal por \"sete tempos\". Ao erguer os olhos ao céu, recobrou a razão e louvou \"o Rei do céu\" (Dn 4:28-37).",
+      "divergence_note": null,
+      "reference": {
+        "book": "daniel",
+        "chapter": 4,
+        "verse_start": 28,
+        "verse_end": 37
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "reis-0052",
+      "text": "Qual rei edificou o primeiro templo do SENHOR em Jerusalém, no quarto ano do seu reinado?",
+      "options": [
+        {
+          "text": "Salomão",
+          "correct": true
+        },
+        {
+          "text": "Davi",
+          "correct": false
+        },
+        {
+          "text": "Ezequias",
+          "correct": false
+        },
+        {
+          "text": "Josias",
+          "correct": false
+        }
+      ],
+      "explanation": "Davi desejou construir a casa de Deus, mas a tarefa coube ao filho. Salomão começou a obra \"no ano quatrocentos e oitenta depois de saírem os filhos de Israel do Egito, no ano quarto do seu reinado\" (1Rs 6:1) e a concluiu em sete anos.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 6,
+        "verse_start": 1,
+        "verse_end": 14
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "reis-0053",
+      "text": "Qual rei de Israel pagou mil talentos de prata a Pul, rei da Assíria, cobrando cinquenta siclos de cada homem rico, \"para que o reino se firmasse na sua mão\"?",
+      "options": [
+        {
+          "text": "Menaém",
+          "correct": true
+        },
+        {
+          "text": "Peca",
+          "correct": false
+        },
+        {
+          "text": "Oseias",
+          "correct": false
+        },
+        {
+          "text": "Jeú",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Então, veio Pul, rei da Assíria, contra a terra; e Menaém deu a Pul mil talentos de prata, para que este o ajudasse a firmar o reino\" (2Rs 15:19). O dinheiro foi extorquido dos \"poderosos e ricos\", cinquenta siclos por cabeça (v. 20). Pul é Tiglate-Pileser III; a partir daí a Assíria tornou-se a sombra que acabaria engolindo Samaria em 722 a.C.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 15,
+        "verse_start": 17,
+        "verse_end": 20
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "reis-0054",
+      "text": "Qual rei assinou, enganado pelos seus príncipes, o decreto que proibia fazer petição a qualquer deus ou homem por trinta dias — e, a contragosto, lançou Daniel na cova dos leões?",
+      "options": [
+        {
+          "text": "Dario, o medo",
+          "correct": true
+        },
+        {
+          "text": "Nabucodonosor",
+          "correct": false
+        },
+        {
+          "text": "Ciro",
+          "correct": false
+        },
+        {
+          "text": "Belsazar",
+          "correct": false
+        }
+      ],
+      "explanation": "Os presidentes e sátrapas sabiam que só achariam falta em Daniel \"na lei do seu Deus\" e armaram o edito irrevogável. Dario \"trabalhou até ao pôr do sol\" para livrar Daniel e passou a noite em jejum (Dn 6:4-18).",
+      "divergence_note": null,
+      "reference": {
+        "book": "daniel",
+        "chapter": 6,
+        "verse_start": 6,
+        "verse_end": 18
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "reis-0055",
+      "text": "Qual rei, tomado por um espírito maligno, arremessou duas vezes a lança contra Davi enquanto ele tocava harpa no palácio?",
+      "options": [
+        {
+          "text": "Saul",
+          "correct": true
+        },
+        {
+          "text": "Isbosete",
+          "correct": false
+        },
+        {
+          "text": "Abner",
+          "correct": false
+        },
+        {
+          "text": "Aquis",
+          "correct": false
+        }
+      ],
+      "explanation": "Depois que as mulheres cantaram \"Davi, os seus dez milhares\", Saul passou a olhar Davi com inveja. No dia seguinte, enquanto Davi tocava, Saul atirou a lança dizendo \"encravarei a Davi na parede\" — e Davi se desviou duas vezes (1Sm 18:10-11). O episódio se repetiu em 1Sm 19:9-10.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 18,
+        "verse_start": 6,
+        "verse_end": 12
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "reis-0056",
+      "text": "Por que Samuel anunciou a Saul que o SENHOR o havia rejeitado como rei, depois da guerra contra Amaleque?",
+      "options": [
+        {
+          "text": "Porque poupou o rei Agague e o melhor do gado, em vez de destruir tudo",
+          "correct": true
+        },
+        {
+          "text": "Porque consultou uma feiticeira",
+          "correct": false
+        },
+        {
+          "text": "Porque atacou os filisteus sem ordem",
+          "correct": false
+        },
+        {
+          "text": "Porque se casou com uma estrangeira",
+          "correct": false
+        }
+      ],
+      "explanation": "Saul recebeu ordem de destruir Amaleque por completo, mas guardou Agague e o melhor das ovelhas e dos bois, alegando que eram para sacrifício. Samuel respondeu que \"o obedecer é melhor do que o sacrificar\" e que, por rejeitar a palavra do SENHOR, Saul fora rejeitado (1Sm 15:7-23).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 15,
+        "verse_start": 7,
+        "verse_end": 23
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "reis-0057",
+      "text": "Qual rei da Pérsia, de quem Neemias era copeiro, lhe deu cartas e licença para reconstruir os muros de Jerusalém?",
+      "options": [
+        {
+          "text": "Artaxerxes",
+          "correct": true
+        },
+        {
+          "text": "Ciro",
+          "correct": false
+        },
+        {
+          "text": "Dario",
+          "correct": false
+        },
+        {
+          "text": "Assuero",
+          "correct": false
+        }
+      ],
+      "explanation": "No mês de nisã do vigésimo ano de Artaxerxes, o rei notou a tristeza de Neemias e perguntou o que ele desejava. Neemias orou \"ao Deus dos céus\" e pediu licença, cartas aos governadores e madeira do bosque real (Ne 2:1-8).",
+      "divergence_note": null,
+      "reference": {
+        "book": "neemias",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": 8
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "reis-0058",
+      "text": "Qual rei comprou a eira de Araúna, o jebuseu, para edificar um altar, dizendo que não ofereceria ao SENHOR holocaustos que não lhe custassem nada?",
+      "options": [
+        {
+          "text": "Davi",
+          "correct": true
+        },
+        {
+          "text": "Salomão",
+          "correct": false
+        },
+        {
+          "text": "Saul",
+          "correct": false
+        },
+        {
+          "text": "Josias",
+          "correct": false
+        }
+      ],
+      "explanation": "Depois do censo e da praga, o profeta Gade mandou Davi levantar um altar na eira de Araúna. O dono quis dá-la de graça, mas Davi insistiu em pagar cinquenta siclos de prata (2Sm 24:18-25). Ali Salomão edificaria o templo (2Cr 3:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 24,
+        "verse_start": 18,
+        "verse_end": 25
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "reis-0059",
+      "text": "Qual rei da Síria cercou Samaria nos dias de Eliseu, causando fome tão severa que uma cabeça de jumento era vendida por oitenta siclos de prata?",
+      "options": [
+        {
+          "text": "Ben-Hadade",
+          "correct": true
+        },
+        {
+          "text": "Hazael",
+          "correct": false
+        },
+        {
+          "text": "Rezim",
+          "correct": false
+        },
+        {
+          "text": "Naamã",
+          "correct": false
+        }
+      ],
+      "explanation": "O cerco de Ben-Hadade levou até ao canibalismo dentro da cidade (2Rs 6:24-29). Eliseu anunciou que no dia seguinte a farinha seria barata na porta de Samaria, e o SENHOR fez o exército sírio fugir ao ouvir um estrondo de carros (2Rs 7:1-7).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 6,
+        "verse_start": 24,
+        "verse_end": 29
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "reis-0060",
+      "text": "Qual rei de Judá, levado cativo para a Babilônia aos dezoito anos, foi tirado da prisão trinta e sete anos depois por Evil-Merodaque e passou a comer à mesa do rei?",
+      "options": [
+        {
+          "text": "Joaquim (Jeconias)",
+          "correct": true
+        },
+        {
+          "text": "Zedequias",
+          "correct": false
+        },
+        {
+          "text": "Jeoaquim",
+          "correct": false
+        },
+        {
+          "text": "Joacaz",
+          "correct": false
+        }
+      ],
+      "explanation": "Joaquim rendeu-se a Nabucodonosor em 597 a.C. e foi deportado com a família e dez mil cativos (2Rs 24:12-16). O livro de 2 Reis termina com a sua libertação por Evil-Merodaque, sinal de esperança para a casa de Davi (2Rs 25:27-30).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 25,
+        "verse_start": 27,
+        "verse_end": 30
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "reis-0061",
+      "text": "Qual rei de Judá mandou apedrejar Zacarias, filho do sacerdote Joiada — o mesmo Joiada que o escondera e o pusera no trono quando criança?",
+      "options": [
+        {
+          "text": "Joás",
+          "correct": true
+        },
+        {
+          "text": "Amazias",
+          "correct": false
+        },
+        {
+          "text": "Acaz",
+          "correct": false
+        },
+        {
+          "text": "Amom",
+          "correct": false
+        }
+      ],
+      "explanation": "Depois da morte de Joiada, Joás deu ouvidos aos príncipes e voltou à idolatria. Quando Zacarias o repreendeu no pátio do templo, o rei mandou apedrejá-lo: \"não se lembrou o rei Joás da beneficência que seu pai Joiada lhe fizera\" (2Cr 24:17-22).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2cronicas",
+        "chapter": 24,
+        "verse_start": 17,
+        "verse_end": 22
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "reis-0062",
+      "text": "Qual rei estrangeiro Isaías chama de \"meu pastor\" e \"ungido\" do SENHOR, mais de um século antes de ele nascer?",
+      "options": [
+        {
+          "text": "Ciro",
+          "correct": true
+        },
+        {
+          "text": "Nabucodonosor",
+          "correct": false
+        },
+        {
+          "text": "Dario",
+          "correct": false
+        },
+        {
+          "text": "Senaqueribe",
+          "correct": false
+        }
+      ],
+      "explanation": "Isaías 44:28 e 45:1 nomeiam Ciro como aquele que ordenaria a reconstrução de Jerusalém e do templo. O cumprimento veio com o decreto de Ciro em 538 a.C. (Ed 1:1-4), onde o próprio rei persa declara que o SENHOR lhe ordenara edificar a casa em Jerusalém.",
+      "divergence_note": null,
+      "reference": {
+        "book": "isaias",
+        "chapter": 45,
+        "verse_start": 1,
+        "verse_end": 4
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "reis-0063",
+      "text": "Qual rei de Israel, visitando Eliseu moribundo, feriu a terra com as flechas apenas três vezes e, por isso, ouviu que venceria a Síria só três vezes?",
+      "options": [
+        {
+          "text": "Jeoás",
+          "correct": true
+        },
+        {
+          "text": "Jeú",
+          "correct": false
+        },
+        {
+          "text": "Jeroboão II",
+          "correct": false
+        },
+        {
+          "text": "Jorão",
+          "correct": false
+        }
+      ],
+      "explanation": "Eliseu mandou o rei atirar uma flecha pela janela — \"a flecha do livramento do SENHOR\" — e depois ferir a terra. Jeoás parou na terceira vez, e o profeta se indignou: \"cinco ou seis vezes a deverias ter ferido\" (2Rs 13:14-19). Jeoás venceu Ben-Hadade três vezes (v. 25).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 13,
+        "verse_start": 14,
+        "verse_end": 19
+      },
+      "difficulty": "expert"
     }
   ]
 }

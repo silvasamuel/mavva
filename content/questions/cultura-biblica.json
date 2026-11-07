@@ -1396,6 +1396,440 @@
         "verse_end": 7
       },
       "difficulty": "easy"
+    },
+    {
+      "external_id": "cultura-biblica-0046",
+      "text": "De que eram feitos os tijolos que os hebreus escravizados produziam no Egito, e o que Faraó deixou de lhes fornecer para aumentar o sofrimento?",
+      "options": [
+        {
+          "text": "Barro misturado com palha; Faraó deixou de dar a palha, mantendo a mesma cota",
+          "correct": true
+        },
+        {
+          "text": "Pedra talhada; Faraó tirou-lhes as ferramentas",
+          "correct": false
+        },
+        {
+          "text": "Madeira e betume; Faraó cortou a madeira",
+          "correct": false
+        },
+        {
+          "text": "Areia e cal; Faraó reduziu a água",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Daqui em diante não torneis a dar palha ao povo para fazer tijolos... eles mesmos vão e colham palha para si\" (Êx 5:7). A palha dava liga ao barro secado ao sol; sem ela, o trabalho dobrava e a cota continuava igual (Êx 5:8, 18).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 5,
+        "verse_start": 6,
+        "verse_end": 19
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cultura-biblica-0047",
+      "text": "O que os discípulos encontraram preparado numa fogueira de brasas quando chegaram à praia, depois da pesca milagrosa de João 21?",
+      "options": [
+        {
+          "text": "Peixe posto sobre as brasas, e pão",
+          "correct": true
+        },
+        {
+          "text": "Um cordeiro assado",
+          "correct": false
+        },
+        {
+          "text": "Vinho e pães asmos",
+          "correct": false
+        },
+        {
+          "text": "Figos e mel",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Viram ali brasas, e um peixe posto em cima, e pão\" (Jo 21:9). Jesus ainda pediu dos peixes que eles acabavam de pescar e os serviu: \"Vinde, jantai\". A refeição simples de pescadores emoldura a restauração de Pedro (Jo 21:15-17).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 21,
+        "verse_start": 9,
+        "verse_end": 14
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cultura-biblica-0048",
+      "text": "De que madeira era feita a arca da aliança, e com que era revestida?",
+      "options": [
+        {
+          "text": "Madeira de cetim (acácia), coberta de ouro puro por dentro e por fora",
+          "correct": true
+        },
+        {
+          "text": "Cedro do Líbano, coberto de prata",
+          "correct": false
+        },
+        {
+          "text": "Carvalho, coberto de bronze",
+          "correct": false
+        },
+        {
+          "text": "Cipreste, sem revestimento",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Farão uma arca de madeira de cetim... e a cobrirás de ouro puro; por dentro e por fora a cobrirás\" (Êx 25:10-11). A acácia é uma das poucas árvores que crescem no deserto do Sinai; a mesma madeira foi usada na mesa, no altar e nas tábuas do tabernáculo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 25,
+        "verse_start": 10,
+        "verse_end": 16
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cultura-biblica-0049",
+      "text": "Quanto Rute conseguiu colher no primeiro dia em que apanhou espigas no campo de Boaz, depois de debulhá-las?",
+      "options": [
+        {
+          "text": "Quase um efa de cevada",
+          "correct": true
+        },
+        {
+          "text": "Um punhado de trigo",
+          "correct": false
+        },
+        {
+          "text": "Dez feixes inteiros",
+          "correct": false
+        },
+        {
+          "text": "Um cântaro de grãos",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E debulhou o que tinha apanhado, e foi quase um efa de cevada\" (Rt 2:17) — cerca de 22 litros, muito acima do que uma respigadora comum juntaria num dia, porque Boaz mandara deixar cair feixes de propósito (Rt 2:15-16). A cevada era o grão dos pobres; a colheita dela abria a estação, seguida pela do trigo (Rt 2:23).",
+      "divergence_note": null,
+      "reference": {
+        "book": "rute",
+        "chapter": 2,
+        "verse_start": 15,
+        "verse_end": 18
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0050",
+      "text": "Segundo Deuteronômio 8:8, que sete produtos caracterizavam a boa terra de Canaã prometida a Israel?",
+      "options": [
+        {
+          "text": "Trigo, cevada, vides, figueiras, romeiras, oliveiras e mel",
+          "correct": true
+        },
+        {
+          "text": "Arroz, trigo, uvas, tâmaras, laranjas, nozes e leite",
+          "correct": false
+        },
+        {
+          "text": "Milho, cevada, maçãs, figos, azeite, mel e vinho",
+          "correct": false
+        },
+        {
+          "text": "Trigo, lentilhas, favas, amêndoas, pistaches, uvas e mel",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Terra de trigo e cevada, e de vides, e figueiras, e romeiras; terra de oliveiras, abundante de azeite e mel\" (Dt 8:8). A tradição judaica chama-os de \"as sete espécies\"; os espias trouxeram de Escol um cacho de uvas, romãs e figos (Nm 13:23).",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 8,
+        "verse_start": 7,
+        "verse_end": 10
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0051",
+      "text": "Que tipo de construção tinha a casa em Cafarnaum onde quatro homens abriram o telhado para descer um paralítico até Jesus?",
+      "options": [
+        {
+          "text": "Um telhado plano de vigas, ramos e barro, acessível por escada externa",
+          "correct": true
+        },
+        {
+          "text": "Um telhado de telhas de cerâmica",
+          "correct": false
+        },
+        {
+          "text": "Uma cúpula de pedra",
+          "correct": false
+        },
+        {
+          "text": "Uma cobertura de tendas de pelo de cabra",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Descobriram o telhado onde estava, e, fazendo um buraco, baixaram o leito\" (Mc 2:4). Os telhados eram planos, feitos de vigas cobertas de ramos e barro batido, e usados como terraço — por isso a Lei exigia parapeito (Dt 22:8). Lucas, escrevendo para gregos, fala em \"telhas\" (Lc 5:19).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": 5
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0052",
+      "text": "Para que servia o anel-sinete que reis como Assuero e Faraó entregavam a homens de confiança?",
+      "options": [
+        {
+          "text": "Para selar decretos e documentos, dando-lhes autoridade irrevogável",
+          "correct": true
+        },
+        {
+          "text": "Como pagamento de salário",
+          "correct": false
+        },
+        {
+          "text": "Como sinal de casamento",
+          "correct": false
+        },
+        {
+          "text": "Para marcar o gado real",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Escrevei... em nome do rei e selai-o com o anel do rei, porque o escrito que se escreve em nome do rei e se sela com o anel do rei não se pode revogar\" (Et 8:8). O sinete era pressionado em argila ou cera; Deus promete fazer de Zorobabel \"como um anel de selar\" (Ag 2:23).",
+      "divergence_note": null,
+      "reference": {
+        "book": "ester",
+        "chapter": 8,
+        "verse_start": 7,
+        "verse_end": 10
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0053",
+      "text": "Que atividade agrícola Jesus usou como imagem do juízo final, com o grão sendo separado da palha numa eira?",
+      "options": [
+        {
+          "text": "A debulha e a limpeza do trigo com a pá",
+          "correct": true
+        },
+        {
+          "text": "A poda da vinha",
+          "correct": false
+        },
+        {
+          "text": "A colheita do azeite",
+          "correct": false
+        },
+        {
+          "text": "O corte do linho",
+          "correct": false
+        }
+      ],
+      "explanation": "João Batista disse: \"Em sua mão tem a pá, e limpará a sua eira, e recolherá no celeiro o seu trigo, e queimará a palha com fogo que nunca se apagará\" (Mt 3:12). Na eira, o trigo pisado era lançado ao ar com a pá; o vento levava a palha e o grão caía.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 3,
+        "verse_start": 11,
+        "verse_end": 12
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0054",
+      "text": "O que Pedro e João viram dobrado \"num lugar à parte\" ao entrarem no sepulcro vazio, segundo João 20:7?",
+      "options": [
+        {
+          "text": "O lenço que estivera sobre a cabeça de Jesus",
+          "correct": true
+        },
+        {
+          "text": "A túnica sem costura",
+          "correct": false
+        },
+        {
+          "text": "A coroa de espinhos",
+          "correct": false
+        },
+        {
+          "text": "As sandálias de Jesus",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E que o lenço que tinha estado sobre a sua cabeça não estava com os lençóis, mas enrolado, num lugar à parte\" (Jo 20:7). O costume era cobrir o rosto do morto com um pano separado, como com Lázaro (Jo 11:44). A ordem do sepulcro afastava a ideia de roubo apressado.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 20,
+        "verse_start": 3,
+        "verse_end": 8
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0055",
+      "text": "Que objeto, usado para separar o trigo da palha em pequena escala, Jesus menciona quando diz que Satanás pediu para cirandar Pedro?",
+      "options": [
+        {
+          "text": "A ciranda, ou peneira",
+          "correct": true
+        },
+        {
+          "text": "O jugo",
+          "correct": false
+        },
+        {
+          "text": "A foice",
+          "correct": false
+        },
+        {
+          "text": "O moinho",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Simão, Simão, eis que Satanás vos pediu para vos cirandar como trigo\" (Lc 22:31). A peneira sacudia o grão para deixar cair a sujeira — imagem da provação que separaria o que é genuíno. Jesus acrescenta: \"mas eu roguei por ti, para que a tua fé não desfaleça\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 22,
+        "verse_start": 31,
+        "verse_end": 34
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0056",
+      "text": "Qual era a hora do dia em que Jesus foi crucificado, segundo Marcos 15:25, e a que horas isso corresponde no nosso modo de contar?",
+      "options": [
+        {
+          "text": "A hora terceira, cerca de nove da manhã",
+          "correct": true
+        },
+        {
+          "text": "A hora sexta, o meio-dia",
+          "correct": false
+        },
+        {
+          "text": "A hora nona, cerca de três da tarde",
+          "correct": false
+        },
+        {
+          "text": "A hora primeira, ao nascer do sol",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E era a hora terceira, e o crucificaram\" (Mc 15:25). Os judeus contavam as horas a partir do nascer do sol, por volta das seis; a terceira era nove da manhã. As trevas vieram da hora sexta à nona — meio-dia às três — quando Jesus morreu (Mc 15:33-37).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 15,
+        "verse_start": 25,
+        "verse_end": 25
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cultura-biblica-0057",
+      "text": "Que medida de capacidade para líquidos aparece nas talhas de pedra de Caná, cada uma com \"duas ou três metretas\"?",
+      "options": [
+        {
+          "text": "A metreta, cerca de 40 litros",
+          "correct": true
+        },
+        {
+          "text": "O efa, cerca de 22 litros",
+          "correct": false
+        },
+        {
+          "text": "O ômer, cerca de 2 litros",
+          "correct": false
+        },
+        {
+          "text": "O bato, cerca de 400 litros",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Estavam ali postas seis talhas de pedra... e em cada uma cabiam duas ou três metretas\" (Jo 2:6). A metreta grega equivalia a aproximadamente 39-40 litros, o que dá cerca de 500 a 700 litros de vinho — abundância deliberada no primeiro sinal.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 2,
+        "verse_start": 6,
+        "verse_end": 6
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cultura-biblica-0058",
+      "text": "Como os pastores da Palestina costumavam contar e inspecionar as ovelhas ao recolhê-las, conforme a imagem de Ezequiel 20:37 e Levítico 27:32?",
+      "options": [
+        {
+          "text": "Fazendo-as passar uma a uma debaixo da vara",
+          "correct": true
+        },
+        {
+          "text": "Chamando cada uma pelo nome em voz alta",
+          "correct": false
+        },
+        {
+          "text": "Marcando-as com tinta vermelha",
+          "correct": false
+        },
+        {
+          "text": "Pesando-as numa balança",
+          "correct": false
+        }
+      ],
+      "explanation": "\"No tocante a todas as dízimas de vacas e ovelhas, tudo o que passar debaixo da vara, o dízimo será santo ao SENHOR\" (Lv 27:32). O pastor contava o rebanho ao passar pela porta do aprisco, tocando cada animal com a vara; Ezequiel 20:37 usa a imagem para o juízo que seleciona.",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 27,
+        "verse_start": 32,
+        "verse_end": 33
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cultura-biblica-0059",
+      "text": "Que trabalho as mulheres \"sábias de coração\" fizeram para a construção do tabernáculo, segundo Êxodo 35:25-26?",
+      "options": [
+        {
+          "text": "Fiaram linho fino, lã azul, púrpura e carmesim, e pelos de cabra",
+          "correct": true
+        },
+        {
+          "text": "Talharam as pedras do altar",
+          "correct": false
+        },
+        {
+          "text": "Fundiram os utensílios de bronze",
+          "correct": false
+        },
+        {
+          "text": "Esculpiram os querubins de madeira",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Todas as mulheres hábeis fiavam com as suas mãos e traziam o fiado... e todas as mulheres cujo coração as moveu em habilidade fiavam os pelos das cabras\" (Êx 35:25-26). Fiar e tecer eram ofícios femininos por excelência; a mulher virtuosa de Provérbios 31:19 \"estende as mãos ao fuso\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 35,
+        "verse_start": 25,
+        "verse_end": 26
+      },
+      "difficulty": "medium"
     }
   ]
 }

@@ -1492,6 +1492,440 @@
         "verse_end": 13
       },
       "difficulty": "easy"
+    },
+    {
+      "external_id": "idiomas-biblicos-0049",
+      "text": "Que palavra hebraica, que significa \"meu Senhor\", os judeus passaram a pronunciar no lugar do nome divino YHWH ao ler as Escrituras?",
+      "options": [
+        {
+          "text": "Adonai",
+          "correct": true
+        },
+        {
+          "text": "Elohim",
+          "correct": false
+        },
+        {
+          "text": "Shaddai",
+          "correct": false
+        },
+        {
+          "text": "Hosana",
+          "correct": false
+        }
+      ],
+      "explanation": "Por reverência ao terceiro mandamento, o nome revelado a Moisés deixou de ser pronunciado e, na leitura, era substituído por Adonai. Por isso a maioria das traduções, inclusive a Almeida, escreve \"SENHOR\" em maiúsculas onde o hebraico traz YHWH (por exemplo, Sl 110:1: \"Disse o SENHOR ao meu Senhor\").",
+      "divergence_note": null,
+      "reference": {
+        "book": "salmos",
+        "chapter": 110,
+        "verse_start": 1,
+        "verse_end": 1
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "idiomas-biblicos-0050",
+      "text": "O que significa \"Mamom\", palavra aramaica que Jesus usou ao dizer \"Não podeis servir a Deus e a Mamom\"?",
+      "options": [
+        {
+          "text": "Riquezas, dinheiro",
+          "correct": true
+        },
+        {
+          "text": "O diabo",
+          "correct": false
+        },
+        {
+          "text": "O imperador",
+          "correct": false
+        },
+        {
+          "text": "A fome",
+          "correct": false
+        }
+      ],
+      "explanation": "Mamom designa os bens materiais, personificados como um senhor que exige fidelidade (Mt 6:24; Lc 16:13). Jesus não condena possuir, mas servir: \"porque onde estiver o vosso tesouro, aí estará também o vosso coração\" (Mt 6:21).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 6,
+        "verse_start": 24,
+        "verse_end": 24
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "idiomas-biblicos-0051",
+      "text": "O que significa \"Dídimo\", apelido do apóstolo Tomé em João 11:16 e 20:24?",
+      "options": [
+        {
+          "text": "Gêmeo",
+          "correct": true
+        },
+        {
+          "text": "Duvidoso",
+          "correct": false
+        },
+        {
+          "text": "Pequeno",
+          "correct": false
+        },
+        {
+          "text": "Pescador",
+          "correct": false
+        }
+      ],
+      "explanation": "Dídimo é a tradução grega do aramaico Tomé, e ambos significam \"gêmeo\". Nada se diz sobre quem seria o irmão. Foi Tomé quem disse \"Vamos nós também, para morrermos com ele\" (Jo 11:16) e, depois, \"Senhor meu, e Deus meu!\" (Jo 20:28).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 11,
+        "verse_start": 16,
+        "verse_end": 16
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "idiomas-biblicos-0052",
+      "text": "Que significado Gênesis 3:20 dá ao nome \"Eva\"?",
+      "options": [
+        {
+          "text": "Mãe de todos os viventes",
+          "correct": true
+        },
+        {
+          "text": "Tirada do homem",
+          "correct": false
+        },
+        {
+          "text": "Ajudadora idônea",
+          "correct": false
+        },
+        {
+          "text": "A que ouviu a serpente",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E chamou Adão o nome de sua mulher Eva, porquanto ela era a mãe de todos os viventes\" (Gn 3:20). O nome, em hebraico Chavá, está ligado à palavra \"vida\". Foi dado logo após a sentença — gesto de fé na promessa de descendência (Gn 3:15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 3,
+        "verse_start": 20,
+        "verse_end": 20
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "idiomas-biblicos-0053",
+      "text": "O que significa \"Êxodo\", nome do segundo livro da Bíblia?",
+      "options": [
+        {
+          "text": "Saída",
+          "correct": true
+        },
+        {
+          "text": "Deserto",
+          "correct": false
+        },
+        {
+          "text": "Aliança",
+          "correct": false
+        },
+        {
+          "text": "Libertação",
+          "correct": false
+        }
+      ],
+      "explanation": "O nome vem do grego da Septuaginta e significa \"saída\", referindo-se à saída de Israel do Egito. Em hebraico, o livro se chama Shemot, \"Nomes\", pela sua primeira frase: \"Estes, pois, são os nomes dos filhos de Israel\" (Êx 1:1). Lucas usa a mesma palavra grega para a \"partida\" de Jesus em Jerusalém (Lc 9:31).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 12,
+        "verse_start": 41,
+        "verse_end": 42
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "idiomas-biblicos-0054",
+      "text": "O que significa a palavra grega \"apocalipse\", que dá título ao último livro da Bíblia?",
+      "options": [
+        {
+          "text": "Revelação",
+          "correct": true
+        },
+        {
+          "text": "Fim do mundo",
+          "correct": false
+        },
+        {
+          "text": "Catástrofe",
+          "correct": false
+        },
+        {
+          "text": "Juízo",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Revelação de Jesus Cristo, a qual Deus lhe deu para mostrar aos seus servos as coisas que brevemente devem acontecer\" (Ap 1:1). Apokalypsis quer dizer \"tirar o véu\", desvelar. O sentido popular de \"catástrofe\" é posterior e não corresponde ao original.",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "idiomas-biblicos-0055",
+      "text": "Que particularidade gramatical tem \"Elohim\", a palavra hebraica traduzida por \"Deus\" em Gênesis 1:1?",
+      "options": [
+        {
+          "text": "É uma forma plural, mas usada com verbo no singular quando se refere ao Deus de Israel",
+          "correct": true
+        },
+        {
+          "text": "É uma forma feminina",
+          "correct": false
+        },
+        {
+          "text": "É um nome próprio impronunciável",
+          "correct": false
+        },
+        {
+          "text": "É um empréstimo do egípcio",
+          "correct": false
+        }
+      ],
+      "explanation": "Elohim tem terminação plural (-im), mas em \"No princípio, criou Deus\" o verbo \"criou\" está no singular. A maioria dos estudiosos a entende como plural de majestade ou plenitude; a mesma palavra, com verbo plural, designa os deuses das nações (Êx 20:3).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 1
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "idiomas-biblicos-0056",
+      "text": "Que palavra hebraica, traduzida por \"Espírito\" em Gênesis 1:2, significa também \"vento\" e \"sopro\"?",
+      "options": [
+        {
+          "text": "Ruach",
+          "correct": true
+        },
+        {
+          "text": "Nefesh",
+          "correct": false
+        },
+        {
+          "text": "Kavod",
+          "correct": false
+        },
+        {
+          "text": "Davar",
+          "correct": false
+        }
+      ],
+      "explanation": "\"O Espírito [ruach] de Deus se movia sobre a face das águas\" (Gn 1:2). A mesma palavra descreve o vento que Deus fez passar sobre a terra (Gn 8:1) e o fôlego de vida (Ez 37:9-10). O grego pneuma tem a mesma amplitude, e Jesus joga com ela em João 3:8: \"o vento assopra onde quer\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "idiomas-biblicos-0057",
+      "text": "O que significa \"Filadélfia\", nome de uma das sete igrejas do Apocalipse e também palavra usada por Paulo em Romanos 12:10?",
+      "options": [
+        {
+          "text": "Amor fraternal",
+          "correct": true
+        },
+        {
+          "text": "Cidade da liberdade",
+          "correct": false
+        },
+        {
+          "text": "Porta aberta",
+          "correct": false
+        },
+        {
+          "text": "Fiel até à morte",
+          "correct": false
+        }
+      ],
+      "explanation": "Philadelphia une philos (amigo, amante) e adelphos (irmão). Paulo exorta: \"Amai-vos cordialmente uns aos outros com amor fraternal [philadelphia]\" (Rm 12:10), e Pedro a inclui na escada das virtudes (2Pe 1:7). A cidade da Ásia recebeu o nome em honra ao amor do rei Átalo II por seu irmão.",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 12,
+        "verse_start": 9,
+        "verse_end": 10
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "idiomas-biblicos-0058",
+      "text": "O que significa \"Deuteronômio\", nome do quinto livro da Bíblia?",
+      "options": [
+        {
+          "text": "Segunda lei",
+          "correct": true
+        },
+        {
+          "text": "Palavras no deserto",
+          "correct": false
+        },
+        {
+          "text": "Livro da aliança",
+          "correct": false
+        },
+        {
+          "text": "Testamento de Moisés",
+          "correct": false
+        }
+      ],
+      "explanation": "O nome grego vem da Septuaginta em Deuteronômio 17:18, onde o rei devia escrever \"uma cópia desta lei\" — lida como \"segunda lei\". O livro de fato repete e renova a Lei para a geração que entraria em Canaã. Em hebraico chama-se Devarim, \"Palavras\" (Dt 1:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 17,
+        "verse_start": 18,
+        "verse_end": 20
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "idiomas-biblicos-0059",
+      "text": "Que nome Noemi pediu que lhe dessem ao voltar de Moabe, e o que ele significa?",
+      "options": [
+        {
+          "text": "Mara, que significa \"amarga\"",
+          "correct": true
+        },
+        {
+          "text": "Rute, que significa \"amiga\"",
+          "correct": false
+        },
+        {
+          "text": "Orfa, que significa \"a que volta\"",
+          "correct": false
+        },
+        {
+          "text": "Noemi, que significa \"agradável\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Não me chameis Noemi; chamai-me Mara, porque grande amargura me tem dado o Todo-Poderoso\" (Rt 1:20). Noemi significa \"agradável, doce\"; Mara, \"amarga\" — a mesma raiz das águas amargas de Mara no deserto (Êx 15:23). O fim do livro reverte a amargura com o nascimento de Obede.",
+      "divergence_note": null,
+      "reference": {
+        "book": "rute",
+        "chapter": 1,
+        "verse_start": 19,
+        "verse_end": 21
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "idiomas-biblicos-0060",
+      "text": "O que significa \"Raca\", insulto que Jesus menciona no Sermão do Monte?",
+      "options": [
+        {
+          "text": "\"Cabeça oca\", \"imbecil\" — termo aramaico de desprezo",
+          "correct": true
+        },
+        {
+          "text": "\"Maldito\" — termo hebraico de maldição",
+          "correct": false
+        },
+        {
+          "text": "\"Pecador\" — termo grego",
+          "correct": false
+        },
+        {
+          "text": "\"Traidor\" — termo latino",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Qualquer que disser a seu irmão: Raca, será réu do Sinédrio\" (Mt 5:22). Raca vem do aramaico reqa, \"vazio\", e era um insulto comum. Jesus coloca o desprezo pelo irmão na mesma linha do homicídio, pois ambos nascem da ira no coração.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 5,
+        "verse_start": 21,
+        "verse_end": 22
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "idiomas-biblicos-0061",
+      "text": "O que significa \"Siloé\", nome do tanque onde Jesus mandou o cego de nascença lavar-se, segundo a tradução dada em João 9:7?",
+      "options": [
+        {
+          "text": "Enviado",
+          "correct": true
+        },
+        {
+          "text": "Casa de misericórdia",
+          "correct": false
+        },
+        {
+          "text": "Lugar da caveira",
+          "correct": false
+        },
+        {
+          "text": "Fonte do juramento",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Vai, lava-te no tanque de Siloé (que significa Enviado)\" (Jo 9:7). João destaca o sentido porque Jesus acabara de se apresentar como o enviado do Pai (Jo 9:4); o nome vem do canal que Ezequias abriu para trazer água da fonte de Giom para dentro da cidade (2Rs 20:20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 9,
+        "verse_start": 6,
+        "verse_end": 7
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "idiomas-biblicos-0062",
+      "text": "O que é \"Selá\", palavra que aparece setenta e uma vezes nos Salmos e três em Habacuque?",
+      "options": [
+        {
+          "text": "Um termo provavelmente musical ou litúrgico, de sentido incerto — talvez pausa ou interlúdio",
+          "correct": true
+        },
+        {
+          "text": "O nome do compositor dos Salmos",
+          "correct": false
+        },
+        {
+          "text": "Uma palavra que significa \"amém\"",
+          "correct": false
+        },
+        {
+          "text": "O nome de um instrumento de cordas",
+          "correct": false
+        }
+      ],
+      "explanation": "Selá aparece em Salmos como o 3:2, 4 e 8 e em Habacuque 3:3, 9 e 13, geralmente ao fim de uma estrofe. A Septuaginta traduziu por diapsalma, \"interlúdio\". Não há consenso: pode indicar pausa, elevação da voz ou dos instrumentos. Por ser incerto, muitas traduções apenas a transliteram.",
+      "divergence_note": null,
+      "reference": {
+        "book": "salmos",
+        "chapter": 3,
+        "verse_start": 2,
+        "verse_end": 2
+      },
+      "difficulty": "expert"
     }
   ]
 }

@@ -1395,6 +1395,440 @@
         "verse_end": 3
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "parabolas-0046",
+      "text": "Na parábola do filho pródigo, como reagiu o filho mais velho ao saber que o pai fizera uma festa pelo irmão?",
+      "options": [
+        {
+          "text": "Irou-se e não quis entrar",
+          "correct": true
+        },
+        {
+          "text": "Correu para abraçar o irmão",
+          "correct": false
+        },
+        {
+          "text": "Pediu também a sua parte da herança",
+          "correct": false
+        },
+        {
+          "text": "Chamou os servos para servir à mesa",
+          "correct": false
+        }
+      ],
+      "explanation": "O mais velho ouviu a música, soube do bezerro cevado e ficou do lado de fora, queixando-se de que servia ao pai havia anos sem ganhar nem um cabrito. O pai saiu para rogar-lhe: \"filho, tu sempre estás comigo, e todas as minhas coisas são tuas\" (Lc 15:25-32).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 15,
+        "verse_start": 25,
+        "verse_end": 32
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "parabolas-0047",
+      "text": "Na parábola do servo fiel e prudente, o que faz o mau servo quando pensa: \"O meu senhor tarde virá\"?",
+      "options": [
+        {
+          "text": "Começa a espancar os conservos e a comer e beber com os ébrios",
+          "correct": true
+        },
+        {
+          "text": "Esconde os bens do senhor",
+          "correct": false
+        },
+        {
+          "text": "Foge com o dinheiro da casa",
+          "correct": false
+        },
+        {
+          "text": "Vende os servos a outro senhor",
+          "correct": false
+        }
+      ],
+      "explanation": "O servo posto sobre a casa para dar o sustento a tempo é bem-aventurado se o senhor o achar fazendo isso. Mas o mau servo abusa dos conservos, e o senhor vem \"no dia em que não espera\" e o separa, \"e destinará a sua parte com os hipócritas\" (Mt 24:45-51).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 24,
+        "verse_start": 45,
+        "verse_end": 51
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "parabolas-0048",
+      "text": "Na parábola dos dois construtores, o que aconteceu com a casa edificada sobre a areia quando vieram a chuva, os rios e os ventos?",
+      "options": [
+        {
+          "text": "Caiu, e foi grande a sua queda",
+          "correct": true
+        },
+        {
+          "text": "Resistiu, mas ficou danificada",
+          "correct": false
+        },
+        {
+          "text": "Foi levada pelo rio inteira",
+          "correct": false
+        },
+        {
+          "text": "Afundou lentamente na areia",
+          "correct": false
+        }
+      ],
+      "explanation": "Quem ouve as palavras de Jesus e não as pratica é comparado ao homem insensato que construiu sobre a areia: \"e caiu, e foi grande a sua queda\" (Mt 7:26-27). As duas casas enfrentaram a mesma tempestade; só o alicerce era diferente.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 7,
+        "verse_start": 24,
+        "verse_end": 27
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "parabolas-0049",
+      "text": "Segundo Mateus 25:15, que quantias o homem que ia viajar entregou aos seus três servos, \"a cada um segundo a sua capacidade\"?",
+      "options": [
+        {
+          "text": "Cinco talentos, dois talentos e um talento",
+          "correct": true
+        },
+        {
+          "text": "Dez, cinco e um talento",
+          "correct": false
+        },
+        {
+          "text": "Três, dois e um talento",
+          "correct": false
+        },
+        {
+          "text": "Cem, cinquenta e dez talentos",
+          "correct": false
+        }
+      ],
+      "explanation": "O senhor deu \"a um, cinco talentos, e a outro, dois, e a outro, um, a cada um segundo a sua capacidade\" (Mt 25:15). Os dois primeiros dobraram o que receberam e ouviram o mesmo elogio: \"Bem está, servo bom e fiel\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 25,
+        "verse_start": 14,
+        "verse_end": 23
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "parabolas-0050",
+      "text": "Na parábola das ovelhas e dos bodes, de que lado do Filho do homem ficam as ovelhas?",
+      "options": [
+        {
+          "text": "À direita",
+          "correct": true
+        },
+        {
+          "text": "À esquerda",
+          "correct": false
+        },
+        {
+          "text": "Diante do trono",
+          "correct": false
+        },
+        {
+          "text": "Atrás dos bodes",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E porá as ovelhas à sua direita, mas os bodes, à esquerda\" (Mt 25:33). Aos da direita o Rei diz: \"Vinde, benditos de meu Pai, possuí por herança o Reino que vos está preparado desde a fundação do mundo\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 25,
+        "verse_start": 31,
+        "verse_end": 34
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "parabolas-0051",
+      "text": "Em que parábola Jesus conclui: \"Porque muitos são chamados, mas poucos, escolhidos\"?",
+      "options": [
+        {
+          "text": "Na parábola das bodas do filho do rei",
+          "correct": true
+        },
+        {
+          "text": "Na parábola dos talentos",
+          "correct": false
+        },
+        {
+          "text": "Na parábola das dez virgens",
+          "correct": false
+        },
+        {
+          "text": "Na parábola da rede",
+          "correct": false
+        }
+      ],
+      "explanation": "A frase encerra a parábola das bodas (Mt 22:1-14): os convidados recusaram o convite, os servos trouxeram quem acharam pelos caminhos, e um homem sem veste nupcial foi lançado fora. O convite é amplo; a resposta a ele é o que distingue.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 22,
+        "verse_start": 1,
+        "verse_end": 14
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "parabolas-0052",
+      "text": "Na parábola das dez virgens, o que as prudentes responderam quando as insensatas pediram: \"Dai-nos do vosso azeite\"?",
+      "options": [
+        {
+          "text": "\"Ide antes aos que o vendem e comprai-o para vós\"",
+          "correct": true
+        },
+        {
+          "text": "\"Tomai a metade do nosso\"",
+          "correct": false
+        },
+        {
+          "text": "\"Esperai o esposo, ele trará azeite\"",
+          "correct": false
+        },
+        {
+          "text": "\"Acendei as lâmpadas nas nossas\"",
+          "correct": false
+        }
+      ],
+      "explanation": "As prudentes temeram que faltasse para todas. Enquanto as insensatas foram comprar, chegou o esposo, as que estavam prontas entraram, \"e fechou-se a porta\" (Mt 25:8-10). A lição: \"Vigiai, pois, porque não sabeis o dia nem a hora\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 25,
+        "verse_start": 1,
+        "verse_end": 13
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "parabolas-0053",
+      "text": "Na parábola do trigo e do joio, o que o dono do campo mandou fazer quando os servos quiseram arrancar o joio?",
+      "options": [
+        {
+          "text": "Deixar crescer ambos juntos até à ceifa",
+          "correct": true
+        },
+        {
+          "text": "Arrancar o joio imediatamente",
+          "correct": false
+        },
+        {
+          "text": "Queimar o campo inteiro",
+          "correct": false
+        },
+        {
+          "text": "Semear trigo novo por cima",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Não; para que, ao colher o joio, não arranqueis também o trigo com ele. Deixai crescer ambos juntos até à ceifa\" (Mt 13:29-30). Na explicação, a separação cabe aos anjos no fim do mundo, não aos servos agora.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 13,
+        "verse_start": 24,
+        "verse_end": 30
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "parabolas-0054",
+      "text": "A quem Jesus contou a parábola do bom samaritano, e em resposta a qual pergunta?",
+      "options": [
+        {
+          "text": "A um doutor da lei que perguntou: \"Quem é o meu próximo?\"",
+          "correct": true
+        },
+        {
+          "text": "A Pedro, que perguntou quantas vezes perdoar",
+          "correct": false
+        },
+        {
+          "text": "A Zaqueu, que perguntou o que fazer com os seus bens",
+          "correct": false
+        },
+        {
+          "text": "Aos discípulos, que perguntaram quem era o maior",
+          "correct": false
+        }
+      ],
+      "explanation": "O doutor da lei, \"querendo justificar-se\", perguntou quem era o seu próximo. Ao fim da história, Jesus inverteu a pergunta: \"Qual destes três te parece que foi o próximo daquele que caiu nas mãos dos salteadores?\" (Lc 10:25-37).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 10,
+        "verse_start": 25,
+        "verse_end": 37
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "parabolas-0055",
+      "text": "Na história do rico e Lázaro, o que Abraão respondeu quando o rico pediu que Lázaro fosse avisar os seus cinco irmãos?",
+      "options": [
+        {
+          "text": "\"Têm Moisés e os Profetas; ouçam-nos\"",
+          "correct": true
+        },
+        {
+          "text": "\"Lázaro irá, mas eles não o verão\"",
+          "correct": false
+        },
+        {
+          "text": "\"Já é tarde demais para eles\"",
+          "correct": false
+        },
+        {
+          "text": "\"Eu mesmo lhes aparecerei em sonho\"",
+          "correct": false
+        }
+      ],
+      "explanation": "O rico insistiu que, se alguém ressuscitasse, eles se arrependeriam. Abraão concluiu: \"Se não ouvem a Moisés e aos Profetas, tampouco acreditarão, ainda que algum dos mortos ressuscite\" (Lc 16:27-31) — palavras que antecipam a reação à ressurreição do próprio Jesus.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 16,
+        "verse_start": 27,
+        "verse_end": 31
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "parabolas-0056",
+      "text": "Que pedido, vindo de alguém na multidão, levou Jesus a advertir \"guardai-vos da avareza\" e a contar a parábola do rico insensato?",
+      "options": [
+        {
+          "text": "Alguém da multidão pediu que ele mandasse o irmão repartir a herança",
+          "correct": true
+        },
+        {
+          "text": "Um rico perguntou como herdar a vida eterna",
+          "correct": false
+        },
+        {
+          "text": "Os discípulos discutiam quem era o maior",
+          "correct": false
+        },
+        {
+          "text": "Um fariseu o convidou para jantar",
+          "correct": false
+        }
+      ],
+      "explanation": "Jesus recusou ser juiz da partilha e advertiu: \"Acautelai-vos e guardai-vos da avareza, porque a vida de qualquer não consiste na abundância do que possui\" (Lc 12:13-15). Então contou a parábola, que termina: \"assim é aquele que para si ajunta tesouros e não é rico para com Deus\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 12,
+        "verse_start": 13,
+        "verse_end": 21
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "parabolas-0057",
+      "text": "Na explicação da parábola do semeador, quem é representado pela semente que caiu sobre a pedra?",
+      "options": [
+        {
+          "text": "Os que recebem a palavra com alegria, mas não têm raiz e desistem na tentação",
+          "correct": true
+        },
+        {
+          "text": "Os que ouvem e logo o diabo tira a palavra do coração",
+          "correct": false
+        },
+        {
+          "text": "Os que são sufocados pelos cuidados, riquezas e deleites da vida",
+          "correct": false
+        },
+        {
+          "text": "Os que guardam a palavra em coração honesto e dão fruto",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Os que estão sobre pedra, estes são os que, ouvindo a palavra, a recebem com alegria, mas... creem por algum tempo e, no tempo da tentação, se desviam\" (Lc 8:13). Entusiasmo sem raiz não resiste ao calor da prova.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 8,
+        "verse_start": 11,
+        "verse_end": 15
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "parabolas-0058",
+      "text": "Na parábola do credor incompassivo, quanto devia o conservo ao servo que acabara de ser perdoado de dez mil talentos?",
+      "options": [
+        {
+          "text": "Cem dinheiros",
+          "correct": true
+        },
+        {
+          "text": "Mil dinheiros",
+          "correct": false
+        },
+        {
+          "text": "Dez talentos",
+          "correct": false
+        },
+        {
+          "text": "Cinquenta siclos",
+          "correct": false
+        }
+      ],
+      "explanation": "Cem denários eram o salário de uns três meses — dívida real, mas ínfima diante dos dez mil talentos, soma impagável. Mesmo assim o servo \"lançou mão\" do conservo, sufocando-o (Mt 18:28). O contraste é o ponto: quem foi perdoado de tanto não pode negar perdão de tão pouco.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 18,
+        "verse_start": 23,
+        "verse_end": 35
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "parabolas-0059",
+      "text": "Na parábola do administrador infiel, para quanto ele mandou reduzir a dívida do devedor que devia cem medidas de azeite?",
+      "options": [
+        {
+          "text": "Cinquenta",
+          "correct": true
+        },
+        {
+          "text": "Oitenta",
+          "correct": false
+        },
+        {
+          "text": "Vinte",
+          "correct": false
+        },
+        {
+          "text": "Dez",
+          "correct": false
+        }
+      ],
+      "explanation": "Prestes a ser demitido, o administrador chamou os devedores: ao que devia cem medidas de azeite disse \"escreve cinquenta\"; ao de cem medidas de trigo, \"escreve oitenta\" (Lc 16:5-7). O senhor louvou a prudência, não a desonestidade — e Jesus aplicou: usar os bens deste mundo com vistas à eternidade.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 16,
+        "verse_start": 1,
+        "verse_end": 9
+      },
+      "difficulty": "expert"
     }
   ]
 }
