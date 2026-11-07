@@ -1829,6 +1829,440 @@
         "verse_end": 9
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "parabolas-0060",
+      "text": "Na parábola do espírito imundo que sai de um homem e, ao voltar, acha a casa \"varrida e adornada\", o que ele faz?",
+      "options": [
+        {
+          "text": "Leva consigo outros sete espíritos piores, e o último estado do homem fica pior que o primeiro",
+          "correct": true
+        },
+        {
+          "text": "Desiste e vai para o deserto",
+          "correct": false
+        },
+        {
+          "text": "Pede permissão para entrar nos porcos",
+          "correct": false
+        },
+        {
+          "text": "Fica à porta esperando o dono",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Então, vai e leva consigo outros sete espíritos piores do que ele, e, entrando, habitam ali; e são os últimos atos desse homem piores do que os primeiros. Assim acontecerá também a esta má geração\" (Mt 12:45). A casa vazia é a imagem de uma reforma moral sem a presença de Deus: não basta expulsar o mal, é preciso que o Reino ocupe o lugar.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 12,
+        "verse_start": 43,
+        "verse_end": 45
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "parabolas-0061",
+      "text": "Na \"parábola da figueira\" do sermão profético, o que Jesus disse que se sabe quando os ramos da figueira se tornam tenros e brotam folhas?",
+      "options": [
+        {
+          "text": "Que o verão está próximo — assim também, vendo os sinais, sabe-se que ele está às portas",
+          "correct": true
+        },
+        {
+          "text": "Que a colheita será farta",
+          "correct": false
+        },
+        {
+          "text": "Que é tempo de subir a Jerusalém para a festa",
+          "correct": false
+        },
+        {
+          "text": "Que a árvore deve ser cortada",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Aprendei, pois, esta parábola da figueira: quando já os seus ramos se tornam tenros e brotam folhas, sabeis que está próximo o verão. Igualmente, quando virdes todas essas coisas, sabei que ele está próximo, às portas\" (Mt 24:32-33). Na Palestina, a figueira perde as folhas no inverno, e o seu brotar é um sinal inconfundível da estação.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 24,
+        "verse_start": 32,
+        "verse_end": 35
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "parabolas-0062",
+      "text": "A que Jesus comparou \"todo escriba instruído acerca do Reino dos céus\", ao encerrar a série de parábolas de Mateus 13?",
+      "options": [
+        {
+          "text": "A um pai de família que tira do seu tesouro coisas novas e velhas",
+          "correct": true
+        },
+        {
+          "text": "A um pescador que separa os peixes bons dos maus",
+          "correct": false
+        },
+        {
+          "text": "A um semeador que saiu a semear",
+          "correct": false
+        },
+        {
+          "text": "A um negociante que busca boas pérolas",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Todo escriba instruído acerca do Reino dos céus é semelhante a um pai de família que tira do seu tesouro coisas novas e velhas\" (Mt 13:52). Depois de perguntar se os discípulos haviam entendido as parábolas, Jesus descreve o mestre do Reino: alguém que valoriza a revelação antiga das Escrituras e a novidade do Reino que chegou com ele.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 13,
+        "verse_start": 51,
+        "verse_end": 52
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "parabolas-0063",
+      "text": "No discurso do bom pastor, por que o mercenário abandona as ovelhas e foge quando vê vir o lobo?",
+      "options": [
+        {
+          "text": "Porque é mercenário, as ovelhas não são suas, e não se importa com elas",
+          "correct": true
+        },
+        {
+          "text": "Porque o lobo é mais forte do que ele",
+          "correct": false
+        },
+        {
+          "text": "Porque o dono lhe ordenou que fugisse",
+          "correct": false
+        },
+        {
+          "text": "Porque as ovelhas não conhecem a sua voz",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Mas o mercenário, que não é pastor, de quem não são as ovelhas, vê vir o lobo, e deixa as ovelhas, e foge; e o lobo as arrebata e dispersa. Ora, o mercenário foge, porque é mercenário e não tem cuidado das ovelhas\" (Jo 10:12-13). Em contraste, \"o bom Pastor dá a sua vida pelas ovelhas\" (v. 11) — e as conhece pelo nome.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 10,
+        "verse_start": 11,
+        "verse_end": 15
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "parabolas-0064",
+      "text": "Na alegoria da videira, o que Jesus disse que acontece com a vara (ramo) que não permanece nele?",
+      "options": [
+        {
+          "text": "É lançada fora, seca, e a recolhem e lançam no fogo",
+          "correct": true
+        },
+        {
+          "text": "É podada para dar mais fruto",
+          "correct": false
+        },
+        {
+          "text": "É enxertada em outra videira",
+          "correct": false
+        },
+        {
+          "text": "Dá fruto por si mesma",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Eu sou a videira, vós, as varas; quem está em mim, e eu nele, este dá muito fruto, porque sem mim nada podeis fazer. Se alguém não estiver em mim, será lançado fora, como a vara, e secará; e os colhem e lançam no fogo, e ardem\" (Jo 15:5-6). Já a vara que dá fruto o Pai \"limpa\" (poda), para que dê mais (v. 2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 15,
+        "verse_start": 1,
+        "verse_end": 8
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "parabolas-0065",
+      "text": "Que comparação Jesus fez ao ser acusado de expulsar demônios por Belzebu: \"como pode alguém entrar em casa do homem valente e furtar os seus bens...\"?",
+      "options": [
+        {
+          "text": "\"...se primeiro não maniatar o valente? E então saqueará a sua casa\"",
+          "correct": true
+        },
+        {
+          "text": "\"...se não tiver a chave da porta?\"",
+          "correct": false
+        },
+        {
+          "text": "\"...se o valente estiver acordado?\"",
+          "correct": false
+        },
+        {
+          "text": "\"...sem que os servos gritem?\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Ou como pode alguém entrar em casa do homem valente e furtar os seus bens, se primeiro não maniatar o valente, saqueando, então, a sua casa?\" (Mt 12:29). O \"valente\" é Satanás; Jesus afirma que os seus exorcismos provam que o homem forte já foi amarrado — \"é chegado a vós o Reino de Deus\" (v. 28). Um reino dividido contra si mesmo não subsistiria (vv. 25-26).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 12,
+        "verse_start": 22,
+        "verse_end": 30
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "parabolas-0066",
+      "text": "A que Jesus comparou \"esta geração\", que rejeitou tanto João Batista, que não comia nem bebia, quanto o Filho do Homem, que comia e bebia?",
+      "options": [
+        {
+          "text": "A meninos nas praças que gritam: \"Tocamo-vos flauta, e não dançastes; cantamo-vos lamentações, e não chorastes\"",
+          "correct": true
+        },
+        {
+          "text": "A ovelhas sem pastor",
+          "correct": false
+        },
+        {
+          "text": "A sepulcros caiados",
+          "correct": false
+        },
+        {
+          "text": "A uma casa edificada sobre a areia",
+          "correct": false
+        }
+      ],
+      "explanation": "\"É semelhante aos meninos que se assentam nas praças e clamam aos seus companheiros: Tocamo-vos flauta, e não dançastes; cantamo-vos lamentações, e não chorastes\" (Mt 11:16-17). De João diziam \"tem demônio\"; de Jesus, \"glutão e beberrão, amigo de publicanos\". A geração reclamava de tudo, como crianças que não aceitam brincar nem de casamento nem de enterro.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 11,
+        "verse_start": 16,
+        "verse_end": 19
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "parabolas-0067",
+      "text": "Na parábola do rei que vai à guerra, o que Jesus disse que o rei faz se percebe que não pode enfrentar com dez mil quem vem com vinte mil?",
+      "options": [
+        {
+          "text": "Manda embaixadores enquanto o outro está longe e pede condições de paz",
+          "correct": true
+        },
+        {
+          "text": "Reúne mais soldados entre os aliados",
+          "correct": false
+        },
+        {
+          "text": "Fortifica a cidade e espera o cerco",
+          "correct": false
+        },
+        {
+          "text": "Foge para as montanhas",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Ou qual é o rei que, indo à guerra a pelejar contra outro rei, não se assenta primeiro a tomar conselho sobre se com dez mil pode sair ao encontro do que vem contra ele com vinte mil? De outra maneira, estando o outro ainda longe, manda embaixadores e pede condições de paz\" (Lc 14:31-32). Com a parábola da torre, ilustra o custo do discipulado: \"qualquer de vós que não renuncia a tudo quanto tem não pode ser meu discípulo\" (v. 33).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 14,
+        "verse_start": 28,
+        "verse_end": 33
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "parabolas-0068",
+      "text": "Que conselho Jesus deu, em forma de parábola, ao notar que os convidados de um fariseu escolhiam os primeiros lugares à mesa?",
+      "options": [
+        {
+          "text": "Assentar-se no último lugar, para que o anfitrião diga \"amigo, sobe mais para cima\"",
+          "correct": true
+        },
+        {
+          "text": "Não aceitar convites de fariseus",
+          "correct": false
+        },
+        {
+          "text": "Comer em silêncio sem olhar para os outros",
+          "correct": false
+        },
+        {
+          "text": "Pagar pela própria refeição",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Quando por alguém fores convidado às bodas, não te assentes no primeiro lugar... Mas, quando fores convidado, vai e assenta-te no derradeiro lugar, para que, quando vier o que te convidou, te diga: Amigo, sobe mais para cima\" (Lc 14:8-10). A lição: \"qualquer que a si mesmo se exaltar será humilhado, e aquele que a si mesmo se humilhar será exaltado\" (v. 11).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 14,
+        "verse_start": 7,
+        "verse_end": 11
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "parabolas-0069",
+      "text": "Na parábola do semeador, quanto rendeu a semente que caiu em boa terra?",
+      "options": [
+        {
+          "text": "A cem, a sessenta e a trinta por um",
+          "correct": true
+        },
+        {
+          "text": "O dobro do que foi semeado",
+          "correct": false
+        },
+        {
+          "text": "Sete vezes mais",
+          "correct": false
+        },
+        {
+          "text": "Doze cestos cheios",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E outra caiu em boa terra e deu fruto: um a cem, outro a sessenta e outro a trinta\" (Mt 13:8). Marcos inverte a ordem — trinta, sessenta, cem (Mc 4:8). Jesus explica que a boa terra é \"o que ouve e compreende a palavra; e dá fruto\" (Mt 13:23). Rendimentos assim eram extraordinários para a agricultura da época, em que dez por um já era boa colheita.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 13,
+        "verse_start": 3,
+        "verse_end": 9
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "parabolas-0070",
+      "text": "Quando os discípulos perguntaram \"Por que lhes falas por parábolas?\", o que Jesus respondeu?",
+      "options": [
+        {
+          "text": "\"Porque a vós é dado conhecer os mistérios do Reino dos céus, mas a eles não lhes é dado\"",
+          "correct": true
+        },
+        {
+          "text": "\"Porque as parábolas são mais fáceis de lembrar\"",
+          "correct": false
+        },
+        {
+          "text": "\"Porque o povo não sabe ler\"",
+          "correct": false
+        },
+        {
+          "text": "\"Porque assim fizeram os profetas\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Porque a vós é dado conhecer os mistérios do Reino dos céus, mas a eles não lhes é dado... Por isso, lhes falo por parábolas, porque eles, vendo, não veem e, ouvindo, não ouvem, nem compreendem\" (Mt 13:11-13). Jesus cita Isaías 6:9-10: a parábola revela a quem busca e vela a quem endureceu o coração. Aos discípulos ele explicava tudo em particular (Mc 4:34).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 13,
+        "verse_start": 10,
+        "verse_end": 17
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "parabolas-0071",
+      "text": "Quais são as três parábolas de Lucas 15, contadas em resposta à murmuração \"Este recebe pecadores e come com eles\"?",
+      "options": [
+        {
+          "text": "A ovelha perdida, a dracma perdida e o filho pródigo",
+          "correct": true
+        },
+        {
+          "text": "O semeador, o joio e a rede",
+          "correct": false
+        },
+        {
+          "text": "O bom samaritano, o rico insensato e o juiz iníquo",
+          "correct": false
+        },
+        {
+          "text": "Os talentos, as dez virgens e as bodas",
+          "correct": false
+        }
+      ],
+      "explanation": "Fariseus e escribas murmuravam porque publicanos e pecadores se chegavam a Jesus (Lc 15:1-2). Ele respondeu com três parábolas do que se perdeu e foi achado — a ovelha (vv. 3-7), a dracma (vv. 8-10) e o filho (vv. 11-32) —, cada uma terminando em festa, \"porque há alegria diante dos anjos de Deus por um pecador que se arrepende\" (v. 10).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 15,
+        "verse_start": 1,
+        "verse_end": 32
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "parabolas-0072",
+      "text": "Na história do rico e Lázaro, o que Abraão disse existir entre os dois lados, impedindo a passagem de um para o outro?",
+      "options": [
+        {
+          "text": "Um grande abismo",
+          "correct": true
+        },
+        {
+          "text": "Um rio de fogo",
+          "correct": false
+        },
+        {
+          "text": "Um muro de bronze",
+          "correct": false
+        },
+        {
+          "text": "Um mar de vidro",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Além disso, está posto um grande abismo entre nós e vós, de sorte que os que quisessem passar daqui para vós não poderiam, nem tampouco os de lá passar para cá\" (Lc 16:26). O rico, em tormentos, pedira uma gota de água trazida por Lázaro; a resposta mostra a irreversibilidade do destino depois da morte.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 16,
+        "verse_start": 19,
+        "verse_end": 31
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "parabolas-0073",
+      "text": "Na explicação da parábola do semeador, o que acontece com a semente que caiu \"ao pé do caminho\"?",
+      "options": [
+        {
+          "text": "Vem o maligno e arrebata o que foi semeado no coração de quem ouviu sem entender",
+          "correct": true
+        },
+        {
+          "text": "Nasce logo, mas seca com o sol",
+          "correct": false
+        },
+        {
+          "text": "É sufocada pelos cuidados deste mundo",
+          "correct": false
+        },
+        {
+          "text": "Dá fruto a trinta por um",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Ouvindo alguém a palavra do Reino e não a entendendo, vem o maligno e arrebata o que foi semeado no seu coração; este é o que foi semeado ao pé do caminho\" (Mt 13:19). Na parábola, as aves comeram essa semente (v. 4); Jesus identifica as aves com o maligno — Marcos diz \"Satanás\" (Mc 4:15), e Lucas, \"o diabo\" (Lc 8:12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 13,
+        "verse_start": 18,
+        "verse_end": 23
+      },
+      "difficulty": "medium"
     }
   ]
 }

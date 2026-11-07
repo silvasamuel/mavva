@@ -2079,6 +2079,440 @@
         "verse_end": 13
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "personagens-0068",
+      "text": "Qual preso Pilatos soltou em lugar de Jesus, a pedido da multidão instigada pelos principais sacerdotes?",
+      "options": [
+        {
+          "text": "Barrabás",
+          "correct": true
+        },
+        {
+          "text": "Malco",
+          "correct": false
+        },
+        {
+          "text": "Dimas",
+          "correct": false
+        },
+        {
+          "text": "Simão, o Zelote",
+          "correct": false
+        }
+      ],
+      "explanation": "Pilatos ofereceu à multidão escolher entre Jesus e \"um preso bem conhecido, chamado Barrabás\" (Mt 27:16-17). Marcos explica que ele estava preso \"com outros amotinadores, que num motim tinham cometido uma morte\" (Mc 15:7), e João o chama de salteador (Jo 18:40). O povo pediu Barrabás e gritou \"Crucifica-o!\" para Jesus (Mt 27:20-23).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 27,
+        "verse_start": 15,
+        "verse_end": 26
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "personagens-0069",
+      "text": "Qual rainha foi deposta pelo rei Assuero por se recusar a comparecer ao banquete para exibir a sua formosura, abrindo caminho para Ester?",
+      "options": [
+        {
+          "text": "Vasti",
+          "correct": true
+        },
+        {
+          "text": "Zeres",
+          "correct": false
+        },
+        {
+          "text": "Atalia",
+          "correct": false
+        },
+        {
+          "text": "Semíramis",
+          "correct": false
+        }
+      ],
+      "explanation": "No sétimo dia do banquete, Assuero mandou trazer a rainha Vasti com a coroa real \"para mostrar aos povos e aos príncipes a sua formosura\", mas ela recusou (Et 1:10-12). A conselho de Memucã, o rei decretou que \"a dignidade real\" fosse dada a outra (Et 1:19), e a busca por uma nova rainha levou Ester ao palácio (Et 2:1-17).",
+      "divergence_note": null,
+      "reference": {
+        "book": "ester",
+        "chapter": 1,
+        "verse_start": 10,
+        "verse_end": 22
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "personagens-0070",
+      "text": "Quem era o pai de Tiago e João, deixado no barco com os empregados quando os dois filhos seguiram Jesus?",
+      "options": [
+        {
+          "text": "Zebedeu",
+          "correct": true
+        },
+        {
+          "text": "Alfeu",
+          "correct": false
+        },
+        {
+          "text": "Jonas",
+          "correct": false
+        },
+        {
+          "text": "Cleopas",
+          "correct": false
+        }
+      ],
+      "explanation": "Jesus viu \"Tiago, filho de Zebedeu, e João, seu irmão, que estavam no barco consertando as redes\" e os chamou; \"eles, deixando a seu pai Zebedeu no barco com os jornaleiros, foram após ele\" (Mc 1:19-20). A família tinha empregados, o que sugere um negócio de pesca próspero; a mãe deles pediria depois lugares de honra para os filhos (Mt 20:20-21).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 1,
+        "verse_start": 19,
+        "verse_end": 20
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "personagens-0071",
+      "text": "Qual criada, ao reconhecer a voz de Pedro à porta, de tanta alegria não abriu e correu para avisar os que oravam na casa de Maria?",
+      "options": [
+        {
+          "text": "Rode",
+          "correct": true
+        },
+        {
+          "text": "Febe",
+          "correct": false
+        },
+        {
+          "text": "Lídia",
+          "correct": false
+        },
+        {
+          "text": "Dorcas",
+          "correct": false
+        }
+      ],
+      "explanation": "Libertado da prisão pelo anjo, Pedro foi à casa de Maria, mãe de João Marcos, onde muitos oravam. \"Uma menina chamada Rode\" saiu a escutar; \"conhecendo a voz de Pedro, de gozo não abriu a porta\" e correu anunciar. Disseram-lhe: \"Estás fora de ti\" e \"É o seu anjo\" — enquanto Pedro continuava batendo (At 12:12-16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 12,
+        "verse_start": 12,
+        "verse_end": 17
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "personagens-0072",
+      "text": "Qual filho de Davi se proclamou rei quando o pai já estava velho e, depois, foi executado por Salomão ao pedir Abisague por mulher?",
+      "options": [
+        {
+          "text": "Adonias",
+          "correct": true
+        },
+        {
+          "text": "Amnom",
+          "correct": false
+        },
+        {
+          "text": "Quileabe",
+          "correct": false
+        },
+        {
+          "text": "Sefatias",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Adonias, filho de Hagite, se levantou, dizendo: Eu reinarei\", com carros, cavaleiros e o apoio de Joabe e Abiatar (1Rs 1:5-7). Natã e Bate-Seba fizeram Davi coroar Salomão, e Adonias foi poupado sob condição. Quando pediu Abisague, a jovem que aquecera Davi, Salomão viu o pedido como pretensão ao trono e mandou Benaia matá-lo (1Rs 2:13-25).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 2,
+        "verse_start": 13,
+        "verse_end": 25
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "personagens-0073",
+      "text": "Que enviado da igreja de Filipos adoeceu \"quase à morte\" enquanto servia a Paulo, que o chamou de \"meu irmão, e cooperador, e companheiro nos combates\"?",
+      "options": [
+        {
+          "text": "Epafrodito",
+          "correct": true
+        },
+        {
+          "text": "Epafras",
+          "correct": false
+        },
+        {
+          "text": "Aristarco",
+          "correct": false
+        },
+        {
+          "text": "Trófimo",
+          "correct": false
+        }
+      ],
+      "explanation": "Paulo devolve Epafrodito aos filipenses com elogios: \"meu irmão, e cooperador, e companheiro nos combates, e vosso enviado para prover às minhas necessidades\". Ele \"esteve doente e quase à morte; mas Deus se apiedou dele\", arriscando a vida \"pela obra de Cristo\" (Fp 2:25-30). Provavelmente levou a própria carta aos Filipenses.",
+      "divergence_note": null,
+      "reference": {
+        "book": "filipenses",
+        "chapter": 2,
+        "verse_start": 25,
+        "verse_end": 30
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "personagens-0074",
+      "text": "Qual artífice da tribo de Judá Deus encheu do seu Espírito \"de sabedoria, e de entendimento, e de ciência\" para fazer a obra do tabernáculo, ao lado de Aoliabe?",
+      "options": [
+        {
+          "text": "Bezalel",
+          "correct": true
+        },
+        {
+          "text": "Hirão",
+          "correct": false
+        },
+        {
+          "text": "Hur",
+          "correct": false
+        },
+        {
+          "text": "Itamar",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Eis que eu tenho chamado por nome a Bezalel, filho de Uri, filho de Hur, da tribo de Judá, e o enchi do Espírito de Deus, de sabedoria, e de entendimento, e de ciência, em todo artifício\" (Êx 31:2-3). Deus lhe deu Aoliabe, da tribo de Dã, como ajudante (v. 6). É a primeira pessoa que a Bíblia descreve como cheia do Espírito — para um trabalho de arte e ofício.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 31,
+        "verse_start": 1,
+        "verse_end": 11
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "personagens-0075",
+      "text": "Diante de qual futuro rei da Síria Eliseu chorou, dizendo saber o mal que ele faria aos filhos de Israel?",
+      "options": [
+        {
+          "text": "Hazael",
+          "correct": true
+        },
+        {
+          "text": "Ben-Hadade",
+          "correct": false
+        },
+        {
+          "text": "Rezim",
+          "correct": false
+        },
+        {
+          "text": "Naamã",
+          "correct": false
+        }
+      ],
+      "explanation": "Enviado por Ben-Hadade doente para consultar Eliseu em Damasco, Hazael viu o profeta fitá-lo e chorar: \"Porque sei o mal que hás de fazer aos filhos de Israel\". Hazael protestou: \"Porventura, é teu servo um cão, para fazer tão grande coisa?\" (2Rs 8:11-13). No dia seguinte sufocou o rei com um cobertor molhado e reinou em seu lugar (v. 15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 8,
+        "verse_start": 7,
+        "verse_end": 15
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "personagens-0076",
+      "text": "Qual conselheiro de Davi passou para o lado de Absalão e, ao ver o seu conselho rejeitado, \"pôs em ordem a sua casa e se enforcou\"?",
+      "options": [
+        {
+          "text": "Aitofel",
+          "correct": true
+        },
+        {
+          "text": "Husai",
+          "correct": false
+        },
+        {
+          "text": "Abiatar",
+          "correct": false
+        },
+        {
+          "text": "Simei",
+          "correct": false
+        }
+      ],
+      "explanation": "Aitofel, cujo conselho era tido \"como se consultasse a palavra de Deus\" (2Sm 16:23), aderiu a Absalão. Propôs perseguir Davi naquela mesma noite, mas Husai — amigo de Davi infiltrado — convenceu Absalão a esperar. \"Vendo, pois, Aitofel que se não tinha seguido o seu conselho... pôs em ordem a sua casa e se enforcou\" (2Sm 17:23).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 17,
+        "verse_start": 1,
+        "verse_end": 23
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "personagens-0077",
+      "text": "Quem amaldiçoou Davi e lhe atirou pedras em Baurim, quando o rei fugia de Absalão, ouvindo de Davi: \"Deixai-o; que amaldiçoe\"?",
+      "options": [
+        {
+          "text": "Simei, filho de Gera",
+          "correct": true
+        },
+        {
+          "text": "Seba, filho de Bicri",
+          "correct": false
+        },
+        {
+          "text": "Abner, filho de Ner",
+          "correct": false
+        },
+        {
+          "text": "Joabe, filho de Zeruia",
+          "correct": false
+        }
+      ],
+      "explanation": "Simei, benjamita da casa de Saul, saiu atirando pedras e gritando: \"Sai, sai, homem de sangue, homem de Belial\" (2Sm 16:5-8). Abisai quis cortar-lhe a cabeça, mas Davi respondeu: \"Deixai-o; que amaldiçoe, porque o SENHOR lho disse... Porventura, o SENHOR olhará para a minha miséria\" (vv. 11-12). Simei pediu perdão na volta do rei (2Sm 19:16-23).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 16,
+        "verse_start": 5,
+        "verse_end": 13
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "personagens-0078",
+      "text": "Qual edomita, chefe dos pastores de Saul, denunciou o sacerdote Aimeleque e matou oitenta e cinco sacerdotes de Nobe?",
+      "options": [
+        {
+          "text": "Doegue",
+          "correct": true
+        },
+        {
+          "text": "Agague",
+          "correct": false
+        },
+        {
+          "text": "Hadade",
+          "correct": false
+        },
+        {
+          "text": "Hamã",
+          "correct": false
+        }
+      ],
+      "explanation": "Doegue, o edomita, viu Aimeleque dar a Davi os pães sagrados e a espada de Golias e contou tudo a Saul (1Sm 22:9-10). Quando os servos do rei se recusaram a ferir os sacerdotes, \"Doegue... matou naquele dia oitenta e cinco homens que vestiam éfode de linho\" e passou Nobe a fio de espada (1Sm 22:18-19). Só Abiatar escapou; o Salmo 52 lembra o episódio.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 22,
+        "verse_start": 9,
+        "verse_end": 23
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "personagens-0079",
+      "text": "Qual juiz de Israel feriu seiscentos filisteus com uma aguilhada de bois, segundo Juízes 3:31?",
+      "options": [
+        {
+          "text": "Sangar, filho de Anate",
+          "correct": true
+        },
+        {
+          "text": "Tola",
+          "correct": false
+        },
+        {
+          "text": "Jair",
+          "correct": false
+        },
+        {
+          "text": "Ibsã",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Depois dele, foi Sangar, filho de Anate, que feriu a seiscentos homens dos filisteus com uma aguilhada de bois; e também ele libertou a Israel\" (Jz 3:31). É tudo o que a Bíblia diz dele, além de uma menção no cântico de Débora: \"nos dias de Sangar... cessaram os caminhos\" (Jz 5:6). A aguilhada era a vara pontuda com que o lavrador tangia os bois.",
+      "divergence_note": null,
+      "reference": {
+        "book": "juizes",
+        "chapter": 3,
+        "verse_start": 31,
+        "verse_end": 31
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "personagens-0080",
+      "text": "Qual cooperador Paulo chama de \"irmão amado e fiel ministro\", encarregado de levar notícias suas às igrejas de Éfeso e de Colossos?",
+      "options": [
+        {
+          "text": "Tíquico",
+          "correct": true
+        },
+        {
+          "text": "Onesíforo",
+          "correct": false
+        },
+        {
+          "text": "Epafras",
+          "correct": false
+        },
+        {
+          "text": "Crescente",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Para que vós também possais saber dos meus negócios... Tíquico, irmão amado e fiel ministro do Senhor, vos informará de tudo\" (Ef 6:21). Em Colossenses 4:7-9 ele viaja com Onésimo, e Paulo o chama de \"conservo no Senhor\". Natural da Ásia (At 20:4), Tíquico foi o portador de confiança das cartas da prisão.",
+      "divergence_note": null,
+      "reference": {
+        "book": "efesios",
+        "chapter": 6,
+        "verse_start": 21,
+        "verse_end": 22
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "personagens-0081",
+      "text": "Segundo a Terceira Epístola de João, quem \"procura ter o primado\" na igreja, não recebia os irmãos e expulsava quem os recebia?",
+      "options": [
+        {
+          "text": "Diótrefes",
+          "correct": true
+        },
+        {
+          "text": "Demétrio",
+          "correct": false
+        },
+        {
+          "text": "Gaio",
+          "correct": false
+        },
+        {
+          "text": "Alexandre, o latoeiro",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Diótrefes, que procura ter entre eles o primado, não nos recebe... não recebe os irmãos e impede os que querem recebê-los e os lança fora da igreja\" (3Jo 9-10). João escreve a Gaio, elogiado pela hospitalidade aos missionários, e recomenda Demétrio, que tinha bom testemunho de todos (v. 12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "3joao",
+        "chapter": 1,
+        "verse_start": 9,
+        "verse_end": 12
+      },
+      "difficulty": "hard"
     }
   ]
 }

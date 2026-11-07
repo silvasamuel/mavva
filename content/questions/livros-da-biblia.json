@@ -1927,6 +1927,440 @@
         "verse_end": 23
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "livros-da-biblia-0063",
+      "text": "Qual livro do Novo Testamento começa com as palavras \"Livro da geração de Jesus Cristo, Filho de Davi, Filho de Abraão\"?",
+      "options": [
+        {
+          "text": "Mateus",
+          "correct": true
+        },
+        {
+          "text": "Lucas",
+          "correct": false
+        },
+        {
+          "text": "João",
+          "correct": false
+        },
+        {
+          "text": "Romanos",
+          "correct": false
+        }
+      ],
+      "explanation": "Mateus abre o seu evangelho com a genealogia: \"Livro da geração de Jesus Cristo, Filho de Davi, Filho de Abraão\" (Mt 1:1). Os dois títulos resumem o propósito do livro para leitores judeus: Jesus é o Rei prometido a Davi (2Sm 7) e a descendência em quem todas as nações seriam benditas, prometida a Abraão (Gn 12:3).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 17
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "livros-da-biblia-0064",
+      "text": "Qual livro do Novo Testamento é dirigido \"à senhora eleita e a seus filhos\"?",
+      "options": [
+        {
+          "text": "2 João",
+          "correct": true
+        },
+        {
+          "text": "3 João",
+          "correct": false
+        },
+        {
+          "text": "Filemom",
+          "correct": false
+        },
+        {
+          "text": "Judas",
+          "correct": false
+        }
+      ],
+      "explanation": "\"O presbítero à senhora eleita e a seus filhos, aos quais amo na verdade\" (2Jo 1). A maioria dos intérpretes entende \"senhora eleita\" como uma igreja local personificada, com os \"filhos\" sendo os seus membros — a carta termina saudando \"os filhos de tua irmã, a eleita\" (v. 13). Outros a leem como uma cristã de destaque.",
+      "divergence_note": "A identidade da \"senhora eleita\" é discutida: uma igreja personificada (visão majoritária) ou uma mulher real. A pergunta trata apenas do destinatário conforme escrito no texto.",
+      "reference": {
+        "book": "2joao",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "livros-da-biblia-0065",
+      "text": "Em qual livro do Antigo Testamento está o cântico de Ana, que começa \"O meu coração exulta ao SENHOR\"?",
+      "options": [
+        {
+          "text": "1 Samuel",
+          "correct": true
+        },
+        {
+          "text": "Juízes",
+          "correct": false
+        },
+        {
+          "text": "Rute",
+          "correct": false
+        },
+        {
+          "text": "Salmos",
+          "correct": false
+        }
+      ],
+      "explanation": "Depois de entregar o menino Samuel ao SENHOR em Siló, Ana orou: \"O meu coração exulta ao SENHOR, o meu poder está exaltado no SENHOR\" (1Sm 2:1-10). O cântico celebra o Deus que \"levanta o pobre do pó\" e derruba os poderosos — temas que Maria retoma no Magnificat (Lc 1:46-55).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": 10
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "livros-da-biblia-0066",
+      "text": "Em qual livro está o cântico de Moisés e dos filhos de Israel após a travessia do mar: \"Cantarei ao SENHOR, porque sumamente se exaltou\"?",
+      "options": [
+        {
+          "text": "Êxodo",
+          "correct": true
+        },
+        {
+          "text": "Números",
+          "correct": false
+        },
+        {
+          "text": "Deuteronômio",
+          "correct": false
+        },
+        {
+          "text": "Salmos",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Então, cantou Moisés e os filhos de Israel este cântico ao SENHOR... Cantarei ao SENHOR, porque sumamente se exaltou; lançou no mar o cavalo e o seu cavaleiro\" (Êx 15:1). Miriã, a profetisa, respondeu com tamboril e danças (Êx 15:20-21). É um dos mais antigos poemas da Bíblia, e Apocalipse 15:3 fala do \"cântico de Moisés\" cantado pelos vencedores.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 15,
+        "verse_start": 1,
+        "verse_end": 21
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "livros-da-biblia-0067",
+      "text": "Que grupo, cujas obras Jesus declara aborrecer nas cartas a Éfeso e a Pérgamo, é mencionado apenas no livro de Apocalipse?",
+      "options": [
+        {
+          "text": "Os nicolaítas",
+          "correct": true
+        },
+        {
+          "text": "Os essênios",
+          "correct": false
+        },
+        {
+          "text": "Os herodianos",
+          "correct": false
+        },
+        {
+          "text": "Os zelotes",
+          "correct": false
+        }
+      ],
+      "explanation": "A Éfeso Jesus diz: \"aborreces as obras dos nicolaítas, as quais eu também aborreço\" (Ap 2:6); em Pérgamo havia quem seguisse \"a doutrina dos nicolaítas\" (Ap 2:15), ligada à idolatria e à imoralidade, como a de Balaão. O grupo não aparece em nenhum outro livro da Bíblia; os pais da igreja ligavam o nome a Nicolau, um dos sete diáconos, mas isso é incerto.",
+      "divergence_note": "A identificação dos nicolaítas é discutida; a ligação com Nicolau de Antioquia (At 6:5), feita por Irineu, não pode ser confirmada pelo texto bíblico.",
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 2,
+        "verse_start": 6,
+        "verse_end": 15
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "livros-da-biblia-0068",
+      "text": "De qual livro do Antigo Testamento Jesus tirou as três respostas ao diabo nas tentações do deserto?",
+      "options": [
+        {
+          "text": "Deuteronômio",
+          "correct": true
+        },
+        {
+          "text": "Salmos",
+          "correct": false
+        },
+        {
+          "text": "Isaías",
+          "correct": false
+        },
+        {
+          "text": "Êxodo",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Nem só de pão viverá o homem\" (Dt 8:3), \"Não tentarás o Senhor, teu Deus\" (Dt 6:16) e \"Ao Senhor, teu Deus, adorarás e só a ele servirás\" (Dt 6:13) — as três respostas de Mateus 4:4-10 vêm de Deuteronômio, dos discursos de Moisés sobre a prova de Israel no deserto. Jesus venceu, em quarenta dias, as tentações em que Israel caiu em quarenta anos.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 4,
+        "verse_start": 1,
+        "verse_end": 11
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "livros-da-biblia-0069",
+      "text": "Em qual livro está a longa oração de Salomão na dedicação do templo, em que ele pergunta: \"Verdadeiramente, habitaria Deus na terra?\"?",
+      "options": [
+        {
+          "text": "1 Reis",
+          "correct": true
+        },
+        {
+          "text": "2 Samuel",
+          "correct": false
+        },
+        {
+          "text": "Esdras",
+          "correct": false
+        },
+        {
+          "text": "Salmos",
+          "correct": false
+        }
+      ],
+      "explanation": "Diante do altar, com as mãos estendidas ao céu, Salomão orou: \"Verdadeiramente, habitaria Deus na terra? Eis que os céus, e até o céu dos céus, te não poderiam conter, quanto menos esta casa que eu tenho edificado\" (1Rs 8:27). A oração pede que Deus ouça do céu quem orar voltado para aquele lugar, inclusive o estrangeiro (1Rs 8:22-53); 2 Crônicas 6 traz uma versão paralela.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 8,
+        "verse_start": 22,
+        "verse_end": 30
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "livros-da-biblia-0070",
+      "text": "Qual livro histórico narra tanto a queda de Samaria para a Assíria quanto a destruição de Jerusalém e do templo pelos babilônios?",
+      "options": [
+        {
+          "text": "2 Reis",
+          "correct": true
+        },
+        {
+          "text": "1 Reis",
+          "correct": false
+        },
+        {
+          "text": "2 Crônicas",
+          "correct": false
+        },
+        {
+          "text": "Jeremias",
+          "correct": false
+        }
+      ],
+      "explanation": "2 Reis 17 conta como o rei da Assíria tomou Samaria \"no ano nono de Oseias\" e levou Israel cativo, explicando o exílio como castigo pela idolatria (2Rs 17:6-18). O livro termina com Nabucodonosor sitiando Jerusalém, Nebuzaradã queimando o templo e a deportação de Judá (2Rs 25). Assim, 2 Reis encerra a história dos dois reinos, do cisma ao cativeiro.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 17,
+        "verse_start": 5,
+        "verse_end": 23
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "livros-da-biblia-0071",
+      "text": "Qual livro começa com \"Bem-aventurado o varão que não anda segundo o conselho dos ímpios\"?",
+      "options": [
+        {
+          "text": "Salmos",
+          "correct": true
+        },
+        {
+          "text": "Provérbios",
+          "correct": false
+        },
+        {
+          "text": "Eclesiastes",
+          "correct": false
+        },
+        {
+          "text": "Jó",
+          "correct": false
+        }
+      ],
+      "explanation": "O Salmo 1 abre o saltério contrastando dois caminhos: o do justo, que \"tem o seu prazer na lei do SENHOR\" e é como árvore plantada junto a ribeiros, e o dos ímpios, que \"são como a moinha que o vento espalha\" (Sl 1:1-6). Por isso é lido como introdução a todo o livro dos Salmos.",
+      "divergence_note": null,
+      "reference": {
+        "book": "salmos",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "livros-da-biblia-0072",
+      "text": "Em qual livro está a frase \"Eis que estou à porta e bato; se alguém ouvir a minha voz e abrir a porta, entrarei em sua casa\"?",
+      "options": [
+        {
+          "text": "Apocalipse",
+          "correct": true
+        },
+        {
+          "text": "João",
+          "correct": false
+        },
+        {
+          "text": "Cantares",
+          "correct": false
+        },
+        {
+          "text": "Lucas",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Eis que estou à porta e bato; se alguém ouvir a minha voz e abrir a porta, entrarei em sua casa e com ele cearei, e ele, comigo\" (Ap 3:20). A frase está na carta à igreja de Laodiceia: Cristo, do lado de fora da própria igreja morna, convida cada um a reabrir-lhe a comunhão.",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 3,
+        "verse_start": 14,
+        "verse_end": 22
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "livros-da-biblia-0073",
+      "text": "Como termina o livro de Gênesis?",
+      "options": [
+        {
+          "text": "Com a morte de José no Egito, aos cento e dez anos, após pedir que seus ossos fossem levados a Canaã",
+          "correct": true
+        },
+        {
+          "text": "Com a morte de Jacó em Hebrom",
+          "correct": false
+        },
+        {
+          "text": "Com a saída de Israel do Egito",
+          "correct": false
+        },
+        {
+          "text": "Com o nascimento de Moisés",
+          "correct": false
+        }
+      ],
+      "explanation": "\"José fez jurar os filhos de Israel, dizendo: Certamente vos visitará Deus, e fareis transportar os meus ossos daqui. E morreu José da idade de cento e dez anos; e o embalsamaram e o puseram num caixão no Egito\" (Gn 50:25-26). O livro que começou com a criação termina com um caixão — mas com a promessa de Deus viva: Moisés levaria os ossos (Êx 13:19) e Josué os sepultaria em Siquém (Js 24:32).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 50,
+        "verse_start": 22,
+        "verse_end": 26
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "livros-da-biblia-0074",
+      "text": "Em quais dois livros do Antigo Testamento os Dez Mandamentos aparecem registrados por extenso?",
+      "options": [
+        {
+          "text": "Êxodo e Deuteronômio",
+          "correct": true
+        },
+        {
+          "text": "Êxodo e Levítico",
+          "correct": false
+        },
+        {
+          "text": "Levítico e Números",
+          "correct": false
+        },
+        {
+          "text": "Gênesis e Êxodo",
+          "correct": false
+        }
+      ],
+      "explanation": "Os Dez Mandamentos são proclamados no Sinai em Êxodo 20:1-17 e repetidos por Moisés, quarenta anos depois, nas planícies de Moabe, em Deuteronômio 5:6-21. Há pequenas diferenças: em Êxodo o sábado é fundamentado na criação; em Deuteronômio, na libertação da escravidão do Egito (Dt 5:15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 5,
+        "verse_start": 6,
+        "verse_end": 22
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "livros-da-biblia-0075",
+      "text": "Qual livro do Novo Testamento cita Janes e Jambres, os magos que, segundo a tradição judaica, resistiram a Moisés diante de Faraó?",
+      "options": [
+        {
+          "text": "2 Timóteo",
+          "correct": true
+        },
+        {
+          "text": "Hebreus",
+          "correct": false
+        },
+        {
+          "text": "Judas",
+          "correct": false
+        },
+        {
+          "text": "Atos",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E, como Janes e Jambres resistiram a Moisés, assim também estes resistem à verdade, sendo homens corruptos de entendimento\" (2Tm 3:8). Êxodo não nomeia os magos de Faraó (Êx 7:11); os nomes vêm da tradição judaica, que Paulo usa para comparar os falsos mestres dos últimos dias aos adversários de Moisés.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2timoteo",
+        "chapter": 3,
+        "verse_start": 1,
+        "verse_end": 9
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "livros-da-biblia-0076",
+      "text": "De qual livro profético Jesus cita a frase \"Misericórdia quero, e não sacrifício\", ao defender a sua comunhão com publicanos e pecadores?",
+      "options": [
+        {
+          "text": "Oseias",
+          "correct": true
+        },
+        {
+          "text": "Amós",
+          "correct": false
+        },
+        {
+          "text": "Miqueias",
+          "correct": false
+        },
+        {
+          "text": "Isaías",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Porque eu quero a misericórdia e não o sacrifício; e o conhecimento de Deus, mais do que os holocaustos\" (Os 6:6). Jesus cita a frase na casa de Mateus, aos fariseus escandalizados (Mt 9:13), e de novo quando acusam os discípulos de violar o sábado (Mt 12:7): rituais sem misericórdia não agradam a Deus.",
+      "divergence_note": null,
+      "reference": {
+        "book": "oseias",
+        "chapter": 6,
+        "verse_start": 6,
+        "verse_end": 6
+      },
+      "difficulty": "hard"
     }
   ]
 }

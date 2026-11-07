@@ -1891,6 +1891,440 @@
         "verse_end": 42
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "evangelhos-0062",
+      "text": "No Sermão do Monte, que imagem Jesus usou para repreender quem julga o irmão sem ver o próprio pecado?",
+      "options": [
+        {
+          "text": "O argueiro no olho do irmão e a trave no próprio olho",
+          "correct": true
+        },
+        {
+          "text": "O camelo e o fundo da agulha",
+          "correct": false
+        },
+        {
+          "text": "O cego que guia outro cego",
+          "correct": false
+        },
+        {
+          "text": "A palha e o trigo na eira",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Por que reparas tu no argueiro que está no olho do teu irmão e não vês a trave que está no teu próprio olho?... Hipócrita, tira primeiro a trave do teu olho e, então, cuidarás em tirar o argueiro do olho do teu irmão\" (Mt 7:3-5). O argueiro é um cisco; a trave, uma viga. Jesus não proíbe discernir, mas o julgamento hipócrita que se isenta do mesmo padrão (v. 2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 7,
+        "verse_start": 1,
+        "verse_end": 5
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "evangelhos-0063",
+      "text": "No Sermão do Monte, com que duas imagens Jesus descreveu os seus discípulos: \"Vós sois o ___ da terra\" e \"Vós sois a ___ do mundo\"?",
+      "options": [
+        {
+          "text": "Sal e luz",
+          "correct": true
+        },
+        {
+          "text": "Pão e água",
+          "correct": false
+        },
+        {
+          "text": "Semente e fruto",
+          "correct": false
+        },
+        {
+          "text": "Rocha e fundamento",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Vós sois o sal da terra; e, se o sal for insípido, com que se há de salgar?... Vós sois a luz do mundo; não se pode esconder uma cidade edificada sobre um monte\" (Mt 5:13-14). O sal preserva e dá sabor; a luz não é para ficar debaixo do alqueire, mas para que os homens vejam as boas obras e glorifiquem o Pai (v. 16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 5,
+        "verse_start": 13,
+        "verse_end": 16
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "evangelhos-0064",
+      "text": "Para ensinar a não andar ansiosos pela vida, o que Jesus mandou os ouvintes observarem no Sermão do Monte?",
+      "options": [
+        {
+          "text": "As aves do céu e os lírios do campo",
+          "correct": true
+        },
+        {
+          "text": "As formigas e as abelhas",
+          "correct": false
+        },
+        {
+          "text": "O sol e a chuva",
+          "correct": false
+        },
+        {
+          "text": "As ovelhas e os pastores",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Olhai para as aves do céu, que nem semeiam, nem segam, nem ajuntam em celeiros; e vosso Pai celestial as alimenta... Olhai para os lírios do campo, como eles crescem; não trabalham nem fiam; e eu vos digo que nem mesmo Salomão, em toda a sua glória, se vestiu como qualquer deles\" (Mt 6:26-29). A conclusão: \"Buscai primeiro o Reino de Deus\" (v. 33).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 6,
+        "verse_start": 25,
+        "verse_end": 34
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "evangelhos-0065",
+      "text": "Quando muitos discípulos abandonaram Jesus após o discurso do pão da vida, o que Pedro respondeu à pergunta \"Quereis vós também retirar-vos?\"?",
+      "options": [
+        {
+          "text": "\"Senhor, para quem iremos nós? Tu tens as palavras da vida eterna\"",
+          "correct": true
+        },
+        {
+          "text": "\"Senhor, aumenta-nos a fé\"",
+          "correct": false
+        },
+        {
+          "text": "\"Ainda que todos se escandalizem, eu nunca me escandalizarei\"",
+          "correct": false
+        },
+        {
+          "text": "\"Tu és o Cristo, o Filho do Deus vivo\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Respondeu-lhe, pois, Simão Pedro: Senhor, para quem iremos nós? Tu tens as palavras da vida eterna. E nós temos crido e conhecido que tu és o Cristo, o Filho do Deus vivo\" (Jo 6:68-69). O \"duro discurso\" sobre comer a carne e beber o sangue do Filho do homem afastou muitos (vv. 60-66); os Doze ficaram — embora Jesus já soubesse que um deles era \"diabo\" (v. 70).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 6,
+        "verse_start": 60,
+        "verse_end": 71
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "evangelhos-0066",
+      "text": "Junto ao mar de Tiberíades, depois da ressurreição, quantas vezes Jesus perguntou a Pedro \"amas-me?\", encarregando-o de apascentar as suas ovelhas?",
+      "options": [
+        {
+          "text": "Três",
+          "correct": true
+        },
+        {
+          "text": "Uma",
+          "correct": false
+        },
+        {
+          "text": "Duas",
+          "correct": false
+        },
+        {
+          "text": "Sete",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Simão, filho de Jonas, amas-me mais do que estes?\" — três vezes Jesus perguntou, e três vezes ordenou: \"Apascenta os meus cordeiros... Apascenta as minhas ovelhas\". \"Entristeceu-se Pedro por lhe ter dito terceira vez: Amas-me?\" (Jo 21:15-17). A tríplice pergunta restaura aquele que negara três vezes; em seguida, Jesus anuncia o martírio de Pedro (vv. 18-19).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 21,
+        "verse_start": 15,
+        "verse_end": 19
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "evangelhos-0067",
+      "text": "O que Zacarias, ainda mudo, escreveu numa tabuinha quando lhe perguntaram que nome dar ao filho recém-nascido?",
+      "options": [
+        {
+          "text": "\"O seu nome é João\"",
+          "correct": true
+        },
+        {
+          "text": "\"Zacarias, como o pai\"",
+          "correct": false
+        },
+        {
+          "text": "\"Será chamado Elias\"",
+          "correct": false
+        },
+        {
+          "text": "\"O SENHOR dirá\"",
+          "correct": false
+        }
+      ],
+      "explanation": "Os parentes queriam chamar o menino Zacarias, mas Isabel disse: \"Não, porém será chamado João\". Perguntaram por acenos ao pai, \"e, pedindo ele uma tabuinha de escrever, escreveu, dizendo: O seu nome é João. E todos se maravilharam. E logo a boca se lhe abriu\" (Lc 1:59-64). Zacarias então profetizou o Benedictus (vv. 67-79).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 1,
+        "verse_start": 57,
+        "verse_end": 66
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "evangelhos-0068",
+      "text": "Qual discípulo pediu, na última ceia, \"Senhor, mostra-nos o Pai, o que nos basta\", e ouviu: \"Quem me vê a mim vê o Pai\"?",
+      "options": [
+        {
+          "text": "Filipe",
+          "correct": true
+        },
+        {
+          "text": "Tomé",
+          "correct": false
+        },
+        {
+          "text": "André",
+          "correct": false
+        },
+        {
+          "text": "Judas, não o Iscariotes",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Disse-lhe Filipe: Senhor, mostra-nos o Pai, o que nos basta. Disse-lhe Jesus: Estou há tanto tempo convosco, e não me tendes conhecido, Filipe? Quem me vê a mim vê o Pai\" (Jo 14:8-9). No mesmo diálogo, Tomé perguntara pelo caminho (v. 5), e Judas, não o Iscariotes, perguntaria por que Jesus se manifestaria só aos discípulos (v. 22).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 14,
+        "verse_start": 8,
+        "verse_end": 11
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "evangelhos-0069",
+      "text": "Segundo Marcos 4:38, onde e como Jesus estava quando a tempestade se levantou no mar da Galileia?",
+      "options": [
+        {
+          "text": "Na popa do barco, dormindo sobre uma almofada",
+          "correct": true
+        },
+        {
+          "text": "Na proa, em pé, orando",
+          "correct": false
+        },
+        {
+          "text": "Sentado ao leme, dirigindo o barco",
+          "correct": false
+        },
+        {
+          "text": "Na praia, esperando os discípulos",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E ele estava na popa, dormindo sobre uma almofada; e despertaram-no, dizendo-lhe: Mestre, não se te dá que pereçamos?\" (Mc 4:38). O detalhe da almofada — provavelmente o assento de couro do timoneiro — é próprio de Marcos, que preserva lembranças vivas de testemunha ocular, atribuídas pela tradição a Pedro. Jesus então repreendeu o vento e o mar.",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 4,
+        "verse_start": 35,
+        "verse_end": 41
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "evangelhos-0070",
+      "text": "O que o centurião romano disse ao ver como Jesus morreu na cruz, segundo Marcos 15:39?",
+      "options": [
+        {
+          "text": "\"Verdadeiramente este homem era o Filho de Deus\"",
+          "correct": true
+        },
+        {
+          "text": "\"Este era um homem justo e inocente\"",
+          "correct": false
+        },
+        {
+          "text": "\"Não encontro nele crime algum\"",
+          "correct": false
+        },
+        {
+          "text": "\"O meu reino não é deste mundo\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E o centurião, que estava defronte dele, vendo que assim clamando expirara, disse: Verdadeiramente, este homem era o Filho de Deus\" (Mc 15:39). Em Marcos, é a primeira vez que um ser humano chama Jesus de Filho de Deus — e é um soldado gentio, logo após o véu do templo rasgar-se. Lucas registra: \"Na verdade, este homem era justo\" (Lc 23:47).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 15,
+        "verse_start": 37,
+        "verse_end": 39
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "evangelhos-0071",
+      "text": "Que pedido alguns gregos, que haviam subido para adorar na festa, fizeram a Filipe em Jerusalém, pouco antes da paixão?",
+      "options": [
+        {
+          "text": "\"Senhor, queríamos ver a Jesus\"",
+          "correct": true
+        },
+        {
+          "text": "\"Senhor, ensina-nos a orar\"",
+          "correct": false
+        },
+        {
+          "text": "\"Senhor, salva-nos, que perecemos\"",
+          "correct": false
+        },
+        {
+          "text": "\"Senhor, queremos ser batizados\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Ora, havia alguns gregos, entre os que tinham subido a adorar no dia da festa. Estes, pois, dirigiram-se a Filipe, que era de Betsaida da Galileia, e rogaram-lhe, dizendo: Senhor, queríamos ver a Jesus\" (Jo 12:20-21). Filipe falou a André, e os dois a Jesus, que respondeu: \"É chegada a hora em que o Filho do Homem há de ser glorificado\" — a busca dos gentios sinalizava a hora da cruz (vv. 22-24).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 12,
+        "verse_start": 20,
+        "verse_end": 26
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "evangelhos-0072",
+      "text": "O que Jesus disse ter visto quando os setenta discípulos voltaram alegres porque até os demônios se lhes submetiam?",
+      "options": [
+        {
+          "text": "\"Eu via Satanás, como raio, cair do céu\"",
+          "correct": true
+        },
+        {
+          "text": "\"Eu via os anjos subindo e descendo\"",
+          "correct": false
+        },
+        {
+          "text": "\"Eu via as portas do inferno se fechando\"",
+          "correct": false
+        },
+        {
+          "text": "\"Eu via a glória do Pai sobre vós\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E voltaram os setenta com alegria, dizendo: Senhor, pelo teu nome, até os demônios se nos sujeitam. E disse-lhes: Eu via Satanás, como raio, cair do céu\" (Lc 10:17-18). Jesus, porém, corrigiu o foco da alegria: \"não vos alegreis porque se vos sujeitem os espíritos; alegrai-vos, antes, por estarem os vossos nomes escritos nos céus\" (v. 20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 10,
+        "verse_start": 17,
+        "verse_end": 20
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "evangelhos-0073",
+      "text": "Segundo João 12:6, qual discípulo \"tinha a bolsa\" do grupo e tirava do que nela se lançava?",
+      "options": [
+        {
+          "text": "Judas Iscariotes",
+          "correct": true
+        },
+        {
+          "text": "Mateus",
+          "correct": false
+        },
+        {
+          "text": "Tomé",
+          "correct": false
+        },
+        {
+          "text": "Filipe",
+          "correct": false
+        }
+      ],
+      "explanation": "Quando Judas criticou o desperdício do nardo de Maria, João comenta: \"disse isso não pelo cuidado que tivesse dos pobres, mas porque era ladrão e tinha a bolsa e tirava o que ali se lançava\" (Jo 12:6). Em João 13:29, os discípulos supõem que Jesus mandara Judas, o tesoureiro, comprar algo para a festa ou dar aos pobres.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 12,
+        "verse_start": 1,
+        "verse_end": 8
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "evangelhos-0074",
+      "text": "Segundo João 20, qual dos dois discípulos que correram ao sepulcro no domingo da ressurreição chegou primeiro, mas não entrou?",
+      "options": [
+        {
+          "text": "O outro discípulo, \"a quem Jesus amava\" (João)",
+          "correct": true
+        },
+        {
+          "text": "Pedro",
+          "correct": false
+        },
+        {
+          "text": "Tomé",
+          "correct": false
+        },
+        {
+          "text": "Natanael",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Corriam os dois juntos, mas o outro discípulo correu mais apressadamente do que Pedro e chegou primeiro ao sepulcro; e, abaixando-se, viu no chão os lençóis; todavia, não entrou. Chegou, pois, Simão Pedro, seguindo-o, e entrou no sepulcro\" (Jo 20:4-6). Só então o discípulo amado entrou, \"e viu, e creu\" (v. 8).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 20,
+        "verse_start": 1,
+        "verse_end": 10
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "evangelhos-0075",
+      "text": "Qual breve frase da cruz João registra que Jesus disse \"para que a Escritura se cumprisse\", levando os soldados a lhe oferecerem vinagre numa esponja?",
+      "options": [
+        {
+          "text": "\"Tenho sede\"",
+          "correct": true
+        },
+        {
+          "text": "\"Está consumado\"",
+          "correct": false
+        },
+        {
+          "text": "\"Tudo está cumprido\"",
+          "correct": false
+        },
+        {
+          "text": "\"Pai, em tuas mãos entrego o meu espírito\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Depois, sabendo Jesus que já todas as coisas estavam terminadas, para que a Escritura se cumprisse, disse: Tenho sede. Estava, pois, ali um vaso cheio de vinagre. E encheram de vinagre uma esponja e, pondo-a num hissopo, lha chegaram à boca\" (Jo 19:28-29). A Escritura em vista é o Salmo 69:21: \"na minha sede me deram a beber vinagre\". Logo depois, Jesus disse \"Está consumado\" e entregou o espírito.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 19,
+        "verse_start": 28,
+        "verse_end": 30
+      },
+      "difficulty": "medium"
     }
   ]
 }

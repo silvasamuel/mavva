@@ -2023,6 +2023,440 @@
         "verse_end": 31
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "contexto-historico-0066",
+      "text": "O que significava originalmente o título \"tetrarca\", dado a Herodes Antipas e a Filipe em Lucas 3:1?",
+      "options": [
+        {
+          "text": "Governante de uma quarta parte de um território",
+          "correct": true
+        },
+        {
+          "text": "Comandante de quatro legiões",
+          "correct": false
+        },
+        {
+          "text": "Rei de quatro cidades",
+          "correct": false
+        },
+        {
+          "text": "Sacerdote de quarta ordem",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Tetrarca\" (do grego tetra, quatro, e archein, governar) designava o governante de um quarto de uma região. Após a morte de Herodes, o Grande, Roma dividiu o seu reino: Arquelau ficou com a Judeia, Antipas com a Galileia e a Pereia, e Filipe com a Itureia e Traconites (Lc 3:1). Com o tempo, o termo passou a indicar qualquer príncipe menor que um rei — por isso Antipas é chamado \"rei\" popularmente em Marcos 6:14, mas \"tetrarca\" em Mateus 14:1.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 3,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0067",
+      "text": "Que posto ocupava um \"centurião\" no exército romano, cargo de vários personagens do Novo Testamento, como Cornélio e Júlio?",
+      "options": [
+        {
+          "text": "Oficial que comandava cerca de cem soldados",
+          "correct": true
+        },
+        {
+          "text": "General de uma legião inteira",
+          "correct": false
+        },
+        {
+          "text": "Soldado raso da guarda do governador",
+          "correct": false
+        },
+        {
+          "text": "Oficial da cavalaria do imperador",
+          "correct": false
+        }
+      ],
+      "explanation": "O centurião (de centum, cem) comandava uma centúria, unidade básica de cerca de 80 a 100 homens; seis centúrias formavam uma coorte, e dez coortes, uma legião. Os centuriões do Novo Testamento aparecem de modo favorável: o de Cafarnaum, cuja fé Jesus elogiou (Mt 8:10); o que confessou na cruz (Mc 15:39); Cornélio, o primeiro gentio convertido (At 10); e Júlio, que tratou Paulo \"humanamente\" na viagem a Roma (At 27:1-3).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 10,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "contexto-historico-0068",
+      "text": "Quem era Berenice, que acompanhou o rei Agripa a Cesareia e ouviu a defesa de Paulo diante de Festo?",
+      "options": [
+        {
+          "text": "Irmã de Herodes Agripa II, que vivia com ele e era filha de Herodes Agripa I",
+          "correct": true
+        },
+        {
+          "text": "Esposa de Festo, o procurador",
+          "correct": false
+        },
+        {
+          "text": "Filha de Pilatos",
+          "correct": false
+        },
+        {
+          "text": "Rainha de Sabá, em visita à Judeia",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E, passados alguns dias, o rei Agripa e Berenice vieram a Cesareia, a saudar Festo\" (At 25:13). Berenice era irmã de Agripa II e de Druzila (mulher de Félix), todos filhos de Herodes Agripa I, o perseguidor de Atos 12. Segundo os historiadores, a sua convivência com o irmão gerava rumores em Roma, e mais tarde ela foi amante do futuro imperador Tito, que destruiu Jerusalém.",
+      "divergence_note": "Os dados sobre a vida de Berenice fora de Atos vêm de historiadores como Josefo e Suetônio, não do texto bíblico.",
+      "reference": {
+        "book": "atos",
+        "chapter": 25,
+        "verse_start": 13,
+        "verse_end": 27
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "contexto-historico-0069",
+      "text": "O que era o \"dia da preparação\" (parasceve), mencionado nos quatro Evangelhos a respeito da morte e do sepultamento de Jesus?",
+      "options": [
+        {
+          "text": "A sexta-feira, véspera do sábado, em que se preparava tudo para o dia de descanso",
+          "correct": true
+        },
+        {
+          "text": "O primeiro dia dos Pães Asmos",
+          "correct": false
+        },
+        {
+          "text": "O dia em que se escolhia o cordeiro pascal, dez de Nisã",
+          "correct": false
+        },
+        {
+          "text": "A véspera do Dia da Expiação",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E, chegada a tarde, porquanto era o dia da preparação, isto é, a véspera do sábado, chegou José de Arimateia\" (Mc 15:42). Como no sábado não se podia trabalhar, a sexta-feira era dedicada a preparar comida e tarefas — daí o nome. João 19:14 e 31 situam a crucificação nesse dia, acrescentando que aquele sábado \"era grande\", por coincidir com a festa da Páscoa.",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 15,
+        "verse_start": 42,
+        "verse_end": 47
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "contexto-historico-0070",
+      "text": "Que monte a mulher samaritana tinha em mente ao dizer a Jesus: \"Nossos pais adoraram neste monte\"?",
+      "options": [
+        {
+          "text": "O monte Gerizim, onde os samaritanos tinham o seu templo",
+          "correct": true
+        },
+        {
+          "text": "O monte Sião, em Jerusalém",
+          "correct": false
+        },
+        {
+          "text": "O monte Carmelo",
+          "correct": false
+        },
+        {
+          "text": "O monte Tabor",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Nossos pais adoraram neste monte, e vós dizeis que é em Jerusalém o lugar onde se deve adorar\" (Jo 4:20). O poço de Jacó, em Sicar, fica ao pé do Gerizim, onde os samaritanos construíram um templo rival no período persa — destruído por João Hircano em 128 a.C., segundo os historiadores. Os samaritanos aceitavam só o Pentateuco e consideravam o Gerizim, não Sião, o lugar escolhido por Deus. Jesus respondeu que a verdadeira adoração não depende de lugar (vv. 21-24).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 4,
+        "verse_start": 19,
+        "verse_end": 24
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0071",
+      "text": "Por que Paulo diz ter recebido dos judeus, cinco vezes, \"quarenta açoites menos um\"?",
+      "options": [
+        {
+          "text": "A Lei limitava os açoites a quarenta, e os judeus paravam em trinta e nove para não ultrapassar o limite por engano",
+          "correct": true
+        },
+        {
+          "text": "Era o número de anos que ele tinha",
+          "correct": false
+        },
+        {
+          "text": "Era o castigo fixo para cidadãos romanos",
+          "correct": false
+        },
+        {
+          "text": "Porque o chicote tinha trinta e nove pontas",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Recebi dos judeus cinco quarentenas de açoites menos um\" (2Co 11:24). Deuteronômio 25:3 ordena: \"Quarenta açoites lhe fará dar, não mais\", e a tradição rabínica fixou trinta e nove, para não exceder o limite por erro de contagem. O castigo era aplicado nas sinagogas (Mt 10:17), com um chicote de três tiras — treze golpes. Paulo o sofreu por se manter dentro das comunidades judaicas pregando a Cristo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2corintios",
+        "chapter": 11,
+        "verse_start": 24,
+        "verse_end": 25
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0072",
+      "text": "O que o tribuno Cláudio Lísias disse a Paulo sobre a própria cidadania romana, e o que Paulo respondeu?",
+      "options": [
+        {
+          "text": "\"Eu com grande soma de dinheiro alcancei este direito de cidadão\"; Paulo respondeu: \"Mas eu o sou de nascimento\"",
+          "correct": true
+        },
+        {
+          "text": "\"Herdei a cidadania de meu pai\"; Paulo respondeu: \"Eu a comprei em Tarso\"",
+          "correct": false
+        },
+        {
+          "text": "\"Recebi-a por serviços no exército\"; Paulo respondeu: \"Eu a recebi de Gálio\"",
+          "correct": false
+        },
+        {
+          "text": "\"Sou cidadão por decreto de Cláudio\"; Paulo respondeu: \"Eu não sou cidadão\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E respondeu o tribuno: Eu com grande soma de dinheiro alcancei este direito de cidadão. Paulo disse: Mas eu o sou de nascimento\" (At 22:28). No reinado de Cláudio, a cidadania era vendida a estrangeiros ricos — o nome \"Cláudio\" do tribuno sugere que a adquiriu nessa época. A cidadania de nascimento de Paulo, provavelmente herdada do pai em Tarso, livrou-o do açoite e lhe garantiu o julgamento em Roma.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 22,
+        "verse_start": 22,
+        "verse_end": 29
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0073",
+      "text": "Que duas escolas filosóficas gregas discutiram com Paulo em Atenas, chamando-o de \"paroleiro\" e \"pregador de deuses estranhos\"?",
+      "options": [
+        {
+          "text": "Epicureus e estoicos",
+          "correct": true
+        },
+        {
+          "text": "Platônicos e aristotélicos",
+          "correct": false
+        },
+        {
+          "text": "Cínicos e céticos",
+          "correct": false
+        },
+        {
+          "text": "Pitagóricos e sofistas",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E alguns dos filósofos epicureus e estoicos contendiam com ele\" (At 17:18). Os epicureus buscavam a tranquilidade e o prazer moderado e negavam a providência e a vida após a morte; os estoicos pregavam viver conforme a razão universal (logos) e aceitar o destino com virtude. Paulo cita um poeta estoico — \"somos também sua geração\" (Arato) — e desafia ambos com a ressurreição (vv. 28-32).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 17,
+        "verse_start": 16,
+        "verse_end": 34
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0074",
+      "text": "De que cidade egípcia era natural Apolo, \"varão eloquente e poderoso nas Escrituras\", que chegou a Éfeso?",
+      "options": [
+        {
+          "text": "Alexandria, grande centro da cultura grega e do judaísmo da Diáspora",
+          "correct": true
+        },
+        {
+          "text": "Mênfis, antiga capital dos faraós",
+          "correct": false
+        },
+        {
+          "text": "Tebas, cidade dos grandes templos",
+          "correct": false
+        },
+        {
+          "text": "Heliópolis, cidade do sacerdote sogro de José",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E chegou a Éfeso um certo judeu chamado Apolo, natural de Alexandria, varão eloquente e poderoso nas Escrituras\" (At 18:24). Alexandria, fundada por Alexandre, o Grande, tinha a maior comunidade judaica fora da Judeia e foi onde, segundo os historiadores, se produziu a Septuaginta e floresceu a exegese alegórica de Fílon. A formação de Apolo reflete esse ambiente culto e helenizado.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 18,
+        "verse_start": 24,
+        "verse_end": 28
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0075",
+      "text": "Segundo os historiadores, que rei selêucida profanou o templo de Jerusalém em 167 a.C., erguendo um altar pagão e proibindo a Lei, o que provocou a revolta dos Macabeus?",
+      "options": [
+        {
+          "text": "Antíoco IV Epifânio",
+          "correct": true
+        },
+        {
+          "text": "Alexandre, o Grande",
+          "correct": false
+        },
+        {
+          "text": "Ptolomeu Filadelfo",
+          "correct": false
+        },
+        {
+          "text": "Seleuco Nicátor",
+          "correct": false
+        }
+      ],
+      "explanation": "Antíoco IV, que se intitulava \"Epifânio\" (\"deus manifesto\"), proibiu a circuncisão e o sábado, queimou exemplares da Lei e sacrificou um porco no altar do templo. A reação liderada pelo sacerdote Matatias e seu filho Judas Macabeu levou à purificação do templo em 164 a.C., lembrada na Festa da Dedicação (Jo 10:22). Muitos veem em Daniel 8:9-14 e 11:21-35 uma profecia desses eventos.",
+      "divergence_note": "A história dos Macabeus está nos livros deuterocanônicos de 1 e 2 Macabeus e em Josefo, não nos livros do cânon protestante; a ligação com Daniel é interpretação.",
+      "reference": {
+        "book": "daniel",
+        "chapter": 11,
+        "verse_start": 31,
+        "verse_end": 35
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "contexto-historico-0076",
+      "text": "Segundo os historiadores, que general romano tomou Jerusalém em 63 a.C., pondo fim à independência judaica e entrando no Santo dos Santos?",
+      "options": [
+        {
+          "text": "Pompeu",
+          "correct": true
+        },
+        {
+          "text": "Júlio César",
+          "correct": false
+        },
+        {
+          "text": "Marco Antônio",
+          "correct": false
+        },
+        {
+          "text": "Tito",
+          "correct": false
+        }
+      ],
+      "explanation": "Aproveitando a guerra civil entre os irmãos hasmoneus Hircano II e Aristóbulo II, Pompeu cercou Jerusalém, tomou o templo e, segundo Josefo, entrou no Santo dos Santos — espantado por não encontrar imagem alguma. A Judeia tornou-se tributária de Roma, e a dinastia de Herodes ascenderia sob a proteção romana. É esse domínio que forma o pano de fundo dos Evangelhos.",
+      "divergence_note": "Dados da história extrabíblica (Josefo, Tácito); a referência bíblica aponta para o domínio romano pressuposto nos Evangelhos.",
+      "reference": {
+        "book": "lucas",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": 1
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "contexto-historico-0077",
+      "text": "Segundo os historiadores, qual era a origem étnica de Herodes, o Grande, motivo pelo qual muitos judeus não o consideravam legítimo rei?",
+      "options": [
+        {
+          "text": "Era idumeu (edomita), descendente de um povo convertido à força ao judaísmo",
+          "correct": true
+        },
+        {
+          "text": "Era egípcio, da dinastia dos Ptolomeus",
+          "correct": false
+        },
+        {
+          "text": "Era samaritano, do monte Gerizim",
+          "correct": false
+        },
+        {
+          "text": "Era grego, da Macedônia",
+          "correct": false
+        }
+      ],
+      "explanation": "O pai de Herodes, Antípatro, era idumeu — da Idumeia, região ao sul da Judeia correspondente ao antigo Edom, cujos habitantes foram circuncidados à força por João Hircano por volta de 125 a.C. Como Edom descendia de Esaú, o inimigo tradicional de Jacó/Israel, o reinado de Herodes, nomeado rei pelo Senado romano em 40 a.C., era visto por muitos como usurpação — o que ajuda a entender a sua insegurança diante do \"rei dos judeus\" recém-nascido (Mt 2:3).",
+      "divergence_note": "Dados de Josefo e outros historiadores; o Novo Testamento não menciona a origem idumeia de Herodes.",
+      "reference": {
+        "book": "mateus",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0078",
+      "text": "O que significa provavelmente o nome \"fariseus\", segundo a maioria dos estudiosos?",
+      "options": [
+        {
+          "text": "\"Separados\" — pela dedicação à pureza ritual e à Lei, afastando-se dos impuros",
+          "correct": true
+        },
+        {
+          "text": "\"Justos\" — por guardarem a Lei perfeitamente",
+          "correct": false
+        },
+        {
+          "text": "\"Filhos de Zadoque\" — pela descendência sacerdotal",
+          "correct": false
+        },
+        {
+          "text": "\"Zelosos\" — pela resistência armada a Roma",
+          "correct": false
+        }
+      ],
+      "explanation": "O nome vem do hebraico perushim, \"separados\", provavelmente pela separação de tudo o que era impuro e dos que não guardavam a Lei com o mesmo rigor. Surgidos no período dos Macabeus, davam grande autoridade à \"tradição dos anciãos\" (Mc 7:3), criam na ressurreição e nos anjos (At 23:8) e tinham forte apoio popular. Paulo foi fariseu, \"filho de fariseu\" (At 23:6; Fp 3:5).",
+      "divergence_note": "A etimologia de \"fariseus\" é a mais aceita, mas não é certa; alguns ligam o termo a \"intérpretes\" (da Lei).",
+      "reference": {
+        "book": "marcos",
+        "chapter": 7,
+        "verse_start": 1,
+        "verse_end": 5
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "contexto-historico-0079",
+      "text": "De que nome os saduceus provavelmente tiraram a sua designação, segundo a explicação mais aceita?",
+      "options": [
+        {
+          "text": "De Zadoque, o sumo sacerdote dos dias de Davi e Salomão, de cuja linhagem vinham os sacerdotes legítimos",
+          "correct": true
+        },
+        {
+          "text": "De Sadai, nome divino que significa Todo-Poderoso",
+          "correct": false
+        },
+        {
+          "text": "De Sidom, cidade fenícia de onde vieram",
+          "correct": false
+        },
+        {
+          "text": "De Sedecias, o último rei de Judá",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Saduceus\" é geralmente derivado de Zadoque (tsadoq), o sacerdote fiel a Davi que ungiu Salomão (1Rs 1:39) e cuja família Ezequiel reserva para o serviço do templo (Ez 44:15). O partido reunia a aristocracia sacerdotal de Jerusalém, controlava o templo, aceitava sobretudo o Pentateuco e negava a ressurreição, anjos e espíritos (At 23:8). Desapareceu com a destruição do templo em 70 d.C.",
+      "divergence_note": "A ligação com Zadoque é a hipótese mais aceita, mas há quem derive o nome do adjetivo hebraico para \"justo\" (tsaddiq).",
+      "reference": {
+        "book": "atos",
+        "chapter": 23,
+        "verse_start": 6,
+        "verse_end": 10
+      },
+      "difficulty": "hard"
     }
   ]
 }

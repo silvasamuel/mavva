@@ -1960,6 +1960,440 @@
         "verse_end": 29
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "historia-de-israel-0064",
+      "text": "Que condição humilhante Naás, o amonita, impôs aos homens de Jabes-Gileade para fazer aliança com eles, levando Saul à sua primeira vitória como rei?",
+      "options": [
+        {
+          "text": "Arrancar o olho direito de todos eles",
+          "correct": true
+        },
+        {
+          "text": "Entregar todas as mulheres e crianças",
+          "correct": false
+        },
+        {
+          "text": "Cortar a mão direita dos guerreiros",
+          "correct": false
+        },
+        {
+          "text": "Pagar tributo de mil talentos de prata",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Naás, o amonita, respondeu: Com esta condição farei aliança convosco: que a todos vos arranque o olho direito, e assim ponha esta afronta sobre todo o Israel\" (1Sm 11:2). Ao saber, o Espírito de Deus se apossou de Saul, que cortou uma junta de bois em pedaços e os enviou por todo o Israel para convocar o povo; 330 mil homens derrotaram os amonitas (vv. 6-11). Depois disso, o reino foi renovado em Gilgal (v. 15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 11,
+        "verse_start": 1,
+        "verse_end": 15
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-de-israel-0065",
+      "text": "Quando o povo insistiu em ter um rei, Samuel descreveu \"o direito do rei\" que os governaria. O que o rei faria, segundo essa advertência?",
+      "options": [
+        {
+          "text": "Tomaria os filhos para os seus carros e lavouras, as filhas para perfumistas e cozinheiras, o melhor dos campos e o dízimo das searas e rebanhos",
+          "correct": true
+        },
+        {
+          "text": "Aboliria os sacrifícios e fecharia o tabernáculo",
+          "correct": false
+        },
+        {
+          "text": "Dividiria a terra novamente entre as tribos",
+          "correct": false
+        },
+        {
+          "text": "Faria aliança com os filisteus e entregaria a arca",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Este será o costume do rei que houver de reinar sobre vós: ele tomará os vossos filhos... para serem seus lavradores e seus ceifeiros, e para fazerem as suas armas de guerra; e tomará as vossas filhas para perfumistas, cozinheiras e padeiras; e tomará o melhor das vossas terras... e as dízimas das vossas sementes... e vós sereis seus servos\" (1Sm 8:11-17). O povo respondeu: \"Não, mas haverá sobre nós um rei\" (v. 19), e o SENHOR mandou Samuel atendê-los.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 8,
+        "verse_start": 10,
+        "verse_end": 22
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-de-israel-0066",
+      "text": "Onde Israel acampou, depois das águas amargas de Mara, encontrando doze fontes de água e setenta palmeiras?",
+      "options": [
+        {
+          "text": "Elim",
+          "correct": true
+        },
+        {
+          "text": "Refidim",
+          "correct": false
+        },
+        {
+          "text": "Cades",
+          "correct": false
+        },
+        {
+          "text": "Sucote",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Então, vieram a Elim, e havia ali doze fontes de água e setenta palmeiras; e ali se acamparam junto das águas\" (Êx 15:27). Elim foi um oásis de descanso entre Mara e o deserto de Sim, onde depois o povo murmuraria por comida e receberia o maná (Êx 16). O itinerário completo da jornada está em Números 33.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 15,
+        "verse_start": 27,
+        "verse_end": 27
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "historia-de-israel-0067",
+      "text": "Quais tribos receberam herança a leste do Jordão, com a condição de atravessarem armadas à frente de seus irmãos na conquista?",
+      "options": [
+        {
+          "text": "Rúben, Gade e a meia tribo de Manassés",
+          "correct": true
+        },
+        {
+          "text": "Judá, Simeão e Benjamim",
+          "correct": false
+        },
+        {
+          "text": "Efraim, Dã e Aser",
+          "correct": false
+        },
+        {
+          "text": "Issacar, Zebulom e Naftali",
+          "correct": false
+        }
+      ],
+      "explanation": "Rúben e Gade, que tinham muito gado, pediram as terras de Jazer e Gileade; Moisés os repreendeu por desanimarem o povo, mas aceitou com a condição de que seus guerreiros passassem o Jordão armados até que a terra fosse conquistada (Nm 32). A meia tribo de Manassés também recebeu parte de Gileade e Basã (Nm 32:33). Josué os liberou depois da conquista (Js 22:1-4).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 32,
+        "verse_start": 1,
+        "verse_end": 33
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-de-israel-0068",
+      "text": "Quando Deus repartiu o Espírito que estava sobre Moisés entre os setenta anciãos, dois homens que ficaram no arraial também profetizaram. Como Moisés respondeu ao pedido de Josué para proibi-los?",
+      "options": [
+        {
+          "text": "\"Tens tu ciúmes por mim? Tomara que todo o povo do SENHOR fosse profeta\"",
+          "correct": true
+        },
+        {
+          "text": "\"Prende-os até que eu consulte o SENHOR\"",
+          "correct": false
+        },
+        {
+          "text": "\"Eles não são dos setenta; que se calem\"",
+          "correct": false
+        },
+        {
+          "text": "\"Leva-os à tenda da congregação para serem julgados\"",
+          "correct": false
+        }
+      ],
+      "explanation": "Eldade e Medade estavam entre os inscritos, mas não foram à tenda; o Espírito repousou sobre eles e profetizaram no arraial. Josué pediu: \"Moisés, meu senhor, proíbe-lho\". Moisés respondeu: \"Tens tu ciúmes por mim? Tomara que todo o povo do SENHOR fosse profeta, que o SENHOR lhes desse o seu Espírito!\" (Nm 11:26-29). O desejo se cumpriu em Pentecostes (At 2:17-18).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 11,
+        "verse_start": 16,
+        "verse_end": 30
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-de-israel-0069",
+      "text": "Onde Saul foi encontrado quando as sortes o apontaram como rei diante do povo em Mispa?",
+      "options": [
+        {
+          "text": "Escondido entre a bagagem",
+          "correct": true
+        },
+        {
+          "text": "Orando no tabernáculo",
+          "correct": false
+        },
+        {
+          "text": "Arando o campo com os bois",
+          "correct": false
+        },
+        {
+          "text": "Pastoreando as jumentas do pai",
+          "correct": false
+        }
+      ],
+      "explanation": "Quando a sorte caiu sobre Saul, \"procuraram-no, porém não se achou. Então, tornaram a perguntar ao SENHOR se aquele homem ainda viria ali. E disse o SENHOR: Eis que se escondeu entre a bagagem\" (1Sm 10:21-22). Trazido ao meio do povo, era mais alto que todos desde os ombros, e Samuel o apresentou: \"Vedes já a quem o SENHOR tem elegido?\" (vv. 23-24).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 10,
+        "verse_start": 17,
+        "verse_end": 27
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-de-israel-0070",
+      "text": "Que motivo os anciãos de Israel apresentaram a Samuel, em Ramá, ao pedir um rei, além da velhice do profeta?",
+      "options": [
+        {
+          "text": "Os filhos de Samuel, Joel e Abias, juízes em Berseba, aceitavam suborno e pervertiam o direito",
+          "correct": true
+        },
+        {
+          "text": "Os filisteus tinham capturado a arca",
+          "correct": false
+        },
+        {
+          "text": "Não havia mais profeta em Israel",
+          "correct": false
+        },
+        {
+          "text": "O tabernáculo tinha sido destruído em Siló",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Sendo Samuel já velho, constituiu os seus filhos por juízes sobre Israel... Joel e Abias... Porém seus filhos não andaram pelos caminhos dele; antes, se inclinaram à avareza, e aceitaram presentes, e perverteram o direito\" (1Sm 8:1-3). Por isso os anciãos disseram: \"Tu já estás velho, e teus filhos não andam pelos teus caminhos; constitui-nos, pois, agora um rei\" (v. 5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 8,
+        "verse_start": 1,
+        "verse_end": 5
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-de-israel-0071",
+      "text": "Como terminou a revolta de Seba, filho de Bicri, o benjamita que se levantou contra Davi logo após a derrota de Absalão?",
+      "options": [
+        {
+          "text": "Uma mulher sábia de Abel-Bete-Maaca convenceu a cidade a lançar a cabeça dele por cima do muro a Joabe",
+          "correct": true
+        },
+        {
+          "text": "Ele foi morto por Abisai no vale de Jezreel",
+          "correct": false
+        },
+        {
+          "text": "Ele fugiu para Gate e viveu entre os filisteus",
+          "correct": false
+        },
+        {
+          "text": "Davi o perdoou, como fizera a Simei",
+          "correct": false
+        }
+      ],
+      "explanation": "Seba tocou a trombeta e disse: \"Não temos parte em Davi\" (2Sm 20:1). Joabe o cercou em Abel-Bete-Maaca; uma mulher sábia perguntou por que ele queria destruir \"uma cidade que é mãe em Israel\", e, informada da causa, prometeu: \"Eis que a sua cabeça se te lançará pelo muro\". O povo cortou a cabeça de Seba, e Joabe levantou o cerco (vv. 14-22).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 20,
+        "verse_start": 1,
+        "verse_end": 22
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-de-israel-0072",
+      "text": "Quem reconstruiu Jericó nos dias de Acabe, cumprindo-se a maldição de Josué com a morte do seu primogênito e do seu filho mais novo?",
+      "options": [
+        {
+          "text": "Hiel, o betelita",
+          "correct": true
+        },
+        {
+          "text": "Zinri, o capitão de carros",
+          "correct": false
+        },
+        {
+          "text": "Obadias, o mordomo",
+          "correct": false
+        },
+        {
+          "text": "Naamã, o sírio",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Em seus dias, Hiel, o betelita, edificou Jericó; morrendo Abirão, seu primogênito, a fundou e, morrendo Segube, seu último, pôs as suas portas, conforme a palavra do SENHOR, que falara pelo ministério de Josué, filho de Num\" (1Rs 16:34). Josué havia jurado: \"Maldito diante do SENHOR seja o homem que se levantar e reedificar esta cidade de Jericó\" (Js 6:26).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 16,
+        "verse_start": 34,
+        "verse_end": 34
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-de-israel-0073",
+      "text": "Que juramento feito a José os filhos de Israel cumpriram ao sair do Egito, levando algo consigo pelo deserto até Canaã?",
+      "options": [
+        {
+          "text": "Levar os ossos de José, que foram sepultados em Siquém",
+          "correct": true
+        },
+        {
+          "text": "Levar o cajado de Jacó para Hebrom",
+          "correct": false
+        },
+        {
+          "text": "Levar o sarcófago de Faraó como troféu",
+          "correct": false
+        },
+        {
+          "text": "Levar a túnica de muitas cores para Belém",
+          "correct": false
+        }
+      ],
+      "explanation": "José fizera os filhos de Israel jurar: \"Certamente vos visitará Deus, e fareis transportar os meus ossos daqui\" (Gn 50:25). \"E tomou Moisés os ossos de José consigo\" na noite da saída (Êx 13:19), e, terminada a conquista, \"os ossos de José, que os filhos de Israel trouxeram do Egito, enterraram em Siquém, naquela parte do campo que Jacó comprara\" (Js 24:32). Hebreus 11:22 cita a ordem de José como ato de fé.",
+      "divergence_note": null,
+      "reference": {
+        "book": "josue",
+        "chapter": 24,
+        "verse_start": 32,
+        "verse_end": 32
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-de-israel-0074",
+      "text": "Que obra de engenharia Ezequias realizou em Jerusalém, lembrada em 2 Reis 20:20 e 2 Crônicas 32:30?",
+      "options": [
+        {
+          "text": "Tapou a saída superior das águas de Giom e as conduziu por um aqueduto (túnel) para dentro da cidade",
+          "correct": true
+        },
+        {
+          "text": "Construiu uma ponte sobre o Cedrom",
+          "correct": false
+        },
+        {
+          "text": "Ergueu uma torre de vigia em Ofel",
+          "correct": false
+        },
+        {
+          "text": "Cavou um porto artificial em Jope",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Ora, o mais dos atos de Ezequias, e todo o seu poder, e como fez a piscina e o aqueduto, e como fez vir a água à cidade, porventura, não estão escritos no Livro das Crônicas dos Reis de Judá?\" (2Rs 20:20). 2 Crônicas 32:30 especifica que ele \"tapou a saída superior das águas de Giom e as fez correr por baixo para o ocidente da Cidade de Davi\". A obra, preparada para o cerco assírio, é identificada com o túnel que leva ao tanque de Siloé.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 20,
+        "verse_start": 20,
+        "verse_end": 20
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-de-israel-0075",
+      "text": "Por não conseguir tomar o território que lhe coube, que cidade a tribo de Dã conquistou no extremo norte, dando-lhe o seu nome?",
+      "options": [
+        {
+          "text": "Laís (Lesém)",
+          "correct": true
+        },
+        {
+          "text": "Hazor",
+          "correct": false
+        },
+        {
+          "text": "Quedes",
+          "correct": false
+        },
+        {
+          "text": "Abel-Bete-Maaca",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Porque a tribo dos danitas buscava para si herança para habitar, porquanto, até àquele dia, não lhe havia caído em herança entre as tribos de Israel\" (Jz 18:1). Seiscentos homens tomaram Laís, cidade pacífica e desprevenida, e a chamaram Dã (vv. 27-29; cf. Js 19:47, que a chama Lesém). Ali instalaram o ídolo de Mica e um sacerdócio próprio — e \"Dã\" passou a marcar o limite norte de Israel.",
+      "divergence_note": null,
+      "reference": {
+        "book": "juizes",
+        "chapter": 18,
+        "verse_start": 1,
+        "verse_end": 31
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-de-israel-0076",
+      "text": "O que Rizpa, concubina de Saul, fez depois que sete descendentes dele foram entregues aos gibeonitas e enforcados?",
+      "options": [
+        {
+          "text": "Estendeu um pano de saco sobre a rocha e guardou os corpos de dia e de noite contra aves e feras, até cair chuva",
+          "correct": true
+        },
+        {
+          "text": "Amaldiçoou Davi às portas de Jerusalém",
+          "correct": false
+        },
+        {
+          "text": "Levou os ossos deles para Belém",
+          "correct": false
+        },
+        {
+          "text": "Pediu asilo ao rei de Moabe",
+          "correct": false
+        }
+      ],
+      "explanation": "Para encerrar uma fome de três anos causada pela quebra do juramento a Gibeão, Davi entregou dois filhos de Rizpa e cinco netos de Saul. \"Então, Rizpa, filha de Aiá, tomou um pano de cilício, e o estendeu para si sobre uma penha... e não deixou que as aves do céu se sentassem sobre eles de dia, nem os animais do campo de noite\" (2Sm 21:10). Comovido, Davi sepultou os ossos de Saul, Jônatas e dos enforcados em Zela (vv. 11-14).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 21,
+        "verse_start": 1,
+        "verse_end": 14
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "historia-de-israel-0077",
+      "text": "Com que palavras Jônatas, filho de Saul, animou o seu escudeiro antes de atacarem sozinhos a guarnição dos filisteus em Micmás?",
+      "options": [
+        {
+          "text": "\"Não é difícil ao SENHOR livrar com muitos ou com poucos\"",
+          "correct": true
+        },
+        {
+          "text": "\"Se morrermos, morreremos como homens\"",
+          "correct": false
+        },
+        {
+          "text": "\"O SENHOR é a nossa bandeira\"",
+          "correct": false
+        },
+        {
+          "text": "\"Sê forte e corajoso, não temas\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Disse, pois, Jônatas ao moço que lhe levava as armas: Vem, passemos à guarnição destes incircuncisos; porventura, operará o SENHOR por nós, porque para com o SENHOR nenhum impedimento há de livrar com muitos ou com poucos\" (1Sm 14:6). Os dois mataram cerca de vinte homens, e um tremor da terra espalhou o pânico entre os filisteus, dando a Israel uma grande vitória (vv. 13-23).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 14,
+        "verse_start": 1,
+        "verse_end": 23
+      },
+      "difficulty": "medium"
     }
   ]
 }

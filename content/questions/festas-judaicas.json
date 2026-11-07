@@ -1959,6 +1959,440 @@
         "verse_end": 5
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "festas-judaicas-0064",
+      "text": "Além de \"Festa das Semanas\" e \"Pentecostes\", por que outros nomes a Lei chama a festa celebrada cinquenta dias após a Páscoa?",
+      "options": [
+        {
+          "text": "Festa da Sega e dia das primícias",
+          "correct": true
+        },
+        {
+          "text": "Festa da Colheita e dia do perdão",
+          "correct": false
+        },
+        {
+          "text": "Festa das Luzes e dia da aliança",
+          "correct": false
+        },
+        {
+          "text": "Festa dos Pães e dia do descanso",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Também guardarás a Festa da Sega, dos primeiros frutos do teu trabalho, que houveres semeado no campo\" (Êx 23:16); \"Semelhantemente, tereis santa convocação no dia das primícias, quando oferecerdes oferta nova ao SENHOR, segundo as vossas semanas\" (Nm 28:26). O nome \"Pentecostes\" (quinquagésimo) é grego e aparece no Novo Testamento (At 2:1; 1Co 16:8). A festa marcava o fim da colheita do trigo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 23,
+        "verse_start": 14,
+        "verse_end": 17
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "festas-judaicas-0065",
+      "text": "Segundo Deuteronômio 31, em que ocasião a Lei devia ser lida em voz alta diante de todo o Israel — homens, mulheres, crianças e estrangeiros?",
+      "options": [
+        {
+          "text": "De sete em sete anos, no ano da remissão, na Festa dos Tabernáculos",
+          "correct": true
+        },
+        {
+          "text": "Todo sábado, nas sinagogas",
+          "correct": false
+        },
+        {
+          "text": "Na Páscoa de cada ano, pelo sumo sacerdote",
+          "correct": false
+        },
+        {
+          "text": "Na coroação de cada novo rei",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Ao fim de cada sete anos, no tempo determinado do ano da remissão, na Festa dos Tabernáculos, quando todo o Israel vier a comparecer perante o SENHOR... lerás esta lei diante de todo o Israel aos seus ouvidos. Ajunta o povo, homens, e mulheres, e meninos, e os teus estrangeiros\" (Dt 31:10-12). Foi nesse espírito que Esdras leu a Lei ao povo no sétimo mês (Ne 8).",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 31,
+        "verse_start": 9,
+        "verse_end": 13
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "festas-judaicas-0066",
+      "text": "Segundo Ester 9:22, além de banquete e alegria, que duas práticas marcariam a celebração do Purim?",
+      "options": [
+        {
+          "text": "Mandar porções uns aos outros e dádivas aos pobres",
+          "correct": true
+        },
+        {
+          "text": "Jejuar três dias e vestir saco",
+          "correct": false
+        },
+        {
+          "text": "Acender luzes por oito dias e cantar o Hallel",
+          "correct": false
+        },
+        {
+          "text": "Habitar em cabanas e balançar ramos",
+          "correct": false
+        }
+      ],
+      "explanation": "\"...que os fizessem dias de banquetes e de alegria, e de mandarem porções uns aos outros, e dádivas aos pobres\" (Et 9:22). Os dias foram fixados por Mordecai como aqueles em que \"a tristeza se lhes tornou em alegria\". Até hoje o Purim judaico inclui o envio de pratos (mishloach manot) e esmolas (matanot la'evyonim).",
+      "divergence_note": null,
+      "reference": {
+        "book": "ester",
+        "chapter": 9,
+        "verse_start": 20,
+        "verse_end": 22
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "festas-judaicas-0067",
+      "text": "Que vestes o sumo sacerdote devia usar ao entrar no Santo dos Santos no Dia da Expiação, em vez das vestes de glória de todos os dias?",
+      "options": [
+        {
+          "text": "Vestes simples de linho: túnica, calções, cinto e mitra de linho",
+          "correct": true
+        },
+        {
+          "text": "O éfode de ouro com o peitoral das doze pedras",
+          "correct": false
+        },
+        {
+          "text": "Um manto de púrpura com campainhas e romãs",
+          "correct": false
+        },
+        {
+          "text": "Pele de cordeiro, como Adão",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Vestirá ele a túnica santa de linho, e terá calções de linho sobre a sua carne, e cingir-se-á com um cinto de linho, e se cobrirá com uma mitra de linho; estas são vestes santas; por isso, banhará a sua carne na água e as vestirá\" (Lv 16:4). As vestes de ouro ficavam de fora: no dia da expiação, o sumo sacerdote se apresentava em humildade, como um servo, e trocava de roupa de novo ao sair (v. 23-24).",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 16,
+        "verse_start": 1,
+        "verse_end": 4
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "festas-judaicas-0068",
+      "text": "Segundo Êxodo 12, o que os pais deviam responder quando os filhos perguntassem, na Páscoa: \"Que culto é este?\"",
+      "options": [
+        {
+          "text": "\"Este é o sacrifício da Páscoa ao SENHOR, que passou as casas dos filhos de Israel no Egito, quando feriu aos egípcios e livrou as nossas casas\"",
+          "correct": true
+        },
+        {
+          "text": "\"É a festa da colheita, que o SENHOR nos deu em Canaã\"",
+          "correct": false
+        },
+        {
+          "text": "\"É o dia em que Moisés subiu ao Sinai\"",
+          "correct": false
+        },
+        {
+          "text": "\"É a memória do dilúvio, quando Deus salvou Noé\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E acontecerá que, quando vossos filhos vos disserem: Que culto é este? Então, direis: Este é o sacrifício da Páscoa ao SENHOR, que passou as casas dos filhos de Israel no Egito, quando feriu aos egípcios e livrou as nossas casas\" (Êx 12:26-27). A festa foi pensada como ensino de geração em geração — base das perguntas feitas pelas crianças no sêder judaico até hoje.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 12,
+        "verse_start": 24,
+        "verse_end": 27
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "festas-judaicas-0069",
+      "text": "Que festa os judeus que voltaram do exílio celebraram logo depois de concluir e dedicar o segundo templo, segundo Esdras 6?",
+      "options": [
+        {
+          "text": "A Páscoa, no dia catorze do primeiro mês, seguida dos sete dias dos Pães Asmos",
+          "correct": true
+        },
+        {
+          "text": "A Festa das Trombetas",
+          "correct": false
+        },
+        {
+          "text": "O Dia da Expiação",
+          "correct": false
+        },
+        {
+          "text": "A Festa de Purim",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E os que vieram do cativeiro celebraram a Páscoa no dia catorze do primeiro mês... e celebraram a Festa dos Pães Asmos por sete dias com alegria; porque o SENHOR os tinha alegrado e tinha mudado o coração do rei da Assíria a favor deles\" (Ed 6:19-22). Depois de décadas sem templo, a primeira festa do calendário foi retomada no lugar de culto restaurado.",
+      "divergence_note": null,
+      "reference": {
+        "book": "esdras",
+        "chapter": 6,
+        "verse_start": 16,
+        "verse_end": 22
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "festas-judaicas-0070",
+      "text": "Durante que festa Salomão dedicou o templo de Jerusalém, \"no mês de Etanim, que é o sétimo mês\"?",
+      "options": [
+        {
+          "text": "A Festa dos Tabernáculos",
+          "correct": true
+        },
+        {
+          "text": "A Páscoa",
+          "correct": false
+        },
+        {
+          "text": "Pentecostes",
+          "correct": false
+        },
+        {
+          "text": "A Festa da Dedicação",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E todos os homens de Israel se congregaram ao rei Salomão, na festa, no mês de Etanim, que é o sétimo mês\" (1Rs 8:2). A festa do sétimo mês é a dos Tabernáculos, celebrada a partir do dia quinze (Lv 23:34). Salomão prolongou a celebração: \"catorze dias\" ao todo — sete da dedicação e sete da festa (1Rs 8:65; 2Cr 7:8-10).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 8,
+        "verse_start": 1,
+        "verse_end": 5
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "festas-judaicas-0071",
+      "text": "Que festa Jeroboão I instituiu no reino do Norte, \"semelhante à festa que se fazia em Judá\", para que o povo não subisse a Jerusalém?",
+      "options": [
+        {
+          "text": "Uma festa no dia quinze do oitavo mês, inventada \"do seu coração\", com sacrifícios aos bezerros em Betel",
+          "correct": true
+        },
+        {
+          "text": "Uma Páscoa no segundo mês, como a de Ezequias",
+          "correct": false
+        },
+        {
+          "text": "Um Dia da Expiação em Samaria",
+          "correct": false
+        },
+        {
+          "text": "Uma festa de luzes em Dã",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E fez Jeroboão uma festa no oitavo mês, no dia décimo quinto do mês, como a festa que se fazia em Judá, e sacrificou no altar; semelhantemente fez em Betel, sacrificando aos bezerros que fizera... no mês que fabricara do seu coração\" (1Rs 12:32-33). Era uma imitação da Festa dos Tabernáculos, deslocada um mês. O texto a condena como religião inventada pelo homem.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 12,
+        "verse_start": 26,
+        "verse_end": 33
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "festas-judaicas-0072",
+      "text": "Segundo a tradição judaica, que acontecimento do Êxodo passou a ser comemorado na Festa das Semanas (Shavuot), além da colheita?",
+      "options": [
+        {
+          "text": "A entrega da Lei no monte Sinai",
+          "correct": true
+        },
+        {
+          "text": "A travessia do mar Vermelho",
+          "correct": false
+        },
+        {
+          "text": "A primeira queda do maná",
+          "correct": false
+        },
+        {
+          "text": "A construção do tabernáculo",
+          "correct": false
+        }
+      ],
+      "explanation": "Israel chegou ao Sinai \"no terceiro mês\" depois da saída do Egito (Êx 19:1), e o cálculo rabínico situou a entrega da Lei cerca de cinquenta dias após a Páscoa. Por isso o judaísmo celebra Shavuot como \"o tempo da entrega da nossa Torá\". Cristãos notam o paralelo: em Pentecostes, o Espírito foi derramado e a lei escrita no coração (Jr 31:33; At 2).",
+      "divergence_note": "A associação da Festa das Semanas com o Sinai é tradição judaica posterior, não ordenança expressa da Lei; a Bíblia só liga a festa à colheita.",
+      "reference": {
+        "book": "exodo",
+        "chapter": 19,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "festas-judaicas-0073",
+      "text": "Qual é a primeira \"festa fixa\" (solenidade) listada em Levítico 23, antes mesmo da Páscoa?",
+      "options": [
+        {
+          "text": "O sábado",
+          "correct": true
+        },
+        {
+          "text": "A lua nova",
+          "correct": false
+        },
+        {
+          "text": "O Dia da Expiação",
+          "correct": false
+        },
+        {
+          "text": "A Festa das Trombetas",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Seis dias obra se fará, mas o sétimo dia será o sábado do descanso, santa convocação; nenhuma obra fareis; sábado do SENHOR é em todas as vossas habitações\" (Lv 23:3). Só depois o capítulo passa às festas anuais: Páscoa e Pães Asmos, Primícias, Semanas, Trombetas, Expiação e Tabernáculos. O sábado semanal é o modelo de descanso e santa convocação de todas as outras.",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 23,
+        "verse_start": 1,
+        "verse_end": 4
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "festas-judaicas-0074",
+      "text": "Onde Jesus estava quando os judeus o cercaram na Festa da Dedicação, em Jerusalém, \"e era inverno\"?",
+      "options": [
+        {
+          "text": "No templo, passeando no alpendre (pórtico) de Salomão",
+          "correct": true
+        },
+        {
+          "text": "No monte das Oliveiras",
+          "correct": false
+        },
+        {
+          "text": "No tanque de Betesda",
+          "correct": false
+        },
+        {
+          "text": "Na casa de Lázaro, em Betânia",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E em Jerusalém havia a Festa da Dedicação, e era inverno. E Jesus andava passeando no templo, no alpendre de Salomão\" (Jo 10:22-23). Ali lhe perguntaram: \"Se tu és o Cristo, dize-no-lo abertamente\", e ele respondeu: \"Eu e o Pai somos um\" (vv. 24-30). O mesmo alpendre seria depois ponto de reunião da igreja primitiva (At 3:11; 5:12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 10,
+        "verse_start": 22,
+        "verse_end": 30
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "festas-judaicas-0075",
+      "text": "Que nome babilônico o mês da Páscoa (Abibe) passou a ter nos livros escritos após o exílio, como Neemias e Ester?",
+      "options": [
+        {
+          "text": "Nisã",
+          "correct": true
+        },
+        {
+          "text": "Tisri",
+          "correct": false
+        },
+        {
+          "text": "Adar",
+          "correct": false
+        },
+        {
+          "text": "Quisleu",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Sucedeu, pois, no mês de nisã, no ano vigésimo do rei Artaxerxes\" (Ne 2:1); \"No primeiro mês, que é o mês de nisã... se lançou pur, isto é, a sorte\" (Et 3:7). Antes do exílio, o mês se chamava Abibe (\"espigas verdes\", Êx 13:4). Os judeus adotaram no cativeiro os nomes babilônicos dos meses, que o calendário judaico usa até hoje.",
+      "divergence_note": null,
+      "reference": {
+        "book": "neemias",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": 1
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "festas-judaicas-0076",
+      "text": "Que ordem repetida Deuteronômio 16 dá a respeito da Festa dos Tabernáculos, incluindo filhos, servos, levitas, estrangeiros, órfãos e viúvas?",
+      "options": [
+        {
+          "text": "Alegrar-se na festa — \"serás verdadeiramente alegre\"",
+          "correct": true
+        },
+        {
+          "text": "Jejuar e afligir a alma",
+          "correct": false
+        },
+        {
+          "text": "Guardar silêncio por sete dias",
+          "correct": false
+        },
+        {
+          "text": "Dormir ao relento, sem cabanas",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E, na tua festa, te alegrarás, tu, e teu filho, e tua filha, e o teu servo, e a tua serva, e o levita, e o estrangeiro, e o órfão, e a viúva, que estão dentro das tuas portas... porquanto o SENHOR, teu Deus, te há de abençoar em toda a tua colheita e em toda obra das tuas mãos; pelo que te alegrarás certamente\" (Dt 16:14-15). A alegria é mandamento — e deve incluir os mais vulneráveis.",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 16,
+        "verse_start": 13,
+        "verse_end": 15
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "festas-judaicas-0077",
+      "text": "Segundo Números 29, quantos novilhos ao todo eram oferecidos em holocausto nos sete dias da Festa dos Tabernáculos?",
+      "options": [
+        {
+          "text": "Setenta — treze no primeiro dia, diminuindo um por dia até sete no sétimo",
+          "correct": true
+        },
+        {
+          "text": "Quarenta e nove — sete por dia",
+          "correct": false
+        },
+        {
+          "text": "Doze — um por tribo",
+          "correct": false
+        },
+        {
+          "text": "Cento e vinte — como na dedicação do templo",
+          "correct": false
+        }
+      ],
+      "explanation": "Números 29:12-34 prescreve 13 novilhos no primeiro dia, 12 no segundo, 11 no terceiro, e assim por diante até 7 no sétimo dia — total de 70 —, além de dois carneiros e catorze cordeiros por dia. Comentaristas judeus ligaram os setenta novilhos às setenta nações de Gênesis 10, vendo na festa uma intercessão por todo o mundo. No oitavo dia oferecia-se apenas um novilho (v. 36).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 29,
+        "verse_start": 12,
+        "verse_end": 38
+      },
+      "difficulty": "expert"
     }
   ]
 }

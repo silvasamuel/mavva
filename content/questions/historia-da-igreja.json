@@ -1862,6 +1862,440 @@
         "verse_end": 21
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "historia-da-igreja-0061",
+      "text": "O que Simão, o mágico de Samaria, ofereceu aos apóstolos ao ver que o Espírito Santo era dado pela imposição das mãos?",
+      "options": [
+        {
+          "text": "Dinheiro, para também ter esse poder",
+          "correct": true
+        },
+        {
+          "text": "Seus livros de magia",
+          "correct": false
+        },
+        {
+          "text": "A sua casa como lugar de reunião",
+          "correct": false
+        },
+        {
+          "text": "Metade dos seus bens aos pobres",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E Simão, vendo que pela imposição das mãos dos apóstolos se dava o Espírito Santo, lhes ofereceu dinheiro, dizendo: Dai-me também a mim esse poder\" (At 8:18-19). Pedro respondeu: \"O teu dinheiro seja contigo para perdição\" (v. 20). Do nome dele vem o termo \"simonia\", a compra e venda de coisas sagradas.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 8,
+        "verse_start": 9,
+        "verse_end": 24
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "historia-da-igreja-0062",
+      "text": "O que aconteceu aos sete filhos de Ceva, exorcistas judeus em Éfeso, que tentaram expulsar um demônio \"por Jesus, a quem Paulo prega\"?",
+      "options": [
+        {
+          "text": "O espírito maligno disse \"Conheço a Jesus e sei quem é Paulo; mas vós, quem sois?\" e o homem os dominou, fazendo-os fugir nus e feridos",
+          "correct": true
+        },
+        {
+          "text": "Foram presos pelo procônsul por feitiçaria",
+          "correct": false
+        },
+        {
+          "text": "Converteram-se e foram batizados por Paulo",
+          "correct": false
+        },
+        {
+          "text": "Ficaram mudos até o dia de Pentecostes",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Respondendo, porém, o espírito maligno, disse: Conheço a Jesus e bem sei quem é Paulo; mas vós, quem sois? E, saltando neles o homem que tinha o espírito maligno... pôde mais do que eles; de sorte que, nus e feridos, fugiram daquela casa\" (At 19:15-16). O caso espalhou temor em Éfeso, e \"o nome do Senhor Jesus era engrandecido\" (v. 17).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 19,
+        "verse_start": 11,
+        "verse_end": 17
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0063",
+      "text": "Qual foi o valor calculado dos livros de magia queimados publicamente em Éfeso por muitos que creram?",
+      "options": [
+        {
+          "text": "Cinquenta mil peças de prata",
+          "correct": true
+        },
+        {
+          "text": "Trinta moedas de prata",
+          "correct": false
+        },
+        {
+          "text": "Mil talentos de ouro",
+          "correct": false
+        },
+        {
+          "text": "Trezentos denários",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Também muitos dos que seguiam artes mágicas trouxeram os seus livros e os queimaram na presença de todos, e, feita a conta do seu preço, acharam que montava a cinquenta mil peças de prata. Assim, a palavra do Senhor crescia poderosamente e prevalecia\" (At 19:19-20). Éfeso era famosa pelas \"letras efésias\", fórmulas mágicas escritas; a conversão custou caro aos novos crentes.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 19,
+        "verse_start": 17,
+        "verse_end": 20
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "historia-da-igreja-0064",
+      "text": "Como Paulo chamou o sumo sacerdote Ananias, que mandou feri-lo na boca durante o seu depoimento diante do Sinédrio?",
+      "options": [
+        {
+          "text": "\"Parede branqueada\"",
+          "correct": true
+        },
+        {
+          "text": "\"Raça de víboras\"",
+          "correct": false
+        },
+        {
+          "text": "\"Sepulcro caiado\"",
+          "correct": false
+        },
+        {
+          "text": "\"Filho do diabo\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Então, Paulo lhe disse: Deus te ferirá, parede branqueada; tu estás aqui assentado para julgar-me conforme a lei e contra a lei me mandas ferir?\" (At 23:3). Advertido de que falava contra o sumo sacerdote, Paulo recuou citando Êxodo 22:28: \"Não dirás mal do príncipe do teu povo\" (v. 5). Ananias foi, de fato, assassinado por zelotes anos depois, no início da revolta judaica.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 23,
+        "verse_start": 1,
+        "verse_end": 5
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-da-igreja-0065",
+      "text": "Quem descobriu a conspiração de mais de quarenta judeus que juraram não comer nem beber até matar Paulo em Jerusalém?",
+      "options": [
+        {
+          "text": "O sobrinho de Paulo, filho de sua irmã",
+          "correct": true
+        },
+        {
+          "text": "Lucas, o médico",
+          "correct": false
+        },
+        {
+          "text": "Um soldado da guarda",
+          "correct": false
+        },
+        {
+          "text": "Ananias de Damasco",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E o filho da irmã de Paulo, tendo ouvido acerca desta cilada, foi, e entrou na fortaleza, e o anunciou a Paulo\" (At 23:16). Paulo o mandou ao tribuno Cláudio Lísias, que, para proteger o prisioneiro, o enviou de noite a Cesareia com uma escolta de 470 homens (vv. 17-24). É a única menção da família de Paulo em Atos.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 23,
+        "verse_start": 12,
+        "verse_end": 24
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0066",
+      "text": "Segundo os historiadores, qual escritor cristão do norte da África, do fim do século II, cunhou a frase \"o sangue dos mártires é semente\" da igreja e foi o primeiro a usar o termo latino \"Trindade\" (trinitas)?",
+      "options": [
+        {
+          "text": "Tertuliano",
+          "correct": true
+        },
+        {
+          "text": "Cipriano",
+          "correct": false
+        },
+        {
+          "text": "Agostinho",
+          "correct": false
+        },
+        {
+          "text": "Orígenes",
+          "correct": false
+        }
+      ],
+      "explanation": "Tertuliano de Cartago (c. 160–c. 220) escreveu em latim a sua \"Apologia\" aos governantes romanos, com a célebre frase \"somos multiplicados cada vez que somos ceifados por vós; o sangue dos cristãos é semente\". Em \"Contra Práxeas\" formulou a linguagem de \"uma substância, três pessoas\" que marcou a doutrina da Trindade no Ocidente.",
+      "divergence_note": "Dados da história da igreja, não da narrativa bíblica. A referência bíblica aponta para a perseguição que espalhou a igreja, tema da frase de Tertuliano.",
+      "reference": {
+        "book": "atos",
+        "chapter": 8,
+        "verse_start": 1,
+        "verse_end": 4
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0067",
+      "text": "Segundo os historiadores, qual bispo de Alexandria, grande defensor da divindade de Cristo contra o arianismo e exilado cinco vezes, listou em sua carta pascal de 367 d.C. exatamente os 27 livros do Novo Testamento?",
+      "options": [
+        {
+          "text": "Atanásio",
+          "correct": true
+        },
+        {
+          "text": "Cirilo",
+          "correct": false
+        },
+        {
+          "text": "Clemente",
+          "correct": false
+        },
+        {
+          "text": "Orígenes",
+          "correct": false
+        }
+      ],
+      "explanation": "Atanásio (c. 296–373) participou do Concílio de Niceia ainda diácono e passou a vida defendendo que o Filho é \"da mesma substância\" do Pai — daí a expressão \"Atanásio contra o mundo\". A sua 39ª Carta Festal (367) é a primeira lista conhecida com os mesmos 27 livros do Novo Testamento usados até hoje, chamando-os \"fontes de salvação\".",
+      "divergence_note": "Dados da história da igreja, não da narrativa bíblica. A referência bíblica aponta para o texto central na defesa da divindade do Verbo.",
+      "reference": {
+        "book": "joao",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-da-igreja-0068",
+      "text": "Segundo os historiadores, qual concílio ecumênico, em 381 d.C., reafirmou Niceia e ampliou o credo com a confissão da divindade do Espírito Santo, \"Senhor e fonte da vida\"?",
+      "options": [
+        {
+          "text": "O Primeiro Concílio de Constantinopla",
+          "correct": true
+        },
+        {
+          "text": "O Concílio de Éfeso",
+          "correct": false
+        },
+        {
+          "text": "O Concílio de Calcedônia",
+          "correct": false
+        },
+        {
+          "text": "O Concílio de Trento",
+          "correct": false
+        }
+      ],
+      "explanation": "Convocado pelo imperador Teodósio I, o Concílio de Constantinopla (381) condenou os que negavam a divindade do Espírito Santo (pneumatômacos) e produziu a forma do Credo Niceno recitada até hoje por católicos, ortodoxos e protestantes: \"Creio no Espírito Santo, Senhor que dá a vida, que procede do Pai, e com o Pai e o Filho é adorado e glorificado\".",
+      "divergence_note": "Dados da história da igreja, não da narrativa bíblica. A referência bíblica aponta para a fórmula trinitária do batismo.",
+      "reference": {
+        "book": "mateus",
+        "chapter": 28,
+        "verse_start": 19,
+        "verse_end": 20
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-da-igreja-0069",
+      "text": "Segundo os historiadores, qual teólogo de Oxford do século XIV, chamado \"estrela da manhã da Reforma\", promoveu a tradução da Bíblia para o inglês e teve os ossos exumados e queimados décadas após a morte?",
+      "options": [
+        {
+          "text": "John Wycliffe",
+          "correct": true
+        },
+        {
+          "text": "Thomas Cranmer",
+          "correct": false
+        },
+        {
+          "text": "William Tyndale",
+          "correct": false
+        },
+        {
+          "text": "Thomas Becket",
+          "correct": false
+        }
+      ],
+      "explanation": "John Wycliffe (c. 1328–1384) defendeu a autoridade suprema das Escrituras e criticou a riqueza do clero, as indulgências e a transubstanciação. A Bíblia traduzida sob a sua influência, a partir da Vulgata, foi copiada à mão pelos lolardos. O Concílio de Constança o condenou postumamente (1415), e em 1428 os seus restos foram desenterrados, queimados e lançados ao rio Swift.",
+      "divergence_note": "Dados da história da igreja, não da narrativa bíblica. A referência bíblica aponta para o lema da Palavra como lâmpada, central ao movimento.",
+      "reference": {
+        "book": "salmos",
+        "chapter": 119,
+        "verse_start": 105,
+        "verse_end": 105
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0070",
+      "text": "Segundo os historiadores, qual reformador tcheco, reitor da Universidade de Praga, foi queimado vivo no Concílio de Constança em 1415, apesar do salvo-conduto imperial?",
+      "options": [
+        {
+          "text": "Jan Hus",
+          "correct": true
+        },
+        {
+          "text": "Jerônimo de Praga",
+          "correct": false
+        },
+        {
+          "text": "Pedro Valdo",
+          "correct": false
+        },
+        {
+          "text": "Girolamo Savonarola",
+          "correct": false
+        }
+      ],
+      "explanation": "Jan Hus (c. 1372–1415) pregava em língua tcheca na Capela de Belém, influenciado por Wycliffe, condenando a venda de indulgências e defendendo Cristo como único cabeça da igreja. Convocado a Constança com salvo-conduto do imperador Sigismundo, foi preso e queimado em 6 de julho de 1415. Lutero diria mais tarde: \"Somos todos hussitas sem o saber\".",
+      "divergence_note": "Dados da história da igreja, não da narrativa bíblica. A referência bíblica aponta para o ensino de Jesus sobre não temer os que matam o corpo.",
+      "reference": {
+        "book": "mateus",
+        "chapter": 10,
+        "verse_start": 28,
+        "verse_end": 28
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0071",
+      "text": "Segundo os historiadores, qual tradutor inglês produziu o primeiro Novo Testamento impresso em inglês a partir do grego (1526) e foi estrangulado e queimado em 1536, orando \"Senhor, abre os olhos do rei da Inglaterra\"?",
+      "options": [
+        {
+          "text": "William Tyndale",
+          "correct": true
+        },
+        {
+          "text": "John Wycliffe",
+          "correct": false
+        },
+        {
+          "text": "Miles Coverdale",
+          "correct": false
+        },
+        {
+          "text": "John Knox",
+          "correct": false
+        }
+      ],
+      "explanation": "William Tyndale (c. 1494–1536) traduziu o Novo Testamento do grego de Erasmo e parte do Antigo Testamento do hebraico, imprimindo-os na Alemanha e contrabandeando-os para a Inglaterra. Traído em Antuérpia, foi executado em Vilvoorde. Grande parte da sua tradução foi incorporada à Bíblia King James (1611), publicada sob o rei cuja conversão ele pedira.",
+      "divergence_note": "Dados da história da igreja, não da narrativa bíblica. A referência bíblica aponta para a inspiração e utilidade de toda a Escritura.",
+      "reference": {
+        "book": "2timoteo",
+        "chapter": 3,
+        "verse_start": 16,
+        "verse_end": 17
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-da-igreja-0072",
+      "text": "Segundo os historiadores, qual foi o primeiro grande livro impresso com tipos móveis na Europa, por Johannes Gutenberg, em Mainz, por volta de 1455?",
+      "options": [
+        {
+          "text": "A Bíblia em latim (a Vulgata), conhecida como Bíblia de Gutenberg",
+          "correct": true
+        },
+        {
+          "text": "As 95 teses de Lutero",
+          "correct": false
+        },
+        {
+          "text": "A Imitação de Cristo",
+          "correct": false
+        },
+        {
+          "text": "O Novo Testamento grego de Erasmo",
+          "correct": false
+        }
+      ],
+      "explanation": "A Bíblia de Gutenberg, impressa em cerca de 180 exemplares com 42 linhas por página, reproduzia o texto latino da Vulgata. A invenção da imprensa com tipos móveis barateou os livros e tornou possível, décadas depois, a rápida difusão dos escritos da Reforma e das traduções da Bíblia para as línguas do povo.",
+      "divergence_note": "Dados da história da igreja, não da narrativa bíblica. A referência bíblica aponta para a permanência da Palavra de Deus.",
+      "reference": {
+        "book": "isaias",
+        "chapter": 40,
+        "verse_start": 8,
+        "verse_end": 8
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "historia-da-igreja-0073",
+      "text": "Segundo os historiadores, qual clérigo anglicano do século XVIII, fundador do movimento metodista, sentiu o coração \"estranhamente aquecido\" numa reunião na rua Aldersgate, em Londres, em 1738?",
+      "options": [
+        {
+          "text": "John Wesley",
+          "correct": true
+        },
+        {
+          "text": "George Whitefield",
+          "correct": false
+        },
+        {
+          "text": "Jonathan Edwards",
+          "correct": false
+        },
+        {
+          "text": "Charles Spurgeon",
+          "correct": false
+        }
+      ],
+      "explanation": "John Wesley (1703–1791), ao ouvir a leitura do prefácio de Lutero à carta aos Romanos, escreveu: \"Senti meu coração estranhamente aquecido. Senti que confiava em Cristo, somente em Cristo, para a salvação\". Com o irmão Charles, autor de milhares de hinos, e com Whitefield, pregou ao ar livre a milhares e organizou as \"sociedades\" que deram origem às igrejas metodistas.",
+      "divergence_note": "Dados da história da igreja, não da narrativa bíblica. A referência bíblica aponta para a paz com Deus pela fé, tema da leitura daquela noite.",
+      "reference": {
+        "book": "romanos",
+        "chapter": 5,
+        "verse_start": 1,
+        "verse_end": 5
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0074",
+      "text": "Segundo os historiadores, qual sapateiro e pastor batista inglês, chamado \"pai das missões modernas\", partiu para a Índia em 1793 e traduziu a Bíblia para diversas línguas, incluindo o bengali?",
+      "options": [
+        {
+          "text": "William Carey",
+          "correct": true
+        },
+        {
+          "text": "Hudson Taylor",
+          "correct": false
+        },
+        {
+          "text": "David Livingstone",
+          "correct": false
+        },
+        {
+          "text": "Adoniram Judson",
+          "correct": false
+        }
+      ],
+      "explanation": "William Carey (1761–1834) escreveu \"Uma Investigação sobre a Obrigação dos Cristãos de Usar Meios para a Conversão dos Pagãos\" (1792) e ajudou a fundar a Sociedade Missionária Batista. Em Serampore, com Marshman e Ward, traduziu a Bíblia completa para seis línguas e porções para muitas outras. Seu lema: \"Espere grandes coisas de Deus; tente grandes coisas para Deus\".",
+      "divergence_note": "Dados da história da igreja, não da narrativa bíblica. A referência bíblica aponta para a Grande Comissão, base do movimento missionário.",
+      "reference": {
+        "book": "mateus",
+        "chapter": 28,
+        "verse_start": 18,
+        "verse_end": 20
+      },
+      "difficulty": "medium"
     }
   ]
 }

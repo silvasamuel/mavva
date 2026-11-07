@@ -1830,6 +1830,440 @@
         "verse_end": 1
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "cronologia-biblica-0060",
+      "text": "Quantas viagens missionárias de Paulo o livro de Atos narra, antes da sua viagem a Roma como prisioneiro?",
+      "options": [
+        {
+          "text": "Três",
+          "correct": true
+        },
+        {
+          "text": "Uma",
+          "correct": false
+        },
+        {
+          "text": "Cinco",
+          "correct": false
+        },
+        {
+          "text": "Sete",
+          "correct": false
+        }
+      ],
+      "explanation": "Atos registra três viagens missionárias: a primeira com Barnabé, a Chipre e à Galácia (At 13–14); a segunda com Silas, chegando à Macedônia e à Acaia (At 15:36–18:22); e a terceira, centrada em Éfeso (At 18:23–21:16). Depois da prisão em Jerusalém e de dois anos em Cesareia, Paulo apelou para César e foi levado a Roma (At 27–28).",
+      "divergence_note": "A divisão em \"três viagens\" é uma convenção dos estudiosos para organizar a narrativa de Atos; o texto bíblico não as numera.",
+      "reference": {
+        "book": "atos",
+        "chapter": 13,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cronologia-biblica-0061",
+      "text": "Com base em que dado do Evangelho de João se calcula tradicionalmente que o ministério público de Jesus durou cerca de três anos?",
+      "options": [
+        {
+          "text": "João menciona três Páscoas distintas durante o ministério",
+          "correct": true
+        },
+        {
+          "text": "João conta os anos desde o batismo",
+          "correct": false
+        },
+        {
+          "text": "João diz que Jesus pregou \"por três anos\"",
+          "correct": false
+        },
+        {
+          "text": "João lista três viagens à Galileia",
+          "correct": false
+        }
+      ],
+      "explanation": "João menciona expressamente a Páscoa em 2:13 (purificação do templo), 6:4 (multiplicação dos pães) e 11:55–13:1 (a Páscoa da paixão), o que supõe pelo menos dois anos completos — cerca de três anos de ministério, iniciado quando Jesus tinha \"quase trinta anos\" (Lc 3:23). Alguns veem uma quarta Páscoa na \"festa dos judeus\" de João 5:1.",
+      "divergence_note": "A duração de três anos é inferência dos estudiosos a partir das festas em João; os sinóticos não permitem calcular a extensão do ministério.",
+      "reference": {
+        "book": "joao",
+        "chapter": 2,
+        "verse_start": 13,
+        "verse_end": 13
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cronologia-biblica-0062",
+      "text": "Em que hora do dia, segundo Mateus 27, Jesus entregou o espírito na cruz, e a que horário isso corresponde?",
+      "options": [
+        {
+          "text": "Pela hora nona — cerca de três da tarde",
+          "correct": true
+        },
+        {
+          "text": "Pela hora terceira — cerca de nove da manhã",
+          "correct": false
+        },
+        {
+          "text": "Pela hora sexta — meio-dia",
+          "correct": false
+        },
+        {
+          "text": "Pela hora undécima — cerca de cinco da tarde",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E, perto da hora nona, exclamou Jesus em alta voz... E Jesus, clamando outra vez com grande voz, rendeu o espírito\" (Mt 27:46-50). Os judeus contavam as horas a partir do nascer do sol (cerca de 6h), de modo que a hora nona era por volta das 15h — o horário do sacrifício da tarde no templo. As trevas haviam durado da hora sexta à nona (v. 45).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 27,
+        "verse_start": 45,
+        "verse_end": 50
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cronologia-biblica-0063",
+      "text": "Quanto tempo Salomão levou para construir o seu próprio palácio, em comparação com os sete anos do templo?",
+      "options": [
+        {
+          "text": "Treze anos",
+          "correct": true
+        },
+        {
+          "text": "Sete anos, o mesmo tempo",
+          "correct": false
+        },
+        {
+          "text": "Três anos",
+          "correct": false
+        },
+        {
+          "text": "Vinte anos",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Porém a sua casa edificou Salomão em treze anos e acabou toda a sua casa\" (1Rs 7:1), logo após a nota de que o templo levou sete anos (1Rs 6:38). O complexo palaciano incluía a Casa do Bosque do Líbano, o pórtico do trono e a casa da filha de Faraó (1Rs 7:2-8). 1 Reis 9:10 soma: \"ao fim de vinte anos\" edificou as duas casas.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 7,
+        "verse_start": 1,
+        "verse_end": 1
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cronologia-biblica-0064",
+      "text": "Em Gênesis 6:3, antes do dilúvio, que limite de tempo Deus anunciou ao dizer \"não contenderá o meu Espírito para sempre com o homem\"?",
+      "options": [
+        {
+          "text": "Cento e vinte anos",
+          "correct": true
+        },
+        {
+          "text": "Setenta anos",
+          "correct": false
+        },
+        {
+          "text": "Quarenta dias",
+          "correct": false
+        },
+        {
+          "text": "Mil anos",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Então, disse o SENHOR: Não contenderá o meu Espírito para sempre com o homem, porque ele também é carne; porém os seus dias serão cento e vinte anos\" (Gn 6:3). Muitos entendem os 120 anos como o prazo de graça até o dilúvio, durante o qual Noé, \"pregoeiro da justiça\" (2Pe 2:5), construiu a arca; outros, como o novo limite da vida humana. Moisés, que morreu aos 120, é o exemplo clássico (Dt 34:7).",
+      "divergence_note": "A interpretação dos 120 anos (prazo até o dilúvio ou limite de vida) é debatida entre os comentaristas.",
+      "reference": {
+        "book": "genesis",
+        "chapter": 6,
+        "verse_start": 1,
+        "verse_end": 8
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cronologia-biblica-0065",
+      "text": "Com quantos anos Abraão morreu, \"em boa velhice, velho e farto de dias\"?",
+      "options": [
+        {
+          "text": "Cento e setenta e cinco",
+          "correct": true
+        },
+        {
+          "text": "Cem",
+          "correct": false
+        },
+        {
+          "text": "Cento e vinte",
+          "correct": false
+        },
+        {
+          "text": "Cento e oitenta",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Estes, pois, são os dias dos anos da vida de Abraão, que viveu cento e setenta e cinco anos. E Abraão expirou e morreu em boa velhice, velho e farto de dias\" (Gn 25:7-8). Isaque e Ismael o sepultaram na caverna de Macpela, junto a Sara. Isaque viveria 180 anos (Gn 35:28), e Jacó, 147 (Gn 47:28).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 25,
+        "verse_start": 7,
+        "verse_end": 10
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cronologia-biblica-0066",
+      "text": "Quanto tempo, ao todo, Noé e a sua família permaneceram dentro da arca, comparando as datas de Gênesis 7:11 e 8:14?",
+      "options": [
+        {
+          "text": "Cerca de um ano e dez dias",
+          "correct": true
+        },
+        {
+          "text": "Exatamente quarenta dias",
+          "correct": false
+        },
+        {
+          "text": "Cento e cinquenta dias",
+          "correct": false
+        },
+        {
+          "text": "Sete anos",
+          "correct": false
+        }
+      ],
+      "explanation": "Noé entrou na arca \"no ano seiscentos da vida de Noé, no mês segundo, aos dezessete dias do mês\" (Gn 7:11), e saiu quando, \"no segundo mês, aos vinte e sete dias do mês, a terra estava seca\" do ano seguinte (Gn 8:14) — um ano e dez dias, ou um ano solar completo se o calendário era lunar. Os quarenta dias de chuva e os cento e cinquenta dias das águas foram apenas etapas desse período.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 8,
+        "verse_start": 13,
+        "verse_end": 19
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cronologia-biblica-0067",
+      "text": "Quantos dias depois da primeira aparição aos discípulos Jesus apareceu de novo, desta vez com Tomé presente?",
+      "options": [
+        {
+          "text": "Oito dias depois",
+          "correct": true
+        },
+        {
+          "text": "No dia seguinte",
+          "correct": false
+        },
+        {
+          "text": "Quarenta dias depois",
+          "correct": false
+        },
+        {
+          "text": "Três dias depois",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E oito dias depois estavam outra vez os seus discípulos dentro, e, com eles, Tomé. Chegou Jesus, estando as portas fechadas, e apresentou-se no meio e disse: Paz seja convosco!\" (Jo 20:26). Na contagem inclusiva dos judeus, \"oito dias depois\" é o domingo seguinte — indício de que os discípulos já se reuniam no primeiro dia da semana.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 20,
+        "verse_start": 24,
+        "verse_end": 29
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cronologia-biblica-0068",
+      "text": "Segundo Levítico 12, quantos dias durava ao todo a purificação da mãe após o nascimento de um menino, e quantos após o de uma menina?",
+      "options": [
+        {
+          "text": "Quarenta dias para um menino (7 + 33) e oitenta para uma menina (14 + 66)",
+          "correct": true
+        },
+        {
+          "text": "Sete dias em ambos os casos",
+          "correct": false
+        },
+        {
+          "text": "Trinta dias para um menino e sessenta para uma menina",
+          "correct": false
+        },
+        {
+          "text": "Cinquenta dias em ambos os casos",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Se uma mulher conceber e tiver um menino, será imunda sete dias... e depois ficará trinta e três dias no sangue da sua purificação... Mas, se tiver uma menina, será imunda duas semanas... e depois ficará sessenta e seis dias no sangue da sua purificação\" (Lv 12:2-5). Foi ao fim dos quarenta dias que Maria e José levaram Jesus ao templo com a oferta dos pobres (Lc 2:22-24) — data lembrada pela igreja em 2 de fevereiro.",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 12,
+        "verse_start": 1,
+        "verse_end": 8
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cronologia-biblica-0069",
+      "text": "A partir de que idade os homens de Israel eram contados no censo do deserto, como aptos para a guerra?",
+      "options": [
+        {
+          "text": "Vinte anos",
+          "correct": true
+        },
+        {
+          "text": "Dezoito anos",
+          "correct": false
+        },
+        {
+          "text": "Trinta anos",
+          "correct": false
+        },
+        {
+          "text": "Doze anos",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Da idade de vinte anos para cima, todos os que em Israel podem sair à guerra, a estes contareis segundo os seus exércitos\" (Nm 1:3). Os 603.550 contados (Nm 1:46) foram os que, por murmurarem, morreriam no deserto, exceto Calebe e Josué (Nm 14:29-30). Os levitas eram contados à parte, desde um mês de idade (Nm 3:15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cronologia-biblica-0070",
+      "text": "Segundo o discurso de Estêvão em Atos 7, em que três períodos de quarenta anos se divide a vida de Moisés?",
+      "options": [
+        {
+          "text": "Quarenta anos no Egito, quarenta em Midiã e quarenta conduzindo Israel no deserto",
+          "correct": true
+        },
+        {
+          "text": "Quarenta anos no Egito, quarenta no Sinai e quarenta em Canaã",
+          "correct": false
+        },
+        {
+          "text": "Quarenta anos pastor, quarenta sacerdote e quarenta rei",
+          "correct": false
+        },
+        {
+          "text": "Quarenta anos escravo, quarenta príncipe e quarenta profeta",
+          "correct": false
+        }
+      ],
+      "explanation": "Estêvão diz que Moisés tinha \"quarenta anos\" quando visitou os irmãos e fugiu (At 7:23), que \"passados quarenta anos\" o anjo lhe apareceu na sarça (v. 30), e que fez prodígios \"no deserto, por quarenta anos\" (v. 36). Isso concorda com Êxodo 7:7 (80 anos diante de Faraó) e Deuteronômio 34:7 (morte aos 120).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 7,
+        "verse_start": 20,
+        "verse_end": 36
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cronologia-biblica-0071",
+      "text": "Por quantos dias as águas do dilúvio prevaleceram sobre a terra antes de começarem a baixar?",
+      "options": [
+        {
+          "text": "Cento e cinquenta dias",
+          "correct": true
+        },
+        {
+          "text": "Quarenta dias",
+          "correct": false
+        },
+        {
+          "text": "Sete dias",
+          "correct": false
+        },
+        {
+          "text": "Trezentos e sessenta e cinco dias",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E prevaleceram as águas sobre a terra cento e cinquenta dias\" (Gn 7:24). Depois, Deus fez passar um vento, e \"ao fim de cento e cinquenta dias as águas minguaram\" e a arca repousou sobre os montes de Ararate (Gn 8:3-4). A chuva caiu quarenta dias, mas Noé só saiu da arca mais de um ano depois de entrar (Gn 7:11; 8:14).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 7,
+        "verse_start": 17,
+        "verse_end": 24
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cronologia-biblica-0072",
+      "text": "Quantos anos Lameque, pai de Noé, viveu ao todo, segundo Gênesis 5?",
+      "options": [
+        {
+          "text": "Setecentos e setenta e sete",
+          "correct": true
+        },
+        {
+          "text": "Novecentos e sessenta e nove",
+          "correct": false
+        },
+        {
+          "text": "Oitocentos e noventa e cinco",
+          "correct": false
+        },
+        {
+          "text": "Trezentos e sessenta e cinco",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E foram todos os dias de Lameque setecentos e setenta e sete anos; e morreu\" (Gn 5:31). O número 777 contrasta com o outro Lameque, descendente de Caim, que se gabou de vingança \"setenta vezes sete\" (Gn 4:24). O Lameque de Sete deu a Noé o seu nome esperando \"consolo\" do trabalho na terra amaldiçoada (Gn 5:29).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 5,
+        "verse_start": 28,
+        "verse_end": 31
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "cronologia-biblica-0073",
+      "text": "Por quanto tempo Absalão viveu em Jerusalém depois de voltar de Gesur sem poder ver o rosto do rei Davi?",
+      "options": [
+        {
+          "text": "Dois anos",
+          "correct": true
+        },
+        {
+          "text": "Sete dias",
+          "correct": false
+        },
+        {
+          "text": "Quarenta dias",
+          "correct": false
+        },
+        {
+          "text": "Dez anos",
+          "correct": false
+        }
+      ],
+      "explanation": "Depois de matar Amnom, Absalão fugiu para Gesur e ali ficou três anos (2Sm 13:38). Joabe conseguiu o seu retorno, \"porém Absalão morou dois anos em Jerusalém e não viu a face do rei\" (2Sm 14:28). Para forçar uma audiência, mandou pôr fogo no campo de cevada de Joabe (vv. 29-33). A reconciliação incompleta precedeu a rebelião (2Sm 15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 14,
+        "verse_start": 21,
+        "verse_end": 33
+      },
+      "difficulty": "hard"
     }
   ]
 }

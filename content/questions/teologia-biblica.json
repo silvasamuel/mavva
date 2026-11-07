@@ -1928,6 +1928,440 @@
         "verse_end": 12
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "teologia-biblica-0063",
+      "text": "Que ordem Deus deu ao homem e à mulher logo após criá-los, em Gênesis 1:28, conhecida pelos teólogos como \"mandato cultural\"?",
+      "options": [
+        {
+          "text": "\"Frutificai, e multiplicai-vos, e enchei a terra, e sujeitai-a; e dominai sobre os peixes do mar, sobre as aves dos céus e sobre todo animal\"",
+          "correct": true
+        },
+        {
+          "text": "\"Não comereis da árvore do conhecimento do bem e do mal\"",
+          "correct": false
+        },
+        {
+          "text": "\"Guardai o sábado, para o santificar\"",
+          "correct": false
+        },
+        {
+          "text": "\"Oferecei sacrifícios das primícias do vosso rebanho\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E Deus os abençoou e Deus lhes disse: Frutificai, e multiplicai-vos, e enchei a terra, e sujeitai-a; e dominai sobre os peixes do mar, e sobre as aves dos céus, e sobre todo o animal que se move sobre a terra\" (Gn 1:28). Criados à imagem de Deus, homem e mulher recebem a tarefa de cultivar e governar a criação como seus representantes — um domínio de cuidado, como mostra Gênesis 2:15: \"para o lavrar e o guardar\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 1,
+        "verse_start": 26,
+        "verse_end": 28
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "teologia-biblica-0064",
+      "text": "Na aliança de Gênesis 15, o que passou entre as metades dos animais partidos enquanto Abrão dormia, e o que isso significa?",
+      "options": [
+        {
+          "text": "Um forno fumegante e uma tocha de fogo — só Deus passou, assumindo sozinho a responsabilidade pela aliança",
+          "correct": true
+        },
+        {
+          "text": "Um anjo com espada, selando a promessa com sangue",
+          "correct": false
+        },
+        {
+          "text": "Abrão e Sara, jurando fidelidade",
+          "correct": false
+        },
+        {
+          "text": "Uma pomba e um corvo, como no dilúvio",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E sucedeu que, posto o sol, houve escuridão; e eis um forno de fumaça e uma tocha de fogo que passou por aquelas metades\" (Gn 15:17). No antigo rito de aliança, as partes passavam entre os animais partidos invocando sobre si o mesmo destino se quebrassem o pacto (cf. Jr 34:18-19). Aqui, apenas Deus — representado pelo fogo — passa: a aliança com Abraão é unilateral e garantida pela fidelidade divina.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 15,
+        "verse_start": 7,
+        "verse_end": 21
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "teologia-biblica-0065",
+      "text": "Como a teologia chama uma manifestação visível de Deus a seres humanos, como a sarça ardente, a coluna de fogo ou a glória no Sinai?",
+      "options": [
+        {
+          "text": "Teofania",
+          "correct": true
+        },
+        {
+          "text": "Epifania",
+          "correct": false
+        },
+        {
+          "text": "Apoteose",
+          "correct": false
+        },
+        {
+          "text": "Hierofania",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Teofania\" (do grego theós, Deus, e phaínein, aparecer) designa as aparições de Deus na história: a Abraão em Manre (Gn 18), a Moisés na sarça (Êx 3), a Israel no Sinai com trovões e fogo (Êx 19), a Isaías no templo (Is 6). Muitas vêm acompanhadas de nuvem, fogo e tremor da terra. Para o Novo Testamento, a revelação suprema de Deus é a encarnação: \"quem me vê a mim vê o Pai\" (Jo 14:9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 3,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "teologia-biblica-0066",
+      "text": "Que conceito teológico, presente em Isaías (\"um resto se converterá\") e retomado por Paulo em Romanos 11, descreve a parte fiel de Israel preservada por Deus em meio ao juízo?",
+      "options": [
+        {
+          "text": "O remanescente",
+          "correct": true
+        },
+        {
+          "text": "A diáspora",
+          "correct": false
+        },
+        {
+          "text": "O jubileu",
+          "correct": false
+        },
+        {
+          "text": "A teocracia",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Os restantes se converterão ao Deus forte, sim, os restantes de Jacó\" (Is 10:21); Isaías chegou a dar a um filho o nome Sear-Jasube, \"um resto voltará\" (Is 7:3). Paulo aplica a ideia aos judeus que creram em Cristo: \"também agora neste tempo ficou um resto, segundo a eleição da graça\" (Rm 11:5), lembrando os sete mil que não se dobraram a Baal nos dias de Elias (1Rs 19:18).",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 11,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "teologia-biblica-0067",
+      "text": "Como Paulo contrasta Adão e Cristo em 1 Coríntios 15:45, ao falar da ressurreição?",
+      "options": [
+        {
+          "text": "\"O primeiro homem, Adão, foi feito em alma vivente; o último Adão, em espírito vivificante\"",
+          "correct": true
+        },
+        {
+          "text": "\"O primeiro Adão foi do céu; o último, da terra\"",
+          "correct": false
+        },
+        {
+          "text": "\"O primeiro Adão pecou; o último Adão foi perdoado\"",
+          "correct": false
+        },
+        {
+          "text": "\"O primeiro Adão foi criado no sexto dia; o último, no sétimo\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Assim está também escrito: O primeiro homem, Adão, foi feito em alma vivente; o último Adão, em espírito vivificante... O primeiro homem, da terra, é terreno; o segundo homem, o Senhor, é do céu\" (1Co 15:45-47). Adão recebeu vida; Cristo dá vida. Como trouxemos a imagem do terreno, traremos a do celestial (v. 49) — a ressurreição de Cristo é o modelo da nossa.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1corintios",
+        "chapter": 15,
+        "verse_start": 42,
+        "verse_end": 49
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "teologia-biblica-0068",
+      "text": "Como João 1:17 contrasta o que veio por Moisés com o que veio por Jesus Cristo?",
+      "options": [
+        {
+          "text": "\"A lei foi dada por Moisés; a graça e a verdade vieram por Jesus Cristo\"",
+          "correct": true
+        },
+        {
+          "text": "\"O maná foi dado por Moisés; o pão da vida veio por Jesus Cristo\"",
+          "correct": false
+        },
+        {
+          "text": "\"A circuncisão veio por Moisés; o batismo, por Jesus Cristo\"",
+          "correct": false
+        },
+        {
+          "text": "\"O templo foi dado por Moisés; a igreja veio por Jesus Cristo\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Porque a lei foi dada por Moisés; a graça e a verdade vieram por Jesus Cristo\" (Jo 1:17). O versículo não opõe lei e graça como inimigas, mas marca a passagem da promessa ao cumprimento: a lei \"foi dada\", a graça \"veio\" em pessoa — o Verbo \"cheio de graça e de verdade\" (v. 14), de cuja plenitude recebemos \"graça sobre graça\" (v. 16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 1,
+        "verse_start": 14,
+        "verse_end": 18
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "teologia-biblica-0069",
+      "text": "O que Paulo roga aos crentes que apresentem a Deus, como \"culto racional\", em Romanos 12:1?",
+      "options": [
+        {
+          "text": "Os seus corpos em sacrifício vivo, santo e agradável a Deus",
+          "correct": true
+        },
+        {
+          "text": "Dízimos e ofertas no templo",
+          "correct": false
+        },
+        {
+          "text": "Holocaustos de cordeiros sem defeito",
+          "correct": false
+        },
+        {
+          "text": "Votos de nazireado",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Rogo-vos, pois, irmãos, pela compaixão de Deus, que apresenteis o vosso corpo em sacrifício vivo, santo e agradável a Deus, que é o vosso culto racional\" (Rm 12:1). Depois de onze capítulos de doutrina, Paulo passa à vida prática: o sacrifício do crente não é um animal morto no altar, mas a própria vida entregue — e o versículo seguinte pede a transformação pela renovação da mente.",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 12,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "teologia-biblica-0070",
+      "text": "Como começa o antigo hino cristão citado por Paulo em 1 Timóteo 3:16, que ele chama de \"o mistério da piedade\"?",
+      "options": [
+        {
+          "text": "\"Aquele que se manifestou em carne, foi justificado em espírito, visto dos anjos, pregado aos gentios, crido no mundo, recebido acima na glória\"",
+          "correct": true
+        },
+        {
+          "text": "\"Digno é o Cordeiro que foi morto\"",
+          "correct": false
+        },
+        {
+          "text": "\"Santo, Santo, Santo é o Senhor dos Exércitos\"",
+          "correct": false
+        },
+        {
+          "text": "\"Cristo morreu pelos nossos pecados segundo as Escrituras\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E, sem dúvida alguma, grande é o mistério da piedade: Aquele que se manifestou em carne foi justificado em espírito, visto dos anjos, pregado aos gentios, crido no mundo e recebido acima, na glória\" (1Tm 3:16). As seis frases rítmicas resumem a encarnação, a vindicação pela ressurreição, a proclamação universal e a ascensão — um credo em miniatura da igreja apostólica.",
+      "divergence_note": "Alguns manuscritos antigos leem \"Deus se manifestou em carne\"; a maioria das traduções modernas segue a leitura \"Aquele que\", que a ARC também adota.",
+      "reference": {
+        "book": "1timoteo",
+        "chapter": 3,
+        "verse_start": 14,
+        "verse_end": 16
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "teologia-biblica-0071",
+      "text": "Que salmo, citado em João 19:24, profetizou que repartiriam as vestes do Messias e lançariam sortes sobre a sua túnica?",
+      "options": [
+        {
+          "text": "Salmo 22",
+          "correct": true
+        },
+        {
+          "text": "Salmo 23",
+          "correct": false
+        },
+        {
+          "text": "Salmo 51",
+          "correct": false
+        },
+        {
+          "text": "Salmo 110",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Repartem entre si as minhas vestes e lançam sortes sobre a minha túnica\" (Sl 22:18). João comenta: \"para que se cumprisse a Escritura\" (Jo 19:24). O mesmo salmo abre com o clamor \"Deus meu, Deus meu, por que me desamparaste?\", repetido por Jesus na cruz (Mt 27:46), e descreve zombadores que meneiam a cabeça e mãos e pés traspassados (Sl 22:7,16) — por isso é chamado \"o salmo da cruz\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "salmos",
+        "chapter": 22,
+        "verse_start": 16,
+        "verse_end": 18
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "teologia-biblica-0072",
+      "text": "Segundo Jesus em Mateus 11:14, quem era o \"Elias que havia de vir\", anunciado em Malaquias 4:5?",
+      "options": [
+        {
+          "text": "João Batista",
+          "correct": true
+        },
+        {
+          "text": "O próprio Jesus",
+          "correct": false
+        },
+        {
+          "text": "Moisés",
+          "correct": false
+        },
+        {
+          "text": "Pedro",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E, se quereis dar crédito, é este o Elias que havia de vir\" (Mt 11:14), disse Jesus sobre João Batista. Malaquias prometera: \"Eis que eu vos envio o profeta Elias, antes que venha o grande e terrível dia do SENHOR\" (Ml 4:5). O anjo dissera a Zacarias que João iria \"no espírito e virtude de Elias\" (Lc 1:17) — não uma reencarnação, o que o próprio João negou quando perguntado (Jo 1:21), mas o cumprimento do papel profetizado.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 11,
+        "verse_start": 7,
+        "verse_end": 15
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "teologia-biblica-0073",
+      "text": "Quais dois mandamentos do Antigo Testamento Jesus uniu ao responder qual era o \"grande mandamento\" da Lei?",
+      "options": [
+        {
+          "text": "\"Amarás o Senhor, teu Deus, de todo o teu coração\" (Dt 6:5) e \"Amarás o teu próximo como a ti mesmo\" (Lv 19:18)",
+          "correct": true
+        },
+        {
+          "text": "\"Não terás outros deuses\" e \"Não matarás\"",
+          "correct": false
+        },
+        {
+          "text": "\"Lembra-te do dia do sábado\" e \"Honra teu pai e tua mãe\"",
+          "correct": false
+        },
+        {
+          "text": "\"Santos sereis\" e \"Não furtarás\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Amarás o Senhor, teu Deus, de todo o teu coração, e de toda a tua alma, e de todo o teu pensamento. Este é o primeiro e grande mandamento. E o segundo, semelhante a este, é: Amarás o teu próximo como a ti mesmo. Destes dois mandamentos dependem toda a lei e os profetas\" (Mt 22:37-40). Jesus juntou o Shemá de Deuteronômio 6:4-5 com Levítico 19:18, resumindo toda a Escritura em amor a Deus e ao próximo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 22,
+        "verse_start": 34,
+        "verse_end": 40
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "teologia-biblica-0074",
+      "text": "Como Jesus formulou a chamada \"regra de ouro\" no Sermão do Monte, dizendo que nela se resumem \"a lei e os profetas\"?",
+      "options": [
+        {
+          "text": "\"Tudo o que vós quereis que os homens vos façam, fazei-lho também vós\"",
+          "correct": true
+        },
+        {
+          "text": "\"Não façais aos outros o que não quereis que vos façam\"",
+          "correct": false
+        },
+        {
+          "text": "\"Olho por olho, dente por dente\"",
+          "correct": false
+        },
+        {
+          "text": "\"Dai a César o que é de César\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Portanto, tudo o que vós quereis que os homens vos façam, fazei-lho também vós, porque esta é a lei e os profetas\" (Mt 7:12). Formas negativas da regra (\"não faças ao outro o que odeias\") já existiam entre judeus e gregos; Jesus a formula positivamente, como mandamento ativo de bem, e a apresenta como síntese da ética bíblica, ao lado do duplo mandamento do amor.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 7,
+        "verse_start": 12,
+        "verse_end": 12
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "teologia-biblica-0075",
+      "text": "Que palavra grega Lucas usa em 9:31 para o assunto da conversa entre Jesus, Moisés e Elias na transfiguração, ligando a cruz à saída do Egito?",
+      "options": [
+        {
+          "text": "Êxodo — \"falavam da sua partida (êxodo), que ele havia de cumprir em Jerusalém\"",
+          "correct": true
+        },
+        {
+          "text": "Páscoa — \"falavam da páscoa que ele havia de comer\"",
+          "correct": false
+        },
+        {
+          "text": "Aliança — \"falavam da aliança que ele havia de selar\"",
+          "correct": false
+        },
+        {
+          "text": "Jubileu — \"falavam do ano aceitável do Senhor\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Os quais apareceram com glória e falavam da sua morte (grego: éxodos, partida), a qual havia de cumprir-se em Jerusalém\" (Lc 9:31). Com Moisés, o líder do êxodo, ao lado, a palavra apresenta a morte e ressurreição de Jesus como um novo êxodo: a libertação definitiva do povo de Deus. Pedro usa o mesmo termo para a própria morte em 2 Pedro 1:15, logo após lembrar a transfiguração.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 9,
+        "verse_start": 28,
+        "verse_end": 36
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "teologia-biblica-0076",
+      "text": "Quais são as principais alianças que estruturam a história da salvação no Antigo Testamento, antes da nova aliança em Cristo?",
+      "options": [
+        {
+          "text": "Com Noé, com Abraão, com Israel no Sinai (por Moisés) e com Davi",
+          "correct": true
+        },
+        {
+          "text": "Com Adão, com Caim, com Ninrode e com Faraó",
+          "correct": false
+        },
+        {
+          "text": "Com Melquisedeque, com Ló, com Labão e com Jetro",
+          "correct": false
+        },
+        {
+          "text": "Com Josué, com Gideão, com Sansão e com Samuel",
+          "correct": false
+        }
+      ],
+      "explanation": "Deus firmou aliança com Noé e toda a criação (Gn 9), com Abraão e a sua descendência (Gn 15; 17), com Israel no Sinai por meio de Moisés (Êx 19–24) e com Davi, prometendo-lhe um trono eterno (2Sm 7). Jeremias anunciou a \"nova aliança\" (Jr 31:31-34), que Jesus inaugurou com o seu sangue (Lc 22:20). Muitos teólogos veem também uma aliança implícita com Adão no Éden (cf. Os 6:7).",
+      "divergence_note": "A contagem e a classificação das alianças (inclusive a existência de uma \"aliança das obras\" com Adão) variam entre as tradições teológicas.",
+      "reference": {
+        "book": "jeremias",
+        "chapter": 31,
+        "verse_start": 31,
+        "verse_end": 34
+      },
+      "difficulty": "medium"
     }
   ]
 }

@@ -1863,6 +1863,440 @@
         "verse_end": 21
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "milagres-0061",
+      "text": "Que paralítico, acamado havia oito anos em Lida, Pedro curou dizendo: \"Jesus Cristo te dá saúde; levanta-te e faze a tua cama\"?",
+      "options": [
+        {
+          "text": "Eneias",
+          "correct": true
+        },
+        {
+          "text": "O coxo de Listra",
+          "correct": false
+        },
+        {
+          "text": "Simão, o curtidor",
+          "correct": false
+        },
+        {
+          "text": "Cornélio",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Achou Pedro ali certo homem, chamado Eneias, jazendo numa cama havia oito anos, o qual era paralítico. E disse-lhe Pedro: Eneias, Jesus Cristo te dá saúde; levanta-te e faze a tua cama. E logo se levantou\" (At 9:33-34). A cura fez \"todos os que habitavam em Lida e Sarona\" se converterem ao Senhor (v. 35). Logo depois, Pedro foi chamado a Jope por causa de Tabita.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 9,
+        "verse_start": 32,
+        "verse_end": 35
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "milagres-0062",
+      "text": "Em Malta, quem Paulo curou de febre e disenteria, impondo-lhe as mãos depois de orar?",
+      "options": [
+        {
+          "text": "O pai de Públio, o principal da ilha",
+          "correct": true
+        },
+        {
+          "text": "O centurião Júlio",
+          "correct": false
+        },
+        {
+          "text": "O piloto do navio",
+          "correct": false
+        },
+        {
+          "text": "Um escravo do governador",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Aconteceu estar de cama, enfermo de febre e disenteria, o pai de Públio, que Paulo foi ver; e, havendo orado, pôs as mãos sobre ele e o curou\" (At 28:8). Públio, \"o principal da ilha\", hospedara os náufragos por três dias; depois da cura, \"os demais que na ilha tinham enfermidades\" vieram e foram curados, e os maltenses encheram os viajantes de honras (vv. 7-10).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 28,
+        "verse_start": 7,
+        "verse_end": 10
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "milagres-0063",
+      "text": "O que aconteceu com Filipe logo depois de batizar o eunuco etíope no caminho de Gaza?",
+      "options": [
+        {
+          "text": "O Espírito do Senhor o arrebatou, e ele foi achado em Azoto",
+          "correct": true
+        },
+        {
+          "text": "Foi preso pelos soldados de Herodes",
+          "correct": false
+        },
+        {
+          "text": "Seguiu com o eunuco até a Etiópia",
+          "correct": false
+        },
+        {
+          "text": "Ficou mudo por sete dias",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Quando saíram da água, o Espírito do Senhor arrebatou a Filipe, e não o viu mais o eunuco... Filipe, porém, se achou em Azoto e, indo passando, anunciava o evangelho em todas as cidades, até que chegou a Cesareia\" (At 8:39-40). Azoto é a antiga Asdode dos filisteus; Cesareia tornou-se a casa de Filipe, onde Paulo o visitaria anos depois (At 21:8).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 8,
+        "verse_start": 36,
+        "verse_end": 40
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0064",
+      "text": "Quantos soldados o anjo do SENHOR feriu numa só noite no arraial dos assírios que cercavam Jerusalém, nos dias de Ezequias?",
+      "options": [
+        {
+          "text": "Cento e oitenta e cinco mil",
+          "correct": true
+        },
+        {
+          "text": "Sete mil",
+          "correct": false
+        },
+        {
+          "text": "Quarenta mil",
+          "correct": false
+        },
+        {
+          "text": "Um milhão",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Sucedeu, pois, que, naquela mesma noite, saiu o anjo do SENHOR e feriu no arraial dos assírios a cento e oitenta e cinco mil deles; e, levantando-se pela manhã cedo, eis que todos eram corpos mortos\" (2Rs 19:35). Senaqueribe voltou para Nínive, onde foi assassinado pelos próprios filhos enquanto adorava Nisroque (vv. 36-37). Isaías 37 repete o relato.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 19,
+        "verse_start": 32,
+        "verse_end": 37
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0065",
+      "text": "Por que, segundo Marcos 9:29, os discípulos não conseguiram expulsar o espírito do menino que caía no fogo e na água, curado por Jesus ao descer do monte da transfiguração?",
+      "options": [
+        {
+          "text": "\"Esta casta não pode sair com coisa alguma, a não ser com oração e jejum\"",
+          "correct": true
+        },
+        {
+          "text": "Porque o menino não tinha fé",
+          "correct": false
+        },
+        {
+          "text": "Porque era sábado",
+          "correct": false
+        },
+        {
+          "text": "Porque o pai não era israelita",
+          "correct": false
+        }
+      ],
+      "explanation": "Ao pé do monte, Jesus encontrou os discípulos derrotados e os escribas discutindo. O pai clamou: \"Eu creio, Senhor! Ajuda a minha incredulidade\" (Mc 9:24). Depois de Jesus expulsar o espírito, os discípulos perguntaram em particular por que não puderam, e ele respondeu: \"Esta casta não pode sair com coisa alguma, a não ser com oração e jejum\" (Mc 9:29). Mateus acrescenta: \"por causa da vossa pequena fé\" (Mt 17:20).",
+      "divergence_note": "As palavras \"e jejum\" em Marcos 9:29 (e todo o versículo de Mateus 17:21) não constam dos manuscritos mais antigos e são omitidas em algumas traduções modernas; a ARC as inclui.",
+      "reference": {
+        "book": "marcos",
+        "chapter": 9,
+        "verse_start": 14,
+        "verse_end": 29
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0066",
+      "text": "Que doente Jesus curou num sábado, na casa de um dos principais fariseus, antes de perguntar: \"Qual de vós, se o seu jumento ou boi cair num poço, não o tirará logo em dia de sábado?\"?",
+      "options": [
+        {
+          "text": "Um hidrópico",
+          "correct": true
+        },
+        {
+          "text": "Um leproso",
+          "correct": false
+        },
+        {
+          "text": "Um cego",
+          "correct": false
+        },
+        {
+          "text": "Um paralítico",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E eis que estava ali diante dele um certo homem hidrópico\" — com o corpo inchado pelo acúmulo de líquido. Jesus perguntou aos doutores da lei se era lícito curar no sábado; \"eles calaram-se\"; ele o curou e o despediu, e os fariseus \"nada lhe podiam replicar\" (Lc 14:1-6). Em seguida, na mesma refeição, Jesus ensinou sobre os lugares à mesa e contou a parábola da grande ceia.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 14,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "milagres-0067",
+      "text": "O que Jesus respondeu ao leproso que, de joelhos, lhe disse: \"Se quiseres, bem podes limpar-me\"?",
+      "options": [
+        {
+          "text": "\"Quero; sê limpo\"",
+          "correct": true
+        },
+        {
+          "text": "\"A tua fé te salvou\"",
+          "correct": false
+        },
+        {
+          "text": "\"Vai, lava-te sete vezes no Jordão\"",
+          "correct": false
+        },
+        {
+          "text": "\"Levanta-te, toma o teu leito e anda\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E Jesus, movido de grande compaixão, estendeu a mão, e tocou-o, e disse-lhe: Quero; sê limpo. E, tendo ele dito isso, logo a lepra desapareceu\" (Mc 1:41-42). Tocar um leproso tornava alguém impuro pela Lei — mas em Jesus a pureza flui no sentido contrário. Ele o mandou mostrar-se ao sacerdote e oferecer o prescrito por Moisés (v. 44).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 1,
+        "verse_start": 40,
+        "verse_end": 45
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "milagres-0068",
+      "text": "Quais são as três pessoas que os Evangelhos registram Jesus ter ressuscitado durante o seu ministério?",
+      "options": [
+        {
+          "text": "A filha de Jairo, o filho da viúva de Naim e Lázaro",
+          "correct": true
+        },
+        {
+          "text": "Lázaro, Tabita e Êutico",
+          "correct": false
+        },
+        {
+          "text": "A filha de Jairo, Lázaro e o servo do centurião",
+          "correct": false
+        },
+        {
+          "text": "O filho da sunamita, Lázaro e Malco",
+          "correct": false
+        }
+      ],
+      "explanation": "Jesus ressuscitou a filha de Jairo, de doze anos, pouco depois de morrer (Mc 5:35-43); o filho único da viúva de Naim, já a caminho do sepultamento (Lc 7:11-17); e Lázaro, morto havia quatro dias (Jo 11:38-44). Os três casos mostram poder crescente sobre a morte e antecipam a promessa: \"vem a hora em que todos os que estão nos sepulcros ouvirão a sua voz\" (Jo 5:28).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 7,
+        "verse_start": 11,
+        "verse_end": 17
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "milagres-0069",
+      "text": "Qual foi a sétima praga do Egito, em que \"houve saraiva e fogo misturado com a saraiva\", poupando apenas a terra de Gósen?",
+      "options": [
+        {
+          "text": "A saraiva (chuva de pedras)",
+          "correct": true
+        },
+        {
+          "text": "Os gafanhotos",
+          "correct": false
+        },
+        {
+          "text": "As úlceras",
+          "correct": false
+        },
+        {
+          "text": "As moscas",
+          "correct": false
+        }
+      ],
+      "explanation": "\"O SENHOR deu trovões e saraiva, e fogo corria pela terra... houve saraiva e fogo misturado entre a saraiva, mui grave, qual nunca houve em toda a terra do Egito\" (Êx 9:23-24). A saraiva destruiu o linho e a cevada, mas poupou o trigo, que ainda não nascera (vv. 31-32), e não caiu em Gósen, onde estavam os israelitas (v. 26). Faraó confessou: \"Esta vez pequei\" — e endureceu de novo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 9,
+        "verse_start": 13,
+        "verse_end": 35
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0070",
+      "text": "No monte Carmelo, depois do fogo do céu, que sinal o servo de Elias viu na sétima vez que olhou para o mar, antes da chuva que encerrou a seca?",
+      "options": [
+        {
+          "text": "Uma pequena nuvem, como a mão de um homem, subindo do mar",
+          "correct": true
+        },
+        {
+          "text": "Um arco-íris sobre o Carmelo",
+          "correct": false
+        },
+        {
+          "text": "Um relâmpago sobre o mar",
+          "correct": false
+        },
+        {
+          "text": "Um bando de corvos vindo do mar",
+          "correct": false
+        }
+      ],
+      "explanation": "Elias orou no cume, com o rosto entre os joelhos, e mandou o servo olhar para o mar sete vezes. \"Sucedeu que, à sétima vez, disse: Eis aqui uma pequena nuvem, como a mão de um homem, subindo do mar\" (1Rs 18:44). Elias avisou Acabe para descer antes que a chuva o detivesse; \"os céus se enegreceram\", veio grande chuva, e Elias correu adiante do carro do rei até Jezreel (vv. 45-46).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 18,
+        "verse_start": 41,
+        "verse_end": 46
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0071",
+      "text": "Que fenômeno cobriu toda a terra desde a hora sexta até a hora nona, enquanto Jesus estava na cruz?",
+      "options": [
+        {
+          "text": "Trevas",
+          "correct": true
+        },
+        {
+          "text": "Um terremoto contínuo",
+          "correct": false
+        },
+        {
+          "text": "Chuva de granizo",
+          "correct": false
+        },
+        {
+          "text": "Um eclipse da lua",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E, desde a hora sexta, houve trevas sobre toda a terra até à hora nona\" (Mt 27:45) — do meio-dia às três da tarde. Não pode ter sido um eclipse solar comum, pois a Páscoa cai em lua cheia; os evangelistas apresentam as trevas como sinal do juízo de Deus (cf. Am 8:9). Ao fim delas, Jesus clamou \"Eli, Eli, lamá sabactâni?\" e morreu.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 27,
+        "verse_start": 45,
+        "verse_end": 50
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "milagres-0072",
+      "text": "Segundo Mateus 27:52-53, que fato extraordinário acompanhou o terremoto da morte de Jesus e se completou depois da ressurreição?",
+      "options": [
+        {
+          "text": "Sepulcros se abriram, e muitos corpos de santos ressuscitaram e apareceram em Jerusalém",
+          "correct": true
+        },
+        {
+          "text": "Fogo desceu sobre o templo",
+          "correct": false
+        },
+        {
+          "text": "O sol voltou dez graus",
+          "correct": false
+        },
+        {
+          "text": "Anjos cantaram sobre o Gólgota",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E a terra tremeu, e fenderam-se as pedras, e abriram-se os sepulcros, e muitos corpos de santos que dormiam foram ressuscitados; e, saindo dos sepulcros, depois da ressurreição dele, entraram na cidade santa e apareceram a muitos\" (Mt 27:51-53). Só Mateus registra o episódio, como sinal de que a morte de Cristo começava a romper o poder da morte.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 27,
+        "verse_start": 50,
+        "verse_end": 54
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "milagres-0073",
+      "text": "Em Atos 5, o que aconteceu quando o sumo sacerdote e os saduceus prenderam os apóstolos na cadeia pública?",
+      "options": [
+        {
+          "text": "Um anjo abriu as portas de noite e mandou que fossem pregar no templo",
+          "correct": true
+        },
+        {
+          "text": "Um terremoto derrubou a prisão",
+          "correct": false
+        },
+        {
+          "text": "Gamaliel os libertou pessoalmente",
+          "correct": false
+        },
+        {
+          "text": "Pedro cegou os guardas",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Mas, de noite, um anjo do Senhor abriu as portas da prisão e, tirando-os para fora, disse: Ide, apresentai-vos no templo e dizei ao povo todas as palavras desta vida\" (At 5:19-20). De manhã, os oficiais acharam a prisão fechada e vigiada, mas vazia — e os apóstolos ensinando no templo. Gamaliel então aconselhou prudência ao Sinédrio (vv. 34-39).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 5,
+        "verse_start": 17,
+        "verse_end": 25
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "milagres-0074",
+      "text": "Que sinal confirmou a Gideão que falava com o Anjo do SENHOR, quando ele trouxe carne e pães asmos e os pôs sobre uma rocha?",
+      "options": [
+        {
+          "text": "Fogo saiu da rocha e consumiu a oferta, e o Anjo desapareceu",
+          "correct": true
+        },
+        {
+          "text": "Os pães se multiplicaram",
+          "correct": false
+        },
+        {
+          "text": "A rocha se partiu e deu água",
+          "correct": false
+        },
+        {
+          "text": "Uma nuvem cobriu o lagar",
+          "correct": false
+        }
+      ],
+      "explanation": "\"O Anjo do SENHOR estendeu a ponta do cajado que estava na sua mão e tocou a carne e os pães asmos; então, subiu o fogo da penha e consumiu a carne e os pães asmos; e o Anjo do SENHOR desapareceu\" (Jz 6:21). Gideão temeu morrer por ter visto o Anjo face a face, mas ouviu \"Paz seja contigo\" e edificou ali o altar \"O SENHOR é Paz\" (vv. 22-24). Só depois viria o sinal do velo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "juizes",
+        "chapter": 6,
+        "verse_start": 17,
+        "verse_end": 24
+      },
+      "difficulty": "medium"
     }
   ]
 }

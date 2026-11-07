@@ -1959,6 +1959,440 @@
         "verse_end": 19
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "reis-0064",
+      "text": "Que rei, disfarçado e desesperado antes da batalha de Gilboa, consultou uma mulher com espírito de feiticeira em En-Dor para falar com o profeta Samuel já morto?",
+      "options": [
+        {
+          "text": "Saul",
+          "correct": true
+        },
+        {
+          "text": "Isbosete",
+          "correct": false
+        },
+        {
+          "text": "Davi",
+          "correct": false
+        },
+        {
+          "text": "Jeroboão",
+          "correct": false
+        }
+      ],
+      "explanation": "Como o SENHOR não lhe respondia \"nem por sonhos, nem por Urim, nem por profetas\", Saul pediu: \"Buscai-me uma mulher que tenha o espírito de feiticeira\", e foi disfarçado a En-Dor (1Sm 28:6-8). A figura de Samuel anunciou: \"amanhã, tu e teus filhos estareis comigo\" (v. 19). Saul morreria no dia seguinte, e 1 Crônicas 10:13 cita a consulta como uma das causas da sua queda.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 28,
+        "verse_start": 3,
+        "verse_end": 25
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "reis-0065",
+      "text": "Que rei de Israel saudou Elias com a pergunta \"És tu o perturbador de Israel?\", e ouviu que o perturbador era ele, por seguir os baalins?",
+      "options": [
+        {
+          "text": "Acabe",
+          "correct": true
+        },
+        {
+          "text": "Jeroboão",
+          "correct": false
+        },
+        {
+          "text": "Onri",
+          "correct": false
+        },
+        {
+          "text": "Jeú",
+          "correct": false
+        }
+      ],
+      "explanation": "Depois de três anos de seca, Elias apareceu diante do rei: \"Sucedeu que, vendo Acabe a Elias, disse-lhe: És tu o perturbador de Israel? Então, disse ele: Eu não tenho perturbado a Israel, mas tu e a casa de teu pai, porque deixastes os mandamentos do SENHOR e seguistes os baalins\" (1Rs 18:17-18). Em seguida Elias propôs o confronto no Carmelo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 18,
+        "verse_start": 16,
+        "verse_end": 19
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "reis-0066",
+      "text": "De que rei de Israel a sentinela de Jezreel disse, ao vê-lo chegar de longe: \"o andar parece ser o de ___, porque anda furiosamente\"?",
+      "options": [
+        {
+          "text": "Jeú, filho de Ninsi",
+          "correct": true
+        },
+        {
+          "text": "Acabe, filho de Onri",
+          "correct": false
+        },
+        {
+          "text": "Jorão, filho de Acabe",
+          "correct": false
+        },
+        {
+          "text": "Jeroboão, filho de Nebate",
+          "correct": false
+        }
+      ],
+      "explanation": "Ungido às pressas por um discípulo de Eliseu, Jeú partiu para Jezreel para exterminar a casa de Acabe. A sentinela avisou: \"o andar parece ser o de Jeú, filho de Ninsi, porque anda furiosamente\" (2Rs 9:20). Jeú matou Jorão, Acazias e Jezabel naquele mesmo dia e fundou a dinastia mais longa do Reino do Norte.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 9,
+        "verse_start": 14,
+        "verse_end": 26
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "reis-0067",
+      "text": "Qual rei do Egito invadiu Judá no quinto ano de Roboão e levou os tesouros do templo, inclusive os escudos de ouro feitos por Salomão?",
+      "options": [
+        {
+          "text": "Sisaque",
+          "correct": true
+        },
+        {
+          "text": "Faraó Neco",
+          "correct": false
+        },
+        {
+          "text": "Hofra",
+          "correct": false
+        },
+        {
+          "text": "Tiraca",
+          "correct": false
+        }
+      ],
+      "explanation": "\"No quinto ano do rei Roboão, Sisaque, rei do Egito, subiu contra Jerusalém e tomou os tesouros da Casa do SENHOR e os tesouros da casa do rei... tomou também todos os escudos de ouro que Salomão tinha feito\" (1Rs 14:25-26). Roboão os substituiu por escudos de cobre (v. 27). Sisaque é o faraó Sheshonq I, cuja campanha na Palestina está registrada no templo de Karnak.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 14,
+        "verse_start": 25,
+        "verse_end": 28
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "reis-0068",
+      "text": "Qual rei de Judá, casado com uma filha de Acabe, matou os próprios irmãos, morreu de uma doença incurável das entranhas e \"se foi sem deixar de si saudades\"?",
+      "options": [
+        {
+          "text": "Jeorão, filho de Josafá",
+          "correct": true
+        },
+        {
+          "text": "Acaz",
+          "correct": false
+        },
+        {
+          "text": "Amom",
+          "correct": false
+        },
+        {
+          "text": "Joacaz",
+          "correct": false
+        }
+      ],
+      "explanation": "Jeorão \"matou todos os seus irmãos à espada\" e andou nos caminhos da casa de Acabe, pois sua mulher era filha do rei de Israel (2Cr 21:4-6). Uma carta do profeta Elias anunciou o castigo; filisteus e árabes saquearam o palácio, e \"o SENHOR o feriu nas suas entranhas com uma enfermidade incurável\". Morreu após oito anos de reinado \"e foi-se sem deixar de si saudades\" (2Cr 21:18-20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2cronicas",
+        "chapter": 21,
+        "verse_start": 4,
+        "verse_end": 20
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "reis-0069",
+      "text": "Que rei de Moabe, cercado pelos exércitos de Israel, Judá e Edom, ofereceu o próprio filho primogênito em holocausto sobre o muro da cidade?",
+      "options": [
+        {
+          "text": "Mesa",
+          "correct": true
+        },
+        {
+          "text": "Balaque",
+          "correct": false
+        },
+        {
+          "text": "Eglom",
+          "correct": false
+        },
+        {
+          "text": "Hanum",
+          "correct": false
+        }
+      ],
+      "explanation": "Mesa, rei de Moabe, criador de ovelhas que pagava tributo a Israel, rebelou-se após a morte de Acabe (2Rs 3:4-5). Derrotado em Quir-Haresete, \"tomou a seu filho primogênito, que havia de reinar em seu lugar, e o ofereceu em holocausto sobre o muro\", e Israel se retirou (2Rs 3:26-27). A Pedra Moabita, descoberta em 1868, traz a versão do próprio Mesa sobre essa guerra.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 3,
+        "verse_start": 4,
+        "verse_end": 27
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "reis-0070",
+      "text": "A que governante Jesus chamou de \"raposa\", quando fariseus o avisaram de que ele queria matá-lo?",
+      "options": [
+        {
+          "text": "Herodes Antipas",
+          "correct": true
+        },
+        {
+          "text": "Pôncio Pilatos",
+          "correct": false
+        },
+        {
+          "text": "Caifás",
+          "correct": false
+        },
+        {
+          "text": "Herodes Agripa",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Sai e retira-te daqui, porque Herodes quer matar-te\", disseram alguns fariseus. Jesus respondeu: \"Ide e dizei àquela raposa: Eis que eu expulso demônios, e efetuo curas, hoje e amanhã, e, no terceiro dia, sou consumado\" (Lc 13:31-32). Herodes Antipas, tetrarca da Galileia, já mandara decapitar João Batista; Jesus seguiria o seu caminho rumo a Jerusalém sem se intimidar.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 13,
+        "verse_start": 31,
+        "verse_end": 33
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "reis-0071",
+      "text": "Que provérbio surgiu em Israel quando o recém-ungido Saul, encontrando um grupo de profetas em Gibeá, começou a profetizar com eles?",
+      "options": [
+        {
+          "text": "\"Está também Saul entre os profetas?\"",
+          "correct": true
+        },
+        {
+          "text": "\"Quem pode contra o ungido do SENHOR?\"",
+          "correct": false
+        },
+        {
+          "text": "\"Saul feriu os seus milhares\"",
+          "correct": false
+        },
+        {
+          "text": "\"Não há rei em Israel\"",
+          "correct": false
+        }
+      ],
+      "explanation": "Samuel predissera que o Espírito do SENHOR se apoderaria de Saul e ele se tornaria \"outro homem\" (1Sm 10:6). Quando isso aconteceu em Gibeá, os conhecidos perguntaram: \"Que é o que sucedeu ao filho de Quis? Está também Saul entre os profetas?\" — \"Pelo que se tornou em provérbio\" (1Sm 10:10-12). O dito reaparece quando Saul, já rejeitado, profetiza despido em Ramá (1Sm 19:24).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 10,
+        "verse_start": 9,
+        "verse_end": 13
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "reis-0072",
+      "text": "Qual rei de Judá, doente dos pés no fim do reinado, \"não buscou ao SENHOR, mas antes aos médicos\", segundo 2 Crônicas 16?",
+      "options": [
+        {
+          "text": "Asa",
+          "correct": true
+        },
+        {
+          "text": "Josafá",
+          "correct": false
+        },
+        {
+          "text": "Uzias",
+          "correct": false
+        },
+        {
+          "text": "Ezequias",
+          "correct": false
+        }
+      ],
+      "explanation": "\"No ano trinta e nove do seu reinado, Asa caiu doente de seus pés, e a sua doença era em extremo grave; contudo, na sua enfermidade não buscou ao SENHOR, mas antes aos médicos\" (2Cr 16:12). O Cronista nota o contraste com o começo do reinado, quando Asa clamou ao SENHOR e venceu um exército etíope (2Cr 14:11). Não é uma condenação da medicina, mas da confiança que deixa Deus de fora.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2cronicas",
+        "chapter": 16,
+        "verse_start": 11,
+        "verse_end": 14
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "reis-0073",
+      "text": "Por que Deus não permitiu que Davi edificasse o templo, segundo as palavras do próprio Davi em 1 Crônicas 28:3?",
+      "options": [
+        {
+          "text": "Porque era homem de guerra e tinha derramado muito sangue",
+          "correct": true
+        },
+        {
+          "text": "Porque havia pecado com Bate-Seba",
+          "correct": false
+        },
+        {
+          "text": "Porque o censo do povo o tornara impuro",
+          "correct": false
+        },
+        {
+          "text": "Porque não era da tribo de Levi",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Deus me disse: Não edificarás casa ao meu nome, porque és homem de guerra e derramaste muito sangue\" (1Cr 28:3; cf. 22:8). Davi então preparou materiais em abundância — ouro, prata, cedro, pedras — e entregou a Salomão a planta do templo \"por escrito, da mão do SENHOR\" (1Cr 28:11-19), para que o filho, \"homem de repouso\", o construísse.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1cronicas",
+        "chapter": 28,
+        "verse_start": 2,
+        "verse_end": 10
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "reis-0074",
+      "text": "Segundo 1 Reis 10:14, qual era o peso do ouro que chegava a Salomão a cada ano?",
+      "options": [
+        {
+          "text": "Seiscentos e sessenta e seis talentos",
+          "correct": true
+        },
+        {
+          "text": "Cem talentos",
+          "correct": false
+        },
+        {
+          "text": "Mil talentos",
+          "correct": false
+        },
+        {
+          "text": "Dez mil talentos",
+          "correct": false
+        }
+      ],
+      "explanation": "\"O peso do ouro que se trazia a Salomão cada ano era de seiscentos e sessenta e seis talentos de ouro\" (1Rs 10:14), sem contar o que vinha dos mercadores e dos reis da Arábia. Com ele Salomão fez escudos de ouro batido e um trono de marfim coberto de ouro (vv. 16-20). O número coincide com o de Apocalipse 13:18, mas o texto de Reis não faz nenhuma ligação entre eles.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 10,
+        "verse_start": 14,
+        "verse_end": 22
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "reis-0075",
+      "text": "Como Davi reagiu ao saber da morte de Absalão, apesar de o filho ter se rebelado contra ele?",
+      "options": [
+        {
+          "text": "Chorou, clamando: \"Quem me dera que eu morrera por ti, Absalão, meu filho!\"",
+          "correct": true
+        },
+        {
+          "text": "Ordenou um banquete pela vitória",
+          "correct": false
+        },
+        {
+          "text": "Mandou que Joabe fosse executado",
+          "correct": false
+        },
+        {
+          "text": "Proibiu que o filho fosse sepultado",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Então, o rei se perturbou e subiu à sala que estava por cima da porta, e chorou; e, andando, dizia assim: Meu filho Absalão, meu filho, meu filho Absalão! Quem me dera que eu morrera por ti, Absalão, meu filho, meu filho!\" (2Sm 18:33). O luto do rei transformou a vitória em vergonha para o exército, até que Joabe o repreendeu duramente e o fez sentar-se à porta (2Sm 19:1-8).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 18,
+        "verse_start": 31,
+        "verse_end": 33
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "reis-0076",
+      "text": "O que o rei de Nínive fez ao ouvir a pregação de Jonas?",
+      "options": [
+        {
+          "text": "Desceu do trono, cobriu-se de saco, sentou-se sobre cinza e decretou jejum para homens e animais",
+          "correct": true
+        },
+        {
+          "text": "Mandou prender Jonas por sedição",
+          "correct": false
+        },
+        {
+          "text": "Ofereceu sacrifícios aos deuses da Assíria",
+          "correct": false
+        },
+        {
+          "text": "Enviou presentes ao templo de Jerusalém",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Esta palavra chegou ao rei de Nínive; e ele levantou-se do seu trono, e tirou de si as suas vestes, e cobriu-se de pano de saco, e sentou-se sobre a cinza.\" Decretou que homens e animais jejuassem e clamassem a Deus: \"Quem sabe se se voltará Deus...?\" (Jn 3:6-9). Deus se arrependeu do mal — para desgosto de Jonas (Jn 4:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "jonas",
+        "chapter": 3,
+        "verse_start": 5,
+        "verse_end": 10
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "reis-0077",
+      "text": "Que nome o profeta Natã deu ao recém-nascido Salomão, \"por amor do SENHOR\"?",
+      "options": [
+        {
+          "text": "Jedidias",
+          "correct": true
+        },
+        {
+          "text": "Jerubaal",
+          "correct": false
+        },
+        {
+          "text": "Eliaquim",
+          "correct": false
+        },
+        {
+          "text": "Zorobabel",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E o SENHOR o amou. E enviou pela mão do profeta Natã, e chamou o seu nome Jedidias, por amor do SENHOR\" (2Sm 12:24-25). Jedidias significa \"amado do SENHOR\". O nome contrasta com o luto que precedeu: Salomão nasceu depois da morte do primeiro filho de Davi com Bate-Seba, fruto do adultério (2Sm 12:15-23).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 12,
+        "verse_start": 24,
+        "verse_end": 25
+      },
+      "difficulty": "medium"
     }
   ]
 }

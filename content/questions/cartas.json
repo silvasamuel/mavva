@@ -1895,6 +1895,440 @@
         "verse_end": 11
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "cartas-0062",
+      "text": "Complete 2 Timóteo 1:7: \"Porque Deus não nos deu o espírito de temor, mas de ___, e de amor, e de moderação\".",
+      "options": [
+        {
+          "text": "Fortaleza",
+          "correct": true
+        },
+        {
+          "text": "Sabedoria",
+          "correct": false
+        },
+        {
+          "text": "Profecia",
+          "correct": false
+        },
+        {
+          "text": "Paciência",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Porque Deus não nos deu o espírito de temor, mas de fortaleza, e de amor, e de moderação\" (2Tm 1:7). Paulo escreve da prisão a um Timóteo tímido e cercado de deserções, lembrando-lhe o dom recebido pela imposição de mãos (v. 6) e exortando-o a não se envergonhar do testemunho (v. 8).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2timoteo",
+        "chapter": 1,
+        "verse_start": 6,
+        "verse_end": 8
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cartas-0063",
+      "text": "Na carta a Tito, de quem Paulo cita a frase \"Os cretenses são sempre mentirosos, bestas ruins, ventres preguiçosos\"?",
+      "options": [
+        {
+          "text": "De um profeta dos próprios cretenses, um poeta de Creta",
+          "correct": true
+        },
+        {
+          "text": "Do profeta Isaías",
+          "correct": false
+        },
+        {
+          "text": "Do historiador Flávio Josefo",
+          "correct": false
+        },
+        {
+          "text": "De um provérbio dos rabinos",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Um deles, seu próprio profeta, disse: Os cretenses são sempre mentirosos, bestas ruins, ventres preguiçosos. Este testemunho é verdadeiro\" (Tt 1:12-13). Paulo cita um poeta cretense — a tradição o identifica como Epimênides — para que Tito repreenda severamente os que perturbavam as casas em Creta. Em Atos 17:28 Paulo cita outro poeta grego, Arato.",
+      "divergence_note": null,
+      "reference": {
+        "book": "tito",
+        "chapter": 1,
+        "verse_start": 10,
+        "verse_end": 13
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "cartas-0064",
+      "text": "Complete Romanos 12:15: \"Alegrai-vos com os que se alegram e ___\".",
+      "options": [
+        {
+          "text": "Chorai com os que choram",
+          "correct": true
+        },
+        {
+          "text": "Consolai os que sofrem",
+          "correct": false
+        },
+        {
+          "text": "Orai pelos que vos perseguem",
+          "correct": false
+        },
+        {
+          "text": "Repreendei os que se entristecem",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Alegrai-vos com os que se alegram e chorai com os que choram\" (Rm 12:15). O versículo está na série de exortações práticas de Romanos 12 sobre o amor não fingido: ser solidário tanto na alegria quanto na dor do irmão é marca da comunhão cristã (cf. 1Co 12:26).",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 12,
+        "verse_start": 9,
+        "verse_end": 16
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cartas-0065",
+      "text": "Segundo Efésios 4:26, o que não deve se pôr \"sobre a vossa ira\"?",
+      "options": [
+        {
+          "text": "O sol",
+          "correct": true
+        },
+        {
+          "text": "A noite",
+          "correct": false
+        },
+        {
+          "text": "O sábado",
+          "correct": false
+        },
+        {
+          "text": "O juízo",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Irai-vos e não pequeis; não se ponha o sol sobre a vossa ira, não deis lugar ao diabo\" (Ef 4:26-27). Paulo cita o Salmo 4:4 e manda resolver a ira no mesmo dia, antes que ela se torne rancor e abra brecha para o diabo. A ira em si não é pecado; alimentá-la é.",
+      "divergence_note": null,
+      "reference": {
+        "book": "efesios",
+        "chapter": 4,
+        "verse_start": 26,
+        "verse_end": 27
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cartas-0066",
+      "text": "Em Efésios 5:25, com que amor Paulo compara o amor que os maridos devem ter pelas suas esposas?",
+      "options": [
+        {
+          "text": "O amor de Cristo pela igreja, por quem se entregou",
+          "correct": true
+        },
+        {
+          "text": "O amor de um pai pelos filhos",
+          "correct": false
+        },
+        {
+          "text": "O amor de Jacó por Raquel",
+          "correct": false
+        },
+        {
+          "text": "O amor de Deus por Israel no deserto",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Vós, maridos, amai vossa mulher, como também Cristo amou a igreja e a si mesmo se entregou por ela\" (Ef 5:25). O padrão não é o sentimento, mas a entrega sacrificial de Cristo. Paulo conclui que o casamento é figura do \"grande mistério\" entre Cristo e a igreja (Ef 5:32).",
+      "divergence_note": null,
+      "reference": {
+        "book": "efesios",
+        "chapter": 5,
+        "verse_start": 22,
+        "verse_end": 33
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cartas-0067",
+      "text": "Com que advertência termina a Primeira Epístola de João?",
+      "options": [
+        {
+          "text": "\"Filhinhos, guardai-vos dos ídolos\"",
+          "correct": true
+        },
+        {
+          "text": "\"Vigiai e orai\"",
+          "correct": false
+        },
+        {
+          "text": "\"Amai-vos uns aos outros\"",
+          "correct": false
+        },
+        {
+          "text": "\"Não ameis o mundo\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Filhinhos, guardai-vos dos ídolos. Amém!\" (1Jo 5:21). Depois de afirmar que \"o Filho de Deus é vindo\" e que ele é \"o verdadeiro Deus e a vida eterna\" (v. 20), João fecha a carta com um aviso seco: tudo o que toma o lugar do Deus verdadeiro — inclusive a falsa doutrina sobre Cristo — é ídolo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1joao",
+        "chapter": 5,
+        "verse_start": 20,
+        "verse_end": 21
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cartas-0068",
+      "text": "Como Tiago chama Deus ao afirmar que \"toda boa dádiva e todo dom perfeito vêm do alto\"?",
+      "options": [
+        {
+          "text": "Pai das luzes",
+          "correct": true
+        },
+        {
+          "text": "Pai das misericórdias",
+          "correct": false
+        },
+        {
+          "text": "Deus de toda consolação",
+          "correct": false
+        },
+        {
+          "text": "Rei dos séculos",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Toda boa dádiva e todo dom perfeito vêm do alto, descendo do Pai das luzes, em quem não há mudança, nem sombra de variação\" (Tg 1:17). O título lembra o Criador dos astros (Gn 1:14-16), mas, ao contrário das luzes do céu, que mudam de posição e projetam sombras, Deus é imutável na sua bondade.",
+      "divergence_note": null,
+      "reference": {
+        "book": "tiago",
+        "chapter": 1,
+        "verse_start": 16,
+        "verse_end": 18
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cartas-0069",
+      "text": "Complete 2 Coríntios 5:7: \"Porque andamos por fé e não por ___\".",
+      "options": [
+        {
+          "text": "Vista",
+          "correct": true
+        },
+        {
+          "text": "Obras",
+          "correct": false
+        },
+        {
+          "text": "Sinais",
+          "correct": false
+        },
+        {
+          "text": "Lei",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Porque andamos por fé e não por vista\" (2Co 5:7). Paulo fala da esperança do corpo ressurreto, \"uma casa não feita por mãos, eterna, nos céus\" (v. 1): enquanto habitamos neste corpo, vivemos confiando no que Deus prometeu, não no que vemos.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2corintios",
+        "chapter": 5,
+        "verse_start": 1,
+        "verse_end": 8
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cartas-0070",
+      "text": "Segundo Tiago 5:16, o que \"pode muito em seus efeitos\"?",
+      "options": [
+        {
+          "text": "A oração feita por um justo",
+          "correct": true
+        },
+        {
+          "text": "O jejum de três dias",
+          "correct": false
+        },
+        {
+          "text": "A unção com azeite",
+          "correct": false
+        },
+        {
+          "text": "A esmola feita em segredo",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Confessai as vossas culpas uns aos outros e orai uns pelos outros, para que sareis; a oração feita por um justo pode muito em seus efeitos\" (Tg 5:16). Tiago ilustra em seguida com Elias, \"homem sujeito às mesmas paixões que nós\", cuja oração fechou e abriu os céus (vv. 17-18).",
+      "divergence_note": null,
+      "reference": {
+        "book": "tiago",
+        "chapter": 5,
+        "verse_start": 13,
+        "verse_end": 16
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cartas-0071",
+      "text": "A que animal Pedro compara o diabo, que \"anda em derredor... buscando a quem possa tragar\"?",
+      "options": [
+        {
+          "text": "A um leão que ruge",
+          "correct": true
+        },
+        {
+          "text": "A uma serpente",
+          "correct": false
+        },
+        {
+          "text": "A um lobo",
+          "correct": false
+        },
+        {
+          "text": "A um dragão",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Sede sóbrios, vigiai, porque o diabo, vosso adversário, anda em derredor, bramando como leão, buscando a quem possa tragar; ao qual resisti firmes na fé\" (1Pe 5:8-9). A imagem é de ameaça real a cristãos perseguidos, mas a ordem é resistir, não fugir — sabendo que os irmãos em todo o mundo passam pelos mesmos sofrimentos.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1pedro",
+        "chapter": 5,
+        "verse_start": 8,
+        "verse_end": 9
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cartas-0072",
+      "text": "Em 1 Timóteo 1:15, quem Paulo diz ser \"o principal\" dos pecadores que Cristo veio salvar?",
+      "options": [
+        {
+          "text": "Ele mesmo",
+          "correct": true
+        },
+        {
+          "text": "Saul, o primeiro rei",
+          "correct": false
+        },
+        {
+          "text": "Judas Iscariotes",
+          "correct": false
+        },
+        {
+          "text": "Himeneu",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Esta é uma palavra fiel e digna de toda aceitação: que Cristo Jesus veio ao mundo para salvar os pecadores, dos quais eu sou o principal\" (1Tm 1:15). Paulo lembra que fora \"blasfemo, perseguidor e opressor\" (v. 13), e vê em si um exemplo de toda a longanimidade de Cristo para com os que haviam de crer (v. 16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1timoteo",
+        "chapter": 1,
+        "verse_start": 12,
+        "verse_end": 17
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cartas-0073",
+      "text": "Que casal Paulo saúda em Romanos 16 dizendo que \"pela minha vida expuseram a sua cabeça\"?",
+      "options": [
+        {
+          "text": "Priscila e Áquila",
+          "correct": true
+        },
+        {
+          "text": "Andrônico e Júnia",
+          "correct": false
+        },
+        {
+          "text": "Filólogo e Júlia",
+          "correct": false
+        },
+        {
+          "text": "Ananias e Safira",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Saudai a Priscila e a Áquila, meus cooperadores em Cristo Jesus, os quais pela minha vida expuseram a sua cabeça; o que não só eu lhes agradeço, mas também todas as igrejas dos gentios\" (Rm 16:3-4). O casal, que Paulo conhecera em Corinto, agora estava de volta a Roma, com uma igreja reunida em sua casa (v. 5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 16,
+        "verse_start": 3,
+        "verse_end": 5
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cartas-0074",
+      "text": "Segundo a epístola de Judas, qual patriarca anterior ao dilúvio profetizou: \"Eis que é vindo o Senhor com milhares de seus santos\"?",
+      "options": [
+        {
+          "text": "Enoque, o sétimo depois de Adão",
+          "correct": true
+        },
+        {
+          "text": "Noé",
+          "correct": false
+        },
+        {
+          "text": "Matusalém",
+          "correct": false
+        },
+        {
+          "text": "Sete",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E destes profetizou também Enoque, o sétimo depois de Adão, dizendo: Eis que é vindo o Senhor com milhares de seus santos, para fazer juízo contra todos\" (Jd 14-15). A citação vem do Livro de Enoque, escrito judaico do período intertestamentário; Judas a usa contra os falsos mestres, sem com isso canonizar o livro inteiro.",
+      "divergence_note": "Judas cita o Livro de 1 Enoque, obra apócrifa não incluída no cânon (exceto na Igreja Etíope). Comentaristas divergem sobre se Judas atribui a frase ao Enoque histórico ou apenas usa um texto conhecido dos leitores; a pergunta trata do que a epístola diz.",
+      "reference": {
+        "book": "judas",
+        "chapter": 1,
+        "verse_start": 14,
+        "verse_end": 16
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cartas-0075",
+      "text": "Complete Gálatas 6:7: \"Deus não se deixa escarnecer; porque tudo o que o homem semear, ___\".",
+      "options": [
+        {
+          "text": "Isso também ceifará",
+          "correct": true
+        },
+        {
+          "text": "Deus o fará crescer",
+          "correct": false
+        },
+        {
+          "text": "Será consumido pelo fogo",
+          "correct": false
+        },
+        {
+          "text": "Dará fruto a seu tempo",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Não erreis: Deus não se deixa escarnecer; porque tudo o que o homem semear, isso também ceifará\" (Gl 6:7). Paulo aplica a imagem agrícola à vida moral: quem semeia na carne colhe corrupção; quem semeia no Espírito colhe vida eterna (v. 8) — e anima a não cansar de fazer o bem, \"porque a seu tempo ceifaremos\" (v. 9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "galatas",
+        "chapter": 6,
+        "verse_start": 7,
+        "verse_end": 10
+      },
+      "difficulty": "easy"
     }
   ]
 }

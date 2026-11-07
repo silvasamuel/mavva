@@ -1895,6 +1895,440 @@
         "verse_end": 17
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "escatologia-0064",
+      "text": "Segundo 2 Pedro 3:3-4, o que os escarnecedores dos últimos dias dirão sobre a volta de Cristo?",
+      "options": [
+        {
+          "text": "\"Onde está a promessa da sua vinda? Porque desde que os pais dormiram, todas as coisas permanecem como desde o princípio\"",
+          "correct": true
+        },
+        {
+          "text": "\"Ele já veio em segredo, e não o vimos\"",
+          "correct": false
+        },
+        {
+          "text": "\"Não há ressurreição, nem anjo, nem espírito\"",
+          "correct": false
+        },
+        {
+          "text": "\"Os céus são de bronze, e Deus não ouve\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Sabendo primeiro isto: que nos últimos dias virão escarnecedores, andando segundo as suas próprias concupiscências e dizendo: Onde está a promessa da sua vinda? Porque, desde que os pais dormiram, todas as coisas permanecem como desde o princípio da criação\" (2Pe 3:3-4). Pedro responde lembrando o dilúvio: o mundo já foi julgado uma vez e será de novo, pelo fogo (vv. 5-7).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2pedro",
+        "chapter": 3,
+        "verse_start": 3,
+        "verse_end": 7
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0065",
+      "text": "Em Apocalipse 20, que nações Satanás, solto após os mil anos, reúne para a batalha contra \"o arraial dos santos e a cidade amada\"?",
+      "options": [
+        {
+          "text": "Gogue e Magogue",
+          "correct": true
+        },
+        {
+          "text": "Edom e Moabe",
+          "correct": false
+        },
+        {
+          "text": "Babilônia e Assíria",
+          "correct": false
+        },
+        {
+          "text": "Tiro e Sidom",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E, acabando-se os mil anos, Satanás será solto da sua prisão e sairá a enganar as nações que estão sobre os quatro cantos da terra, Gogue e Magogue, cujo número é como a areia do mar, para as ajuntar em batalha\" (Ap 20:7-8). Os nomes vêm de Ezequiel 38–39, onde Gogue, da terra de Magogue, invade Israel e é destruído por Deus. Em Apocalipse, fogo desce do céu e os devora (v. 9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 20,
+        "verse_start": 7,
+        "verse_end": 10
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "escatologia-0066",
+      "text": "Que sinal, \"de que falou o profeta Daniel\", Jesus disse que apareceria \"no lugar santo\", quando então os da Judeia deveriam fugir para os montes?",
+      "options": [
+        {
+          "text": "A abominação da desolação",
+          "correct": true
+        },
+        {
+          "text": "A estrela caindo do céu",
+          "correct": false
+        },
+        {
+          "text": "O sol escurecendo ao meio-dia",
+          "correct": false
+        },
+        {
+          "text": "O véu do templo rasgado",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Quando, pois, virdes que a abominação da desolação, de que falou o profeta Daniel, está no lugar santo (quem lê, que entenda), então, os que estiverem na Judeia, que fujam para os montes\" (Mt 24:15-16). A expressão vem de Daniel 9:27, 11:31 e 12:11 e foi associada à profanação do templo por Antíoco Epifânio; Jesus a aplica a uma profanação futura, ligada à queda de Jerusalém e ao fim.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 24,
+        "verse_start": 15,
+        "verse_end": 22
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0067",
+      "text": "Como Jesus descreveu a separação repentina na vinda do Filho do Homem, em Mateus 24:40-41?",
+      "options": [
+        {
+          "text": "\"Estando dois no campo, será levado um e deixado o outro; estando duas moendo no moinho, será levada uma e deixada a outra\"",
+          "correct": true
+        },
+        {
+          "text": "\"O trigo será recolhido no celeiro, e a palha queimada\"",
+          "correct": false
+        },
+        {
+          "text": "\"As ovelhas à direita, e os bodes à esquerda\"",
+          "correct": false
+        },
+        {
+          "text": "\"Os primeiros serão os últimos\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Então, estando dois no campo, será levado um e deixado o outro; estando duas moendo no moinho, será levada uma e deixada a outra\" (Mt 24:40-41). O contexto é a comparação com os dias de Noé: as pessoas comiam e bebiam até o dia em que o dilúvio os levou a todos (vv. 37-39). A conclusão é \"Vigiai, pois, porque não sabeis a que hora há de vir o vosso Senhor\" (v. 42).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 24,
+        "verse_start": 36,
+        "verse_end": 44
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0068",
+      "text": "Quais são as quatro semelhanças dos \"quatro animais\" (seres viventes) ao redor do trono em Apocalipse 4?",
+      "options": [
+        {
+          "text": "Leão, bezerro, homem e águia voando",
+          "correct": true
+        },
+        {
+          "text": "Leão, urso, leopardo e dragão",
+          "correct": false
+        },
+        {
+          "text": "Cordeiro, pomba, serpente e peixe",
+          "correct": false
+        },
+        {
+          "text": "Boi, cavalo, camelo e jumento",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E o primeiro animal era semelhante a um leão, e o segundo animal, semelhante a um bezerro, e tinha o terceiro animal o rosto como de homem, e o quarto animal era semelhante a uma águia voando\" (Ap 4:7). Cada um tem seis asas e está cheio de olhos, e não cessam de dizer \"Santo, Santo, Santo\" (v. 8). A imagem ecoa os querubins de Ezequiel 1 e os serafins de Isaías 6.",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 4,
+        "verse_start": 6,
+        "verse_end": 8
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0069",
+      "text": "Em Apocalipse 9, qual é o nome do \"anjo do abismo\", rei dos gafanhotos da quinta trombeta, em hebraico e em grego?",
+      "options": [
+        {
+          "text": "Abadom e Apoliom",
+          "correct": true
+        },
+        {
+          "text": "Belial e Belzebu",
+          "correct": false
+        },
+        {
+          "text": "Azazel e Lúcifer",
+          "correct": false
+        },
+        {
+          "text": "Leviatã e Rahab",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E tinham sobre si rei, o anjo do abismo; em hebreu era o seu nome Abadom, e em grego, Apoliom\" (Ap 9:11). Ambos os nomes significam \"Destruidor\". Os gafanhotos da quinta trombeta atormentam por cinco meses os homens que não têm o selo de Deus (vv. 4-5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 9,
+        "verse_start": 1,
+        "verse_end": 12
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "escatologia-0070",
+      "text": "Em Apocalipse 8, qual é o nome da grande estrela que cai sobre a terça parte dos rios ao toque da terceira trombeta?",
+      "options": [
+        {
+          "text": "Absinto (Losna)",
+          "correct": true
+        },
+        {
+          "text": "Estrela da manhã",
+          "correct": false
+        },
+        {
+          "text": "Sirius",
+          "correct": false
+        },
+        {
+          "text": "Lúcifer",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E o terceiro anjo tocou a trombeta, e caiu do céu uma grande estrela, ardendo como uma tocha, e caiu sobre a terça parte dos rios e sobre as fontes das águas. E o nome da estrela era Absinto, e a terça parte das águas tornou-se em absinto, e muitos homens morreram das águas, porque se tornaram amargas\" (Ap 8:10-11). Absinto (losna) é uma planta amarga, símbolo de juízo e amargura também nos profetas (Jr 9:15; Am 5:7).",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 8,
+        "verse_start": 10,
+        "verse_end": 11
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "escatologia-0071",
+      "text": "Na descrição da nova Jerusalém, que nomes estão escritos nas doze portas e nos doze fundamentos do muro?",
+      "options": [
+        {
+          "text": "Nas portas, os nomes das doze tribos de Israel; nos fundamentos, os dos doze apóstolos do Cordeiro",
+          "correct": true
+        },
+        {
+          "text": "Nas portas, os doze meses; nos fundamentos, as doze pedras do peitoral",
+          "correct": false
+        },
+        {
+          "text": "Nas portas, os doze profetas menores; nos fundamentos, os doze juízes",
+          "correct": false
+        },
+        {
+          "text": "Nas portas, os nomes dos doze anjos; nos fundamentos, os dos doze patriarcas",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E tinha um grande e alto muro com doze portas, e nas portas doze anjos, e nomes escritos sobre elas, que são os nomes das doze tribos de Israel... E o muro da cidade tinha doze fundamentos, e neles os nomes dos doze apóstolos do Cordeiro\" (Ap 21:12,14). A cidade une o povo de Deus do Antigo e do Novo Testamento — Israel e a igreja — em uma só habitação.",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 21,
+        "verse_start": 9,
+        "verse_end": 14
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0072",
+      "text": "Por que, segundo Apocalipse 21:23, a nova Jerusalém não precisa de sol nem de lua?",
+      "options": [
+        {
+          "text": "Porque a glória de Deus a ilumina, e o Cordeiro é a sua lâmpada",
+          "correct": true
+        },
+        {
+          "text": "Porque está debaixo da terra",
+          "correct": false
+        },
+        {
+          "text": "Porque é feita de ouro que brilha por si",
+          "correct": false
+        },
+        {
+          "text": "Porque os anjos a iluminam com tochas",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E a cidade não necessita de sol nem de lua, para que nela resplandeçam, porque a glória de Deus a tem alumiado, e o Cordeiro é a sua lâmpada\" (Ap 21:23). Por isso \"ali não haverá noite\" e as portas nunca se fecham (Ap 21:25; 22:5). A imagem retoma Isaías 60:19-20: \"o SENHOR será a tua luz perpétua\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 21,
+        "verse_start": 22,
+        "verse_end": 27
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0073",
+      "text": "Segundo Apocalipse 22:17, quem diz \"Vem\", convidando quem tem sede a tomar de graça da água da vida?",
+      "options": [
+        {
+          "text": "O Espírito e a esposa",
+          "correct": true
+        },
+        {
+          "text": "Os vinte e quatro anciãos",
+          "correct": false
+        },
+        {
+          "text": "As sete igrejas",
+          "correct": false
+        },
+        {
+          "text": "Moisés e Elias",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E o Espírito e a esposa dizem: Vem. E quem ouve diga: Vem. E quem tem sede venha; e quem quiser tome de graça da água da vida\" (Ap 22:17). O convite final da Bíblia une o Espírito Santo e a igreja (a esposa) em um só chamado — ao Senhor, para que volte, e ao sedento, para que venha e beba.",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 22,
+        "verse_start": 16,
+        "verse_end": 17
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0074",
+      "text": "Na visão de paz messiânica de Isaías 11, com quem habitará o lobo?",
+      "options": [
+        {
+          "text": "Com o cordeiro",
+          "correct": true
+        },
+        {
+          "text": "Com o leão",
+          "correct": false
+        },
+        {
+          "text": "Com a serpente",
+          "correct": false
+        },
+        {
+          "text": "Com o boi",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E morará o lobo com o cordeiro, e o leopardo com o cabrito se deitará, e o bezerro, e o filho de leão, e o animal cevado andarão juntos, e um menino pequeno os guiará\" (Is 11:6). A profecia descreve o reinado do \"renovo do tronco de Jessé\" (v. 1), quando \"a terra se encherá do conhecimento do SENHOR\" (v. 9). A imagem retorna em Isaías 65:25.",
+      "divergence_note": null,
+      "reference": {
+        "book": "isaias",
+        "chapter": 11,
+        "verse_start": 1,
+        "verse_end": 10
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "escatologia-0075",
+      "text": "Na interpretação do sonho de Nabucodonosor, o que Daniel disse que representava a pedra \"cortada sem mãos\" que esmiuçou a estátua?",
+      "options": [
+        {
+          "text": "Um reino que Deus levantará, que não será destruído e subsistirá para sempre",
+          "correct": true
+        },
+        {
+          "text": "O exército da Pérsia que tomaria a Babilônia",
+          "correct": false
+        },
+        {
+          "text": "O templo de Jerusalém, que seria reconstruído",
+          "correct": false
+        },
+        {
+          "text": "A própria morte do rei",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Mas, nos dias desses reis, o Deus do céu levantará um reino que não será jamais destruído... esmiuçará e consumirá todos esses reinos, mas ele mesmo subsistirá para sempre. Da maneira que viste que do monte foi cortada uma pedra, sem mãos\" (Dn 2:44-45). A pedra que se tornou grande monte e encheu a terra (v. 35) é lida pelos cristãos como o Reino de Deus inaugurado por Cristo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "daniel",
+        "chapter": 2,
+        "verse_start": 31,
+        "verse_end": 45
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0076",
+      "text": "Segundo Hebreus 9:28, como e para quem Cristo aparecerá \"segunda vez\"?",
+      "options": [
+        {
+          "text": "Sem pecado, aos que o esperam para salvação",
+          "correct": true
+        },
+        {
+          "text": "Com fogo, aos que o rejeitaram",
+          "correct": false
+        },
+        {
+          "text": "Em segredo, apenas aos apóstolos",
+          "correct": false
+        },
+        {
+          "text": "Como sumo sacerdote, somente a Israel",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Assim também Cristo, oferecendo-se uma vez, para tirar os pecados de muitos, aparecerá segunda vez, sem pecado, aos que o esperam para salvação\" (Hb 9:28). A primeira vinda foi para levar o pecado; a segunda não tratará mais do pecado, mas consumará a salvação — como o sumo sacerdote que saía do Santo dos Santos para abençoar o povo que o aguardava.",
+      "divergence_note": null,
+      "reference": {
+        "book": "hebreus",
+        "chapter": 9,
+        "verse_start": 24,
+        "verse_end": 28
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0077",
+      "text": "Segundo 1 João 2:18, como João sabia que já era \"a última hora\"?",
+      "options": [
+        {
+          "text": "Porque \"já muitos se têm feito anticristos\", como fora anunciado",
+          "correct": true
+        },
+        {
+          "text": "Porque Jerusalém havia caído",
+          "correct": false
+        },
+        {
+          "text": "Porque o imperador se proclamara deus",
+          "correct": false
+        },
+        {
+          "text": "Porque os sinais no sol e na lua apareceram",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Filhinhos, é já a última hora; e, como ouvistes que vem o anticristo, também agora muitos se têm feito anticristos; por onde conhecemos que é já a última hora\" (1Jo 2:18). João é o único autor bíblico a usar a palavra \"anticristo\"; para ele, anticristo é quem \"nega o Pai e o Filho\" (v. 22) e nega que Jesus veio em carne (1Jo 4:3; 2Jo 7).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1joao",
+        "chapter": 2,
+        "verse_start": 18,
+        "verse_end": 23
+      },
+      "difficulty": "hard"
     }
   ]
 }

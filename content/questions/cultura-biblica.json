@@ -1830,6 +1830,440 @@
         "verse_end": 26
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0060",
+      "text": "Em Jeremias 2:13, que imagem do abastecimento de água Deus usa para descrever os dois males cometidos pelo seu povo?",
+      "options": [
+        {
+          "text": "Deixaram a fonte de águas vivas e cavaram cisternas rotas, que não retêm as águas",
+          "correct": true
+        },
+        {
+          "text": "Secaram os poços dos patriarcas e beberam do Nilo",
+          "correct": false
+        },
+        {
+          "text": "Venderam a água do Jordão aos filisteus",
+          "correct": false
+        },
+        {
+          "text": "Construíram aquedutos para os ídolos",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Porque o meu povo fez duas maldades: a mim me deixaram, o manancial de águas vivas, e cavaram cisternas, cisternas rotas, que não retêm as águas\" (Jr 2:13). Em Israel, onde não chove meio ano, as casas e cidades dependiam de cisternas escavadas na rocha e revestidas de reboco para armazenar a chuva; uma rachadura perdia tudo. \"Águas vivas\" eram as de fonte corrente — a imagem que Jesus retoma com a samaritana (Jo 4:10-14).",
+      "divergence_note": null,
+      "reference": {
+        "book": "jeremias",
+        "chapter": 2,
+        "verse_start": 11,
+        "verse_end": 13
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0061",
+      "text": "Segundo Êxodo 30, quanto cada israelita recenseado, rico ou pobre, devia dar como \"resgate da sua alma\" para o serviço do santuário?",
+      "options": [
+        {
+          "text": "Meio siclo",
+          "correct": true
+        },
+        {
+          "text": "Um talento",
+          "correct": false
+        },
+        {
+          "text": "Dez siclos",
+          "correct": false
+        },
+        {
+          "text": "Um denário",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Isto dará todo aquele que passar ao arrolamento: a metade de um siclo, segundo o siclo do santuário... O rico não dará mais, e o pobre não dará menos da metade do siclo\" (Êx 30:13-15). A igualdade do valor mostra que todas as vidas têm o mesmo preço diante de Deus. Esse imposto anual do templo é o \"didracma\" cobrado de Jesus em Cafarnaum (Mt 17:24).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 30,
+        "verse_start": 11,
+        "verse_end": 16
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0062",
+      "text": "Qual era a medida diária de maná que cada pessoa devia recolher, e a que fração do efa ela correspondia?",
+      "options": [
+        {
+          "text": "Um ômer, a décima parte do efa",
+          "correct": true
+        },
+        {
+          "text": "Um bato, a metade do efa",
+          "correct": false
+        },
+        {
+          "text": "Um himer, dez efas",
+          "correct": false
+        },
+        {
+          "text": "Um sêa, a terça parte do efa",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Colhei dele cada um conforme o que pode comer, um ômer por cabeça\" (Êx 16:16). O texto explica: \"E um ômer é a décima parte do efa\" (v. 36) — cerca de dois litros. Quem colhia mais não tinha de sobra, e quem colhia menos não tinha falta (v. 18), versículo que Paulo cita ao falar da igualdade entre as igrejas (2Co 8:15). Um ômer de maná foi guardado num vaso diante do Testemunho (vv. 32-34).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 16,
+        "verse_start": 13,
+        "verse_end": 36
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cultura-biblica-0063",
+      "text": "Que objeto Jesus disse que seria melhor pendurar ao pescoço de quem escandalizasse um dos pequeninos, antes de ser lançado ao mar?",
+      "options": [
+        {
+          "text": "Uma pedra de moinho (mó de azenha)",
+          "correct": true
+        },
+        {
+          "text": "Uma âncora de ferro",
+          "correct": false
+        },
+        {
+          "text": "Um saco de areia",
+          "correct": false
+        },
+        {
+          "text": "Uma corrente de bronze",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Mas qualquer que escandalizar um destes pequeninos que creem em mim, melhor lhe fora que se lhe pendurasse ao pescoço uma mó de azenha, e se submergisse na profundeza do mar\" (Mt 18:6). A \"mó de azenha\" era a grande pedra superior de um moinho movido por jumento, muito mais pesada que a mó manual das casas — imagem de um peso do qual não se volta.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 18,
+        "verse_start": 6,
+        "verse_end": 7
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0064",
+      "text": "Que tarefa de servo João Batista disse não ser digno de fazer para Jesus?",
+      "options": [
+        {
+          "text": "Desatar a correia das suas sandálias",
+          "correct": true
+        },
+        {
+          "text": "Lavar as suas vestes",
+          "correct": false
+        },
+        {
+          "text": "Servir-lhe à mesa",
+          "correct": false
+        },
+        {
+          "text": "Carregar o seu manto",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Após mim vem aquele que é mais forte do que eu, do qual não sou digno de, abaixando-me, desatar a correia das alparcas\" (Mc 1:7). Desatar e carregar as sandálias do mestre era serviço do escravo mais humilde; a tradição rabínica dizia que um discípulo devia fazer pelo mestre tudo o que um servo faz, exceto desatar-lhe a sandália. João se coloca abaixo até disso.",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 1,
+        "verse_start": 4,
+        "verse_end": 8
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cultura-biblica-0065",
+      "text": "Que lei agrícola de Deuteronômio Paulo cita para defender o direito dos obreiros do evangelho de serem sustentados?",
+      "options": [
+        {
+          "text": "\"Não atarás a boca ao boi quando debulha\"",
+          "correct": true
+        },
+        {
+          "text": "\"Não ararás com boi e jumento juntos\"",
+          "correct": false
+        },
+        {
+          "text": "\"Não ceifarás os cantos do teu campo\"",
+          "correct": false
+        },
+        {
+          "text": "\"Não semearás duas espécies na vinha\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Porque na lei de Moisés está escrito: Não atarás a boca ao boi que debulha. Porventura, tem Deus cuidado dos bois? Ou não o diz certamente por nós?\" (1Co 9:9-10, citando Dt 25:4; cf. 1Tm 5:18). Na debulha, os bois pisavam os feixes na eira, e a Lei proibia impedi-los de comer enquanto trabalhavam. Paulo aplica o princípio: quem trabalha no evangelho deve viver do evangelho.",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 25,
+        "verse_start": 4,
+        "verse_end": 4
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0066",
+      "text": "Segundo 1 Samuel 13, por que os israelitas tinham de descer aos filisteus para afiar relhas, enxadas, machados e foices?",
+      "options": [
+        {
+          "text": "Porque não havia ferreiro em toda a terra de Israel; os filisteus os impediram, para que não fizessem espadas e lanças",
+          "correct": true
+        },
+        {
+          "text": "Porque a Lei proibia a Israel trabalhar com ferro",
+          "correct": false
+        },
+        {
+          "text": "Porque o ferro só existia na costa do mar",
+          "correct": false
+        },
+        {
+          "text": "Porque Saul vendera todas as forjas",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E em toda a terra de Israel nem um ferreiro se achava, porque os filisteus tinham dito: Para que os hebreus não façam espada nem lança\" (1Sm 13:19). Os israelitas pagavam para afiar as ferramentas, e no dia da batalha \"não se achou espada nem lança\" senão com Saul e Jônatas (vv. 20-22). O monopólio filisteu do ferro explica a sua superioridade militar no início da monarquia.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 13,
+        "verse_start": 19,
+        "verse_end": 22
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cultura-biblica-0067",
+      "text": "Em 2 Coríntios 4:7, em que Paulo diz que temos \"este tesouro\", para que a excelência do poder seja de Deus?",
+      "options": [
+        {
+          "text": "Em vasos de barro",
+          "correct": true
+        },
+        {
+          "text": "Em cofres de cedro",
+          "correct": false
+        },
+        {
+          "text": "Em odres novos",
+          "correct": false
+        },
+        {
+          "text": "Em arcas de ouro",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Temos, porém, este tesouro em vasos de barro, para que a excelência do poder seja de Deus e não de nós\" (2Co 4:7). O tesouro é o evangelho da glória de Cristo (vv. 4-6); os vasos de barro — baratos, frágeis, descartáveis — são os próprios apóstolos, \"atribulados, mas não angustiados\" (v. 8). Lamparinas e potes de cerâmica eram os recipientes mais comuns e desprezíveis do mundo antigo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2corintios",
+        "chapter": 4,
+        "verse_start": 7,
+        "verse_end": 10
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cultura-biblica-0068",
+      "text": "Como Lázaro saiu do túmulo ao ouvir \"Lázaro, vem para fora\", e que ordem Jesus deu em seguida?",
+      "options": [
+        {
+          "text": "Saiu com as mãos e os pés ligados com ataduras e o rosto envolto num lenço; Jesus disse: \"Desligai-o e deixai-o ir\"",
+          "correct": true
+        },
+        {
+          "text": "Saiu vestido de branco; Jesus disse: \"Dai-lhe de comer\"",
+          "correct": false
+        },
+        {
+          "text": "Saiu correndo para a irmã; Jesus disse: \"Não me toques\"",
+          "correct": false
+        },
+        {
+          "text": "Saiu em silêncio; Jesus disse: \"Vai e não peques mais\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E o defunto saiu, tendo as mãos e os pés ligados com faixas, e o seu rosto envolto num lenço. Disse-lhes Jesus: Desligai-o e deixai-o ir\" (Jo 11:44). O costume judaico era envolver o corpo em faixas de linho com especiarias e cobrir o rosto com um sudário — o mesmo \"lenço\" que Pedro e João encontrariam dobrado à parte no sepulcro de Jesus (Jo 20:7).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 11,
+        "verse_start": 38,
+        "verse_end": 44
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0069",
+      "text": "Que instrumentos o Salmo 150 convoca para louvar a Deus?",
+      "options": [
+        {
+          "text": "Trombeta, saltério, harpa, adufe, flauta e címbalos (sonoros e retumbantes), com dança",
+          "correct": true
+        },
+        {
+          "text": "Apenas a voz humana, sem instrumentos",
+          "correct": false
+        },
+        {
+          "text": "Órgão, violino e trompa",
+          "correct": false
+        },
+        {
+          "text": "Sinos, gongos e tambores de guerra",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Louvai-o com o som de trombeta; louvai-o com o saltério e a harpa. Louvai-o com o tamborim (adufe) e a dança; louvai-o com instrumentos de cordas e com órgãos (flautas). Louvai-o com os címbalos sonoros; louvai-o com címbalos altissonantes. Tudo quanto tem fôlego louve ao SENHOR\" (Sl 150:3-6). O último salmo reúne sopro, cordas e percussão — toda a orquestra do templo — e termina chamando toda criatura que respira.",
+      "divergence_note": null,
+      "reference": {
+        "book": "salmos",
+        "chapter": 150,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0070",
+      "text": "Que imagem dos jogos atléticos gregos Paulo usa em 1 Coríntios 9 ao dizer que os atletas competem por uma coroa corruptível, e nós por uma incorruptível?",
+      "options": [
+        {
+          "text": "A corrida no estádio e a luta de pugilato (boxe)",
+          "correct": true
+        },
+        {
+          "text": "A corrida de bigas e o lançamento de disco",
+          "correct": false
+        },
+        {
+          "text": "O salto em distância e a natação",
+          "correct": false
+        },
+        {
+          "text": "O arremesso de dardo e a luta livre",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Não sabeis vós que os que correm no estádio, todos, na verdade, correm, mas um só leva o prêmio? Correi de tal maneira que o alcanceis... Pois eu assim corro, não como a coisa incerta; assim combato, não como batendo no ar\" (1Co 9:24-27). Corinto sediava os Jogos Ístmicos, cuja coroa era de pinho ou aipo seco — a \"coroa corruptível\" que os coríntios conheciam bem.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1corintios",
+        "chapter": 9,
+        "verse_start": 24,
+        "verse_end": 27
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0071",
+      "text": "O que Provérbios 11:1 chama de \"abominação ao SENHOR\" e o que chama de \"seu prazer\", no comércio?",
+      "options": [
+        {
+          "text": "Balança enganosa é abominação; peso justo é o seu prazer",
+          "correct": true
+        },
+        {
+          "text": "Vender fiado é abominação; vender à vista é o seu prazer",
+          "correct": false
+        },
+        {
+          "text": "Lucro é abominação; prejuízo é o seu prazer",
+          "correct": false
+        },
+        {
+          "text": "Comerciar no sábado é abominação; descansar é o seu prazer",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Balança enganosa é abominação para o SENHOR, mas o peso justo é o seu prazer\" (Pv 11:1). Os pesos eram pedras ou peças de metal, e um comerciante desonesto carregava \"pesos diversos\" na bolsa (Dt 25:13; Pv 20:10,23). A Lei exigia \"balanças justas, pesos justos, efa justo e him justo\" (Lv 19:36), e os profetas denunciaram a fraude (Am 8:5; Mq 6:11).",
+      "divergence_note": null,
+      "reference": {
+        "book": "proverbios",
+        "chapter": 11,
+        "verse_start": 1,
+        "verse_end": 1
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cultura-biblica-0072",
+      "text": "Quais eram os ingredientes do óleo da santa unção, com que Moisés devia ungir o tabernáculo, os utensílios e os sacerdotes?",
+      "options": [
+        {
+          "text": "Mirra, canela, cálamo aromático, cássia e azeite de oliveira",
+          "correct": true
+        },
+        {
+          "text": "Nardo, aloés, açafrão e vinho",
+          "correct": false
+        },
+        {
+          "text": "Bálsamo de Gileade, mel e azeite",
+          "correct": false
+        },
+        {
+          "text": "Incenso, estoraque, ônica e gálbano",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Toma especiarias das mais excelentes: da mais pura mirra quinhentos siclos, e de canela aromática a metade... e de cálamo aromático duzentos e cinquenta siclos, e de cássia quinhentos siclos... e de azeite de oliveiras um him\" (Êx 30:23-24). A fórmula era exclusiva: quem a reproduzisse para uso comum seria eliminado do povo (vv. 32-33). O incenso sagrado tinha receita própria, com estoraque, ônica, gálbano e incenso puro (vv. 34-38).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 30,
+        "verse_start": 22,
+        "verse_end": 33
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "cultura-biblica-0073",
+      "text": "O que Jezabel fez ao saber que Jeú chegava a Jezreel, antes de o enfrentar da janela?",
+      "options": [
+        {
+          "text": "Pintou os olhos e enfeitou a cabeça",
+          "correct": true
+        },
+        {
+          "text": "Vestiu saco e cinza",
+          "correct": false
+        },
+        {
+          "text": "Fugiu para o templo de Baal",
+          "correct": false
+        },
+        {
+          "text": "Mandou chamar os quatrocentos profetas",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E Jeú veio a Jezreel, o que ouvindo Jezabel, pintou-se em volta dos olhos, e enfeitou a sua cabeça, e olhou pela janela\" (2Rs 9:30). O pintar dos olhos com antimônio (kohl) era cosmético comum no Oriente; aqui, Jezabel morre como rainha, com desafio: \"Teve paz Zinri, que matou a seu senhor?\" (v. 31). Jeú ordenou que os eunucos a lançassem da janela (v. 33).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 9,
+        "verse_start": 30,
+        "verse_end": 37
+      },
+      "difficulty": "hard"
     }
   ]
 }

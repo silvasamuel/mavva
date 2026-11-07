@@ -1926,6 +1926,440 @@
         "verse_end": 2
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "idiomas-biblicos-0063",
+      "text": "O que significa \"Gabatá\", nome hebraico do lugar onde Pilatos se assentou no tribunal para julgar Jesus, segundo João 19:13?",
+      "options": [
+        {
+          "text": "Pavimento (lugar pavimentado, elevado)",
+          "correct": true
+        },
+        {
+          "text": "Lugar da caveira",
+          "correct": false
+        },
+        {
+          "text": "Casa do julgamento",
+          "correct": false
+        },
+        {
+          "text": "Porta das ovelhas",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Ouvindo, pois, Pilatos este dito, levou Jesus para fora e assentou-se no tribunal, no lugar chamado Litóstrotos, e em hebraico Gabatá\" (Jo 19:13). Lithóstrotos, em grego, é \"pavimento de pedra\"; Gabatá, em aramaico, sugere um lugar elevado. João costuma dar os nomes locais com tradução — Betesda, Siloé, Gólgota — como testemunha ocular.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 19,
+        "verse_start": 13,
+        "verse_end": 16
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "idiomas-biblicos-0064",
+      "text": "O que significa o nome \"Cafarnaum\", cidade que Mateus 9:1 chama de \"sua cidade\", onde Jesus se estabeleceu na Galileia?",
+      "options": [
+        {
+          "text": "Aldeia de Naum (Kefar Nahum)",
+          "correct": true
+        },
+        {
+          "text": "Casa da pesca",
+          "correct": false
+        },
+        {
+          "text": "Cidade do consolo",
+          "correct": false
+        },
+        {
+          "text": "Porto das barcas",
+          "correct": false
+        }
+      ],
+      "explanation": "Cafarnaum vem do hebraico Kefar Nahum, \"aldeia de Naum\" — não necessariamente o profeta, pois Nahum (\"consolo\") era nome comum. Jesus deixou Nazaré e passou a morar ali (Mt 4:13), onde fez muitos milagres e ensinou na sinagoga (Jo 6:59). Por não se arrepender, a cidade recebeu uma das mais duras sentenças: \"tu, Cafarnaum... até ao inferno serás abatida\" (Mt 11:23).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 4,
+        "verse_start": 12,
+        "verse_end": 17
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "idiomas-biblicos-0065",
+      "text": "O que significa \"Mizpá\", nome que Labão deu ao monte de pedras onde ele e Jacó fizeram aliança, e que frase explica o nome?",
+      "options": [
+        {
+          "text": "\"Atalaia\" (torre de vigia) — \"Atente (vigie) o SENHOR entre mim e ti, quando nós estivermos apartados um do outro\"",
+          "correct": true
+        },
+        {
+          "text": "\"Testemunho\" — \"Estas pedras são testemunhas contra ti\"",
+          "correct": false
+        },
+        {
+          "text": "\"Paz\" — \"Que haja paz entre as nossas casas\"",
+          "correct": false
+        },
+        {
+          "text": "\"Fronteira\" — \"Nem eu passarei este marco contra ti\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E Mispa, porquanto disse: Atente o SENHOR entre mim e ti, quando nós estivermos apartados um do outro\" (Gn 31:49). Mizpá vem do verbo \"vigiar\": era um pedido para que Deus guardasse o pacto quando os dois já não pudessem ver um ao outro. O lugar também foi chamado Galeede (\"montão do testemunho\"). Vários lugares em Israel tiveram o nome Mizpá, como o santuário onde Samuel julgava (1Sm 7:5-6).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 31,
+        "verse_start": 44,
+        "verse_end": 53
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "idiomas-biblicos-0066",
+      "text": "Que nome Moisés deu ao altar que ergueu após a vitória sobre Amaleque em Refidim, e o que ele significa?",
+      "options": [
+        {
+          "text": "Jeová-Nissi — \"O SENHOR é minha bandeira\"",
+          "correct": true
+        },
+        {
+          "text": "Jeová-Jiré — \"O SENHOR proverá\"",
+          "correct": false
+        },
+        {
+          "text": "Jeová-Shalom — \"O SENHOR é paz\"",
+          "correct": false
+        },
+        {
+          "text": "Jeová-Rafá — \"O SENHOR que te sara\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E Moisés edificou um altar, ao qual chamou: O SENHOR É MINHA BANDEIRA (Jeová-Nissi)\" (Êx 17:15). A \"bandeira\" (nes) era o estandarte erguido no alto em torno do qual o exército se reunia — alusão à vara de Deus que Moisés mantinha levantada na colina, com Arão e Hur a segurar-lhe os braços (vv. 8-13). Gideão, por sua vez, chamou o seu altar de Jeová-Shalom (Jz 6:24).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 17,
+        "verse_start": 8,
+        "verse_end": 16
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "idiomas-biblicos-0067",
+      "text": "Que nome divino, traduzido por \"Deus Todo-Poderoso\", o SENHOR usou ao aparecer a Abrão aos noventa e nove anos, em Gênesis 17:1?",
+      "options": [
+        {
+          "text": "El Shaddai",
+          "correct": true
+        },
+        {
+          "text": "Adonai",
+          "correct": false
+        },
+        {
+          "text": "El Elyon",
+          "correct": false
+        },
+        {
+          "text": "El Olam",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Eu sou o Deus Todo-Poderoso (El Shaddai); anda em minha presença e sê perfeito\" (Gn 17:1). O nome marca as promessas aos patriarcas (Gn 28:3; 35:11; 48:3), e em Êxodo 6:3 Deus diz que se revelou a Abraão, Isaque e Jacó \"como o Deus Todo-Poderoso\", mas não lhes fora conhecido pelo nome YHWH. A etimologia de Shaddai é incerta; a tradução grega usou Pantokrator, \"Todo-Poderoso\", que o Apocalipse retoma.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 17,
+        "verse_start": 1,
+        "verse_end": 8
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "idiomas-biblicos-0068",
+      "text": "Que palavra grega, traduzida por \"Verbo\" na frase \"No princípio era o Verbo\", João aplica a Cristo?",
+      "options": [
+        {
+          "text": "Logos",
+          "correct": true
+        },
+        {
+          "text": "Sophia",
+          "correct": false
+        },
+        {
+          "text": "Pneuma",
+          "correct": false
+        },
+        {
+          "text": "Kyrios",
+          "correct": false
+        }
+      ],
+      "explanation": "\"No princípio era o Verbo (Logos), e o Verbo estava com Deus, e o Verbo era Deus\" (Jo 1:1). Logos significa \"palavra, razão, discurso\". Para os judeus, evocava a Palavra criadora de Gênesis 1 e a Sabedoria de Provérbios 8; para os gregos, a razão que ordena o cosmos. João une os dois mundos: a Palavra eterna de Deus \"se fez carne e habitou entre nós\" (Jo 1:14).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 5
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "idiomas-biblicos-0069",
+      "text": "Que termo grego, traduzido por \"Consolador\" em João 14:16 e por \"Advogado\" em 1 João 2:1, significa literalmente \"aquele que é chamado para junto\"?",
+      "options": [
+        {
+          "text": "Parácleto (Parakletos)",
+          "correct": true
+        },
+        {
+          "text": "Pneuma",
+          "correct": false
+        },
+        {
+          "text": "Didáskalos",
+          "correct": false
+        },
+        {
+          "text": "Kérux",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E eu rogarei ao Pai, e ele vos dará outro Consolador (Parakletos), para que fique convosco para sempre\" (Jo 14:16). A palavra designa quem é chamado ao lado de alguém para ajudar — advogado, conselheiro, consolador. Jesus diz \"outro\" Consolador porque ele mesmo foi o primeiro; em 1 João 2:1, é Jesus quem é chamado nosso Parákletos junto ao Pai. Os quatro ditos sobre o Parácleto estão em João 14–16.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 14,
+        "verse_start": 15,
+        "verse_end": 17
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "idiomas-biblicos-0070",
+      "text": "Que palavra grega, traduzida por \"comunhão\" em Atos 2:42, descreve a vida partilhada dos primeiros cristãos e também a participação na Ceia e nas ofertas?",
+      "options": [
+        {
+          "text": "Koinonia",
+          "correct": true
+        },
+        {
+          "text": "Agape",
+          "correct": false
+        },
+        {
+          "text": "Ekklesia",
+          "correct": false
+        },
+        {
+          "text": "Diakonia",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E perseveravam na doutrina dos apóstolos, e na comunhão (koinonia), e no partir do pão, e nas orações\" (At 2:42). Koinonia vem de koinos, \"comum\", e abrange participar de algo com outros: a comunhão no corpo e sangue de Cristo (1Co 10:16), a parceria no evangelho (Fp 1:5) e até a coleta para os pobres, chamada koinonia em Romanos 15:26. A palavra funda a ideia de igreja como vida compartilhada.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 2,
+        "verse_start": 42,
+        "verse_end": 47
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "idiomas-biblicos-0071",
+      "text": "O que significa literalmente a palavra grega presbyteros, traduzida por \"presbítero\" ou \"ancião\" no Novo Testamento?",
+      "options": [
+        {
+          "text": "\"Mais velho\", comparativo de presbys (velho)",
+          "correct": true
+        },
+        {
+          "text": "\"Supervisor\", de episkopein (vigiar)",
+          "correct": false
+        },
+        {
+          "text": "\"Servo\", de diakonein (servir)",
+          "correct": false
+        },
+        {
+          "text": "\"Pastor\", de poimen (rebanho)",
+          "correct": false
+        }
+      ],
+      "explanation": "Presbyteros é o comparativo de presbys, \"velho\": literalmente \"mais velho, ancião\". Nas sinagogas e nas aldeias, os anciãos eram os líderes respeitados; a igreja adotou o termo para os seus líderes locais (At 14:23; Tt 1:5). Em Atos 20:17,28 e Tito 1:5-7, os mesmos homens são chamados presbíteros e bispos (epískopoi, \"supervisores\"), indicando que os títulos descreviam a mesma função.",
+      "divergence_note": "A relação entre presbíteros e bispos no Novo Testamento é lida de modo diferente pelas tradições episcopais e presbiterianas/congregacionais.",
+      "reference": {
+        "book": "tito",
+        "chapter": 1,
+        "verse_start": 5,
+        "verse_end": 9
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "idiomas-biblicos-0072",
+      "text": "O que é o \"Sheol\", palavra hebraica que a ARC traduz frequentemente por \"sepultura\" ou \"inferno\" no Antigo Testamento?",
+      "options": [
+        {
+          "text": "A morada dos mortos, o mundo subterrâneo para onde desciam todos os que morriam",
+          "correct": true
+        },
+        {
+          "text": "O lago de fogo do juízo final",
+          "correct": false
+        },
+        {
+          "text": "O paraíso dos justos",
+          "correct": false
+        },
+        {
+          "text": "O vale ao sul de Jerusalém onde se queimava lixo",
+          "correct": false
+        }
+      ],
+      "explanation": "Sheol aparece 65 vezes no Antigo Testamento como o lugar dos mortos, descrito como profundo, escuro e silencioso (Jó 10:21-22; Sl 6:5), para onde desciam justos e ímpios (Gn 37:35; Nm 16:33). Os salmistas esperam que Deus não os abandone ali (Sl 16:10, aplicado a Cristo em At 2:27). A Septuaginta traduziu Sheol por Hades, o termo usado no Novo Testamento (Lc 16:23; Ap 20:13-14).",
+      "divergence_note": null,
+      "reference": {
+        "book": "salmos",
+        "chapter": 16,
+        "verse_start": 9,
+        "verse_end": 11
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "idiomas-biblicos-0073",
+      "text": "Como se chama, na linguagem dos estudiosos, o nome divino de quatro letras (YHWH) revelado a Moisés e traduzido por \"SENHOR\" em maiúsculas na ARC?",
+      "options": [
+        {
+          "text": "Tetragrama",
+          "correct": true
+        },
+        {
+          "text": "Pentateuco",
+          "correct": false
+        },
+        {
+          "text": "Decálogo",
+          "correct": false
+        },
+        {
+          "text": "Tetrarquia",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Tetragrama\" (do grego, \"quatro letras\") designa as consoantes hebraicas yod-he-vav-he, o nome próprio de Deus ligado a \"EU SOU\" (Êx 3:14-15). Por reverência, os judeus deixaram de pronunciá-lo, lendo Adonai em seu lugar — prática seguida pelas traduções que escrevem \"SENHOR\" em versaletes. A forma \"Jeová\" surgiu ao combinar as consoantes YHWH com as vogais de Adonai.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 3,
+        "verse_start": 13,
+        "verse_end": 15
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "idiomas-biblicos-0074",
+      "text": "O que significa o elemento \"Bar-\" em nomes como Barnabé, Bartimeu, Barjonas e Barrabás?",
+      "options": [
+        {
+          "text": "\"Filho de\" (aramaico)",
+          "correct": true
+        },
+        {
+          "text": "\"Servo de\" (hebraico)",
+          "correct": false
+        },
+        {
+          "text": "\"Casa de\" (hebraico)",
+          "correct": false
+        },
+        {
+          "text": "\"Senhor de\" (grego)",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Bar\" é a palavra aramaica para \"filho\", equivalente ao hebraico \"ben\" (como em Benjamim, \"filho da mão direita\"). Assim, Bartimeu é \"filho de Timeu\" (Mc 10:46), Barjonas, \"filho de Jonas\" (Mt 16:17), Barrabás, \"filho do pai\", e Barnabé é explicado como \"filho da consolação\" (At 4:36). O uso frequente de \"bar\" mostra que o aramaico era a língua corrente na Palestina do primeiro século.",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 10,
+        "verse_start": 46,
+        "verse_end": 46
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "idiomas-biblicos-0075",
+      "text": "Segundo os historiadores, por que o peixe se tornou símbolo dos primeiros cristãos?",
+      "options": [
+        {
+          "text": "Porque as letras da palavra grega para peixe, ICHTHYS, formam um acróstico de \"Jesus Cristo, Filho de Deus, Salvador\"",
+          "correct": true
+        },
+        {
+          "text": "Porque Jesus multiplicou os peixes",
+          "correct": false
+        },
+        {
+          "text": "Porque Pedro era pescador",
+          "correct": false
+        },
+        {
+          "text": "Porque Jonas foi engolido por um peixe",
+          "correct": false
+        }
+      ],
+      "explanation": "Em grego, ichthys (peixe) reúne as iniciais de Iesous Christos Theou Yios Soter — \"Jesus Cristo, de Deus Filho, Salvador\". O acróstico, atestado em inscrições e nas catacumbas a partir do século II, funcionava como confissão de fé abreviada e, segundo a tradição, como sinal discreto entre cristãos em tempos de perseguição. Tertuliano chama os cristãos de \"peixinhos\" nascidos na água do batismo.",
+      "divergence_note": "O simbolismo do peixe é tradição da igreja antiga, não ensino bíblico; a referência aponta para a confissão de fé que o acróstico resume.",
+      "reference": {
+        "book": "mateus",
+        "chapter": 16,
+        "verse_start": 16,
+        "verse_end": 16
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "idiomas-biblicos-0076",
+      "text": "Qual era o sentido original da palavra grega hypokrités, que Jesus usou repetidamente contra escribas e fariseus?",
+      "options": [
+        {
+          "text": "Ator de teatro, que representava um papel atrás de uma máscara",
+          "correct": true
+        },
+        {
+          "text": "Juiz que recebia suborno",
+          "correct": false
+        },
+        {
+          "text": "Mercador que usava pesos falsos",
+          "correct": false
+        },
+        {
+          "text": "Soldado desertor",
+          "correct": false
+        }
+      ],
+      "explanation": "No grego clássico, hypokrités era o ator que \"respondia\" no palco e interpretava personagens usando máscaras. Jesus aplicou o termo a quem pratica a piedade \"para ser visto pelos homens\" (Mt 6:2,5,16) e a quem honra a Deus com os lábios, mas tem o coração longe dele (Mt 15:7-8). Nos \"ais\" de Mateus 23, a palavra aparece seis vezes — a religião como encenação, não como verdade.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 6,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "medium"
     }
   ]
 }

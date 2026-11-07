@@ -1959,6 +1959,440 @@
         "verse_end": 17
       },
       "difficulty": "expert"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0064",
+      "text": "Na tradição judaica, que cinco livros curtos formam os \"Megillot\" (rolos), lidos publicamente em festas e datas especiais?",
+      "options": [
+        {
+          "text": "Cantares, Rute, Lamentações, Eclesiastes e Ester",
+          "correct": true
+        },
+        {
+          "text": "Jonas, Obadias, Naum, Habacuque e Sofonias",
+          "correct": false
+        },
+        {
+          "text": "Esdras, Neemias, Ageu, Zacarias e Malaquias",
+          "correct": false
+        },
+        {
+          "text": "Josué, Juízes, Rute, 1 Samuel e 2 Samuel",
+          "correct": false
+        }
+      ],
+      "explanation": "Os cinco Megillot ficam juntos na terceira divisão da Bíblia hebraica (os Escritos) e são lidos na sinagoga: Cantares na Páscoa, Rute em Pentecostes (Shavuot), Lamentações no jejum do 9 de Av (destruição do templo), Eclesiastes nos Tabernáculos e Ester no Purim. A leitura de Ester no Purim é a única com apoio direto no próprio livro (Et 9:28).",
+      "divergence_note": "A ordem e o uso litúrgico dos Megillot são tradição judaica posterior; só a celebração do Purim com a memória de Ester tem base no texto bíblico.",
+      "reference": {
+        "book": "ester",
+        "chapter": 9,
+        "verse_start": 26,
+        "verse_end": 28
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0065",
+      "text": "O que significam as três consoantes da palavra \"Tanakh\", nome judaico da Bíblia hebraica?",
+      "options": [
+        {
+          "text": "Torá (Lei), Nevi'im (Profetas) e Ketuvim (Escritos)",
+          "correct": true
+        },
+        {
+          "text": "Templo, Nação e Reino",
+          "correct": false
+        },
+        {
+          "text": "Três Níveis de Kedushá (santidade)",
+          "correct": false
+        },
+        {
+          "text": "Talmude, Nazireu e Kipur",
+          "correct": false
+        }
+      ],
+      "explanation": "Tanakh é um acrônimo formado por T (Torá, os cinco livros de Moisés), N (Nevi'im, os Profetas — anteriores e posteriores) e K (Ketuvim, os Escritos — Salmos, Jó, Provérbios, os Megillot, Daniel, Esdras-Neemias e Crônicas). Jesus alude a essa divisão tripla ao falar da \"lei de Moisés, dos Profetas e dos Salmos\" (Lc 24:44), nomeando a terceira parte pelo seu primeiro livro.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 24,
+        "verse_start": 44,
+        "verse_end": 45
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0066",
+      "text": "Que livros a Bíblia hebraica classifica como \"Profetas anteriores\", embora a Bíblia cristã os chame de livros históricos?",
+      "options": [
+        {
+          "text": "Josué, Juízes, Samuel e Reis",
+          "correct": true
+        },
+        {
+          "text": "Gênesis, Êxodo, Levítico e Números",
+          "correct": false
+        },
+        {
+          "text": "Crônicas, Esdras, Neemias e Ester",
+          "correct": false
+        },
+        {
+          "text": "Isaías, Jeremias, Ezequiel e Daniel",
+          "correct": false
+        }
+      ],
+      "explanation": "Na divisão judaica, os Nevi'im dividem-se em \"anteriores\" (Josué, Juízes, Samuel, Reis) e \"posteriores\" (Isaías, Jeremias, Ezequiel e os Doze). Chamar Josué–Reis de \"profetas\" destaca que essas narrativas são história interpretada profeticamente: julgam reis e povo pela fidelidade à aliança. Rute, Crônicas, Esdras-Neemias e Ester ficam entre os Escritos, não entre os Profetas.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 17,
+        "verse_start": 13,
+        "verse_end": 15
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0067",
+      "text": "Qual salmo é atribuído, no título, a \"Moisés, homem de Deus\", sendo considerado o mais antigo do saltério?",
+      "options": [
+        {
+          "text": "Salmo 90",
+          "correct": true
+        },
+        {
+          "text": "Salmo 23",
+          "correct": false
+        },
+        {
+          "text": "Salmo 51",
+          "correct": false
+        },
+        {
+          "text": "Salmo 119",
+          "correct": false
+        }
+      ],
+      "explanation": "O Salmo 90 traz o título \"Oração de Moisés, homem de Deus\" e medita na eternidade de Deus e na brevidade da vida: \"Os dias da nossa vida chegam a setenta anos... Ensina-nos a contar os nossos dias, para que alcancemos coração sábio\" (vv. 10,12). Ele abre o Livro IV do saltério (Salmos 90–106). Além de Davi, os títulos nomeiam Asafe, os filhos de Corá, Salomão, Hemã e Etã.",
+      "divergence_note": null,
+      "reference": {
+        "book": "salmos",
+        "chapter": 90,
+        "verse_start": 1,
+        "verse_end": 12
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0068",
+      "text": "Quantos salmos trazem no título o nome de Davi, segundo a contagem tradicional do texto hebraico?",
+      "options": [
+        {
+          "text": "Setenta e três",
+          "correct": true
+        },
+        {
+          "text": "Cento e cinquenta",
+          "correct": false
+        },
+        {
+          "text": "Vinte e cinco",
+          "correct": false
+        },
+        {
+          "text": "Cem",
+          "correct": false
+        }
+      ],
+      "explanation": "Setenta e três salmos são rotulados \"de Davi\" (le-David) no texto hebraico — quase metade do saltério —, concentrados nos Livros I e II. O Novo Testamento atribui ainda a Davi os Salmos 2 e 95, que não têm título (At 4:25; Hb 4:7). A Septuaginta acrescenta o nome de Davi a outros salmos, por isso as contagens variam entre as tradições.",
+      "divergence_note": "A contagem de 73 segue os títulos hebraicos; a Septuaginta e a tradição posterior atribuem mais salmos a Davi, e o sentido exato da preposição no título (\"de\", \"para\", \"sobre\") é debatido.",
+      "reference": {
+        "book": "salmos",
+        "chapter": 72,
+        "verse_start": 20,
+        "verse_end": 20
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0069",
+      "text": "Além de Salomão, que dois autores são nomeados nos títulos dos capítulos finais de Provérbios?",
+      "options": [
+        {
+          "text": "Agur, filho de Jaqué, e o rei Lemuel",
+          "correct": true
+        },
+        {
+          "text": "Asafe e Hemã",
+          "correct": false
+        },
+        {
+          "text": "Etã e Jedutum",
+          "correct": false
+        },
+        {
+          "text": "Ezequias e Isaías",
+          "correct": false
+        }
+      ],
+      "explanation": "Provérbios 30 abre com \"Palavras de Agur, filho de Jaqué\", e Provérbios 31 com \"Palavras do rei Lemuel, a profecia que lhe ensinou a sua mãe\" — à qual se segue o poema acróstico da mulher virtuosa. O livro também registra que \"os homens de Ezequias, rei de Judá\" copiaram provérbios de Salomão (Pv 25:1), e inclui \"palavras dos sábios\" (Pv 22:17; 24:23).",
+      "divergence_note": null,
+      "reference": {
+        "book": "proverbios",
+        "chapter": 30,
+        "verse_start": 1,
+        "verse_end": 1
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0070",
+      "text": "O que significa a expressão \"Cântico dos Cânticos\", título hebraico do livro de Cantares?",
+      "options": [
+        {
+          "text": "É um superlativo: \"o melhor dos cânticos\", o cântico por excelência",
+          "correct": true
+        },
+        {
+          "text": "É um plural: \"coleção de todos os cânticos de Israel\"",
+          "correct": false
+        },
+        {
+          "text": "Significa \"cântico para o templo\"",
+          "correct": false
+        },
+        {
+          "text": "Significa \"cântico de casamento\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Cântico dos cânticos, que é de Salomão\" (Ct 1:1). Em hebraico, repetir o substantivo no genitivo forma o superlativo, como em \"Santo dos Santos\" (o lugar santíssimo), \"Rei dos reis\" e \"vaidade de vaidades\" (a maior vaidade). O título apresenta o livro como o mais excelente dos cânticos — e a tradição o inclui entre os livros de Salomão, que compôs \"mil e cinco\" cânticos (1Rs 4:32).",
+      "divergence_note": null,
+      "reference": {
+        "book": "cantares",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 1
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0071",
+      "text": "De que palavra grega vem o nome \"Bíblia\", e o que ela significa?",
+      "options": [
+        {
+          "text": "De ta biblia, \"os livros\" — plural de biblion, livro ou rolo",
+          "correct": true
+        },
+        {
+          "text": "De bibliothéke, \"biblioteca\"",
+          "correct": false
+        },
+        {
+          "text": "De basileia, \"reino\"",
+          "correct": false
+        },
+        {
+          "text": "De biós, \"vida\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Bíblia\" vem do grego ta biblia, \"os livros\" (plural de biblion, diminutivo de byblos, o papiro — nome ligado à cidade fenícia de Biblos, exportadora de papiro). Os cristãos de língua grega chamavam assim a coleção das Escrituras; no latim medieval, o plural passou a ser entendido como singular feminino, \"a Bíblia\". O nome lembra que a Bíblia é uma biblioteca de 66 livros com uma só história.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2timoteo",
+        "chapter": 3,
+        "verse_start": 15,
+        "verse_end": 17
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0072",
+      "text": "Por que as duas partes da Bíblia são chamadas \"Testamentos\"?",
+      "options": [
+        {
+          "text": "Porque o termo latino testamentum traduziu o grego diatheke, \"aliança\" — a antiga aliança do Sinai e a nova aliança em Cristo",
+          "correct": true
+        },
+        {
+          "text": "Porque foram escritas como testamentos de Moisés e de Jesus antes de morrerem",
+          "correct": false
+        },
+        {
+          "text": "Porque \"testamento\" significa \"testemunho\" em hebraico",
+          "correct": false
+        },
+        {
+          "text": "Porque foram ditadas a testemunhas oculares",
+          "correct": false
+        }
+      ],
+      "explanation": "Jeremias anunciou uma \"nova aliança\" (Jr 31:31), e Jesus disse na ceia: \"este cálice é o novo testamento (diatheke) no meu sangue\" (Lc 22:20; 1Co 11:25). Paulo chama a leitura da Lei de \"leitura do velho testamento\" (2Co 3:14). A Septuaginta traduziu o hebraico berit (aliança) por diatheke, e a Vulgata o verteu por testamentum — daí \"Antigo\" e \"Novo Testamento\", isto é, antiga e nova aliança.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2corintios",
+        "chapter": 3,
+        "verse_start": 12,
+        "verse_end": 16
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0073",
+      "text": "Segundo os historiadores, quem é tradicionalmente apontado como o responsável pela divisão da Bíblia em capítulos, no início do século XIII?",
+      "options": [
+        {
+          "text": "Stephen Langton, professor em Paris e depois arcebispo de Canterbury",
+          "correct": true
+        },
+        {
+          "text": "Jerônimo, tradutor da Vulgata",
+          "correct": false
+        },
+        {
+          "text": "Robert Estienne, impressor de Genebra",
+          "correct": false
+        },
+        {
+          "text": "Martinho Lutero, reformador alemão",
+          "correct": false
+        }
+      ],
+      "explanation": "A divisão em capítulos usada até hoje é atribuída a Stephen Langton (c. 1150–1228), feita por volta de 1205 na Vulgata latina enquanto ensinava em Paris, e adotada depois também pelas Bíblias hebraicas. Os versículos vieram mais tarde: Robert Estienne os numerou no Novo Testamento em 1551. Por isso, pausas de sentido nem sempre coincidem com as divisões — como Gênesis 1 e 2, ou a Ceia em 1 Coríntios 10–11.",
+      "divergence_note": "Dados da história do texto, não do conteúdo bíblico; a referência aponta para a leitura explicada da Lei em Neemias, ancestral da prática de dividir e expor o texto.",
+      "reference": {
+        "book": "neemias",
+        "chapter": 8,
+        "verse_start": 8,
+        "verse_end": 8
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0074",
+      "text": "Quais livros do Antigo Testamento eram originalmente um só livro cada, e foram divididos em dois pela Septuaginta por causa do tamanho dos rolos?",
+      "options": [
+        {
+          "text": "Samuel, Reis e Crônicas",
+          "correct": true
+        },
+        {
+          "text": "Gênesis e Êxodo",
+          "correct": false
+        },
+        {
+          "text": "Isaías e Jeremias",
+          "correct": false
+        },
+        {
+          "text": "Salmos e Provérbios",
+          "correct": false
+        }
+      ],
+      "explanation": "Na Bíblia hebraica, Samuel, Reis e Crônicas eram obras únicas, escritas sem vogais em um rolo cada. A tradução grega, com vogais, dobrou o volume do texto, exigindo dois rolos — daí 1 e 2 Samuel, 1 e 2 Reis (chamados 1–4 Reinos na Septuaginta) e 1 e 2 Crônicas. O mesmo ocorreu com Esdras-Neemias. A divisão só entrou nas Bíblias hebraicas impressas no século XV.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 1
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0075",
+      "text": "Quais são os três profetas pós-exílicos, que ministraram depois do retorno da Babilônia?",
+      "options": [
+        {
+          "text": "Ageu, Zacarias e Malaquias",
+          "correct": true
+        },
+        {
+          "text": "Isaías, Jeremias e Ezequiel",
+          "correct": false
+        },
+        {
+          "text": "Oseias, Amós e Miqueias",
+          "correct": false
+        },
+        {
+          "text": "Jonas, Naum e Habacuque",
+          "correct": false
+        }
+      ],
+      "explanation": "Ageu e Zacarias profetizaram em 520 a.C., no segundo ano de Dario, animando Zorobabel e Josué a retomar a construção do templo (Ed 5:1; Ag 1:1; Zc 1:1). Malaquias, o último dos profetas, atuou cerca de um século depois, no tempo de Neemias, denunciando sacerdotes negligentes e casamentos mistos. Os três encerram o Antigo Testamento, antes dos quatro séculos de silêncio profético.",
+      "divergence_note": null,
+      "reference": {
+        "book": "ageu",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 1
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0076",
+      "text": "Qual é o único livro do Novo Testamento classificado como profético (apocalíptico), distinto dos Evangelhos, de Atos e das cartas?",
+      "options": [
+        {
+          "text": "Apocalipse",
+          "correct": true
+        },
+        {
+          "text": "Hebreus",
+          "correct": false
+        },
+        {
+          "text": "Judas",
+          "correct": false
+        },
+        {
+          "text": "2 Pedro",
+          "correct": false
+        }
+      ],
+      "explanation": "O Novo Testamento costuma ser dividido em quatro gêneros: Evangelhos (4), história (Atos), cartas (21) e profecia (Apocalipse). O livro se apresenta como \"revelação de Jesus Cristo\" e \"palavras desta profecia\" (Ap 1:1-3) e combina três formas: carta às sete igrejas, profecia e visão apocalíptica, com imagens herdadas de Daniel, Ezequiel e Zacarias.",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "organizacao-da-biblia-0077",
+      "text": "Segundo os estudiosos, qual autor escreveu o maior volume de texto do Novo Testamento, em número de palavras?",
+      "options": [
+        {
+          "text": "Lucas, com o Evangelho e Atos (cerca de um quarto do Novo Testamento)",
+          "correct": true
+        },
+        {
+          "text": "Paulo, com treze cartas",
+          "correct": false
+        },
+        {
+          "text": "João, com cinco livros",
+          "correct": false
+        },
+        {
+          "text": "Pedro, com duas cartas",
+          "correct": false
+        }
+      ],
+      "explanation": "Lucas e Atos somam cerca de 37.900 palavras no grego — aproximadamente 27% do Novo Testamento —, superando o total das treze cartas de Paulo (cerca de 32.400) e os cinco livros de João. Ambos os livros são dedicados a Teófilo e formam uma obra em dois volumes (Lc 1:1-4; At 1:1-2). Paulo, porém, é o autor com o maior número de livros.",
+      "divergence_note": "As contagens de palavras variam ligeiramente conforme a edição do texto grego utilizada.",
+      "reference": {
+        "book": "lucas",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 4
+      },
+      "difficulty": "hard"
     }
   ]
 }
