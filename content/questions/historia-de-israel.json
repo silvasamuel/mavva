@@ -1526,6 +1526,440 @@
         "verse_end": 11
       },
       "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-de-israel-0050",
+      "text": "Que povo de Canaã enganou Josué fingindo vir de terra muito distante, com pão bolorento e odres rotos, e assim conseguiu uma aliança de paz?",
+      "options": [
+        {
+          "text": "Os gibeonitas",
+          "correct": true
+        },
+        {
+          "text": "Os jebuseus",
+          "correct": false
+        },
+        {
+          "text": "Os amorreus",
+          "correct": false
+        },
+        {
+          "text": "Os heveus de Hazor",
+          "correct": false
+        }
+      ],
+      "explanation": "Os líderes de Israel \"não pediram conselho ao SENHOR\" e juraram paz. Ao descobrir o ardil, mantiveram o juramento, mas fizeram dos gibeonitas rachadores de lenha e tiradores de água para a casa de Deus (Js 9:3-27). Mais tarde Israel defenderia Gibeom na batalha em que o sol parou.",
+      "divergence_note": null,
+      "reference": {
+        "book": "josue",
+        "chapter": 9,
+        "verse_start": 3,
+        "verse_end": 27
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "historia-de-israel-0051",
+      "text": "Quantas pessoas da casa de Jacó desceram ao Egito, segundo Êxodo 1:5?",
+      "options": [
+        {
+          "text": "Setenta",
+          "correct": true
+        },
+        {
+          "text": "Doze",
+          "correct": false
+        },
+        {
+          "text": "Cento e vinte",
+          "correct": false
+        },
+        {
+          "text": "Quatrocentas",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Todas as almas, pois, que descenderam de Jacó foram setenta almas; José, porém, estava no Egito\" (Êx 1:5; cf. Gn 46:27). De setenta pessoas a um povo que \"encheu a terra\" — multiplicação que assustou o novo Faraó.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 7
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "historia-de-israel-0052",
+      "text": "Quem comandou os homens de Israel na batalha contra Amaleque em Refidim, enquanto Moisés orava no alto do outeiro?",
+      "options": [
+        {
+          "text": "Josué",
+          "correct": true
+        },
+        {
+          "text": "Arão",
+          "correct": false
+        },
+        {
+          "text": "Calebe",
+          "correct": false
+        },
+        {
+          "text": "Hur",
+          "correct": false
+        }
+      ],
+      "explanation": "É a primeira menção de Josué na Bíblia: \"Disse, pois, Moisés a Josué: Escolhe-nos homens, e sai, peleja contra Amaleque\" (Êx 17:9). Enquanto as mãos de Moisés ficavam erguidas, Israel prevalecia; Josué \"desfez a Amaleque\" ao fio da espada.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 17,
+        "verse_start": 8,
+        "verse_end": 13
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "historia-de-israel-0053",
+      "text": "Que povo capturou a arca da aliança na batalha em que morreram Hofni e Fineias, os filhos do sacerdote Eli?",
+      "options": [
+        {
+          "text": "Os filisteus",
+          "correct": true
+        },
+        {
+          "text": "Os amonitas",
+          "correct": false
+        },
+        {
+          "text": "Os moabitas",
+          "correct": false
+        },
+        {
+          "text": "Os midianitas",
+          "correct": false
+        }
+      ],
+      "explanation": "Israel levou a arca ao campo como amuleto, mas foi derrotado em Ebenézer: trinta mil caíram, a arca foi tomada e os filhos de Eli morreram. Ao ouvir a notícia, Eli caiu da cadeira e morreu (1Sm 4:1-18). A arca ficou com os filisteus até que as pragas os obrigaram a devolvê-la.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 4,
+        "verse_start": 1,
+        "verse_end": 11
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "historia-de-israel-0054",
+      "text": "Que povo atacou a retaguarda de Israel no deserto, ferindo os cansados e fracos, e por isso recebeu a sentença de ter sua memória apagada de debaixo do céu?",
+      "options": [
+        {
+          "text": "Amaleque",
+          "correct": true
+        },
+        {
+          "text": "Edom",
+          "correct": false
+        },
+        {
+          "text": "Moabe",
+          "correct": false
+        },
+        {
+          "text": "Midiã",
+          "correct": false
+        }
+      ],
+      "explanation": "Deuteronômio 25:17-19 lembra o ataque covarde de Amaleque, que \"não temeu a Deus\". A sentença ecoa em Êxodo 17:14 e explica a ordem dada a Saul séculos depois (1Sm 15:2-3) — ordem que ele não cumpriu por completo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 25,
+        "verse_start": 17,
+        "verse_end": 19
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-de-israel-0055",
+      "text": "Depois da morte de Saul, quem Abner fez rei sobre Israel em Maanaim, enquanto Davi reinava sobre Judá em Hebrom?",
+      "options": [
+        {
+          "text": "Isbosete, filho de Saul",
+          "correct": true
+        },
+        {
+          "text": "Mefibosete, filho de Jônatas",
+          "correct": false
+        },
+        {
+          "text": "Abner, o próprio general",
+          "correct": false
+        },
+        {
+          "text": "Adonias",
+          "correct": false
+        }
+      ],
+      "explanation": "Isbosete reinou dois anos sobre Israel, sustentado por Abner, enquanto \"a casa de Davi se ia fortalecendo\" (2Sm 2:8-11; 3:1). Após a morte de Abner, dois capitães assassinaram Isbosete, e as tribos vieram a Hebrom ungir Davi rei sobre todo o Israel (2Sm 4-5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 2,
+        "verse_start": 8,
+        "verse_end": 11
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-de-israel-0056",
+      "text": "Com quantos homens Gideão começou, antes de o SENHOR reduzir o exército aos trezentos que lamberam a água?",
+      "options": [
+        {
+          "text": "Trinta e dois mil",
+          "correct": true
+        },
+        {
+          "text": "Dez mil",
+          "correct": false
+        },
+        {
+          "text": "Três mil",
+          "correct": false
+        },
+        {
+          "text": "Cem mil",
+          "correct": false
+        }
+      ],
+      "explanation": "Deus disse que o povo era \"demais\" para que Israel não se gloriasse: \"a minha mão me livrou\". Vinte e dois mil voltaram por medo; dos dez mil restantes, só trezentos foram escolhidos pelo modo de beber (Jz 7:2-7).",
+      "divergence_note": null,
+      "reference": {
+        "book": "juizes",
+        "chapter": 7,
+        "verse_start": 1,
+        "verse_end": 8
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-de-israel-0057",
+      "text": "A quem Deus disse em Berseba: \"Não temas descer ao Egito, porque eu te farei ali uma grande nação... e certamente te farei tornar a subir\"?",
+      "options": [
+        {
+          "text": "Jacó",
+          "correct": true
+        },
+        {
+          "text": "Abraão",
+          "correct": false
+        },
+        {
+          "text": "José",
+          "correct": false
+        },
+        {
+          "text": "Isaque",
+          "correct": false
+        }
+      ],
+      "explanation": "A caminho de rever José, Jacó ofereceu sacrifícios em Berseba e recebeu a visão noturna (Gn 46:1-4). A promessa enquadra os 430 anos no Egito dentro do plano de Deus: a descida era passagem, não destino. Isaque, ao contrário, fora proibido de descer ao Egito (Gn 26:2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 46,
+        "verse_start": 1,
+        "verse_end": 4
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-de-israel-0058",
+      "text": "Que povo, descendente de Ló, tinha como rei Balaque, que contratou Balaão para amaldiçoar Israel acampado nas suas campinas?",
+      "options": [
+        {
+          "text": "Os moabitas",
+          "correct": true
+        },
+        {
+          "text": "Os amonitas",
+          "correct": false
+        },
+        {
+          "text": "Os edomitas",
+          "correct": false
+        },
+        {
+          "text": "Os midianitas",
+          "correct": false
+        }
+      ],
+      "explanation": "Moabe \"temeu muito\" diante da multidão de Israel (Nm 22:1-6). Moabe e Amom descendiam das filhas de Ló (Gn 19:37-38), e por isso Israel foi proibido de tomar-lhes a terra (Dt 2:9, 19). Rute, a moabita, entraria mais tarde na linhagem de Davi.",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 22,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-de-israel-0059",
+      "text": "Segundo os historiadores, em que ano aproximado os babilônios destruíram Jerusalém e o templo de Salomão?",
+      "options": [
+        {
+          "text": "586 a.C.",
+          "correct": true
+        },
+        {
+          "text": "722 a.C.",
+          "correct": false
+        },
+        {
+          "text": "539 a.C.",
+          "correct": false
+        },
+        {
+          "text": "701 a.C.",
+          "correct": false
+        }
+      ],
+      "explanation": "2 Reis 25:8-9 data a destruição no décimo nono ano de Nabucodonosor, que os historiadores situam em 587/586 a.C. As outras datas marcam a queda de Samaria (722), a tomada da Babilônia por Ciro (539) e o cerco de Senaqueribe a Jerusalém (701).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 25,
+        "verse_start": 8,
+        "verse_end": 10
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-de-israel-0060",
+      "text": "Quem foi o primeiro juiz de Israel, que livrou o povo de Cusã-Risataim, rei da Mesopotâmia?",
+      "options": [
+        {
+          "text": "Otniel, sobrinho de Calebe",
+          "correct": true
+        },
+        {
+          "text": "Eúde",
+          "correct": false
+        },
+        {
+          "text": "Sangar",
+          "correct": false
+        },
+        {
+          "text": "Débora",
+          "correct": false
+        }
+      ],
+      "explanation": "Otniel, filho de Quenaz e irmão mais novo de Calebe, já havia conquistado Quiriate-Sefer e recebido Acsa por esposa (Jz 1:12-13). \"Veio sobre ele o Espírito do SENHOR\", e a terra descansou quarenta anos (Jz 3:7-11).",
+      "divergence_note": null,
+      "reference": {
+        "book": "juizes",
+        "chapter": 3,
+        "verse_start": 7,
+        "verse_end": 11
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-de-israel-0061",
+      "text": "Que palavra os gileaditas de Jefté mandavam pronunciar nos vaus do Jordão para identificar os efraimitas fugitivos, que não conseguiam dizê-la corretamente?",
+      "options": [
+        {
+          "text": "Xibolete",
+          "correct": true
+        },
+        {
+          "text": "Hosana",
+          "correct": false
+        },
+        {
+          "text": "Maranata",
+          "correct": false
+        },
+        {
+          "text": "Ebenézer",
+          "correct": false
+        }
+      ],
+      "explanation": "Os efraimitas diziam \"sibolete\", sem o som do \"x\", e eram mortos: quarenta e dois mil caíram (Jz 12:4-6). O episódio seguiu-se à guerra civil provocada pela queixa de Efraim por não ter sido chamado à batalha contra Amom.",
+      "divergence_note": null,
+      "reference": {
+        "book": "juizes",
+        "chapter": 12,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-de-israel-0062",
+      "text": "Por quanto tempo a arca do SENHOR permaneceu na terra dos filisteus, passando por Asdode, Gate e Ecrom, antes de ser devolvida num carro puxado por vacas?",
+      "options": [
+        {
+          "text": "Sete meses",
+          "correct": true
+        },
+        {
+          "text": "Três dias",
+          "correct": false
+        },
+        {
+          "text": "Vinte anos",
+          "correct": false
+        },
+        {
+          "text": "Quarenta dias",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Havendo estado a arca do SENHOR na terra dos filisteus sete meses\" (1Sm 6:1), os sacerdotes pagãos aconselharam devolvê-la com ofertas de ouro — cinco tumores e cinco ratos — e as vacas, sem guia, foram direto a Bete-Semes (1Sm 6:7-12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 6,
+        "verse_start": 1,
+        "verse_end": 12
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-de-israel-0063",
+      "text": "Qual rei da Assíria, nos dias de Peca, levou cativos os habitantes de Gileade, da Galileia e de Naftali, antes da queda final de Samaria?",
+      "options": [
+        {
+          "text": "Tiglate-Pileser",
+          "correct": true
+        },
+        {
+          "text": "Salmanasar",
+          "correct": false
+        },
+        {
+          "text": "Senaqueribe",
+          "correct": false
+        },
+        {
+          "text": "Esar-Hadom",
+          "correct": false
+        }
+      ],
+      "explanation": "2 Reis 15:29 registra a primeira grande deportação do Norte, cerca de 732 a.C., quando Tiglate-Pileser (também chamado Pul) tomou a Transjordânia e a Galileia. Isaías 9:1-2 fala dessa terra humilhada — Zebulom e Naftali — como a que veria \"uma grande luz\", cumprido em Mateus 4:13-16.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 15,
+        "verse_start": 29,
+        "verse_end": 29
+      },
+      "difficulty": "expert"
     }
   ]
 }

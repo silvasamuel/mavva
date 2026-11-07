@@ -1461,6 +1461,440 @@
         "verse_end": 7
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "cartas-0048",
+      "text": "Em qual carta Paulo escreve: \"Para mim o viver é Cristo, e o morrer é ganho\"?",
+      "options": [
+        {
+          "text": "Filipenses",
+          "correct": true
+        },
+        {
+          "text": "Romanos",
+          "correct": false
+        },
+        {
+          "text": "Gálatas",
+          "correct": false
+        },
+        {
+          "text": "2 Timóteo",
+          "correct": false
+        }
+      ],
+      "explanation": "Preso e sem saber se sairia vivo, Paulo escreve aos filipenses que está \"em aperto entre dois\": partir e estar com Cristo é muito melhor, mas ficar é mais necessário para a igreja (Fp 1:21-24). A frase resume uma vida em que Cristo é o centro tanto do viver quanto do morrer.",
+      "divergence_note": null,
+      "reference": {
+        "book": "filipenses",
+        "chapter": 1,
+        "verse_start": 21,
+        "verse_end": 24
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cartas-0049",
+      "text": "Qual carta abre louvando a Deus, que \"nos abençoou com todas as bênçãos espirituais nos lugares celestiais em Cristo\"?",
+      "options": [
+        {
+          "text": "Efésios",
+          "correct": true
+        },
+        {
+          "text": "Colossenses",
+          "correct": false
+        },
+        {
+          "text": "1 Pedro",
+          "correct": false
+        },
+        {
+          "text": "Hebreus",
+          "correct": false
+        }
+      ],
+      "explanation": "Efésios 1:3-14 é uma única e longa frase no grego, um hino que percorre eleição, adoção, redenção e o selo do Espírito. Paulo começa a carta não com um problema da igreja, mas com a grandeza do que Deus fez em Cristo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "efesios",
+        "chapter": 1,
+        "verse_start": 3,
+        "verse_end": 14
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cartas-0050",
+      "text": "Em qual carta está a exortação: \"Não vos conformeis com este mundo, mas transformai-vos pela renovação do vosso entendimento\"?",
+      "options": [
+        {
+          "text": "Romanos",
+          "correct": true
+        },
+        {
+          "text": "Efésios",
+          "correct": false
+        },
+        {
+          "text": "Colossenses",
+          "correct": false
+        },
+        {
+          "text": "1 Tessalonicenses",
+          "correct": false
+        }
+      ],
+      "explanation": "Depois de onze capítulos expondo o evangelho, Paulo pede em Romanos 12:1-2 que os crentes apresentem seus corpos como sacrifício vivo. A transformação começa pela mente renovada, que passa a discernir \"a boa, agradável e perfeita vontade de Deus\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 12,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cartas-0051",
+      "text": "A qual igreja Paulo escreveu repreendendo a desordem na Ceia do Senhor, em que \"um tem fome e outro embriaga-se\"?",
+      "options": [
+        {
+          "text": "Coríntios",
+          "correct": true
+        },
+        {
+          "text": "Gálatas",
+          "correct": false
+        },
+        {
+          "text": "Tessalonicenses",
+          "correct": false
+        },
+        {
+          "text": "Efésios",
+          "correct": false
+        }
+      ],
+      "explanation": "Em Corinto a Ceia era celebrada junto a uma refeição comunitária, e os ricos comiam antes, deixando os pobres com fome (1Co 11:20-22). Paulo então relembra as palavras da instituição da Ceia e adverte que quem come indignamente \"come e bebe para sua própria condenação\" (1Co 11:29).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1corintios",
+        "chapter": 11,
+        "verse_start": 17,
+        "verse_end": 34
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cartas-0052",
+      "text": "Segundo Colossenses 4:16, com qual igreja vizinha os colossenses deviam trocar cartas de Paulo?",
+      "options": [
+        {
+          "text": "Laodiceia",
+          "correct": true
+        },
+        {
+          "text": "Éfeso",
+          "correct": false
+        },
+        {
+          "text": "Hierápolis",
+          "correct": false
+        },
+        {
+          "text": "Filipos",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Depois que esta epístola tiver sido lida entre vós, fazei que também o seja na igreja dos laodicenses, e a que veio de Laodiceia lede-a vós também\" (Cl 4:16). Laodiceia ficava a poucos quilômetros de Colossos; a carta a ela enviada não se preservou, ou, como alguns propõem, seria a própria carta aos Efésios, que circulou entre as igrejas.",
+      "divergence_note": null,
+      "reference": {
+        "book": "colossenses",
+        "chapter": 4,
+        "verse_start": 13,
+        "verse_end": 16
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cartas-0053",
+      "text": "Em qual carta Pedro escreve: \"Lançando sobre ele toda a vossa ansiedade, porque ele tem cuidado de vós\"?",
+      "options": [
+        {
+          "text": "1 Pedro",
+          "correct": true
+        },
+        {
+          "text": "2 Pedro",
+          "correct": false
+        },
+        {
+          "text": "Tiago",
+          "correct": false
+        },
+        {
+          "text": "Hebreus",
+          "correct": false
+        }
+      ],
+      "explanation": "A frase vem no fim de 1 Pedro, dirigida a crentes que sofriam perseguição (1Pe 5:7). Ela segue a ordem de se humilhar \"debaixo da potente mão de Deus\" e precede o alerta sobre o diabo, que \"anda em derredor, bramando como leão\" (1Pe 5:6-8).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1pedro",
+        "chapter": 5,
+        "verse_start": 6,
+        "verse_end": 8
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cartas-0054",
+      "text": "Qual carta chama Jesus de \"autor e consumador da fé\" e exorta a correr \"com paciência a carreira que nos está proposta\"?",
+      "options": [
+        {
+          "text": "Hebreus",
+          "correct": true
+        },
+        {
+          "text": "Filipenses",
+          "correct": false
+        },
+        {
+          "text": "2 Timóteo",
+          "correct": false
+        },
+        {
+          "text": "Tiago",
+          "correct": false
+        }
+      ],
+      "explanation": "Logo depois da galeria de heróis da fé de Hebreus 11, o autor compara a vida cristã a uma corrida assistida por \"uma tão grande nuvem de testemunhas\" (Hb 12:1-2). O olhar deve ficar fixo em Jesus, que suportou a cruz \"pelo gozo que lhe estava proposto\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "hebreus",
+        "chapter": 12,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cartas-0055",
+      "text": "Em qual carta Paulo conta que conheceu um homem em Cristo \"arrebatado até ao terceiro céu\", falando veladamente de si mesmo?",
+      "options": [
+        {
+          "text": "2 Coríntios",
+          "correct": true
+        },
+        {
+          "text": "Gálatas",
+          "correct": false
+        },
+        {
+          "text": "Efésios",
+          "correct": false
+        },
+        {
+          "text": "Colossenses",
+          "correct": false
+        }
+      ],
+      "explanation": "Forçado pelos adversários a se defender, Paulo relata a visão de catorze anos antes, em que ouviu \"palavras inefáveis\" (2Co 12:1-4). Em vez de se gloriar nela, passa a falar do \"espinho na carne\" e da graça que lhe basta (2Co 12:7-9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2corintios",
+        "chapter": 12,
+        "verse_start": 1,
+        "verse_end": 4
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cartas-0056",
+      "text": "Segundo Gálatas 2, a quem Paulo resistiu \"na cara\" em Antioquia, por ter se afastado da mesa dos gentios?",
+      "options": [
+        {
+          "text": "Pedro (Cefas)",
+          "correct": true
+        },
+        {
+          "text": "Barnabé",
+          "correct": false
+        },
+        {
+          "text": "Tiago",
+          "correct": false
+        },
+        {
+          "text": "João Marcos",
+          "correct": false
+        }
+      ],
+      "explanation": "Pedro comia com os gentios, mas, quando chegaram alguns da parte de Tiago, retirou-se por medo dos da circuncisão, e até Barnabé foi levado por essa dissimulação (Gl 2:11-13). Paulo o confrontou publicamente porque não andavam \"bem e direitamente conforme a verdade do evangelho\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "galatas",
+        "chapter": 2,
+        "verse_start": 11,
+        "verse_end": 14
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "cartas-0057",
+      "text": "Em qual carta está escrito: \"Se alguém está em Cristo, nova criatura é; as coisas velhas já passaram; eis que tudo se fez novo\"?",
+      "options": [
+        {
+          "text": "2 Coríntios",
+          "correct": true
+        },
+        {
+          "text": "Romanos",
+          "correct": false
+        },
+        {
+          "text": "Efésios",
+          "correct": false
+        },
+        {
+          "text": "Colossenses",
+          "correct": false
+        }
+      ],
+      "explanation": "A declaração está no coração de 2 Coríntios 5, onde Paulo explica o ministério da reconciliação: Deus estava em Cristo reconciliando consigo o mundo (2Co 5:17-19). Por isso os apóstolos são \"embaixadores da parte de Cristo\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "2corintios",
+        "chapter": 5,
+        "verse_start": 17,
+        "verse_end": 21
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cartas-0058",
+      "text": "Em qual carta Paulo chama atenção para a própria caligrafia: \"Vede com que grandes letras vos escrevi por minha mão\"?",
+      "options": [
+        {
+          "text": "Gálatas",
+          "correct": true
+        },
+        {
+          "text": "Romanos",
+          "correct": false
+        },
+        {
+          "text": "2 Tessalonicenses",
+          "correct": false
+        },
+        {
+          "text": "Filemom",
+          "correct": false
+        }
+      ],
+      "explanation": "Paulo normalmente ditava suas cartas a um secretário, como Tércio em Romanos 16:22, e acrescentava uma saudação de próprio punho (2Ts 3:17). Em Gálatas 6:11 ele toma a pena para o trecho final, e as \"grandes letras\" sublinham a urgência do apelo contra a circuncisão imposta aos gentios.",
+      "divergence_note": null,
+      "reference": {
+        "book": "galatas",
+        "chapter": 6,
+        "verse_start": 11,
+        "verse_end": 18
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "cartas-0059",
+      "text": "Em qual carta Paulo ordena: \"Se alguém não quiser trabalhar, não coma também\"?",
+      "options": [
+        {
+          "text": "2 Tessalonicenses",
+          "correct": true
+        },
+        {
+          "text": "1 Timóteo",
+          "correct": false
+        },
+        {
+          "text": "Tito",
+          "correct": false
+        },
+        {
+          "text": "1 Coríntios",
+          "correct": false
+        }
+      ],
+      "explanation": "Alguns em Tessalônica tinham abandonado o trabalho e andavam \"desordenadamente\", talvez por esperarem a volta iminente do Senhor (2Ts 3:6-12). Paulo lembra o próprio exemplo, pois trabalhou \"noite e dia\" para não ser pesado a ninguém.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2tessalonicenses",
+        "chapter": 3,
+        "verse_start": 6,
+        "verse_end": 12
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "cartas-0060",
+      "text": "Em qual carta está o convite: \"Chegai-vos a Deus, e ele se chegará a vós\"?",
+      "options": [
+        {
+          "text": "Tiago",
+          "correct": true
+        },
+        {
+          "text": "1 João",
+          "correct": false
+        },
+        {
+          "text": "Hebreus",
+          "correct": false
+        },
+        {
+          "text": "1 Pedro",
+          "correct": false
+        }
+      ],
+      "explanation": "Tiago 4 denuncia as guerras e contendas que nascem dos desejos egoístas e da amizade com o mundo. Ao chamado de se chegar a Deus seguem-se as ordens de limpar as mãos, purificar o coração e humilhar-se diante do Senhor, \"e ele vos exaltará\" (Tg 4:7-10).",
+      "divergence_note": null,
+      "reference": {
+        "book": "tiago",
+        "chapter": 4,
+        "verse_start": 7,
+        "verse_end": 10
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "cartas-0061",
+      "text": "Qual carta adverte: \"Se alguém vem ter convosco e não traz esta doutrina, não o recebais em casa, nem tampouco o saudeis\"?",
+      "options": [
+        {
+          "text": "2 João",
+          "correct": true
+        },
+        {
+          "text": "3 João",
+          "correct": false
+        },
+        {
+          "text": "Judas",
+          "correct": false
+        },
+        {
+          "text": "2 Pedro",
+          "correct": false
+        }
+      ],
+      "explanation": "A breve 2 João, dirigida à \"senhora eleita e a seus filhos\", alerta contra enganadores que negavam que Jesus Cristo veio em carne (2Jo 1:7-11). Como os mestres itinerantes dependiam da hospitalidade das igrejas, hospedá-los equivalia a apoiar sua pregação.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2joao",
+        "chapter": 1,
+        "verse_start": 7,
+        "verse_end": 11
+      },
+      "difficulty": "medium"
     }
   ]
 }

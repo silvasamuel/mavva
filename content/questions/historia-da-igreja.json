@@ -1428,6 +1428,440 @@
         "verse_end": 11
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0047",
+      "text": "Quem Paulo escolheu como companheiro para a segunda viagem missionária, depois de se separar de Barnabé?",
+      "options": [
+        {
+          "text": "Silas",
+          "correct": true
+        },
+        {
+          "text": "Timóteo",
+          "correct": false
+        },
+        {
+          "text": "Lucas",
+          "correct": false
+        },
+        {
+          "text": "Tito",
+          "correct": false
+        }
+      ],
+      "explanation": "Barnabé levou João Marcos para Chipre, \"e Paulo, tendo escolhido a Silas, partiu, encomendado pelos irmãos à graça de Deus\" (At 15:39-40). Silas era profeta e líder da igreja de Jerusalém (At 15:22, 32) e, com Paulo, foi açoitado e preso em Filipos.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 15,
+        "verse_start": 36,
+        "verse_end": 41
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "historia-da-igreja-0048",
+      "text": "Qual discípulo de Listra, filho de mãe judia crente e de pai grego, Paulo levou consigo e circuncidou \"por causa dos judeus\" daquela região?",
+      "options": [
+        {
+          "text": "Timóteo",
+          "correct": true
+        },
+        {
+          "text": "Tito",
+          "correct": false
+        },
+        {
+          "text": "Trófimo",
+          "correct": false
+        },
+        {
+          "text": "Erasto",
+          "correct": false
+        }
+      ],
+      "explanation": "Timóteo tinha bom testemunho em Listra e Icônio. Paulo o circuncidou para não criar obstáculo à pregação entre judeus (At 16:1-3) — embora se recusasse a circuncidar Tito, grego, quando isso significava ceder aos legalistas (Gl 2:3-5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 16,
+        "verse_start": 1,
+        "verse_end": 5
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "historia-da-igreja-0049",
+      "text": "Que fim teve Herodes Agripa, em Cesareia, depois que o povo aclamou o seu discurso dizendo \"Voz de Deus, e não de homem\"?",
+      "options": [
+        {
+          "text": "Foi ferido por um anjo e morreu comido de bichos",
+          "correct": true
+        },
+        {
+          "text": "Foi deposto pelo imperador e exilado",
+          "correct": false
+        },
+        {
+          "text": "Caiu do trono e quebrou o pescoço",
+          "correct": false
+        },
+        {
+          "text": "Foi apedrejado pela multidão",
+          "correct": false
+        }
+      ],
+      "explanation": "\"No mesmo instante, feriu-o o anjo do Senhor, porque não deu glória a Deus; e, comido de bichos, expirou\" (At 12:23). Lucas conclui: \"E a palavra de Deus crescia e se multiplicava\" — o rei que matara Tiago e prendera Pedro morreu, e o evangelho seguiu.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 12,
+        "verse_start": 20,
+        "verse_end": 24
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0050",
+      "text": "Segundo os historiadores, qual imperador romano, com o Édito de Milão (313 d.C.), concedeu liberdade de culto aos cristãos e pôs fim às perseguições oficiais?",
+      "options": [
+        {
+          "text": "Constantino",
+          "correct": true
+        },
+        {
+          "text": "Nero",
+          "correct": false
+        },
+        {
+          "text": "Diocleciano",
+          "correct": false
+        },
+        {
+          "text": "Teodósio",
+          "correct": false
+        }
+      ],
+      "explanation": "Constantino, após a vitória na ponte Mílvia (312), legalizou o cristianismo e devolveu propriedades confiscadas; décadas depois, Teodósio o faria religião oficial do Império. Diocleciano havia conduzido a última grande perseguição (303-311). A oração \"pelos reis e por todos os que estão em eminência\" (1Tm 2:1-2) ganhou novo contexto.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1timoteo",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": 4
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0051",
+      "text": "Segundo os historiadores, em que ano Martinho Lutero afixou as 95 teses na porta da igreja do castelo de Wittenberg, marco inicial da Reforma Protestante?",
+      "options": [
+        {
+          "text": "1517",
+          "correct": true
+        },
+        {
+          "text": "1492",
+          "correct": false
+        },
+        {
+          "text": "1545",
+          "correct": false
+        },
+        {
+          "text": "1611",
+          "correct": false
+        }
+      ],
+      "explanation": "Em 31 de outubro de 1517, Lutero protestou contra a venda de indulgências. A Reforma recuperou a ênfase na salvação pela graça mediante a fé — \"não vem das obras, para que ninguém se glorie\" (Ef 2:8-9) — e na autoridade final das Escrituras.",
+      "divergence_note": null,
+      "reference": {
+        "book": "efesios",
+        "chapter": 2,
+        "verse_start": 8,
+        "verse_end": 9
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0052",
+      "text": "Qual evangelista, um dos sete escolhidos em Jerusalém, hospedou Paulo em Cesareia e tinha quatro filhas que profetizavam?",
+      "options": [
+        {
+          "text": "Filipe",
+          "correct": true
+        },
+        {
+          "text": "Estêvão",
+          "correct": false
+        },
+        {
+          "text": "Nicolau",
+          "correct": false
+        },
+        {
+          "text": "Prócoro",
+          "correct": false
+        }
+      ],
+      "explanation": "A caminho de Jerusalém, Paulo e os companheiros ficaram \"em casa de Filipe, o evangelista, que era um dos sete\". \"Tinha este quatro filhas donzelas, que profetizavam\" (At 21:8-9). Foi ali que Ágabo anunciou a prisão de Paulo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 21,
+        "verse_start": 8,
+        "verse_end": 9
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0053",
+      "text": "Qual ourives de Éfeso, que fabricava nichos de prata de Diana, provocou um tumulto contra Paulo ao ver o seu negócio ameaçado?",
+      "options": [
+        {
+          "text": "Demétrio",
+          "correct": true
+        },
+        {
+          "text": "Alexandre",
+          "correct": false
+        },
+        {
+          "text": "Escevas",
+          "correct": false
+        },
+        {
+          "text": "Tirano",
+          "correct": false
+        }
+      ],
+      "explanation": "Demétrio reuniu os artífices: \"deste ofício temos a nossa prosperidade\", e Paulo dizia que deuses feitos por mãos não são deuses. A cidade encheu-se de confusão e gritou por duas horas \"Grande é a Diana dos efésios!\", até o escrivão acalmar a multidão (At 19:23-41).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 19,
+        "verse_start": 23,
+        "verse_end": 41
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0054",
+      "text": "Segundo os historiadores, qual erudito cristão traduziu a Bíblia para o latim no fim do século IV, produzindo a versão conhecida como Vulgata?",
+      "options": [
+        {
+          "text": "Jerônimo",
+          "correct": true
+        },
+        {
+          "text": "Agostinho",
+          "correct": false
+        },
+        {
+          "text": "Ambrósio",
+          "correct": false
+        },
+        {
+          "text": "Orígenes",
+          "correct": false
+        }
+      ],
+      "explanation": "Jerônimo trabalhou em Belém, traduzindo o Antigo Testamento diretamente do hebraico em vez da Septuaginta. A Vulgata foi a Bíblia da igreja ocidental por mais de mil anos. Sua frase ficou célebre: \"ignorar as Escrituras é ignorar a Cristo\" — eco de 2 Timóteo 3:16-17.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2timoteo",
+        "chapter": 3,
+        "verse_start": 14,
+        "verse_end": 17
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0055",
+      "text": "Segundo os historiadores, qual bispo de Hipona, no norte da África, escreveu \"Confissões\" e \"A Cidade de Deus\" e se converteu ao ler Romanos 13:13-14 num jardim de Milão?",
+      "options": [
+        {
+          "text": "Agostinho",
+          "correct": true
+        },
+        {
+          "text": "Atanásio",
+          "correct": false
+        },
+        {
+          "text": "Cipriano",
+          "correct": false
+        },
+        {
+          "text": "Tertuliano",
+          "correct": false
+        }
+      ],
+      "explanation": "Agostinho (354-430) conta nas \"Confissões\" que ouviu uma voz infantil dizer \"toma e lê\", abriu a carta aos Romanos e leu \"revesti-vos do Senhor Jesus Cristo e não tenhais cuidado da carne em suas concupiscências\". Sua teologia da graça marcou tanto católicos quanto reformadores.",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 13,
+        "verse_start": 11,
+        "verse_end": 14
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0056",
+      "text": "Segundo os historiadores, qual reformador de Genebra escreveu as \"Institutas da Religião Cristã\", uma das obras mais influentes da teologia protestante?",
+      "options": [
+        {
+          "text": "João Calvino",
+          "correct": true
+        },
+        {
+          "text": "Ulrico Zuínglio",
+          "correct": false
+        },
+        {
+          "text": "John Knox",
+          "correct": false
+        },
+        {
+          "text": "Filipe Melanchthon",
+          "correct": false
+        }
+      ],
+      "explanation": "Calvino publicou a primeira edição das Institutas em 1536, aos 27 anos, e a ampliou até 1559. Zuínglio reformou Zurique, Knox levou a Reforma à Escócia e Melanchthon foi o colaborador de Lutero. Calvino tomou Romanos 8:28-30 como eixo da soberania de Deus na salvação.",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 8,
+        "verse_start": 28,
+        "verse_end": 30
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0057",
+      "text": "Segundo os historiadores, quem produziu a primeira tradução completa da Bíblia para o português, publicada no século XVIII e base das versões \"Almeida\" usadas até hoje?",
+      "options": [
+        {
+          "text": "João Ferreira de Almeida",
+          "correct": true
+        },
+        {
+          "text": "Antônio Vieira",
+          "correct": false
+        },
+        {
+          "text": "Frei Luís de Sousa",
+          "correct": false
+        },
+        {
+          "text": "Manuel de Figueiredo",
+          "correct": false
+        }
+      ],
+      "explanation": "Almeida, pastor protestante português radicado na Ásia, publicou o Novo Testamento em 1681; o Antigo Testamento, completado por outros após sua morte, saiu em 1753. A \"Almeida Revista e Corrigida\" descende diretamente desse trabalho. \"Lâmpada para os meus pés é tua palavra\" (Sl 119:105) chegou assim ao português.",
+      "divergence_note": null,
+      "reference": {
+        "book": "salmos",
+        "chapter": 119,
+        "verse_start": 105,
+        "verse_end": 105
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "historia-da-igreja-0058",
+      "text": "Segundo a tradição da igreja antiga, qual bispo de Esmirna, discípulo do apóstolo João, foi queimado vivo por volta de 155 d.C. depois de dizer que servia a Cristo havia oitenta e seis anos?",
+      "options": [
+        {
+          "text": "Policarpo",
+          "correct": true
+        },
+        {
+          "text": "Inácio de Antioquia",
+          "correct": false
+        },
+        {
+          "text": "Justino Mártir",
+          "correct": false
+        },
+        {
+          "text": "Clemente de Roma",
+          "correct": false
+        }
+      ],
+      "explanation": "Instado a negar a Cristo, Policarpo respondeu: \"Há oitenta e seis anos eu o sirvo, e ele nunca me fez mal; como posso blasfemar do meu Rei que me salvou?\" A igreja de Esmirna é a mesma a quem o Apocalipse dissera: \"Sê fiel até à morte, e dar-te-ei a coroa da vida\" (Ap 2:8-10).",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 2,
+        "verse_start": 8,
+        "verse_end": 10
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-da-igreja-0059",
+      "text": "Segundo os historiadores, qual concílio, em 451 d.C., definiu que Cristo é uma só pessoa em duas naturezas, divina e humana, \"sem confusão, sem mudança, sem divisão, sem separação\"?",
+      "options": [
+        {
+          "text": "Calcedônia",
+          "correct": true
+        },
+        {
+          "text": "Niceia",
+          "correct": false
+        },
+        {
+          "text": "Constantinopla",
+          "correct": false
+        },
+        {
+          "text": "Éfeso",
+          "correct": false
+        }
+      ],
+      "explanation": "Niceia (325) afirmou a divindade do Filho; Constantinopla (381), a do Espírito; Éfeso (431) rejeitou separar as naturezas de Cristo. Calcedônia equilibrou tudo: verdadeiro Deus e verdadeiro homem, \"porque nele habita corporalmente toda a plenitude da divindade\" (Cl 2:9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "colossenses",
+        "chapter": 2,
+        "verse_start": 8,
+        "verse_end": 9
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "historia-da-igreja-0060",
+      "text": "Segundo os historiadores, qual bispo de Lião, do século II, escreveu \"Contra as Heresias\", a grande refutação do gnosticismo, defendendo que o Deus criador e o Pai de Jesus são o mesmo?",
+      "options": [
+        {
+          "text": "Irineu",
+          "correct": true
+        },
+        {
+          "text": "Orígenes",
+          "correct": false
+        },
+        {
+          "text": "Tertuliano",
+          "correct": false
+        },
+        {
+          "text": "Hipólito",
+          "correct": false
+        }
+      ],
+      "explanation": "Irineu ouvira Policarpo na juventude. Contra os gnósticos, que opunham um deus criador inferior ao Deus supremo e desprezavam a matéria, ele afirmou a bondade da criação, a encarnação real e a unidade das Escrituras. Paulo já advertira contra \"a falsamente chamada ciência\" — em grego, gnosis (1Tm 6:20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1timoteo",
+        "chapter": 6,
+        "verse_start": 20,
+        "verse_end": 21
+      },
+      "difficulty": "expert"
     }
   ]
 }

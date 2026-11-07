@@ -1427,6 +1427,440 @@
         "verse_end": 27
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "doutrinas-0047",
+      "text": "Segundo Romanos 10:9, o que é preciso confessar com a boca e crer no coração para ser salvo?",
+      "options": [
+        {
+          "text": "Que Jesus é o Senhor, e que Deus o ressuscitou dos mortos",
+          "correct": true
+        },
+        {
+          "text": "Que a Lei de Moisés é perfeita",
+          "correct": false
+        },
+        {
+          "text": "Que Jesus nasceu em Belém",
+          "correct": false
+        },
+        {
+          "text": "Que todos os homens pecaram",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Se, com a tua boca, confessares ao Senhor Jesus e, em teu coração, creres que Deus o ressuscitou dos mortos, serás salvo\" (Rm 10:9). Confissão e fé andam juntas: \"com o coração se crê para a justiça, e com a boca se faz confissão para a salvação\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 10,
+        "verse_start": 9,
+        "verse_end": 10
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "doutrinas-0048",
+      "text": "Segundo Romanos 5:8, como Deus prova o seu amor para conosco?",
+      "options": [
+        {
+          "text": "Cristo morreu por nós, sendo nós ainda pecadores",
+          "correct": true
+        },
+        {
+          "text": "Deu-nos a Lei no Sinai",
+          "correct": false
+        },
+        {
+          "text": "Criou o mundo para nós",
+          "correct": false
+        },
+        {
+          "text": "Envia chuva sobre justos e injustos",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Mas Deus prova o seu amor para conosco em que Cristo morreu por nós, sendo nós ainda pecadores\" (Rm 5:8). Paulo destaca o inusitado: dificilmente alguém morre por um justo, mas Cristo morreu por inimigos (v. 7, 10).",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 5,
+        "verse_start": 6,
+        "verse_end": 10
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "doutrinas-0049",
+      "text": "Em João 14:6, como Jesus responde a Tomé, que perguntou como poderiam saber o caminho?",
+      "options": [
+        {
+          "text": "\"Eu sou o caminho, e a verdade, e a vida; ninguém vem ao Pai senão por mim\"",
+          "correct": true
+        },
+        {
+          "text": "\"Eu sou a porta das ovelhas\"",
+          "correct": false
+        },
+        {
+          "text": "\"Eu sou a ressurreição e a vida\"",
+          "correct": false
+        },
+        {
+          "text": "\"Eu sou o pão da vida\"",
+          "correct": false
+        }
+      ],
+      "explanation": "Jesus falava de preparar lugar na casa do Pai. Tomé disse não saber para onde ele ia; a resposta afirma que o acesso ao Pai é exclusivo por Cristo (Jo 14:1-6). Filipe pediu então para ver o Pai, e Jesus respondeu: \"Quem me vê a mim vê o Pai\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 14,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "doutrinas-0050",
+      "text": "Segundo Hebreus 11:6, sem o que \"é impossível agradar\" a Deus?",
+      "options": [
+        {
+          "text": "Fé",
+          "correct": true
+        },
+        {
+          "text": "Obras",
+          "correct": false
+        },
+        {
+          "text": "Sacrifícios",
+          "correct": false
+        },
+        {
+          "text": "Jejum",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Sem fé é impossível agradar-lhe, porque é necessário que aquele que se aproxima de Deus creia que ele existe e que é galardoador dos que o buscam\" (Hb 11:6). O versículo abre a galeria dos heróis da fé, de Abel a Raabe.",
+      "divergence_note": null,
+      "reference": {
+        "book": "hebreus",
+        "chapter": 11,
+        "verse_start": 6,
+        "verse_end": 6
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "doutrinas-0051",
+      "text": "Segundo 1 Coríntios 6:19, o que é o corpo do cristão?",
+      "options": [
+        {
+          "text": "Templo do Espírito Santo",
+          "correct": true
+        },
+        {
+          "text": "Prisão da alma",
+          "correct": false
+        },
+        {
+          "text": "Vaso de barro sem valor",
+          "correct": false
+        },
+        {
+          "text": "Sombra do corpo celestial",
+          "correct": false
+        }
+      ],
+      "explanation": "Contra a imoralidade em Corinto, Paulo argumenta: \"não sabeis que o vosso corpo é o templo do Espírito Santo, que habita em vós... e que não sois de vós mesmos? Porque fostes comprados por bom preço\" (1Co 6:19-20). Por isso, glorificar a Deus no corpo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1corintios",
+        "chapter": 6,
+        "verse_start": 19,
+        "verse_end": 20
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "doutrinas-0052",
+      "text": "Segundo 1 Pedro 1:18-19, com que fomos resgatados da nossa vã maneira de viver?",
+      "options": [
+        {
+          "text": "Com o precioso sangue de Cristo, como de um cordeiro imaculado",
+          "correct": true
+        },
+        {
+          "text": "Com prata e ouro dados ao templo",
+          "correct": false
+        },
+        {
+          "text": "Com as nossas boas obras",
+          "correct": false
+        },
+        {
+          "text": "Com a obediência dos nossos pais",
+          "correct": false
+        }
+      ],
+      "explanation": "Pedro contrasta \"coisas corruptíveis, como prata ou ouro\" com \"o precioso sangue de Cristo, como de um cordeiro imaculado e incontaminado\" (1Pe 1:18-19). A linguagem é a da Páscoa: o cordeiro sem defeito cujo sangue livra da morte.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1pedro",
+        "chapter": 1,
+        "verse_start": 18,
+        "verse_end": 21
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "doutrinas-0053",
+      "text": "Em Efésios 4:4-6, Paulo lista sete realidades que são \"um só\". Além de um só corpo, Espírito, esperança, Senhor, fé e Deus e Pai, qual é a sétima?",
+      "options": [
+        {
+          "text": "Um só batismo",
+          "correct": true
+        },
+        {
+          "text": "Uma só igreja local",
+          "correct": false
+        },
+        {
+          "text": "Um só apóstolo",
+          "correct": false
+        },
+        {
+          "text": "Uma só língua",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Um só Senhor, uma só fé, um só batismo\" (Ef 4:5). A lista fundamenta o apelo à unidade do Espírito \"pelo vínculo da paz\" — a igreja é uma porque o Deus que a chamou é um.",
+      "divergence_note": null,
+      "reference": {
+        "book": "efesios",
+        "chapter": 4,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "doutrinas-0054",
+      "text": "Como se chama a doutrina segundo a qual Cristo sofreu em nosso lugar, \"o justo pelos injustos\" (1 Pedro 3:18), levando o castigo que nos cabia?",
+      "options": [
+        {
+          "text": "Expiação substitutiva",
+          "correct": true
+        },
+        {
+          "text": "Santificação",
+          "correct": false
+        },
+        {
+          "text": "Encarnação",
+          "correct": false
+        },
+        {
+          "text": "Glorificação",
+          "correct": false
+        }
+      ],
+      "explanation": "Pedro afirma que Cristo \"padeceu uma vez pelos pecados, o justo pelos injustos, para levar-nos a Deus\" (1Pe 3:18). Isaías 53:5-6 já descrevia o Servo ferido \"pelas nossas transgressões\", sobre quem o SENHOR fez cair \"a iniquidade de nós todos\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "1pedro",
+        "chapter": 3,
+        "verse_start": 18,
+        "verse_end": 18
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "doutrinas-0055",
+      "text": "Segundo Efésios 1:13-14, o que é \"o penhor da nossa herança\", com o qual os crentes foram selados?",
+      "options": [
+        {
+          "text": "O Espírito Santo da promessa",
+          "correct": true
+        },
+        {
+          "text": "O batismo nas águas",
+          "correct": false
+        },
+        {
+          "text": "A Ceia do Senhor",
+          "correct": false
+        },
+        {
+          "text": "As Escrituras",
+          "correct": false
+        }
+      ],
+      "explanation": "Depois de crer, os efésios \"foram selados com o Espírito Santo da promessa, o qual é o penhor da nossa herança, para redenção da possessão adquirida\" (Ef 1:13-14). \"Penhor\" (arrabon) era o sinal pago como garantia de que o restante viria.",
+      "divergence_note": null,
+      "reference": {
+        "book": "efesios",
+        "chapter": 1,
+        "verse_start": 13,
+        "verse_end": 14
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "doutrinas-0056",
+      "text": "Que doutrina descreve o cuidado contínuo de Deus, que sustenta e governa todas as coisas, expressa em \"nele subsistem todas as coisas\" (Colossenses 1:17)?",
+      "options": [
+        {
+          "text": "Providência",
+          "correct": true
+        },
+        {
+          "text": "Predestinação",
+          "correct": false
+        },
+        {
+          "text": "Revelação",
+          "correct": false
+        },
+        {
+          "text": "Justificação",
+          "correct": false
+        }
+      ],
+      "explanation": "A criação não foi abandonada depois de feita: Cristo é \"antes de todas as coisas, e todas as coisas subsistem por ele\" (Cl 1:17) e \"sustenta todas as coisas pela palavra do seu poder\" (Hb 1:3). Jesus aplica a mesma verdade aos pardais e aos cabelos da cabeça (Mt 10:29-30).",
+      "divergence_note": null,
+      "reference": {
+        "book": "colossenses",
+        "chapter": 1,
+        "verse_start": 15,
+        "verse_end": 17
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "doutrinas-0057",
+      "text": "Segundo Romanos 5:12, por meio de quem \"entrou o pecado no mundo, e pelo pecado, a morte\"?",
+      "options": [
+        {
+          "text": "Por um só homem, Adão",
+          "correct": true
+        },
+        {
+          "text": "Pela serpente",
+          "correct": false
+        },
+        {
+          "text": "Por Caim",
+          "correct": false
+        },
+        {
+          "text": "Pelos anjos caídos",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Como por um homem entrou o pecado no mundo, e pelo pecado, a morte, assim também a morte passou a todos os homens, por isso que todos pecaram\" (Rm 5:12). Paulo então contrasta Adão com Cristo: pela desobediência de um, muitos pecadores; pela obediência de um, muitos justos (v. 19).",
+      "divergence_note": null,
+      "reference": {
+        "book": "romanos",
+        "chapter": 5,
+        "verse_start": 12,
+        "verse_end": 19
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "doutrinas-0058",
+      "text": "Em Filipenses 1:6, de que Paulo diz estar certo a respeito dos crentes de Filipos?",
+      "options": [
+        {
+          "text": "De que aquele que começou a boa obra a aperfeiçoará até ao dia de Jesus Cristo",
+          "correct": true
+        },
+        {
+          "text": "De que nunca mais pecariam",
+          "correct": false
+        },
+        {
+          "text": "De que veriam o retorno de Cristo em vida",
+          "correct": false
+        },
+        {
+          "text": "De que seriam libertos da perseguição",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Tendo por certo isto mesmo: que aquele que em vós começou a boa obra a aperfeiçoará até ao Dia de Jesus Cristo\" (Fp 1:6). A obra é de Deus do início ao fim; por isso Paulo dá graças e ora com alegria pelos filipenses.",
+      "divergence_note": "Cristãos divergem sobre se um verdadeiro crente pode perder a salvação (perseverança dos santos × possibilidade de apostasia). O texto afirma a fidelidade de Deus em completar o que começou; como isso se relaciona à responsabilidade humana é debate legítimo entre tradições ortodoxas.",
+      "reference": {
+        "book": "filipenses",
+        "chapter": 1,
+        "verse_start": 3,
+        "verse_end": 6
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "doutrinas-0059",
+      "text": "Qual atributo de Deus Hebreus 4:13 expressa ao dizer que \"não há criatura alguma encoberta diante dele; antes, todas as coisas estão nuas e patentes aos olhos daquele com quem temos de tratar\"?",
+      "options": [
+        {
+          "text": "Onisciência",
+          "correct": true
+        },
+        {
+          "text": "Onipresença",
+          "correct": false
+        },
+        {
+          "text": "Imutabilidade",
+          "correct": false
+        },
+        {
+          "text": "Onipotência",
+          "correct": false
+        }
+      ],
+      "explanation": "O versículo segue a descrição da Palavra que discerne \"os pensamentos e intenções do coração\" (Hb 4:12). Deus conhece tudo — por isso o convite imediato: aproximar-se com confiança do trono da graça, pois temos um sumo sacerdote que compadece (v. 14-16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "hebreus",
+        "chapter": 4,
+        "verse_start": 12,
+        "verse_end": 13
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "doutrinas-0060",
+      "text": "Em Tito 2:13, que título Paulo dá a Jesus Cristo ao falar da \"bem-aventurada esperança\" do seu aparecimento?",
+      "options": [
+        {
+          "text": "\"Nosso grande Deus e Salvador\"",
+          "correct": true
+        },
+        {
+          "text": "\"Nosso Mestre e Profeta\"",
+          "correct": false
+        },
+        {
+          "text": "\"Nosso Rei e Juiz\"",
+          "correct": false
+        },
+        {
+          "text": "\"Nosso Sumo Sacerdote\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Aguardando a bem-aventurada esperança e o aparecimento da glória do grande Deus e nosso Senhor Jesus Cristo\" (Tt 2:13, ARC). A construção grega aplica os dois títulos à mesma pessoa, afirmando a divindade de Cristo — como em 2 Pedro 1:1, \"nosso Deus e Salvador Jesus Cristo\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "tito",
+        "chapter": 2,
+        "verse_start": 11,
+        "verse_end": 14
+      },
+      "difficulty": "expert"
     }
   ]
 }

@@ -1429,6 +1429,440 @@
         "verse_end": 5
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "profetas-0047",
+      "text": "Qual profeta ressuscitou o filho da sunamita, deitando-se sobre o menino até que ele espirrasse sete vezes e abrisse os olhos?",
+      "options": [
+        {
+          "text": "Eliseu",
+          "correct": true
+        },
+        {
+          "text": "Elias",
+          "correct": false
+        },
+        {
+          "text": "Samuel",
+          "correct": false
+        },
+        {
+          "text": "Isaías",
+          "correct": false
+        }
+      ],
+      "explanation": "A sunamita que hospedava Eliseu recebera o filho por promessa do profeta. Quando o menino morreu, ela correu ao Carmelo; Eliseu orou e se estendeu sobre a criança, que \"espirrou sete vezes e abriu os olhos\" (2Rs 4:32-35).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 4,
+        "verse_start": 32,
+        "verse_end": 37
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "profetas-0048",
+      "text": "Qual profeta, filho de Inlá, o rei Acabe dizia odiar \"porque nunca profetiza de mim o que é bom\", e que previu a derrota em Ramote-Gileade?",
+      "options": [
+        {
+          "text": "Micaías",
+          "correct": true
+        },
+        {
+          "text": "Eliseu",
+          "correct": false
+        },
+        {
+          "text": "Natã",
+          "correct": false
+        },
+        {
+          "text": "Obadias",
+          "correct": false
+        }
+      ],
+      "explanation": "Enquanto quatrocentos profetas prometiam vitória, Micaías viu \"todo o Israel disperso pelos montes, como ovelhas que não têm pastor\" e revelou um espírito mentiroso na boca dos profetas de Acabe (1Rs 22:8-23). Foi preso a pão e água; Acabe, disfarçado, morreu por uma flecha ao acaso (1Rs 22:34-37).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 22,
+        "verse_start": 8,
+        "verse_end": 28
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "profetas-0049",
+      "text": "Qual profeta anunciou que o rei de Sião viria \"justo e salvador, pobre e montado sobre um jumento\"?",
+      "options": [
+        {
+          "text": "Zacarias",
+          "correct": true
+        },
+        {
+          "text": "Isaías",
+          "correct": false
+        },
+        {
+          "text": "Miqueias",
+          "correct": false
+        },
+        {
+          "text": "Daniel",
+          "correct": false
+        }
+      ],
+      "explanation": "Zacarias 9:9 descreve a entrada humilde do Messias. Mateus 21:4-5 e João 12:14-15 citam o texto na entrada triunfal de Jesus em Jerusalém, sobre um jumentinho, no domingo de Ramos.",
+      "divergence_note": null,
+      "reference": {
+        "book": "zacarias",
+        "chapter": 9,
+        "verse_start": 9,
+        "verse_end": 10
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "profetas-0050",
+      "text": "Segundo Tiago 5:17, por quanto tempo não choveu sobre a terra depois que Elias orou?",
+      "options": [
+        {
+          "text": "Três anos e seis meses",
+          "correct": true
+        },
+        {
+          "text": "Sete anos",
+          "correct": false
+        },
+        {
+          "text": "Quarenta dias",
+          "correct": false
+        },
+        {
+          "text": "Um ano",
+          "correct": false
+        }
+      ],
+      "explanation": "Tiago usa Elias como exemplo de que \"a oração feita por um justo pode muito\": ele \"orou para que não chovesse, e, por três anos e seis meses, não choveu\" (Tg 5:17-18). Jesus cita o mesmo período em Lucas 4:25.",
+      "divergence_note": null,
+      "reference": {
+        "book": "tiago",
+        "chapter": 5,
+        "verse_start": 17,
+        "verse_end": 18
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "profetas-0051",
+      "text": "O que o profeta Aías anunciou à mulher de Jeroboão, que fora disfarçada consultá-lo sobre o filho doente?",
+      "options": [
+        {
+          "text": "Que o menino morreria assim que ela entrasse na cidade",
+          "correct": true
+        },
+        {
+          "text": "Que o menino seria curado se o rei se arrependesse",
+          "correct": false
+        },
+        {
+          "text": "Que o menino reinaria em lugar do pai",
+          "correct": false
+        },
+        {
+          "text": "Que ela deveria levá-lo ao templo em Jerusalém",
+          "correct": false
+        }
+      ],
+      "explanation": "Aías, já cego, foi avisado pelo SENHOR de que a mulher vinha disfarçada. Disse-lhe: \"ao entrarem os teus pés na cidade, o menino morrerá\" — e só ele, de toda a casa de Jeroboão, teria sepultura honrosa, \"porque se achou nele coisa boa\" (1Rs 14:1-18). O restante da dinastia seria varrido \"como se varre o esterco\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 14,
+        "verse_start": 1,
+        "verse_end": 18
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "profetas-0052",
+      "text": "Qual profeta disse a Ezequias \"põe em ordem a tua casa, porque morrerás\" e, depois da oração do rei, mandou aplicar uma pasta de figos à sua úlcera?",
+      "options": [
+        {
+          "text": "Isaías",
+          "correct": true
+        },
+        {
+          "text": "Jeremias",
+          "correct": false
+        },
+        {
+          "text": "Miqueias",
+          "correct": false
+        },
+        {
+          "text": "Oseias",
+          "correct": false
+        }
+      ],
+      "explanation": "Ezequias chorou e orou, e antes que Isaías saísse do pátio Deus o enviou de volta com a promessa de mais quinze anos de vida. A pasta de figos foi o meio da cura, e a sombra recuada no relógio de Acaz, o sinal (2Rs 20:1-11).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 20,
+        "verse_start": 1,
+        "verse_end": 7
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "profetas-0053",
+      "text": "O que Eliseu estava fazendo quando Elias passou por ele e lançou sobre ele a sua capa?",
+      "options": [
+        {
+          "text": "Lavrando com doze juntas de bois",
+          "correct": true
+        },
+        {
+          "text": "Pastoreando ovelhas",
+          "correct": false
+        },
+        {
+          "text": "Pescando no Jordão",
+          "correct": false
+        },
+        {
+          "text": "Colhendo sicômoros",
+          "correct": false
+        }
+      ],
+      "explanation": "Eliseu lavrava com a décima segunda junta de bois quando foi chamado. Ele matou a junta, cozeu a carne com o jugo e deu ao povo, e então seguiu Elias para servi-lo (1Rs 19:19-21) — queimando, literalmente, as pontes com a vida antiga.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 19,
+        "verse_start": 19,
+        "verse_end": 21
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "profetas-0054",
+      "text": "Qual profeta respondeu ao sacerdote Amazias, que o expulsava de Betel: \"Eu não era profeta, nem filho de profeta, mas boieiro e cultivador de sicômoros\"?",
+      "options": [
+        {
+          "text": "Amós",
+          "correct": true
+        },
+        {
+          "text": "Oseias",
+          "correct": false
+        },
+        {
+          "text": "Miqueias",
+          "correct": false
+        },
+        {
+          "text": "Joel",
+          "correct": false
+        }
+      ],
+      "explanation": "Amazias acusou Amós de conspirar contra Jeroboão II e mandou-o profetizar em Judá. Amós respondeu que não pertencia a nenhuma guilda profética: \"o SENHOR me tirou de após o gado e me disse: Vai e profetiza ao meu povo Israel\" (Am 7:10-15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "amos",
+        "chapter": 7,
+        "verse_start": 10,
+        "verse_end": 15
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "profetas-0055",
+      "text": "Em qual profeta está a frase \"o justo, pela sua fé, viverá\", citada por Paulo em Romanos e Gálatas e na Carta aos Hebreus?",
+      "options": [
+        {
+          "text": "Habacuque",
+          "correct": true
+        },
+        {
+          "text": "Isaías",
+          "correct": false
+        },
+        {
+          "text": "Jeremias",
+          "correct": false
+        },
+        {
+          "text": "Miqueias",
+          "correct": false
+        }
+      ],
+      "explanation": "Habacuque 2:4 contrasta o soberbo, cuja alma \"não é reta\", com o justo que vive pela fé. Paulo faz da frase a base da justificação pela fé (Rm 1:17; Gl 3:11), e Hebreus 10:38 a aplica à perseverança.",
+      "divergence_note": null,
+      "reference": {
+        "book": "habacuque",
+        "chapter": 2,
+        "verse_start": 4,
+        "verse_end": 4
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "profetas-0056",
+      "text": "Qual profeta, contratado para amaldiçoar Israel, acabou anunciando: \"Uma estrela procederá de Jacó, e um cetro subirá de Israel\"?",
+      "options": [
+        {
+          "text": "Balaão",
+          "correct": true
+        },
+        {
+          "text": "Elias",
+          "correct": false
+        },
+        {
+          "text": "Isaías",
+          "correct": false
+        },
+        {
+          "text": "Miqueias",
+          "correct": false
+        }
+      ],
+      "explanation": "Balaque, rei de Moabe, pagou Balaão para amaldiçoar o povo, mas o SENHOR pôs bênçãos na sua boca. No quarto oráculo, Balaão anunciou a estrela e o cetro (Nm 24:17), texto que a tradição judaica e cristã lê como messiânico.",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 24,
+        "verse_start": 15,
+        "verse_end": 19
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "profetas-0057",
+      "text": "Qual profeta viu, em visão, a glória do SENHOR levantar-se do templo e deter-se sobre o monte a oriente da cidade?",
+      "options": [
+        {
+          "text": "Ezequiel",
+          "correct": true
+        },
+        {
+          "text": "Isaías",
+          "correct": false
+        },
+        {
+          "text": "Jeremias",
+          "correct": false
+        },
+        {
+          "text": "Zacarias",
+          "correct": false
+        }
+      ],
+      "explanation": "Em etapas solenes, a glória deixou o Santo dos Santos, parou à entrada do templo (Ez 10:4, 18-19) e, por fim, sobre o monte das Oliveiras (Ez 11:23). A visão explicava a queda de Jerusalém: Deus já não habitava ali. Nos capítulos 43-44 a glória retorna ao novo templo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "ezequiel",
+        "chapter": 11,
+        "verse_start": 22,
+        "verse_end": 23
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "profetas-0058",
+      "text": "Qual profeta ofereceu a Davi, depois do censo do povo, a escolha entre três castigos: sete anos de fome, três meses de fuga ou três dias de peste?",
+      "options": [
+        {
+          "text": "Gade",
+          "correct": true
+        },
+        {
+          "text": "Natã",
+          "correct": false
+        },
+        {
+          "text": "Samuel",
+          "correct": false
+        },
+        {
+          "text": "Aías",
+          "correct": false
+        }
+      ],
+      "explanation": "Gade, \"o vidente de Davi\", trouxe a sentença. Davi escolheu cair \"nas mãos do SENHOR, porque muitas são as suas misericórdias\", e a peste matou setenta mil, cessando junto à eira de Araúna (2Sm 24:11-16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 24,
+        "verse_start": 11,
+        "verse_end": 16
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "profetas-0059",
+      "text": "Segundo Esdras 5:1-2, quais dois profetas levaram Zorobabel e Josué a retomar a construção do templo, que estava parada?",
+      "options": [
+        {
+          "text": "Ageu e Zacarias",
+          "correct": true
+        },
+        {
+          "text": "Esdras e Neemias",
+          "correct": false
+        },
+        {
+          "text": "Malaquias e Joel",
+          "correct": false
+        },
+        {
+          "text": "Daniel e Ezequiel",
+          "correct": false
+        }
+      ],
+      "explanation": "A obra ficara paralisada por cerca de dezesseis anos, até que \"os profetas Ageu e Zacarias, filho de Ido, profetizaram aos judeus\". Os líderes recomeçaram, \"e com eles os profetas de Deus, que os ajudavam\" (Ed 5:1-2); o templo foi concluído no sexto ano de Dario (Ed 6:15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "esdras",
+        "chapter": 5,
+        "verse_start": 1,
+        "verse_end": 2
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "profetas-0060",
+      "text": "Por quantos dias Ezequiel teve de deitar-se sobre o lado esquerdo, levando a iniquidade de Israel, antes de deitar-se quarenta dias sobre o lado direito?",
+      "options": [
+        {
+          "text": "Trezentos e noventa",
+          "correct": true
+        },
+        {
+          "text": "Setenta",
+          "correct": false
+        },
+        {
+          "text": "Quarenta",
+          "correct": false
+        },
+        {
+          "text": "Cento e cinquenta",
+          "correct": false
+        }
+      ],
+      "explanation": "Deus ordenou ao profeta encenar o cerco de Jerusalém: 390 dias sobre o lado esquerdo pela casa de Israel e 40 pela casa de Judá, \"um dia por cada ano\" (Ez 4:4-6). Nesse período ele comeria ração medida, cozida sobre esterco, sinal da fome do cerco.",
+      "divergence_note": null,
+      "reference": {
+        "book": "ezequiel",
+        "chapter": 4,
+        "verse_start": 4,
+        "verse_end": 8
+      },
+      "difficulty": "expert"
     }
   ]
 }

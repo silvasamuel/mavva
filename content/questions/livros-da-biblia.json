@@ -1493,6 +1493,440 @@
         "verse_end": 32
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "livros-da-biblia-0049",
+      "text": "Qual livro profético Jesus leu na sinagoga de Nazaré, ao anunciar \"O Espírito do Senhor é sobre mim, pois que me ungiu para evangelizar os pobres\"?",
+      "options": [
+        {
+          "text": "Isaías",
+          "correct": true
+        },
+        {
+          "text": "Jeremias",
+          "correct": false
+        },
+        {
+          "text": "Ezequiel",
+          "correct": false
+        },
+        {
+          "text": "Malaquias",
+          "correct": false
+        }
+      ],
+      "explanation": "Lucas 4:17 diz que lhe deram \"o livro do profeta Isaías\". Jesus leu Isaías 61:1-2, fechou o livro e declarou: \"Hoje se cumpriu esta Escritura em vossos ouvidos\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 4,
+        "verse_start": 16,
+        "verse_end": 21
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "livros-da-biblia-0050",
+      "text": "Qual livro narra a conquista de Canaã e a repartição da terra entre as tribos de Israel?",
+      "options": [
+        {
+          "text": "Josué",
+          "correct": true
+        },
+        {
+          "text": "Juízes",
+          "correct": false
+        },
+        {
+          "text": "Números",
+          "correct": false
+        },
+        {
+          "text": "Deuteronômio",
+          "correct": false
+        }
+      ],
+      "explanation": "Josué descreve a travessia do Jordão e as campanhas contra Jericó, Ai e as coalizões do sul e do norte (caps. 1-12), depois a divisão da terra por sortes (caps. 13-21), e encerra com a renovação da aliança em Siquém.",
+      "divergence_note": null,
+      "reference": {
+        "book": "josue",
+        "chapter": 13,
+        "verse_start": 1,
+        "verse_end": 7
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "livros-da-biblia-0051",
+      "text": "Qual livro histórico narra o reinado de Davi em Jerusalém, incluindo o seu pecado com Bate-Seba e a revolta de Absalão?",
+      "options": [
+        {
+          "text": "2 Samuel",
+          "correct": true
+        },
+        {
+          "text": "1 Samuel",
+          "correct": false
+        },
+        {
+          "text": "1 Reis",
+          "correct": false
+        },
+        {
+          "text": "1 Crônicas",
+          "correct": false
+        }
+      ],
+      "explanation": "1 Samuel termina com a morte de Saul; 2 Samuel acompanha Davi desde Hebrom até o fim do reinado, com a aliança davídica (cap. 7), a queda com Bate-Seba (caps. 11-12) e a rebelião de Absalão (caps. 15-18).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 11,
+        "verse_start": 1,
+        "verse_end": 5
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "livros-da-biblia-0052",
+      "text": "Qual livro do Antigo Testamento começa com uma cena na corte celestial, em que Satanás se apresenta diante do SENHOR e recebe permissão para provar um homem justo?",
+      "options": [
+        {
+          "text": "Jó",
+          "correct": true
+        },
+        {
+          "text": "Zacarias",
+          "correct": false
+        },
+        {
+          "text": "Daniel",
+          "correct": false
+        },
+        {
+          "text": "Isaías",
+          "correct": false
+        }
+      ],
+      "explanation": "Jó 1:6-12 mostra os \"filhos de Deus\" apresentando-se diante do SENHOR, e Satanás entre eles. Deus mesmo destaca a integridade de Jó, e Satanás recebe permissão limitada para tocar no que ele tinha — o leitor sabe o que Jó nunca soube.",
+      "divergence_note": null,
+      "reference": {
+        "book": "jo",
+        "chapter": 1,
+        "verse_start": 6,
+        "verse_end": 12
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "livros-da-biblia-0053",
+      "text": "Em qual livro a afirmação \"O temor do SENHOR é o princípio da sabedoria\" funciona como tema de toda a obra?",
+      "options": [
+        {
+          "text": "Provérbios",
+          "correct": true
+        },
+        {
+          "text": "Eclesiastes",
+          "correct": false
+        },
+        {
+          "text": "Jó",
+          "correct": false
+        },
+        {
+          "text": "Cantares",
+          "correct": false
+        }
+      ],
+      "explanation": "Provérbios abre e retoma o tema: \"O temor do SENHOR é o princípio da ciência\" (Pv 1:7) e \"o princípio da sabedoria\" (Pv 9:10). O Salmo 111:10 traz a mesma frase, mas em Provérbios ela organiza o livro inteiro.",
+      "divergence_note": null,
+      "reference": {
+        "book": "proverbios",
+        "chapter": 9,
+        "verse_start": 10,
+        "verse_end": 10
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "livros-da-biblia-0054",
+      "text": "Qual evangelho não traz genealogia nem relato do nascimento de Jesus, começando direto com João Batista e o ministério público?",
+      "options": [
+        {
+          "text": "Marcos",
+          "correct": true
+        },
+        {
+          "text": "Mateus",
+          "correct": false
+        },
+        {
+          "text": "Lucas",
+          "correct": false
+        },
+        {
+          "text": "João",
+          "correct": false
+        }
+      ],
+      "explanation": "Marcos abre com \"Princípio do Evangelho de Jesus Cristo, Filho de Deus\" e, em poucos versículos, já apresenta João Batista, o batismo e a tentação (Mc 1:1-13). É o evangelho da ação: a palavra \"logo\" aparece dezenas de vezes.",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 13
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "livros-da-biblia-0055",
+      "text": "Em qual evangelho se encontra o cântico de Maria, o Magnificat: \"A minha alma engrandece ao Senhor\"?",
+      "options": [
+        {
+          "text": "Lucas",
+          "correct": true
+        },
+        {
+          "text": "Mateus",
+          "correct": false
+        },
+        {
+          "text": "Marcos",
+          "correct": false
+        },
+        {
+          "text": "João",
+          "correct": false
+        }
+      ],
+      "explanation": "Lucas é o único que registra os cânticos ligados ao nascimento: o de Maria (Lc 1:46-55), o de Zacarias (1:68-79) e o de Simeão (2:29-32). O Magnificat ecoa a oração de Ana em 1 Samuel 2.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 1,
+        "verse_start": 46,
+        "verse_end": 55
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "livros-da-biblia-0056",
+      "text": "Qual evangelho registra a série de declarações \"Eu sou\" de Jesus — o pão da vida, a luz do mundo, a videira verdadeira?",
+      "options": [
+        {
+          "text": "João",
+          "correct": true
+        },
+        {
+          "text": "Mateus",
+          "correct": false
+        },
+        {
+          "text": "Marcos",
+          "correct": false
+        },
+        {
+          "text": "Lucas",
+          "correct": false
+        }
+      ],
+      "explanation": "Só João traz essa série: pão da vida (6:35), luz do mundo (8:12), porta (10:9), bom pastor (10:11), ressurreição e vida (11:25), caminho, verdade e vida (14:6) e videira verdadeira (15:1). Elas ecoam o \"EU SOU\" de Êxodo 3:14.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 6,
+        "verse_start": 35,
+        "verse_end": 35
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "livros-da-biblia-0057",
+      "text": "Qual carta do Novo Testamento, dirigida a um jovem líder em Éfeso, estabelece os requisitos para bispos e diáconos?",
+      "options": [
+        {
+          "text": "1 Timóteo",
+          "correct": true
+        },
+        {
+          "text": "Tito",
+          "correct": false
+        },
+        {
+          "text": "2 Timóteo",
+          "correct": false
+        },
+        {
+          "text": "Filemom",
+          "correct": false
+        }
+      ],
+      "explanation": "Paulo deixou Timóteo em Éfeso e lhe escreveu sobre a ordem na igreja: o bispo deve ser \"irrepreensível, marido de uma mulher... apto para ensinar\", e os diáconos, \"honestos, não de língua dobre\" (1Tm 3:1-13). Tito recebe lista semelhante, mas para Creta.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1timoteo",
+        "chapter": 3,
+        "verse_start": 1,
+        "verse_end": 13
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "livros-da-biblia-0058",
+      "text": "Qual livro termina com uma pergunta de Deus ao profeta: \"E não hei de eu ter compaixão da grande cidade... em que estão mais de cento e vinte mil homens\"?",
+      "options": [
+        {
+          "text": "Jonas",
+          "correct": true
+        },
+        {
+          "text": "Naum",
+          "correct": false
+        },
+        {
+          "text": "Amós",
+          "correct": false
+        },
+        {
+          "text": "Habacuque",
+          "correct": false
+        }
+      ],
+      "explanation": "Jonas se irou porque Nínive foi poupada. Deus usou a aboboreira que secou para ensinar-lhe compaixão, e o livro se encerra com a pergunta em aberto (Jn 4:10-11), convidando o leitor a responder.",
+      "divergence_note": null,
+      "reference": {
+        "book": "jonas",
+        "chapter": 4,
+        "verse_start": 10,
+        "verse_end": 11
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "livros-da-biblia-0059",
+      "text": "Qual carta declara o seu propósito assim: \"Estas coisas vos escrevi... para que saibais que tendes a vida eterna e para que creiais no nome do Filho de Deus\"?",
+      "options": [
+        {
+          "text": "1 João",
+          "correct": true
+        },
+        {
+          "text": "Romanos",
+          "correct": false
+        },
+        {
+          "text": "Hebreus",
+          "correct": false
+        },
+        {
+          "text": "Tiago",
+          "correct": false
+        }
+      ],
+      "explanation": "1 João 5:13 resume a carta: dar certeza aos crentes. Para isso João oferece testes de vida — obediência, amor aos irmãos e confissão de que Jesus veio em carne. O Evangelho de João foi escrito \"para que creiais\" (Jo 20:31); a carta, para que os que creem saibam.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1joao",
+        "chapter": 5,
+        "verse_start": 13,
+        "verse_end": 13
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "livros-da-biblia-0060",
+      "text": "Em qual livro profético Deus se dirige ao profeta mais de noventa vezes como \"filho do homem\"?",
+      "options": [
+        {
+          "text": "Ezequiel",
+          "correct": true
+        },
+        {
+          "text": "Daniel",
+          "correct": false
+        },
+        {
+          "text": "Jeremias",
+          "correct": false
+        },
+        {
+          "text": "Zacarias",
+          "correct": false
+        }
+      ],
+      "explanation": "Desde o chamado — \"Filho do homem, põe-te em pé\" (Ez 2:1) — o título marca a humanidade e a dependência do profeta exilado junto ao rio Quebar. Em Daniel 7:13 a expressão aparece uma vez, para a figura celestial; Jesus a adotou como seu título preferido.",
+      "divergence_note": null,
+      "reference": {
+        "book": "ezequiel",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "livros-da-biblia-0061",
+      "text": "Como são chamados os Salmos 120 a 134, que os peregrinos cantavam ao subir a Jerusalém para as festas?",
+      "options": [
+        {
+          "text": "Cânticos dos degraus",
+          "correct": true
+        },
+        {
+          "text": "Salmos de Asafe",
+          "correct": false
+        },
+        {
+          "text": "Salmos imprecatórios",
+          "correct": false
+        },
+        {
+          "text": "Salmos reais",
+          "correct": false
+        }
+      ],
+      "explanation": "Cada um desses quinze salmos traz o título \"Cântico dos degraus\" (ou \"de romagem\"). Entre eles estão o Salmo 121 (\"Elevo os meus olhos para os montes\") e o 122 (\"Alegrei-me quando me disseram: Vamos à casa do SENHOR\").",
+      "divergence_note": null,
+      "reference": {
+        "book": "salmos",
+        "chapter": 122,
+        "verse_start": 1,
+        "verse_end": 1
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "livros-da-biblia-0062",
+      "text": "Qual livro do Antigo Testamento é composto de cinco poemas, quatro deles acrósticos que seguem as 22 letras do alfabeto hebraico?",
+      "options": [
+        {
+          "text": "Lamentações",
+          "correct": true
+        },
+        {
+          "text": "Cantares",
+          "correct": false
+        },
+        {
+          "text": "Eclesiastes",
+          "correct": false
+        },
+        {
+          "text": "Habacuque",
+          "correct": false
+        }
+      ],
+      "explanation": "Nos capítulos 1, 2 e 4 de Lamentações cada versículo começa com uma letra sucessiva do alfabeto; o capítulo 3 triplica o padrão, com 66 versículos. A forma expressa um luto completo pela queda de Jerusalém, mas no centro está a esperança: \"as suas misericórdias... renovam-se cada manhã\" (Lm 3:22-23).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lamentacoes",
+        "chapter": 3,
+        "verse_start": 22,
+        "verse_end": 23
+      },
+      "difficulty": "expert"
     }
   ]
 }

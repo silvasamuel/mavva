@@ -1461,6 +1461,440 @@
         "verse_end": 4
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0050",
+      "text": "Segundo Apocalipse 1:7, como Jesus virá, e quem o verá?",
+      "options": [
+        {
+          "text": "Vem com as nuvens, e todo olho o verá, até os que o traspassaram",
+          "correct": true
+        },
+        {
+          "text": "Vem em segredo, e só os eleitos o verão",
+          "correct": false
+        },
+        {
+          "text": "Vem pelo deserto, e só Israel o verá",
+          "correct": false
+        },
+        {
+          "text": "Vem no templo, e só os sacerdotes o verão",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Eis que vem com as nuvens, e todo olho o verá, até os mesmos que o traspassaram; e todas as tribos da terra se lamentarão sobre ele\" (Ap 1:7). O versículo une Daniel 7:13 (as nuvens) e Zacarias 12:10 (o traspassado).",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 1,
+        "verse_start": 7,
+        "verse_end": 8
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "escatologia-0051",
+      "text": "Em Mateus 24:35, o que Jesus diz que passará, enquanto as suas palavras não passarão?",
+      "options": [
+        {
+          "text": "O céu e a terra",
+          "correct": true
+        },
+        {
+          "text": "O templo e a cidade",
+          "correct": false
+        },
+        {
+          "text": "Os reis e os impérios",
+          "correct": false
+        },
+        {
+          "text": "O sol e a lua",
+          "correct": false
+        }
+      ],
+      "explanation": "\"O céu e a terra passarão, mas as minhas palavras não hão de passar\" (Mt 24:35). No meio do sermão sobre o fim, Jesus ancora a certeza das suas promessas acima da própria criação.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 24,
+        "verse_start": 35,
+        "verse_end": 35
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "escatologia-0052",
+      "text": "Segundo Apocalipse 21:1, o que João viu depois que \"o primeiro céu e a primeira terra passaram\" — e o que ele diz que já não existia?",
+      "options": [
+        {
+          "text": "Um novo céu e uma nova terra; e o mar já não existia",
+          "correct": true
+        },
+        {
+          "text": "Um novo templo; e a noite já não existia",
+          "correct": false
+        },
+        {
+          "text": "Uma nova arca; e o dilúvio já não existia",
+          "correct": false
+        },
+        {
+          "text": "Um novo Éden; e a serpente já não existia",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E vi um novo céu e uma nova terra. Porque já o primeiro céu e a primeira terra passaram, e o mar já não existe\" (Ap 21:1). Para os antigos, o mar era símbolo do caos e da separação; a sua ausência anuncia um mundo sem ameaça.",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 21,
+        "verse_start": 1,
+        "verse_end": 1
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "escatologia-0053",
+      "text": "Qual é o nome hebraico do lugar onde, segundo Apocalipse 16:16, os reis da terra são congregados para a batalha do grande dia de Deus?",
+      "options": [
+        {
+          "text": "Armagedom",
+          "correct": true
+        },
+        {
+          "text": "Gólgota",
+          "correct": false
+        },
+        {
+          "text": "Sião",
+          "correct": false
+        },
+        {
+          "text": "Babilônia",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E os congregaram no lugar que em hebreu se chama Armagedom\" (Ap 16:16). O nome evoca \"monte de Megido\", planície onde se travaram batalhas decisivas de Israel, como a de Débora e a morte de Josias.",
+      "divergence_note": "Cristãos divergem sobre se Armagedom designa um lugar e uma batalha literais no fim dos tempos ou um símbolo do confronto final entre Deus e as forças do mal. O texto nomeia o lugar; a natureza do evento é debate interpretativo.",
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 16,
+        "verse_start": 13,
+        "verse_end": 16
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "escatologia-0054",
+      "text": "Em Lucas 21:28, o que Jesus manda os discípulos fazerem quando \"estas coisas começarem a acontecer\"?",
+      "options": [
+        {
+          "text": "Olhar para cima e levantar a cabeça, porque a redenção está próxima",
+          "correct": true
+        },
+        {
+          "text": "Fugir para os montes sem olhar para trás",
+          "correct": false
+        },
+        {
+          "text": "Vender tudo e esperar no templo",
+          "correct": false
+        },
+        {
+          "text": "Jejuar até que o Filho do homem apareça",
+          "correct": false
+        }
+      ],
+      "explanation": "Diante dos sinais que farão os homens desmaiar de terror, os discípulos recebem ordem oposta: \"olhai para cima e levantai as vossas cabeças, porque a vossa redenção está próxima\" (Lc 21:28). Para o povo de Deus, o fim é esperança, não pavor.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 21,
+        "verse_start": 25,
+        "verse_end": 28
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "escatologia-0055",
+      "text": "Segundo Apocalipse 20:10, para onde o diabo é lançado depois de ser solto e derrotado ao fim dos mil anos?",
+      "options": [
+        {
+          "text": "No lago de fogo e enxofre, onde estão a besta e o falso profeta",
+          "correct": true
+        },
+        {
+          "text": "No abismo, por mais mil anos",
+          "correct": false
+        },
+        {
+          "text": "No mar, que depois deixa de existir",
+          "correct": false
+        },
+        {
+          "text": "Nas trevas exteriores, fora da cidade",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E o diabo, que os enganava, foi lançado no lago de fogo e enxofre, onde está a besta e o falso profeta; e de dia e de noite serão atormentados para todo o sempre\" (Ap 20:10). Em seguida vem o juízo do grande trono branco.",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 20,
+        "verse_start": 7,
+        "verse_end": 10
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0056",
+      "text": "Segundo Mateus 24:31, o que os anjos farão quando o Filho do homem os enviar \"com rijo clamor de trombeta\"?",
+      "options": [
+        {
+          "text": "Ajuntarão os escolhidos desde os quatro ventos",
+          "correct": true
+        },
+        {
+          "text": "Destruirão as nações que perseguiram a igreja",
+          "correct": false
+        },
+        {
+          "text": "Reconstruirão o templo de Jerusalém",
+          "correct": false
+        },
+        {
+          "text": "Abrirão os livros do juízo",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E ele enviará os seus anjos com rijo clamor de trombeta, os quais ajuntarão os seus escolhidos desde os quatro ventos, de uma à outra extremidade dos céus\" (Mt 24:31). A reunião do povo de Deus disperso é o primeiro ato da vinda.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 24,
+        "verse_start": 29,
+        "verse_end": 31
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0057",
+      "text": "Segundo 2 Tessalonicenses 1:7-8, como e com quem o Senhor Jesus se manifestará do céu?",
+      "options": [
+        {
+          "text": "Com os anjos do seu poder, em chama de fogo, tomando vingança dos que não obedecem ao evangelho",
+          "correct": true
+        },
+        {
+          "text": "Sozinho e em silêncio, para buscar a igreja",
+          "correct": false
+        },
+        {
+          "text": "Com Moisés e Elias, para julgar Israel",
+          "correct": false
+        },
+        {
+          "text": "Com os vinte e quatro anciãos, para coroar os mártires",
+          "correct": false
+        }
+      ],
+      "explanation": "Paulo consola os perseguidos de Tessalônica: o alívio deles e o juízo dos opressores virão juntos, \"quando o Senhor Jesus se manifestar do céu, com os anjos do seu poder, como labareda de fogo\" (2Ts 1:6-10). Ele virá \"para ser glorificado nos seus santos\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "2tessalonicenses",
+        "chapter": 1,
+        "verse_start": 6,
+        "verse_end": 10
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0058",
+      "text": "Segundo Apocalipse 22:12, o que Jesus traz consigo quando diz \"Eis que cedo venho\"?",
+      "options": [
+        {
+          "text": "O seu galardão, para dar a cada um segundo a sua obra",
+          "correct": true
+        },
+        {
+          "text": "As chaves da morte e do inferno",
+          "correct": false
+        },
+        {
+          "text": "O livro selado com sete selos",
+          "correct": false
+        },
+        {
+          "text": "A medida da nova Jerusalém",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E eis que cedo venho, e o meu galardão está comigo, para dar a cada um segundo a sua obra\" (Ap 22:12). A promessa ecoa Isaías 40:10 e 62:11, onde é o próprio SENHOR quem vem com o seu galardão.",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 22,
+        "verse_start": 12,
+        "verse_end": 13
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0059",
+      "text": "Segundo Daniel 12:2, o que acontecerá com \"muitos dos que dormem no pó da terra\"?",
+      "options": [
+        {
+          "text": "Ressuscitarão, uns para a vida eterna e outros para vergonha e desprezo eterno",
+          "correct": true
+        },
+        {
+          "text": "Permanecerão no pó até a restauração de Israel",
+          "correct": false
+        },
+        {
+          "text": "Serão transformados em estrelas",
+          "correct": false
+        },
+        {
+          "text": "Serão levados ao céu sem despertar",
+          "correct": false
+        }
+      ],
+      "explanation": "É a afirmação mais clara do Antigo Testamento sobre a ressurreição dos justos e dos ímpios (Dn 12:2). O versículo seguinte promete que \"os sábios... resplandecerão como o fulgor do firmamento\" — imagem que Jesus retoma em Mateus 13:43.",
+      "divergence_note": null,
+      "reference": {
+        "book": "daniel",
+        "chapter": 12,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0060",
+      "text": "Como termina o sermão de Jesus sobre as ovelhas e os bodes, em Mateus 25:46?",
+      "options": [
+        {
+          "text": "\"E irão estes para o tormento eterno, mas os justos, para a vida eterna\"",
+          "correct": true
+        },
+        {
+          "text": "\"E todos serão salvos no último dia\"",
+          "correct": false
+        },
+        {
+          "text": "\"E o Reino será dado a Israel\"",
+          "correct": false
+        },
+        {
+          "text": "\"E o Filho entregará o Reino ao Pai\"",
+          "correct": false
+        }
+      ],
+      "explanation": "Mateus 25:46 coloca os dois destinos lado a lado, com o mesmo adjetivo: eterno. O critério exposto antes foi o cuidado com \"estes meus pequeninos irmãos\" — fé que se mostra em misericórdia.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 25,
+        "verse_start": 41,
+        "verse_end": 46
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "escatologia-0061",
+      "text": "Quais são as cores dos quatro cavalos que aparecem quando o Cordeiro abre os quatro primeiros selos, em Apocalipse 6?",
+      "options": [
+        {
+          "text": "Branco, vermelho, preto e amarelo",
+          "correct": true
+        },
+        {
+          "text": "Branco, azul, preto e dourado",
+          "correct": false
+        },
+        {
+          "text": "Vermelho, verde, preto e cinzento",
+          "correct": false
+        },
+        {
+          "text": "Branco, vermelho, roxo e preto",
+          "correct": false
+        }
+      ],
+      "explanation": "O cavalo branco traz um cavaleiro com arco e coroa; o vermelho tira a paz da terra; o preto traz balança e carestia; o amarelo é montado pela Morte, seguida do Inferno (Ap 6:1-8). Juntos são conhecidos como os quatro cavaleiros do Apocalipse.",
+      "divergence_note": "A identidade do cavaleiro do cavalo branco é debatida: alguns o veem como Cristo ou o evangelho conquistador (cf. Ap 19:11), outros como o anticristo ou a conquista militar. As cores e os efeitos são o que o texto afirma; a identificação é interpretação.",
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 6,
+        "verse_start": 1,
+        "verse_end": 8
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "escatologia-0062",
+      "text": "Por quantos dias as duas testemunhas de Apocalipse 11 profetizam, vestidas de saco, antes de serem mortas pela besta?",
+      "options": [
+        {
+          "text": "Mil duzentos e sessenta dias",
+          "correct": true
+        },
+        {
+          "text": "Quarenta dias",
+          "correct": false
+        },
+        {
+          "text": "Setenta semanas",
+          "correct": false
+        },
+        {
+          "text": "Mil anos",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E darei poder às minhas duas testemunhas, e profetizarão por mil duzentos e sessenta dias, vestidas de saco\" (Ap 11:3). O período equivale a 42 meses ou \"tempo, tempos e metade de um tempo\" (Dn 7:25; Ap 12:14). Depois de três dias e meio mortas, elas ressuscitam e sobem ao céu.",
+      "divergence_note": "Há divergência sobre quem são as testemunhas (Moisés e Elias, Enoque e Elias, a igreja testemunhante, ou figuras futuras) e se os 1.260 dias são literais ou simbólicos. O texto dá o número; a identificação é debate entre cristãos ortodoxos.",
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 11,
+        "verse_start": 3,
+        "verse_end": 12
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "escatologia-0063",
+      "text": "Segundo Apocalipse 21:16, qual é a forma da nova Jerusalém medida pelo anjo?",
+      "options": [
+        {
+          "text": "Quadrangular, com comprimento, largura e altura iguais, de doze mil estádios",
+          "correct": true
+        },
+        {
+          "text": "Circular, com doze mil estádios de diâmetro",
+          "correct": false
+        },
+        {
+          "text": "Uma pirâmide de sete degraus",
+          "correct": false
+        },
+        {
+          "text": "Um retângulo como o tabernáculo",
+          "correct": false
+        }
+      ],
+      "explanation": "\"A cidade estava situada em quadrado... o seu comprimento, largura e altura eram iguais\" (Ap 21:16) — um cubo perfeito, como o Santo dos Santos do templo (1Rs 6:20). A cidade inteira é o lugar da presença de Deus; por isso João não viu templo nela (Ap 21:22).",
+      "divergence_note": null,
+      "reference": {
+        "book": "apocalipse",
+        "chapter": 21,
+        "verse_start": 15,
+        "verse_end": 17
+      },
+      "difficulty": "expert"
     }
   ]
 }
