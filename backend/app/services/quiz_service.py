@@ -171,6 +171,23 @@ def present_question(db: Session, session: QuizSession, question_id: uuid.UUID) 
     return remaining_seconds(session, question_id)
 
 
+def round_started_at(session: QuizSession) -> datetime:
+    """When the player actually started answering.
+
+    A duel round is created when the challenge is made and may be played hours
+    later, so `started_at` would count the wait. Timed sessions record when
+    each question was shown; the earliest of those is the real start.
+    """
+    started_at = session.started_at
+    if started_at.tzinfo is None:
+        started_at = started_at.replace(tzinfo=UTC)
+    shown: list[datetime] = []
+    for raw in _presented_map(session).values():
+        when = datetime.fromisoformat(raw)
+        shown.append(when if when.tzinfo else when.replace(tzinfo=UTC))
+    return min(shown) if shown else started_at
+
+
 def ensure_current_timer(db: Session, session: QuizSession) -> None:
     if session.completed_at is not None or session.abandoned_at is not None:
         return
@@ -323,10 +340,7 @@ def complete_session(db: Session, user: User, session_id: uuid.UUID) -> Complete
         raise QuizError("Responda ao menos uma pergunta antes de concluir")
 
     now = datetime.now(UTC)
-    started_at = session.started_at
-    if started_at.tzinfo is None:
-        started_at = started_at.replace(tzinfo=UTC)
-    elapsed = int((now - started_at).total_seconds())
+    elapsed = int((now - round_started_at(session)).total_seconds())
     session.duration_seconds = max(0, min(elapsed, MAX_SESSION_DURATION_SECONDS))
 
     is_duel = session.mode == QuizMode.DUEL
