@@ -4,7 +4,7 @@ import logging
 from dataclasses import dataclass
 from datetime import timedelta
 
-from sqlalchemy import func, select
+from sqlalchemy import ColumnElement, func, select
 from sqlalchemy.orm import Session
 
 from app.core.config import get_settings
@@ -33,7 +33,11 @@ class ReviewDigest:
         return not (self.questions.total or self.features.total or self.corrections.total)
 
 
-def _pending(db: Session, model, *conditions) -> PendingCount:
+def _pending(
+    db: Session,
+    model: type[QuestionProposal] | type[AppSuggestion],
+    *conditions: ColumnElement[bool],
+) -> PendingCount:
     since = func.now() - timedelta(days=1)
     total, new = db.execute(
         select(func.count(), func.count().filter(model.created_at >= since)).where(*conditions)
