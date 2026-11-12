@@ -6,7 +6,7 @@ import type { SupportPayment, SupportSummary, User } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
 import { Spinner } from '@/components/ui/Spinner'
-import { SupporterBadge } from '@/components/SupporterBadge'
+import { SupporterSeal } from '@/components/PlayerSeals'
 import { useAuth } from '@/features/auth/AuthContext'
 import { formatDate, formatReais } from '@/lib/format'
 import { AppIcons, Glyph } from '@/lib/icons'
@@ -177,7 +177,7 @@ export function SupportPage() {
           <div>
             <p className="flex items-center gap-2 font-extrabold text-ink">
               {supporterActive ? 'Você é Mavva Apoiador' : 'Seu selo de Apoiador venceu'}
-              {supporterActive && <SupporterBadge />}
+              {supporterActive && <SupporterSeal months={user?.supporter_months} />}
             </p>
             <p className="text-sm font-semibold text-sand-500">
               {supporterActive

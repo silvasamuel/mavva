@@ -21,6 +21,7 @@ from app.models import (
 )
 from app.models.enums import Difficulty, QuizMode, Testament
 from app.services import achievement_service, srs
+from app.services.badges import wisdom_delta, wisdom_level
 from app.services.gamification import (
     PERFECT_SESSION_BONUS,
     SESSION_COMPLETE_BONUS,
@@ -221,6 +222,24 @@ def best_combo(session: QuizSession) -> int:
     return max(combo_counts(a.is_correct for a in session.answers), default=0)
 
 
+def _wisdom_change(db: Session, user: User, question: Question, is_correct: bool) -> int:
+    """How much this answer moves the player's wisdom, up or down.
+
+    Wisdom counts each question by the player's latest answer to it (see
+    services/badges.py), so the change is the new answer's worth minus the
+    worth of the one it replaces. Must be asked before the answer is stored,
+    so "latest" here is still the previous one.
+    """
+    previous = db.scalar(
+        select(QuizAnswer.is_correct)
+        .join(QuizSession, QuizSession.id == QuizAnswer.session_id)
+        .where(QuizSession.user_id == user.id, QuizAnswer.question_id == question.id)
+        .order_by(QuizAnswer.answered_at.desc(), QuizAnswer.id.desc())
+        .limit(1)
+    )
+    return wisdom_delta(question.difficulty, previous, is_correct)
+
+
 def submit_answer(
     db: Session,
     user: User,
@@ -271,6 +290,7 @@ def submit_answer(
     else:
         combo_bonus = combo_bonus_xp(combo)
         xp = xp_for_answer(question.difficulty, is_correct) + combo_bonus
+    wisdom = _wisdom_change(db, user, question, is_correct)
     db.add(
         QuizAnswer(
             session_id=session.id,
@@ -285,6 +305,13 @@ def submit_answer(
     )
     if is_correct:
         session.correct_count += 1
+    if wisdom:
+        # Applied on the spot, not at session end: an abandoned round keeps
+        # what was learned (or missed), like the review queue does.
+        wisdom_stats = db.get(UserStats, user.id)
+        if wisdom_stats is not None:
+            wisdom_stats.wisdom_points += wisdom
+        session.wisdom_delta += wisdom
     session.xp_earned += xp
 
     # SRS updates immediately (survives abandoned sessions).
@@ -326,6 +353,11 @@ class CompleteResult:
     daily_goal_target: int
     daily_goal_earned: int
     best_combo: int
+    # Wisdom is applied answer by answer; these only report the session's net
+    # effect for the summary screen.
+    wisdom_delta: int = 0
+    wisdom_level: int = 1
+    wisdom_previous_level: int = 1
     unlocked_achievements: list[Achievement] = field(default_factory=list)
 
 
@@ -404,6 +436,9 @@ def complete_session(db: Session, user: User, session_id: uuid.UUID) -> Complete
         daily_goal_target=user.daily_goal_xp,
         daily_goal_earned=max(0, activity.xp),
         best_combo=best_combo(session),
+        wisdom_delta=session.wisdom_delta,
+        wisdom_level=wisdom_level(stats.wisdom_points),
+        wisdom_previous_level=wisdom_level(stats.wisdom_points - session.wisdom_delta),
         unlocked_achievements=unlocked,
     )
 

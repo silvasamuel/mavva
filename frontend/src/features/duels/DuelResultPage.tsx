@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
 import { Spinner } from '@/components/ui/Spinner'
 import { RankBadge } from '@/components/RankBadge'
-import { SupporterBadge } from '@/components/SupporterBadge'
+import { PlayerSeals } from '@/components/PlayerSeals'
 import { formatStudyTime } from '@/lib/format'
 import { AppIcons, Glyph, type Icon } from '@/lib/icons'
 
@@ -80,7 +80,7 @@ export function DuelResultPage() {
             {duel.me.user && (
               <div className="mt-1 flex flex-col items-center gap-1">
                 <RankBadge code={duel.me.user.rank.code} size="sm" />
-                {duel.me.user.is_supporter && <SupporterBadge />}
+                <PlayerSeals of={duel.me.user} />
               </div>
             )}
             <motion.p
@@ -105,7 +105,7 @@ export function DuelResultPage() {
             {rival && (
               <div className="mt-1 flex flex-col items-center gap-1">
                 <RankBadge code={rival.rank.code} size="sm" />
-                {rival.is_supporter && <SupporterBadge />}
+                <PlayerSeals of={rival} />
               </div>
             )}
             <p className="text-4xl font-extrabold text-sand-500">

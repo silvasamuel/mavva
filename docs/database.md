@@ -45,6 +45,7 @@ erDiagram
 | podium_seen_season | INT NULL | última temporada cuja comemoração de pódio o jogador viu |
 | supporter_since | TIMESTAMPTZ NULL | primeira oferta Pix aprovada |
 | supporter_until | TIMESTAMPTZ NULL | até quando vale o selo de Mavva Apoiador (cada R$ 30 ofertados = +30 dias) |
+| supporter_days_total | INT | todos os dias de selo já comprados; menos os que ainda faltam correr, dá os meses de apoio do selo |
 | created_at / updated_at | TIMESTAMPTZ | |
 
 ### refresh_tokens
@@ -102,6 +103,7 @@ Constraint de aplicação (validada no seed): 4 opções, exatamente 1 `is_corre
 | filters | JSONB | `{testament, category_ids, difficulty}` — snapshot do que foi pedido |
 | question_count | INT | |
 | correct_count | INT | atualizado a cada resposta |
+| wisdom_delta | INT | saldo de sabedoria da sessão (pode ser negativo), somado a cada resposta; só alimenta a tela final do quiz |
 | xp_earned | INT | consolidado no complete |
 | started_at | TIMESTAMPTZ | |
 | completed_at | TIMESTAMPTZ NULL | sessão abandonada fica NULL |
@@ -135,6 +137,8 @@ UNIQUE `(session_id, question_id)` — impede responder duas vezes.
 | questions_answered / correct_answers | INT / INT |
 | perfect_sessions | INT |
 | total_time_seconds | INT |
+| wisdom_points | INT *(vitalício: soma, por pergunta, do valor da última resposta do jogador — certa +0/1/3/5, errada −1/1/2/3 por dificuldade; pode ser negativo; vira o nível de sabedoria 1–10; recalculável de `quiz_answers`)* |
+| contributions | INT *(vitalício: reports resolvidos, perguntas sugeridas aprovadas e melhorias aceitas; vira o selo de contribuidor)* |
 | updated_at | TIMESTAMPTZ |
 
 > Atualizada transacionalmente pelo serviço de gamificação ao completar sessões.

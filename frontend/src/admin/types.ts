@@ -271,7 +271,7 @@ export interface AdminSuggestion {
   created_at: string
   kind: 'feature' | 'correction'
   body: string
-  status: 'open' | 'reviewed'
+  status: 'open' | 'reviewed' | 'accepted'
   author_name: string
   author_username: string
 }

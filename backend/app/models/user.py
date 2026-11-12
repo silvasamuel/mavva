@@ -1,3 +1,4 @@
+import math
 import uuid
 from datetime import UTC, date, datetime
 
@@ -62,6 +63,8 @@ class User(TimestampMixin, Base):
     # whatever is still running (see support_service.supporter_days).
     supporter_since: Mapped[datetime | None] = mapped_column(default=None)
     supporter_until: Mapped[datetime | None] = mapped_column(default=None)
+    # Every badge day ever bought, running or not: what supporter_months reads.
+    supporter_days_total: Mapped[int] = mapped_column(default=0, server_default="0")
 
     stats: Mapped["UserStats"] = relationship(back_populates="user", cascade="all, delete-orphan")
 
@@ -72,6 +75,25 @@ class User(TimestampMixin, Base):
     @property
     def is_supporter(self) -> bool:
         return self.supporter_until is not None and self.supporter_until > datetime.now(UTC)
+
+    @property
+    def supporter_months(self) -> int:
+        """Which month of support the player is in (or stopped at): 1, 2, 3…
+
+        Counts only the time the badge was actually running, so months need
+        not be consecutive and days bought ahead count as they are lived.
+        Zero for someone who never donated.
+        """
+        if self.supporter_since is None:
+            return 0
+        now = datetime.now(UTC)
+        ahead = (
+            (self.supporter_until - now).total_seconds() / 86400
+            if self.supporter_until is not None and self.supporter_until > now
+            else 0.0
+        )
+        lived = max(0.0, self.supporter_days_total - ahead)
+        return max(1, math.ceil(lived / 30))
 
 
 class UserStats(Base):
@@ -98,6 +120,11 @@ class UserStats(Base):
     duel_draws: Mapped[int] = mapped_column(default=0)
     current_duel_streak: Mapped[int] = mapped_column(default=0)
     best_duel_streak: Mapped[int] = mapped_column(default=0)
+    # Lifetime, never reset by a season (see services/badges.py). Wisdom: points
+    # for the first correct answer to each medium/hard/expert question.
+    wisdom_points: Mapped[int] = mapped_column(default=0, server_default="0")
+    # Reports resolved, question proposals approved and app suggestions accepted.
+    contributions: Mapped[int] = mapped_column(default=0, server_default="0")
     updated_at: Mapped[datetime] = mapped_column(server_default=func.now(), onupdate=func.now())
 
     user: Mapped[User] = relationship(back_populates="stats")

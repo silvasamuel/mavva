@@ -34,6 +34,7 @@ class UserOut(BaseModel):
     is_supporter: bool
     supporter_since: datetime | None
     supporter_until: datetime | None
+    supporter_months: int
 
 
 class RankOut(BaseModel):

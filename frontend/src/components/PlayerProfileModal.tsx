@@ -1,15 +1,17 @@
-import { useId, useRef, useState, type KeyboardEvent, type ReactNode } from 'react'
+import { useState, type ReactNode } from 'react'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { api, ApiError } from '@/lib/api'
 import type { PlayerProfile, PublicUser } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
+import { Tabs } from '@/components/ui/Tabs'
+import { StatTile } from '@/components/StatTile'
 import { SeasonTrophies } from '@/components/SeasonTrophies'
 import { EloTile } from '@/components/EloTile'
 import { RankBadge } from '@/components/RankBadge'
-import { SupporterBadge, SupporterFrame } from '@/components/SupporterBadge'
+import { PlayerSeals, SealShelf, SupporterFrame } from '@/components/PlayerSeals'
 import { formatPercent } from '@/lib/format'
-import { AchievementGlyph, AppIcons, CategoryGlyph, Glyph, type Icon } from '@/lib/icons'
+import { AchievementGlyph, AppIcons, CategoryGlyph, Glyph } from '@/lib/icons'
 
 const RELATION_LABEL: Partial<Record<PlayerProfile['relation'], string>> = {
   self: 'Você',
@@ -36,32 +38,6 @@ const MONTHS = [
 function memberSince(value: string): string {
   const [year, month] = value.split('-').map(Number)
   return `${MONTHS[month - 1]} de ${year}`
-}
-
-function Stat({
-  icon,
-  value,
-  label,
-  hint,
-}: {
-  icon: Icon
-  value: ReactNode
-  label: string
-  hint?: string
-}) {
-  return (
-    // <dt> must come before <dd> inside a <dl> group; `order` puts the value on top.
-    <div className="flex flex-col items-center gap-0.5 rounded-2xl bg-sand-50 px-2 py-3">
-      <span className="order-1">
-        <Glyph as={icon} className="h-5 w-5 text-grain-600" />
-      </span>
-      <dt className="order-3 text-xs font-extrabold uppercase tracking-wide text-sand-500">
-        {label}
-      </dt>
-      <dd className="order-2 text-lg font-extrabold leading-tight text-ink">{value}</dd>
-      {hint && <dd className="order-4 text-xs font-semibold text-sand-400">{hint}</dd>}
-    </div>
-  )
 }
 
 function SectionTitle({ children }: { children: ReactNode }) {
@@ -102,87 +78,21 @@ function trophyTally(trophies: PlayerProfile['trophies']): string {
  */
 function ProfileTabs({ profile }: { profile: PlayerProfile }) {
   const [active, setActive] = useState<TabKey>('trophies')
-  const tabRefs = useRef<Partial<Record<TabKey, HTMLButtonElement | null>>>({})
-  const id = useId()
   const counts: Partial<Record<TabKey, number>> = {
     trophies: profile.trophies.length,
     achievements: profile.achievements_unlocked,
   }
-
-  function onKeyDown(event: KeyboardEvent<HTMLDivElement>) {
-    const index = TABS.findIndex((tab) => tab.key === active)
-    const next =
-      event.key === 'ArrowRight'
-        ? (index + 1) % TABS.length
-        : event.key === 'ArrowLeft'
-          ? (index - 1 + TABS.length) % TABS.length
-          : event.key === 'Home'
-            ? 0
-            : event.key === 'End'
-              ? TABS.length - 1
-              : null
-    if (next == null) return
-    event.preventDefault()
-    setActive(TABS[next].key)
-    tabRefs.current[TABS[next].key]?.focus()
-  }
-
   return (
-    <div>
-      <div
-        role="tablist"
-        aria-label="Seções do perfil"
-        onKeyDown={onKeyDown}
-        className="grid grid-cols-3 gap-1 rounded-2xl bg-sand-100 p-1"
-      >
-        {TABS.map((tab) => {
-          const selected = tab.key === active
-          const count = counts[tab.key]
-          return (
-            <button
-              key={tab.key}
-              ref={(el) => {
-                tabRefs.current[tab.key] = el
-              }}
-              type="button"
-              role="tab"
-              id={`${id}-${tab.key}-tab`}
-              aria-selected={selected}
-              aria-controls={`${id}-${tab.key}-panel`}
-              tabIndex={selected ? 0 : -1}
-              onClick={() => setActive(tab.key)}
-              className={`flex items-center justify-center gap-1 rounded-xl px-1 py-2 text-xs font-extrabold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-leaf-500 ${
-                selected ? 'bg-white text-ink shadow-sm' : 'text-sand-500 hover:text-ink'
-              }`}
-            >
-              {tab.label}
-              {count != null && count > 0 && (
-                <span
-                  aria-hidden
-                  className={`rounded-full px-1.5 text-[10px] tabular-nums ${
-                    selected ? 'bg-grain-100 text-grain-800' : 'bg-sand-200 text-sand-600'
-                  }`}
-                >
-                  {count}
-                </span>
-              )}
-            </button>
-          )
-        })}
-      </div>
-
-      <div
-        role="tabpanel"
-        id={`${id}-${active}-panel`}
-        aria-labelledby={`${id}-${active}-tab`}
-        tabIndex={0}
-        className="mt-3 rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-leaf-500"
-      >
-        {active === 'trophies' && <TrophiesPanel trophies={profile.trophies} />}
-        {active === 'achievements' && <AchievementsPanel profile={profile} />}
-        {active === 'stats' && <StatsPanel profile={profile} />}
-      </div>
-    </div>
+    <Tabs
+      tabs={TABS.map((tab) => ({ ...tab, count: counts[tab.key] }))}
+      active={active}
+      onChange={setActive}
+      label="Seções do perfil"
+    >
+      {active === 'trophies' && <TrophiesPanel trophies={profile.trophies} />}
+      {active === 'achievements' && <AchievementsPanel profile={profile} />}
+      {active === 'stats' && <StatsPanel profile={profile} />}
+    </Tabs>
   )
 }
 
@@ -235,20 +145,20 @@ function StatsPanel({ profile }: { profile: PlayerProfile }) {
   return (
     <div className="space-y-5">
       <dl className="grid grid-cols-2 gap-2">
-        <Stat
+        <StatTile
           icon={stats.current_streak > 0 ? AppIcons.streak : AppIcons.streakOff}
           value={stats.current_streak === 1 ? '1 dia' : `${stats.current_streak} dias`}
           label="Sequência"
           hint={`recorde ${stats.longest_streak}`}
         />
-        <Stat
+        <StatTile
           icon={AppIcons.check}
           value={formatPercent(stats.accuracy)}
           label="Precisão"
           hint={`${stats.questions_answered.toLocaleString('pt-BR')} respondidas`}
         />
-        <Stat icon={AppIcons.star} value={stats.perfect_sessions} label="Sessões perfeitas" />
-        <Stat
+        <StatTile icon={AppIcons.star} value={stats.perfect_sessions} label="Sessões perfeitas" />
+        <StatTile
           icon={AppIcons.duels}
           value={`${user.duel_wins}V ${user.duel_draws}E ${user.duel_losses}D`}
           label="Duelos"
@@ -332,7 +242,6 @@ function ProfileBody({ profile }: { profile: PlayerProfile }) {
           <h2 className="text-xl font-extrabold text-ink">{user.name}</h2>
           <p className="text-sm font-semibold text-sand-500">@{user.username}</p>
         </div>
-        {user.is_supporter && <SupporterBadge size="md" />}
         {relation && (
           <span className="rounded-full bg-leaf-100 px-3 py-0.5 text-xs font-extrabold text-leaf-700">
             {relation}
@@ -356,6 +265,8 @@ function ProfileBody({ profile }: { profile: PlayerProfile }) {
         <EloTile label="Maior elo" rank={profile.best_rank} />
         <EloTile label="Mês passado" rank={profile.last_season_rank} />
       </dl>
+
+      <SealShelf of={user} contributions={profile.contributions} />
 
       <ProfileTabs profile={profile} />
 
@@ -392,7 +303,8 @@ function ProfileSkeleton({ user }: { user?: PublicUser }) {
               <h2 className="text-xl font-extrabold text-ink">{user.name}</h2>
               <p className="text-sm font-semibold text-sand-500">@{user.username}</p>
             </div>
-            {user.is_supporter && <SupporterBadge size="md" />}
+            {/* What the tapped row already showed, until the full shelf loads. */}
+            <PlayerSeals of={user} size="sm" />
           </>
         ) : (
           <>

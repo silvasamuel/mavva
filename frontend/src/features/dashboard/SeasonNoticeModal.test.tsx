@@ -82,8 +82,13 @@ describe('SeasonNoticeModal', () => {
       },
     })
     const podium = screen.getByRole('region', { name: 'Pódio de outubro de 2026' })
-    expect(within(podium).getAllByRole('listitem')[0]).toHaveTextContent('@bia4.200 XP')
-    expect(within(podium).getAllByRole('listitem')[1]).toHaveTextContent('2º@ana3.100 XP')
+    const [first, second] = within(podium).getAllByRole('listitem')
+    expect(first).toHaveTextContent('@bia')
+    expect(first).toHaveTextContent('4.200 XP')
+    expect(second).toHaveTextContent('2º@ana')
+    expect(second).toHaveTextContent('3.100 XP')
+    // Every row carries the player's seals; wisdom starts at 1.
+    expect(within(first).getByRole('img', { name: 'Sabedoria 1 de 10' })).toBeInTheDocument()
   })
 
   it('explains seasons to who has no last season yet', () => {

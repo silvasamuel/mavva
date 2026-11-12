@@ -79,6 +79,7 @@ nenhum aparelho. "Rever tutorial" no Perfil abre de novo só no cliente, sem cha
   "streak": { "current": 12, "extended_today": true },
   "daily_goal": { "target": 50, "earned_today": 145, "achieved": true },
   "best_combo": 6,                     // maior sequência de acertos da sessão
+  "wisdom": {"delta": -2, "level": 3, "previous_level": 3}, // o que a sessão fez com a sabedoria; a tela final só mostra quando delta != 0
   "unlocked_achievements": [ { "code": "streak_7", "name": "Uma semana no deserto", "icon": "🔥" } ]
 }
 ```
@@ -231,6 +232,34 @@ no servidor (`users.season_start_seen` / `season_end_seen`):
 
 ## Jogadores
 
+### Selos (sabedoria, contribuidor, apoiador)
+
+Todo `PublicUser` (ranking, amigos, duelos, perfil, pódios) traz os três selos exibidos ao
+lado do elo: `wisdom_level` (1 a 10), `contributor_tier` (`bronze`, `silver`, `gold`,
+`diamond` ou `null`) e `is_supporter`. Os dois primeiros são vitalícios — a virada de
+temporada não mexe neles.
+
+- **Sabedoria**: é o retrato do que o jogador sabe **agora**. Cada pergunta conta pela
+  **última resposta** dele: certa soma o ganho (fácil 0, média 1, difícil 3, especialista 5),
+  errada tira a perda (fácil 1, média 1, difícil 2, especialista 3; tempo esgotado conta como
+  erro) e nunca respondida vale 0. Por isso sobe e desce: errar uma pergunta que já sabia
+  custa o ganho mais a perda, e acertar de novo recupera tudo; repetir o mesmo resultado não
+  muda nada. Vale em qualquer modo e na hora da resposta (sessão abandonada não perde).
+  Níveis 1 a 10 começam em 0, 15, 45, 100, 200, 350, 550, 850, 1250 e 1800 pontos; o total
+  pode ficar abaixo de zero depois de erros no começo, e continua sendo nível 1.
+- **Contribuidor**: conta report resolvido (inclusive quando a pergunta é desativada),
+  pergunta sugerida aprovada e melhoria **aceita** pelo admin. Bronze com 1, prata com 5,
+  ouro com 15, diamante com 40.
+- **Apoiador com meses**: `supporter_months` diz em que mês de apoio o jogador está (1, 2,
+  3…) e aparece como número ao lado do coração. Conta só o tempo em que o selo esteve de
+  fato ativo: os meses não precisam ser consecutivos e dias comprados adiantados só contam
+  quando vividos. Em `PublicUser` vem 0 enquanto o selo está inativo; `UserOut` traz sempre
+  o valor do próprio jogador.
+- Outros jogadores veem só nível e selo. O progresso (pontos, quanto falta) vai apenas para
+  o próprio jogador, em `dashboard.stats.wisdom` (`{level, max_level, points, level_floor,
+  next_level_at}`) e `dashboard.stats.contributor` (`{tier, contributions, next_tier,
+  next_tier_at}`). `/players/{id}` traz também `contributions` (o total aceito).
+
 | Método | Rota | Descrição |
 |---|---|---|
 | GET | `/players/{id}` | Perfil público de outro jogador — aberto pelo ranking e pela lista de amigos. Qualquer jogador logado pode ver (o ranking global já mostra desconhecidos). Devolve `user` (`PublicUser`), `relation` (`self`/`friends`/`pending_sent`/`pending_received`/`none`), `member_since` (`"YYYY-MM"`, só o mês), `stats` (XP total, sequência atual/recorde, respondidas, precisão, sessões perfeitas), `achievements_unlocked`/`achievements_total`, `achievements` (todas as desbloqueadas, mais recentes primeiro, sem data), `trophies` (pódios de temporada, `[{season, position}]`) e `strongest_categories` (até 3, só com ≥ 5 respostas), `best_rank` (maior elo já conquistado, temporada atual inclusa) e `last_season_rank` (elo em que terminou a temporada passada; `null` se não jogou). **Nunca** inclui e-mail, fuso, meta diária, papel, datas de atividade ou de desbloqueio, nem quanto falta para o próximo nível. 404 para id desconhecido ou conta inativa (igual ao ranking). |
@@ -280,6 +309,11 @@ Assim quem acabou de chegar não recebe o histórico inteiro como novidade.
 | POST | `/notifications/seen` | Marca tudo como lido (grava `users.notifications_seen_at`). A tela chama ao abrir. 204. |
 
 O dashboard traz `notifications_unread` para o badge do sino.
+
+Enquanto houver avisos não lidos, a tela inicial abre uma vez um modal com eles (até 3; o
+resto fica na tela de Novidades). Ele espera o tutorial, a comemoração de pódio e o aviso de
+temporada, e fechar chama `POST /notifications/seen` — por isso não volta para a mesma
+novidade, em nenhum dispositivo. Quem acabou de se cadastrar não recebe o histórico.
 
 ## Apoie o Mavva (ofertas via Pix)
 

@@ -6,6 +6,7 @@ import type { DashboardData, User } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Card, CardTitle } from '@/components/ui/Card'
 import { Input } from '@/components/ui/Input'
+import { Tabs } from '@/components/ui/Tabs'
 import { SeasonTrophies } from '@/components/SeasonTrophies'
 import { EloTile } from '@/components/EloTile'
 import { RankBadge } from '@/components/RankBadge'
@@ -16,6 +17,8 @@ import { useAuth } from '@/features/auth/AuthContext'
 import { LegalLinks } from '@/features/legal/LegalLinks'
 import { TutorialDialog } from '@/features/tutorial/TutorialDialog'
 import { AccountRights } from './AccountRights'
+import { ProfileStats } from './ProfileStats'
+import { SealsCard } from './SealsCard'
 
 const GOAL_OPTIONS = [
   { value: 20, label: '20 XP — Casual' },
@@ -23,6 +26,16 @@ const GOAL_OPTIONS = [
   { value: 100, label: '100 XP — Dedicado' },
   { value: 150, label: '150 XP — Intenso' },
 ]
+
+/** One section at a time: the page used to be a long scroll of cards. */
+const PROFILE_TABS = [
+  { key: 'seals', label: 'Selos' },
+  { key: 'seasons', label: 'Temporadas' },
+  { key: 'stats', label: 'Estatísticas' },
+  { key: 'account', label: 'Conta' },
+] as const
+
+type ProfileTab = (typeof PROFILE_TABS)[number]['key']
 
 export function ProfilePage() {
   const { user, logout, updateUser } = useAuth()
@@ -37,6 +50,7 @@ export function ProfilePage() {
   const [message, setMessage] = useState('')
   const [error, setError] = useState('')
   const [tutorialOpen, setTutorialOpen] = useState(false)
+  const [tab, setTab] = useState<ProfileTab>('seals')
 
   const save = useMutation({
     mutationFn: () => api.patch<User>('/users/me', { name, username, daily_goal_xp: dailyGoal }),
@@ -86,108 +100,140 @@ export function ProfilePage() {
         </div>
       </header>
 
-      {dashboard && (
-        <Card className="space-y-3">
-          <CardTitle>Temporadas</CardTitle>
-          <p className="text-sm font-semibold text-sand-500">
-            Temporada de {dashboard.season.name} · {formatSeasonEnd(dashboard.season.days_left)}. No
-            dia 1º, XP, nível e o ranking de XP recomeçam — seus elos ficam aqui.
-          </p>
-          <dl className="grid grid-cols-2 gap-2">
-            <EloTile label="Maior elo" rank={dashboard.stats.best_rank} />
-            <EloTile label="Mês passado" rank={dashboard.stats.last_season_rank} />
-          </dl>
-          {dashboard.stats.trophies.length > 0 ? (
-            <SeasonTrophies
-              trophies={dashboard.stats.trophies.map((t) => ({
-                season: t.name,
-                position: t.position,
-              }))}
-            />
-          ) : (
-            <p className="text-xs font-semibold text-sand-400">
-              Termine uma temporada no pódio para ganhar um troféu: ouro, prata ou bronze.
-            </p>
-          )}
-        </Card>
-      )}
-
-      <Card className="space-y-4">
-        <CardTitle>Seus dados</CardTitle>
-        <Input label="Nome" value={name} onChange={(e) => setName(e.target.value)} />
-        <Input
-          label="Nome de usuário (para amigos e duelos)"
-          value={username}
-          onChange={(e) => setUsername(e.target.value.toLowerCase().replace(/[^a-z0-9_]/g, ''))}
-          placeholder="ex: samuel"
-        />
-
-        <div className="space-y-1.5">
-          <p className="text-sm font-bold text-sand-700">Meta diária</p>
-          <div className="grid grid-cols-2 gap-2">
-            {GOAL_OPTIONS.map((option) => (
-              <button
-                key={option.value}
-                type="button"
-                aria-pressed={dailyGoal === option.value}
-                onClick={() => setDailyGoal(option.value)}
-                className={`rounded-2xl px-3 py-2.5 text-sm font-extrabold transition-colors ${
-                  dailyGoal === option.value
-                    ? 'bg-leaf-500 text-white'
-                    : 'bg-sand-50 text-sand-600 hover:bg-sand-100'
-                }`}
-              >
-                {option.label}
-              </button>
-            ))}
+      <Tabs
+        tabs={PROFILE_TABS}
+        active={tab}
+        onChange={setTab}
+        label="Seções do perfil"
+        panelClassName="mt-4 space-y-6"
+      >
+        {tab !== 'account' && !dashboard && (
+          <div className="flex justify-center py-12">
+            <Spinner className="h-8 w-8 text-leaf-500" />
           </div>
-        </div>
-
-        {message && <p className="text-sm font-bold text-leaf-700">{message}</p>}
-        {error && (
-          <p role="alert" className="text-sm font-bold text-red-600">
-            {error}
-          </p>
         )}
 
-        <Button full loading={save.isPending} onClick={() => save.mutate()}>
-          Salvar
-        </Button>
-      </Card>
+        {tab === 'seals' && dashboard?.stats.wisdom && dashboard.stats.contributor && (
+          <SealsCard
+            wisdom={dashboard.stats.wisdom}
+            contributor={dashboard.stats.contributor}
+            user={user}
+          />
+        )}
 
-      <Card className="space-y-4">
-        <CardTitle>Tutorial</CardTitle>
-        <p className="text-sm font-semibold text-sand-600">
-          Veja de novo, em poucos passos, como funcionam o maná do dia, os estudos, a revisão e os
-          duelos.
-        </p>
-        <Button variant="secondary" full onClick={() => setTutorialOpen(true)}>
-          Rever tutorial
-        </Button>
-      </Card>
-      {/* Replays locally only: the server already has it as done. */}
+        {tab === 'seasons' && dashboard && (
+          <Card className="space-y-3">
+            <CardTitle>Temporadas</CardTitle>
+            <p className="text-sm font-semibold text-sand-500">
+              Temporada de {dashboard.season.name} · {formatSeasonEnd(dashboard.season.days_left)}.
+              No dia 1º, XP, nível e o ranking de XP recomeçam — seus elos ficam aqui.
+            </p>
+            <dl className="grid grid-cols-2 gap-2">
+              <EloTile label="Maior elo" rank={dashboard.stats.best_rank} />
+              <EloTile label="Mês passado" rank={dashboard.stats.last_season_rank} />
+            </dl>
+            {dashboard.stats.trophies.length > 0 ? (
+              <SeasonTrophies
+                trophies={dashboard.stats.trophies.map((t) => ({
+                  season: t.name,
+                  position: t.position,
+                }))}
+              />
+            ) : (
+              <p className="text-xs font-semibold text-sand-400">
+                Termine uma temporada no pódio para ganhar um troféu: ouro, prata ou bronze.
+              </p>
+            )}
+          </Card>
+        )}
+
+        {tab === 'stats' && dashboard && <ProfileStats data={dashboard} />}
+
+        {tab === 'account' && (
+          <>
+            <Card className="space-y-4">
+              <CardTitle>Seus dados</CardTitle>
+              <Input label="Nome" value={name} onChange={(e) => setName(e.target.value)} />
+              <Input
+                label="Nome de usuário (para amigos e duelos)"
+                value={username}
+                onChange={(e) =>
+                  setUsername(e.target.value.toLowerCase().replace(/[^a-z0-9_]/g, ''))
+                }
+                placeholder="ex: samuel"
+              />
+
+              <div className="space-y-1.5">
+                <p className="text-sm font-bold text-sand-700">Meta diária</p>
+                <div className="grid grid-cols-2 gap-2">
+                  {GOAL_OPTIONS.map((option) => (
+                    <button
+                      key={option.value}
+                      type="button"
+                      aria-pressed={dailyGoal === option.value}
+                      onClick={() => setDailyGoal(option.value)}
+                      className={`rounded-2xl px-3 py-2.5 text-sm font-extrabold transition-colors ${
+                        dailyGoal === option.value
+                          ? 'bg-leaf-500 text-white'
+                          : 'bg-sand-50 text-sand-600 hover:bg-sand-100'
+                      }`}
+                    >
+                      {option.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {message && <p className="text-sm font-bold text-leaf-700">{message}</p>}
+              {error && (
+                <p role="alert" className="text-sm font-bold text-red-600">
+                  {error}
+                </p>
+              )}
+
+              <Button full loading={save.isPending} onClick={() => save.mutate()}>
+                Salvar
+              </Button>
+            </Card>
+
+            <Card className="space-y-4">
+              <CardTitle>Tutorial</CardTitle>
+              <p className="text-sm font-semibold text-sand-600">
+                Veja de novo, em poucos passos, como funcionam o maná do dia, os estudos, a revisão
+                e os duelos.
+              </p>
+              <Button variant="secondary" full onClick={() => setTutorialOpen(true)}>
+                Rever tutorial
+              </Button>
+            </Card>
+
+            <AccountRights />
+
+            <Card>
+              <Button
+                variant="danger"
+                full
+                onClick={async () => {
+                  await logout()
+                  navigate('/login', { replace: true })
+                }}
+              >
+                Sair da conta
+              </Button>
+              <LegalLinks />
+            </Card>
+          </>
+        )}
+      </Tabs>
+
+      {/* Outside the tabs so switching sections never unmounts it mid-tour.
+          Replays locally only: the server already has it as done. */}
       <TutorialDialog
         open={tutorialOpen}
         onClose={() => setTutorialOpen(false)}
         firstName={user?.name.split(' ')[0]}
         replay
       />
-
-      <AccountRights />
-
-      <Card>
-        <Button
-          variant="danger"
-          full
-          onClick={async () => {
-            await logout()
-            navigate('/login', { replace: true })
-          }}
-        >
-          Sair da conta
-        </Button>
-        <LegalLinks />
-      </Card>
     </div>
   )
 }

@@ -12,6 +12,7 @@ from app.models import (
     QuestionProposal,
     QuizSession,
     User,
+    UserStats,
 )
 from app.models.enums import (
     AppSuggestionKind,
@@ -139,15 +140,36 @@ def list_open_suggestions(db: Session) -> list[AppSuggestion]:
     )
 
 
-def review_suggestion(db: Session, suggestion_id: uuid.UUID) -> AppSuggestion:
+def _credit_contribution(db: Session, user_id: uuid.UUID) -> None:
+    """One more accepted contribution toward the author's contributor seal."""
+    stats = db.get(UserStats, user_id)
+    if stats is not None:
+        stats.contributions += 1
+
+
+def _close_suggestion(
+    db: Session, suggestion_id: uuid.UUID, status: AppSuggestionStatus
+) -> AppSuggestion:
     suggestion = db.get(AppSuggestion, suggestion_id)
     if suggestion is None:
         raise ModerationError("Sugestão não encontrada", status_code=404)
     if suggestion.status != AppSuggestionStatus.OPEN:
         raise ModerationError("Esta sugestão já foi tratada")
-    suggestion.status = AppSuggestionStatus.REVIEWED
+    suggestion.status = status
+    if status == AppSuggestionStatus.ACCEPTED:
+        _credit_contribution(db, suggestion.user_id)
     db.flush()
     return suggestion
+
+
+def review_suggestion(db: Session, suggestion_id: uuid.UUID) -> AppSuggestion:
+    """Read and filed, with nothing to credit."""
+    return _close_suggestion(db, suggestion_id, AppSuggestionStatus.REVIEWED)
+
+
+def accept_suggestion(db: Session, suggestion_id: uuid.UUID) -> AppSuggestion:
+    """The idea or correction was taken on board: the author gets the credit."""
+    return _close_suggestion(db, suggestion_id, AppSuggestionStatus.ACCEPTED)
 
 
 def list_pending_proposals(db: Session) -> list[QuestionProposal]:
@@ -169,6 +191,9 @@ def set_flag_status(db: Session, flag_id: uuid.UUID, status: QuestionFlagStatus)
     if flag.status != QuestionFlagStatus.OPEN:
         raise ModerationError("Este report já foi tratado")
     flag.status = status
+    if status == QuestionFlagStatus.RESOLVED:
+        # The report was right (fixed or question retired): credit the reporter.
+        _credit_contribution(db, flag.user_id)
     db.flush()
     return flag
 
@@ -194,6 +219,7 @@ def approve_proposal(
     question = _create_question(db, body)
     proposal.status = QuestionProposalStatus.APPROVED
     proposal.question_id = question.id
+    _credit_contribution(db, proposal.user_id)
     db.flush()
     return proposal
 

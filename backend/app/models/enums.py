@@ -85,7 +85,8 @@ class AppSuggestionKind(StrEnum):
 
 class AppSuggestionStatus(StrEnum):
     OPEN = "open"
-    REVIEWED = "reviewed"
+    REVIEWED = "reviewed"  # read, nothing to credit
+    ACCEPTED = "accepted"  # taken on board: counts toward the contributor seal
 
 
 class AnnouncementKind(StrEnum):

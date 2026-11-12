@@ -62,8 +62,10 @@ export function ReviewPanel() {
       setError(err instanceof ApiError ? err.message : 'Não foi possível recusar a sugestão.'),
   })
 
-  const reviewSuggestion = useMutation({
-    mutationFn: (id: string) => api.post<void>(`/admin/review/suggestions/${id}/review`),
+  // "accept" credits the author's contributor seal; "review" only files it.
+  const closeSuggestion = useMutation({
+    mutationFn: ({ id, action }: { id: string; action: 'accept' | 'review' }) =>
+      api.post<void>(`/admin/review/suggestions/${id}/${action}`),
     onSuccess: refresh,
     onError: (err) =>
       setError(err instanceof ApiError ? err.message : 'Não foi possível concluir a sugestão.'),
@@ -185,13 +187,34 @@ export function ReviewPanel() {
               <p className="text-xs font-semibold text-sand-400">
                 @{suggestion.author_username} · {formatRelativeDate(suggestion.created_at)}
               </p>
-              <Button
-                variant="secondary"
-                loading={reviewSuggestion.isPending && reviewSuggestion.variables === suggestion.id}
-                onClick={() => reviewSuggestion.mutate(suggestion.id)}
-              >
-                Concluir
-              </Button>
+              <div className="flex flex-wrap gap-2">
+                <Button
+                  loading={
+                    closeSuggestion.isPending &&
+                    closeSuggestion.variables?.id === suggestion.id &&
+                    closeSuggestion.variables.action === 'accept'
+                  }
+                  disabled={closeSuggestion.isPending}
+                  onClick={() => closeSuggestion.mutate({ id: suggestion.id, action: 'accept' })}
+                >
+                  Aceitar
+                </Button>
+                <Button
+                  variant="secondary"
+                  loading={
+                    closeSuggestion.isPending &&
+                    closeSuggestion.variables?.id === suggestion.id &&
+                    closeSuggestion.variables.action === 'review'
+                  }
+                  disabled={closeSuggestion.isPending}
+                  onClick={() => closeSuggestion.mutate({ id: suggestion.id, action: 'review' })}
+                >
+                  Só marcar como lida
+                </Button>
+              </div>
+              <p className="text-xs font-semibold text-sand-400">
+                Aceitar conta para o selo de contribuidor de quem sugeriu.
+              </p>
             </Card>
           ))}
         </section>

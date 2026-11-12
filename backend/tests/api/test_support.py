@@ -472,3 +472,58 @@ def test_supporter_days_tiers(cents: int, days: int) -> None:
     from app.services.support_service import supporter_days
 
     assert supporter_days(cents) == days
+
+
+class TestSupporterMonths:
+    """The number on the seal: which month of support the player is in."""
+
+    def _user(self, client: TestClient, db: Session, headers: dict[str, str]) -> User:
+        user = db.get(User, client.get("/api/v1/users/me", headers=headers).json()["id"])
+        assert user is not None
+        return user
+
+    def test_never_donated_is_zero(self, client: TestClient) -> None:
+        headers = _login(client)
+        assert client.get("/api/v1/users/me", headers=headers).json()["supporter_months"] == 0
+
+    def test_first_donation_starts_month_one(self, client: TestClient, db: Session) -> None:
+        headers = _login(client)
+        payment = _create(client, headers, 9000)  # 90 days bought ahead
+        client.post(f"/api/v1/support/payments/{payment['id']}/simulate", headers=headers)
+        me = client.get("/api/v1/users/me", headers=headers).json()
+        # Days bought ahead don't count until they are lived.
+        assert me["supporter_months"] == 1
+        assert self._user(client, db, headers).supporter_days_total == 90
+        profile = client.get(f"/api/v1/players/{me['id']}", headers=headers).json()
+        assert profile["user"]["supporter_months"] == 1
+
+    def test_months_count_as_they_are_lived(self, client: TestClient, db: Session) -> None:
+        headers = _login(client)
+        user = self._user(client, db, headers)
+        now = datetime.now(UTC)
+        user.supporter_since = now - timedelta(days=45)
+        user.supporter_days_total = 90
+        user.supporter_until = now + timedelta(days=45)  # 45 of the 90 days lived
+        db.flush()
+        assert client.get("/api/v1/users/me", headers=headers).json()["supporter_months"] == 2
+
+    def test_a_gap_between_months_does_not_count(self, client: TestClient, db: Session) -> None:
+        headers = _login(client)
+        user = self._user(client, db, headers)
+        now = datetime.now(UTC)
+        # One month lived long ago, lapsed since: still one month of support.
+        user.supporter_since = now - timedelta(days=200)
+        user.supporter_days_total = 30
+        user.supporter_until = now - timedelta(days=170)
+        db.flush()
+        me = client.get("/api/v1/users/me", headers=headers).json()
+        assert me["is_supporter"] is False
+        assert me["supporter_months"] == 1
+        # While the seal is off, others see no number.
+        profile = client.get(f"/api/v1/players/{me['id']}", headers=headers).json()
+        assert profile["user"]["supporter_months"] == 0
+
+        # Coming back starts the second month, not the eighth.
+        payment = _create(client, headers, 500)
+        client.post(f"/api/v1/support/payments/{payment['id']}/simulate", headers=headers)
+        assert client.get("/api/v1/users/me", headers=headers).json()["supporter_months"] == 2

@@ -109,6 +109,14 @@ class RankInfo(BaseModel):
     rank_up: bool
 
 
+class WisdomInfo(BaseModel):
+    """What the session did to the player's wisdom; `delta` 0 = nothing to show."""
+
+    delta: int  # net points, negative when misses outweighed hits
+    level: int  # 1 to 10, after the session
+    previous_level: int  # before it: differs when the session crossed a level
+
+
 class StreakInfo(BaseModel):
     current: int
     extended_today: bool
@@ -141,6 +149,7 @@ class QuizCompleteResponse(BaseModel):
     streak: StreakInfo
     daily_goal: DailyGoalInfo
     best_combo: int  # longest run of hits in the session
+    wisdom: WisdomInfo
     unlocked_achievements: list[UnlockedAchievement]
 
 

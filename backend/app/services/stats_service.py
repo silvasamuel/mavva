@@ -19,7 +19,7 @@ from app.models import (
     UserStats,
 )
 from app.models.enums import DuelStatus, FriendshipStatus, QuizMode
-from app.services import announcement_service, season_service, srs
+from app.services import announcement_service, badges, season_service, srs
 from app.services.duel_service import DUEL_XP
 from app.services.gamification import (
     effective_streak,
@@ -158,7 +158,7 @@ def _podium_payload(db: Session, season: Any) -> dict[str, Any] | None:
                 "name": users[r.user_id].name,
                 "final_xp": r.final_xp,
                 "rank": rank_payload(r.final_level),
-                "is_supporter": users[r.user_id].is_supporter,
+                **badges.public_badges(users[r.user_id]),
             }
             for r in results
             if r.user_id in users
@@ -284,6 +284,9 @@ def get_dashboard(db: Session, user: User) -> dict[str, Any]:
             "accuracy": accuracy,
             "perfect_sessions": stats.perfect_sessions,
             "total_time_seconds": stats.total_time_seconds,
+            # Lifetime seals, with the progress only the player sees.
+            "wisdom": badges.wisdom_payload(stats.wisdom_points),
+            "contributor": badges.contributor_payload(stats.contributions),
         },
         "daily_goal": {
             "target": user.daily_goal_xp,

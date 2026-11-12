@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { MonthPrize } from '@/components/MonthPrize'
 import { RankBadge } from '@/components/RankBadge'
-import { SupporterBadge } from '@/components/SupporterBadge'
+import { PlayerSeals } from '@/components/PlayerSeals'
 import { nextRankCopy } from '@/lib/ranks'
 import { AppIcons, Glyph, type Icon } from '@/lib/icons'
 
@@ -52,7 +52,7 @@ function LastPodium({ podium }: { podium: NonNullable<DashboardData['last_season
             </span>
             <span className="flex min-w-0 flex-1 items-center gap-1.5 text-sm font-extrabold text-ink">
               <span className="truncate">@{entry.username}</span>
-              {entry.is_supporter && <SupporterBadge />}
+              <PlayerSeals of={entry} />
             </span>
             <span className="text-xs font-extrabold tabular-nums text-sand-500">
               {entry.final_xp.toLocaleString('pt-BR')} XP

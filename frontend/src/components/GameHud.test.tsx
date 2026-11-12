@@ -20,7 +20,7 @@ describe('GameHud', () => {
 
   it('wears the Apoiador badge for supporters', () => {
     render(<GameHud rankCode="broto" rankName="Broto" level={6} supporter />)
-    expect(screen.getByTitle('Mavva Apoiador')).toHaveTextContent('Apoiador')
+    expect(screen.getByTitle('Mavva Apoiador')).toBeInTheDocument()
   })
 
   it('shows no badge for everyone else', () => {
