@@ -47,13 +47,47 @@ describe('ContributorSeal and SupporterSeal', () => {
   })
 })
 
+describe('SupporterSeal months', () => {
+  it('shows how many months of support beside the heart', () => {
+    render(<SupporterSeal months={3} />)
+    expect(
+      screen.getByRole('img', { name: 'Mavva Apoiador · 3 meses de apoio' })
+    ).toHaveTextContent('3')
+  })
+
+  it('says "1 mês" in the singular', () => {
+    render(<SupporterSeal months={1} />)
+    expect(screen.getByRole('img', { name: 'Mavva Apoiador · 1 mês de apoio' })).toBeInTheDocument()
+  })
+
+  it('stays a plain heart when the count is unknown or the seal is off', () => {
+    render(
+      <>
+        <SupporterSeal />
+        <SupporterSeal active={false} months={4} />
+      </>
+    )
+    expect(screen.getByRole('img', { name: 'Mavva Apoiador' })).toHaveTextContent('')
+    expect(screen.getByRole('img', { name: 'Apoiador: selo inativo' })).toHaveTextContent('')
+  })
+})
+
 describe('PlayerSeals', () => {
   it('shows the three seals side by side when the player has them all', () => {
-    render(<PlayerSeals of={{ wisdom_level: 7, contributor_tier: 'gold', is_supporter: true }} />)
+    render(
+      <PlayerSeals
+        of={{
+          wisdom_level: 7,
+          contributor_tier: 'gold',
+          is_supporter: true,
+          supporter_months: 2,
+        }}
+      />
+    )
     expect(screen.getAllByRole('img').map((seal) => seal.getAttribute('aria-label'))).toEqual([
       'Sabedoria 7 de 10',
       'Contribuidor Ouro',
-      'Mavva Apoiador',
+      'Mavva Apoiador · 2 meses de apoio',
     ])
   })
 
@@ -68,7 +102,12 @@ describe('SealShelf', () => {
   it('spells each seal out in words', () => {
     render(
       <SealShelf
-        of={{ wisdom_level: 6, contributor_tier: 'silver', is_supporter: true }}
+        of={{
+          wisdom_level: 6,
+          contributor_tier: 'silver',
+          is_supporter: true,
+          supporter_months: 2,
+        }}
         contributions={7}
       />
     )
@@ -78,6 +117,7 @@ describe('SealShelf', () => {
     expect(within(shelf).getByText('Prata')).toBeInTheDocument()
     expect(within(shelf).getByText('7 aceitas')).toBeInTheDocument()
     expect(within(shelf).getByText('Ativo')).toBeInTheDocument()
+    expect(within(shelf).getByText('2 meses de apoio')).toBeInTheDocument()
   })
 
   it('leaves out the seals the player has not earned', () => {

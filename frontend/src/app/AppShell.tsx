@@ -107,6 +107,7 @@ export function AppShell({ children }: { children?: ReactNode }) {
           wisdom_level: data.stats.wisdom?.level,
           contributor_tier: data.stats.contributor?.tier,
           is_supporter: user.is_supporter,
+          supporter_months: user.is_supporter ? user.supporter_months : 0,
         }
       : null
 
@@ -177,6 +178,7 @@ export function AppShell({ children }: { children?: ReactNode }) {
                 xpForNext={data?.stats.xp_for_next_level}
                 streak={streak}
                 supporter={user?.is_supporter ?? false}
+                supporterMonths={user?.supporter_months}
                 wisdomLevel={data?.stats.wisdom?.level}
                 contributorTier={data?.stats.contributor?.tier}
                 onOpenProfile={user ? () => setProfileOpen(true) : undefined}

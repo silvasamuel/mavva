@@ -44,6 +44,7 @@ function makeUser(overrides: Partial<User> = {}): User {
     is_supporter: false,
     supporter_since: null,
     supporter_until: null,
+    supporter_months: 0,
     ...overrides,
   }
 }

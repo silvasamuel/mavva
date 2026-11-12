@@ -30,6 +30,7 @@ class PublicUser(BaseModel):
     wisdom_level: int = 1  # 1 to 10
     contributor_tier: Literal["bronze", "silver", "gold", "diamond"] | None = None
     is_supporter: bool = False  # active Pix supporter
+    supporter_months: int = 0  # month of support they are in; 0 unless active
 
 
 RelationStatus = Literal["none", "pending_sent", "pending_received", "friends"]

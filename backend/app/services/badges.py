@@ -79,4 +79,7 @@ def public_badges(user: User) -> dict[str, Any]:
         "wisdom_level": wisdom_level(stats.wisdom_points if stats else 0),
         "contributor_tier": contributor_tier(stats.contributions if stats else 0),
         "is_supporter": user.is_supporter,
+        # Shown on the seal ("2" = second month of support); nothing to show
+        # while the seal itself is off.
+        "supporter_months": user.supporter_months if user.is_supporter else 0,
     }

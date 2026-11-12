@@ -245,6 +245,11 @@ temporada não mexe neles.
 - **Contribuidor**: conta report resolvido (inclusive quando a pergunta é desativada),
   pergunta sugerida aprovada e melhoria **aceita** pelo admin. Bronze com 1, prata com 5,
   ouro com 15, diamante com 40.
+- **Apoiador com meses**: `supporter_months` diz em que mês de apoio o jogador está (1, 2,
+  3…) e aparece como número ao lado do coração. Conta só o tempo em que o selo esteve de
+  fato ativo: os meses não precisam ser consecutivos e dias comprados adiantados só contam
+  quando vividos. Em `PublicUser` vem 0 enquanto o selo está inativo; `UserOut` traz sempre
+  o valor do próprio jogador.
 - Outros jogadores veem só nível e selo. O progresso (pontos, quanto falta) vai apenas para
   o próprio jogador, em `dashboard.stats.wisdom` (`{level, max_level, points, level_floor,
   next_level_at}`) e `dashboard.stats.contributor` (`{tier, contributions, next_tier,

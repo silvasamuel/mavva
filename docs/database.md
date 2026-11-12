@@ -45,6 +45,7 @@ erDiagram
 | podium_seen_season | INT NULL | última temporada cuja comemoração de pódio o jogador viu |
 | supporter_since | TIMESTAMPTZ NULL | primeira oferta Pix aprovada |
 | supporter_until | TIMESTAMPTZ NULL | até quando vale o selo de Mavva Apoiador (cada R$ 30 ofertados = +30 dias) |
+| supporter_days_total | INT | todos os dias de selo já comprados; menos os que ainda faltam correr, dá os meses de apoio do selo |
 | created_at / updated_at | TIMESTAMPTZ | |
 
 ### refresh_tokens

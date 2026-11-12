@@ -316,6 +316,7 @@ export function QuizPlayPage() {
             xpForNext={dash?.stats.xp_for_next_level}
             streak={dash?.stats.current_streak}
             supporter={user?.is_supporter ?? false}
+            supporterMonths={user?.supporter_months}
             wisdomLevel={dash?.stats.wisdom?.level}
             contributorTier={dash?.stats.contributor?.tier}
           />

@@ -177,7 +177,7 @@ export function SupportPage() {
           <div>
             <p className="flex items-center gap-2 font-extrabold text-ink">
               {supporterActive ? 'Você é Mavva Apoiador' : 'Seu selo de Apoiador venceu'}
-              {supporterActive && <SupporterSeal />}
+              {supporterActive && <SupporterSeal months={user?.supporter_months} />}
             </p>
             <p className="text-sm font-semibold text-sand-500">
               {supporterActive

@@ -27,6 +27,8 @@ export interface User {
   is_supporter: boolean
   supporter_since: string | null
   supporter_until: string | null
+  /** Months of support put in so far (not necessarily in a row); 0 = never. */
+  supporter_months: number
 }
 
 // --- Apoie o Mavva (Pix donations) ---
@@ -90,12 +92,17 @@ export interface PublicUser {
   contributor_tier?: ContributorTier | null
   /** Active Pix supporter. */
   is_supporter?: boolean
+  /** Months of support so far, shown on the seal; 0 unless active. */
+  supporter_months?: number
 }
 
 export type ContributorTier = 'bronze' | 'silver' | 'gold' | 'diamond'
 
 /** What the seals next to a rank need; PublicUser and podium rows both fit. */
-export type PlayerSealsInfo = Pick<PublicUser, 'wisdom_level' | 'contributor_tier' | 'is_supporter'>
+export type PlayerSealsInfo = Pick<
+  PublicUser,
+  'wisdom_level' | 'contributor_tier' | 'is_supporter' | 'supporter_months'
+>
 
 export type RelationStatus = 'none' | 'pending_sent' | 'pending_received' | 'friends'
 
@@ -176,6 +183,7 @@ export interface SeasonPodium {
     wisdom_level?: number
     contributor_tier?: ContributorTier | null
     is_supporter?: boolean
+    supporter_months?: number
   }[]
 }
 

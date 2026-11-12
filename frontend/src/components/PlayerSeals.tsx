@@ -1,7 +1,7 @@
 import { useId } from 'react'
 import type { ContributorTier, PlayerSealsInfo } from '@/types/api'
 import { AppIcons, Glyph } from '@/lib/icons'
-import { TIER_LABEL, WISDOM_MAX } from '@/lib/seals'
+import { TIER_LABEL, WISDOM_MAX, supporterMonthsLabel } from '@/lib/seals'
 
 /**
  * The three seals a player can wear next to their rank, each with its own
@@ -203,27 +203,51 @@ export function ContributorSeal({
   )
 }
 
-/** `active` false draws the empty slot, for the player's own profile. */
+/** With a month count the tile stretches into a pill: heart, then the number. */
+const PILL = {
+  xs: 'h-5 gap-0.5 rounded-md px-1 text-[11px]',
+  sm: 'h-7 gap-1 rounded-lg px-1.5 text-sm',
+  md: 'h-10 gap-1 rounded-xl px-2 text-lg',
+  lg: 'h-14 gap-1.5 rounded-2xl px-3 text-2xl',
+} as const
+
+/**
+ * `active` false draws the empty slot, for the player's own profile.
+ * `months` is how many months of support the player has put in (they need
+ * not be consecutive); from the first one on it shows beside the heart.
+ */
 export function SupporterSeal({
   active = true,
+  months = 0,
   size = 'xs',
 }: {
   active?: boolean
+  months?: number
   size?: SealSize
 }) {
-  const label = active ? 'Mavva Apoiador' : 'Apoiador: selo inativo'
+  const counted = active && months >= 1
+  const label = !active
+    ? 'Apoiador: selo inativo'
+    : counted
+      ? `Mavva Apoiador · ${supporterMonthsLabel(months)}`
+      : 'Mavva Apoiador'
   return (
     <span
       role="img"
       aria-label={label}
       title={label}
-      className={`inline-flex shrink-0 items-center justify-center rounded-[28%] ${BOX[size]} ${
+      className={`inline-flex shrink-0 items-center justify-center ${
+        counted ? PILL[size] : `rounded-[28%] ${BOX[size]}`
+      } ${
         active
           ? 'bg-gradient-to-br from-grain-200 via-grain-400 to-grain-600 text-white shadow-[inset_0_0_0_1px_#aa5012,0_0_6px_-1px_#f3cb57]'
           : 'border border-dashed border-sand-300 bg-sand-50 text-sand-400'
       }`}
     >
       <Glyph as={AppIcons.heart} weight="fill" className={GLYPH[size]} />
+      {counted && (
+        <span className="font-extrabold tabular-nums leading-none text-grain-900">{months}</span>
+      )}
     </span>
   )
 }
@@ -245,7 +269,7 @@ export function PlayerSeals({
     <span className={`inline-flex shrink-0 items-center gap-1 ${className}`}>
       <WisdomSeal level={of.wisdom_level ?? 1} size={size} />
       {of.contributor_tier && <ContributorSeal tier={of.contributor_tier} size={size} />}
-      {of.is_supporter && <SupporterSeal size={size} />}
+      {of.is_supporter && <SupporterSeal size={size} months={of.supporter_months} />}
     </span>
   )
 }
@@ -319,10 +343,12 @@ export function SealShelf({ of, contributions }: { of: PlayerSealsInfo; contribu
       )}
       {of.is_supporter && (
         <SealTile
-          seal={<SupporterSeal size="lg" />}
+          seal={<SupporterSeal size="lg" months={of.supporter_months} />}
           label="Apoiador"
           value="Ativo"
-          detail="Mantém o Mavva no ar"
+          detail={
+            of.supporter_months ? supporterMonthsLabel(of.supporter_months) : 'Mantém o Mavva no ar'
+          }
         />
       )}
     </dl>

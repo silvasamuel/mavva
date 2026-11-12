@@ -82,7 +82,9 @@ def apply_status(
             base = (
                 user.supporter_until if user.supporter_until and user.supporter_until > now else now
             )
-            user.supporter_until = base + timedelta(days=supporter_days(payment.amount_cents))
+            days = supporter_days(payment.amount_cents)
+            user.supporter_until = base + timedelta(days=days)
+            user.supporter_days_total += days
         return True
     if status == PixStatus.CANCELLED:
         payment.status = SupportPaymentStatus.CANCELLED

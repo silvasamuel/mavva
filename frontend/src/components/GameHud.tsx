@@ -14,6 +14,7 @@ export function GameHud({
   streak,
   loading,
   supporter = false,
+  supporterMonths,
   wisdomLevel,
   contributorTier,
   onOpenProfile,
@@ -27,6 +28,8 @@ export function GameHud({
   loading?: boolean
   /** Mavva Apoiador: gold trim on the panel and the XP bar, plus the seal. */
   supporter?: boolean
+  /** Months of support so far: the number on the supporter seal. */
+  supporterMonths?: number
   /** Lifetime wisdom (1 to 10); the seal shows once it is known. */
   wisdomLevel?: number
   contributorTier?: ContributorTier | null
@@ -90,6 +93,7 @@ export function GameHud({
                 wisdom_level: wisdomLevel,
                 contributor_tier: contributorTier,
                 is_supporter: supporter,
+                supporter_months: supporterMonths,
               }}
             />
           )}

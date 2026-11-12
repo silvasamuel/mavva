@@ -4,7 +4,7 @@ import { Card, CardTitle } from '@/components/ui/Card'
 import { ProgressBar } from '@/components/ui/ProgressBar'
 import { ContributorSeal, SupporterSeal, WisdomSeal } from '@/components/PlayerSeals'
 import { formatDate } from '@/lib/format'
-import { TIER_LABEL, WISDOM_MAX } from '@/lib/seals'
+import { TIER_LABEL, WISDOM_MAX, supporterMonthsLabel } from '@/lib/seals'
 
 type Stats = DashboardData['stats']
 
@@ -118,8 +118,18 @@ export function SealsCard({
         </Row>
 
         <Row
-          seal={<SupporterSeal active={user?.is_supporter ?? false} size="lg" />}
-          title={user?.is_supporter ? 'Mavva Apoiador' : 'Apoiador · selo inativo'}
+          seal={
+            <SupporterSeal
+              active={user?.is_supporter ?? false}
+              months={user?.supporter_months}
+              size="lg"
+            />
+          }
+          title={
+            user?.is_supporter
+              ? `Mavva Apoiador · ${supporterMonthsLabel(Math.max(1, user.supporter_months))}`
+              : 'Apoiador · selo inativo'
+          }
         >
           <p className={HINT}>
             {user?.is_supporter
