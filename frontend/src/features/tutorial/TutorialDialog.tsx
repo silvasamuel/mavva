@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom'
 import { useNavigate } from 'react-router-dom'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { Button } from '@/components/ui/Button'
+import { ContributorSeal, SupporterSeal, WisdomSeal } from '@/components/PlayerSeals'
 import { RankBadge } from '@/components/RankBadge'
 import { AppIcons, Glyph, type Icon } from '@/lib/icons'
 import { RANK_CODES } from '@/lib/ranks'
@@ -82,6 +83,35 @@ function buildSteps(firstName: string | undefined, replay: boolean): Step[] {
               <RankBadge code={code} size="sm" />
             </span>
           ))}
+        </span>
+      ),
+    },
+    {
+      eyebrow: 'Sabedoria',
+      title: 'Quanto mais difícil, mais sábio',
+      body: 'Ao lado do elo fica o seu nível de sabedoria, de 1 a 10. Ele sobe a cada pergunta que você acerta pela primeira vez: média vale 1 ponto, difícil 3 e especialista 5. E não zera na virada da temporada.',
+      art: (
+        // The climb in four snapshots, growing like the levels do.
+        <span className="flex items-end gap-2">
+          <WisdomSeal level={1} size="sm" />
+          <WisdomSeal level={4} size="md" />
+          <WisdomSeal level={7} size="md" />
+          <WisdomSeal level={10} size="lg" />
+        </span>
+      ),
+    },
+    {
+      eyebrow: 'Contribuidor e Apoiador',
+      title: 'Ajude o Mavva a crescer',
+      body: 'Reporte erros nas perguntas e sugira perguntas ou melhorias: cada contribuição aceita conta para o selo de Contribuidor, do bronze ao diamante. E quem apoia o Mavva via Pix ganha o selo dourado de Apoiador, com os meses de apoio.',
+      art: (
+        <span className="flex items-center gap-1.5">
+          <ContributorSeal tier="bronze" size="md" />
+          <ContributorSeal tier="silver" size="md" />
+          <ContributorSeal tier="gold" size="md" />
+          <ContributorSeal tier="diamond" size="md" />
+          <span className="mx-1 h-8 w-px bg-sand-200" aria-hidden />
+          <SupporterSeal months={2} size="md" />
         </span>
       ),
     },

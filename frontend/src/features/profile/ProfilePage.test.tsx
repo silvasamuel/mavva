@@ -66,9 +66,9 @@ describe('ProfilePage tutorial replay', () => {
     const replay = screen.getByRole('button', { name: 'Rever tutorial' })
     await actor.click(replay)
     const dialog = screen.getByRole('dialog', { name: 'Tutorial do Mavva' })
-    expect(within(dialog).getByText('Passo 1 de 6')).toBeInTheDocument()
+    expect(within(dialog).getByText('Passo 1 de 8')).toBeInTheDocument()
     await actor.click(within(dialog).getByRole('button', { name: 'Próximo' }))
-    expect(within(dialog).getByText('Passo 2 de 6')).toBeInTheDocument()
+    expect(within(dialog).getByText('Passo 2 de 8')).toBeInTheDocument()
 
     await actor.click(within(dialog).getByRole('button', { name: 'Pular' }))
     await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument())
@@ -77,6 +77,6 @@ describe('ProfilePage tutorial replay', () => {
 
     // And it starts from the first step every time.
     await actor.click(replay)
-    expect(within(screen.getByRole('dialog')).getByText('Passo 1 de 6')).toBeInTheDocument()
+    expect(within(screen.getByRole('dialog')).getByText('Passo 1 de 8')).toBeInTheDocument()
   })
 })

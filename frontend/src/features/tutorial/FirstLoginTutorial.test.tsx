@@ -80,7 +80,7 @@ async function openTutorial() {
 }
 
 async function goToLastStep(dialog: HTMLElement, user: ReturnType<typeof userEvent.setup>) {
-  for (let step = 1; step < 6; step++) {
+  for (let step = 1; step < 8; step++) {
     await user.click(within(dialog).getByRole('button', { name: 'Próximo' }))
   }
 }
@@ -102,7 +102,7 @@ describe('FirstLoginTutorial', () => {
   it('opens for a player who has not seen it, with focus inside', async () => {
     const dialog = await openTutorial()
     expect(dialog).toHaveAttribute('aria-modal', 'true')
-    expect(within(dialog).getByText('Passo 1 de 6')).toBeInTheDocument()
+    expect(within(dialog).getByText('Passo 1 de 8')).toBeInTheDocument()
     expect(within(dialog).getByText('Que bom ter você aqui, Samuel!')).toBeInTheDocument()
     expect(within(dialog).getByRole('button', { name: 'Próximo' })).toHaveFocus()
   })
@@ -122,16 +122,28 @@ describe('FirstLoginTutorial', () => {
     expect(view.queryByRole('button', { name: 'Voltar' })).not.toBeInTheDocument()
 
     await user.click(view.getByRole('button', { name: 'Próximo' }))
-    expect(view.getByText('Passo 2 de 6')).toBeInTheDocument()
+    expect(view.getByText('Passo 2 de 8')).toBeInTheDocument()
     expect(view.getByText('Meta diária e sequência')).toBeInTheDocument()
 
     await user.click(view.getByRole('button', { name: 'Voltar' }))
-    expect(view.getByText('Passo 1 de 6')).toBeInTheDocument()
+    expect(view.getByText('Passo 1 de 8')).toBeInTheDocument()
     // Voltar is gone on the first step, so focus lands on Próximo.
     expect(view.getByRole('button', { name: 'Próximo' })).toHaveFocus()
 
-    await goToLastStep(dialog, user)
-    expect(view.getByText('Passo 6 de 6')).toBeInTheDocument()
+    // The seals get their own two steps, right before the send-off.
+    for (let step = 1; step < 6; step++) {
+      await user.click(view.getByRole('button', { name: 'Próximo' }))
+    }
+    expect(view.getByText('Passo 6 de 8')).toBeInTheDocument()
+    expect(view.getByText('Quanto mais difícil, mais sábio')).toBeInTheDocument()
+    expect(view.getByRole('img', { name: 'Sabedoria 10 de 10' })).toBeInTheDocument()
+    await user.click(view.getByRole('button', { name: 'Próximo' }))
+    expect(view.getByText('Passo 7 de 8')).toBeInTheDocument()
+    expect(view.getByText('Ajude o Mavva a crescer')).toBeInTheDocument()
+    expect(view.getByRole('img', { name: 'Contribuidor Diamante' })).toBeInTheDocument()
+    expect(view.getByRole('img', { name: 'Mavva Apoiador · 2 meses de apoio' })).toBeInTheDocument()
+    await user.click(view.getByRole('button', { name: 'Próximo' }))
+    expect(view.getByText('Passo 8 de 8')).toBeInTheDocument()
     expect(view.queryByRole('button', { name: 'Próximo' })).not.toBeInTheDocument()
     expect(view.getByRole('button', { name: 'Fazer meu primeiro quiz' })).toHaveFocus()
     expect(view.getByRole('button', { name: 'Explorar o app' })).toBeInTheDocument()
@@ -185,7 +197,7 @@ describe('FirstLoginTutorial', () => {
     const user = userEvent.setup()
     const dialog = await openTutorial()
     await user.keyboard('{Enter}')
-    expect(within(dialog).getByText('Passo 2 de 6')).toBeInTheDocument()
+    expect(within(dialog).getByText('Passo 2 de 8')).toBeInTheDocument()
 
     for (let press = 0; press < 5; press++) {
       await user.tab()
