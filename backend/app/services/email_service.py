@@ -17,7 +17,7 @@ def send_password_reset(to_email: str, to_name: str, raw_token: str) -> None:
         logger.info("Password reset for %s: %s", to_email, link)
         return
 
-    _deliver(
+    deliver(
         to_email,
         "Mavva — redefinição de senha",
         password_reset_email_html(to_name, link, settings.reset_token_expire_minutes),
@@ -32,14 +32,14 @@ def send_email_verification(to_email: str, to_name: str, raw_token: str) -> None
         logger.info("Email verification for %s: %s", to_email, link)
         return
 
-    _deliver(
+    deliver(
         to_email,
         "Mavva — confirme seu e-mail",
         verification_email_html(to_name, link, settings.verification_token_expire_hours),
     )
 
 
-def _deliver(to_email: str, subject: str, body: str) -> None:
+def deliver(to_email: str, subject: str, body: str) -> None:
     settings = get_settings()
     api_key = settings.resend_api_key
     assert api_key is not None

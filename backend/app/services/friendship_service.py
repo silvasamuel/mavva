@@ -9,13 +9,14 @@ reactivating the account brings the friendship back.
 import uuid
 from datetime import UTC, datetime
 
-from sqlalchemy import or_, select
+from sqlalchemy import func, or_, select
 from sqlalchemy.orm import Session, selectinload
 
 from app.models import Friendship, User
 from app.models.enums import FriendshipStatus
 
 MAX_SEARCH_RESULTS = 20
+MAX_FRIENDS = 70
 
 
 class FriendshipError(Exception):
@@ -37,6 +38,32 @@ def friendship_between(db: Session, a: uuid.UUID, b: uuid.UUID) -> Friendship | 
             )
         )
     )
+
+
+def friend_count(db: Session, user_id: uuid.UUID) -> int:
+    """Active friends only — the same people the friends page lists."""
+    return (
+        db.scalar(
+            select(func.count())
+            .select_from(Friendship)
+            .join(
+                User,
+                or_(
+                    (Friendship.requester_id == user_id) & (User.id == Friendship.addressee_id),
+                    (Friendship.addressee_id == user_id) & (User.id == Friendship.requester_id),
+                ),
+            )
+            .where(Friendship.status == FriendshipStatus.ACCEPTED, User.is_active.is_(True))
+        )
+        or 0
+    )
+
+
+def _ensure_room(db: Session, me: User, other: User) -> None:
+    if friend_count(db, me.id) >= MAX_FRIENDS:
+        raise FriendshipError(f"Você já tem {MAX_FRIENDS} amigos, o limite")
+    if friend_count(db, other.id) >= MAX_FRIENDS:
+        raise FriendshipError(f"@{other.username} já tem {MAX_FRIENDS} amigos, o limite")
 
 
 def search_users(db: Session, me: User, query: str) -> list[tuple[User, Friendship | None]]:
@@ -70,11 +97,13 @@ def send_request(db: Session, me: User, username: str) -> Friendship:
         if existing.requester_id == me.id:
             raise FriendshipError("Pedido já enviado")
         # They had already invited us — accept instead of creating a mirror row.
+        _ensure_room(db, me, target)
         existing.status = FriendshipStatus.ACCEPTED
         existing.responded_at = datetime.now(UTC)
         db.flush()
         return existing
 
+    _ensure_room(db, me, target)
     friendship = Friendship(requester_id=me.id, addressee_id=target.id)
     db.add(friendship)
     db.flush()
@@ -96,6 +125,7 @@ def respond(db: Session, me: User, friendship_id: uuid.UUID, accept: bool) -> Fr
         db.delete(friendship)
         db.flush()
         return None
+    _ensure_room(db, me, friendship.requester)
     friendship.status = FriendshipStatus.ACCEPTED
     friendship.responded_at = datetime.now(UTC)
     db.flush()
