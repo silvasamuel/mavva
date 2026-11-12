@@ -231,6 +231,25 @@ no servidor (`users.season_start_seen` / `season_end_seen`):
 
 ## Jogadores
 
+### Selos (sabedoria, contribuidor, apoiador)
+
+Todo `PublicUser` (ranking, amigos, duelos, perfil, pódios) traz os três selos exibidos ao
+lado do elo: `wisdom_level` (1 a 10), `contributor_tier` (`bronze`, `silver`, `gold`,
+`diamond` ou `null`) e `is_supporter`. Os dois primeiros são vitalícios — a virada de
+temporada não mexe neles.
+
+- **Sabedoria**: cada pergunta acertada **pela primeira vez** vale pontos pela dificuldade
+  (fácil 0, média 1, difícil 3, especialista 5), em qualquer modo, e na hora da resposta
+  (sessão abandonada não perde). Níveis 1 a 10 começam em 0, 15, 45, 100, 200, 350, 550,
+  850, 1250 e 1800 pontos.
+- **Contribuidor**: conta report resolvido (inclusive quando a pergunta é desativada),
+  pergunta sugerida aprovada e melhoria **aceita** pelo admin. Bronze com 1, prata com 5,
+  ouro com 15, diamante com 40.
+- Outros jogadores veem só nível e selo. O progresso (pontos, quanto falta) vai apenas para
+  o próprio jogador, em `dashboard.stats.wisdom` (`{level, max_level, points, level_floor,
+  next_level_at}`) e `dashboard.stats.contributor` (`{tier, contributions, next_tier,
+  next_tier_at}`). `/players/{id}` traz também `contributions` (o total aceito).
+
 | Método | Rota | Descrição |
 |---|---|---|
 | GET | `/players/{id}` | Perfil público de outro jogador — aberto pelo ranking e pela lista de amigos. Qualquer jogador logado pode ver (o ranking global já mostra desconhecidos). Devolve `user` (`PublicUser`), `relation` (`self`/`friends`/`pending_sent`/`pending_received`/`none`), `member_since` (`"YYYY-MM"`, só o mês), `stats` (XP total, sequência atual/recorde, respondidas, precisão, sessões perfeitas), `achievements_unlocked`/`achievements_total`, `achievements` (todas as desbloqueadas, mais recentes primeiro, sem data), `trophies` (pódios de temporada, `[{season, position}]`) e `strongest_categories` (até 3, só com ≥ 5 respostas), `best_rank` (maior elo já conquistado, temporada atual inclusa) e `last_season_rank` (elo em que terminou a temporada passada; `null` se não jogou). **Nunca** inclui e-mail, fuso, meta diária, papel, datas de atividade ou de desbloqueio, nem quanto falta para o próximo nível. 404 para id desconhecido ou conta inativa (igual ao ranking). |

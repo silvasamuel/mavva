@@ -1,6 +1,6 @@
 import type { AllTimePodium as AllTimePodiumData, PublicUser } from '@/types/api'
 import { RankBadge } from '@/components/RankBadge'
-import { SupporterBadge } from '@/components/SupporterBadge'
+import { PlayerSeals } from '@/components/PlayerSeals'
 import { AppIcons, Glyph } from '@/lib/icons'
 
 type Entry = AllTimePodiumData['podium'][number]
@@ -44,7 +44,7 @@ function Step({ entry, onOpen }: { entry: Entry; onOpen: (user: PublicUser) => v
         <span className="w-full truncate text-center text-sm font-extrabold text-ink">
           {entry.is_me ? 'Você' : `@${entry.user.username}`}
         </span>
-        {entry.user.is_supporter && <SupporterBadge />}
+        <PlayerSeals of={entry.user} />
         <span className="text-xs font-extrabold tabular-nums text-leaf-700">
           {entry.score.toLocaleString('pt-BR')} XP
         </span>

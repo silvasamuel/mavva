@@ -9,7 +9,7 @@ import { Card, CardTitle } from '@/components/ui/Card'
 import { Spinner } from '@/components/ui/Spinner'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { RankBadge } from '@/components/RankBadge'
-import { SupporterBadge } from '@/components/SupporterBadge'
+import { PlayerSeals } from '@/components/PlayerSeals'
 import { Modal } from '@/components/ui/Modal'
 import { formatPercent, formatRelativeDate } from '@/lib/format'
 import { AppIcons, Glyph } from '@/lib/icons'
@@ -206,7 +206,7 @@ export function DuelsPage() {
                     <div className="min-w-0">
                       <p className="flex items-center gap-1.5 font-extrabold text-ink">
                         <span className="truncate">{friend.name}</span>
-                        {friend.is_supporter && <SupporterBadge />}
+                        <PlayerSeals of={friend} />
                       </p>
                       <p className="truncate text-xs font-semibold text-sand-500">
                         @{friend.username}

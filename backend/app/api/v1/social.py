@@ -24,6 +24,7 @@ from app.schemas.social import (
 )
 from app.schemas.user import RankOut
 from app.services import duel_service, friendship_service, player_profile, season_service
+from app.services.badges import public_badges
 from app.services.duel_service import DUEL_XP, DuelError
 from app.services.friendship_service import FriendshipError
 from app.services.gamification import rank_from_level
@@ -49,7 +50,7 @@ def _public(user: User | None) -> PublicUser | None:
         duel_wins=stats.duel_wins if stats else 0,
         duel_losses=stats.duel_losses if stats else 0,
         duel_draws=stats.duel_draws if stats else 0,
-        is_supporter=user.is_supporter,
+        **public_badges(user),
     )
 
 
@@ -175,6 +176,7 @@ def player_profile_view(user_id: uuid.UUID, user: CurrentUser, db: DbDep) -> Pla
             TrophyOut(season=season_service.season_name(s), position=position)
             for s, position in season_service.season_trophies(db, player.id)
         ],
+        contributions=stats.contributions if stats else 0,
         achievements_unlocked=unlocked,
         achievements_total=total,
         achievements=[PlayerAchievementOut(code=a.code, name=a.name) for a in earned],

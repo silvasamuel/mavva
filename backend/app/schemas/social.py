@@ -26,8 +26,10 @@ class PublicUser(BaseModel):
     duel_wins: int
     duel_losses: int
     duel_draws: int
-    # Badge next to the rank: the player has made an approved Pix donation.
-    is_supporter: bool = False
+    # The three seals shown next to the rank (see services/badges.py).
+    wisdom_level: int = 1  # 1 to 10
+    contributor_tier: Literal["bronze", "silver", "gold", "diamond"] | None = None
+    is_supporter: bool = False  # active Pix supporter
 
 
 RelationStatus = Literal["none", "pending_sent", "pending_received", "friends"]
@@ -82,6 +84,7 @@ class PlayerProfileOut(BaseModel):
     best_rank: RankOut  # highest ever, this season included
     last_season_rank: RankOut | None  # None if they didn't play last season
     trophies: list[TrophyOut]  # podium finishes, most recent first
+    contributions: int  # accepted reports, questions and suggestions
     achievements_unlocked: int
     achievements_total: int
     achievements: list[PlayerAchievementOut]  # every unlock, newest first

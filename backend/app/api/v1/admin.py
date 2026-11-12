@@ -484,6 +484,16 @@ def reject_proposal(proposal_id: uuid.UUID, _admin: AdminUser, db: DbDep) -> Non
     db.commit()
 
 
+@router.post("/review/suggestions/{suggestion_id}/accept", status_code=status.HTTP_204_NO_CONTENT)
+def accept_suggestion(suggestion_id: uuid.UUID, _admin: AdminUser, db: DbDep) -> None:
+    """Closes the suggestion and credits its author's contributor seal."""
+    try:
+        moderation_service.accept_suggestion(db, suggestion_id)
+    except ModerationError as error:
+        raise HTTPException(error.status_code, error.message) from error
+    db.commit()
+
+
 @router.post("/review/suggestions/{suggestion_id}/review", status_code=status.HTTP_204_NO_CONTENT)
 def review_suggestion(suggestion_id: uuid.UUID, _admin: AdminUser, db: DbDep) -> None:
     try:

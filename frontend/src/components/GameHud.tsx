@@ -1,8 +1,9 @@
 import { RankBadge } from '@/components/RankBadge'
-import { SupporterBadge, SupporterFrame } from '@/components/SupporterBadge'
+import { PlayerSeals, SupporterFrame } from '@/components/PlayerSeals'
 import { ProgressBar } from '@/components/ui/ProgressBar'
 import { AppIcons, Glyph } from '@/lib/icons'
 import { nextRankCopy, rankFromLevel, rankProgress } from '@/lib/ranks'
+import type { ContributorTier } from '@/types/api'
 
 export function GameHud({
   rankCode,
@@ -13,6 +14,8 @@ export function GameHud({
   streak,
   loading,
   supporter = false,
+  wisdomLevel,
+  contributorTier,
   onOpenProfile,
 }: {
   rankCode?: string
@@ -22,8 +25,11 @@ export function GameHud({
   xpForNext?: number
   streak?: number
   loading?: boolean
-  /** Mavva Apoiador: gold trim on the panel and the XP bar, plus the badge. */
+  /** Mavva Apoiador: gold trim on the panel and the XP bar, plus the seal. */
   supporter?: boolean
+  /** Lifetime wisdom (1 to 10); the seal shows once it is known. */
+  wisdomLevel?: number
+  contributorTier?: ContributorTier | null
   /** Makes the badge a button that opens the player's own profile card. */
   onOpenProfile?: () => void
 }) {
@@ -78,7 +84,15 @@ export function GameHud({
           <p className="text-xs font-extrabold uppercase tracking-wide text-sand-500">
             Nv {loading ? '–' : (level ?? 1)}
           </p>
-          {supporter && <SupporterBadge />}
+          {(wisdomLevel != null || contributorTier || supporter) && (
+            <PlayerSeals
+              of={{
+                wisdom_level: wisdomLevel,
+                contributor_tier: contributorTier,
+                is_supporter: supporter,
+              }}
+            />
+          )}
         </div>
         <ProgressBar
           value={xpInto ?? 0}

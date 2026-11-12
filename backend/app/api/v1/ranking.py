@@ -16,6 +16,7 @@ from app.schemas.ranking import (
 from app.schemas.social import PublicUser
 from app.schemas.user import RankOut
 from app.services import ranking_service, season_service
+from app.services.badges import public_badges
 from app.services.gamification import Rank, level_from_total_xp, rank_from_level
 from app.services.ranking_service import (
     ACCURACY_MIN_RANK,
@@ -42,7 +43,7 @@ def _public(user: User) -> PublicUser:
         duel_wins=stats.duel_wins if stats else 0,
         duel_losses=stats.duel_losses if stats else 0,
         duel_draws=stats.duel_draws if stats else 0,
-        is_supporter=user.is_supporter,
+        **public_badges(user),
     )
 
 

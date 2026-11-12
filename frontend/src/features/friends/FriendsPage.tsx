@@ -10,7 +10,7 @@ import { Spinner } from '@/components/ui/Spinner'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { PlayerProfileModal } from '@/components/PlayerProfileModal'
 import { RankBadge } from '@/components/RankBadge'
-import { SupporterBadge } from '@/components/SupporterBadge'
+import { PlayerSeals } from '@/components/PlayerSeals'
 import { Modal } from '@/components/ui/Modal'
 import { useAuth } from '@/features/auth/AuthContext'
 import { AppIcons, Glyph } from '@/lib/icons'
@@ -39,7 +39,7 @@ function PlayerRow({
         <div className="min-w-0 flex-1">
           <p className="flex items-center gap-1.5 font-extrabold text-ink">
             <span className="truncate">{user.name}</span>
-            {user.is_supporter && <SupporterBadge />}
+            <PlayerSeals of={user} />
           </p>
           <p className="truncate text-xs font-semibold text-sand-500">@{user.username}</p>
           <p className="text-xs font-semibold text-sand-400">

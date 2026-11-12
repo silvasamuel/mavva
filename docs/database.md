@@ -135,6 +135,8 @@ UNIQUE `(session_id, question_id)` — impede responder duas vezes.
 | questions_answered / correct_answers | INT / INT |
 | perfect_sessions | INT |
 | total_time_seconds | INT |
+| wisdom_points | INT *(vitalício: pontos pela primeira resposta certa a cada pergunta — média 1, difícil 3, especialista 5; vira o nível de sabedoria 1–10)* |
+| contributions | INT *(vitalício: reports resolvidos, perguntas sugeridas aprovadas e melhorias aceitas; vira o selo de contribuidor)* |
 | updated_at | TIMESTAMPTZ |
 
 > Atualizada transacionalmente pelo serviço de gamificação ao completar sessões.

@@ -98,6 +98,11 @@ class UserStats(Base):
     duel_draws: Mapped[int] = mapped_column(default=0)
     current_duel_streak: Mapped[int] = mapped_column(default=0)
     best_duel_streak: Mapped[int] = mapped_column(default=0)
+    # Lifetime, never reset by a season (see services/badges.py). Wisdom: points
+    # for the first correct answer to each medium/hard/expert question.
+    wisdom_points: Mapped[int] = mapped_column(default=0, server_default="0")
+    # Reports resolved, question proposals approved and app suggestions accepted.
+    contributions: Mapped[int] = mapped_column(default=0, server_default="0")
     updated_at: Mapped[datetime] = mapped_column(server_default=func.now(), onupdate=func.now())
 
     user: Mapped[User] = relationship(back_populates="stats")

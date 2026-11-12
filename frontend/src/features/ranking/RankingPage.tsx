@@ -17,7 +17,7 @@ import type {
 import { MonthPrize } from '@/components/MonthPrize'
 import { PlayerProfileModal } from '@/components/PlayerProfileModal'
 import { RankBadge } from '@/components/RankBadge'
-import { SupporterBadge } from '@/components/SupporterBadge'
+import { PlayerSeals } from '@/components/PlayerSeals'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
 import { Spinner } from '@/components/ui/Spinner'
@@ -89,7 +89,7 @@ function PlayerRow({
             <span className="truncate">
               {isMe ? `Você · @${user.username}` : `@${user.username}`}
             </span>
-            {user.is_supporter && <SupporterBadge />}
+            <PlayerSeals of={user} />
           </p>
           <p className="truncate text-xs font-semibold text-sand-500">{detail}</p>
         </div>

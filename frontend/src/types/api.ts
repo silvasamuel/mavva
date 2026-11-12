@@ -84,9 +84,18 @@ export interface PublicUser {
   duel_wins: number
   duel_losses: number
   duel_draws: number
-  /** Shows the Apoiador badge next to the rank (approved Pix donation). */
+  /** Lifetime wisdom, 1 to 10: grows with hard questions answered right. */
+  wisdom_level?: number
+  /** Earned by reports, questions and suggestions the team accepted. */
+  contributor_tier?: ContributorTier | null
+  /** Active Pix supporter. */
   is_supporter?: boolean
 }
+
+export type ContributorTier = 'bronze' | 'silver' | 'gold' | 'diamond'
+
+/** What the seals next to a rank need; PublicUser and podium rows both fit. */
+export type PlayerSealsInfo = Pick<PublicUser, 'wisdom_level' | 'contributor_tier' | 'is_supporter'>
 
 export type RelationStatus = 'none' | 'pending_sent' | 'pending_received' | 'friends'
 
@@ -116,6 +125,8 @@ export interface PlayerProfile {
   last_season_rank: RankRef | null
   /** Podium finishes, most recent first: 1 gold, 2 silver, 3 bronze. */
   trophies: { season: string; position: number }[]
+  /** Accepted reports, questions and suggestions (behind the contributor seal). */
+  contributions?: number
   achievements_unlocked: number
   achievements_total: number
   /** Every unlocked achievement, most recent first. */
@@ -162,6 +173,8 @@ export interface SeasonPodium {
     name: string
     final_xp: number
     rank: { code: string; name: string }
+    wisdom_level?: number
+    contributor_tier?: ContributorTier | null
     is_supporter?: boolean
   }[]
 }
@@ -387,6 +400,20 @@ export interface DashboardData {
     last_season_rank: RankRef | null
     /** Podium finishes, most recent first: the profile's trophy shelf. */
     trophies: (SeasonRef & { position: number })[]
+    /** Lifetime wisdom with the progress only the player sees. */
+    wisdom?: {
+      level: number
+      max_level: number
+      points: number
+      level_floor: number
+      next_level_at: number | null
+    }
+    contributor?: {
+      tier: ContributorTier | null
+      contributions: number
+      next_tier: ContributorTier | null
+      next_tier_at: number | null
+    }
   }
   season: Season
   /** Season modal to open on the home screen, each once per season. */

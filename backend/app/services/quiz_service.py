@@ -21,6 +21,7 @@ from app.models import (
 )
 from app.models.enums import Difficulty, QuizMode, Testament
 from app.services import achievement_service, srs
+from app.services.badges import WISDOM_POINTS
 from app.services.gamification import (
     PERFECT_SESSION_BONUS,
     SESSION_COMPLETE_BONUS,
@@ -221,6 +222,29 @@ def best_combo(session: QuizSession) -> int:
     return max(combo_counts(a.is_correct for a in session.answers), default=0)
 
 
+def _new_wisdom(db: Session, user: User, question: Question) -> int:
+    """Wisdom points a correct answer to this question is worth right now.
+
+    Wisdom grows with every *new* question answered right, by difficulty;
+    repeating one pays nothing. Must be asked before the answer is stored, so
+    the only hits it can find are earlier ones.
+    """
+    points = WISDOM_POINTS[question.difficulty]
+    if points == 0:
+        return 0
+    seen_before = db.scalar(
+        select(QuizAnswer.id)
+        .join(QuizSession, QuizSession.id == QuizAnswer.session_id)
+        .where(
+            QuizSession.user_id == user.id,
+            QuizAnswer.question_id == question.id,
+            QuizAnswer.is_correct.is_(True),
+        )
+        .limit(1)
+    )
+    return 0 if seen_before is not None else points
+
+
 def submit_answer(
     db: Session,
     user: User,
@@ -271,6 +295,7 @@ def submit_answer(
     else:
         combo_bonus = combo_bonus_xp(combo)
         xp = xp_for_answer(question.difficulty, is_correct) + combo_bonus
+    wisdom = _new_wisdom(db, user, question) if is_correct else 0
     db.add(
         QuizAnswer(
             session_id=session.id,
@@ -285,6 +310,12 @@ def submit_answer(
     )
     if is_correct:
         session.correct_count += 1
+    if wisdom:
+        # Paid on the spot, not at session end: an abandoned round keeps what
+        # was learned, like the review queue does.
+        wisdom_stats = db.get(UserStats, user.id)
+        if wisdom_stats is not None:
+            wisdom_stats.wisdom_points += wisdom
     session.xp_earned += xp
 
     # SRS updates immediately (survives abandoned sessions).

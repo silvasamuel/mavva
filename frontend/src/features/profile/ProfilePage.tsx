@@ -16,6 +16,7 @@ import { useAuth } from '@/features/auth/AuthContext'
 import { LegalLinks } from '@/features/legal/LegalLinks'
 import { TutorialDialog } from '@/features/tutorial/TutorialDialog'
 import { AccountRights } from './AccountRights'
+import { SealsCard } from './SealsCard'
 
 const GOAL_OPTIONS = [
   { value: 20, label: '20 XP — Casual' },
@@ -110,6 +111,14 @@ export function ProfilePage() {
             </p>
           )}
         </Card>
+      )}
+
+      {dashboard?.stats.wisdom && dashboard.stats.contributor && (
+        <SealsCard
+          wisdom={dashboard.stats.wisdom}
+          contributor={dashboard.stats.contributor}
+          user={user}
+        />
       )}
 
       <Card className="space-y-4">
