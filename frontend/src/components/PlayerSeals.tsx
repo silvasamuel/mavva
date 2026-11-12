@@ -20,61 +20,101 @@ const BOX = {
 
 export type SealSize = keyof typeof BOX
 
-/** Colour grows warmer with the level: seedling greens, then gold. */
+const GLYPH = {
+  xs: 'h-2.5 w-2.5',
+  sm: 'h-3.5 w-3.5',
+  md: 'h-5 w-5',
+  lg: 'h-7 w-7',
+} as const
+
+/** Colour grows warmer with the level: seedling greens, then amber, then gold. */
 function wisdomTone(level: number) {
-  if (level >= WISDOM_MAX) return { ring: '#e89617', fill: '#efb62f', text: '#ffffff', glow: true }
-  if (level >= 7) return { ring: '#efb62f', fill: '#fefaec', text: '#8a3e15', glow: false }
-  if (level >= 4) return { ring: '#237d31', fill: '#f1faf1', text: '#184220', glow: false }
-  return { ring: '#57b663', fill: '#ffffff', text: '#1e6329', glow: false }
+  if (level >= WISDOM_MAX) return { ring: '#e89617', soft: '#efb62f', ink: '#723315', top: true }
+  if (level >= 7) return { ring: '#efb62f', soft: '#fefaec', ink: '#8a3e15', top: false }
+  if (level >= 4) return { ring: '#237d31', soft: '#f1faf1', ink: '#184220', top: false }
+  return { ring: '#57b663', soft: '#ffffff', ink: '#1e6329', top: false }
 }
 
+/** Solid centre for the small sizes, dark enough for a white number. */
+function wisdomDisc(level: number) {
+  if (level >= 7) return '#aa5012'
+  if (level >= 4) return '#1e6329'
+  return '#329a40'
+}
+
+/**
+ * Wisdom, 1 to 10. Large sizes draw ten notches, one lit per level; in a list
+ * row (xs, sm) ten notches would blur, so the seal becomes a solid disc with
+ * a bigger number and one arc for how far along the ten levels the player is.
+ */
 export function WisdomSeal({ level, size = 'xs' }: { level: number; size?: SealSize }) {
   const id = useId().replace(/:/g, '')
   const clamped = Math.min(WISDOM_MAX, Math.max(1, Math.round(level)))
   const tone = wisdomTone(clamped)
+  const compact = size === 'xs' || size === 'sm'
   const radius = 16.5
   const circumference = 2 * Math.PI * radius
   const gap = 2.2
   const notch = circumference / WISDOM_MAX - gap
   const label = `Sabedoria ${clamped} de ${WISDOM_MAX}`
+  const gold = `url(#wisdom-${id})`
   return (
     <span
       role="img"
       aria-label={label}
       title={label}
-      className={`inline-flex shrink-0 ${BOX[size]} ${tone.glow ? 'drop-shadow-[0_0_4px_#f3cb57]' : ''}`}
+      className={`inline-flex shrink-0 ${BOX[size]} ${tone.top ? 'drop-shadow-[0_0_4px_#f3cb57]' : ''}`}
     >
       <svg viewBox="0 0 40 40" className="h-full w-full" aria-hidden>
         <defs>
           <radialGradient id={`wisdom-${id}`} cx="0.35" cy="0.3" r="0.9">
-            <stop offset="0" stopColor="#f7e191" />
-            <stop offset="0.55" stopColor="#efb62f" />
-            <stop offset="1" stopColor="#cd7211" />
+            <stop offset="0" stopColor="#fbf1ca" />
+            <stop offset="0.55" stopColor="#f3cb57" />
+            <stop offset="1" stopColor="#e89617" />
           </radialGradient>
         </defs>
-        <circle cx="20" cy="20" r="12.5" fill={tone.glow ? `url(#wisdom-${id})` : tone.fill} />
-        {Array.from({ length: WISDOM_MAX }, (_, index) => (
-          <circle
-            key={index}
-            cx="20"
-            cy="20"
-            r={radius}
-            fill="none"
-            stroke={index < clamped ? tone.ring : '#e5dfcd'}
-            strokeWidth="4.2"
-            strokeLinecap="butt"
-            strokeDasharray={`${notch} ${circumference - notch}`}
-            transform={`rotate(${-90 + index * 36 + (gap / circumference) * 180} 20 20)`}
-          />
-        ))}
+        {compact ? (
+          <>
+            <circle cx="20" cy="20" r={radius} fill="none" stroke="#e5dfcd" strokeWidth="4.6" />
+            <circle
+              cx="20"
+              cy="20"
+              r={radius}
+              fill="none"
+              stroke={tone.ring}
+              strokeWidth="4.6"
+              strokeLinecap={clamped < WISDOM_MAX ? 'round' : 'butt'}
+              strokeDasharray={`${(circumference * clamped) / WISDOM_MAX} ${circumference}`}
+              transform="rotate(-90 20 20)"
+            />
+            <circle cx="20" cy="20" r="12.6" fill={tone.top ? gold : wisdomDisc(clamped)} />
+          </>
+        ) : (
+          <>
+            <circle cx="20" cy="20" r="12.5" fill={tone.top ? gold : tone.soft} />
+            {Array.from({ length: WISDOM_MAX }, (_, index) => (
+              <circle
+                key={index}
+                cx="20"
+                cy="20"
+                r={radius}
+                fill="none"
+                stroke={index < clamped ? tone.ring : '#e5dfcd'}
+                strokeWidth="4.2"
+                strokeDasharray={`${notch} ${circumference - notch}`}
+                transform={`rotate(${-90 + index * 36 + (gap / circumference) * 180} 20 20)`}
+              />
+            ))}
+          </>
+        )}
         <text
           x="20"
-          y="20.5"
+          y="20.8"
           textAnchor="middle"
           dominantBaseline="central"
-          fontSize={clamped >= WISDOM_MAX ? 13 : 16}
+          fontSize={compact ? (clamped >= WISDOM_MAX ? 15 : 19) : clamped >= WISDOM_MAX ? 13 : 16}
           fontWeight="800"
-          fill={tone.text}
+          fill={compact && !tone.top ? '#ffffff' : tone.ink}
         >
           {clamped}
         </text>
@@ -153,8 +193,11 @@ export function ContributorSeal({
           />
         )}
       </svg>
-      <span className="relative" style={{ color: metal ? metal.icon : '#b3a684' }}>
-        <Glyph as={AppIcons.suggest} weight="fill" className="h-[52%] w-[52%]" />
+      <span
+        className="absolute inset-0 flex items-center justify-center"
+        style={{ color: metal ? metal.icon : '#b3a684' }}
+      >
+        <Glyph as={AppIcons.suggest} weight="fill" className={GLYPH[size]} />
       </span>
     </span>
   )
@@ -180,7 +223,7 @@ export function SupporterSeal({
           : 'border border-dashed border-sand-300 bg-sand-50 text-sand-400'
       }`}
     >
-      <Glyph as={AppIcons.heart} weight="fill" className="h-[58%] w-[58%]" />
+      <Glyph as={AppIcons.heart} weight="fill" className={GLYPH[size]} />
     </span>
   )
 }
