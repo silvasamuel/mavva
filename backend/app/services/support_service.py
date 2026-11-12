@@ -55,6 +55,10 @@ def create_charge(
         qr_code=charge.qr_code,
         ticket_url=charge.ticket_url,
         expires_at=charge.expires_at,
+        # The column default, now(), is the transaction start: charges sharing a
+        # transaction would tie and fall back to the random id. clock_timestamp()
+        # keeps "newest first" true.
+        created_at=func.clock_timestamp(),
     )
     db.add(payment)
     db.flush()

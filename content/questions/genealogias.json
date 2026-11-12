@@ -1397,6 +1397,874 @@
         "verse_end": 7
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "genealogias-0046",
+      "text": "Quem foi a mãe de Salomão, o rei que sucedeu a Davi?",
+      "options": [
+        {
+          "text": "Bate-Seba",
+          "correct": true
+        },
+        {
+          "text": "Mical",
+          "correct": false
+        },
+        {
+          "text": "Abigail",
+          "correct": false
+        },
+        {
+          "text": "Ainoã",
+          "correct": false
+        }
+      ],
+      "explanation": "Depois da morte do primeiro filho, \"consolou Davi a Bate-Seba, sua mulher... e ela teve um filho, e chamou o seu nome Salomão; e o SENHOR o amou\" (2Sm 12:24). Foi ela quem, com Natã, garantiu a sucessão de Salomão contra Adonias (1Rs 1:11-31).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 12,
+        "verse_start": 24,
+        "verse_end": 25
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "genealogias-0047",
+      "text": "Que parentesco havia entre Labão e Jacó?",
+      "options": [
+        {
+          "text": "Labão era tio materno de Jacó, irmão de Rebeca",
+          "correct": true
+        },
+        {
+          "text": "Labão era irmão de Jacó",
+          "correct": false
+        },
+        {
+          "text": "Labão era avô de Jacó",
+          "correct": false
+        },
+        {
+          "text": "Labão era primo de Isaque",
+          "correct": false
+        }
+      ],
+      "explanation": "Rebeca mandou Jacó fugir \"para Labão, meu irmão, em Harã\" (Gn 27:43), e Isaque o enviou a \"Labão, irmão de tua mãe\" (Gn 28:2). Ao casar-se com Lia e Raquel, Jacó se casou com as próprias primas.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 28,
+        "verse_start": 1,
+        "verse_end": 5
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "genealogias-0048",
+      "text": "Como a Bíblia costuma identificar Josué, sucessor de Moisés, pela filiação?",
+      "options": [
+        {
+          "text": "Josué, filho de Num",
+          "correct": true
+        },
+        {
+          "text": "Josué, filho de Jefoné",
+          "correct": false
+        },
+        {
+          "text": "Josué, filho de Eleazar",
+          "correct": false
+        },
+        {
+          "text": "Josué, filho de Calebe",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Josué, filho de Num, servo de Moisés\" é a forma recorrente (Nm 11:28; Js 1:1). Ele era da tribo de Efraim e originalmente se chamava Oseias; Moisés lhe deu o nome Josué (Nm 13:8, 16). Calebe é que era \"filho de Jefoné\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 13,
+        "verse_start": 8,
+        "verse_end": 16
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "genealogias-0049",
+      "text": "Segundo Lucas 1:36, que relação havia entre Maria, mãe de Jesus, e Isabel, mãe de João Batista?",
+      "options": [
+        {
+          "text": "Isabel era parenta de Maria",
+          "correct": true
+        },
+        {
+          "text": "Isabel era irmã de Maria",
+          "correct": false
+        },
+        {
+          "text": "Isabel era sogra de Maria",
+          "correct": false
+        },
+        {
+          "text": "Isabel era filha de Maria",
+          "correct": false
+        }
+      ],
+      "explanation": "O anjo disse a Maria: \"Isabel, tua prima, também ela concebeu um filho em sua velhice\" (Lc 1:36). O termo grego indica uma parenta, sem precisar o grau. Maria foi às pressas visitá-la, e João saltou no ventre (Lc 1:39-44).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 1,
+        "verse_start": 36,
+        "verse_end": 45
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "genealogias-0050",
+      "text": "Quem foi o pai de Davi, mencionado por Isaías ao profetizar que \"brotará um rebento do tronco de Jessé\"?",
+      "options": [
+        {
+          "text": "Jessé",
+          "correct": true
+        },
+        {
+          "text": "Boaz",
+          "correct": false
+        },
+        {
+          "text": "Obede",
+          "correct": false
+        },
+        {
+          "text": "Salmom",
+          "correct": false
+        }
+      ],
+      "explanation": "Jessé, o belemita, tinha oito filhos; Davi era o mais novo e cuidava das ovelhas quando Samuel veio ungi-lo (1Sm 16:1-13). Isaías 11:1 e Romanos 15:12 chamam o Messias de \"raiz de Jessé\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 16,
+        "verse_start": 1,
+        "verse_end": 13
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "genealogias-0051",
+      "text": "De quem descendem os moabitas e os amonitas, segundo Gênesis 19?",
+      "options": [
+        {
+          "text": "De Ló, por meio de suas duas filhas",
+          "correct": true
+        },
+        {
+          "text": "De Esaú, por meio de suas mulheres cananeias",
+          "correct": false
+        },
+        {
+          "text": "De Ismael, filho de Agar",
+          "correct": false
+        },
+        {
+          "text": "De Harã, irmão de Abraão",
+          "correct": false
+        }
+      ],
+      "explanation": "Depois da destruição de Sodoma, as filhas de Ló geraram Moabe, \"pai dos moabitas\", e Ben-Ami, \"pai dos filhos de Amom\" (Gn 19:36-38). Por esse parentesco, Israel foi proibido de tomar a terra deles (Dt 2:9, 19).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 19,
+        "verse_start": 30,
+        "verse_end": 38
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "genealogias-0052",
+      "text": "Quais são os nomes dos irmãos de Jesus, citados pelos habitantes de Nazaré em Mateus 13:55?",
+      "options": [
+        {
+          "text": "Tiago, José, Simão e Judas",
+          "correct": true
+        },
+        {
+          "text": "Pedro, André, Tiago e João",
+          "correct": false
+        },
+        {
+          "text": "Tiago, João, Filipe e Tomé",
+          "correct": false
+        },
+        {
+          "text": "Lázaro, Simão, Judas e Mateus",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Não é este o filho do carpinteiro? E não se chama sua mãe Maria, e seus irmãos Tiago, e José, e Simão, e Judas?\" (Mt 13:55). Tiago tornou-se líder da igreja em Jerusalém (At 15:13; Gl 1:19), e Tiago e Judas são os autores tradicionais das cartas que levam seus nomes.",
+      "divergence_note": "Cristãos divergem sobre o sentido de \"irmãos\": filhos de Maria e José nascidos depois de Jesus (leitura comum entre protestantes), filhos de José de um casamento anterior (tradição ortodoxa) ou primos (tradição católica). O texto dá os nomes; o grau de parentesco é debate.",
+      "reference": {
+        "book": "mateus",
+        "chapter": 13,
+        "verse_start": 54,
+        "verse_end": 56
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "genealogias-0053",
+      "text": "Quais eram os quatro filhos de Arão, listados em Êxodo 6:23?",
+      "options": [
+        {
+          "text": "Nadabe, Abiú, Eleazar e Itamar",
+          "correct": true
+        },
+        {
+          "text": "Gérson, Coate, Merari e Anrão",
+          "correct": false
+        },
+        {
+          "text": "Fineias, Zadoque, Abiatar e Aimeleque",
+          "correct": false
+        },
+        {
+          "text": "Hofni, Fineias, Icabode e Samuel",
+          "correct": false
+        }
+      ],
+      "explanation": "Arão casou-se com Eliseba e teve Nadabe, Abiú, Eleazar e Itamar (Êx 6:23). Os dois mais velhos morreram ao oferecer \"fogo estranho\" (Lv 10:1-2); Eleazar sucedeu ao pai como sumo sacerdote, e de Itamar descendia a casa de Eli (1Cr 24:3).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 6,
+        "verse_start": 23,
+        "verse_end": 25
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "genealogias-0054",
+      "text": "Quais eram os dois filhos de Noemi, que se casaram com Orfa e Rute em Moabe e morreram ali?",
+      "options": [
+        {
+          "text": "Malom e Quiliom",
+          "correct": true
+        },
+        {
+          "text": "Peres e Zerá",
+          "correct": false
+        },
+        {
+          "text": "Er e Onã",
+          "correct": false
+        },
+        {
+          "text": "Boaz e Elimeleque",
+          "correct": false
+        }
+      ],
+      "explanation": "Elimeleque, de Belém, levou Noemi e os filhos Malom e Quiliom a Moabe; os rapazes casaram-se com moabitas e morreram sem filhos (Rt 1:1-5). Rute 4:10 identifica Rute como viúva de Malom; Boaz a resgatou para \"suscitar o nome do falecido\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "rute",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 5
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "genealogias-0055",
+      "text": "Qual filho de Sete é mencionado em Gênesis 4:26, quando \"se começou a invocar o nome do SENHOR\"?",
+      "options": [
+        {
+          "text": "Enos",
+          "correct": true
+        },
+        {
+          "text": "Enoque",
+          "correct": false
+        },
+        {
+          "text": "Lameque",
+          "correct": false
+        },
+        {
+          "text": "Cainã",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E a Sete também nasceu um filho; e chamou o seu nome Enos; então, se começou a invocar o nome do SENHOR\" (Gn 4:26). A linhagem de Sete, que culmina em Noé, contrasta com a de Caim, cujo descendente Lameque se vangloriou de violência (Gn 4:23-24).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 4,
+        "verse_start": 25,
+        "verse_end": 26
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "genealogias-0056",
+      "text": "Quem foi o pai de Samuel, homem de Ramá que subia todos os anos a Siló para adorar com suas duas mulheres?",
+      "options": [
+        {
+          "text": "Elcana",
+          "correct": true
+        },
+        {
+          "text": "Eli",
+          "correct": false
+        },
+        {
+          "text": "Jessé",
+          "correct": false
+        },
+        {
+          "text": "Boaz",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Houve um homem de Ramataim-Zofim... cujo nome era Elcana\", casado com Ana e Penina (1Sm 1:1-2). Em 1 Crônicas 6:33-38, Elcana aparece na linhagem de Coate, filho de Levi — o que explica como Samuel pôde servir no tabernáculo.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 8
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "genealogias-0057",
+      "text": "Quais filhos Jacó teve com Bilha, a serva de Raquel?",
+      "options": [
+        {
+          "text": "Dã e Naftali",
+          "correct": true
+        },
+        {
+          "text": "Gade e Aser",
+          "correct": false
+        },
+        {
+          "text": "Issacar e Zebulom",
+          "correct": false
+        },
+        {
+          "text": "José e Benjamim",
+          "correct": false
+        }
+      ],
+      "explanation": "Raquel, estéril, deu Bilha a Jacó: nasceram Dã (\"julgou-me Deus\") e Naftali (\"com lutas de Deus tenho lutado\"), segundo Gênesis 30:3-8. Gade e Aser nasceram de Zilpa, serva de Lia (Gn 30:9-13).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 30,
+        "verse_start": 1,
+        "verse_end": 8
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "genealogias-0058",
+      "text": "Joabe, Abisai e Asael, guerreiros de Davi, eram filhos de quem, e que parentesco tinham com o rei?",
+      "options": [
+        {
+          "text": "Filhos de Zeruia, irmã de Davi — eram seus sobrinhos",
+          "correct": true
+        },
+        {
+          "text": "Filhos de Jessé — eram seus irmãos",
+          "correct": false
+        },
+        {
+          "text": "Filhos de Jônatas — eram seus primos",
+          "correct": false
+        },
+        {
+          "text": "Filhos de Abigail, viúva de Nabal — eram seus enteados",
+          "correct": false
+        }
+      ],
+      "explanation": "1 Crônicas 2:13-16 lista os filhos de Jessé e suas irmãs Zeruia e Abigail: \"os filhos de Zeruia: Abisai, Joabe e Asael, três\". Por isso Davi diz dos filhos de Zeruia que eram \"duros demais\" para ele (2Sm 3:39).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1cronicas",
+        "chapter": 2,
+        "verse_start": 13,
+        "verse_end": 17
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "genealogias-0059",
+      "text": "Qual o nome da única filha de Jacó, com Lia, cuja desonra em Siquém levou Simeão e Levi a matarem os homens da cidade?",
+      "options": [
+        {
+          "text": "Diná",
+          "correct": true
+        },
+        {
+          "text": "Sera",
+          "correct": false
+        },
+        {
+          "text": "Tamar",
+          "correct": false
+        },
+        {
+          "text": "Asenate",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E saiu Diná, filha de Lia, que esta dera a Jacó, para ver as filhas da terra\" (Gn 34:1). A vingança dos irmãos, com o engano da circuncisão, foi condenada por Jacó na bênção final: \"Maldito o seu furor, pois era forte\" (Gn 49:5-7). Sera era neta de Jacó, filha de Aser; Asenate, mulher de José.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 34,
+        "verse_start": 1,
+        "verse_end": 31
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "genealogias-0060",
+      "text": "Quais filhos Jacó teve com Zilpa, a serva de Lia?",
+      "options": [
+        {
+          "text": "Gade e Aser",
+          "correct": true
+        },
+        {
+          "text": "Dã e Naftali",
+          "correct": false
+        },
+        {
+          "text": "Issacar e Zebulom",
+          "correct": false
+        },
+        {
+          "text": "Simeão e Levi",
+          "correct": false
+        }
+      ],
+      "explanation": "Quando Lia deixou de dar à luz, deu a Jacó a sua serva Zilpa, que teve Gade (\"afortunado\") e Aser (\"feliz\"), segundo Gênesis 30:9-13. Assim, as doze tribos descendem de quatro mães: Lia (seis filhos), Raquel (José e Benjamim), Bilha (Dã e Naftali) e Zilpa (Gade e Aser). Gênesis 35:23-26 resume a lista completa.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 30,
+        "verse_start": 9,
+        "verse_end": 13
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "genealogias-0061",
+      "text": "Que nome Raquel deu ao filho que nasceu enquanto ela morria, e como Jacó o chamou?",
+      "options": [
+        {
+          "text": "Ela o chamou Benoni (\"filho da minha dor\"), e Jacó, Benjamim (\"filho da mão direita\")",
+          "correct": true
+        },
+        {
+          "text": "Ela o chamou José (\"acrescente\"), e Jacó, Efraim",
+          "correct": false
+        },
+        {
+          "text": "Ela o chamou Dã (\"juiz\"), e Jacó, Naftali",
+          "correct": false
+        },
+        {
+          "text": "Ela o chamou Icabô, e Jacó, Rúben",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E aconteceu que, saindo-se-lhe a alma (porque morreu), chamou-lhe Benoni; mas seu pai chamou-lhe Benjamim\" (Gn 35:18). O parto aconteceu no caminho para Efrata (Belém), onde Raquel foi sepultada; Jacó levantou uma coluna sobre o túmulo (vv. 19-20). Benjamim foi o único filho de Jacó nascido em Canaã e o mais novo dos doze.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 35,
+        "verse_start": 16,
+        "verse_end": 20
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "genealogias-0062",
+      "text": "Quem foi o pai de Moisés, Arão e Miriã, segundo a genealogia de Êxodo 6?",
+      "options": [
+        {
+          "text": "Anrão",
+          "correct": true
+        },
+        {
+          "text": "Coate",
+          "correct": false
+        },
+        {
+          "text": "Levi",
+          "correct": false
+        },
+        {
+          "text": "Jetro",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E Anrão tomou por mulher a Joquebede, sua tia, e ela deu-lhe a Arão e a Moisés\" (Êx 6:20). Números 26:59 acrescenta Miriã, a irmã. Anrão era filho de Coate e neto de Levi (Êx 6:16-18), de modo que Moisés pertencia à terceira geração desde Levi na linha dos coatitas — o clã que mais tarde carregaria a arca e os utensílios sagrados (Nm 4:4-15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 6,
+        "verse_start": 16,
+        "verse_end": 20
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "genealogias-0063",
+      "text": "Quantos filhos tinha Jessé, e qual era a posição de Davi entre eles?",
+      "options": [
+        {
+          "text": "Oito filhos; Davi era o mais novo",
+          "correct": true
+        },
+        {
+          "text": "Três filhos; Davi era o do meio",
+          "correct": false
+        },
+        {
+          "text": "Doze filhos; Davi era o primogênito",
+          "correct": false
+        },
+        {
+          "text": "Sete filhos; Davi era o segundo",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Assim, fez passar Jessé a seus sete filhos diante de Samuel; porém Samuel disse a Jessé: O SENHOR não tem escolhido a estes. Disse mais Samuel a Jessé: Acabaram-se os jovens? E disse: Ainda falta o menor, e eis que apascenta as ovelhas\" (1Sm 16:10-11). 1 Samuel 17:12 confirma: Jessé \"tinha oito filhos\". Os três mais velhos — Eliabe, Abinadabe e Samá — serviam no exército de Saul (17:13).",
+      "divergence_note": "1 Crônicas 2:13-15 lista Davi como o sétimo filho; a diferença costuma ser explicada pela morte de um irmão sem descendência, omitido nas genealogias.",
+      "reference": {
+        "book": "1samuel",
+        "chapter": 16,
+        "verse_start": 1,
+        "verse_end": 13
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "genealogias-0064",
+      "text": "Quem foi Betuel, segundo Gênesis 24?",
+      "options": [
+        {
+          "text": "Filho de Naor, irmão de Abraão, e pai de Rebeca e Labão",
+          "correct": true
+        },
+        {
+          "text": "Servo de Abraão enviado a buscar esposa para Isaque",
+          "correct": false
+        },
+        {
+          "text": "Irmão de Sara, pai de Ló",
+          "correct": false
+        },
+        {
+          "text": "Rei de Gerar que fez aliança com Isaque",
+          "correct": false
+        }
+      ],
+      "explanation": "Rebeca é apresentada como \"filha de Betuel, filho de Milca, mulher de Naor, irmão de Abraão\" (Gn 24:15), e Labão é seu irmão (v. 29). Isaque, portanto, casou-se com a filha de um primo. Mais tarde, Isaque mandou Jacó \"à casa de Betuel, pai de tua mãe\", para tomar mulher entre as filhas de Labão (Gn 28:2) — e Jacó se casou com as primas Lia e Raquel.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 24,
+        "verse_start": 15,
+        "verse_end": 29
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "genealogias-0065",
+      "text": "Quais eram os três filhos de Terá, e qual deles foi o pai de Ló?",
+      "options": [
+        {
+          "text": "Abrão, Naor e Harã; Harã foi o pai de Ló",
+          "correct": true
+        },
+        {
+          "text": "Abrão, Isaque e Jacó; Jacó foi o pai de Ló",
+          "correct": false
+        },
+        {
+          "text": "Sem, Cam e Jafé; Cam foi o pai de Ló",
+          "correct": false
+        },
+        {
+          "text": "Abrão, Eliézer e Ismael; Eliézer foi o pai de Ló",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E Terá gerou a Abrão, a Naor e a Harã; e Harã gerou a Ló. E morreu Harã, estando seu pai Terá ainda vivo, na terra do seu nascimento, em Ur dos caldeus\" (Gn 11:27-28). Ló era, portanto, sobrinho de Abrão, que o acolheu após a morte do irmão. Naor ficou na Mesopotâmia, e os seus descendentes (Betuel, Rebeca, Labão) voltam à história nos casamentos de Isaque e Jacó.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 11,
+        "verse_start": 27,
+        "verse_end": 32
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "genealogias-0066",
+      "text": "Como Hebreus 7:3 descreve Melquisedeque para mostrar que o seu sacerdócio não dependia de linhagem?",
+      "options": [
+        {
+          "text": "\"Sem pai, sem mãe, sem genealogia, não tendo princípio de dias nem fim de vida\"",
+          "correct": true
+        },
+        {
+          "text": "\"Filho de Sem, neto de Noé\"",
+          "correct": false
+        },
+        {
+          "text": "\"Descendente de Arão, da tribo de Levi\"",
+          "correct": false
+        },
+        {
+          "text": "\"Primogênito de toda a criação\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Sem pai, sem mãe, sem genealogia, não tendo princípio de dias nem fim de vida, mas sendo feito semelhante ao Filho de Deus, permanece sacerdote para sempre\" (Hb 7:3). Numa Bíblia cheia de genealogias, o silêncio de Gênesis 14 sobre a origem de Melquisedeque é lido como figura de Cristo, cujo sacerdócio não vem de Levi, mas de \"uma vida indissolúvel\" (Hb 7:16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "hebreus",
+        "chapter": 7,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "genealogias-0067",
+      "text": "Que pedido as cinco filhas de Zelofeade — Maalá, Noa, Hogla, Milca e Tirza — fizeram a Moisés, e qual foi a decisão do SENHOR?",
+      "options": [
+        {
+          "text": "Pediram a herança do pai, que morrera sem filhos homens; o SENHOR determinou que as filhas herdassem quando não houvesse filho",
+          "correct": true
+        },
+        {
+          "text": "Pediram para se casar com estrangeiros; o SENHOR proibiu",
+          "correct": false
+        },
+        {
+          "text": "Pediram para servir no tabernáculo; o SENHOR permitiu",
+          "correct": false
+        },
+        {
+          "text": "Pediram para voltar ao Egito; o SENHOR as puniu",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Por que se tiraria o nome de nosso pai do meio da sua família, porquanto não teve filhos? Dá-nos possessão entre os irmãos de nosso pai\" (Nm 27:4). O SENHOR respondeu: \"As filhas de Zelofeade falam o que é justo\" e estabeleceu a lei de herança para quando um homem morresse sem filho (vv. 7-11). Depois, para manter a terra na tribo, elas deviam casar-se dentro de Manassés (Nm 36).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 27,
+        "verse_start": 1,
+        "verse_end": 11
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "genealogias-0068",
+      "text": "Quem foi o pai do rei Saul, descrito como \"homem benjamita, valente e poderoso\"?",
+      "options": [
+        {
+          "text": "Quis",
+          "correct": true
+        },
+        {
+          "text": "Ner",
+          "correct": false
+        },
+        {
+          "text": "Abiel",
+          "correct": false
+        },
+        {
+          "text": "Jessé",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E havia um homem de Benjamim, cujo nome era Quis, filho de Abiel... varão alentado em força. E este tinha um filho, cujo nome era Saul, moço e tão belo, que entre os filhos de Israel não havia outro mais belo do que ele\" (1Sm 9:1-2). Foi procurando as jumentas perdidas de Quis que Saul chegou a Samuel (1Sm 9:3-20). Ner, pai de Abner, era tio de Saul (1Sm 14:50-51).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 9,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "genealogias-0069",
+      "text": "Quais filhos de Saul morreram com ele na batalha do monte Gilboa?",
+      "options": [
+        {
+          "text": "Jônatas, Abinadabe e Malquisua",
+          "correct": true
+        },
+        {
+          "text": "Jônatas, Is-Bosete e Mefibosete",
+          "correct": false
+        },
+        {
+          "text": "Abner, Jônatas e Armoni",
+          "correct": false
+        },
+        {
+          "text": "Amnom, Absalão e Adonias",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E os filisteus apertaram com Saul e seus filhos e mataram a Jônatas, e a Abinadabe, e a Malquisua, filhos de Saul\" (1Sm 31:2). Saul, ferido, lançou-se sobre a própria espada. Is-Bosete, o quarto filho, sobreviveu e foi feito rei por Abner em Maanaim (2Sm 2:8). Davi lamentou Saul e Jônatas no \"cântico do arco\": \"Como caíram os valentes!\" (2Sm 1:17-27).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 31,
+        "verse_start": 1,
+        "verse_end": 6
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "genealogias-0070",
+      "text": "Quem foi a mãe de Roboão, filho e sucessor de Salomão, segundo 1 Reis 14:21?",
+      "options": [
+        {
+          "text": "Naamá, uma amonita",
+          "correct": true
+        },
+        {
+          "text": "Bate-Seba, a esposa de Urias",
+          "correct": false
+        },
+        {
+          "text": "A filha de Faraó",
+          "correct": false
+        },
+        {
+          "text": "Abisague, a sunamita",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E Roboão, filho de Salomão, reinava em Judá... e era o nome de sua mãe Naamá, amonita\" (1Rs 14:21). Entre as muitas mulheres estrangeiras de Salomão, que \"lhe perverteram o coração\" (1Rs 11:1-4), estava uma amonita, mãe do herdeiro. Roboão perdeu as dez tribos do Norte logo ao assumir o trono (1Rs 12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 14,
+        "verse_start": 21,
+        "verse_end": 21
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "genealogias-0071",
+      "text": "Como a Bíblia identifica Calebe, o espia fiel que, com Josué, confiou na promessa de Deus?",
+      "options": [
+        {
+          "text": "Calebe, filho de Jefoné, da tribo de Judá",
+          "correct": true
+        },
+        {
+          "text": "Calebe, filho de Num, da tribo de Efraim",
+          "correct": false
+        },
+        {
+          "text": "Calebe, filho de Quenaz, da tribo de Benjamim",
+          "correct": false
+        },
+        {
+          "text": "Calebe, filho de Zelofeade, da tribo de Manassés",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Da tribo de Judá, Calebe, filho de Jefoné\" (Nm 13:6). Ele é chamado também \"o quenezeu\" (Nm 32:12; Js 14:6), indicando que a família de Jefoné descendia de Quenaz e foi incorporada a Judá. Aos 85 anos, Calebe pediu e recebeu Hebrom como herança (Js 14:6-15). Josué, o outro espia fiel, era \"filho de Num\", da tribo de Efraim (Nm 13:8,16).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 13,
+        "verse_start": 1,
+        "verse_end": 16
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "genealogias-0072",
+      "text": "Segundo Gênesis 4, quem foi \"o pai de todos os que tocam harpa e órgão (flauta)\", na descendência de Caim?",
+      "options": [
+        {
+          "text": "Jubal",
+          "correct": true
+        },
+        {
+          "text": "Jabal",
+          "correct": false
+        },
+        {
+          "text": "Tubalcaim",
+          "correct": false
+        },
+        {
+          "text": "Enoque",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E o nome do seu irmão era Jubal; este foi o pai de todos os que tocam harpa e órgão\" (Gn 4:21). Seus irmãos foram Jabal, \"pai dos que habitam em tendas e têm gado\" (v. 20), e Tubalcaim, \"mestre de toda obra de cobre e de ferro\" (v. 22), todos filhos de Lameque, o descendente de Caim. Pastoreio, música e metalurgia são assim atribuídos a essa linhagem.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 4,
+        "verse_start": 19,
+        "verse_end": 22
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "genealogias-0073",
+      "text": "Que parentesco havia entre João Marcos e Barnabé, segundo Colossenses 4:10?",
+      "options": [
+        {
+          "text": "Marcos era primo (sobrinho, na ARC) de Barnabé",
+          "correct": true
+        },
+        {
+          "text": "Marcos era filho de Barnabé",
+          "correct": false
+        },
+        {
+          "text": "Marcos era cunhado de Barnabé",
+          "correct": false
+        },
+        {
+          "text": "Marcos era sogro de Barnabé",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Aristarco, que está preso comigo, vos saúda, e Marcos, o sobrinho de Barnabé\" (Cl 4:10, ARC); o termo grego anepsios significa propriamente \"primo\". O parentesco ajuda a explicar por que Barnabé insistiu em levar Marcos na segunda viagem, apesar do abandono em Panfília, causando a separação de Paulo (At 15:37-39). Anos depois, Paulo o chamaria \"útil para o ministério\" (2Tm 4:11).",
+      "divergence_note": "A ARC traduz anepsios por \"sobrinho\"; a maioria das traduções modernas opta por \"primo\", sentido usual do termo grego.",
+      "reference": {
+        "book": "colossenses",
+        "chapter": 4,
+        "verse_start": 10,
+        "verse_end": 10
+      },
+      "difficulty": "medium"
     }
   ]
 }

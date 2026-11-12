@@ -1428,6 +1428,874 @@
         "verse_end": 24
       },
       "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0047",
+      "text": "O que aconteceu com o mar quando os marinheiros lançaram Jonas nas águas?",
+      "options": [
+        {
+          "text": "Cessou a sua fúria, e os homens temeram ao SENHOR e ofereceram sacrifícios",
+          "correct": true
+        },
+        {
+          "text": "Ficou vermelho como sangue",
+          "correct": false
+        },
+        {
+          "text": "Abriu-se em dois, como para Israel",
+          "correct": false
+        },
+        {
+          "text": "Lançou o navio à praia",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E levantaram a Jonas e o lançaram ao mar, e cessou o mar da sua fúria. Temeram, pois, estes homens ao SENHOR com grande temor\" (Jn 1:15-16). Os marinheiros pagãos, que antes clamavam cada um ao seu deus, acabaram adorando o Deus de Jonas.",
+      "divergence_note": null,
+      "reference": {
+        "book": "jonas",
+        "chapter": 1,
+        "verse_start": 11,
+        "verse_end": 16
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "eventos-biblicos-0048",
+      "text": "O que Zaqueu, chefe dos publicanos, declarou a Jesus depois de recebê-lo alegremente em sua casa em Jericó?",
+      "options": [
+        {
+          "text": "Que daria metade dos bens aos pobres e restituiria quatro vezes o que tivesse extorquido",
+          "correct": true
+        },
+        {
+          "text": "Que deixaria o cargo e seguiria Jesus pelas estradas",
+          "correct": false
+        },
+        {
+          "text": "Que construiria uma sinagoga em Jericó",
+          "correct": false
+        },
+        {
+          "text": "Que pagaria o imposto do templo por toda a cidade",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Senhor, eis que eu dou aos pobres metade dos meus bens; e, se nalguma coisa tenho defraudado alguém, o restituo quadruplicado\" (Lc 19:8). A Lei exigia restituir com acréscimo de um quinto (Lv 6:5); Zaqueu foi além. Jesus respondeu: \"Hoje, veio a salvação a esta casa\" (Lc 19:9-10).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 19,
+        "verse_start": 1,
+        "verse_end": 10
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "eventos-biblicos-0049",
+      "text": "O que aconteceu com os guardas do sepulcro quando o anjo do Senhor desceu, removeu a pedra e se assentou sobre ela?",
+      "options": [
+        {
+          "text": "Tremeram de medo e ficaram como mortos",
+          "correct": true
+        },
+        {
+          "text": "Fugiram e se esconderam em Jerusalém",
+          "correct": false
+        },
+        {
+          "text": "Caíram e adoraram o anjo",
+          "correct": false
+        },
+        {
+          "text": "Correram para avisar Pilatos imediatamente",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E os guardas, com medo dele, ficaram muito assombrados e como mortos\" (Mt 28:4). Mais tarde os principais dos sacerdotes os subornaram para dizerem que os discípulos haviam roubado o corpo enquanto dormiam (Mt 28:11-15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 28,
+        "verse_start": 1,
+        "verse_end": 4
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "eventos-biblicos-0050",
+      "text": "O que Estêvão disse ter visto, cheio do Espírito Santo, momentos antes de ser apedrejado?",
+      "options": [
+        {
+          "text": "\"Vejo os céus abertos e o Filho do Homem, que está em pé à mão direita de Deus\"",
+          "correct": true
+        },
+        {
+          "text": "\"Vejo um carro de fogo que vem me buscar\"",
+          "correct": false
+        },
+        {
+          "text": "\"Vejo a nova Jerusalém descendo do céu\"",
+          "correct": false
+        },
+        {
+          "text": "\"Vejo Moisés e Elias ao lado do trono\"",
+          "correct": false
+        }
+      ],
+      "explanation": "Estêvão, \"fitando os olhos no céu, viu a glória de Deus e Jesus, que estava à direita de Deus\" (At 7:55-56). Em outras passagens Jesus está \"assentado\" à direita; aqui está em pé — muitos veem nisso Jesus recebendo o seu mártir. Saulo guardava as capas dos que o apedrejavam (At 7:58).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 7,
+        "verse_start": 54,
+        "verse_end": 60
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "eventos-biblicos-0051",
+      "text": "O que aconteceu com o rosto de Moisés quando ele desceu do Sinai com as segundas tábuas, e o que ele passou a fazer?",
+      "options": [
+        {
+          "text": "A pele do rosto resplandecia, e ele cobria o rosto com um véu ao falar com o povo",
+          "correct": true
+        },
+        {
+          "text": "Ficou coberto de cinza, e ele o lavou no ribeiro",
+          "correct": false
+        },
+        {
+          "text": "Envelheceu de repente, e ele deixou de aparecer em público",
+          "correct": false
+        },
+        {
+          "text": "Ficou cego, e Arão passou a guiá-lo",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Não sabia Moisés que a pele do seu rosto resplandecia, depois que falara com ele\" (Êx 34:29). O povo temeu chegar perto; Moisés pôs um véu, que tirava ao entrar diante do SENHOR (Êx 34:33-35). Paulo retoma a cena em 2 Coríntios 3:7-18 para falar da glória maior da nova aliança.",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 34,
+        "verse_start": 29,
+        "verse_end": 35
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0052",
+      "text": "O que aconteceu com os profetas de Baal depois que o fogo do SENHOR caiu sobre o altar de Elias no Carmelo?",
+      "options": [
+        {
+          "text": "Elias os fez descer ao ribeiro de Quisom e ali os matou",
+          "correct": true
+        },
+        {
+          "text": "Fugiram para a Fenícia com Jezabel",
+          "correct": false
+        },
+        {
+          "text": "Converteram-se e serviram no templo",
+          "correct": false
+        },
+        {
+          "text": "Foram presos por Acabe em Samaria",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Lançai mão dos profetas de Baal, que nenhum deles escape. E lançaram mão deles; e Elias os fez descer ao ribeiro de Quisom e ali os matou\" (1Rs 18:40). A execução seguia a lei contra quem induzia Israel à idolatria (Dt 13:5). Foi por isso que Jezabel jurou matar Elias (1Rs 19:1-2).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 18,
+        "verse_start": 40,
+        "verse_end": 40
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0053",
+      "text": "O que aconteceu com Miriã quando ela e Arão falaram contra Moisés por causa da mulher cuxita?",
+      "options": [
+        {
+          "text": "Ficou leprosa, branca como a neve, e foi excluída do arraial por sete dias",
+          "correct": true
+        },
+        {
+          "text": "Perdeu a voz por quarenta dias",
+          "correct": false
+        },
+        {
+          "text": "Foi tragada pela terra",
+          "correct": false
+        },
+        {
+          "text": "Foi expulsa de Israel para sempre",
+          "correct": false
+        }
+      ],
+      "explanation": "\"A ira do SENHOR contra eles se acendeu... e eis que Miriã era leprosa como a neve\" (Nm 12:9-10). Arão suplicou, Moisés orou — \"Ó Deus, rogo-te que a cures\" — e ela ficou sete dias fora do arraial, enquanto o povo esperava por ela (Nm 12:13-15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 12,
+        "verse_start": 1,
+        "verse_end": 15
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0054",
+      "text": "Que acontecimento levou Moisés a ser impedido de entrar na terra prometida?",
+      "options": [
+        {
+          "text": "Feriu a rocha duas vezes em Meribá, em vez de falar a ela",
+          "correct": true
+        },
+        {
+          "text": "Quebrou as tábuas da Lei ao descer do Sinai",
+          "correct": false
+        },
+        {
+          "text": "Matou um egípcio e fugiu para Midiã",
+          "correct": false
+        },
+        {
+          "text": "Casou-se com uma mulher cuxita",
+          "correct": false
+        }
+      ],
+      "explanation": "Em Cades, Deus mandou falar à rocha; Moisés feriu-a duas vezes dizendo \"porventura tiraremos água desta rocha para vós?\". \"Porquanto não crestes em mim, para me santificar diante dos filhos de Israel, por isso não introduzireis este povo na terra\" (Nm 20:7-12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 20,
+        "verse_start": 7,
+        "verse_end": 13
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0055",
+      "text": "O que aconteceu com os que vieram prender Jesus no Getsêmani quando ele respondeu \"Sou eu\"?",
+      "options": [
+        {
+          "text": "Recuaram e caíram por terra",
+          "correct": true
+        },
+        {
+          "text": "Soltaram as armas e fugiram",
+          "correct": false
+        },
+        {
+          "text": "Ficaram cegos até o amanhecer",
+          "correct": false
+        },
+        {
+          "text": "Caíram de joelhos e pediram perdão",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Quando, pois, lhes disse: Sou eu, recuaram e caíram por terra\" (Jo 18:6). João destaca que Jesus se entregou por vontade própria: perguntou duas vezes a quem buscavam e pediu que deixassem ir os discípulos, cumprindo \"dos que me deste nenhum deles perdi\" (Jo 18:8-9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 18,
+        "verse_start": 3,
+        "verse_end": 9
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0056",
+      "text": "Que acontecimento em Jope levou Pedro a entender que não devia chamar impuro ao que Deus purificou?",
+      "options": [
+        {
+          "text": "A visão do lençol com animais descendo do céu",
+          "correct": true
+        },
+        {
+          "text": "A ressurreição de Dorcas",
+          "correct": false
+        },
+        {
+          "text": "A cura do paralítico Eneias",
+          "correct": false
+        },
+        {
+          "text": "Um anjo que o libertou da prisão",
+          "correct": false
+        }
+      ],
+      "explanation": "Em oração no terraço, Pedro viu três vezes um lençol com toda espécie de animais e ouviu: \"Mata e come\". Enquanto ele refletia, chegaram os enviados de Cornélio, e Pedro entendeu que \"Deus não faz acepção de pessoas\" (At 10:9-35).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 10,
+        "verse_start": 9,
+        "verse_end": 16
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0057",
+      "text": "Que aconteceu em Mispa quando Samuel ofereceu um cordeiro em holocausto enquanto os filisteus se aproximavam para atacar Israel?",
+      "options": [
+        {
+          "text": "O SENHOR trovejou com grande estrondo e os filisteus foram derrotados",
+          "correct": true
+        },
+        {
+          "text": "A terra se abriu e engoliu os filisteus",
+          "correct": false
+        },
+        {
+          "text": "Uma tempestade de granizo caiu sobre os inimigos",
+          "correct": false
+        },
+        {
+          "text": "Um anjo com espada apareceu diante do exército",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Trovejou o SENHOR aquele dia com grande estrondo sobre os filisteus, e os aterrou de tal modo que foram derrotados\" (1Sm 7:10). Samuel então ergueu a pedra Ebenézer: \"Até aqui nos ajudou o SENHOR\" (1Sm 7:12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 7,
+        "verse_start": 7,
+        "verse_end": 12
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "eventos-biblicos-0058",
+      "text": "O que aconteceu quando Isaías, na visão do templo, confessou: \"Ai de mim!... sou um homem de lábios impuros\"?",
+      "options": [
+        {
+          "text": "Um serafim tocou-lhe a boca com uma brasa viva do altar, e a sua iniquidade foi tirada",
+          "correct": true
+        },
+        {
+          "text": "Deus o fez ficar mudo até o nascimento do filho",
+          "correct": false
+        },
+        {
+          "text": "Ele foi levado ao céu num redemoinho",
+          "correct": false
+        },
+        {
+          "text": "Um anjo lhe entregou um rolo para comer",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Um dos serafins voou para mim, trazendo na mão uma brasa viva, que tirara do altar com uma tenaz; e com ela tocou a minha boca e disse: ...já tirada está a tua iniquidade\" (Is 6:6-7). Só então Isaías ouviu \"a quem enviarei?\" e respondeu \"eis-me aqui\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "isaias",
+        "chapter": 6,
+        "verse_start": 5,
+        "verse_end": 8
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0059",
+      "text": "Que acontecimento marcou a morte de Eli, o sacerdote, quando um mensageiro chegou de Ebenézer?",
+      "options": [
+        {
+          "text": "Caiu da cadeira para trás e quebrou o pescoço ao ouvir que a arca fora tomada",
+          "correct": true
+        },
+        {
+          "text": "Foi morto pelos filisteus em Siló",
+          "correct": false
+        },
+        {
+          "text": "Morreu de tristeza ao saber da morte dos filhos",
+          "correct": false
+        },
+        {
+          "text": "Foi atingido por um raio no templo",
+          "correct": false
+        }
+      ],
+      "explanation": "Eli suportou a notícia da derrota e da morte dos filhos; mas, \"fazendo ele menção da arca de Deus, caiu da cadeira para trás... e quebrou-se-lhe o pescoço, e morreu\" (1Sm 4:18). Tinha noventa e oito anos e julgara Israel por quarenta.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 4,
+        "verse_start": 12,
+        "verse_end": 18
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "eventos-biblicos-0060",
+      "text": "O que aconteceu com os quarenta e dois rapazes de Betel que zombaram de Eliseu gritando \"Sobe, calvo!\"?",
+      "options": [
+        {
+          "text": "Duas ursas saíram do bosque e os despedaçaram",
+          "correct": true
+        },
+        {
+          "text": "Ficaram cegos por sete dias",
+          "correct": false
+        },
+        {
+          "text": "Foram engolidos pela terra",
+          "correct": false
+        },
+        {
+          "text": "Fugiram ao ver um exército de fogo",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Virando-se ele para trás, os viu e os amaldiçoou em nome do SENHOR; então, duas ursas saíram do bosque e despedaçaram quarenta e dois daqueles pequenos\" (2Rs 2:23-24). Betel era centro do culto ao bezerro de ouro; a zombaria visava o sucessor de Elias, recém-arrebatado — \"sobe\" tu também.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 2,
+        "verse_start": 23,
+        "verse_end": 25
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "eventos-biblicos-0061",
+      "text": "O que fez cessar a praga que matou vinte e quatro mil israelitas quando o povo se prostituiu com as moabitas e adorou Baal-Peor?",
+      "options": [
+        {
+          "text": "Fineias, neto de Arão, atravessou com uma lança o israelita Zinri e a midianita Cosbi",
+          "correct": true
+        },
+        {
+          "text": "Moisés levantou a serpente de bronze",
+          "correct": false
+        },
+        {
+          "text": "Arão correu com o incensário para o meio do povo",
+          "correct": false
+        },
+        {
+          "text": "Josué queimou o acampamento midianita",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Vendo isso Fineias, filho de Eleazar, o filho de Arão, o sacerdote, se levantou do meio da congregação, e tomou uma lança na sua mão... e os atravessou a ambos... Então, a praga cessou de sobre os filhos de Israel\" (Nm 25:7-8). Deus deu a Fineias \"o concerto de um sacerdócio perpétuo, porquanto teve zelo pelo seu Deus\" (vv. 12-13). O Salmo 106:30-31 lembra que isso lhe foi \"contado por justiça\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 25,
+        "verse_start": 1,
+        "verse_end": 13
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "eventos-biblicos-0062",
+      "text": "O que aconteceu aos dois primeiros capitães de cinquenta que o rei Acazias enviou para prender Elias, sentado no cume de um monte?",
+      "options": [
+        {
+          "text": "Fogo desceu do céu e os consumiu com os seus cinquenta homens",
+          "correct": true
+        },
+        {
+          "text": "Ficaram cegos e voltaram tateando",
+          "correct": false
+        },
+        {
+          "text": "Um urso saiu do bosque e os despedaçou",
+          "correct": false
+        },
+        {
+          "text": "Foram tragados pela terra",
+          "correct": false
+        }
+      ],
+      "explanation": "Acazias, ferido, consultara Baal-Zebube, deus de Ecrom, e Elias anunciou a sua morte. O rei mandou um capitão com cinquenta homens: \"Homem de Deus, o rei diz: Desce\". Elias respondeu: \"Se eu sou homem de Deus, desça fogo do céu e te consuma\" — e assim foi, duas vezes (2Rs 1:9-12). O terceiro capitão suplicou de joelhos pela vida, e Elias desceu com ele (vv. 13-15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "2reis",
+        "chapter": 1,
+        "verse_start": 9,
+        "verse_end": 17
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0063",
+      "text": "Segundo Mateus 27, o que Judas fez com as trinta moedas de prata ao ver que Jesus fora condenado, e o que os sacerdotes fizeram com elas?",
+      "options": [
+        {
+          "text": "Lançou-as no templo e foi enforcar-se; os sacerdotes compraram com elas o campo do oleiro para sepultura de estrangeiros",
+          "correct": true
+        },
+        {
+          "text": "Devolveu-as a Pilatos, que as deu aos soldados",
+          "correct": false
+        },
+        {
+          "text": "Deu-as aos pobres e fugiu para a Galileia",
+          "correct": false
+        },
+        {
+          "text": "Enterrou-as no Getsêmani",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E ele, atirando para o templo as moedas de prata, retirou-se e foi-se enforcar. E os príncipes dos sacerdotes, tomando as moedas de prata, disseram: Não é lícito metê-las no cofre das ofertas, porque são preço de sangue. E, tendo deliberado em conselho, compraram com elas o campo de um oleiro, para sepultura dos estrangeiros\" (Mt 27:5-7). O campo ficou conhecido como \"Campo de Sangue\" — Aceldama (Mt 27:8; At 1:19).",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 27,
+        "verse_start": 3,
+        "verse_end": 10
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0064",
+      "text": "O que Jesus fez, inclinando-se, enquanto os escribas e fariseus insistiam em acusar a mulher apanhada em adultério?",
+      "options": [
+        {
+          "text": "Inclinou-se e escreveu com o dedo na terra",
+          "correct": true
+        },
+        {
+          "text": "Rasgou as suas vestes",
+          "correct": false
+        },
+        {
+          "text": "Mandou trazer o homem com quem ela pecara",
+          "correct": false
+        },
+        {
+          "text": "Saiu do templo em silêncio",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Mas Jesus, inclinando-se, escrevia com o dedo na terra. E, como insistissem, perguntando-lhe, endireitou-se e disse-lhes: Aquele que dentre vós está sem pecado seja o primeiro que atire pedra contra ela. E, tornando a inclinar-se, escrevia na terra\" (Jo 8:6-8). O texto não diz o que ele escreveu. Os acusadores saíram um a um, dos mais velhos aos mais novos, e Jesus disse à mulher: \"Nem eu também te condeno; vai-te e não peques mais\" (v. 11).",
+      "divergence_note": "A passagem de João 7:53–8:11 está ausente dos manuscritos gregos mais antigos, embora seja aceita como Escritura pela maioria das tradições cristãs; a ARC a inclui.",
+      "reference": {
+        "book": "joao",
+        "chapter": 8,
+        "verse_start": 1,
+        "verse_end": 11
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "eventos-biblicos-0065",
+      "text": "O que Moisés fez com as tábuas da Lei e com o bezerro de ouro ao descer do Sinai e ver o povo dançando?",
+      "options": [
+        {
+          "text": "Quebrou as tábuas ao pé do monte; queimou o bezerro, moeu-o até virar pó, espalhou o pó na água e fez os israelitas beberem",
+          "correct": true
+        },
+        {
+          "text": "Guardou as tábuas na arca e enterrou o bezerro",
+          "correct": false
+        },
+        {
+          "text": "Atirou as tábuas contra o bezerro, derrubando-o",
+          "correct": false
+        },
+        {
+          "text": "Entregou as tábuas a Arão e fundiu o bezerro em altar",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Aconteceu que, chegando ele ao arraial e vendo o bezerro e as danças, acendeu-se o furor de Moisés, e arremessou as tábuas das suas mãos, e quebrou-as ao pé do monte; e tomou o bezerro que tinham feito, e queimou-o no fogo, moendo-o até que se tornou em pó; e o espargiu sobre as águas e deu-o a beber aos filhos de Israel\" (Êx 32:19-20). As tábuas quebradas representavam a aliança rompida; Deus mandaria lavrar outras duas (Êx 34:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "exodo",
+        "chapter": 32,
+        "verse_start": 15,
+        "verse_end": 20
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0066",
+      "text": "O que aconteceu a Nadabe e Abiú, filhos de Arão, no dia em que ofereceram \"fogo estranho\" diante do SENHOR?",
+      "options": [
+        {
+          "text": "Saiu fogo de diante do SENHOR e os consumiu, e morreram perante o SENHOR",
+          "correct": true
+        },
+        {
+          "text": "Ficaram leprosos e foram lançados fora do arraial",
+          "correct": false
+        },
+        {
+          "text": "Foram tragados pela terra com Coré",
+          "correct": false
+        },
+        {
+          "text": "Perderam o sacerdócio e se tornaram cantores",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E os filhos de Arão, Nadabe e Abiú, tomaram cada um o seu incensário, e puseram neles fogo, e puseram incenso sobre ele, e trouxeram fogo estranho perante a face do SENHOR, o que lhes não ordenara. Então, saiu fogo de diante do SENHOR e os consumiu; e morreram perante o SENHOR\" (Lv 10:1-2). Arão calou-se; os corpos foram tirados pelas túnicas, e os sacerdotes foram proibidos de beber vinho ao entrar na tenda (vv. 3-9).",
+      "divergence_note": null,
+      "reference": {
+        "book": "levitico",
+        "chapter": 10,
+        "verse_start": 1,
+        "verse_end": 11
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0067",
+      "text": "Que sinal os espias mandaram Raabe pôr na janela, para que ela e a sua família fossem poupadas na queda de Jericó?",
+      "options": [
+        {
+          "text": "Um cordão de fio de escarlata",
+          "correct": true
+        },
+        {
+          "text": "Uma lâmpada acesa",
+          "correct": false
+        },
+        {
+          "text": "Um ramo de oliveira",
+          "correct": false
+        },
+        {
+          "text": "Uma veste branca",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Eis que, vindo nós à terra, atarás este cordão de fio de escarlata à janela por onde nos fizeste descer; e recolherás em casa contigo a teu pai, e a tua mãe, e a teus irmãos\" (Js 2:18). Raabe atou o cordão imediatamente (v. 21), e Josué ordenou que ela e os seus fossem salvos (Js 6:22-25). Muitos intérpretes antigos viram no fio escarlate uma figura do sangue que protege, como o sangue da Páscoa nos umbrais.",
+      "divergence_note": null,
+      "reference": {
+        "book": "josue",
+        "chapter": 2,
+        "verse_start": 15,
+        "verse_end": 21
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "eventos-biblicos-0068",
+      "text": "Como Sansão incendiou as searas, as vinhas e os olivais dos filisteus depois que o sogro deu a sua mulher a outro?",
+      "options": [
+        {
+          "text": "Amarrou trezentas raposas, cauda com cauda, com tochas acesas, e as soltou nas plantações",
+          "correct": true
+        },
+        {
+          "text": "Derramou azeite e lançou fogo com uma tocha",
+          "correct": false
+        },
+        {
+          "text": "Incendiou o templo de Dagom",
+          "correct": false
+        },
+        {
+          "text": "Derrubou as torres de vigia das vinhas",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E foi Sansão, e tomou trezentas raposas, e, tomando fachos, as virou cauda a cauda, e lhes pôs um facho no meio de cada duas caudas. E chegou fogo aos fachos, e largou-as na seara dos filisteus; e assim abrasou os molhos com a seara e as vinhas com os olivais\" (Jz 15:4-5). Em represália, os filisteus queimaram a mulher e o pai dela; Sansão então \"os feriu com grande ferimento\" e se refugiou na rocha de Etã (vv. 6-8).",
+      "divergence_note": null,
+      "reference": {
+        "book": "juizes",
+        "chapter": 15,
+        "verse_start": 1,
+        "verse_end": 8
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0069",
+      "text": "Como Acabe morreu em Ramote-Gileade, apesar de ter ido à batalha disfarçado enquanto Josafá usava as vestes reais?",
+      "options": [
+        {
+          "text": "Um homem atirou uma flecha \"à toa\" (ao acaso), que o feriu entre as juntas da armadura; ele morreu à tarde, sangrando no carro",
+          "correct": true
+        },
+        {
+          "text": "Foi derrubado do carro pelos sírios e pisoteado",
+          "correct": false
+        },
+        {
+          "text": "Josafá o traiu e o entregou ao rei da Síria",
+          "correct": false
+        },
+        {
+          "text": "Foi atingido por um raio no meio do exército",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Então, um homem armou o arco, na sua simplicidade (ao acaso), e feriu o rei de Israel por entre as fivelas e as couraças... E a peleja foi crescendo naquele dia, e o rei parou no carro defronte dos siros; porém ele morreu à tarde, e o sangue da ferida corria no fundo do carro\" (1Rs 22:34-35). Cumpriu-se a palavra de Micaías, filho de Inlá, que previra a derrota, e os cães lamberam o sangue de Acabe em Samaria, como Elias anunciara (v. 38).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1reis",
+        "chapter": 22,
+        "verse_start": 29,
+        "verse_end": 40
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "eventos-biblicos-0070",
+      "text": "O que aconteceu quando Maria, grávida, saudou Isabel ao chegar à sua casa nas montanhas de Judá?",
+      "options": [
+        {
+          "text": "A criança saltou no ventre de Isabel, que ficou cheia do Espírito Santo e exclamou: \"Bendita és tu entre as mulheres\"",
+          "correct": true
+        },
+        {
+          "text": "Isabel recuperou a fala, que havia perdido",
+          "correct": false
+        },
+        {
+          "text": "Zacarias profetizou o Benedictus",
+          "correct": false
+        },
+        {
+          "text": "Uma estrela apareceu sobre a casa",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E aconteceu que, ao ouvir Isabel a saudação de Maria, a criancinha saltou no seu ventre; e Isabel foi cheia do Espírito Santo. E exclamou com grande voz e disse: Bendita és tu entre as mulheres, e bendito o fruto do teu ventre\" (Lc 1:41-42). Isabel acrescentou: \"a criancinha saltou de alegria no meu ventre\" (v. 44). Em resposta, Maria entoou o Magnificat (vv. 46-55).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 1,
+        "verse_start": 39,
+        "verse_end": 45
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "eventos-biblicos-0071",
+      "text": "O que os habitantes de Nazaré tentaram fazer com Jesus depois que ele pregou na sinagoga e citou a viúva de Sarepta e Naamã, o sírio?",
+      "options": [
+        {
+          "text": "Levaram-no ao cume do monte para o precipitar, mas ele passou pelo meio deles e retirou-se",
+          "correct": true
+        },
+        {
+          "text": "Apedrejaram-no fora da cidade",
+          "correct": false
+        },
+        {
+          "text": "Entregaram-no a Herodes",
+          "correct": false
+        },
+        {
+          "text": "Expulsaram-no e fecharam a sinagoga",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E todos, na sinagoga, ouvindo essas coisas, se encheram de ira. E, levantando-se, o expulsaram da cidade e o levaram até ao cume do monte em que a cidade deles estava edificada, para dali o precipitarem. Ele, porém, passando pelo meio deles, retirou-se\" (Lc 4:28-30). A ira veio porque Jesus lembrou que Deus abençoara gentios — uma viúva fenícia e um general sírio — enquanto havia muitos necessitados em Israel.",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 4,
+        "verse_start": 16,
+        "verse_end": 30
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0072",
+      "text": "Segundo Lucas 22, o que aconteceu com Jesus enquanto orava em agonia no Getsêmani?",
+      "options": [
+        {
+          "text": "Um anjo do céu o confortava, e o seu suor tornou-se como grandes gotas de sangue que corriam até o chão",
+          "correct": true
+        },
+        {
+          "text": "O seu rosto resplandeceu como o sol",
+          "correct": false
+        },
+        {
+          "text": "Caiu uma voz do céu dizendo \"Este é o meu Filho amado\"",
+          "correct": false
+        },
+        {
+          "text": "Moisés e Elias apareceram para falar com ele",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E apareceu-lhe um anjo do céu, que o confortava. E, posto em agonia, orava mais intensamente. E o seu suor tornou-se em grandes gotas de sangue, que corriam até ao chão\" (Lc 22:43-44). Só Lucas, o médico, registra esses detalhes. Enquanto isso, os discípulos dormiam \"de tristeza\" (v. 45). A oração foi: \"Pai, se queres, passa de mim este cálice; todavia, não se faça a minha vontade, mas a tua\" (v. 42).",
+      "divergence_note": "Lucas 22:43-44 falta em alguns manuscritos antigos importantes, mas consta na ARC e na maioria das traduções.",
+      "reference": {
+        "book": "lucas",
+        "chapter": 22,
+        "verse_start": 39,
+        "verse_end": 46
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0073",
+      "text": "Que recado a mulher de Pilatos lhe enviou enquanto ele estava no tribunal julgando Jesus?",
+      "options": [
+        {
+          "text": "\"Não entres na questão desse justo, porque num sonho muito sofri por causa dele\"",
+          "correct": true
+        },
+        {
+          "text": "\"Solta Barrabás, porque o povo o quer\"",
+          "correct": false
+        },
+        {
+          "text": "\"Lava as mãos diante da multidão\"",
+          "correct": false
+        },
+        {
+          "text": "\"Manda-o a Herodes, que está em Jerusalém\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E, estando ele assentado no tribunal, sua mulher mandou-lhe dizer: Não entres na questão desse justo, porque num sonho muito sofri por causa dele\" (Mt 27:19). O episódio, exclusivo de Mateus, soma-se aos testemunhos involuntários da inocência de Jesus: Pilatos, Herodes, o ladrão arrependido e o centurião. A tradição posterior deu à mulher de Pilatos o nome de Cláudia Prócula.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 27,
+        "verse_start": 15,
+        "verse_end": 26
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "eventos-biblicos-0074",
+      "text": "Que nome recebeu o lugar onde o fogo do SENHOR queimou a extremidade do arraial de Israel, porque o povo se queixou aos ouvidos do SENHOR?",
+      "options": [
+        {
+          "text": "Taberá (\"incêndio\")",
+          "correct": true
+        },
+        {
+          "text": "Massá (\"prova\")",
+          "correct": false
+        },
+        {
+          "text": "Quibrote-Hataavá (\"sepulcros da cobiça\")",
+          "correct": false
+        },
+        {
+          "text": "Hazerote",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E aconteceu que, queixando-se o povo, era mau aos ouvidos do SENHOR... e o fogo do SENHOR ardeu entre eles e consumiu os que estavam na última parte do arraial. Então, o povo clamou a Moisés, e Moisés orou ao SENHOR, e o fogo se apagou. Pelo que chamou aquele lugar Taberá\" (Nm 11:1-3). Logo em seguida veio a murmuração pelas codornizes, que terminou em Quibrote-Hataavá, os \"sepulcros da cobiça\" (vv. 33-34).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 11,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "expert"
     }
   ]
 }

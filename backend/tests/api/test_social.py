@@ -328,6 +328,26 @@ class TestDuelResolution:
         else:
             client.post(f"/api/v1/quizzes/{session_id}/complete")
 
+    def test_round_time_counts_from_the_first_question_not_the_challenge(
+        self, auth_client: TestClient, client: TestClient, db: Session
+    ):
+        """The challenger's round exists since the challenge; playing it hours
+        later must not show hours on the scoreboard."""
+        from datetime import UTC, datetime, timedelta
+
+        from app.models import QuizSession
+
+        duel, _ = self._friends_duel(auth_client, client, db)
+        session = db.get(QuizSession, duel["my_session_id"])
+        assert session is not None
+        session.started_at = datetime.now(UTC) - timedelta(hours=3)
+        db.flush()
+
+        self._answer_all(auth_client, None, duel["my_session_id"], db, correct=True)
+        me = auth_client.get(f"/api/v1/duels/{duel['id']}").json()["me"]
+        assert me["finished"] is True
+        assert me["time_seconds"] < 60
+
     def test_winner_gets_xp_and_record(
         self, auth_client: TestClient, client: TestClient, db: Session
     ):

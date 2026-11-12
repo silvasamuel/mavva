@@ -1430,6 +1430,874 @@
         "verse_end": 17
       },
       "difficulty": "easy"
+    },
+    {
+      "external_id": "geografia-biblica-0047",
+      "text": "Que mar a Bíblia chama de \"mar Grande\", limite ocidental da terra prometida?",
+      "options": [
+        {
+          "text": "O mar Mediterrâneo",
+          "correct": true
+        },
+        {
+          "text": "O mar Morto",
+          "correct": false
+        },
+        {
+          "text": "O mar Vermelho",
+          "correct": false
+        },
+        {
+          "text": "O mar da Galileia",
+          "correct": false
+        }
+      ],
+      "explanation": "\"O termo do ocidente vos será o mar Grande\" (Nm 34:6; cf. Js 1:4). Era por ele que chegavam os cedros do Líbano em jangadas (1Rs 5:9) e por ele Paulo navegou até Roma. O nome Mediterrâneo, \"no meio das terras\", é posterior.",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 34,
+        "verse_start": 6,
+        "verse_end": 7
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "geografia-biblica-0048",
+      "text": "Em que cidade da Cilícia o apóstolo Paulo nasceu?",
+      "options": [
+        {
+          "text": "Tarso",
+          "correct": true
+        },
+        {
+          "text": "Antioquia",
+          "correct": false
+        },
+        {
+          "text": "Damasco",
+          "correct": false
+        },
+        {
+          "text": "Éfeso",
+          "correct": false
+        }
+      ],
+      "explanation": "Paulo se apresenta como \"homem judeu, nascido em Tarso da Cilícia, e nesta cidade [Jerusalém] criado aos pés de Gamaliel\" (At 22:3). Tarso era um centro cultural e comercial, \"cidade não pouco célebre\" (At 21:39).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 22,
+        "verse_start": 3,
+        "verse_end": 3
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "geografia-biblica-0049",
+      "text": "Que monte de Jerusalém, onde ficava a cidade de Davi, tornou-se sinônimo da própria cidade e do povo de Deus nos Salmos e nos profetas?",
+      "options": [
+        {
+          "text": "Sião",
+          "correct": true
+        },
+        {
+          "text": "Carmelo",
+          "correct": false
+        },
+        {
+          "text": "Tabor",
+          "correct": false
+        },
+        {
+          "text": "Hermom",
+          "correct": false
+        }
+      ],
+      "explanation": "Davi tomou \"a fortaleza de Sião; esta é a Cidade de Davi\" (2Sm 5:7). Depois o nome se estendeu ao monte do templo e a toda Jerusalém: \"Grande é o SENHOR... no monte da sua santidade... o monte Sião\" (Sl 48:1-2). Hebreus 12:22 fala do \"monte Sião, cidade do Deus vivo\" como a Jerusalém celestial.",
+      "divergence_note": null,
+      "reference": {
+        "book": "2samuel",
+        "chapter": 5,
+        "verse_start": 6,
+        "verse_end": 9
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "geografia-biblica-0050",
+      "text": "Em que cidade da Galileia Jesus realizou o seu primeiro sinal, numa festa de casamento?",
+      "options": [
+        {
+          "text": "Caná",
+          "correct": true
+        },
+        {
+          "text": "Cafarnaum",
+          "correct": false
+        },
+        {
+          "text": "Nazaré",
+          "correct": false
+        },
+        {
+          "text": "Betsaida",
+          "correct": false
+        }
+      ],
+      "explanation": "João 2:1-11 situa as bodas \"em Caná da Galileia\", terra natal de Natanael (Jo 21:2). Ali Jesus também curaria à distância o filho de um oficial do rei, o seu segundo sinal em Caná (Jo 4:46-54).",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 2,
+        "verse_start": 1,
+        "verse_end": 11
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "geografia-biblica-0051",
+      "text": "Em que cidade de Samaria ficava o poço de Jacó, onde Jesus conversou com a mulher samaritana?",
+      "options": [
+        {
+          "text": "Sicar",
+          "correct": true
+        },
+        {
+          "text": "Siquém",
+          "correct": false
+        },
+        {
+          "text": "Samaria",
+          "correct": false
+        },
+        {
+          "text": "Betel",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Foi, pois, a uma cidade de Samaria, chamada Sicar, junto da herdade que Jacó tinha dado a seu filho José. E estava ali a fonte de Jacó\" (Jo 4:5-6). A herdade é o campo comprado por Jacó junto a Siquém (Gn 33:19), onde os ossos de José foram sepultados (Js 24:32); Sicar ficava perto da antiga Siquém.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 4,
+        "verse_start": 5,
+        "verse_end": 6
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "geografia-biblica-0052",
+      "text": "De que cidade filisteia Sansão arrancou as portas, com umbrais e ferrolhos, carregando-as até o alto de um monte?",
+      "options": [
+        {
+          "text": "Gaza",
+          "correct": true
+        },
+        {
+          "text": "Asdode",
+          "correct": false
+        },
+        {
+          "text": "Gate",
+          "correct": false
+        },
+        {
+          "text": "Ecrom",
+          "correct": false
+        }
+      ],
+      "explanation": "Cercado em Gaza, Sansão levantou-se à meia-noite, \"pegou nas portas da entrada da cidade com ambas as umbreiras e, juntamente com a tranca, as tomou, pondo-as sobre os ombros\" e as levou \"até ao cume do monte que está defronte de Hebrom\" (Jz 16:1-3). Foi também em Gaza que ele morreu derrubando o templo de Dagom.",
+      "divergence_note": null,
+      "reference": {
+        "book": "juizes",
+        "chapter": 16,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "geografia-biblica-0053",
+      "text": "Como se chamava a região de dez cidades helenísticas, a leste do Jordão, onde o ex-endemoninhado de Gadara passou a anunciar o que Jesus fizera?",
+      "options": [
+        {
+          "text": "Decápolis",
+          "correct": true
+        },
+        {
+          "text": "Pereia",
+          "correct": false
+        },
+        {
+          "text": "Traconites",
+          "correct": false
+        },
+        {
+          "text": "Fenícia",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E ele foi e começou a anunciar em Decápolis quão grandes coisas Jesus lhe fizera; e todos se maravilhavam\" (Mc 5:20). A Decápolis era uma liga de cidades de cultura grega, como Gadara, Gerasa e Citópolis; multidões de lá seguiam Jesus (Mt 4:25), e ali ele curou um surdo-mudo (Mc 7:31-37).",
+      "divergence_note": null,
+      "reference": {
+        "book": "marcos",
+        "chapter": 5,
+        "verse_start": 18,
+        "verse_end": 20
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "geografia-biblica-0054",
+      "text": "Para que ilha Barnabé e Saulo navegaram primeiro na primeira viagem missionária, terra natal de Barnabé?",
+      "options": [
+        {
+          "text": "Chipre",
+          "correct": true
+        },
+        {
+          "text": "Creta",
+          "correct": false
+        },
+        {
+          "text": "Malta",
+          "correct": false
+        },
+        {
+          "text": "Patmos",
+          "correct": false
+        }
+      ],
+      "explanation": "Enviados pelo Espírito desde Antioquia, desceram a Selêucia e navegaram para Chipre, pregando de Salamina a Pafos (At 13:4-6). Barnabé era \"levita, natural de Chipre\" (At 4:36), e para lá voltou com Marcos mais tarde (At 15:39).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 13,
+        "verse_start": 4,
+        "verse_end": 6
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "geografia-biblica-0055",
+      "text": "Qual cidade de Canaã derrotou Israel na primeira investida, por causa do pecado de Acã, e depois caiu numa emboscada armada por Josué?",
+      "options": [
+        {
+          "text": "Ai",
+          "correct": true
+        },
+        {
+          "text": "Gibeom",
+          "correct": false
+        },
+        {
+          "text": "Hazor",
+          "correct": false
+        },
+        {
+          "text": "Laquis",
+          "correct": false
+        }
+      ],
+      "explanation": "Confiantes após Jericó, os israelitas enviaram poucos homens a Ai e fugiram diante dos seus moradores. Removido o pecado, Josué escondeu uma emboscada atrás da cidade, atraiu os defensores para fora e a queimou (Js 7:2-5; 8:1-28).",
+      "divergence_note": null,
+      "reference": {
+        "book": "josue",
+        "chapter": 8,
+        "verse_start": 1,
+        "verse_end": 28
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "geografia-biblica-0056",
+      "text": "Como Jacó chamou o lugar onde lutou com um homem até romper o dia e recebeu o nome de Israel?",
+      "options": [
+        {
+          "text": "Peniel",
+          "correct": true
+        },
+        {
+          "text": "Betel",
+          "correct": false
+        },
+        {
+          "text": "Maanaim",
+          "correct": false
+        },
+        {
+          "text": "Sucote",
+          "correct": false
+        }
+      ],
+      "explanation": "Jacó explicou o nome: \"tenho visto a Deus face a face, e a minha alma foi salva\" — Peniel significa \"face de Deus\" (Gn 32:30). Ele saiu dali coxeando, pouco antes de reencontrar Esaú.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 32,
+        "verse_start": 24,
+        "verse_end": 31
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "geografia-biblica-0057",
+      "text": "Em que cidade do Neguebe Isaque fez aliança com Abimeleque e os seus servos acharam água, dando ao lugar o nome que significa \"poço do juramento\"?",
+      "options": [
+        {
+          "text": "Berseba",
+          "correct": true
+        },
+        {
+          "text": "Gerar",
+          "correct": false
+        },
+        {
+          "text": "Hebrom",
+          "correct": false
+        },
+        {
+          "text": "Cades",
+          "correct": false
+        }
+      ],
+      "explanation": "Depois das disputas por poços em Gerar, Isaque subiu a Berseba, onde o SENHOR lhe apareceu; ali jurou paz com Abimeleque, e no mesmo dia os servos anunciaram \"Temos achado água\" (Gn 26:23-33). Abraão já havia jurado com outro Abimeleque no mesmo lugar (Gn 21:31). \"De Dã até Berseba\" tornou-se a expressão para todo o Israel.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 26,
+        "verse_start": 23,
+        "verse_end": 33
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "geografia-biblica-0058",
+      "text": "Segundo Deuteronômio 27, sobre quais dois montes Israel devia pronunciar a bênção e a maldição ao entrar na terra?",
+      "options": [
+        {
+          "text": "Gerizim (bênção) e Ebal (maldição)",
+          "correct": true
+        },
+        {
+          "text": "Sinai e Horebe",
+          "correct": false
+        },
+        {
+          "text": "Carmelo e Tabor",
+          "correct": false
+        },
+        {
+          "text": "Nebo e Pisga",
+          "correct": false
+        }
+      ],
+      "explanation": "Seis tribos ficariam sobre o Gerizim para abençoar e seis sobre o Ebal para amaldiçoar (Dt 27:11-13). Josué cumpriu a ordem após Ai, erguendo um altar no Ebal (Js 8:30-35). Os dois montes ladeiam Siquém, e os samaritanos viriam a adorar no Gerizim (Jo 4:20).",
+      "divergence_note": null,
+      "reference": {
+        "book": "deuteronomio",
+        "chapter": 27,
+        "verse_start": 11,
+        "verse_end": 13
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "geografia-biblica-0059",
+      "text": "Que vale ao sul de Jerusalém, onde se queimavam filhos a Moloque, deu origem à palavra \"Geena\", usada por Jesus para falar do inferno?",
+      "options": [
+        {
+          "text": "Vale de Hinom",
+          "correct": true
+        },
+        {
+          "text": "Vale de Cedrom",
+          "correct": false
+        },
+        {
+          "text": "Vale de Josafá",
+          "correct": false
+        },
+        {
+          "text": "Vale de Elá",
+          "correct": false
+        }
+      ],
+      "explanation": "No vale do filho de Hinom ficava Tofete, onde Acaz e Manassés sacrificaram filhos (2Cr 28:3; 33:6). Josias o profanou (2Rs 23:10), e Jeremias anunciou que seria chamado \"vale da matança\" (Jr 7:31-32). \"Geena\" é a forma grega de \"Ge-Hinom\".",
+      "divergence_note": null,
+      "reference": {
+        "book": "jeremias",
+        "chapter": 7,
+        "verse_start": 30,
+        "verse_end": 32
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "geografia-biblica-0060",
+      "text": "Em que monte Arão morreu, depois que Moisés lhe tirou as vestes sacerdotais e as vestiu em seu filho Eleazar?",
+      "options": [
+        {
+          "text": "Monte Hor",
+          "correct": true
+        },
+        {
+          "text": "Monte Nebo",
+          "correct": false
+        },
+        {
+          "text": "Monte Seir",
+          "correct": false
+        },
+        {
+          "text": "Monte Horebe",
+          "correct": false
+        }
+      ],
+      "explanation": "Por ordem do SENHOR, Moisés, Arão e Eleazar subiram o monte Hor, na fronteira de Edom. Ali Arão morreu, e toda a casa de Israel o chorou trinta dias (Nm 20:22-29). Moisés morreria depois no Nebo (Dt 34).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 20,
+        "verse_start": 22,
+        "verse_end": 29
+      },
+      "difficulty": "expert"
+    },
+    {
+      "external_id": "geografia-biblica-0061",
+      "text": "Que monte, o mais alto da região e limite norte da terra conquistada, é lembrado no Salmo 133 pelo seu orvalho \"que desce sobre os montes de Sião\"?",
+      "options": [
+        {
+          "text": "Hermom",
+          "correct": true
+        },
+        {
+          "text": "Tabor",
+          "correct": false
+        },
+        {
+          "text": "Carmelo",
+          "correct": false
+        },
+        {
+          "text": "Gilboa",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Como o orvalho de Hermom, que desce sobre os montes de Sião\" (Sl 133:3). Com quase 2.800 metros e neve no cume, o Hermom alimenta as nascentes do Jordão e marcava o limite norte da terra tomada aos amorreus (Dt 3:8-9; Js 11:17); os sidônios o chamavam Siriom, e os amorreus, Senir.",
+      "divergence_note": null,
+      "reference": {
+        "book": "salmos",
+        "chapter": 133,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "geografia-biblica-0062",
+      "text": "De que lugar, no deserto de Parã, Moisés enviou os doze espias a Canaã e recebeu o relatório que levou Israel a recusar entrar na terra?",
+      "options": [
+        {
+          "text": "Cades-Barneia",
+          "correct": true
+        },
+        {
+          "text": "Refidim",
+          "correct": false
+        },
+        {
+          "text": "Elim",
+          "correct": false
+        },
+        {
+          "text": "Eziom-Geber",
+          "correct": false
+        }
+      ],
+      "explanation": "Os espias \"vieram a Moisés e a Arão e a toda a congregação dos filhos de Israel no deserto de Parã, a Cades\" (Nm 13:26). Moisés relembra: \"Quando vos enviei de Cades-Barneia\" (Nm 32:8; Dt 1:19-25). Por causa da incredulidade ali, aquela geração vagou quarenta anos; décadas depois, Israel voltaria a Cades, onde Miriã morreu (Nm 20:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 13,
+        "verse_start": 25,
+        "verse_end": 33
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "geografia-biblica-0063",
+      "text": "De que região era o homem que apareceu a Paulo em visão, em Trôade, rogando: \"Passa e ajuda-nos\"?",
+      "options": [
+        {
+          "text": "Macedônia",
+          "correct": true
+        },
+        {
+          "text": "Acaia",
+          "correct": false
+        },
+        {
+          "text": "Bitínia",
+          "correct": false
+        },
+        {
+          "text": "Galácia",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Paulo teve, de noite, uma visão em que se apresentou um varão da Macedônia e lhe rogou, dizendo: Passa à Macedônia e ajuda-nos\" (At 16:9). Impedidos pelo Espírito de pregar na Ásia e na Bitínia, Paulo e companheiros atravessaram para a Europa, e Filipos foi a primeira cidade alcançada (At 16:11-12).",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 16,
+        "verse_start": 6,
+        "verse_end": 12
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "geografia-biblica-0064",
+      "text": "De que cidade, na margem ocidental do mar da Galileia, vinha Maria, chamada por isso \"Madalena\"?",
+      "options": [
+        {
+          "text": "Magdala",
+          "correct": true
+        },
+        {
+          "text": "Cafarnaum",
+          "correct": false
+        },
+        {
+          "text": "Betsaida",
+          "correct": false
+        },
+        {
+          "text": "Tiberíades",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Madalena\" significa \"de Magdala\", cidade de pescadores na margem ocidental do lago, ao sul de Genesaré; Mateus registra que Jesus foi \"aos termos de Magdala\" após alimentar os quatro mil (Mt 15:39). O sobrenome distinguia esta Maria das outras do grupo que seguia Jesus (Lc 8:2-3).",
+      "divergence_note": null,
+      "reference": {
+        "book": "lucas",
+        "chapter": 8,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "easy"
+    },
+    {
+      "external_id": "geografia-biblica-0065",
+      "text": "Que duas cidades da Galileia Jesus repreendeu com \"Ai de ti!\", dizendo que Tiro e Sidom teriam se arrependido se vissem os mesmos prodígios?",
+      "options": [
+        {
+          "text": "Corazim e Betsaida",
+          "correct": true
+        },
+        {
+          "text": "Nazaré e Caná",
+          "correct": false
+        },
+        {
+          "text": "Cafarnaum e Magdala",
+          "correct": false
+        },
+        {
+          "text": "Tiberíades e Genesaré",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Ai de ti, Corazim! Ai de ti, Betsaida! Porque, se em Tiro e em Sidom fossem feitos os prodígios que em vós se fizeram, há muito que se teriam arrependido, com saco e com cinza\" (Mt 11:21). Em seguida Jesus acrescenta Cafarnaum, \"elevada até ao céu\", que seria abatida até ao inferno (v. 23). Corazim ficava a poucos quilômetros ao norte de Cafarnaum.",
+      "divergence_note": null,
+      "reference": {
+        "book": "mateus",
+        "chapter": 11,
+        "verse_start": 20,
+        "verse_end": 24
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "geografia-biblica-0066",
+      "text": "Onde João Batista batizava \"porque havia ali muitas águas\", segundo João 3:23?",
+      "options": [
+        {
+          "text": "Em Enom, junto a Salim",
+          "correct": true
+        },
+        {
+          "text": "Em Betânia, além do Jordão",
+          "correct": false
+        },
+        {
+          "text": "Em Jericó",
+          "correct": false
+        },
+        {
+          "text": "No tanque de Siloé",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Ora, João batizava também em Enom, junto a Salim, porque havia ali muitas águas; e vinham ali e eram batizados\" (Jo 3:23). O detalhe aparece no contexto da discussão sobre purificação e da declaração de João: \"É necessário que ele cresça e que eu diminua\" (Jo 3:30). A localização exata de Enom é incerta, provavelmente no vale do Jordão, ao sul de Bete-Seã.",
+      "divergence_note": null,
+      "reference": {
+        "book": "joao",
+        "chapter": 3,
+        "verse_start": 22,
+        "verse_end": 30
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "geografia-biblica-0067",
+      "text": "Que cidade Aquis, rei de Gate, deu a Davi para morar entre os filisteus, e que foi depois saqueada e queimada pelos amalequitas?",
+      "options": [
+        {
+          "text": "Ziclague",
+          "correct": true
+        },
+        {
+          "text": "Ecrom",
+          "correct": false
+        },
+        {
+          "text": "Asdode",
+          "correct": false
+        },
+        {
+          "text": "Gezer",
+          "correct": false
+        }
+      ],
+      "explanation": "Fugindo de Saul, Davi pediu a Aquis uma cidade no campo, e \"Aquis lhe deu Ziclague; pelo que Ziclague pertence aos reis de Judá até ao dia de hoje\" (1Sm 27:6). Enquanto Davi estava fora, os amalequitas queimaram Ziclague e levaram as mulheres e filhos; Davi os perseguiu e recuperou tudo (1Sm 30). Foi em Ziclague que ele soube da morte de Saul (2Sm 1:1).",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 27,
+        "verse_start": 5,
+        "verse_end": 7
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "geografia-biblica-0068",
+      "text": "De que cidade sacerdotal, na terra de Benjamim, era o profeta Jeremias, cujos próprios conterrâneos conspiraram para matá-lo?",
+      "options": [
+        {
+          "text": "Anatote",
+          "correct": true
+        },
+        {
+          "text": "Tecoa",
+          "correct": false
+        },
+        {
+          "text": "Gibeá",
+          "correct": false
+        },
+        {
+          "text": "Ramá",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Palavras de Jeremias, filho de Hilquias, dos sacerdotes que estavam em Anatote, na terra de Benjamim\" (Jr 1:1). Os próprios conterrâneos conspiraram contra ele (Jr 11:21). Durante o cerco de Jerusalém, Jeremias comprou de seu primo Hanameel um campo em Anatote, como sinal de que \"ainda se comprarão casas, e campos, e vinhas nesta terra\" (Jr 32:6-15).",
+      "divergence_note": null,
+      "reference": {
+        "book": "jeremias",
+        "chapter": 1,
+        "verse_start": 1,
+        "verse_end": 3
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "geografia-biblica-0069",
+      "text": "Para que cidade Rebeca mandou Jacó fugir da ira de Esaú, para a casa de seu irmão Labão?",
+      "options": [
+        {
+          "text": "Harã, em Padã-Arã",
+          "correct": true
+        },
+        {
+          "text": "Ur dos caldeus",
+          "correct": false
+        },
+        {
+          "text": "Damasco",
+          "correct": false
+        },
+        {
+          "text": "Hebrom",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Levanta-te, foge para Harã, para a casa de Labão, meu irmão\" (Gn 27:43). \"Partiu Jacó de Berseba e foi-se a Harã\" (Gn 28:10), e no caminho teve o sonho de Betel. Em Harã, junto ao poço, encontrou Raquel e serviu a Labão vinte anos (Gn 29–31). Era a mesma cidade onde Abraão habitara antes de partir para Canaã (Gn 11:31).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 27,
+        "verse_start": 41,
+        "verse_end": 45
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "geografia-biblica-0070",
+      "text": "Que expressão a Bíblia usa para designar toda a extensão de Israel, do extremo norte ao extremo sul?",
+      "options": [
+        {
+          "text": "\"Desde Dã até Berseba\"",
+          "correct": true
+        },
+        {
+          "text": "\"Desde Hebrom até Jericó\"",
+          "correct": false
+        },
+        {
+          "text": "\"Do Líbano ao Neguebe\"",
+          "correct": false
+        },
+        {
+          "text": "\"De Gilgal a Gaza\"",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Todo o Israel, desde Dã até Berseba, conheceu que Samuel estava confirmado por profeta do SENHOR\" (1Sm 3:20; cf. Jz 20:1; 2Sm 24:2). Dã, junto às nascentes do Jordão, era a cidade mais setentrional; Berseba, no Neguebe, a mais meridional — cerca de 240 km entre uma e outra.",
+      "divergence_note": null,
+      "reference": {
+        "book": "1samuel",
+        "chapter": 3,
+        "verse_start": 19,
+        "verse_end": 21
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "geografia-biblica-0071",
+      "text": "Que região montanhosa, ao sul do mar Morto, Esaú e seus descendentes, os edomitas, habitaram?",
+      "options": [
+        {
+          "text": "Seir",
+          "correct": true
+        },
+        {
+          "text": "Basã",
+          "correct": false
+        },
+        {
+          "text": "Gileade",
+          "correct": false
+        },
+        {
+          "text": "Sarom",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Esaú habitou na montanha de Seir; Esaú é Edom\" (Gn 36:8). Quando Israel subia do deserto, Deus ordenou: \"Não vos entremetais com eles, porque vos não darei da sua terra nem ainda a pisada da planta de um pé; porquanto a Esaú tenho dado a montanha de Seir por herança\" (Dt 2:4-5).",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 36,
+        "verse_start": 6,
+        "verse_end": 9
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "geografia-biblica-0072",
+      "text": "Qual rei amorreu de Hesbom recusou passagem a Israel, foi derrotado e teve sua terra, entre o Arnom e o Jaboque, dada às tribos de Rúben e Gade?",
+      "options": [
+        {
+          "text": "Seom",
+          "correct": true
+        },
+        {
+          "text": "Ogue",
+          "correct": false
+        },
+        {
+          "text": "Balaque",
+          "correct": false
+        },
+        {
+          "text": "Eglom",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Israel mandou mensageiros a Seom, rei dos amorreus... Porém Seom não deixou passar a Israel pelo seu termo\"; Israel o venceu em Jaza \"e tomou a sua terra em possessão, desde Arnom até Jaboque\" (Nm 21:21-26). Hesbom era a sua capital. Essa terra, com a de Ogue, de Basã, foi dada a Rúben, Gade e meia tribo de Manassés (Nm 32:33).",
+      "divergence_note": null,
+      "reference": {
+        "book": "numeros",
+        "chapter": 21,
+        "verse_start": 21,
+        "verse_end": 31
+      },
+      "difficulty": "hard"
+    },
+    {
+      "external_id": "geografia-biblica-0073",
+      "text": "Qual era o nome anterior da cidade que Jacó chamou de Betel, depois do sonho da escada?",
+      "options": [
+        {
+          "text": "Luz",
+          "correct": true
+        },
+        {
+          "text": "Siquém",
+          "correct": false
+        },
+        {
+          "text": "Salém",
+          "correct": false
+        },
+        {
+          "text": "Efrata",
+          "correct": false
+        }
+      ],
+      "explanation": "\"E chamou o nome daquele lugar Betel; o nome, porém, daquela cidade dantes era Luz\" (Gn 28:19). Betel significa \"casa de Deus\". O nome antigo ainda aparece na divisão da terra (Js 16:2; 18:13), e Juízes 1:23-26 conta que um morador poupado de Luz fundou outra cidade com o mesmo nome na terra dos heteus.",
+      "divergence_note": null,
+      "reference": {
+        "book": "genesis",
+        "chapter": 28,
+        "verse_start": 18,
+        "verse_end": 22
+      },
+      "difficulty": "medium"
+    },
+    {
+      "external_id": "geografia-biblica-0074",
+      "text": "Em que porto da ilha de Creta o navio que levava Paulo a Roma se abrigou, antes de a maioria decidir, contra o conselho do apóstolo, seguir viagem rumo à tempestade?",
+      "options": [
+        {
+          "text": "Bons Portos, perto de Laseia",
+          "correct": true
+        },
+        {
+          "text": "Fenice",
+          "correct": false
+        },
+        {
+          "text": "Cnido",
+          "correct": false
+        },
+        {
+          "text": "Pafos",
+          "correct": false
+        }
+      ],
+      "explanation": "\"Chegamos a um lugar chamado Bons Portos, perto do qual estava a cidade de Laseia\" (At 27:8). Como o jejum do Dia da Expiação já passara e a navegação era perigosa, Paulo advertiu sobre perda e dano, mas o centurião deu mais crédito ao piloto, e a maioria quis chegar a Fenice para invernar (At 27:9-12). Logo veio o euro-aquilão, o vendaval que os arrastaria por duas semanas até Malta.",
+      "divergence_note": null,
+      "reference": {
+        "book": "atos",
+        "chapter": 27,
+        "verse_start": 7,
+        "verse_end": 12
+      },
+      "difficulty": "expert"
     }
   ]
 }
