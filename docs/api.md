@@ -305,6 +305,11 @@ Assim quem acabou de chegar não recebe o histórico inteiro como novidade.
 
 O dashboard traz `notifications_unread` para o badge do sino.
 
+Enquanto houver avisos não lidos, a tela inicial abre uma vez um modal com eles (até 3; o
+resto fica na tela de Novidades). Ele espera o tutorial, a comemoração de pódio e o aviso de
+temporada, e fechar chama `POST /notifications/seen` — por isso não volta para a mesma
+novidade, em nenhum dispositivo. Quem acabou de se cadastrar não recebe o histórico.
+
 ## Apoie o Mavva (ofertas via Pix)
 
 Doações por Pix pelo Mercado Pago (API de Orders, via o SDK oficial `mercadopago`).
