@@ -89,7 +89,7 @@ function buildSteps(firstName: string | undefined, replay: boolean): Step[] {
     {
       eyebrow: 'Sabedoria',
       title: 'Quanto mais difícil, mais sábio',
-      body: 'Ao lado do elo fica o seu nível de sabedoria, de 1 a 10. Ele sobe a cada pergunta que você acerta pela primeira vez: média vale 1 ponto, difícil 3 e especialista 5. E não zera na virada da temporada.',
+      body: 'Ao lado do elo fica o seu nível de sabedoria, de 1 a 10. Ele sobe quando você acerta perguntas médias, difíceis e especialistas, e cai quando você erra. Vale sempre a sua última resposta a cada pergunta, e ele não zera na virada da temporada.',
       art: (
         // The climb in four snapshots, growing like the levels do.
         <span className="flex items-end gap-2">

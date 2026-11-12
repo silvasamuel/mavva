@@ -56,9 +56,45 @@ class TestWisdom:
         make_mc_question(db, make_category(db), difficulty=Difficulty.HARD)
         _play(auth_client, db, correct=True)
         assert _stats(db, auth_client).wisdom_points == 3
-        # The same question again teaches nothing new.
+        # Still knowing it teaches nothing new.
         _play(auth_client, db, correct=True)
         assert _stats(db, auth_client).wisdom_points == 3
+
+    def test_missing_what_was_known_makes_it_fall_and_relearning_restores(
+        self, auth_client: TestClient, db: Session
+    ) -> None:
+        make_mc_question(db, make_category(db), difficulty=Difficulty.HARD)
+        _play(auth_client, db, correct=True)
+        assert _stats(db, auth_client).wisdom_points == 3
+        # Forgot it: the 3 it was worth go, and the miss takes 2 more.
+        _play(auth_client, db, correct=False)
+        assert _stats(db, auth_client).wisdom_points == -2
+        # Missing it again changes nothing: it already counts as a miss.
+        _play(auth_client, db, correct=False)
+        assert _stats(db, auth_client).wisdom_points == -2
+        _play(auth_client, db, correct=True)
+        assert _stats(db, auth_client).wisdom_points == 3
+
+    def test_missing_an_easy_question_costs_too(self, auth_client: TestClient, db: Session) -> None:
+        make_mc_question(db, make_category(db), difficulty=Difficulty.EASY)
+        _play(auth_client, db, correct=False)
+        assert _stats(db, auth_client).wisdom_points == -1
+        wisdom = auth_client.get("/api/v1/dashboard").json()["stats"]["wisdom"]
+        assert wisdom["level"] == 1
+        assert wisdom["points"] == -1
+        # Getting it right clears the miss; easy questions add nothing on top.
+        _play(auth_client, db, correct=True)
+        assert _stats(db, auth_client).wisdom_points == 0
+
+    def test_a_timeout_counts_as_a_miss(self, auth_client: TestClient, db: Session) -> None:
+        make_mc_question(db, make_category(db), difficulty=Difficulty.EXPERT)
+        quiz = auth_client.post("/api/v1/quizzes", json={"question_count": 1}).json()
+        answered = auth_client.post(
+            f"/api/v1/quizzes/{quiz['id']}/answers",
+            json={"question_id": quiz["questions"][0]["id"], "timed_out": True},
+        )
+        assert answered.status_code == 200, answered.text
+        assert _stats(db, auth_client).wisdom_points == -3
 
     def test_points_follow_the_difficulty(self, auth_client: TestClient, db: Session) -> None:
         category = make_category(db)
@@ -67,12 +103,12 @@ class TestWisdom:
         _play(auth_client, db, correct=True, count=4)
         assert _stats(db, auth_client).wisdom_points == 0 + 1 + 3 + 5
 
-    def test_a_miss_pays_nothing_but_a_later_hit_does(
+    def test_a_first_miss_costs_and_a_later_hit_wins_it_back(
         self, auth_client: TestClient, db: Session
     ) -> None:
         make_mc_question(db, make_category(db), difficulty=Difficulty.EXPERT)
         _play(auth_client, db, correct=False)
-        assert _stats(db, auth_client).wisdom_points == 0
+        assert _stats(db, auth_client).wisdom_points == -3
         _play(auth_client, db, correct=True)
         assert _stats(db, auth_client).wisdom_points == 5
 

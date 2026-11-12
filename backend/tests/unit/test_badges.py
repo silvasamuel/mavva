@@ -4,13 +4,16 @@ import pytest
 
 from app.models.enums import Difficulty
 from app.services.badges import (
+    WISDOM_GAIN,
+    WISDOM_LOSS,
     WISDOM_MAX_LEVEL,
-    WISDOM_POINTS,
     WISDOM_THRESHOLDS,
     contributor_payload,
     contributor_tier,
+    wisdom_delta,
     wisdom_level,
     wisdom_payload,
+    wisdom_value,
 )
 
 
@@ -40,12 +43,50 @@ def test_wisdom_goes_from_one_to_ten() -> None:
 
 
 def test_harder_questions_teach_more() -> None:
-    assert WISDOM_POINTS[Difficulty.EASY] == 0
+    assert WISDOM_GAIN[Difficulty.EASY] == 0
     assert (
-        WISDOM_POINTS[Difficulty.MEDIUM]
-        < WISDOM_POINTS[Difficulty.HARD]
-        < WISDOM_POINTS[Difficulty.EXPERT]
+        WISDOM_GAIN[Difficulty.MEDIUM]
+        < WISDOM_GAIN[Difficulty.HARD]
+        < WISDOM_GAIN[Difficulty.EXPERT]
     )
+
+
+def test_every_miss_costs_something_but_less_than_the_hit_pays() -> None:
+    for difficulty in Difficulty:
+        assert WISDOM_LOSS[difficulty] >= 1
+    for difficulty in (Difficulty.HARD, Difficulty.EXPERT):
+        assert WISDOM_LOSS[difficulty] < WISDOM_GAIN[difficulty]
+
+
+def test_a_question_is_worth_its_latest_answer() -> None:
+    assert wisdom_value(Difficulty.HARD, None) == 0
+    assert wisdom_value(Difficulty.HARD, True) == 3
+    assert wisdom_value(Difficulty.HARD, False) == -2
+    assert wisdom_value(Difficulty.EASY, True) == 0
+    assert wisdom_value(Difficulty.EASY, False) == -1
+
+
+@pytest.mark.parametrize(
+    ("previous", "now", "delta"),
+    [
+        (None, True, 5),  # first time, right
+        (None, False, -3),  # first time, wrong
+        (True, True, 0),  # still knows it
+        (False, False, 0),  # still misses it
+        (True, False, -8),  # forgot it: loses the gain and takes the loss
+        (False, True, 8),  # learned it: wins both back
+    ],
+)
+def test_wisdom_delta_follows_the_change(previous: bool | None, now: bool, delta: int) -> None:
+    assert wisdom_delta(Difficulty.EXPERT, previous, now) == delta
+
+
+def test_a_total_below_zero_is_still_level_one() -> None:
+    assert wisdom_level(-7) == 1
+    payload = wisdom_payload(-7)
+    assert payload["level"] == 1
+    assert payload["points"] == -7
+    assert payload["next_level_at"] == 15
 
 
 def test_wisdom_payload_shows_the_way_to_the_next_level() -> None:

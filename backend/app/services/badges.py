@@ -9,13 +9,23 @@ from typing import Any
 from app.models import User
 from app.models.enums import Difficulty
 
-# Wisdom: points for the first correct answer to each question, by difficulty.
-# Easy questions pay nothing: wisdom is about the hard ones.
-WISDOM_POINTS: dict[Difficulty, int] = {
+# Wisdom is a map of what the player knows *now*: every question counts by the
+# player's latest answer to it. Right adds the gain, wrong takes the loss, and
+# a question never answered counts for nothing. So it moves both ways: missing
+# something once known costs its gain plus the loss, and getting it right
+# again wins all of that back. Easy questions add nothing (wisdom is about the
+# hard ones) but missing one still costs.
+WISDOM_GAIN: dict[Difficulty, int] = {
     Difficulty.EASY: 0,
     Difficulty.MEDIUM: 1,
     Difficulty.HARD: 3,
     Difficulty.EXPERT: 5,
+}
+WISDOM_LOSS: dict[Difficulty, int] = {
+    Difficulty.EASY: 1,
+    Difficulty.MEDIUM: 1,
+    Difficulty.HARD: 2,
+    Difficulty.EXPERT: 3,
 }
 # Points needed to *be* at level 1, 2, … 10. The steps widen so the last
 # levels ask for a large share of the hard and expert bank.
@@ -32,7 +42,20 @@ CONTRIBUTOR_TIERS: tuple[tuple[str, int], ...] = (
 )
 
 
+def wisdom_value(difficulty: Difficulty, is_correct: bool | None) -> int:
+    """What one question is worth given the latest answer to it (None = never)."""
+    if is_correct is None:
+        return 0
+    return WISDOM_GAIN[difficulty] if is_correct else -WISDOM_LOSS[difficulty]
+
+
+def wisdom_delta(difficulty: Difficulty, previous: bool | None, is_correct: bool) -> int:
+    """How much an answer moves the total, given the answer it replaces."""
+    return wisdom_value(difficulty, is_correct) - wisdom_value(difficulty, previous)
+
+
 def wisdom_level(points: int) -> int:
+    """1 to 10. The total can dip below zero after early misses: still level 1."""
     level = 1
     for index, threshold in enumerate(WISDOM_THRESHOLDS, start=1):
         if points >= threshold:
@@ -41,7 +64,11 @@ def wisdom_level(points: int) -> int:
 
 
 def wisdom_payload(points: int) -> dict[str, int | None]:
-    """Level plus where the player stands inside it (own profile only)."""
+    """Level plus where the player stands inside it (own profile only).
+
+    `points` is the real total, negative included, so "how far to the next
+    level" stays honest for someone who has to climb out of early misses.
+    """
     level = wisdom_level(points)
     return {
         "level": level,

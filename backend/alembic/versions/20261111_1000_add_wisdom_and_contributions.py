@@ -4,10 +4,11 @@ Revision ID: b2c3d4e5f6a7
 Revises: f0a1b2c3d4e5
 Create Date: 2026-11-11 10:00:00.000000
 
-Both counters are backfilled from history: wisdom from every distinct question
-a player has ever answered correctly (medium 1, hard 3, expert 5), and
-contributions from resolved reports plus approved question proposals. App
-suggestions only gain an "accepted" state now, so past ones count for nothing.
+Both counters are backfilled from history: wisdom from the player's latest
+answer to each question (right adds 1/3/5 for medium/hard/expert, wrong takes
+1/1/2/3 from easy up), and contributions from resolved reports plus approved
+question proposals. App suggestions only gain an "accepted" state now, so
+past ones count for nothing.
 """
 
 from collections.abc import Sequence
@@ -31,28 +32,40 @@ def upgrade() -> None:
     op.add_column(
         "user_stats", sa.Column("contributions", sa.Integer(), server_default="0", nullable=False)
     )
+    # Each question counts by the player's latest answer to it: right adds
+    # the gain, wrong takes the loss (see services/badges.py).
     op.execute(
         """
         UPDATE user_stats AS us
-        SET wisdom_points = earned.points
+        SET wisdom_points = known.points
         FROM (
-            SELECT hits.user_id,
-                   SUM(CASE q.difficulty::text
-                           WHEN 'medium' THEN 1
-                           WHEN 'hard' THEN 3
-                           WHEN 'expert' THEN 5
-                           ELSE 0
+            SELECT latest.user_id,
+                   SUM(CASE
+                           WHEN latest.is_correct THEN
+                               CASE q.difficulty::text
+                                   WHEN 'medium' THEN 1
+                                   WHEN 'hard' THEN 3
+                                   WHEN 'expert' THEN 5
+                                   ELSE 0
+                               END
+                           ELSE
+                               CASE q.difficulty::text
+                                   WHEN 'hard' THEN -2
+                                   WHEN 'expert' THEN -3
+                                   ELSE -1
+                               END
                        END) AS points
             FROM (
-                SELECT DISTINCT qs.user_id, qa.question_id
+                SELECT DISTINCT ON (qs.user_id, qa.question_id)
+                       qs.user_id, qa.question_id, qa.is_correct
                 FROM quiz_answers AS qa
                 JOIN quiz_sessions AS qs ON qs.id = qa.session_id
-                WHERE qa.is_correct
-            ) AS hits
-            JOIN questions AS q ON q.id = hits.question_id
-            GROUP BY hits.user_id
-        ) AS earned
-        WHERE us.user_id = earned.user_id
+                ORDER BY qs.user_id, qa.question_id, qa.answered_at DESC, qa.id DESC
+            ) AS latest
+            JOIN questions AS q ON q.id = latest.question_id
+            GROUP BY latest.user_id
+        ) AS known
+        WHERE us.user_id = known.user_id
         """
     )
     op.execute(

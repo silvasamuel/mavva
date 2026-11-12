@@ -238,10 +238,14 @@ lado do elo: `wisdom_level` (1 a 10), `contributor_tier` (`bronze`, `silver`, `g
 `diamond` ou `null`) e `is_supporter`. Os dois primeiros são vitalícios — a virada de
 temporada não mexe neles.
 
-- **Sabedoria**: cada pergunta acertada **pela primeira vez** vale pontos pela dificuldade
-  (fácil 0, média 1, difícil 3, especialista 5), em qualquer modo, e na hora da resposta
-  (sessão abandonada não perde). Níveis 1 a 10 começam em 0, 15, 45, 100, 200, 350, 550,
-  850, 1250 e 1800 pontos.
+- **Sabedoria**: é o retrato do que o jogador sabe **agora**. Cada pergunta conta pela
+  **última resposta** dele: certa soma o ganho (fácil 0, média 1, difícil 3, especialista 5),
+  errada tira a perda (fácil 1, média 1, difícil 2, especialista 3; tempo esgotado conta como
+  erro) e nunca respondida vale 0. Por isso sobe e desce: errar uma pergunta que já sabia
+  custa o ganho mais a perda, e acertar de novo recupera tudo; repetir o mesmo resultado não
+  muda nada. Vale em qualquer modo e na hora da resposta (sessão abandonada não perde).
+  Níveis 1 a 10 começam em 0, 15, 45, 100, 200, 350, 550, 850, 1250 e 1800 pontos; o total
+  pode ficar abaixo de zero depois de erros no começo, e continua sendo nível 1.
 - **Contribuidor**: conta report resolvido (inclusive quando a pergunta é desativada),
   pergunta sugerida aprovada e melhoria **aceita** pelo admin. Bronze com 1, prata com 5,
   ouro com 15, diamante com 40.

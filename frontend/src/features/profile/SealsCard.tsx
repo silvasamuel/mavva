@@ -61,7 +61,7 @@ export function SealsCard({
           {wisdom.next_level_at != null ? (
             <>
               <ProgressBar
-                value={wisdom.points - wisdom.level_floor}
+                value={Math.max(0, wisdom.points - wisdom.level_floor)}
                 max={wisdomSpan}
                 className="h-2"
                 color="bg-leaf-500"
@@ -75,8 +75,9 @@ export function SealsCard({
             <p className={HINT}>Nível máximo: {wisdom.points} pontos de sabedoria.</p>
           )}
           <p className={HINT}>
-            Cada pergunta acertada pela primeira vez conta: média 1 ponto, difícil 3, especialista
-            5. Não recomeça com a temporada.
+            Vale a sua última resposta a cada pergunta. Acertar soma (média 1 ponto, difícil 3,
+            especialista 5) e errar tira de 1 a 3 pontos; acertar de novo recupera. Não recomeça com
+            a temporada.
           </p>
         </Row>
 

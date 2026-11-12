@@ -26,7 +26,7 @@ TITLE = "Selos novos: Sabedoria, Contribuidor e meses de apoio"
 
 BODY = """Agora o seu elo anda acompanhado: até três selos aparecem ao lado dele no ranking, nos duelos, na lista de amigos e no seu card de jogador.
 
-• Sabedoria (de 1 a 10): cresce a cada pergunta que você acerta pela primeira vez. Média vale 1 ponto, difícil 3 e especialista 5. Não zera na virada da temporada: é o quanto do banco difícil você já domina.
+• Sabedoria (de 1 a 10): sobe quando você acerta perguntas médias (1 ponto), difíceis (3) e especialistas (5), e cai quando você erra (de 1 a 3 pontos). Vale a sua última resposta a cada pergunta: errar uma que você já sabia custa os pontos dela, e acertar de novo recupera. Não zera na virada da temporada.
 • Contribuidor (bronze, prata, ouro e diamante): para quem ajuda a melhorar o Mavva. Conta cada erro reportado que foi corrigido, cada pergunta sugerida que entrou no jogo e cada melhoria aceita pela equipe. Bronze com 1, prata com 5, ouro com 15 e diamante com 40.
 • Apoiador com meses: o selo dourado agora mostra há quantos meses você apoia o Mavva. Os meses não precisam ser seguidos: quem volta continua de onde parou.
 
