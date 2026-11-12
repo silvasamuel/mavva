@@ -207,11 +207,20 @@ export function FriendsPage() {
               </PlayerRow>
             ))}
           </ul>
+          {respond.isError && (
+            <p role="alert" className="mt-2 text-sm font-bold text-red-600">
+              {respond.error instanceof ApiError
+                ? respond.error.message
+                : 'Não foi possível responder o pedido.'}
+            </p>
+          )}
         </Card>
       )}
 
       <Card>
-        <CardTitle>Meus amigos ({data.friends.length})</CardTitle>
+        <CardTitle>
+          Meus amigos ({data.friends.length} de {data.limit})
+        </CardTitle>
         {data.friends.length === 0 ? (
           <EmptyState
             icon={<Glyph as={AppIcons.friends} className="h-10 w-10" />}

@@ -176,10 +176,10 @@ pergunta — o agendamento já feito não muda, como no Anki. O badge do dashboa
 
 | Método | Rota | Descrição |
 |---|---|---|
-| GET | `/friends` | `{friends, incoming, sent}` — amigos e pedidos pendentes (nunca expõe e-mail). Contas inativas ficam de fora das três listas e do contador `friend_requests` do dashboard; se a conta for reativada, a amizade volta. |
+| GET | `/friends` | `{friends, incoming, sent, limit}` — amigos e pedidos pendentes (nunca expõe e-mail). Contas inativas ficam de fora das três listas e do contador `friend_requests` do dashboard; se a conta for reativada, a amizade volta. `limit` é o máximo de amigos (70). |
 | GET | `/friends/search?q=` | Busca por **prefixo de username** (mín. 2 caracteres), com a relação atual (`none`, `pending_sent`, `pending_received`, `friends`). |
-| POST | `/friends/requests` | Body: `{username}`. Se a outra pessoa já havia convidado, a amizade é aceita direto. |
-| POST | `/friends/requests/{id}/accept` · `/decline` | Responde um pedido recebido. |
+| POST | `/friends/requests` | Body: `{username}`. Se a outra pessoa já havia convidado, a amizade é aceita direto. 400 se você ou a outra pessoa já tem 70 amigos ativos. |
+| POST | `/friends/requests/{id}/accept` · `/decline` | Responde um pedido recebido. Aceitar respeita o mesmo limite de 70. |
 | DELETE | `/friends/{user_id}` | Desfaz a amizade. |
 
 ## Ranking
@@ -365,6 +365,12 @@ real — o front-end separado (bundle `/admin`) é conveniência, não proteçã
 | Método | Rota | Descrição |
 |---|---|---|
 | GET | `/health` | `{"status": "ok"}` — usado pelo Render e pelo CI. |
+
+## Cron
+
+| Método | Rota | Descrição |
+|---|---|---|
+| GET | `/cron/review-digest` | Chamado pelo Vercel Cron todo dia às 11h UTC (8h de Brasília). Exige `Authorization: Bearer $CRON_SECRET` (401 sem ele; 404 se `CRON_SECRET` não estiver configurado). Se houver perguntas sugeridas pendentes ou sugestões de funcionalidade/correção abertas, envia um resumo para `ADMIN_DIGEST_EMAIL`. Devolve `{sent, questions, features, corrections}`. |
 
 ## Paginação e filtros
 

@@ -157,6 +157,7 @@ export interface FriendsOverview {
   friends: PublicUser[]
   incoming: FriendRequest[]
   sent: FriendRequest[]
+  limit: number
 }
 
 export interface LeaderboardEntry {

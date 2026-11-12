@@ -403,7 +403,7 @@ class TestAdminOverview:
         client.post(f"/api/v1/support/payments/{first['id']}/simulate", headers=maria)
         second = _create(client, maria, 500)
         client.post(f"/api/v1/support/payments/{second['id']}/simulate", headers=maria)
-        _create(client, maria, 700)  # still pending
+        pending = _create(client, maria, 700)  # still pending
         joao = _login(client, email="joao@teste.com")
         paid = _create(client, joao, 3100)
         client.post(f"/api/v1/support/payments/{paid['id']}/simulate", headers=joao)
@@ -422,7 +422,13 @@ class TestAdminOverview:
         assert top["total_cents"] == 3100 and top["donations"] == 1 and top["is_supporter"]
         maria_row = next(d for d in body["donors"] if d["total_cents"] == 1500)
         assert maria_row["donations"] == 2
-        assert len(body["recent"]) == 4
+        # Newest first, even though every charge here shares one transaction.
+        assert [p["id"] for p in body["recent"]] == [
+            paid["id"],
+            pending["id"],
+            second["id"],
+            first["id"],
+        ]
         assert body["recent"][0]["status"] == "approved"
         assert {p["status"] for p in body["recent"]} == {"approved", "pending"}
 

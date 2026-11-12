@@ -75,6 +75,7 @@ def friends_overview(user: CurrentUser, db: DbDep) -> FriendsOverview:
             FriendRequestOut(id=r.id, user=_require_public(r.addressee), created_at=r.created_at)
             for r in friendship_service.list_sent_requests(db, user)
         ],
+        limit=friendship_service.MAX_FRIENDS,
     )
 
 

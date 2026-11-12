@@ -6,9 +6,13 @@ import type { PlayerProfile } from '@/types/api'
 import { PlayerProfileModal } from './PlayerProfileModal'
 
 const get = vi.fn()
+const post = vi.fn()
 
 vi.mock('@/lib/api', () => ({
-  api: { get: (...args: unknown[]) => get(...args) },
+  api: {
+    get: (...args: unknown[]) => get(...args),
+    post: (...args: unknown[]) => post(...args),
+  },
   ApiError: class ApiError extends Error {
     status: number
     constructor(status: number, message: string) {
@@ -69,6 +73,7 @@ function renderModal(userId: string | null = 'p1', onClose = vi.fn()) {
 describe('PlayerProfileModal', () => {
   beforeEach(() => {
     get.mockReset().mockResolvedValue(profile())
+    post.mockReset()
   })
 
   it('stays closed and fetches nothing without a player', () => {
@@ -224,6 +229,51 @@ describe('PlayerProfileModal', () => {
     get.mockResolvedValue(profile({ relation: 'self' }))
     renderModal()
     expect(await screen.findByText('Você')).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: 'Adicionar amigo' })).not.toBeInTheDocument()
+  })
+
+  it('sends a friend request to a stranger', async () => {
+    const user = userEvent.setup()
+    get
+      .mockResolvedValueOnce(profile({ relation: 'none' }))
+      .mockResolvedValue(profile({ relation: 'pending_sent' }))
+    post.mockResolvedValue({ status: 'pending', message: 'Pedido enviado' })
+    renderModal()
+
+    await user.click(await screen.findByRole('button', { name: 'Adicionar amigo' }))
+    expect(post).toHaveBeenCalledWith('/friends/requests', { username: 'maria' })
+    expect(await screen.findByText('Pedido enviado')).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: 'Adicionar amigo' })).not.toBeInTheDocument()
+  })
+
+  it('accepts an incoming request from the profile', async () => {
+    const user = userEvent.setup()
+    get
+      .mockResolvedValueOnce(profile({ relation: 'pending_received' }))
+      .mockResolvedValue(profile({ relation: 'friends' }))
+    post.mockResolvedValue({ status: 'accepted', message: 'Vocês agora são amigos!' })
+    renderModal()
+
+    await user.click(await screen.findByRole('button', { name: 'Aceitar pedido' }))
+    expect(post).toHaveBeenCalledWith('/friends/requests', { username: 'maria' })
+    expect(await screen.findByText('Amigo')).toBeInTheDocument()
+  })
+
+  it('explains when the friend limit blocks the request', async () => {
+    const user = userEvent.setup()
+    const { ApiError } = await import('@/lib/api')
+    get.mockResolvedValue(profile({ relation: 'none' }))
+    post.mockRejectedValue(new ApiError(400, 'Você já tem 70 amigos, o limite'))
+    renderModal()
+
+    await user.click(await screen.findByRole('button', { name: 'Adicionar amigo' }))
+    expect(await screen.findByRole('alert')).toHaveTextContent('Você já tem 70 amigos, o limite')
+  })
+
+  it('offers no friend button to someone already a friend', async () => {
+    renderModal()
+    await screen.findByRole('dialog', { name: 'Perfil de Maria Souza' })
+    expect(screen.queryByRole('button', { name: 'Adicionar amigo' })).not.toBeInTheDocument()
   })
 
   it('explains when the profile cannot be loaded', async () => {
