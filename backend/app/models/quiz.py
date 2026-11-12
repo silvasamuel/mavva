@@ -26,6 +26,8 @@ class QuizSession(Base):
     question_count: Mapped[int]
     correct_count: Mapped[int] = mapped_column(default=0)
     xp_earned: Mapped[int] = mapped_column(default=0)
+    # Net change in the player's wisdom over this session's answers (up or down).
+    wisdom_delta: Mapped[int] = mapped_column(default=0, server_default="0")
     started_at: Mapped[datetime] = mapped_column(server_default=func.now())
     completed_at: Mapped[datetime | None] = mapped_column(default=None)
     abandoned_at: Mapped[datetime | None] = mapped_column(default=None)

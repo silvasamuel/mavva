@@ -103,6 +103,7 @@ Constraint de aplicação (validada no seed): 4 opções, exatamente 1 `is_corre
 | filters | JSONB | `{testament, category_ids, difficulty}` — snapshot do que foi pedido |
 | question_count | INT | |
 | correct_count | INT | atualizado a cada resposta |
+| wisdom_delta | INT | saldo de sabedoria da sessão (pode ser negativo), somado a cada resposta; só alimenta a tela final do quiz |
 | xp_earned | INT | consolidado no complete |
 | started_at | TIMESTAMPTZ | |
 | completed_at | TIMESTAMPTZ NULL | sessão abandonada fica NULL |

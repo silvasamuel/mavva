@@ -21,7 +21,7 @@ from app.models import (
 )
 from app.models.enums import Difficulty, QuizMode, Testament
 from app.services import achievement_service, srs
-from app.services.badges import wisdom_delta
+from app.services.badges import wisdom_delta, wisdom_level
 from app.services.gamification import (
     PERFECT_SESSION_BONUS,
     SESSION_COMPLETE_BONUS,
@@ -311,6 +311,7 @@ def submit_answer(
         wisdom_stats = db.get(UserStats, user.id)
         if wisdom_stats is not None:
             wisdom_stats.wisdom_points += wisdom
+        session.wisdom_delta += wisdom
     session.xp_earned += xp
 
     # SRS updates immediately (survives abandoned sessions).
@@ -352,6 +353,11 @@ class CompleteResult:
     daily_goal_target: int
     daily_goal_earned: int
     best_combo: int
+    # Wisdom is applied answer by answer; these only report the session's net
+    # effect for the summary screen.
+    wisdom_delta: int = 0
+    wisdom_level: int = 1
+    wisdom_previous_level: int = 1
     unlocked_achievements: list[Achievement] = field(default_factory=list)
 
 
@@ -430,6 +436,9 @@ def complete_session(db: Session, user: User, session_id: uuid.UUID) -> Complete
         daily_goal_target=user.daily_goal_xp,
         daily_goal_earned=max(0, activity.xp),
         best_combo=best_combo(session),
+        wisdom_delta=session.wisdom_delta,
+        wisdom_level=wisdom_level(stats.wisdom_points),
+        wisdom_previous_level=wisdom_level(stats.wisdom_points - session.wisdom_delta),
         unlocked_achievements=unlocked,
     )
 

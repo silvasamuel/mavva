@@ -79,6 +79,7 @@ nenhum aparelho. "Rever tutorial" no Perfil abre de novo só no cliente, sem cha
   "streak": { "current": 12, "extended_today": true },
   "daily_goal": { "target": 50, "earned_today": 145, "achieved": true },
   "best_combo": 6,                     // maior sequência de acertos da sessão
+  "wisdom": {"delta": -2, "level": 3, "previous_level": 3}, // o que a sessão fez com a sabedoria; a tela final só mostra quando delta != 0
   "unlocked_achievements": [ { "code": "streak_7", "name": "Uma semana no deserto", "icon": "🔥" } ]
 }
 ```

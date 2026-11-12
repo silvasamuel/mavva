@@ -368,6 +368,8 @@ export interface QuizComplete {
   streak: { current: number; extended_today: boolean }
   daily_goal: { target: number; earned_today: number; achieved: boolean }
   best_combo: number
+  /** What the session did to the player's wisdom; shown only when delta isn't 0. */
+  wisdom?: { delta: number; level: number; previous_level: number }
   unlocked_achievements: Achievement[]
 }
 

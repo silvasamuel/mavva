@@ -23,6 +23,7 @@ from app.schemas.quiz import (
     RankInfo,
     StreakInfo,
     UnlockedAchievement,
+    WisdomInfo,
 )
 from app.services import duel_service, option_shuffle, quiz_service
 from app.services.quiz_service import QuizError
@@ -232,6 +233,11 @@ def complete_quiz(session_id: uuid.UUID, user: CurrentUser, db: DbDep) -> QuizCo
             achieved=result.daily_goal_earned >= result.daily_goal_target,
         ),
         best_combo=result.best_combo,
+        wisdom=WisdomInfo(
+            delta=result.wisdom_delta,
+            level=result.wisdom_level,
+            previous_level=result.wisdom_previous_level,
+        ),
         unlocked_achievements=[
             UnlockedAchievement(
                 code=a.code,

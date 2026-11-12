@@ -112,6 +112,67 @@ class TestWisdom:
         _play(auth_client, db, correct=True)
         assert _stats(db, auth_client).wisdom_points == 5
 
+    def test_the_summary_reports_what_the_session_did(
+        self, auth_client: TestClient, db: Session
+    ) -> None:
+        category = make_category(db)
+        make_mc_question(db, category, difficulty=Difficulty.HARD)
+        make_mc_question(db, category, difficulty=Difficulty.EXPERT)
+
+        def finish(correct: bool) -> dict:
+            quiz = auth_client.post("/api/v1/quizzes", json={"question_count": 2}).json()
+            for question in quiz["questions"]:
+                option_ids = [o["id"] for o in question["options"]]
+                right = str(
+                    db.scalars(
+                        select(QuestionOption).where(
+                            QuestionOption.id.in_(option_ids), QuestionOption.is_correct
+                        )
+                    )
+                    .one()
+                    .id
+                )
+                chosen = right if correct else next(o for o in option_ids if o != right)
+                auth_client.post(
+                    f"/api/v1/quizzes/{quiz['id']}/answers",
+                    json={"question_id": question["id"], "selected_option_id": chosen},
+                )
+            done = auth_client.post(f"/api/v1/quizzes/{quiz['id']}/complete")
+            assert done.status_code == 200, done.text
+            return done.json()["wisdom"]
+
+        assert finish(correct=True) == {"delta": 8, "level": 1, "previous_level": 1}
+        # Same answers again: nothing moved, so nothing to show.
+        assert finish(correct=True)["delta"] == 0
+        # Forgetting both: each loses its gain and takes the loss.
+        assert finish(correct=False) == {"delta": -13, "level": 1, "previous_level": 1}
+
+    def test_the_summary_tells_when_a_level_was_crossed(
+        self, auth_client: TestClient, db: Session
+    ) -> None:
+        make_mc_question(db, make_category(db), difficulty=Difficulty.EXPERT)
+        stats = _stats(db, auth_client)
+        stats.wisdom_points = 12  # 3 short of level 2
+        db.flush()
+        quiz = auth_client.post("/api/v1/quizzes", json={"question_count": 1}).json()
+        question = quiz["questions"][0]
+        right = str(
+            db.scalars(
+                select(QuestionOption).where(
+                    QuestionOption.id.in_([o["id"] for o in question["options"]]),
+                    QuestionOption.is_correct,
+                )
+            )
+            .one()
+            .id
+        )
+        auth_client.post(
+            f"/api/v1/quizzes/{quiz['id']}/answers",
+            json={"question_id": question["id"], "selected_option_id": right},
+        )
+        wisdom = auth_client.post(f"/api/v1/quizzes/{quiz['id']}/complete").json()["wisdom"]
+        assert wisdom == {"delta": 5, "level": 2, "previous_level": 1}
+
     def test_dashboard_and_profile_show_the_level(
         self, auth_client: TestClient, db: Session
     ) -> None:

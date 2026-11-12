@@ -203,18 +203,18 @@ export function ContributorSeal({
   )
 }
 
-/** With a month count the tile stretches into a pill: heart, then the number. */
-const PILL = {
-  xs: 'h-5 gap-0.5 rounded-md px-1 text-[11px]',
-  sm: 'h-7 gap-1 rounded-lg px-1.5 text-sm',
-  md: 'h-10 gap-1 rounded-xl px-2 text-lg',
-  lg: 'h-14 gap-1.5 rounded-2xl px-3 text-2xl',
+/** The month count sits on the tile's corner, so the seal keeps the others' size. */
+const COUNT = {
+  xs: '-bottom-1 -right-1 h-3 min-w-3 px-0.5 text-[8px]',
+  sm: '-bottom-1 -right-1 h-4 min-w-4 px-0.5 text-[10px]',
+  md: '-bottom-1.5 -right-1.5 h-5 min-w-5 px-1 text-xs',
+  lg: '-bottom-1.5 -right-1.5 h-6 min-w-6 px-1 text-sm',
 } as const
 
 /**
  * `active` false draws the empty slot, for the player's own profile.
  * `months` is how many months of support the player has put in (they need
- * not be consecutive); from the first one on it shows beside the heart.
+ * not be consecutive); from the first one on it shows on the tile's corner.
  */
 export function SupporterSeal({
   active = true,
@@ -236,9 +236,7 @@ export function SupporterSeal({
       role="img"
       aria-label={label}
       title={label}
-      className={`inline-flex shrink-0 items-center justify-center ${
-        counted ? PILL[size] : `rounded-[28%] ${BOX[size]}`
-      } ${
+      className={`relative inline-flex shrink-0 items-center justify-center rounded-[28%] ${BOX[size]} ${
         active
           ? 'bg-gradient-to-br from-grain-200 via-grain-400 to-grain-600 text-white shadow-[inset_0_0_0_1px_#aa5012,0_0_6px_-1px_#f3cb57]'
           : 'border border-dashed border-sand-300 bg-sand-50 text-sand-400'
@@ -246,7 +244,11 @@ export function SupporterSeal({
     >
       <Glyph as={AppIcons.heart} weight="fill" className={GLYPH[size]} />
       {counted && (
-        <span className="font-extrabold tabular-nums leading-none text-grain-900">{months}</span>
+        <span
+          className={`absolute flex items-center justify-center rounded-full bg-grain-900 font-extrabold tabular-nums leading-none text-white ring-1 ring-white ${COUNT[size]}`}
+        >
+          {months}
+        </span>
       )}
     </span>
   )

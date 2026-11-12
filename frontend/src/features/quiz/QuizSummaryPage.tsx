@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link, Navigate, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import type { Achievement, QuizComplete } from '@/types/api'
+import { WisdomSeal } from '@/components/PlayerSeals'
 import { RankBadge } from '@/components/RankBadge'
 import { RankLadder } from '@/components/RankLadder'
 import { Button } from '@/components/ui/Button'
@@ -112,7 +113,13 @@ export function QuizSummaryPage() {
             <>
               <span className="mx-auto flex justify-center text-leaf-600">
                 <Glyph
-                  as={perfect ? AppIcons.sparkle : summary.accuracy >= 0.7 ? AppIcons.confetti : AppIcons.plant}
+                  as={
+                    perfect
+                      ? AppIcons.sparkle
+                      : summary.accuracy >= 0.7
+                        ? AppIcons.confetti
+                        : AppIcons.plant
+                  }
                   className="h-16 w-16"
                 />
               </span>
@@ -226,6 +233,9 @@ export function QuizSummaryPage() {
                   {summary.correct_count}/{summary.question_count} ·{' '}
                   {totalXp >= 0 ? `+${totalXp}` : totalXp} XP
                 </p>
+                {summary.wisdom && summary.wisdom.delta !== 0 && (
+                  <WisdomChange wisdom={summary.wisdom} />
+                )}
               </div>
               {/* Side by side "Jogar de novo" wraps under ~370px wide; stack there. */}
               <div className="flex flex-col gap-3 min-[370px]:flex-row">
@@ -243,5 +253,27 @@ export function QuizSummaryPage() {
         </motion.div>
       </AnimatePresence>
     </div>
+  )
+}
+
+/**
+ * Wisdom moved in this quiz: how many points, and the new level when the
+ * session crossed one. Left out entirely when nothing changed.
+ */
+function WisdomChange({ wisdom }: { wisdom: NonNullable<QuizComplete['wisdom']> }) {
+  const up = wisdom.delta > 0
+  const crossed = wisdom.level !== wisdom.previous_level
+  return (
+    <p
+      className={`mx-auto mt-3 inline-flex items-center gap-2 rounded-full py-1 pl-1 pr-3 text-sm font-extrabold ring-1 ${
+        up ? 'bg-leaf-50 text-leaf-800 ring-leaf-200' : 'bg-red-50 text-red-700 ring-red-100'
+      }`}
+    >
+      <WisdomSeal level={wisdom.level} size="sm" />
+      <span>
+        Sabedoria {up ? `+${wisdom.delta}` : `−${Math.abs(wisdom.delta)}`}
+        {crossed && ` · ${up ? 'subiu' : 'caiu'} para o nível ${wisdom.level}`}
+      </span>
+    </p>
   )
 }
