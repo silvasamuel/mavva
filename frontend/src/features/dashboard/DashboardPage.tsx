@@ -14,6 +14,7 @@ import { useAuth } from '@/features/auth/AuthContext'
 import { EvolutionChart } from './EvolutionChart'
 import { SeasonCard } from './SeasonCard'
 import { SeasonNoticeModal } from './SeasonNoticeModal'
+import { WhatsNewModal } from '@/features/notifications/WhatsNewModal'
 
 type CategoryOrder = 'best' | 'worst'
 
@@ -410,6 +411,7 @@ export function DashboardPage() {
       </motion.details>
 
       <SeasonNoticeModal data={data} />
+      <WhatsNewModal data={data} />
     </motion.div>
   )
 }
