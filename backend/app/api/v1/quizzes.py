@@ -25,7 +25,7 @@ from app.schemas.quiz import (
     UnlockedAchievement,
     WisdomInfo,
 )
-from app.services import duel_service, option_shuffle, quiz_service
+from app.services import duel_service, league_service, option_shuffle, quiz_service
 from app.services.quiz_service import QuizError
 from app.services.rate_limit_service import enforce_user_limit
 
@@ -55,6 +55,7 @@ def _session_out(session: QuizSession, duel_id: uuid.UUID | None = None) -> Quiz
         correct_count=session.correct_count,
         answered_count=len(answered_ids),
         completed=session.completed_at is not None,
+        league_id=league_service.league_id_for_session(session),
         timer_seconds=(session.filters or {}).get("timer_seconds"),
         combo=quiz_service.current_combo(session),
         filters=quiz_service.session_filters(session),
@@ -187,6 +188,8 @@ def abandon_quiz(session_id: uuid.UUID, user: CurrentUser, db: DbDep) -> QuizAba
         raise HTTPException(error.status_code, error.message) from error
     # Walking out of a duel round forfeits the duel.
     duel_service.cancel_for_session(db, session_id, user.id)
+    # A league round left halfway counts with what was answered.
+    league_service.settle_for_session(db, session_id)
     db.commit()
     return QuizAbandonResponse(
         answered_count=result.answered_count,
@@ -203,6 +206,8 @@ def complete_quiz(session_id: uuid.UUID, user: CurrentUser, db: DbDep) -> QuizCo
         raise HTTPException(error.status_code, error.message) from error
     # If this round belonged to a duel, settle it once both sides are done.
     duel_service.resolve_for_session(db, session_id)
+    # Same for a league round: record the score and move the league on.
+    league_service.settle_for_session(db, session_id)
     db.commit()
     session = result.session
     return QuizCompleteResponse(
