@@ -182,6 +182,44 @@ pergunta — o agendamento já feito não muda, como no Anki. O badge do dashboa
 | POST | `/friends/requests/{id}/accept` · `/decline` | Responde um pedido recebido. Aceitar respeita o mesmo limite de 70. |
 | DELETE | `/friends/{user_id}` | Desfaz a amizade. |
 
+## Ligas (competições por convite)
+
+Competições fechadas: só entra quem o dono convida. Dois formatos, até 20 jogadores:
+
+- **Pontos** (`points`): o dono escolhe de 1 a 30 rodadas; todos jogam cada rodada, em
+  ordem, e vence quem somar mais pontos até a data final (empate: menos tempo).
+- **Copa** (`cup`): mata-mata em duelos, com o chaveamento sorteado no início. Exige número
+  par de jogadores. Quando uma rodada tem número ímpar de classificados, o último descansa
+  e passa a jogar primeiro na seguinte.
+
+Cada partida congela **10 perguntas** dos temas (mínimo 7) e dificuldades (mínimo 1) da
+liga; todos que a jogam respondem às mesmas, cada um numa `QuizSession` de modo `league`,
+com 20 s por pergunta. Pontos da liga: cada acerto vale pela dificuldade (10/20/35/50).
+Essas sessões contam para precisão, sabedoria, revisão e sequência, mas **não dão XP de
+temporada**. Sair no meio encerra a partida com o que foi respondido e tempo cheio.
+
+**Apoiador**: criar liga, aceitar convite e jogar exigem selo ativo (`403` caso contrário).
+Ver é livre para quem está na liga ou foi convidado; para os demais a liga não existe (`404`).
+
+**Data de encerramento** (`ends_on`, último dia de jogo, calendário de Brasília), aplicada
+sob demanda: liga de pontos coroa quem lidera; copa sem final jogada, liga que nem começou
+ou em que ninguém jogou terminam como `incomplete`. Uma liga de pontos também termina
+antes, quando todos jogaram tudo.
+
+| Método | Rota | Descrição |
+|---|---|---|
+| GET | `/leagues` | `{can_play, leagues}`: ligas em que o jogador está ou foi convidado, da mais nova para a mais antiga. Cada uma: `status` (`recruiting`, `active`, `finished`, `incomplete`), `my_status` (`invited`, `active`), `is_owner`, `member_count`, `invited_count`, `champion`, `my_match_id` (a partida que espera por ele agora). |
+| POST | `/leagues` | Cria. `{name (3–40), format, category_ids (≥7), difficulties (≥1), rounds (só pontos), ends_on}`. O dono entra como primeiro jogador. Máx. 5 ligas em aberto por dono. |
+| GET | `/leagues/{id}` | Detalhe: o resumo acima mais `categories`, `difficulties`, `members`, `standings` (o ranking da liga), `rounds_played` (pontos) e `bracket` (copa: rodadas com `matches` e `byes`; cada lado traz `user` ou `from_match`, `played` e, só depois de decidido, `score`). |
+| DELETE | `/leagues/{id}` | Dono, antes de começar. |
+| POST | `/leagues/{id}/invites` | Dono convida por `{username}`. Convites contam no limite de 20. |
+| POST | `/leagues/{id}/join` · `/decline` · `/leave` | Convidado aceita (apoiador) ou recusa; jogador sai antes do início. |
+| DELETE | `/leagues/{id}/members/{user_id}` | Dono remove jogador ou cancela convite, antes do início. |
+| POST | `/leagues/{id}/start` | Dono começa: mínimo 2 jogadores (par na copa). Sorteia rodadas ou chaveamento; convites sem resposta caem. |
+| POST | `/leagues/{id}/matches/{match_id}/play` | Abre (ou devolve, se já aberta) a sessão do jogador para a partida: `{session_id}`. Daí em diante é o fluxo normal de `/quizzes/{id}`, cuja resposta traz `league_id`. |
+
+`GET /dashboard` traz `leagues_pending`: convites esperando mais ligas em que é a vez do jogador.
+
 ## Ranking
 
 | Método | Rota | Descrição |

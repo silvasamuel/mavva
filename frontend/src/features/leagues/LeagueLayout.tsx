@@ -122,8 +122,10 @@ export function LeagueLayout() {
               <Glyph as={section.icon} className="h-5 w-5" />
               {section.label}
               {section.badge && (
-                <span className="ml-auto rounded-full bg-leaf-500 px-1.5 text-[10px] font-extrabold text-white">
-                  sua vez
+                // A dot, not a label: "sua vez" would wrap in the narrow side menu.
+                <span className="ml-auto flex items-center" title="Sua vez de jogar">
+                  <span className="h-2.5 w-2.5 rounded-full bg-leaf-500 ring-2 ring-leaf-100" />
+                  <span className="sr-only">sua vez</span>
                 </span>
               )}
             </NavLink>
