@@ -20,6 +20,13 @@ import { ProfilePage } from '@/features/profile/ProfilePage'
 import { DuelsPage } from '@/features/duels/DuelsPage'
 import { DuelResultPage } from '@/features/duels/DuelResultPage'
 import { FriendsPage } from '@/features/friends/FriendsPage'
+import { LeagueCreatePage } from '@/features/leagues/LeagueCreatePage'
+import { LeagueGames } from '@/features/leagues/LeagueGames'
+import { LeagueLayout } from '@/features/leagues/LeagueLayout'
+import { LeagueOverview } from '@/features/leagues/LeagueOverview'
+import { LeaguePlayers } from '@/features/leagues/LeaguePlayers'
+import { LeagueRanking } from '@/features/leagues/LeagueRanking'
+import { LeaguesPage } from '@/features/leagues/LeaguesPage'
 import { RankingPage } from '@/features/ranking/RankingPage'
 import { SuggestQuestionPage } from '@/features/moderation/SuggestQuestionPage'
 import { SupportPage } from '@/features/support/SupportPage'
@@ -73,6 +80,15 @@ export default function App() {
                 <Route path="/duels/:duelId" element={<DuelResultPage />} />
                 <Route path="/friends" element={<FriendsPage />} />
                 <Route path="/ranking" element={<RankingPage />} />
+                <Route path="/leagues" element={<LeaguesPage />} />
+                <Route path="/leagues/new" element={<LeagueCreatePage />} />
+                {/* A league has its own menu: each section is a route under it. */}
+                <Route path="/leagues/:leagueId" element={<LeagueLayout />}>
+                  <Route index element={<LeagueOverview />} />
+                  <Route path="ranking" element={<LeagueRanking />} />
+                  <Route path="games" element={<LeagueGames />} />
+                  <Route path="players" element={<LeaguePlayers />} />
+                </Route>
                 <Route path="/achievements" element={<AchievementsPage />} />
                 <Route path="/notifications" element={<NotificationsPage />} />
                 <Route path="/suggest" element={<SuggestQuestionPage />} />

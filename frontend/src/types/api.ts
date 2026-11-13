@@ -2,7 +2,7 @@
 
 export type Difficulty = 'easy' | 'medium' | 'hard' | 'expert'
 export type Testament = 'old' | 'new'
-export type QuizMode = 'practice' | 'review' | 'duel'
+export type QuizMode = 'practice' | 'review' | 'duel' | 'league'
 
 export type ReviewSpacing = 'intensive' | 'balanced' | 'relaxed'
 export type ReviewScope = 'all' | 'mistakes'
@@ -330,6 +330,8 @@ export interface QuizSession {
   completed: boolean
   timer_seconds: number | null
   duel_id: string | null
+  /** Set when this is a league round or cup match: where to go back to. */
+  league_id?: string | null
   /** Hits in a row so far (server-computed), so a reload keeps the badge. */
   combo: number
   filters: Record<string, unknown>
@@ -456,6 +458,8 @@ export interface DashboardData {
   }[]
   reviews_due: number
   friend_requests: number
+  /** League invites waiting plus leagues where it is the player's turn. */
+  leagues_pending?: number
   /** Unread "Novidades", for the bell badge. */
   notifications_unread: number
   duels: {
@@ -534,4 +538,107 @@ export interface NotificationFeed {
   /** Newest first. */
   items: NotificationItem[]
   unread_count: number
+}
+
+// --- Ligas: invite-only competitions ---
+
+export type LeagueFormat = 'points' | 'cup'
+export type LeagueStatus = 'recruiting' | 'active' | 'finished' | 'incomplete'
+export type LeagueMemberStatus = 'invited' | 'active' | 'declined' | 'left'
+
+export interface League {
+  id: string
+  name: string
+  format: LeagueFormat
+  status: LeagueStatus
+  /** Points format only. */
+  rounds: number | null
+  /** Last day of play, "YYYY-MM-DD" in the Brasília calendar. */
+  ends_on: string
+  ends_at: string
+  created_at: string
+  started_at: string | null
+  finished_at: string | null
+  owner: PublicUser
+  is_owner: boolean
+  my_status: LeagueMemberStatus
+  member_count: number
+  invited_count: number
+  max_members: number
+  champion: PublicUser | null
+  /** The fixture waiting for me right now, if any. */
+  my_match_id: string | null
+}
+
+export interface LeagueList {
+  /** False for players who aren't supporters: they can look, not create or play. */
+  can_play: boolean
+  leagues: League[]
+}
+
+export interface LeagueScore {
+  points: number
+  correct: number
+  time_seconds: number
+}
+
+export interface LeagueSide {
+  /** Null until the match that feeds this seat is decided. */
+  user: PublicUser | null
+  /** "Winner of match N" while `user` is null. */
+  from_match: number | null
+  played: boolean
+  /** Only once the match is decided. */
+  score: LeagueScore | null
+}
+
+export interface LeagueCupMatch {
+  id: string
+  number: number
+  a: LeagueSide
+  b: LeagueSide
+  winner_id: string | null
+  decided_by: 'points' | 'time' | 'lots' | null
+}
+
+export interface LeagueCupRound {
+  round: number
+  label: string
+  matches: LeagueCupMatch[]
+  /** Players who rest this round and go straight to the next one. */
+  byes: LeagueSide[]
+}
+
+export interface LeagueRound {
+  match_id: string
+  round: number
+  played_count: number
+  my_score: LeagueScore | null
+  in_progress: boolean
+}
+
+export interface LeagueStanding {
+  position: number
+  user: PublicUser
+  is_me: boolean
+  points: number
+  correct: number
+  time_seconds: number
+  played: number
+  wins: number
+  eliminated: boolean
+}
+
+export interface LeagueDetail extends League {
+  can_play: boolean
+  categories: { id: number; slug: string; name: string; icon: string }[]
+  difficulties: Difficulty[]
+  question_count: number
+  timer_seconds: number
+  members: { user: PublicUser; status: LeagueMemberStatus; is_owner: boolean }[]
+  standings: LeagueStanding[]
+  /** Points format; empty otherwise. */
+  rounds_played: LeagueRound[]
+  /** Cup format; empty otherwise. */
+  bracket: LeagueCupRound[]
 }

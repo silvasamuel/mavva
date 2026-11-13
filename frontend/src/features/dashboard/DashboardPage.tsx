@@ -346,11 +346,12 @@ export function DashboardPage() {
           <ul className="divide-y divide-sand-100">
             {recent_sessions.slice(0, 4).map((session) => {
               const pendingDuel = session.mode === 'duel' && session.xp_earned === 0
-              const xpClass = pendingDuel
-                ? 'bg-sand-100 text-sand-600'
-                : session.xp_earned < 0
-                  ? 'bg-red-50 text-red-600'
-                  : 'bg-grain-100 text-grain-800'
+              const xpClass =
+                pendingDuel || session.mode === 'league'
+                  ? 'bg-sand-100 text-sand-600'
+                  : session.xp_earned < 0
+                    ? 'bg-red-50 text-red-600'
+                    : 'bg-grain-100 text-grain-800'
               return (
                 <li key={session.id} className="flex items-center justify-between py-3">
                   <div className="flex items-center gap-3">
@@ -362,9 +363,11 @@ export function DashboardPage() {
                         as={
                           session.mode === 'duel'
                             ? AppIcons.duels
-                            : session.mode === 'review'
-                              ? AppIcons.review
-                              : AppIcons.study
+                            : session.mode === 'league'
+                              ? AppIcons.league
+                              : session.mode === 'review'
+                                ? AppIcons.review
+                                : AppIcons.study
                         }
                         className="h-5 w-5"
                       />
@@ -374,19 +377,25 @@ export function DashboardPage() {
                         {session.correct_count}/{session.question_count} acertos
                       </p>
                       <p className="text-xs font-bold text-sand-500">
-                        {session.mode === 'duel' ? 'Duelo · ' : ''}
+                        {session.mode === 'duel'
+                          ? 'Duelo · '
+                          : session.mode === 'league'
+                            ? 'Liga · '
+                            : ''}
                         {session.completed_at ? formatRelativeDate(session.completed_at) : ''}
                       </p>
                     </div>
                   </div>
                   <span className={`rounded-full px-2.5 py-1 text-xs font-extrabold ${xpClass}`}>
-                    {pendingDuel
-                      ? 'aguardando'
-                      : session.xp_earned > 0
-                        ? `+${session.xp_earned} XP`
-                        : session.xp_earned < 0
-                          ? `${session.xp_earned} XP`
-                          : '0 XP'}
+                    {session.mode === 'league'
+                      ? 'sem XP'
+                      : pendingDuel
+                        ? 'aguardando'
+                        : session.xp_earned > 0
+                          ? `+${session.xp_earned} XP`
+                          : session.xp_earned < 0
+                            ? `${session.xp_earned} XP`
+                            : '0 XP'}
                   </span>
                 </li>
               )
