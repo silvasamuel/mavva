@@ -206,7 +206,8 @@ export function DashboardPage() {
         <ModeTile
           icon={AppIcons.league}
           label="Ligas"
-          hint={leaguesPending > 0 ? `${leaguesPending} à sua espera` : 'Jogue com a turma'}
+          // The badge already carries the count; the hint only says what it is.
+          hint={leaguesPending > 0 ? 'Esperando você' : 'Jogue com a turma'}
           badge={leaguesPending}
           tone={leaguesPending > 0 ? 'gold' : 'sand'}
           action="league"

@@ -120,6 +120,8 @@ describe('DashboardPage shortcuts', () => {
   it('counts league invites and turns waiting', async () => {
     get.mockReset().mockResolvedValue({ ...dashboard(), leagues_pending: 2 })
     renderPage()
-    expect(await screen.findByRole('button', { name: /Ligas/ })).toHaveTextContent('2 à sua espera')
+    const leagues = await screen.findByRole('button', { name: /Ligas/ })
+    // The count shows once, on the badge; the hint doesn't repeat it.
+    expect(leagues).toHaveTextContent('2LigasEsperando você')
   })
 })
