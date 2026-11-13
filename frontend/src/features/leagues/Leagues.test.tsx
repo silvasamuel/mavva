@@ -459,10 +459,12 @@ describe('LeagueRanking and LeaguePlayers', () => {
     await user.click(screen.getByRole('button', { name: 'Convidar' }))
     expect(post).toHaveBeenCalledWith('/leagues/league-1/invites', { username: 'davi' })
 
-    // The friends list opens on demand and says where each friend stands.
-    expect(screen.queryByRole('list', { name: 'Seus amigos' })).not.toBeInTheDocument()
+    // The friends open in a modal that says where each one stands.
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
     await user.click(screen.getByRole('button', { name: 'Ver lista de amigos' }))
-    const friends = await screen.findByRole('list', { name: 'Seus amigos' })
+    const dialog = await screen.findByRole('dialog', { name: 'Convidar amigos' })
+    expect(dialog).toHaveTextContent('Restam 16 vagas na liga.')
+    const friends = await within(dialog).findByRole('list', { name: 'Seus amigos' })
     const rows = within(friends).getAllByRole('listitem')
     expect(rows.map((row) => row.textContent)).toEqual([
       expect.stringContaining('@rute'),
@@ -471,6 +473,10 @@ describe('LeagueRanking and LeaguePlayers', () => {
     expect(rows[1]).toHaveTextContent('Na liga')
     await user.click(within(rows[0]).getByRole('button', { name: 'Convidar @rute' }))
     expect(post).toHaveBeenCalledWith('/leagues/league-1/invites', { username: 'rute' })
+    // It stays open to invite more, and closes on demand.
+    expect(screen.getByRole('dialog', { name: 'Convidar amigos' })).toBeInTheDocument()
+    await user.click(within(dialog).getByRole('button', { name: 'Fechar' }))
+    await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument())
     expect(screen.getByText(/Restam 16 vagas de 20/)).toBeInTheDocument()
 
     await user.click(screen.getAllByRole('button', { name: 'Remover' })[0])

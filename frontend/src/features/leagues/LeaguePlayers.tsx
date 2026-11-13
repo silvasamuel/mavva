@@ -6,6 +6,7 @@ import type { FriendsOverview, LeagueDetail, PublicUser } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Card, CardTitle } from '@/components/ui/Card'
 import { Input } from '@/components/ui/Input'
+import { Modal } from '@/components/ui/Modal'
 import { Spinner } from '@/components/ui/Spinner'
 import { PlayerProfileModal } from '@/components/PlayerProfileModal'
 import { PlayerSeals } from '@/components/PlayerSeals'
@@ -18,16 +19,20 @@ const FILTER_FROM = 8
 
 /**
  * The player's friends, each with where they stand in this league: already
- * in, invited, or one tap away from an invite.
+ * in, invited, or one tap away from an invite. Shown in a modal that stays
+ * open, so several friends can be invited in a row.
  */
 function FriendPicker({
   friends,
   league,
+  full,
   inviting,
   onInvite,
 }: {
   friends: PublicUser[] | undefined
   league: LeagueDetail
+  /** No seat left: friends can be seen, not invited. */
+  full: boolean
   /** Username whose invite is being sent right now. */
   inviting: string | undefined
   onInvite: (friend: PublicUser) => void
@@ -41,7 +46,7 @@ function FriendPicker({
   )
 
   return (
-    <div id="league-friends" className="mt-3 rounded-2xl bg-sand-50 p-3">
+    <div className="rounded-2xl bg-sand-50 p-3 text-left">
       {friends == null ? (
         <div className="flex justify-center py-4">
           <Spinner className="h-6 w-6 text-leaf-500" />
@@ -72,7 +77,7 @@ function FriendPicker({
           ) : (
             <ul
               aria-label="Seus amigos"
-              className="max-h-72 divide-y divide-sand-200 overflow-y-auto"
+              className="max-h-[45dvh] divide-y divide-sand-200 overflow-y-auto"
             >
               {shown.map((friend) => {
                 const state = status.get(friend.id)
@@ -100,7 +105,7 @@ function FriendPicker({
                       <Button
                         size="sm"
                         loading={inviting === friend.username}
-                        disabled={inviting != null}
+                        disabled={inviting != null || full}
                         aria-label={`Convidar @${friend.username}`}
                         onClick={() => onInvite(friend)}
                       >
@@ -137,6 +142,11 @@ function InviteForm({ league }: { league: LeagueDetail }) {
   })
   const seats = league.max_members - league.member_count - league.invited_count
   const handle = username.trim().toLowerCase().replace(/^@/, '')
+  const inviteError = invite.isError
+    ? invite.error instanceof ApiError
+      ? invite.error.message
+      : 'Não foi possível convidar.'
+    : null
 
   return (
     <Card className="space-y-3">
@@ -168,39 +178,57 @@ function InviteForm({ league }: { league: LeagueDetail }) {
               Convidar
             </Button>
           </form>
-          {invite.isError && (
+          {inviteError && !friendsOpen && (
             <p role="alert" className="text-sm font-bold text-red-600">
-              {invite.error instanceof ApiError
-                ? invite.error.message
-                : 'Não foi possível convidar.'}
+              {inviteError}
             </p>
           )}
-          <div>
-            <Button
-              variant="secondary"
-              size="sm"
-              aria-expanded={friendsOpen}
-              aria-controls="league-friends"
-              onClick={() => setFriendsOpen((open) => !open)}
-            >
-              <Glyph as={AppIcons.friends} className="h-4 w-4" />
-              {friendsOpen ? 'Fechar lista de amigos' : 'Ver lista de amigos'}
-            </Button>
-            {friendsOpen && (
-              <FriendPicker
-                friends={friends?.friends}
-                league={league}
-                inviting={invite.isPending ? invite.variables : undefined}
-                onInvite={(friend) => invite.mutate(friend.username)}
-              />
-            )}
-          </div>
+          <Button
+            variant="secondary"
+            size="sm"
+            aria-haspopup="dialog"
+            onClick={() => {
+              invite.reset()
+              setFriendsOpen(true)
+            }}
+          >
+            <Glyph as={AppIcons.friends} className="h-4 w-4" />
+            Ver lista de amigos
+          </Button>
           <p className="text-xs font-semibold text-sand-500">
             {seats === 1 ? 'Resta 1 vaga' : `Restam ${seats} vagas`} de {league.max_members}. Para
             entrar e jogar, o convidado precisa ser Mavva Apoiador.
           </p>
         </>
       )}
+      {/* Outside the branch above: inviting the last free seat must not close it. */}
+      <Modal open={friendsOpen} onClose={() => setFriendsOpen(false)} label="Convidar amigos">
+        <div>
+          <h2 className="text-xl font-extrabold leading-tight text-ink">Convidar amigos</h2>
+          <p className="mt-1 text-sm font-semibold text-sand-500">
+            {seats <= 0
+              ? 'A liga está cheia.'
+              : seats === 1
+                ? 'Resta 1 vaga na liga.'
+                : `Restam ${seats} vagas na liga.`}
+          </p>
+        </div>
+        <FriendPicker
+          friends={friends?.friends}
+          league={league}
+          full={seats <= 0}
+          inviting={invite.isPending ? invite.variables : undefined}
+          onInvite={(friend) => invite.mutate(friend.username)}
+        />
+        {inviteError && (
+          <p role="alert" className="text-sm font-bold text-red-600">
+            {inviteError}
+          </p>
+        )}
+        <Button full variant="secondary" onClick={() => setFriendsOpen(false)}>
+          Fechar
+        </Button>
+      </Modal>
     </Card>
   )
 }
