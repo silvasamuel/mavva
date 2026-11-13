@@ -2,7 +2,7 @@
 
 export type Difficulty = 'easy' | 'medium' | 'hard' | 'expert'
 export type Testament = 'old' | 'new'
-export type QuizMode = 'practice' | 'review' | 'duel'
+export type QuizMode = 'practice' | 'review' | 'duel' | 'league'
 
 export type ReviewSpacing = 'intensive' | 'balanced' | 'relaxed'
 export type ReviewScope = 'all' | 'mistakes'
@@ -330,6 +330,8 @@ export interface QuizSession {
   completed: boolean
   timer_seconds: number | null
   duel_id: string | null
+  /** Set when this is a league round or cup match: where to go back to. */
+  league_id?: string | null
   /** Hits in a row so far (server-computed), so a reload keeps the badge. */
   combo: number
   filters: Record<string, unknown>
@@ -456,6 +458,8 @@ export interface DashboardData {
   }[]
   reviews_due: number
   friend_requests: number
+  /** League invites waiting plus leagues where it is the player's turn. */
+  leagues_pending?: number
   /** Unread "Novidades", for the bell badge. */
   notifications_unread: number
   duels: {
@@ -534,4 +538,138 @@ export interface NotificationFeed {
   /** Newest first. */
   items: NotificationItem[]
   unread_count: number
+}
+
+// --- Ligas: invite-only competitions ---
+
+export type LeagueFormat = 'points' | 'cup'
+export type LeagueStatus = 'recruiting' | 'active' | 'finished' | 'incomplete'
+export type LeagueMemberStatus = 'invited' | 'active' | 'declined' | 'left'
+
+export interface League {
+  id: string
+  name: string
+  format: LeagueFormat
+  status: LeagueStatus
+  /** Points format only. */
+  rounds: number | null
+  /** Last day of play, "YYYY-MM-DD" in the Brasília calendar. */
+  ends_on: string
+  ends_at: string
+  created_at: string
+  started_at: string | null
+  finished_at: string | null
+  owner: PublicUser
+  is_owner: boolean
+  my_status: LeagueMemberStatus
+  member_count: number
+  invited_count: number
+  max_members: number
+  champion: PublicUser | null
+  /** The fixture waiting for me right now, if any. */
+  my_match_id: string | null
+  /** Cup: until when that match can be played before it goes by walkover. */
+  my_match_deadline_at?: string | null
+  /** For the invite link; only the admin gets it, and only while recruiting. */
+  invite_code?: string | null
+}
+
+/** What the invite link shows to whoever opens it, signed in or not. */
+export interface LeagueInvitePreview {
+  name: string
+  format: LeagueFormat
+  status: LeagueStatus
+  rounds: number | null
+  ends_on: string
+  admin_name: string
+  admin_username: string
+  member_count: number
+  max_members: number
+  question_count: number
+  timer_seconds: number
+  /** False once the league has started, ended or filled up. */
+  open: boolean
+}
+
+export interface LeagueList {
+  /** False for players who aren't supporters: they can look, not create or play. */
+  can_play: boolean
+  leagues: League[]
+}
+
+export interface LeagueScore {
+  points: number
+  correct: number
+  time_seconds: number
+}
+
+export interface LeagueSide {
+  /** Null until the match that feeds this seat is decided. */
+  user: PublicUser | null
+  /** "Winner of match N" while `user` is null. */
+  from_match: number | null
+  /** Third place: the seat takes that match's loser, not its winner. */
+  from_loser?: boolean
+  /** The match that fed this seat left nobody for it. */
+  vacant?: boolean
+  played: boolean
+  /** Only once the match is decided. */
+  score: LeagueScore | null
+}
+
+export interface LeagueCupMatch {
+  id: string
+  number: number
+  a: LeagueSide
+  b: LeagueSide
+  winner_id: string | null
+  /** "walkover": the other side didn't play in time; "void": neither did. */
+  decided_by: 'points' | 'time' | 'lots' | 'walkover' | 'void' | null
+  /** Play by then or lose by walkover. */
+  deadline_at?: string | null
+  /** The semifinal losers' match, shown beside the final. */
+  third_place?: boolean
+}
+
+export interface LeagueCupRound {
+  round: number
+  label: string
+  matches: LeagueCupMatch[]
+}
+
+export interface LeagueRound {
+  match_id: string
+  round: number
+  played_count: number
+  my_score: LeagueScore | null
+  in_progress: boolean
+}
+
+export interface LeagueStanding {
+  position: number
+  user: PublicUser
+  is_me: boolean
+  points: number
+  correct: number
+  time_seconds: number
+  played: number
+  wins: number
+  /** Cup: out of the title race (may still play for third place). */
+  eliminated: boolean
+  /** Cup: 1, 2 or 3 once that place is decided. */
+  podium?: number | null
+}
+
+export interface LeagueDetail extends League {
+  can_play: boolean
+  categories: { id: number; slug: string; name: string; icon: string }[]
+  difficulties: Difficulty[]
+  question_count: number
+  timer_seconds: number
+  members: { user: PublicUser; status: LeagueMemberStatus; is_owner: boolean }[]
+  standings: LeagueStanding[]
+  /** Points format; empty otherwise. */
+  rounds_played: LeagueRound[]
+  /** Cup format; empty otherwise. */
+  bracket: LeagueCupRound[]
 }

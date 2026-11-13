@@ -99,7 +99,7 @@ Constraint de aplicação (validada no seed): 4 opções, exatamente 1 `is_corre
 |---|---|---|
 | id | UUID PK | |
 | user_id | UUID FK | |
-| mode | ENUM(practice, review) | review consome a fila SRS |
+| mode | ENUM(practice, review, duel, league) | review consome a fila SRS; duel e league não pagam XP por resposta |
 | filters | JSONB | `{testament, category_ids, difficulty}` — snapshot do que foi pedido |
 | question_count | INT | |
 | correct_count | INT | atualizado a cada resposta |
@@ -155,6 +155,34 @@ position INT NULL, created_at` — UNIQUE `(season_id, user_id)`, índice em `us
 Só jogadores que ganharam XP na temporada. `position` segue a ordem do ranking global
 (XP, depois username) e é NULL para contas inativas. Id inteiro gerado pelo banco porque
 as linhas entram num único `INSERT … SELECT`.
+
+### leagues *(competições por convite: tabela de pontos ou copa)*
+`id UUID PK, owner_id FK users (CASCADE), name VARCHAR(40), format ENUM(points, cup),
+status ENUM(recruiting, active, finished, incomplete), category_ids JSONB, difficulties JSONB,
+rounds INT NULL (só pontos), question_count INT (5–20), timer_seconds INT,
+invite_code VARCHAR(16) UNIQUE, ends_at TIMESTAMPTZ, created_at, started_at NULL, finished_at NULL,
+champion_id FK users NULL (SET NULL)`
+`ends_at` é a meia-noite de Brasília depois do último dia de jogo; o fechamento é aplicado
+na leitura (`league_service.ensure_closed`), como as temporadas.
+
+### league_members
+`id UUID PK, league_id FK (CASCADE), user_id FK (CASCADE), status ENUM(invited, active,
+declined, left), invited_at, joined_at NULL` — UNIQUE(league_id, user_id).
+
+### league_matches *(uma rodada de pontos ou um duelo da copa)*
+`id UUID PK, league_id FK (CASCADE), round INT, position INT, question_ids JSONB,
+player_a_id / player_b_id FK users NULL, feeder_a_id / feeder_b_id FK league_matches NULL,
+winner_id FK users NULL, third_place BOOL (disputa de 3º lugar: os lugares recebem os
+perdedores das semifinais), deadline_at TIMESTAMPTZ NULL (copa: 24 h depois de os dois
+jogadores serem conhecidos), decided_by VARCHAR(10) NULL (points, time, lots, walkover,
+void), resolved_at NULL`
+— UNIQUE(league_id, round, position). Na copa, cada lado é um jogador ou o vencedor de uma
+partida anterior (`feeder_*`); a rodada de pontos não tem jogadores próprios.
+
+### league_entries *(a vez de um jogador numa partida)*
+`id UUID PK, match_id FK (CASCADE), user_id FK (CASCADE), session_id FK quiz_sessions UNIQUE,
+points INT, correct INT, time_seconds INT, finished_at NULL` — UNIQUE(match_id, user_id).
+Preenchida quando a sessão termina (concluída ou abandonada).
 
 ### announcements *(novidades publicadas pela equipe)*
 `id UUID PK, title VARCHAR(120), body TEXT, kind ENUM(feature, improvement, fix, notice),

@@ -1,0 +1,990 @@
+"""Private leagues: invite-only competitions over a chosen slice of the bank.
+
+A league is created by a supporter, who invites players by username. Once it
+starts nobody else joins and the fixtures are drawn:
+
+- points: N rounds; every member plays each one (in order) and the most
+  points by the end date wins;
+- cup: a knockout bracket of 1v1 matches, drawn at random at the start.
+
+Every fixture freezes its questions, so everyone who plays it answers the
+same ones, each in their own QuizSession (mode `league`). Reusing QuizSession
+means league answers feed accuracy, wisdom, spaced repetition and streaks
+like any other study, but they pay no season XP: only supporters can play, and
+the global ranking must not be something a donation can move.
+
+The end date is enforced lazily, like seasons: whoever looks at a league
+after it has passed closes it (see `ensure_closed`).
+"""
+
+import random
+import secrets
+import uuid
+from dataclasses import dataclass, field
+from datetime import UTC, date, datetime, time, timedelta
+from zoneinfo import ZoneInfo
+
+from sqlalchemy import func, select
+from sqlalchemy.orm import Session, selectinload
+
+from app.models import (
+    Category,
+    League,
+    LeagueEntry,
+    LeagueMatch,
+    LeagueMember,
+    Question,
+    QuizAnswer,
+    QuizSession,
+    QuizSessionQuestion,
+    User,
+)
+from app.models.enums import (
+    Difficulty,
+    LeagueFormat,
+    LeagueMemberStatus,
+    LeagueStatus,
+    QuizMode,
+)
+from app.services import achievement_service
+from app.services.gamification import XP_BY_DIFFICULTY
+
+# The admin picks these per league, inside these bounds.
+DEFAULT_QUESTION_COUNT = 10
+MIN_QUESTION_COUNT = 5
+MAX_QUESTION_COUNT = 20
+DEFAULT_TIMER_SECONDS = 20
+TIMER_CHOICES = (10, 15, 20, 30, 45, 60)
+# A knockout only closes its bracket with a power of two: no byes, no lopsided
+# rounds. (20 is the member cap, so 16 is the largest cup.)
+CUP_SIZES = (2, 4, 8, 16)
+# A cup match must be played within this long of both players being known.
+CUP_MATCH_HOURS = 24
+MAX_MEMBERS = 20
+MIN_CATEGORIES = 7
+MIN_ROUNDS = 1
+MAX_ROUNDS = 30
+MAX_DAYS_AHEAD = 365
+# Leagues one player may be running (recruiting or active) at the same time.
+MAX_OWNED_OPEN = 5
+
+LEAGUE_TZ = ZoneInfo("America/Sao_Paulo")
+
+OPEN_STATUSES = (LeagueStatus.RECRUITING, LeagueStatus.ACTIVE)
+
+
+class LeagueError(Exception):
+    def __init__(self, message: str, status_code: int = 400) -> None:
+        super().__init__(message)
+        self.message = message
+        self.status_code = status_code
+
+
+def _now() -> datetime:
+    return datetime.now(UTC)
+
+
+def league_today() -> date:
+    return _now().astimezone(LEAGUE_TZ).date()
+
+
+def ends_at_for(ends_on: date) -> datetime:
+    """The league's last day runs to midnight in Brasília."""
+    return datetime.combine(ends_on + timedelta(days=1), time.min, LEAGUE_TZ).astimezone(UTC)
+
+
+def ends_on_of(league: League) -> date:
+    return (league.ends_at.astimezone(LEAGUE_TZ) - timedelta(seconds=1)).date()
+
+
+def full_round_seconds(league: League) -> int:
+    """A round nobody can be faster than: what an abandoned session is charged."""
+    return league.question_count * league.timer_seconds
+
+
+def require_supporter(user: User) -> None:
+    if not user.is_supporter:
+        raise LeagueError(
+            "As ligas são para Mavva Apoiadores. Apoie o Mavva para criar e jogar.", status_code=403
+        )
+
+
+# --- loading -------------------------------------------------------------------
+
+
+def _load(db: Session, league_id: uuid.UUID) -> League | None:
+    return db.scalar(
+        select(League)
+        .where(League.id == league_id)
+        .options(
+            selectinload(League.members).selectinload(LeagueMember.user).selectinload(User.stats),
+            selectinload(League.matches).selectinload(LeagueMatch.entries),
+            selectinload(League.owner),
+            selectinload(League.champion).selectinload(User.stats),
+        )
+        .execution_options(populate_existing=True)
+    )
+
+
+def membership(league: League, user_id: uuid.UUID) -> LeagueMember | None:
+    return next((m for m in league.members if m.user_id == user_id), None)
+
+
+def active_members(league: League) -> list[LeagueMember]:
+    return [m for m in league.members if m.status == LeagueMemberStatus.ACTIVE]
+
+
+def get_league_for_user(db: Session, user: User, league_id: uuid.UUID) -> League:
+    """A league is private: only its players and the people invited may see it."""
+    league = _load(db, league_id)
+    member = membership(league, user.id) if league else None
+    if (
+        league is None
+        or member is None
+        or member.status not in (LeagueMemberStatus.ACTIVE, LeagueMemberStatus.INVITED)
+    ):
+        raise LeagueError("Liga não encontrada", status_code=404)
+    refresh(db, league)
+    return league
+
+
+def list_for_user(db: Session, user: User) -> list[League]:
+    """Every league the player is in or invited to, newest first."""
+    ids = list(
+        db.scalars(
+            select(LeagueMember.league_id).where(
+                LeagueMember.user_id == user.id,
+                LeagueMember.status.in_([LeagueMemberStatus.ACTIVE, LeagueMemberStatus.INVITED]),
+            )
+        )
+    )
+    leagues = [league for league in (_load(db, league_id) for league_id in ids) if league]
+    for league in leagues:
+        refresh(db, league)
+    db.flush()
+    leagues.sort(key=lambda league: league.created_at, reverse=True)
+    return leagues
+
+
+# --- creation and membership -----------------------------------------------------
+
+
+def _pool(db: Session, category_ids: list[int], difficulties: list[str]) -> list[uuid.UUID]:
+    return list(
+        db.scalars(
+            select(Question.id).where(
+                Question.is_active,
+                Question.category_id.in_(category_ids),
+                Question.difficulty.in_([Difficulty(value) for value in difficulties]),
+            )
+        )
+    )
+
+
+def create_league(
+    db: Session,
+    owner: User,
+    *,
+    name: str,
+    format: LeagueFormat,
+    category_ids: list[int],
+    difficulties: list[Difficulty],
+    rounds: int | None,
+    ends_on: date,
+    question_count: int = DEFAULT_QUESTION_COUNT,
+    timer_seconds: int = DEFAULT_TIMER_SECONDS,
+) -> League:
+    require_supporter(owner)
+    if not MIN_QUESTION_COUNT <= question_count <= MAX_QUESTION_COUNT:
+        raise LeagueError(
+            f"Cada partida pode ter de {MIN_QUESTION_COUNT} a {MAX_QUESTION_COUNT} perguntas"
+        )
+    if timer_seconds not in TIMER_CHOICES:
+        raise LeagueError("Escolha um dos tempos por pergunta oferecidos")
+    categories = sorted(set(category_ids))
+    if len(categories) < MIN_CATEGORIES:
+        raise LeagueError(f"Escolha pelo menos {MIN_CATEGORIES} temas")
+    known = db.scalar(select(func.count()).select_from(Category).where(Category.id.in_(categories)))
+    if known != len(categories):
+        raise LeagueError("Um dos temas escolhidos não existe")
+    levels = sorted({difficulty.value for difficulty in difficulties})
+    if not levels:
+        raise LeagueError("Escolha pelo menos uma dificuldade")
+
+    if format == LeagueFormat.POINTS:
+        if rounds is None or not MIN_ROUNDS <= rounds <= MAX_ROUNDS:
+            raise LeagueError(f"Escolha de {MIN_ROUNDS} a {MAX_ROUNDS} rodadas")
+    else:
+        rounds = None
+
+    today = league_today()
+    if ends_on <= today:
+        raise LeagueError("A data de encerramento precisa ser a partir de amanhã")
+    if ends_on > today + timedelta(days=MAX_DAYS_AHEAD):
+        raise LeagueError("A data de encerramento pode ser no máximo daqui a um ano")
+
+    if len(_pool(db, categories, levels)) < question_count:
+        raise LeagueError("Há poucas perguntas com esses temas e dificuldades. Amplie a seleção.")
+
+    running = db.scalar(
+        select(func.count())
+        .select_from(League)
+        .where(League.owner_id == owner.id, League.status.in_(OPEN_STATUSES))
+    )
+    if (running or 0) >= MAX_OWNED_OPEN:
+        raise LeagueError(
+            f"Você já tem {MAX_OWNED_OPEN} ligas em aberto. Encerre uma antes de criar outra."
+        )
+
+    league = League(
+        owner_id=owner.id,
+        name=name,
+        format=format,
+        status=LeagueStatus.RECRUITING,
+        category_ids=categories,
+        difficulties=levels,
+        rounds=rounds,
+        question_count=question_count,
+        timer_seconds=timer_seconds,
+        invite_code=secrets.token_urlsafe(9),
+        ends_at=ends_at_for(ends_on),
+    )
+    league.members.append(
+        LeagueMember(user_id=owner.id, status=LeagueMemberStatus.ACTIVE, joined_at=_now())
+    )
+    db.add(league)
+    db.flush()
+    return league
+
+
+def _require_owner(league: League, user: User) -> None:
+    if league.owner_id != user.id:
+        raise LeagueError("Só o admin da liga pode fazer isso", status_code=403)
+
+
+def _require_recruiting(league: League) -> None:
+    if league.status != LeagueStatus.RECRUITING:
+        raise LeagueError("A liga já começou: os jogadores não mudam mais")
+
+
+def invite(db: Session, owner: User, league: League, username: str) -> LeagueMember:
+    _require_owner(league, owner)
+    _require_recruiting(league)
+    target = db.scalar(
+        select(User).where(User.username == username.strip().lower(), User.is_active.is_(True))
+    )
+    if target is None:
+        raise LeagueError("Jogador não encontrado", status_code=404)
+    if target.id == owner.id:
+        raise LeagueError("Você já está na sua liga")
+
+    existing = membership(league, target.id)
+    if existing is not None and existing.status == LeagueMemberStatus.ACTIVE:
+        raise LeagueError("Esse jogador já está na liga")
+    if existing is not None and existing.status == LeagueMemberStatus.INVITED:
+        raise LeagueError("Esse jogador já foi convidado")
+
+    holding = sum(
+        1
+        for m in league.members
+        if m.status in (LeagueMemberStatus.ACTIVE, LeagueMemberStatus.INVITED)
+    )
+    if holding >= MAX_MEMBERS:
+        raise LeagueError(f"Uma liga tem no máximo {MAX_MEMBERS} jogadores, convites inclusos")
+
+    if existing is not None:
+        # Declined or left before: the owner may ask again.
+        existing.status = LeagueMemberStatus.INVITED
+        existing.invited_at = _now()
+        existing.joined_at = None
+        member = existing
+    else:
+        member = LeagueMember(user_id=target.id, status=LeagueMemberStatus.INVITED)
+        league.members.append(member)
+    db.flush()
+    return member
+
+
+def join(db: Session, user: User, league: League) -> LeagueMember:
+    member = membership(league, user.id)
+    if member is None or member.status != LeagueMemberStatus.INVITED:
+        raise LeagueError("Você não tem convite para esta liga", status_code=404)
+    _require_recruiting(league)
+    require_supporter(user)
+    if len(active_members(league)) >= MAX_MEMBERS:
+        raise LeagueError(f"A liga já tem {MAX_MEMBERS} jogadores")
+    member.status = LeagueMemberStatus.ACTIVE
+    member.joined_at = _now()
+    db.flush()
+    return member
+
+
+def decline(db: Session, user: User, league: League) -> None:
+    member = membership(league, user.id)
+    if member is None or member.status != LeagueMemberStatus.INVITED:
+        raise LeagueError("Você não tem convite para esta liga", status_code=404)
+    member.status = LeagueMemberStatus.DECLINED
+    db.flush()
+
+
+def leave(db: Session, user: User, league: League) -> None:
+    member = membership(league, user.id)
+    if member is None or member.status != LeagueMemberStatus.ACTIVE:
+        raise LeagueError("Você não está nesta liga", status_code=404)
+    if league.owner_id == user.id:
+        raise LeagueError("O admin da liga não pode sair dela; apague a liga")
+    _require_recruiting(league)
+    member.status = LeagueMemberStatus.LEFT
+    db.flush()
+
+
+def remove_member(db: Session, owner: User, league: League, user_id: uuid.UUID) -> None:
+    """Takes a player out, or withdraws an invite, while the league is recruiting."""
+    _require_owner(league, owner)
+    _require_recruiting(league)
+    if user_id == owner.id:
+        raise LeagueError("O admin da liga não pode ser removido")
+    member = membership(league, user_id)
+    if member is None:
+        raise LeagueError("Esse jogador não está na liga", status_code=404)
+    league.members.remove(member)
+    db.flush()
+
+
+def delete_league(db: Session, owner: User, league: League) -> None:
+    _require_owner(league, owner)
+    if league.status != LeagueStatus.RECRUITING:
+        raise LeagueError("Uma liga que já começou não pode ser apagada")
+    db.delete(league)
+    db.flush()
+
+
+# --- invite link -------------------------------------------------------------------
+
+
+def _by_invite_code(db: Session, code: str) -> League:
+    league_id = db.scalar(select(League.id).where(League.invite_code == code))
+    league = _load(db, league_id) if league_id else None
+    if league is None:
+        raise LeagueError("Este link de convite não existe mais", status_code=404)
+    refresh(db, league)
+    return league
+
+
+def invite_preview(db: Session, code: str) -> League:
+    """What the invite link shows before anyone signs in: just the league."""
+    return _by_invite_code(db, code)
+
+
+def seats_left(league: League) -> int:
+    holding = sum(
+        1
+        for m in league.members
+        if m.status in (LeagueMemberStatus.ACTIVE, LeagueMemberStatus.INVITED)
+    )
+    return max(0, MAX_MEMBERS - holding)
+
+
+def redeem_invite(db: Session, user: User, code: str) -> League:
+    """Opening the link is being invited: the player lands on the invitation,
+    to accept or decline like any other (accepting still takes a supporter)."""
+    league = _by_invite_code(db, code)
+    member = membership(league, user.id)
+    if member is not None and member.status in (
+        LeagueMemberStatus.ACTIVE,
+        LeagueMemberStatus.INVITED,
+    ):
+        return league
+    if league.status != LeagueStatus.RECRUITING:
+        raise LeagueError("Esta liga já começou: não dá mais para entrar")
+    if seats_left(league) <= 0:
+        raise LeagueError(f"Esta liga já tem os {MAX_MEMBERS} jogadores")
+    if member is not None:
+        member.status = LeagueMemberStatus.INVITED
+        member.invited_at = _now()
+        member.joined_at = None
+    else:
+        league.members.append(LeagueMember(user_id=user.id, status=LeagueMemberStatus.INVITED))
+    db.flush()
+    return league
+
+
+# --- starting: the draw ----------------------------------------------------------
+
+
+class _Deck:
+    """Hands out question sets, going through the whole pool before repeating."""
+
+    def __init__(self, pool: list[uuid.UUID], rng: random.Random, size: int) -> None:
+        self._pool = pool
+        self._rng = rng
+        self._size = size
+        self._queue: list[uuid.UUID] = []
+
+    def draw(self) -> list[str]:
+        hand: list[uuid.UUID] = []
+        while len(hand) < self._size:
+            if not self._queue:
+                self._queue = [q for q in self._pool if q not in hand]
+                self._rng.shuffle(self._queue)
+            hand.append(self._queue.pop())
+        return [str(question_id) for question_id in hand]
+
+
+@dataclass
+class _Seat:
+    """Who sits on one side of a cup match: a player, or the winner of a match."""
+
+    player_id: uuid.UUID | None = None
+    match: LeagueMatch | None = None
+
+
+def build_bracket(player_ids: list[uuid.UUID], draw_questions) -> list[LeagueMatch]:  # type: ignore[no-untyped-def]
+    """The whole knockout tree for players already in drawn order.
+
+    The count is a power of two, so every round pairs everyone left and the
+    bracket closes evenly. With four or more players the two semifinal losers
+    also meet, in the last round, for third place.
+    """
+    if len(player_ids) not in CUP_SIZES:
+        raise ValueError(f"a cup takes {CUP_SIZES} players, not {len(player_ids)}")
+    matches: list[LeagueMatch] = []
+    seats = [_Seat(player_id=player_id) for player_id in player_ids]
+    round_number = 0
+    while len(seats) > 1:
+        round_number += 1
+        winners: list[_Seat] = []
+        for index in range(0, len(seats), 2):
+            a, b = seats[index], seats[index + 1]
+            match = LeagueMatch(
+                id=uuid.uuid4(),
+                round=round_number,
+                position=index // 2 + 1,
+                question_ids=draw_questions(),
+                player_a_id=a.player_id,
+                player_b_id=b.player_id,
+                feeder_a_id=a.match.id if a.match else None,
+                feeder_b_id=b.match.id if b.match else None,
+            )
+            matches.append(match)
+            winners.append(_Seat(match=match))
+        seats = winners
+
+    semifinals = [m for m in matches if m.round == round_number - 1]
+    if len(semifinals) == 2:
+        matches.append(
+            LeagueMatch(
+                id=uuid.uuid4(),
+                round=round_number,
+                position=2,  # beside the final
+                question_ids=draw_questions(),
+                feeder_a_id=semifinals[0].id,
+                feeder_b_id=semifinals[1].id,
+                third_place=True,
+            )
+        )
+    return matches
+
+
+def cup_size_message(count: int) -> str:
+    """Why a cup of this size can't start, and the nearest sizes that can."""
+    below = max((size for size in CUP_SIZES if size < count), default=None)
+    above = min((size for size in CUP_SIZES if size > count), default=None)
+    options = []
+    if above is not None:
+        options.append(f"convide mais {above - count}")
+    if below is not None:
+        options.append(f"remova {count - below}")
+    return (
+        "Para fechar as chaves, a copa precisa de 2, 4, 8 ou 16 jogadores. "
+        f"Com {count}, {' ou '.join(options)}."
+    )
+
+
+def start(db: Session, owner: User, league: League, rng: random.Random | None = None) -> League:
+    _require_owner(league, owner)
+    _require_recruiting(league)
+    if league.ends_at <= _now():
+        raise LeagueError("A data de encerramento desta liga já passou")
+    players = active_members(league)
+    if len(players) < 2:
+        raise LeagueError("Uma liga precisa de pelo menos 2 jogadores para começar")
+    if league.format == LeagueFormat.CUP and len(players) not in CUP_SIZES:
+        raise LeagueError(cup_size_message(len(players)))
+    pool = _pool(db, league.category_ids, league.difficulties)
+    if len(pool) < league.question_count:
+        raise LeagueError("Não há perguntas suficientes para os temas desta liga")
+
+    rng = rng or random.Random()
+    deck = _Deck(pool, rng, league.question_count)
+    # Invites nobody answered lapse: from here on the players are fixed.
+    for member in [m for m in league.members if m.status == LeagueMemberStatus.INVITED]:
+        league.members.remove(member)
+
+    if league.format == LeagueFormat.POINTS:
+        for round_number in range(1, (league.rounds or 1) + 1):
+            league.matches.append(
+                LeagueMatch(round=round_number, position=1, question_ids=deck.draw())
+            )
+    else:
+        order = [m.user_id for m in players]
+        rng.shuffle(order)
+        # Round by round: a match must exist before a later one can name it
+        # as its feeder.
+        for match in build_bracket(order, deck.draw):
+            league.matches.append(match)
+            db.flush()
+        # Round 1 is ready to be played: its 24 hours start now.
+        _advance(league)
+
+    league.status = LeagueStatus.ACTIVE
+    league.started_at = _now()
+    db.flush()
+    return league
+
+
+# --- playing ---------------------------------------------------------------------
+
+
+def _entry(match: LeagueMatch, user_id: uuid.UUID) -> LeagueEntry | None:
+    return next((e for e in match.entries if e.user_id == user_id), None)
+
+
+def _is_cup_player(match: LeagueMatch, user_id: uuid.UUID) -> bool:
+    return user_id in (match.player_a_id, match.player_b_id)
+
+
+def playable_match(league: League, user: User) -> LeagueMatch | None:
+    """The fixture the player should play next, if there is one right now."""
+    if league.status != LeagueStatus.ACTIVE or league.ends_at <= _now():
+        return None
+    member = membership(league, user.id)
+    if member is None or member.status != LeagueMemberStatus.ACTIVE:
+        return None
+    for match in league.matches:
+        entry = _entry(match, user.id)
+        if entry is not None and entry.finished_at is not None:
+            continue
+        if league.format == LeagueFormat.POINTS:
+            return match  # rounds go in order: the first one not finished
+        if (
+            _is_cup_player(match, user.id)
+            and match.resolved_at is None
+            and match.player_a_id is not None
+            and match.player_b_id is not None
+        ):
+            return match
+    return None
+
+
+def play(db: Session, user: User, league: League, match_id: uuid.UUID) -> QuizSession:
+    """Opens (or resumes) the player's session for a fixture."""
+    require_supporter(user)
+    if league.status != LeagueStatus.ACTIVE:
+        raise LeagueError("Esta liga não está em andamento")
+    match = next((m for m in league.matches if m.id == match_id), None)
+    if match is None:
+        raise LeagueError("Partida não encontrada", status_code=404)
+    member = membership(league, user.id)
+    if member is None or member.status != LeagueMemberStatus.ACTIVE:
+        raise LeagueError("Você não joga nesta liga", status_code=403)
+
+    entry = _entry(match, user.id)
+    if entry is not None and entry.finished_at is not None:
+        raise LeagueError("Você já jogou esta partida")
+    if entry is not None:
+        return entry.session  # reload or second device: same session
+
+    if league.format == LeagueFormat.CUP:
+        if not _is_cup_player(match, user.id):
+            raise LeagueError("Esta partida não é sua", status_code=403)
+        if match.player_a_id is None or match.player_b_id is None:
+            raise LeagueError("O adversário desta partida ainda não foi definido")
+        if match.resolved_at is not None:
+            raise LeagueError("Esta partida já foi decidida")
+        if match.deadline_at is not None and match.deadline_at <= _now():
+            raise LeagueError("O prazo deste duelo acabou")
+    else:
+        expected = playable_match(league, user)
+        if expected is None or expected.id != match.id:
+            raise LeagueError("Jogue as rodadas em ordem")
+
+    question_ids = [uuid.UUID(value) for value in match.question_ids]
+    session = QuizSession(
+        user_id=user.id,
+        mode=QuizMode.LEAGUE,
+        question_count=len(question_ids),
+        filters={
+            "timer_seconds": league.timer_seconds,
+            "league_id": str(league.id),
+            "league_match_id": str(match.id),
+        },
+    )
+    db.add(session)
+    db.flush()
+    for position, question_id in enumerate(question_ids):
+        db.add(
+            QuizSessionQuestion(session_id=session.id, question_id=question_id, position=position)
+        )
+    match.entries.append(LeagueEntry(user_id=user.id, session_id=session.id))
+    db.flush()
+    return session
+
+
+def league_id_for_session(session: QuizSession) -> uuid.UUID | None:
+    value = (session.filters or {}).get("league_id")
+    return uuid.UUID(value) if value else None
+
+
+def _session_points(db: Session, session_id: uuid.UUID) -> int:
+    """League points: each correct answer is worth its difficulty (10 to 50)."""
+    difficulties = db.scalars(
+        select(Question.difficulty)
+        .join(QuizAnswer, QuizAnswer.question_id == Question.id)
+        .where(QuizAnswer.session_id == session_id, QuizAnswer.is_correct.is_(True))
+    )
+    return sum(XP_BY_DIFFICULTY[difficulty] for difficulty in difficulties)
+
+
+def settle_for_session(db: Session, session_id: uuid.UUID) -> League | None:
+    """Called when a quiz session ends (completed or abandoned): records the
+    score if it was a league fixture and moves the league forward."""
+    entry = db.scalar(select(LeagueEntry).where(LeagueEntry.session_id == session_id))
+    if entry is None or entry.finished_at is not None:
+        return None
+    session = db.get(QuizSession, session_id)
+    if session is None or (session.completed_at is None and session.abandoned_at is None):
+        return None
+    match = db.get(LeagueMatch, entry.match_id)
+    league = _load(db, match.league_id) if match else None
+    if league is None:
+        return None
+
+    entry = next(e for m in league.matches for e in m.entries if e.session_id == session_id)
+    entry.points = _session_points(db, session_id)
+    entry.correct = session.correct_count
+    # Walking out is never faster than playing: it is charged the full clock.
+    entry.time_seconds = (
+        session.duration_seconds
+        if session.completed_at is not None and session.duration_seconds is not None
+        else full_round_seconds(league)
+    )
+    entry.finished_at = _now()
+    db.flush()
+
+    if league.status == LeagueStatus.ACTIVE:
+        match = next(m for m in league.matches if m.id == entry.match_id)
+        if league.format == LeagueFormat.CUP:
+            _resolve_cup_match(league, match)
+        elif _all_rounds_played(league):
+            _finish_points(league)
+        db.flush()
+    # A perfect round, a first match, a title: whatever this unlocked.
+    _award_achievements(db, league, only_user_id=None if _is_over(league) else entry.user_id)
+    return league
+
+
+def _is_over(league: League) -> bool:
+    return league.status not in OPEN_STATUSES
+
+
+def _award_achievements(db: Session, league: League, only_user_id: uuid.UUID | None) -> None:
+    """League badges for one player, or for everyone once the league is over."""
+    for member in active_members(league):
+        if only_user_id is not None and member.user_id != only_user_id:
+            continue
+        stats = member.user.stats
+        if stats is not None:
+            achievement_service.evaluate_achievements(db, member.user, stats)
+    db.flush()
+
+
+def _resolve_cup_match(
+    league: League, match: LeagueMatch, rng: random.Random | None = None
+) -> None:
+    """Settles a match both players have finished."""
+    if match.resolved_at is not None:
+        return
+    a = _entry(match, match.player_a_id) if match.player_a_id else None
+    b = _entry(match, match.player_b_id) if match.player_b_id else None
+    if a is None or b is None or a.finished_at is None or b.finished_at is None:
+        return
+
+    if a.points != b.points:
+        winner, decided_by = (a if a.points > b.points else b), "points"
+    elif a.time_seconds != b.time_seconds:
+        winner, decided_by = (a if a.time_seconds < b.time_seconds else b), "time"
+    else:
+        # A bracket needs someone to advance: a dead heat is drawn at random.
+        winner, decided_by = (rng or random.Random()).choice([a, b]), "lots"
+    _settle_match(league, match, winner.user_id, decided_by)
+
+
+def _settle_match(
+    league: League, match: LeagueMatch, winner_id: uuid.UUID | None, decided_by: str
+) -> None:
+    match.winner_id = winner_id
+    match.decided_by = decided_by
+    match.resolved_at = _now()
+    _advance(league)
+
+
+def _advance(league: League) -> None:
+    """Moves the bracket on: seats the winners, starts the clock of matches
+    that now have both players, and settles the ones nobody can contest.
+
+    A match that ended with no winner (neither played in time) leaves an empty
+    seat ahead; whoever was to meet that winner goes through by walkover. Two
+    empty seats make another match with no winner. If that reaches the final,
+    the cup has no champion.
+
+    The third-place match takes the losers of the semifinals instead. The cup
+    is over once every match is settled, so third place is played out too.
+    """
+    by_id = {match.id: match for match in league.matches}
+    moved = True
+    while moved:
+        moved = False
+        for match in league.matches:  # in round order
+            if match.resolved_at is not None:
+                continue
+            waiting = False
+            for side in ("a", "b"):
+                feeder = by_id.get(getattr(match, f"feeder_{side}_id"))
+                if feeder is None:
+                    continue
+                if feeder.resolved_at is None:
+                    waiting = True
+                else:
+                    advancing = _loser_of(feeder) if match.third_place else feeder.winner_id
+                    setattr(match, f"player_{side}_id", advancing)
+            if waiting:
+                continue
+            present = [p for p in (match.player_a_id, match.player_b_id) if p is not None]
+            if len(present) == 2:
+                if match.deadline_at is None:
+                    match.deadline_at = _now() + timedelta(hours=CUP_MATCH_HOURS)
+                continue
+            match.winner_id = present[0] if present else None
+            match.decided_by = "walkover" if present else "void"
+            match.resolved_at = _now()
+            moved = True
+
+    final = final_of(league)
+    if (
+        final is None
+        or league.status != LeagueStatus.ACTIVE
+        or any(match.resolved_at is None for match in league.matches)
+    ):
+        return
+    league.finished_at = _now()
+    if final.winner_id is None:
+        league.status = LeagueStatus.INCOMPLETE
+    else:
+        league.status = LeagueStatus.FINISHED
+        league.champion_id = final.winner_id
+
+
+def final_of(league: League) -> LeagueMatch | None:
+    return max(
+        (match for match in league.matches if not match.third_place),
+        key=lambda match: match.round,
+        default=None,
+    )
+
+
+def third_place_of(league: League) -> LeagueMatch | None:
+    return next((match for match in league.matches if match.third_place), None)
+
+
+def _loser_of(match: LeagueMatch) -> uuid.UUID | None:
+    """Who lost a settled match; nobody if it had no winner or no opponent."""
+    if match.winner_id is None:
+        return None
+    return match.player_b_id if match.winner_id == match.player_a_id else match.player_a_id
+
+
+def _still_playing(entry: LeagueEntry | None, league: League, now: datetime) -> bool:
+    """Someone mid-round when the clock runs out gets to finish that round."""
+    if entry is None or entry.finished_at is not None:
+        return False
+    grace = timedelta(seconds=full_round_seconds(league) + 60)
+    return entry.session.started_at > now - grace
+
+
+def apply_deadlines(league: League, now: datetime | None = None) -> bool:
+    """Walkovers for cup matches past their 24 hours. Returns whether anything changed.
+
+    Whoever played wins over whoever didn't. If neither played the match has
+    no winner, and the bracket moves on without one (see `_advance`).
+    """
+    if league.format != LeagueFormat.CUP or league.status != LeagueStatus.ACTIVE:
+        return False
+    now = now or _now()
+    changed = False
+    for match in league.matches:
+        if (
+            match.resolved_at is not None
+            or match.deadline_at is None
+            or match.deadline_at > now
+            or match.player_a_id is None
+            or match.player_b_id is None
+        ):
+            continue
+        a = _entry(match, match.player_a_id)
+        b = _entry(match, match.player_b_id)
+        if _still_playing(a, league, now) or _still_playing(b, league, now):
+            continue
+        played = [e for e in (a, b) if e is not None and e.finished_at is not None]
+        if len(played) == 2:
+            _resolve_cup_match(league, match)
+        elif played:
+            _settle_match(league, match, played[0].user_id, "walkover")
+        else:
+            _settle_match(league, match, None, "void")
+        changed = True
+        if league.status != LeagueStatus.ACTIVE:
+            break
+    return changed
+
+
+def refresh(db: Session, league: League) -> bool:
+    """Applies everything time decides: the end date and the cup deadlines."""
+    was_open = not _is_over(league)
+    changed = ensure_closed(db, league) or apply_deadlines(league)
+    if changed:
+        db.flush()
+        if was_open and _is_over(league):
+            _award_achievements(db, league, only_user_id=None)
+    return changed
+
+
+def _all_rounds_played(league: League) -> bool:
+    players = {m.user_id for m in active_members(league)}
+    return all(
+        players <= {e.user_id for e in match.entries if e.finished_at is not None}
+        for match in league.matches
+    )
+
+
+def _finish_points(league: League) -> None:
+    table = standings(league)
+    leader = table[0] if table and table[0].played > 0 else None
+    league.finished_at = _now()
+    if leader is None:
+        league.status = LeagueStatus.INCOMPLETE
+        return
+    league.status = LeagueStatus.FINISHED
+    league.champion_id = leader.user_id
+
+
+def ensure_closed(db: Session, league: League) -> bool:
+    """Applies the end date. Returns whether the league changed.
+
+    A points league crowns whoever leads at that moment. A cup whose final
+    was not played, and a league that never started, end as incomplete.
+    """
+    if league.status not in OPEN_STATUSES or league.ends_at > _now():
+        return False
+    if league.status == LeagueStatus.ACTIVE and league.format == LeagueFormat.POINTS:
+        _finish_points(league)
+    else:
+        league.status = LeagueStatus.INCOMPLETE
+        league.finished_at = _now()
+    return True
+
+
+# --- standings -------------------------------------------------------------------
+
+
+@dataclass
+class Standing:
+    user_id: uuid.UUID
+    username: str
+    points: int = 0
+    correct: int = 0
+    time_seconds: int = 0
+    played: int = 0  # fixtures finished
+    wins: int = 0  # cup only
+    reach: int = 0  # cup only: how far in the bracket (round number, +1 for winning it)
+    eliminated: bool = False  # cup only: out of the title race
+    podium: int | None = None  # cup only: 1, 2 or 3 once it is decided
+    position: int = field(default=0)
+
+
+def standings(league: League) -> list[Standing]:
+    """The league's own ranking.
+
+    Points: most points, then least time. Cup: champion, runner-up and third
+    place first, then how far each player got in the bracket, then points
+    scored along the way.
+    """
+    rows = {
+        m.user_id: Standing(user_id=m.user_id, username=m.user.username)
+        for m in active_members(league)
+    }
+    for match in league.matches:
+        for entry in match.entries:
+            row = rows.get(entry.user_id)
+            if row is None or entry.finished_at is None:
+                continue
+            row.points += entry.points
+            row.correct += entry.correct
+            row.time_seconds += entry.time_seconds
+            row.played += 1
+        if league.format != LeagueFormat.CUP or match.third_place:
+            # Third place is its own contest: it doesn't count as bracket progress.
+            continue
+        for player_id in (match.player_a_id, match.player_b_id):
+            row = rows.get(player_id) if player_id else None
+            if row is None:
+                continue
+            won = match.winner_id == player_id
+            row.reach = max(row.reach, match.round + (1 if won else 0))
+            if match.resolved_at is not None:
+                if won:
+                    row.wins += 1
+                else:
+                    row.eliminated = True
+
+    if league.format == LeagueFormat.CUP:
+        final, third = final_of(league), third_place_of(league)
+        medals = {
+            1: final.winner_id if final else None,
+            2: _loser_of(final) if final else None,
+            3: third.winner_id if third else None,
+        }
+        for place, user_id in medals.items():
+            if user_id in rows:
+                rows[user_id].podium = place
+        # Fourth: lost the third-place match, still ahead of everyone beaten earlier.
+        fourth = _loser_of(third) if third else None
+        ordered = sorted(
+            rows.values(),
+            key=lambda r: (
+                r.podium or (4 if r.user_id == fourth else 5),
+                -r.reach,
+                -r.points,
+                r.time_seconds,
+                r.username,
+            ),
+        )
+    else:
+        ordered = sorted(rows.values(), key=lambda r: (-r.points, r.time_seconds, r.username))
+    for index, row in enumerate(ordered, start=1):
+        row.position = index
+    return ordered
+
+
+def pending_count(db: Session, user: User) -> int:
+    """Badge for the menu: invites waiting plus leagues where it's the player's turn."""
+    count = 0
+    for league in list_for_user(db, user):
+        member = membership(league, user.id)
+        if member is None:
+            continue
+        if member.status == LeagueMemberStatus.INVITED:
+            count += league.status == LeagueStatus.RECRUITING
+        elif playable_match(league, user) is not None:
+            count += 1
+    return count

@@ -357,10 +357,10 @@ export function SupportPage() {
 const PERKS_NOW = [
   'Selo de Apoiador visível para todos os usuários',
   'Skin dourada de Apoiador no painel do jogo e na barra de XP',
+  'Ligas: crie competições só para convidados, em pontos ou copa, e jogue nelas',
 ] as const
 
 const PERKS_SOON = [
-  'Criar ligas só para convidados e disputar com a sua turma',
   'Adicionar as suas próprias perguntas à liga',
   'Mavva sem anúncios, para sempre',
   'Missões diárias',

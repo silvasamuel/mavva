@@ -38,6 +38,7 @@ class QuizMode(StrEnum):
     PRACTICE = "practice"
     REVIEW = "review"
     DUEL = "duel"
+    LEAGUE = "league"  # a league round or cup match (see services/league_service.py)
 
 
 class FriendshipStatus(StrEnum):
@@ -101,3 +102,22 @@ class SupportPaymentStatus(StrEnum):
     APPROVED = "approved"  # money received
     EXPIRED = "expired"  # nobody paid before the deadline
     CANCELLED = "cancelled"  # refused, refunded or charged back by the provider
+
+
+class LeagueFormat(StrEnum):
+    POINTS = "points"  # everyone plays every round; most points wins
+    CUP = "cup"  # knockout bracket of 1v1 matches
+
+
+class LeagueStatus(StrEnum):
+    RECRUITING = "recruiting"  # owner is inviting; nothing to play yet
+    ACTIVE = "active"  # started: fixtures drawn, no more joining
+    FINISHED = "finished"  # has a champion
+    INCOMPLETE = "incomplete"  # the end date came first (never started, or cup not played out)
+
+
+class LeagueMemberStatus(StrEnum):
+    INVITED = "invited"
+    ACTIVE = "active"
+    DECLINED = "declined"
+    LEFT = "left"
