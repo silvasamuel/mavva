@@ -146,15 +146,28 @@ describe('LeagueCreatePage', () => {
     renderAt('/leagues/new')
 
     const submit = screen.getByRole('button', { name: 'Criar liga e convidar jogadores' })
+    // The form says what the name needs and what still blocks the button.
+    expect(screen.getByText('Mínimo de 3 letras')).toBeInTheDocument()
+    expect(screen.getByText('0/40')).toBeInTheDocument()
+    expect(screen.getByText(/um nome com pelo menos 3 letras; 7 temas/)).toBeInTheDocument()
+    await user.type(screen.getByLabelText('Nome da liga'), 'Li')
+    expect(screen.getByText(/um nome com pelo menos 3 letras/)).toBeInTheDocument()
+    await user.clear(screen.getByLabelText('Nome da liga'))
     await user.type(screen.getByLabelText('Nome da liga'), 'Liga da Célula')
+    expect(screen.getByText('14/40')).toBeInTheDocument()
+    expect(screen.queryByText(/um nome com pelo menos/)).not.toBeInTheDocument()
     for (const index of [1, 2, 3, 4, 5, 6]) {
       await user.click(await screen.findByRole('button', { name: `Tema ${index}` }))
     }
     expect(screen.getByText(/6 escolhidos · mínimo 7/)).toBeInTheDocument()
+    expect(screen.getByText(/Para criar a liga, falta:/).parentElement).toHaveTextContent(
+      'mais 1 tema.'
+    )
     expect(submit).toBeDisabled()
 
     await user.click(screen.getByRole('button', { name: 'Tema 7' }))
     expect(submit).toBeEnabled()
+    expect(screen.queryByText(/Para criar a liga, falta:/)).not.toBeInTheDocument()
     // No difficulty left: blocked again.
     for (const name of ['Fácil', 'Médio', 'Difícil']) {
       await user.click(screen.getByRole('button', { name }))
@@ -453,6 +466,8 @@ describe('LeagueRanking and LeaguePlayers', () => {
     serve(detail())
     renderAt('/leagues/league-1/players')
     expect(await screen.findByText('Jogadores · 4')).toBeInTheDocument()
+    // Whoever created the league is its "Admin".
+    expect(screen.getByText('Admin')).toBeInTheDocument()
     expect(screen.queryByLabelText('Nome de usuário')).not.toBeInTheDocument()
     expect(screen.queryByRole('button', { name: 'Remover' })).not.toBeInTheDocument()
   })

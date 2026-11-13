@@ -13,6 +13,8 @@ import { DIFFICULTY_LABELS } from '@/lib/format'
 import { AppIcons, CategoryGlyph, Glyph } from '@/lib/icons'
 import { SupporterNotice } from './PlayButton'
 
+const MIN_NAME = 3
+const MAX_NAME = 40
 const MIN_CATEGORIES = 7
 const DIFFICULTIES: Difficulty[] = ['easy', 'medium', 'hard', 'expert']
 const MIN_ROUNDS = 1
@@ -87,11 +89,25 @@ export function LeagueCreatePage() {
 
   const all = categories ?? []
   const allSelected = all.length > 0 && categoryIds.length === all.length
-  const nameOk = name.trim().length >= 3
+  const nameLength = name.trim().length
+  const nameOk = nameLength >= MIN_NAME
   const categoriesOk = categoryIds.length >= MIN_CATEGORIES
   const difficultiesOk = difficulties.length >= 1
   const roundsOk = format === 'cup' || (rounds >= MIN_ROUNDS && rounds <= MAX_ROUNDS)
   const valid = nameOk && categoriesOk && difficultiesOk && roundsOk && endsOn !== ''
+  // What still blocks the button, in the order the form asks for it.
+  const missing = [
+    !nameOk && `um nome com pelo menos ${MIN_NAME} letras`,
+    endsOn === '' && 'a data de encerramento',
+    !roundsOk && `de ${MIN_ROUNDS} a ${MAX_ROUNDS} rodadas`,
+    !categoriesOk &&
+      (categoryIds.length === 0
+        ? `${MIN_CATEGORIES} temas`
+        : `mais ${MIN_CATEGORIES - categoryIds.length} ${
+            MIN_CATEGORIES - categoryIds.length === 1 ? 'tema' : 'temas'
+          }`),
+    !difficultiesOk && 'uma dificuldade',
+  ].filter((item): item is string => Boolean(item))
 
   if (user && !user.is_supporter) {
     return (
@@ -118,13 +134,28 @@ export function LeagueCreatePage() {
       </header>
 
       <Card className="space-y-4">
-        <Input
-          label="Nome da liga"
-          value={name}
-          maxLength={40}
-          onChange={(event) => setName(event.target.value)}
-          placeholder="Ex.: Liga da Célula"
-        />
+        <div>
+          <Input
+            label="Nome da liga"
+            value={name}
+            minLength={MIN_NAME}
+            maxLength={MAX_NAME}
+            onChange={(event) => setName(event.target.value)}
+            placeholder="Ex.: Liga da Célula"
+            aria-describedby="league-name-hint"
+          />
+          <p
+            id="league-name-hint"
+            className={`mt-1.5 flex justify-between text-xs font-bold ${
+              nameOk ? 'text-leaf-700' : 'text-sand-500'
+            }`}
+          >
+            <span>Mínimo de {MIN_NAME} letras</span>
+            <span className="tabular-nums">
+              {nameLength}/{MAX_NAME}
+            </span>
+          </p>
+        </div>
         <Input
           label="Data de encerramento"
           type="date"
@@ -248,6 +279,12 @@ export function LeagueCreatePage() {
           {create.error instanceof ApiError
             ? create.error.message
             : 'Não foi possível criar a liga.'}
+        </p>
+      )}
+      {missing.length > 0 && (
+        <p className="text-sm font-semibold text-sand-600" aria-live="polite">
+          <strong className="font-extrabold text-ink">Para criar a liga, falta:</strong>{' '}
+          {missing.join('; ')}.
         </p>
       )}
       <Button full disabled={!valid} loading={create.isPending} onClick={() => create.mutate()}>

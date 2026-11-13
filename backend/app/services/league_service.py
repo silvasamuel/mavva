@@ -235,7 +235,7 @@ def create_league(
 
 def _require_owner(league: League, user: User) -> None:
     if league.owner_id != user.id:
-        raise LeagueError("Só quem criou a liga pode fazer isso", status_code=403)
+        raise LeagueError("Só o admin da liga pode fazer isso", status_code=403)
 
 
 def _require_recruiting(league: League) -> None:
@@ -308,7 +308,7 @@ def leave(db: Session, user: User, league: League) -> None:
     if member is None or member.status != LeagueMemberStatus.ACTIVE:
         raise LeagueError("Você não está nesta liga", status_code=404)
     if league.owner_id == user.id:
-        raise LeagueError("Quem criou a liga não pode sair dela; apague a liga")
+        raise LeagueError("O admin da liga não pode sair dela; apague a liga")
     _require_recruiting(league)
     member.status = LeagueMemberStatus.LEFT
     db.flush()
@@ -319,7 +319,7 @@ def remove_member(db: Session, owner: User, league: League, user_id: uuid.UUID) 
     _require_owner(league, owner)
     _require_recruiting(league)
     if user_id == owner.id:
-        raise LeagueError("Quem criou a liga não pode ser removido")
+        raise LeagueError("O admin da liga não pode ser removido")
     member = membership(league, user_id)
     if member is None:
         raise LeagueError("Esse jogador não está na liga", status_code=404)

@@ -232,8 +232,8 @@ export function LeagueGames() {
           {league.status !== 'recruiting'
             ? 'Esta liga terminou antes de começar: nada foi sorteado.'
             : cup
-              ? 'O chaveamento é sorteado quando a liga começar. Até lá, o dono ainda pode convidar jogadores.'
-              : 'As rodadas são sorteadas quando a liga começar. Até lá, o dono ainda pode convidar jogadores.'}
+              ? 'O chaveamento é sorteado quando a liga começar. Até lá, o admin da liga ainda pode convidar jogadores.'
+              : 'As rodadas são sorteadas quando a liga começar. Até lá, o admin da liga ainda pode convidar jogadores.'}
         </p>
       </Card>
     )

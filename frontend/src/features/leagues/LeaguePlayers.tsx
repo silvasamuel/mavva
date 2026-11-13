@@ -147,7 +147,7 @@ export function LeaguePlayers() {
               <div className="ml-auto flex shrink-0 items-center gap-2">
                 {member.is_owner ? (
                   <span className="rounded-full bg-leaf-100 px-2.5 py-1 text-xs font-extrabold text-leaf-800">
-                    Dono
+                    Admin
                   </span>
                 ) : member.status === 'invited' ? (
                   <span className="rounded-full bg-grain-100 px-2.5 py-1 text-xs font-extrabold text-grain-800">

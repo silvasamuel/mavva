@@ -9,7 +9,7 @@ import { Spinner } from '@/components/ui/Spinner'
 import { formatDate } from '@/lib/format'
 import { AppIcons, Glyph } from '@/lib/icons'
 import { SupporterNotice } from './PlayButton'
-import { FORMAT_LABEL, STATUS_LABEL, STATUS_PILL, leagueTagline } from './labels'
+import { STATUS_LABEL, STATUS_PILL, leagueTagline } from './labels'
 
 function LeagueCard({ league }: { league: League }) {
   const invited = league.my_status === 'invited'
@@ -101,14 +101,8 @@ export function LeaguesPage() {
 
   return (
     <div className="animate-float-up mx-auto max-w-2xl space-y-6">
-      <header className="flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <h1 className="text-2xl font-extrabold">Ligas</h1>
-          <p className="text-sm font-semibold text-sand-500">
-            Competições fechadas, só para quem você convidar: {FORMAT_LABEL.points.toLowerCase()} ou{' '}
-            {FORMAT_LABEL.cup.toLowerCase()}.
-          </p>
-        </div>
+      <header className="flex flex-wrap items-center justify-between gap-3">
+        <h1 className="text-2xl font-extrabold">Ligas</h1>
         {data?.can_play && (
           <Link to="/leagues/new">
             <Button>Criar liga</Button>
