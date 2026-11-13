@@ -525,13 +525,23 @@ class TestCup:
             _invite_and_join(client, league["id"], owner, players[name])
         return league, players
 
-    def test_an_odd_number_cannot_start(
-        self, client: TestClient, db: Session, bank: list[int]
+    @pytest.mark.parametrize(
+        ("names", "hint"),
+        [
+            (["ana", "bia", "caio"], "Com 3, convide mais 1 ou remova 1."),
+            (["ana", "bia", "caio", "davi", "eva", "fabio"], "Com 6, convide mais 2 ou remova 2."),
+        ],
+    )
+    def test_only_full_brackets_can_start(
+        self, client: TestClient, db: Session, bank: list[int], names: list[str], hint: str
     ) -> None:
-        league, players = self._cup(client, db, bank, ["ana", "bia", "caio"])
+        league, players = self._cup(client, db, bank, names)
         response = client.post(f"{URL}/{league['id']}/start", headers=players["ana"])
         assert response.status_code == 400
-        assert "número par" in response.json()["detail"]
+        detail = response.json()["detail"]
+        assert "2, 4, 8 ou 16 jogadores" in detail
+        assert detail.endswith(hint)
+        assert _detail(client, league["id"], players["ana"])["status"] == "recruiting"
 
     def test_the_bracket_is_drawn_at_the_start(
         self, client: TestClient, db: Session, bank: list[int]
@@ -543,6 +553,7 @@ class TestCup:
         assert started["rounds_played"] == []
         bracket = started["bracket"]
         assert [r["label"] for r in bracket] == ["Semifinal", "Final"]
+        assert [m["third_place"] for m in bracket[1]["matches"]] == [False, True]
         seated = sorted(
             side["user"]["username"] for m in bracket[0]["matches"] for side in (m["a"], m["b"])
         )
@@ -588,21 +599,41 @@ class TestCup:
             winners
         )
         assert detail["my_match_id"] == final["id"]
-        # The beaten are out: nothing left for them to play.
         loser = next(name for name in names if name not in winners)
-        assert _detail(client, league["id"], players[loser])["my_match_id"] is None
+
+        # The beaten semifinalists are out of the title, but meet for third place.
+        third = detail["bracket"][1]["matches"][1]
+        losers = [name for name in names if name not in winners]
+        assert third["third_place"] is True
+        assert sorted([third["a"]["user"]["username"], third["b"]["user"]["username"]]) == sorted(
+            losers
+        )
+        assert _detail(client, league["id"], players[losers[0]])["my_match_id"] == third["id"]
 
         _play(client, db, league["id"], final["id"], players[winners[0]], correct=4)
         _play(client, db, league["id"], final["id"], players[winners[1]], correct=9)
+        # The title is decided, but the cup isn't over until third place is played.
+        waiting = _detail(client, league["id"], players[loser])
+        assert waiting["status"] == "active"
+        assert waiting["champion"] is None
+
+        _play(client, db, league["id"], third["id"], players[losers[0]], correct=7)
+        _play(client, db, league["id"], third["id"], players[losers[1]], correct=2)
         done = _detail(client, league["id"], players[loser])
         assert done["status"] == "finished"
         assert done["champion"]["username"] == winners[1]
         table = done["standings"]
-        assert table[0]["user"]["username"] == winners[1]
+        assert [row["user"]["username"] for row in table] == [
+            winners[1],
+            winners[0],
+            losers[0],
+            losers[1],
+        ]
+        assert [row["podium"] for row in table] == [1, 2, 3, None]
         assert table[0]["wins"] == 2 and table[0]["eliminated"] is False
-        assert table[1]["user"]["username"] == winners[0]
         assert table[1]["eliminated"] is True
-        assert {row["user"]["username"] for row in table[2:]} == set(names) - set(winners)
+        # Third place is its own contest: it adds no win in the title race.
+        assert table[2]["wins"] == 0
 
     def test_someone_elses_match_is_not_mine_to_play(
         self, client: TestClient, db: Session, bank: list[int]
@@ -648,19 +679,22 @@ class TestCup:
         assert final["decided_by"] == "time"
         assert done["champion"]["username"] == "bia"
 
-    def test_six_players_one_rests_and_the_bracket_says_so(
+    def test_eight_players_quarters_semis_final_and_third_place(
         self, client: TestClient, db: Session, bank: list[int]
     ) -> None:
-        names = ["ana", "bia", "caio", "davi", "eva", "fabio"]
+        names = ["ana", "bia", "caio", "davi", "eva", "fabio", "gabi", "hugo"]
         league, players = self._cup(client, db, bank, names)
         bracket = client.post(f"{URL}/{league['id']}/start", headers=players["ana"]).json()[
             "bracket"
         ]
-        assert [len(r["matches"]) for r in bracket] == [3, 1, 1]
-        assert [r["label"] for r in bracket] == ["Rodada 1", "Rodada 2", "Final"]
-        assert bracket[0]["byes"] == []
-        # The winner of match 3 rests in round 2.
-        assert [bye["from_match"] for bye in bracket[1]["byes"]] == [3]
+        assert [r["label"] for r in bracket] == ["Quartas de final", "Semifinal", "Final"]
+        assert [len(r["matches"]) for r in bracket] == [4, 2, 2]
+        final, third = bracket[2]["matches"]
+        assert final["third_place"] is False and third["third_place"] is True
+        # The third-place seats wait for the losers of the two semifinals.
+        semis = {m["number"] for m in bracket[1]["matches"]}
+        assert {third["a"]["from_match"], third["b"]["from_match"]} == semis
+        assert third["a"]["from_loser"] is True and final["a"]["from_loser"] is False
 
     def test_the_end_date_leaves_an_unfinished_cup_incomplete(
         self, client: TestClient, db: Session, bank: list[int]
@@ -766,7 +800,8 @@ class TestCupDeadline:
         settled = detail["bracket"][0]["matches"][0]
         assert settled["decided_by"] == "walkover"
         assert settled["winner_id"] == match["a"]["user"]["id"]
-        # Out of the cup: nothing left to play, and the seat in the final is taken.
+        # Out of the title race: the seat in the final is taken, and what is
+        # left for them is the third-place match, once the other semifinal ends.
         assert detail["my_match_id"] is None
         late = client.post(f"{URL}/{league_id}/matches/{match['id']}/play", headers=players[absent])
         assert late.status_code == 400
@@ -802,6 +837,13 @@ class TestCupDeadline:
         assert done["status"] == "finished"
         assert done["champion"]["username"] == strong
         assert done["bracket"][1]["matches"][0]["decided_by"] == "walkover"
+        # Third place had one semifinal loser and an empty seat: his by walkover.
+        third = done["bracket"][1]["matches"][1]
+        assert third["third_place"] is True and third["decided_by"] == "walkover"
+        podium = {row["user"]["username"]: row["podium"] for row in done["standings"]}
+        assert podium[strong] == 1 and podium[weak] == 3
+        # Nobody reached the final from the other side, so there is no runner-up.
+        assert 2 not in podium.values()
 
     def test_a_cup_nobody_played_ends_without_a_champion(
         self, client: TestClient, db: Session, bank: list[int]
@@ -814,7 +856,7 @@ class TestCupDeadline:
         done = _detail(client, league_id, players["ana"])
         assert done["status"] == "incomplete"
         assert done["champion"] is None
-        assert [m["decided_by"] for r in done["bracket"] for m in r["matches"]] == ["void"] * 3
+        assert [m["decided_by"] for r in done["bracket"] for m in r["matches"]] == ["void"] * 4
 
     def test_the_next_match_starts_its_own_24_hours(
         self, client: TestClient, db: Session, bank: list[int]

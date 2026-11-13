@@ -123,6 +123,9 @@ class LeagueMatch(Base):
     winner_id: Mapped[uuid.UUID | None] = mapped_column(
         ForeignKey("users.id", ondelete="SET NULL"), default=None
     )
+    # Cup only: the match between the two semifinal losers. Its seats take the
+    # *losers* of its feeders instead of the winners.
+    third_place: Mapped[bool] = mapped_column(default=False, server_default="false")
     # Cup only: both players must have played by then, or whoever didn't loses
     # by walkover. Set when the second player of the match becomes known.
     deadline_at: Mapped[datetime | None] = mapped_column(default=None)

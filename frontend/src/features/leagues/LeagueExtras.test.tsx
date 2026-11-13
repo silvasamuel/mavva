@@ -166,13 +166,11 @@ describe('cup deadlines on the bracket', () => {
               cupMatch(2, side('rute'), side('davi'), { decided_by: 'void' }),
               cupMatch(3, side('samuel'), side('ana'), { deadline_at: '2026-11-14T18:30:00Z' }),
             ],
-            byes: [],
           },
           {
             round: 2,
             label: 'Final',
             matches: [cupMatch(4, side('maria'), side(null, { from_match: 2, vacant: true }))],
-            byes: [],
           },
         ],
       })

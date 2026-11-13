@@ -1,4 +1,4 @@
-"""league rules chosen by the admin, invite link, 24h deadline per cup match
+"""league rules chosen by the admin, invite link, cup deadline and third place
 
 Revision ID: b8c9d0e1f2a3
 Revises: a7b8c9d0e1f2
@@ -36,6 +36,10 @@ def upgrade() -> None:
     op.add_column(
         "league_matches", sa.Column("deadline_at", sa.DateTime(timezone=True), nullable=True)
     )
+    op.add_column(
+        "league_matches",
+        sa.Column("third_place", sa.Boolean(), server_default=sa.text("false"), nullable=False),
+    )
     # Cup matches already waiting for both players start their 24 hours now.
     op.execute(
         "UPDATE league_matches SET deadline_at = now() + interval '24 hours' "
@@ -44,6 +48,7 @@ def upgrade() -> None:
 
 
 def downgrade() -> None:
+    op.drop_column("league_matches", "third_place")
     op.drop_column("league_matches", "deadline_at")
     op.drop_constraint(op.f("uq_leagues_invite_code"), "leagues", type_="unique")
     op.drop_column("leagues", "invite_code")

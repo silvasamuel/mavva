@@ -94,12 +94,14 @@ def _rounds_out(league: League, me: User) -> list[LeagueRoundOut]:
     return rounds
 
 
+# Named by how many matches the round has (the third-place match aside).
+_ROUND_NAMES = {8: "Oitavas de final", 4: "Quartas de final", 2: "Semifinal"}
+
+
 def _round_label(round_number: int, last_round: int, match_count: int) -> str:
     if round_number == last_round:
         return "Final"
-    if round_number == last_round - 1 and match_count == 2:
-        return "Semifinal"
-    return f"Rodada {round_number}"
+    return _ROUND_NAMES.get(match_count, f"Rodada {round_number}")
 
 
 def _bracket_out(league: League) -> list[LeagueCupRoundOut]:
@@ -117,6 +119,7 @@ def _bracket_out(league: League) -> list[LeagueCupRoundOut]:
         return LeagueSideOut(
             user=_require_public(user) if user else None,
             from_match=number[feeder_id] if user is None and feeder_id in number else None,
+            from_loser=match.third_place,
             vacant=user is None and feeder is not None and feeder.resolved_at is not None,
             played=entry is not None and entry.finished_at is not None,
             # Scores stay hidden until both have played: nobody chases a target.
@@ -127,29 +130,12 @@ def _bracket_out(league: League) -> list[LeagueCupRoundOut]:
     rounds: list[LeagueCupRoundOut] = []
     for round_number in range(1, last_round + 1):
         here = [m for m in matches if m.round == round_number]
-        # A seat fed by a match from two or more rounds back rested in between.
-        byes: list[LeagueSideOut] = []
-        for later in (m for m in matches if m.round > round_number):
-            for feeder_id, player_id in (
-                (later.feeder_a_id, later.player_a_id),
-                (later.feeder_b_id, later.player_b_id),
-            ):
-                feeder = by_id.get(feeder_id) if feeder_id else None
-                if feeder is not None and feeder.round < round_number:
-                    user = users.get(player_id) if player_id else None
-                    byes.append(
-                        LeagueSideOut(
-                            user=_require_public(user) if user else None,
-                            from_match=number[feeder.id] if user is None else None,
-                            vacant=user is None and feeder.resolved_at is not None,
-                            played=False,
-                            score=None,
-                        )
-                    )
         rounds.append(
             LeagueCupRoundOut(
                 round=round_number,
-                label=_round_label(round_number, last_round, len(here)),
+                label=_round_label(
+                    round_number, last_round, sum(1 for m in here if not m.third_place)
+                ),
                 matches=[
                     LeagueCupMatchOut(
                         id=m.id,
@@ -159,10 +145,10 @@ def _bracket_out(league: League) -> list[LeagueCupRoundOut]:
                         winner_id=m.winner_id,
                         decided_by=m.decided_by,  # type: ignore[arg-type]
                         deadline_at=m.deadline_at,
+                        third_place=m.third_place,
                     )
                     for m in here
                 ],
-                byes=byes,
             )
         )
     return rounds
@@ -215,6 +201,7 @@ def _detail_out(db: DbDep, league: League, me: User) -> LeagueDetailOut:
                 played=row.played,
                 wins=row.wins,
                 eliminated=row.eliminated,
+                podium=row.podium,
             )
             for row in league_service.standings(league)
         ],

@@ -5,6 +5,7 @@ import { api, ApiError } from '@/lib/api'
 import type { LeagueDetail } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Card, CardTitle } from '@/components/ui/Card'
+import { Modal } from '@/components/ui/Modal'
 import { RankBadge } from '@/components/RankBadge'
 import { DIFFICULTY_LABELS, formatDate, formatDateTime } from '@/lib/format'
 import { AppIcons, CategoryGlyph, Glyph } from '@/lib/icons'
@@ -16,11 +17,21 @@ function errorText(error: unknown, fallback: string): string {
   return error instanceof ApiError ? error.message : fallback
 }
 
-/** What starting needs, in the owner's words; null when the league is ready. */
+/** A knockout only closes its bracket with a power of two. */
+const CUP_SIZES = [2, 4, 8, 16]
+
+/** What starting needs, in the admin's words; null when the league is ready. */
 function startBlocker(league: LeagueDetail): string | null {
   if (league.member_count < 2) return 'Convide pelo menos mais um jogador para começar.'
-  if (league.format === 'cup' && league.member_count % 2 === 1) {
-    return 'A copa precisa de um número par de jogadores: convide mais um ou remova alguém.'
+  if (league.format === 'cup' && !CUP_SIZES.includes(league.member_count)) {
+    const count = league.member_count
+    const above = CUP_SIZES.find((size) => size > count)
+    const below = [...CUP_SIZES].reverse().find((size) => size < count)
+    const options = [
+      above != null && `convide mais ${above - count}`,
+      below != null && `remova ${count - below}`,
+    ].filter(Boolean)
+    return `Para fechar as chaves, a copa precisa de 2, 4, 8 ou 16 jogadores. Com ${count}, ${options.join(' ou ')}.`
   }
   return null
 }
@@ -101,7 +112,6 @@ function OwnerControls({ league }: { league: LeagueDetail }) {
     },
   })
   const blocker = startBlocker(league)
-  const failure = start.error ?? remove.error
   return (
     <Card className="space-y-3">
       <CardTitle>Começar a liga</CardTitle>
@@ -118,21 +128,42 @@ function OwnerControls({ league }: { league: LeagueDetail }) {
         <Link to="players">
           <Button variant="secondary">Convidar jogadores</Button>
         </Link>
-        {confirmDelete ? (
-          <Button variant="danger" loading={remove.isPending} onClick={() => remove.mutate()}>
-            Confirmar: apagar a liga
-          </Button>
-        ) : (
-          <Button variant="ghost" onClick={() => setConfirmDelete(true)}>
-            Apagar liga
-          </Button>
-        )}
+        <Button
+          variant="ghost"
+          aria-haspopup="dialog"
+          onClick={() => {
+            remove.reset()
+            setConfirmDelete(true)
+          }}
+        >
+          Apagar liga
+        </Button>
       </div>
-      {failure && (
+      {start.isError && (
         <p role="alert" className="text-sm font-bold text-red-600">
-          {errorText(failure, 'Não foi possível concluir.')}
+          {errorText(start.error, 'Não foi possível começar a liga.')}
         </p>
       )}
+      <Modal open={confirmDelete} onClose={() => setConfirmDelete(false)} label="Apagar liga">
+        <h2 className="text-lg font-extrabold">Apagar a liga “{league.name}”?</h2>
+        <p className="text-sm font-semibold text-sand-600">
+          A liga some para você e para todos os jogadores, e os convites enviados são cancelados.
+          Isso não pode ser desfeito.
+        </p>
+        {remove.isError && (
+          <p role="alert" className="text-sm font-bold text-red-600">
+            {errorText(remove.error, 'Não foi possível apagar a liga.')}
+          </p>
+        )}
+        <div className="flex flex-col gap-2">
+          <Button variant="danger" full loading={remove.isPending} onClick={() => remove.mutate()}>
+            Apagar liga
+          </Button>
+          <Button variant="secondary" full onClick={() => setConfirmDelete(false)}>
+            Cancelar
+          </Button>
+        </div>
+      </Modal>
     </Card>
   )
 }
@@ -258,7 +289,7 @@ export function LeagueOverview() {
         </dl>
         <p className="text-sm font-semibold text-sand-600">
           {league.format === 'cup'
-            ? 'Mata-mata em duelos: os dois respondem às mesmas perguntas. Vence quem fizer mais pontos; em caso de empate, quem foi mais rápido. Quem perde está fora. Cada duelo tem 24 horas: quem não jogar no prazo perde por W.O.'
+            ? 'Mata-mata em duelos: os dois respondem às mesmas perguntas. Vence quem fizer mais pontos; em caso de empate, quem foi mais rápido. Quem perde está fora da disputa do título, e os dois que caem na semifinal jogam pelo 3º lugar. Cada duelo tem 24 horas: quem não jogar no prazo perde por W.O.'
             : 'Todos jogam cada rodada com as mesmas perguntas, em ordem. Ganha quem somar mais pontos até a data final; em caso de empate, quem gastou menos tempo.'}{' '}
           Cada acerto vale pela dificuldade: 10, 20, 35 ou 50 pontos. As partidas da liga não dão XP
           de temporada.

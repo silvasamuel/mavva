@@ -82,7 +82,8 @@ class LeagueStandingOut(BaseModel):
     time_seconds: int
     played: int
     wins: int  # cup only
-    eliminated: bool  # cup only
+    eliminated: bool  # cup only: out of the title race
+    podium: int | None = None  # cup only: 1, 2 or 3 once decided
 
 
 class LeagueScoreOut(BaseModel):
@@ -106,7 +107,8 @@ class LeagueSideOut(BaseModel):
 
     user: PublicUser | None  # None until the feeder match is decided
     from_match: int | None  # "winner of match N" while user is None
-    vacant: bool = False  # the feeder match had no winner: nobody takes this seat
+    from_loser: bool = False  # third place: the seat takes that match's loser
+    vacant: bool = False  # the feeder match left nobody for this seat
     played: bool
     score: LeagueScoreOut | None  # only once the match is decided
 
@@ -119,14 +121,13 @@ class LeagueCupMatchOut(BaseModel):
     winner_id: uuid.UUID | None
     decided_by: Literal["points", "time", "lots", "walkover", "void"] | None
     deadline_at: datetime | None  # play by then or lose by walkover
+    third_place: bool = False  # the semifinal losers' match, beside the final
 
 
 class LeagueCupRoundOut(BaseModel):
     round: int
-    label: str  # "Rodada 1", "Semifinal", "Final"
+    label: str  # "Quartas de final", "Semifinal", "Final"
     matches: list[LeagueCupMatchOut]
-    # Players who rest this round and go straight to the next one.
-    byes: list[LeagueSideOut]
 
 
 class LeagueDetailOut(LeagueOut):

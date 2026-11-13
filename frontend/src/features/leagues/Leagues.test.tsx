@@ -260,11 +260,47 @@ describe('a league and its own menu', () => {
     expect(screen.getByRole('button', { name: 'Apoie para jogar' })).toBeInTheDocument()
   })
 
-  it('tells the owner why a cup cannot start with an odd number of players', async () => {
-    serve(detail({ status: 'recruiting', format: 'cup', rounds: null, member_count: 3 }))
+  it('only lets a cup start with a full bracket', async () => {
+    serve(detail({ status: 'recruiting', format: 'cup', rounds: null, member_count: 6 }))
     renderAt('/leagues/league-1')
-    expect(await screen.findByText(/número par de jogadores/)).toBeInTheDocument()
+    expect(
+      await screen.findByText(
+        'Para fechar as chaves, a copa precisa de 2, 4, 8 ou 16 jogadores. Com 6, convide mais 2 ou remova 2.'
+      )
+    ).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Começar agora' })).toBeDisabled()
+  })
+
+  it('asks before deleting a league, in a modal', async () => {
+    const user = userEvent.setup()
+    serve(detail({ status: 'recruiting', member_count: 2 }))
+    del.mockResolvedValue(undefined)
+    get.mockImplementation((path: string) =>
+      path === '/leagues'
+        ? Promise.resolve({ can_play: true, leagues: [] })
+        : Promise.resolve(detail({ status: 'recruiting', member_count: 2 }))
+    )
+    renderAt('/leagues/league-1')
+
+    await user.click(await screen.findByRole('button', { name: 'Apagar liga' }))
+    const dialog = screen.getByRole('dialog', { name: 'Apagar liga' })
+    expect(dialog).toHaveTextContent('Apagar a liga “Liga da Célula”?')
+    expect(dialog).toHaveTextContent('Isso não pode ser desfeito.')
+    expect(del).not.toHaveBeenCalled()
+
+    // Cancelling keeps the league.
+    await user.click(within(dialog).getByRole('button', { name: 'Cancelar' }))
+    await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument())
+    expect(del).not.toHaveBeenCalled()
+
+    await user.click(screen.getByRole('button', { name: 'Apagar liga' }))
+    await user.click(
+      within(screen.getByRole('dialog', { name: 'Apagar liga' })).getByRole('button', {
+        name: 'Apagar liga',
+      })
+    )
+    expect(del).toHaveBeenCalledWith('/leagues/league-1')
+    expect(await screen.findByRole('heading', { name: 'Ligas' })).toBeInTheDocument()
   })
 
   it('starts a ready league and lands on the fixtures', async () => {
@@ -279,7 +315,6 @@ describe('a league and its own menu', () => {
             round: 1,
             label: 'Semifinal',
             matches: [cupMatch(1, side('samuel'), side('maria'))],
-            byes: [],
           },
         ],
       })
@@ -317,7 +352,7 @@ describe('a league and its own menu', () => {
 })
 
 describe('LeagueGames', () => {
-  it('draws the bracket: seats to be filled, byes, scores once decided', async () => {
+  it('draws the bracket: seats to be filled, third place, scores once decided', async () => {
     serve(
       detail({
         format: 'cup',
@@ -327,7 +362,7 @@ describe('LeagueGames', () => {
         bracket: [
           {
             round: 1,
-            label: 'Rodada 1',
+            label: 'Semifinal',
             matches: [
               cupMatch(
                 1,
@@ -342,21 +377,17 @@ describe('LeagueGames', () => {
                 { winner_id: 'id-maria', decided_by: 'points' }
               ),
               cupMatch(2, side('samuel'), side('ana', { played: true })),
-              cupMatch(3, side('rute'), side('davi')),
             ],
-            byes: [],
           },
           {
             round: 2,
-            label: 'Rodada 2',
-            matches: [cupMatch(4, side('maria'), side(null, { from_match: 2 }))],
-            byes: [side(null, { from_match: 3 })],
-          },
-          {
-            round: 3,
             label: 'Final',
-            matches: [cupMatch(5, side(null, { from_match: 3 }), side(null, { from_match: 4 }))],
-            byes: [],
+            matches: [
+              cupMatch(3, side('maria'), side(null, { from_match: 2 })),
+              cupMatch(4, side('joao'), side(null, { from_match: 2, from_loser: true }), {
+                third_place: true,
+              }),
+            ],
           },
         ],
       })
@@ -375,8 +406,12 @@ describe('LeagueGames', () => {
     expect(within(mine).getByText('falta jogar')).toBeInTheDocument()
     expect(within(mine).getByRole('button', { name: 'Jogar meu duelo' })).toBeInTheDocument()
 
-    expect(screen.getAllByText('Vencedor do jogo 2')).toHaveLength(1)
-    expect(screen.getByText(/descansa nesta rodada e avança direto/)).toBeInTheDocument()
+    // The final waits for the winner of my match; third place, for its loser.
+    const final = screen.getByText('Jogo 3').closest('li')!
+    expect(within(final).getByText('Vencedor do jogo 2')).toBeInTheDocument()
+    const third = screen.getByText('Disputa de 3º lugar · jogo 4').closest('li')!
+    expect(within(third).getByText('@joao')).toBeInTheDocument()
+    expect(within(third).getByText('Perdedor do jogo 2')).toBeInTheDocument()
     expect(screen.getAllByRole('button', { name: /Jogar/ })).toHaveLength(1)
   })
 
@@ -435,8 +470,10 @@ describe('LeagueRanking and LeaguePlayers', () => {
         status: 'finished',
         champion: player('maria'),
         standings: [
-          { ...base.standings[1], position: 1, wins: 2 },
-          { ...base.standings[0], position: 2, wins: 1, eliminated: true },
+          { ...base.standings[1], position: 1, wins: 2, podium: 1 },
+          { ...base.standings[0], position: 2, wins: 1, eliminated: true, podium: 2 },
+          { ...base.standings[2], position: 3, wins: 0, eliminated: true, podium: 3 },
+          { ...base.standings[3], position: 4, wins: 0, eliminated: true, podium: null },
         ],
       })
     )
@@ -444,7 +481,9 @@ describe('LeagueRanking and LeaguePlayers', () => {
     const rows = await screen.findAllByRole('listitem')
     expect(rows[0]).toHaveTextContent('Campeão')
     expect(rows[0]).toHaveTextContent('2 vitórias')
-    expect(rows[1]).toHaveTextContent('Eliminado')
+    expect(rows[1]).toHaveTextContent('Vice-campeão')
+    expect(rows[2]).toHaveTextContent('3º lugar')
+    expect(rows[3]).toHaveTextContent('Eliminado')
   })
 
   it('lets the owner invite by username or from friends, and remove players', async () => {

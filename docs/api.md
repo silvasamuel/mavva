@@ -188,9 +188,11 @@ Competições fechadas: só entra quem o admin da liga (quem a criou) convida. D
 
 - **Pontos** (`points`): o admin escolhe de 1 a 30 rodadas; todos jogam cada rodada, em
   ordem, e vence quem somar mais pontos até a data final (empate: menos tempo).
-- **Copa** (`cup`): mata-mata em duelos, com o chaveamento sorteado no início. Exige número
-  par de jogadores. Quando uma rodada tem número ímpar de classificados, o último descansa
-  e passa a jogar primeiro na seguinte.
+- **Copa** (`cup`): mata-mata em duelos, com o chaveamento sorteado no início. Só começa com
+  as chaves cheias: **2, 4, 8 ou 16 jogadores** (potência de dois; não há folgas). A partir
+  de 4 jogadores, os dois que caem na semifinal jogam a **disputa de 3º lugar**
+  (`third_place`), na mesma rodada da final. A copa termina quando todos os jogos estão
+  decididos; o ranking traz `podium` (1, 2 ou 3) para campeão, vice e 3º lugar.
 
 Cada partida congela as perguntas (de **5 a 20**, escolha do admin; padrão 10) dos temas
 (mínimo 7) e dificuldades (mínimo 1) da liga; todos que a jogam respondem às mesmas, cada um
@@ -226,14 +228,14 @@ antes, quando todos jogaram tudo.
 |---|---|---|
 | GET | `/leagues` | `{can_play, leagues}`: ligas em que o jogador está ou foi convidado, da mais nova para a mais antiga. Cada uma: `status` (`recruiting`, `active`, `finished`, `incomplete`), `my_status` (`invited`, `active`), `is_owner`, `member_count`, `invited_count`, `champion`, `my_match_id` (a partida que espera por ele agora). |
 | POST | `/leagues` | Cria. `{name (3–40), format, category_ids (≥7), difficulties (≥1), rounds (só pontos), ends_on, question_count (5–20), timer_seconds}`. Quem cria vira o admin da liga e entra como primeiro jogador. Máx. 5 ligas em aberto por admin. |
-| GET | `/leagues/{id}` | Detalhe: o resumo acima mais `categories`, `difficulties`, `members`, `standings` (o ranking da liga), `rounds_played` (pontos) e `bracket` (copa: rodadas com `matches` e `byes`; cada lado traz `user` ou `from_match`, `played` e, só depois de decidido, `score`). |
+| GET | `/leagues/{id}` | Detalhe: o resumo acima mais `categories`, `difficulties`, `members`, `standings` (o ranking da liga), `rounds_played` (pontos) e `bracket` (copa: rodadas com `matches`, incluindo a disputa de 3º lugar na rodada final; cada lado traz `user` ou `from_match` (com `from_loser` na disputa de 3º lugar), `played` e, só depois de decidido, `score`). |
 | DELETE | `/leagues/{id}` | Admin da liga, antes de começar. |
 | POST | `/leagues/{id}/invites` | Admin convida por `{username}`. Convites contam no limite de 20. |
 | GET | `/leagues/invite/{code}` | **Pública** (o link é aberto antes de haver conta): `{name, format, status, rounds, ends_on, admin_name, admin_username, member_count, max_members, question_count, timer_seconds, open}`. Nada sobre os jogadores além do nome do admin. 60/min por IP. |
 | POST | `/leagues/invite/{code}/redeem` | Transforma o link em convite para quem chamou e devolve `{league_id}`. Idempotente. 400 se a liga já começou ou encheu. |
 | POST | `/leagues/{id}/join` · `/decline` · `/leave` | Convidado aceita (apoiador) ou recusa; jogador sai antes do início. |
 | DELETE | `/leagues/{id}/members/{user_id}` | Admin remove jogador ou cancela convite, antes do início. |
-| POST | `/leagues/{id}/start` | Admin começa: mínimo 2 jogadores (par na copa). Sorteia rodadas ou chaveamento; convites sem resposta caem. |
+| POST | `/leagues/{id}/start` | Admin começa: mínimo 2 jogadores (na copa, 2, 4, 8 ou 16). Sorteia rodadas ou chaveamento; convites sem resposta caem. |
 | POST | `/leagues/{id}/matches/{match_id}/play` | Abre (ou devolve, se já aberta) a sessão do jogador para a partida: `{session_id}`. Daí em diante é o fluxo normal de `/quizzes/{id}`, cuja resposta traz `league_id`. |
 
 `GET /dashboard` traz `leagues_pending`: convites esperando mais ligas em que é a vez do jogador.

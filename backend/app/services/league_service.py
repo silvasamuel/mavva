@@ -55,6 +55,9 @@ MIN_QUESTION_COUNT = 5
 MAX_QUESTION_COUNT = 20
 DEFAULT_TIMER_SECONDS = 20
 TIMER_CHOICES = (10, 15, 20, 30, 45, 60)
+# A knockout only closes its bracket with a power of two: no byes, no lopsided
+# rounds. (20 is the member cap, so 16 is the largest cup.)
+CUP_SIZES = (2, 4, 8, 16)
 # A cup match must be played within this long of both players being known.
 CUP_MATCH_HOURS = 24
 MAX_MEMBERS = 20
@@ -439,16 +442,17 @@ class _Seat:
 def build_bracket(player_ids: list[uuid.UUID], draw_questions) -> list[LeagueMatch]:  # type: ignore[no-untyped-def]
     """The whole knockout tree for players already in drawn order.
 
-    Round 1 pairs everybody (the count is even). After that the winners pair
-    up in order; when a round has an odd number of entrants the last one gets
-    a bye, and goes to the front of the next round so the same seat never
-    rests twice in a row.
+    The count is a power of two, so every round pairs everyone left and the
+    bracket closes evenly. With four or more players the two semifinal losers
+    also meet, in the last round, for third place.
     """
+    if len(player_ids) not in CUP_SIZES:
+        raise ValueError(f"a cup takes {CUP_SIZES} players, not {len(player_ids)}")
     matches: list[LeagueMatch] = []
     seats = [_Seat(player_id=player_id) for player_id in player_ids]
-    round_number = 1
+    round_number = 0
     while len(seats) > 1:
-        resting = seats.pop() if len(seats) % 2 else None
+        round_number += 1
         winners: list[_Seat] = []
         for index in range(0, len(seats), 2):
             a, b = seats[index], seats[index + 1]
@@ -464,9 +468,37 @@ def build_bracket(player_ids: list[uuid.UUID], draw_questions) -> list[LeagueMat
             )
             matches.append(match)
             winners.append(_Seat(match=match))
-        seats = ([resting] if resting else []) + winners
-        round_number += 1
+        seats = winners
+
+    semifinals = [m for m in matches if m.round == round_number - 1]
+    if len(semifinals) == 2:
+        matches.append(
+            LeagueMatch(
+                id=uuid.uuid4(),
+                round=round_number,
+                position=2,  # beside the final
+                question_ids=draw_questions(),
+                feeder_a_id=semifinals[0].id,
+                feeder_b_id=semifinals[1].id,
+                third_place=True,
+            )
+        )
     return matches
+
+
+def cup_size_message(count: int) -> str:
+    """Why a cup of this size can't start, and the nearest sizes that can."""
+    below = max((size for size in CUP_SIZES if size < count), default=None)
+    above = min((size for size in CUP_SIZES if size > count), default=None)
+    options = []
+    if above is not None:
+        options.append(f"convide mais {above - count}")
+    if below is not None:
+        options.append(f"remova {count - below}")
+    return (
+        "Para fechar as chaves, a copa precisa de 2, 4, 8 ou 16 jogadores. "
+        f"Com {count}, {' ou '.join(options)}."
+    )
 
 
 def start(db: Session, owner: User, league: League, rng: random.Random | None = None) -> League:
@@ -477,10 +509,8 @@ def start(db: Session, owner: User, league: League, rng: random.Random | None = 
     players = active_members(league)
     if len(players) < 2:
         raise LeagueError("Uma liga precisa de pelo menos 2 jogadores para começar")
-    if league.format == LeagueFormat.CUP and len(players) % 2:
-        raise LeagueError(
-            "A copa precisa de um número par de jogadores. Convide mais um ou remova alguém."
-        )
+    if league.format == LeagueFormat.CUP and len(players) not in CUP_SIZES:
+        raise LeagueError(cup_size_message(len(players)))
     pool = _pool(db, league.category_ids, league.difficulties)
     if len(pool) < league.question_count:
         raise LeagueError("Não há perguntas suficientes para os temas desta liga")
@@ -707,6 +737,9 @@ def _advance(league: League) -> None:
     seat ahead; whoever was to meet that winner goes through by walkover. Two
     empty seats make another match with no winner. If that reaches the final,
     the cup has no champion.
+
+    The third-place match takes the losers of the semifinals instead. The cup
+    is over once every match is settled, so third place is played out too.
     """
     by_id = {match.id: match for match in league.matches}
     moved = True
@@ -723,7 +756,8 @@ def _advance(league: League) -> None:
                 if feeder.resolved_at is None:
                     waiting = True
                 else:
-                    setattr(match, f"player_{side}_id", feeder.winner_id)
+                    advancing = _loser_of(feeder) if match.third_place else feeder.winner_id
+                    setattr(match, f"player_{side}_id", advancing)
             if waiting:
                 continue
             present = [p for p in (match.player_a_id, match.player_b_id) if p is not None]
@@ -736,8 +770,12 @@ def _advance(league: League) -> None:
             match.resolved_at = _now()
             moved = True
 
-    final = max(league.matches, key=lambda m: m.round, default=None)
-    if final is None or final.resolved_at is None or league.status != LeagueStatus.ACTIVE:
+    final = final_of(league)
+    if (
+        final is None
+        or league.status != LeagueStatus.ACTIVE
+        or any(match.resolved_at is None for match in league.matches)
+    ):
         return
     league.finished_at = _now()
     if final.winner_id is None:
@@ -745,6 +783,25 @@ def _advance(league: League) -> None:
     else:
         league.status = LeagueStatus.FINISHED
         league.champion_id = final.winner_id
+
+
+def final_of(league: League) -> LeagueMatch | None:
+    return max(
+        (match for match in league.matches if not match.third_place),
+        key=lambda match: match.round,
+        default=None,
+    )
+
+
+def third_place_of(league: League) -> LeagueMatch | None:
+    return next((match for match in league.matches if match.third_place), None)
+
+
+def _loser_of(match: LeagueMatch) -> uuid.UUID | None:
+    """Who lost a settled match; nobody if it had no winner or no opponent."""
+    if match.winner_id is None:
+        return None
+    return match.player_b_id if match.winner_id == match.player_a_id else match.player_a_id
 
 
 def _still_playing(entry: LeagueEntry | None, league: League, now: datetime) -> bool:
@@ -850,15 +907,17 @@ class Standing:
     played: int = 0  # fixtures finished
     wins: int = 0  # cup only
     reach: int = 0  # cup only: how far in the bracket (round number, +1 for winning it)
-    eliminated: bool = False  # cup only
+    eliminated: bool = False  # cup only: out of the title race
+    podium: int | None = None  # cup only: 1, 2 or 3 once it is decided
     position: int = field(default=0)
 
 
 def standings(league: League) -> list[Standing]:
     """The league's own ranking.
 
-    Points: most points, then least time. Cup: how far each player got in the
-    bracket, then points scored along the way.
+    Points: most points, then least time. Cup: champion, runner-up and third
+    place first, then how far each player got in the bracket, then points
+    scored along the way.
     """
     rows = {
         m.user_id: Standing(user_id=m.user_id, username=m.user.username)
@@ -873,7 +932,8 @@ def standings(league: League) -> list[Standing]:
             row.correct += entry.correct
             row.time_seconds += entry.time_seconds
             row.played += 1
-        if league.format != LeagueFormat.CUP:
+        if league.format != LeagueFormat.CUP or match.third_place:
+            # Third place is its own contest: it doesn't count as bracket progress.
             continue
         for player_id in (match.player_a_id, match.player_b_id):
             row = rows.get(player_id) if player_id else None
@@ -888,10 +948,21 @@ def standings(league: League) -> list[Standing]:
                     row.eliminated = True
 
     if league.format == LeagueFormat.CUP:
+        final, third = final_of(league), third_place_of(league)
+        medals = {
+            1: final.winner_id if final else None,
+            2: _loser_of(final) if final else None,
+            3: third.winner_id if third else None,
+        }
+        for place, user_id in medals.items():
+            if user_id in rows:
+                rows[user_id].podium = place
+        # Fourth: lost the third-place match, still ahead of everyone beaten earlier.
+        fourth = _loser_of(third) if third else None
         ordered = sorted(
             rows.values(),
             key=lambda r: (
-                r.user_id != league.champion_id,
+                r.podium or (4 if r.user_id == fourth else 5),
                 -r.reach,
                 -r.points,
                 r.time_seconds,

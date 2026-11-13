@@ -33,7 +33,7 @@ Como funciona:
 
 Dois formatos:
 • Pontos: você define quantas rodadas. Todos jogam todas, e quem somar mais pontos até a data final é o campeão.
-• Copa: mata-mata em duelos, com o chaveamento sorteado no início e visível para todos. Precisa de um número par de jogadores. Cada duelo tem 24 horas: quem não jogar no prazo perde por W.O. e a chave segue.
+• Copa: mata-mata em duelos, com o chaveamento sorteado no início e visível para todos. Precisa de 2, 4, 8 ou 16 jogadores para fechar as chaves, e quem cai na semifinal ainda disputa o 3º lugar. Cada duelo tem 24 horas: quem não jogar no prazo perde por W.O. e a chave segue.
 
 Cada liga tem o seu próprio menu e o seu próprio ranking, e as ligas de que você participou ficam guardadas no histórico. Há também seis conquistas novas para quem joga e vence ligas.
 

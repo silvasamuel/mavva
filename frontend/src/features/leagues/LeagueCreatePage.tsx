@@ -32,7 +32,7 @@ const FORMATS: { value: LeagueFormat; title: string; text: string }[] = [
   {
     value: 'cup',
     title: 'Copa',
-    text: 'Mata-mata em duelos, com chaveamento sorteado no início. Precisa de um número par de jogadores.',
+    text: 'Mata-mata em duelos, com chaveamento sorteado no início e disputa de 3º lugar. Precisa de 2, 4, 8 ou 16 jogadores para fechar as chaves.',
   },
 ]
 

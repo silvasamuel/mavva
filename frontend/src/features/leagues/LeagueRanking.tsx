@@ -8,6 +8,12 @@ import { AppIcons, Glyph } from '@/lib/icons'
 import { useLeague } from './useLeague'
 import { formatClock } from './labels'
 
+/** Cup places below the champion, who gets the crown. */
+const PODIUM: Record<number, { label: string; pill: string }> = {
+  2: { label: 'Vice-campeão', pill: 'bg-sand-200 text-sand-800' },
+  3: { label: '3º lugar', pill: 'bg-grain-100 text-grain-800' },
+}
+
 function detail(row: LeagueStanding, cup: boolean, rounds: number | null): string {
   if (cup) {
     const wins = `${row.wins} ${row.wins === 1 ? 'vitória' : 'vitórias'}`
@@ -31,7 +37,7 @@ export function LeagueRanking() {
       <CardTitle>Ranking da liga</CardTitle>
       <p className="-mt-2 mb-3 text-xs font-semibold text-sand-500">
         {cup
-          ? 'Quem foi mais longe no chaveamento fica na frente.'
+          ? 'Campeão, vice e 3º lugar primeiro; depois, quem foi mais longe no chaveamento.'
           : 'Mais pontos na frente; no empate, menos tempo.'}
       </p>
       {!started ? (
@@ -75,6 +81,12 @@ export function LeagueRanking() {
                     <span className="flex shrink-0 items-center gap-1 rounded-full bg-grain-400 px-2.5 py-1 text-xs font-extrabold text-grain-900">
                       <Glyph as={AppIcons.crown} className="h-4 w-4" />
                       Campeão
+                    </span>
+                  ) : cup && row.podium != null && PODIUM[row.podium] ? (
+                    <span
+                      className={`shrink-0 rounded-full px-2.5 py-1 text-xs font-extrabold ${PODIUM[row.podium].pill}`}
+                    >
+                      {PODIUM[row.podium].label}
                     </span>
                   ) : cup ? (
                     <span

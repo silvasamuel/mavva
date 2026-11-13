@@ -608,7 +608,9 @@ export interface LeagueSide {
   user: PublicUser | null
   /** "Winner of match N" while `user` is null. */
   from_match: number | null
-  /** The match that fed this seat had no winner: nobody takes it. */
+  /** Third place: the seat takes that match's loser, not its winner. */
+  from_loser?: boolean
+  /** The match that fed this seat left nobody for it. */
   vacant?: boolean
   played: boolean
   /** Only once the match is decided. */
@@ -625,14 +627,14 @@ export interface LeagueCupMatch {
   decided_by: 'points' | 'time' | 'lots' | 'walkover' | 'void' | null
   /** Play by then or lose by walkover. */
   deadline_at?: string | null
+  /** The semifinal losers' match, shown beside the final. */
+  third_place?: boolean
 }
 
 export interface LeagueCupRound {
   round: number
   label: string
   matches: LeagueCupMatch[]
-  /** Players who rest this round and go straight to the next one. */
-  byes: LeagueSide[]
 }
 
 export interface LeagueRound {
@@ -652,7 +654,10 @@ export interface LeagueStanding {
   time_seconds: number
   played: number
   wins: number
+  /** Cup: out of the title race (may still play for third place). */
   eliminated: boolean
+  /** Cup: 1, 2 or 3 once that place is decided. */
+  podium?: number | null
 }
 
 export interface LeagueDetail extends League {

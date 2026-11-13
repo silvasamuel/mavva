@@ -47,7 +47,7 @@ function SideRow({
           : side.vacant
             ? 'Sem adversário'
             : side.from_match != null
-              ? `Vencedor do jogo ${side.from_match}`
+              ? `${side.from_loser ? 'Perdedor' : 'Vencedor'} do jogo ${side.from_match}`
               : 'A definir'}
       </span>
       {side.score ? (
@@ -86,8 +86,12 @@ function CupMatch({
         isMine ? 'ring-2 ring-leaf-400' : 'ring-1 ring-sand-100'
       }`}
     >
-      <p className="mb-1 px-2 text-[11px] font-extrabold uppercase tracking-wide text-sand-400">
-        Jogo {match.number}
+      <p
+        className={`mb-1 px-2 text-[11px] font-extrabold uppercase tracking-wide ${
+          match.third_place ? 'text-grain-700' : 'text-sand-400'
+        }`}
+      >
+        {match.third_place ? `Disputa de 3º lugar · jogo ${match.number}` : `Jogo ${match.number}`}
       </p>
       <div className="space-y-1">
         {sides.map((side, index) => (
@@ -137,7 +141,7 @@ function Bracket({ league }: { league: LeagueDetail }) {
       <p className="-mt-2 mb-3 text-xs font-semibold text-sand-500">
         Sorteado no início. Os dois jogadores de cada jogo respondem às mesmas perguntas; os
         placares aparecem quando ambos tiverem jogado. Cada jogo tem 24 horas: quem não jogar perde
-        por W.O.
+        por W.O. Quem cai na semifinal ainda disputa o 3º lugar.
       </p>
       {/* One column per round, read left to right; on a phone it scrolls sideways. */}
       <div className="-mx-2 overflow-x-auto px-2 pb-2">
@@ -150,23 +154,6 @@ function Bracket({ league }: { league: LeagueDetail }) {
               <ul className="flex flex-1 flex-col justify-around gap-3">
                 {round.matches.map((match) => (
                   <CupMatch key={match.id} match={match} league={league} myId={myId} />
-                ))}
-                {round.byes.map((bye, index) => (
-                  <li
-                    key={`bye-${index}`}
-                    className="w-56 rounded-2xl border border-dashed border-sand-300 bg-sand-25 px-3 py-2 text-xs font-semibold text-sand-500"
-                  >
-                    <span className="font-extrabold text-sand-600">
-                      {bye.user
-                        ? `@${bye.user.username}`
-                        : bye.vacant
-                          ? 'Ninguém'
-                          : bye.from_match != null
-                            ? `Vencedor do jogo ${bye.from_match}`
-                            : 'A definir'}
-                    </span>{' '}
-                    descansa nesta rodada e avança direto.
-                  </li>
                 ))}
               </ul>
             </li>

@@ -172,7 +172,8 @@ declined, left), invited_at, joined_at NULL` — UNIQUE(league_id, user_id).
 ### league_matches *(uma rodada de pontos ou um duelo da copa)*
 `id UUID PK, league_id FK (CASCADE), round INT, position INT, question_ids JSONB,
 player_a_id / player_b_id FK users NULL, feeder_a_id / feeder_b_id FK league_matches NULL,
-winner_id FK users NULL, deadline_at TIMESTAMPTZ NULL (copa: 24 h depois de os dois
+winner_id FK users NULL, third_place BOOL (disputa de 3º lugar: os lugares recebem os
+perdedores das semifinais), deadline_at TIMESTAMPTZ NULL (copa: 24 h depois de os dois
 jogadores serem conhecidos), decided_by VARCHAR(10) NULL (points, time, lots, walkover,
 void), resolved_at NULL`
 — UNIQUE(league_id, round, position). Na copa, cada lado é um jogador ou o vencedor de uma
