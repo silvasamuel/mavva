@@ -60,7 +60,12 @@ function renderAt(path: string) {
 function serve(data: LeagueDetail) {
   get.mockImplementation((path: string) =>
     path === '/friends'
-      ? Promise.resolve({ friends: [player('rute')], incoming: [], sent: [], limit: 70 })
+      ? Promise.resolve({
+          friends: [player('rute'), player('maria')],
+          incoming: [],
+          sent: [],
+          limit: 70,
+        })
       : Promise.resolve(data)
   )
 }
@@ -454,12 +459,36 @@ describe('LeagueRanking and LeaguePlayers', () => {
     await user.click(screen.getByRole('button', { name: 'Convidar' }))
     expect(post).toHaveBeenCalledWith('/leagues/league-1/invites', { username: 'davi' })
 
-    await user.click(await screen.findByRole('button', { name: /@rute/ }))
+    // The friends list opens on demand and says where each friend stands.
+    expect(screen.queryByRole('list', { name: 'Seus amigos' })).not.toBeInTheDocument()
+    await user.click(screen.getByRole('button', { name: 'Ver lista de amigos' }))
+    const friends = await screen.findByRole('list', { name: 'Seus amigos' })
+    const rows = within(friends).getAllByRole('listitem')
+    expect(rows.map((row) => row.textContent)).toEqual([
+      expect.stringContaining('@rute'),
+      expect.stringContaining('@maria'),
+    ])
+    expect(rows[1]).toHaveTextContent('Na liga')
+    await user.click(within(rows[0]).getByRole('button', { name: 'Convidar @rute' }))
     expect(post).toHaveBeenCalledWith('/leagues/league-1/invites', { username: 'rute' })
     expect(screen.getByText(/Restam 16 vagas de 20/)).toBeInTheDocument()
 
     await user.click(screen.getAllByRole('button', { name: 'Remover' })[0])
     expect(del).toHaveBeenCalledWith('/leagues/league-1/members/id-maria')
+  })
+
+  it('points to the friends screen when the admin has no friends yet', async () => {
+    const user = userEvent.setup()
+    const recruiting = detail({ status: 'recruiting' })
+    get.mockImplementation((path: string) =>
+      path === '/friends'
+        ? Promise.resolve({ friends: [], incoming: [], sent: [], limit: 70 })
+        : Promise.resolve(recruiting)
+    )
+    renderAt('/leagues/league-1/players')
+    await user.click(await screen.findByRole('button', { name: 'Ver lista de amigos' }))
+    expect(await screen.findByText(/Você ainda não tem amigos no Mavva/)).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'Adicionar amigos' })).toBeInTheDocument()
   })
 
   it('shows the players without the invite tools once the league has started', async () => {

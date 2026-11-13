@@ -1,18 +1,127 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { api, ApiError } from '@/lib/api'
 import type { FriendsOverview, LeagueDetail, PublicUser } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Card, CardTitle } from '@/components/ui/Card'
 import { Input } from '@/components/ui/Input'
+import { Spinner } from '@/components/ui/Spinner'
 import { PlayerProfileModal } from '@/components/PlayerProfileModal'
 import { PlayerSeals } from '@/components/PlayerSeals'
 import { RankBadge } from '@/components/RankBadge'
+import { AppIcons, Glyph } from '@/lib/icons'
 import { useLeague } from './useLeague'
+
+/** Past this many friends the list gets a filter box. */
+const FILTER_FROM = 8
+
+/**
+ * The player's friends, each with where they stand in this league: already
+ * in, invited, or one tap away from an invite.
+ */
+function FriendPicker({
+  friends,
+  league,
+  inviting,
+  onInvite,
+}: {
+  friends: PublicUser[] | undefined
+  league: LeagueDetail
+  /** Username whose invite is being sent right now. */
+  inviting: string | undefined
+  onInvite: (friend: PublicUser) => void
+}) {
+  const [filter, setFilter] = useState('')
+  const status = new Map(league.members.map((member) => [member.user.id, member.status]))
+  const term = filter.trim().toLowerCase().replace(/^@/, '')
+  const shown = (friends ?? []).filter(
+    (friend) =>
+      term === '' || friend.username.includes(term) || friend.name.toLowerCase().includes(term)
+  )
+
+  return (
+    <div id="league-friends" className="mt-3 rounded-2xl bg-sand-50 p-3">
+      {friends == null ? (
+        <div className="flex justify-center py-4">
+          <Spinner className="h-6 w-6 text-leaf-500" />
+        </div>
+      ) : friends.length === 0 ? (
+        <p className="text-sm font-semibold text-sand-600">
+          Você ainda não tem amigos no Mavva.{' '}
+          <Link to="/friends" className="font-extrabold text-leaf-700 hover:underline">
+            Adicionar amigos
+          </Link>
+        </p>
+      ) : (
+        <>
+          {friends.length >= FILTER_FROM && (
+            <div className="mb-2">
+              <Input
+                label="Buscar amigo"
+                value={filter}
+                onChange={(event) => setFilter(event.target.value)}
+                placeholder="nome ou usuário"
+                autoCapitalize="none"
+                autoCorrect="off"
+              />
+            </div>
+          )}
+          {shown.length === 0 ? (
+            <p className="py-2 text-sm font-semibold text-sand-500">Nenhum amigo com esse nome.</p>
+          ) : (
+            <ul
+              aria-label="Seus amigos"
+              className="max-h-72 divide-y divide-sand-200 overflow-y-auto"
+            >
+              {shown.map((friend) => {
+                const state = status.get(friend.id)
+                return (
+                  <li key={friend.id} className="flex items-center gap-3 py-2">
+                    <RankBadge code={friend.rank.code} size="sm" />
+                    <div className="min-w-0 flex-1">
+                      <p className="flex items-center gap-1.5 font-extrabold text-ink">
+                        <span className="truncate">{friend.name}</span>
+                        <PlayerSeals of={friend} />
+                      </p>
+                      <p className="truncate text-xs font-semibold text-sand-500">
+                        @{friend.username}
+                      </p>
+                    </div>
+                    {state === 'active' ? (
+                      <span className="shrink-0 rounded-full bg-leaf-100 px-2.5 py-1 text-xs font-extrabold text-leaf-800">
+                        Na liga
+                      </span>
+                    ) : state === 'invited' ? (
+                      <span className="shrink-0 rounded-full bg-grain-100 px-2.5 py-1 text-xs font-extrabold text-grain-800">
+                        Convidado
+                      </span>
+                    ) : (
+                      <Button
+                        size="sm"
+                        loading={inviting === friend.username}
+                        disabled={inviting != null}
+                        aria-label={`Convidar @${friend.username}`}
+                        onClick={() => onInvite(friend)}
+                      >
+                        Convidar
+                      </Button>
+                    )}
+                  </li>
+                )
+              })}
+            </ul>
+          )}
+        </>
+      )}
+    </div>
+  )
+}
 
 function InviteForm({ league }: { league: LeagueDetail }) {
   const queryClient = useQueryClient()
   const [username, setUsername] = useState('')
+  const [friendsOpen, setFriendsOpen] = useState(false)
   const { data: friends } = useQuery({
     queryKey: ['friends'],
     queryFn: () => api.get<FriendsOverview>('/friends'),
@@ -26,8 +135,6 @@ function InviteForm({ league }: { league: LeagueDetail }) {
       setUsername('')
     },
   })
-  const taken = new Set(league.members.map((member) => member.user.id))
-  const suggestions = (friends?.friends ?? []).filter((friend) => !taken.has(friend.id))
   const seats = league.max_members - league.member_count - league.invited_count
   const handle = username.trim().toLowerCase().replace(/^@/, '')
 
@@ -68,28 +175,26 @@ function InviteForm({ league }: { league: LeagueDetail }) {
                 : 'Não foi possível convidar.'}
             </p>
           )}
-          {suggestions.length > 0 && (
-            <div>
-              <p className="mb-2 text-xs font-extrabold uppercase tracking-wide text-sand-500">
-                Seus amigos
-              </p>
-              <ul className="flex flex-wrap gap-2">
-                {suggestions.map((friend) => (
-                  <li key={friend.id}>
-                    <button
-                      type="button"
-                      disabled={invite.isPending}
-                      onClick={() => invite.mutate(friend.username)}
-                      className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-sm font-extrabold text-ink shadow-card transition-colors hover:bg-leaf-50 disabled:opacity-50"
-                    >
-                      <RankBadge code={friend.rank.code} size="xs" />@{friend.username}
-                      <span className="text-leaf-700">+</span>
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+          <div>
+            <Button
+              variant="secondary"
+              size="sm"
+              aria-expanded={friendsOpen}
+              aria-controls="league-friends"
+              onClick={() => setFriendsOpen((open) => !open)}
+            >
+              <Glyph as={AppIcons.friends} className="h-4 w-4" />
+              {friendsOpen ? 'Fechar lista de amigos' : 'Ver lista de amigos'}
+            </Button>
+            {friendsOpen && (
+              <FriendPicker
+                friends={friends?.friends}
+                league={league}
+                inviting={invite.isPending ? invite.variables : undefined}
+                onInvite={(friend) => invite.mutate(friend.username)}
+              />
+            )}
+          </div>
           <p className="text-xs font-semibold text-sand-500">
             {seats === 1 ? 'Resta 1 vaga' : `Restam ${seats} vagas`} de {league.max_members}. Para
             entrar e jogar, o convidado precisa ser Mavva Apoiador.
