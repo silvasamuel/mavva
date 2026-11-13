@@ -1,6 +1,7 @@
 import type { LeagueCupMatch, LeagueDetail, LeagueSide } from '@/types/api'
 import { Card, CardTitle } from '@/components/ui/Card'
 import { RankBadge } from '@/components/RankBadge'
+import { formatDateTime } from '@/lib/format'
 import { AppIcons, Glyph } from '@/lib/icons'
 import { useLeague } from './useLeague'
 import { PlayButton } from './PlayButton'
@@ -10,6 +11,8 @@ const DECIDED_BY: Record<NonNullable<LeagueCupMatch['decided_by']>, string> = {
   points: 'Decidido nos pontos',
   time: 'Empate nos pontos: decidido no tempo',
   lots: 'Empate em tudo: decidido por sorteio',
+  walkover: 'Vitória por W.O.: o adversário não jogou no prazo',
+  void: 'Ninguém jogou no prazo: sem vencedor',
 }
 
 function SideRow({
@@ -41,9 +44,11 @@ function SideRow({
       >
         {side.user
           ? `${mine ? 'Você' : `@${side.user.username}`}`
-          : side.from_match != null
-            ? `Vencedor do jogo ${side.from_match}`
-            : 'A definir'}
+          : side.vacant
+            ? 'Sem adversário'
+            : side.from_match != null
+              ? `Vencedor do jogo ${side.from_match}`
+              : 'A definir'}
       </span>
       {side.score ? (
         <span className="shrink-0 text-sm font-extrabold tabular-nums text-ink">
@@ -70,7 +75,9 @@ function CupMatch({
   league: LeagueDetail
   myId: string | undefined
 }) {
-  const decided = match.winner_id != null
+  // Settled matches include the ones with no winner (nobody played in time).
+  const decided = match.decided_by != null
+  const waiting = !decided && match.a.user != null && match.b.user != null
   const isMine = league.my_match_id === match.id
   const sides = [match.a, match.b]
   return (
@@ -101,6 +108,12 @@ function CupMatch({
             : ''}
         </p>
       )}
+      {waiting && match.deadline_at && (
+        <p className="mt-1.5 flex items-center gap-1 px-2 text-[11px] font-bold text-grain-800">
+          <Glyph as={AppIcons.hourglass} className="h-3.5 w-3.5" />
+          Prazo: {formatDateTime(match.deadline_at)}
+        </p>
+      )}
       {isMine && (
         <div className="mt-2">
           <PlayButton
@@ -123,7 +136,8 @@ function Bracket({ league }: { league: LeagueDetail }) {
       <CardTitle>Chaveamento</CardTitle>
       <p className="-mt-2 mb-3 text-xs font-semibold text-sand-500">
         Sorteado no início. Os dois jogadores de cada jogo respondem às mesmas perguntas; os
-        placares aparecem quando ambos tiverem jogado.
+        placares aparecem quando ambos tiverem jogado. Cada jogo tem 24 horas: quem não jogar perde
+        por W.O.
       </p>
       {/* One column per round, read left to right; on a phone it scrolls sideways. */}
       <div className="-mx-2 overflow-x-auto px-2 pb-2">
@@ -145,9 +159,11 @@ function Bracket({ league }: { league: LeagueDetail }) {
                     <span className="font-extrabold text-sand-600">
                       {bye.user
                         ? `@${bye.user.username}`
-                        : bye.from_match != null
-                          ? `Vencedor do jogo ${bye.from_match}`
-                          : 'A definir'}
+                        : bye.vacant
+                          ? 'Ninguém'
+                          : bye.from_match != null
+                            ? `Vencedor do jogo ${bye.from_match}`
+                            : 'A definir'}
                     </span>{' '}
                     descansa nesta rodada e avança direto.
                   </li>

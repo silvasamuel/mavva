@@ -22,6 +22,7 @@ import { DuelResultPage } from '@/features/duels/DuelResultPage'
 import { FriendsPage } from '@/features/friends/FriendsPage'
 import { LeagueCreatePage } from '@/features/leagues/LeagueCreatePage'
 import { LeagueGames } from '@/features/leagues/LeagueGames'
+import { LeagueJoinPage } from '@/features/leagues/LeagueJoinPage'
 import { LeagueLayout } from '@/features/leagues/LeagueLayout'
 import { LeagueOverview } from '@/features/leagues/LeagueOverview'
 import { LeaguePlayers } from '@/features/leagues/LeaguePlayers'
@@ -67,6 +68,8 @@ export default function App() {
             <Route path="/verify-email" element={<VerifyEmailPage />} />
             <Route path="/termos" element={<TermsPage />} />
             <Route path="/privacidade" element={<PrivacyPage />} />
+            {/* Public: an invite link is opened before the guest has an account. */}
+            <Route path="/leagues/join/:code" element={<LeagueJoinPage />} />
 
             <Route element={<RequireAuth />}>
               {/* Quiz play is fullscreen-focused, outside the shell */}

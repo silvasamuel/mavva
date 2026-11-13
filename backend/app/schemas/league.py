@@ -18,6 +18,8 @@ class LeagueCreate(BaseModel):
     difficulties: list[Difficulty] = Field(min_length=1, max_length=4)
     rounds: int | None = None  # points format only
     ends_on: date  # last day of play, Brasília calendar
+    question_count: int = 10  # per fixture, 5 to 20
+    timer_seconds: int = 20  # per question, one of the offered choices
 
 
 class LeagueInviteIn(BaseModel):
@@ -46,6 +48,10 @@ class LeagueOut(BaseModel):
     champion: PublicUser | None
     # The fixture waiting for me right now, if any.
     my_match_id: uuid.UUID | None
+    # Cup: until when that match can be played before it goes by walkover.
+    my_match_deadline_at: datetime | None = None
+    # For the invite link. Only the admin gets it, and only while recruiting.
+    invite_code: str | None = None
 
 
 class LeagueListOut(BaseModel):
@@ -100,6 +106,7 @@ class LeagueSideOut(BaseModel):
 
     user: PublicUser | None  # None until the feeder match is decided
     from_match: int | None  # "winner of match N" while user is None
+    vacant: bool = False  # the feeder match had no winner: nobody takes this seat
     played: bool
     score: LeagueScoreOut | None  # only once the match is decided
 
@@ -110,7 +117,8 @@ class LeagueCupMatchOut(BaseModel):
     a: LeagueSideOut
     b: LeagueSideOut
     winner_id: uuid.UUID | None
-    decided_by: Literal["points", "time", "lots"] | None
+    decided_by: Literal["points", "time", "lots", "walkover", "void"] | None
+    deadline_at: datetime | None  # play by then or lose by walkover
 
 
 class LeagueCupRoundOut(BaseModel):
@@ -135,3 +143,25 @@ class LeagueDetailOut(LeagueOut):
 
 class LeaguePlayOut(BaseModel):
     session_id: uuid.UUID
+
+
+class LeagueInvitePreviewOut(BaseModel):
+    """What the invite link shows to whoever opens it, signed in or not."""
+
+    name: str
+    format: LeagueFormat
+    status: LeagueStatus
+    rounds: int | None
+    ends_on: date
+    admin_name: str
+    admin_username: str
+    member_count: int
+    max_members: int
+    question_count: int
+    timer_seconds: int
+    # False once the league has started, ended or filled up.
+    open: bool
+
+
+class LeagueInviteRedeemOut(BaseModel):
+    league_id: uuid.UUID

@@ -12,6 +12,7 @@ import { PlayerProfileModal } from '@/components/PlayerProfileModal'
 import { PlayerSeals } from '@/components/PlayerSeals'
 import { RankBadge } from '@/components/RankBadge'
 import { AppIcons, Glyph } from '@/lib/icons'
+import { InviteLinkCard } from './InviteLinkCard'
 import { useLeague } from './useLeague'
 
 /** Past this many friends the list gets a filter box. */
@@ -157,6 +158,7 @@ function InviteForm({ league }: { league: LeagueDetail }) {
         </p>
       ) : (
         <>
+          <InviteLinkCard league={league} />
           <form
             className="flex items-end gap-2"
             onSubmit={(event) => {

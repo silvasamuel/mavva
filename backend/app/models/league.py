@@ -37,8 +37,14 @@ class League(Base):
     # What may be asked: category ids and difficulty values (snapshots, not FKs).
     category_ids: Mapped[list[int]] = mapped_column(JSONB)
     difficulties: Mapped[list[str]] = mapped_column(JSONB)
-    # Points format only: how many rounds the owner chose.
+    # Points format only: how many rounds the admin chose.
     rounds: Mapped[int | None] = mapped_column(default=None)
+    # The admin's rules for every fixture of this league.
+    question_count: Mapped[int] = mapped_column(default=10, server_default="10")
+    timer_seconds: Mapped[int] = mapped_column(default=20, server_default="20")
+    # What the shareable invite link carries. Anyone who opens it while the
+    # league is recruiting gets an invitation.
+    invite_code: Mapped[str] = mapped_column(String(16), unique=True)
     # First instant after the last day of play (midnight in Brasília).
     ends_at: Mapped[datetime]
     created_at: Mapped[datetime] = mapped_column(server_default=func.now())
@@ -117,8 +123,13 @@ class LeagueMatch(Base):
     winner_id: Mapped[uuid.UUID | None] = mapped_column(
         ForeignKey("users.id", ondelete="SET NULL"), default=None
     )
-    # How a cup match was settled: "points", "time" (same points, faster) or
-    # "lots" (still tied: drawn at random, since a bracket needs a winner).
+    # Cup only: both players must have played by then, or whoever didn't loses
+    # by walkover. Set when the second player of the match becomes known.
+    deadline_at: Mapped[datetime | None] = mapped_column(default=None)
+    # How a cup match was settled: "points", "time" (same points, faster),
+    # "lots" (still tied: drawn at random, since a bracket needs a winner),
+    # "walkover" (the other side didn't play in time, or never arrived) or
+    # "void" (neither played: no winner, the seat ahead stays empty).
     decided_by: Mapped[str | None] = mapped_column(String(10), default=None)
     resolved_at: Mapped[datetime | None] = mapped_column(default=None)
 

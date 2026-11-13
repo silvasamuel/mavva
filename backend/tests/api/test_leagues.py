@@ -707,3 +707,360 @@ def test_a_league_never_started_by_its_date_is_incomplete(
 def test_the_last_day_runs_to_midnight_in_brasilia() -> None:
     ends_at = league_service.ends_at_for(date(2026, 11, 20))
     assert ends_at == datetime(2026, 11, 21, 3, 0, tzinfo=UTC)
+
+
+def _unlocked(client: TestClient, headers: dict[str, str]) -> set[str]:
+    achievements = client.get("/api/v1/achievements", headers=headers).json()
+    return {a["code"] for a in achievements if a["unlocked_at"]}
+
+
+def _expire_deadline(db: Session, match_id: str) -> None:
+    row = db.get(LeagueMatch, uuid.UUID(match_id))
+    assert row is not None
+    row.deadline_at = datetime.now(UTC) - timedelta(minutes=1)
+    db.flush()
+
+
+class TestCupDeadline:
+    """24 hours per cup match: whoever doesn't play loses, and the bracket moves on."""
+
+    def _started(
+        self, client: TestClient, db: Session, bank: list[int], names: list[str]
+    ) -> tuple[str, dict[str, dict[str, str]], list[dict]]:
+        players = {name: _player(client, db, name) for name in names}
+        owner = players[names[0]]
+        league = _create(client, owner, bank, format="cup", rounds=None)
+        for name in names[1:]:
+            _invite_and_join(client, league["id"], owner, players[name])
+        started = client.post(f"{URL}/{league['id']}/start", headers=owner).json()
+        return league["id"], players, started["bracket"]
+
+    def test_round_one_gets_24_hours_from_the_start(
+        self, client: TestClient, db: Session, bank: list[int]
+    ) -> None:
+        league_id, players, bracket = self._started(
+            client, db, bank, ["ana", "bia", "caio", "davi"]
+        )
+        for match in bracket[0]["matches"]:
+            deadline = datetime.fromisoformat(match["deadline_at"])
+            left = deadline - datetime.now(UTC)
+            assert timedelta(hours=23, minutes=59) < left <= timedelta(hours=24)
+        # The final has no clock until both finalists are known.
+        assert bracket[1]["matches"][0]["deadline_at"] is None
+        mine = _detail(client, league_id, players["ana"])
+        assert mine["my_match_deadline_at"] is not None
+
+    def test_whoever_did_not_play_loses_by_walkover(
+        self, client: TestClient, db: Session, bank: list[int]
+    ) -> None:
+        league_id, players, bracket = self._started(
+            client, db, bank, ["ana", "bia", "caio", "davi"]
+        )
+        match = bracket[0]["matches"][0]
+        showed = match["a"]["user"]["username"]
+        absent = match["b"]["user"]["username"]
+        _play(client, db, league_id, match["id"], players[showed], correct=1)
+        _expire_deadline(db, match["id"])
+
+        detail = _detail(client, league_id, players[absent])
+        settled = detail["bracket"][0]["matches"][0]
+        assert settled["decided_by"] == "walkover"
+        assert settled["winner_id"] == match["a"]["user"]["id"]
+        # Out of the cup: nothing left to play, and the seat in the final is taken.
+        assert detail["my_match_id"] is None
+        late = client.post(f"{URL}/{league_id}/matches/{match['id']}/play", headers=players[absent])
+        assert late.status_code == 400
+        final = detail["bracket"][1]["matches"][0]
+        seated = {side["user"]["username"] for side in (final["a"], final["b"]) if side["user"]}
+        assert seated == {showed}
+        row = next(r for r in detail["standings"] if r["user"]["username"] == absent)
+        assert row["eliminated"] is True
+
+    def test_nobody_played_no_winner_and_the_other_finalist_walks_over(
+        self, client: TestClient, db: Session, bank: list[int]
+    ) -> None:
+        league_id, players, bracket = self._started(
+            client, db, bank, ["ana", "bia", "caio", "davi"]
+        )
+        ghost, played = bracket[0]["matches"]
+        _expire_deadline(db, ghost["id"])
+        midway = _detail(client, league_id, players["ana"])
+        void = midway["bracket"][0]["matches"][0]
+        assert void["decided_by"] == "void" and void["winner_id"] is None
+        final = midway["bracket"][1]["matches"][0]
+        empty = next(side for side in (final["a"], final["b"]) if side["vacant"])
+        assert empty["user"] is None
+        assert midway["status"] == "active"
+
+        strong = played["a"]["user"]["username"]
+        weak = played["b"]["user"]["username"]
+        _play(client, db, league_id, played["id"], players[strong], correct=6)
+        _play(client, db, league_id, played["id"], players[weak], correct=2)
+
+        done = _detail(client, league_id, players[strong])
+        # Nobody was waiting in the final: the semifinal's winner takes the cup.
+        assert done["status"] == "finished"
+        assert done["champion"]["username"] == strong
+        assert done["bracket"][1]["matches"][0]["decided_by"] == "walkover"
+
+    def test_a_cup_nobody_played_ends_without_a_champion(
+        self, client: TestClient, db: Session, bank: list[int]
+    ) -> None:
+        league_id, players, bracket = self._started(
+            client, db, bank, ["ana", "bia", "caio", "davi"]
+        )
+        for match in bracket[0]["matches"]:
+            _expire_deadline(db, match["id"])
+        done = _detail(client, league_id, players["ana"])
+        assert done["status"] == "incomplete"
+        assert done["champion"] is None
+        assert [m["decided_by"] for r in done["bracket"] for m in r["matches"]] == ["void"] * 3
+
+    def test_the_next_match_starts_its_own_24_hours(
+        self, client: TestClient, db: Session, bank: list[int]
+    ) -> None:
+        league_id, players, bracket = self._started(
+            client, db, bank, ["ana", "bia", "caio", "davi"]
+        )
+        for match in bracket[0]["matches"]:
+            _play(
+                client,
+                db,
+                league_id,
+                match["id"],
+                players[match["a"]["user"]["username"]],
+                correct=5,
+            )
+            _play(
+                client,
+                db,
+                league_id,
+                match["id"],
+                players[match["b"]["user"]["username"]],
+                correct=1,
+            )
+        final = _detail(client, league_id, players["ana"])["bracket"][1]["matches"][0]
+        left = datetime.fromisoformat(final["deadline_at"]) - datetime.now(UTC)
+        assert timedelta(hours=23, minutes=59) < left <= timedelta(hours=24)
+
+    def test_a_round_in_progress_when_the_clock_runs_out_may_finish(
+        self, client: TestClient, db: Session, bank: list[int]
+    ) -> None:
+        league_id, players, bracket = self._started(client, db, bank, ["ana", "bia"])
+        match = bracket[0]["matches"][0]
+        first = match["a"]["user"]["username"]
+        second = match["b"]["user"]["username"]
+        _play(client, db, league_id, match["id"], players[first], correct=2)
+        # The other player is mid-round as the deadline passes.
+        opened = client.post(
+            f"{URL}/{league_id}/matches/{match['id']}/play", headers=players[second]
+        )
+        assert opened.status_code == 200
+        _expire_deadline(db, match["id"])
+        still = _detail(client, league_id, players[first])
+        assert still["bracket"][0]["matches"][0]["winner_id"] is None
+        assert still["status"] == "active"
+
+
+class TestInviteLink:
+    def test_the_admin_gets_a_link_while_recruiting(
+        self, client: TestClient, db: Session, bank: list[int]
+    ) -> None:
+        owner = _player(client, db, "samuel")
+        guest = _player(client, db, "maria")
+        league = _create(client, owner, bank)
+        assert league["invite_code"]
+        _invite_and_join(client, league["id"], owner, guest)
+        # Only the admin sees it, and it goes away once the league starts.
+        assert _detail(client, league["id"], guest)["invite_code"] is None
+        started = client.post(f"{URL}/{league['id']}/start", headers=owner).json()
+        assert started["invite_code"] is None
+
+    def test_anyone_can_preview_the_link_before_signing_in(
+        self, client: TestClient, db: Session, bank: list[int]
+    ) -> None:
+        owner = _player(client, db, "samuel")
+        league = _create(client, owner, bank, name="Liga da Célula")
+        preview = client.get(f"{URL}/invite/{league['invite_code']}")
+        assert preview.status_code == 200, preview.text
+        body = preview.json()
+        assert body["name"] == "Liga da Célula"
+        assert body["admin_username"] == "samuel"
+        assert body["member_count"] == 1
+        assert body["open"] is True
+        # Nothing about the players beyond the admin's name.
+        assert "members" not in body and "id" not in body
+        assert client.get(f"{URL}/invite/nao-existe").status_code == 404
+
+    def test_opening_the_link_is_being_invited(
+        self, client: TestClient, db: Session, bank: list[int]
+    ) -> None:
+        owner = _player(client, db, "samuel")
+        guest = _player(client, db, "maria")
+        league = _create(client, owner, bank)
+        code = league["invite_code"]
+        assert client.post(f"{URL}/invite/{code}/redeem").status_code == 401
+
+        redeemed = client.post(f"{URL}/invite/{code}/redeem", headers=guest)
+        assert redeemed.status_code == 200, redeemed.text
+        assert redeemed.json() == {"league_id": league["id"]}
+        detail = _detail(client, league["id"], guest)
+        assert detail["my_status"] == "invited"
+        # Opening it again changes nothing, before or after accepting.
+        client.post(f"{URL}/invite/{code}/redeem", headers=guest)
+        assert _detail(client, league["id"], owner)["invited_count"] == 1
+        assert client.post(f"{URL}/{league['id']}/join", headers=guest).status_code == 200
+        again = client.post(f"{URL}/invite/{code}/redeem", headers=guest)
+        assert again.status_code == 200
+        assert _detail(client, league["id"], guest)["my_status"] == "active"
+
+    def test_a_non_supporter_lands_on_the_invite_but_cannot_accept(
+        self, client: TestClient, db: Session, bank: list[int]
+    ) -> None:
+        owner = _player(client, db, "samuel")
+        guest = _player(client, db, "maria", supporter=False)
+        league = _create(client, owner, bank)
+        redeemed = client.post(f"{URL}/invite/{league['invite_code']}/redeem", headers=guest)
+        assert redeemed.status_code == 200
+        assert _detail(client, league["id"], guest)["my_status"] == "invited"
+        assert client.post(f"{URL}/{league['id']}/join", headers=guest).status_code == 403
+
+    def test_the_link_stops_working_once_the_league_starts(
+        self, client: TestClient, db: Session, bank: list[int]
+    ) -> None:
+        owner = _player(client, db, "samuel")
+        guest = _player(client, db, "maria")
+        late = _player(client, db, "joao")
+        league = _create(client, owner, bank)
+        _invite_and_join(client, league["id"], owner, guest)
+        client.post(f"{URL}/{league['id']}/start", headers=owner)
+
+        assert client.get(f"{URL}/invite/{league['invite_code']}").json()["open"] is False
+        refused = client.post(f"{URL}/invite/{league['invite_code']}/redeem", headers=late)
+        assert refused.status_code == 400
+        assert "já começou" in refused.json()["detail"]
+
+
+class TestRules:
+    def test_the_admin_chooses_questions_and_time(
+        self, client: TestClient, db: Session, bank: list[int]
+    ) -> None:
+        owner = _player(client, db, "samuel")
+        guest = _player(client, db, "maria")
+        league = _create(client, owner, bank, question_count=5, timer_seconds=30)
+        assert league["question_count"] == 5 and league["timer_seconds"] == 30
+        _invite_and_join(client, league["id"], owner, guest)
+        started = client.post(f"{URL}/{league['id']}/start", headers=owner).json()
+        first = started["rounds_played"][0]["match_id"]
+
+        session_id = client.post(
+            f"{URL}/{league['id']}/matches/{first}/play", headers=owner
+        ).json()["session_id"]
+        quiz = client.get(f"/api/v1/quizzes/{session_id}", headers=owner).json()
+        assert len(quiz["questions"]) == 5
+        assert quiz["timer_seconds"] == 30
+        # Leaving is charged the league's own full clock: 5 questions of 30 s.
+        client.post(f"/api/v1/quizzes/{session_id}/abandon", headers=owner)
+        score = _detail(client, league["id"], owner)["rounds_played"][0]["my_score"]
+        assert score["time_seconds"] == 150
+
+    @pytest.mark.parametrize(
+        ("overrides", "fragment"),
+        [
+            ({"question_count": 4}, "de 5 a 20 perguntas"),
+            ({"question_count": 21}, "de 5 a 20 perguntas"),
+            ({"timer_seconds": 25}, "tempos por pergunta"),
+            ({"timer_seconds": 5}, "tempos por pergunta"),
+        ],
+    )
+    def test_within_the_allowed_range(
+        self,
+        client: TestClient,
+        db: Session,
+        bank: list[int],
+        overrides: dict[str, Any],
+        fragment: str,
+    ) -> None:
+        owner = _player(client, db, "samuel")
+        response = client.post(URL, json=_body(bank, **overrides), headers=owner)
+        assert response.status_code == 400
+        assert fragment in response.json()["detail"]
+
+    def test_the_pool_must_cover_one_fixture(self, client: TestClient, db: Session) -> None:
+        owner = _player(client, db, "samuel")
+        thin = []
+        for index in range(7):
+            category = make_category(db, slug=f"raso{index}")
+            make_mc_question(db, category, difficulty=Difficulty.HARD)
+            thin.append(category.id)
+        body = _body(thin, difficulties=["hard"])
+        # Seven questions in all: enough for fixtures of 5, not of 10.
+        short = client.post(URL, json={**body, "question_count": 10}, headers=owner)
+        assert short.status_code == 400
+        assert "poucas perguntas" in short.json()["detail"]
+        assert (
+            client.post(URL, json={**body, "question_count": 5}, headers=owner).status_code == 201
+        )
+
+
+class TestLeagueAchievements:
+    def test_first_match_and_a_perfect_one(
+        self, client: TestClient, db: Session, bank: list[int]
+    ) -> None:
+        owner = _player(client, db, "samuel")
+        guest = _player(client, db, "maria")
+        league = _create(client, owner, bank, rounds=2)
+        _invite_and_join(client, league["id"], owner, guest)
+        started = client.post(f"{URL}/{league['id']}/start", headers=owner).json()
+        first, second = (r["match_id"] for r in started["rounds_played"])
+        assert not {"league_round_1", "league_perfect_1"} & _unlocked(client, owner)
+
+        _play(client, db, league["id"], first, owner, correct=6)
+        assert "league_round_1" in _unlocked(client, owner)
+        assert "league_perfect_1" not in _unlocked(client, owner)
+        _play(client, db, league["id"], second, owner, correct=10)
+        assert "league_perfect_1" in _unlocked(client, owner)
+        # League badges never pay XP.
+        me = client.get("/api/v1/users/me", headers=owner).json()
+        stats = db.get(UserStats, me["id"])
+        assert stats is not None
+        league_badges = [
+            a
+            for a in client.get("/api/v1/achievements", headers=owner).json()
+            if a["code"].startswith("league")
+        ]
+        assert len(league_badges) == 6
+        assert all(a["xp_reward"] == 0 for a in league_badges)
+
+    def test_the_champion_of_a_points_league(
+        self, client: TestClient, db: Session, bank: list[int]
+    ) -> None:
+        owner = _player(client, db, "samuel")
+        guest = _player(client, db, "maria")
+        league = _create(client, owner, bank, rounds=1)
+        _invite_and_join(client, league["id"], owner, guest)
+        started = client.post(f"{URL}/{league['id']}/start", headers=owner).json()
+        only = started["rounds_played"][0]["match_id"]
+        _play(client, db, league["id"], only, owner, correct=3)
+        # The guest's round ends the league: the champion gets the title
+        # although the request that settled it was someone else's.
+        _play(client, db, league["id"], only, guest, correct=1)
+
+        assert "league_win_1" in _unlocked(client, owner)
+        assert "league_cup_win_1" not in _unlocked(client, owner)
+        assert "league_win_1" not in _unlocked(client, guest)
+
+    def test_the_champion_of_a_cup_even_by_walkover(
+        self, client: TestClient, db: Session, bank: list[int]
+    ) -> None:
+        owner = _player(client, db, "samuel")
+        guest = _player(client, db, "maria")
+        league = _create(client, owner, bank, format="cup", rounds=None)
+        _invite_and_join(client, league["id"], owner, guest)
+        bracket = client.post(f"{URL}/{league['id']}/start", headers=owner).json()["bracket"]
+        match = bracket[0]["matches"][0]
+        _play(client, db, league["id"], match["id"], owner, correct=4)
+        _expire_deadline(db, match["id"])
+        # Looking at the league is what applies the deadline, and the titles.
+        assert _detail(client, league["id"], guest)["champion"]["username"] == "samuel"
+        assert {"league_win_1", "league_cup_win_1"} <= _unlocked(client, owner)

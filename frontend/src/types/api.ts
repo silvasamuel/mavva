@@ -568,6 +568,27 @@ export interface League {
   champion: PublicUser | null
   /** The fixture waiting for me right now, if any. */
   my_match_id: string | null
+  /** Cup: until when that match can be played before it goes by walkover. */
+  my_match_deadline_at?: string | null
+  /** For the invite link; only the admin gets it, and only while recruiting. */
+  invite_code?: string | null
+}
+
+/** What the invite link shows to whoever opens it, signed in or not. */
+export interface LeagueInvitePreview {
+  name: string
+  format: LeagueFormat
+  status: LeagueStatus
+  rounds: number | null
+  ends_on: string
+  admin_name: string
+  admin_username: string
+  member_count: number
+  max_members: number
+  question_count: number
+  timer_seconds: number
+  /** False once the league has started, ended or filled up. */
+  open: boolean
 }
 
 export interface LeagueList {
@@ -587,6 +608,8 @@ export interface LeagueSide {
   user: PublicUser | null
   /** "Winner of match N" while `user` is null. */
   from_match: number | null
+  /** The match that fed this seat had no winner: nobody takes it. */
+  vacant?: boolean
   played: boolean
   /** Only once the match is decided. */
   score: LeagueScore | null
@@ -598,7 +621,10 @@ export interface LeagueCupMatch {
   a: LeagueSide
   b: LeagueSide
   winner_id: string | null
-  decided_by: 'points' | 'time' | 'lots' | null
+  /** "walkover": the other side didn't play in time; "void": neither did. */
+  decided_by: 'points' | 'time' | 'lots' | 'walkover' | 'void' | null
+  /** Play by then or lose by walkover. */
+  deadline_at?: string | null
 }
 
 export interface LeagueCupRound {

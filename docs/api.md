@@ -192,11 +192,27 @@ Competições fechadas: só entra quem o admin da liga (quem a criou) convida. D
   par de jogadores. Quando uma rodada tem número ímpar de classificados, o último descansa
   e passa a jogar primeiro na seguinte.
 
-Cada partida congela **10 perguntas** dos temas (mínimo 7) e dificuldades (mínimo 1) da
-liga; todos que a jogam respondem às mesmas, cada um numa `QuizSession` de modo `league`,
-com 20 s por pergunta. Pontos da liga: cada acerto vale pela dificuldade (10/20/35/50).
+Cada partida congela as perguntas (de **5 a 20**, escolha do admin; padrão 10) dos temas
+(mínimo 7) e dificuldades (mínimo 1) da liga; todos que a jogam respondem às mesmas, cada um
+numa `QuizSession` de modo `league`, com o tempo por pergunta que o admin escolheu (10, 15,
+20, 30, 45 ou 60 s; padrão 20). Pontos da liga: cada acerto vale pela dificuldade (10/20/35/50).
 Essas sessões contam para precisão, sabedoria, revisão e sequência, mas **não dão XP de
 temporada**. Sair no meio encerra a partida com o que foi respondido e tempo cheio.
+
+**Prazo por duelo (copa)**: cada jogo tem **24 horas** a partir do momento em que os dois
+jogadores são conhecidos (`deadline_at`). Passado o prazo, aplicado sob demanda como a data
+final, quem jogou vence por W.O. (`decided_by: "walkover"`). Se nenhum jogou, o jogo fica sem
+vencedor (`"void"`) e o lugar seguinte fica vago (`vacant`): quem enfrentaria esse vencedor
+avança por W.O.; dois lugares vagos dão outro jogo sem vencedor, e se isso chegar à final a
+copa termina `incomplete`. Quem está no meio da partida quando o prazo vence pode terminá-la.
+
+**Link de convite**: `invite_code` (só o admin recebe, e só enquanto a liga recruta) forma o
+link `/leagues/join/{code}`. Abrir o link é ser convidado: o jogador cai no convite e aceita
+ou recusa como qualquer outro (aceitar segue exigindo apoiador). Quem não tem conta vê a
+liga, cadastra-se e encontra o convite esperando.
+
+**Conquistas de liga** (sem XP): primeira partida, partida perfeita, campeão, campeão de copa,
+3 ligas jogadas até o fim e tricampeão.
 
 **Apoiador**: criar liga, aceitar convite e jogar exigem selo ativo (`403` caso contrário).
 Ver é livre para quem está na liga ou foi convidado; para os demais a liga não existe (`404`).
@@ -209,10 +225,12 @@ antes, quando todos jogaram tudo.
 | Método | Rota | Descrição |
 |---|---|---|
 | GET | `/leagues` | `{can_play, leagues}`: ligas em que o jogador está ou foi convidado, da mais nova para a mais antiga. Cada uma: `status` (`recruiting`, `active`, `finished`, `incomplete`), `my_status` (`invited`, `active`), `is_owner`, `member_count`, `invited_count`, `champion`, `my_match_id` (a partida que espera por ele agora). |
-| POST | `/leagues` | Cria. `{name (3–40), format, category_ids (≥7), difficulties (≥1), rounds (só pontos), ends_on}`. Quem cria vira o admin da liga e entra como primeiro jogador. Máx. 5 ligas em aberto por admin. |
+| POST | `/leagues` | Cria. `{name (3–40), format, category_ids (≥7), difficulties (≥1), rounds (só pontos), ends_on, question_count (5–20), timer_seconds}`. Quem cria vira o admin da liga e entra como primeiro jogador. Máx. 5 ligas em aberto por admin. |
 | GET | `/leagues/{id}` | Detalhe: o resumo acima mais `categories`, `difficulties`, `members`, `standings` (o ranking da liga), `rounds_played` (pontos) e `bracket` (copa: rodadas com `matches` e `byes`; cada lado traz `user` ou `from_match`, `played` e, só depois de decidido, `score`). |
 | DELETE | `/leagues/{id}` | Admin da liga, antes de começar. |
 | POST | `/leagues/{id}/invites` | Admin convida por `{username}`. Convites contam no limite de 20. |
+| GET | `/leagues/invite/{code}` | **Pública** (o link é aberto antes de haver conta): `{name, format, status, rounds, ends_on, admin_name, admin_username, member_count, max_members, question_count, timer_seconds, open}`. Nada sobre os jogadores além do nome do admin. 60/min por IP. |
+| POST | `/leagues/invite/{code}/redeem` | Transforma o link em convite para quem chamou e devolve `{league_id}`. Idempotente. 400 se a liga já começou ou encheu. |
 | POST | `/leagues/{id}/join` · `/decline` · `/leave` | Convidado aceita (apoiador) ou recusa; jogador sai antes do início. |
 | DELETE | `/leagues/{id}/members/{user_id}` | Admin remove jogador ou cancela convite, antes do início. |
 | POST | `/leagues/{id}/start` | Admin começa: mínimo 2 jogadores (par na copa). Sorteia rodadas ou chaveamento; convites sem resposta caem. |

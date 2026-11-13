@@ -6,7 +6,7 @@ import type { LeagueDetail } from '@/types/api'
 import { Button } from '@/components/ui/Button'
 import { Card, CardTitle } from '@/components/ui/Card'
 import { RankBadge } from '@/components/RankBadge'
-import { DIFFICULTY_LABELS, formatDate } from '@/lib/format'
+import { DIFFICULTY_LABELS, formatDate, formatDateTime } from '@/lib/format'
 import { AppIcons, CategoryGlyph, Glyph } from '@/lib/icons'
 import { useLeague } from './useLeague'
 import { PlayButton } from './PlayButton'
@@ -202,8 +202,10 @@ export function LeagueOverview() {
                 : 'Você tem uma rodada para jogar'}
             </p>
             <p className="text-sm font-semibold text-sand-500">
-              {league.question_count} perguntas, {league.timer_seconds} segundos cada. Vale até{' '}
-              {formatDate(league.ends_on)}.
+              {league.question_count} perguntas, {league.timer_seconds} segundos cada.{' '}
+              {league.my_match_deadline_at
+                ? `Jogue até ${formatDateTime(league.my_match_deadline_at)} ou você perde por W.O.`
+                : `Vale até ${formatDate(league.ends_on)}.`}
             </p>
           </div>
           <PlayButton
@@ -256,7 +258,7 @@ export function LeagueOverview() {
         </dl>
         <p className="text-sm font-semibold text-sand-600">
           {league.format === 'cup'
-            ? 'Mata-mata em duelos: os dois respondem às mesmas perguntas. Vence quem fizer mais pontos; em caso de empate, quem foi mais rápido. Quem perde está fora.'
+            ? 'Mata-mata em duelos: os dois respondem às mesmas perguntas. Vence quem fizer mais pontos; em caso de empate, quem foi mais rápido. Quem perde está fora. Cada duelo tem 24 horas: quem não jogar no prazo perde por W.O.'
             : 'Todos jogam cada rodada com as mesmas perguntas, em ordem. Ganha quem somar mais pontos até a data final; em caso de empate, quem gastou menos tempo.'}{' '}
           Cada acerto vale pela dificuldade: 10, 20, 35 ou 50 pontos. As partidas da liga não dão XP
           de temporada.

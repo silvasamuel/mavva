@@ -28,14 +28,14 @@ BODY = """Chegaram as Ligas: competições fechadas, só para quem você convida
 
 Como funciona:
 • Você dá um nome, escolhe a data de encerramento, os temas (pelo menos 7) e as dificuldades das perguntas.
-• Convida até 20 jogadores pelo nome de usuário e começa quando todos estiverem dentro.
-• Cada partida tem 10 perguntas, as mesmas para todos, com 20 segundos cada.
+• Convida até 20 jogadores pelo nome de usuário, pela lista de amigos ou por um link para mandar no WhatsApp, e começa quando todos estiverem dentro.
+• Você escolhe quantas perguntas tem cada partida (de 5 a 20) e o tempo por pergunta. Em cada partida, todos respondem às mesmas perguntas.
 
 Dois formatos:
 • Pontos: você define quantas rodadas. Todos jogam todas, e quem somar mais pontos até a data final é o campeão.
-• Copa: mata-mata em duelos, com o chaveamento sorteado no início e visível para todos. Precisa de um número par de jogadores.
+• Copa: mata-mata em duelos, com o chaveamento sorteado no início e visível para todos. Precisa de um número par de jogadores. Cada duelo tem 24 horas: quem não jogar no prazo perde por W.O. e a chave segue.
 
-Cada liga tem o seu próprio menu e o seu próprio ranking, e as ligas de que você participou ficam guardadas no histórico.
+Cada liga tem o seu próprio menu e o seu próprio ranking, e as ligas de que você participou ficam guardadas no histórico. Há também seis conquistas novas para quem joga e vence ligas.
 
 As Ligas são um benefício dos Mavva Apoiadores: para criar uma liga, aceitar um convite e jogar é preciso estar com o selo ativo. Quem ainda não apoia pode acompanhar tudo pela tela de Ligas."""
 

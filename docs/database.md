@@ -159,7 +159,8 @@ as linhas entram num único `INSERT … SELECT`.
 ### leagues *(competições por convite: tabela de pontos ou copa)*
 `id UUID PK, owner_id FK users (CASCADE), name VARCHAR(40), format ENUM(points, cup),
 status ENUM(recruiting, active, finished, incomplete), category_ids JSONB, difficulties JSONB,
-rounds INT NULL (só pontos), ends_at TIMESTAMPTZ, created_at, started_at NULL, finished_at NULL,
+rounds INT NULL (só pontos), question_count INT (5–20), timer_seconds INT,
+invite_code VARCHAR(16) UNIQUE, ends_at TIMESTAMPTZ, created_at, started_at NULL, finished_at NULL,
 champion_id FK users NULL (SET NULL)`
 `ends_at` é a meia-noite de Brasília depois do último dia de jogo; o fechamento é aplicado
 na leitura (`league_service.ensure_closed`), como as temporadas.
@@ -171,7 +172,9 @@ declined, left), invited_at, joined_at NULL` — UNIQUE(league_id, user_id).
 ### league_matches *(uma rodada de pontos ou um duelo da copa)*
 `id UUID PK, league_id FK (CASCADE), round INT, position INT, question_ids JSONB,
 player_a_id / player_b_id FK users NULL, feeder_a_id / feeder_b_id FK league_matches NULL,
-winner_id FK users NULL, decided_by VARCHAR(10) NULL (points, time, lots), resolved_at NULL`
+winner_id FK users NULL, deadline_at TIMESTAMPTZ NULL (copa: 24 h depois de os dois
+jogadores serem conhecidos), decided_by VARCHAR(10) NULL (points, time, lots, walkover,
+void), resolved_at NULL`
 — UNIQUE(league_id, round, position). Na copa, cada lado é um jogador ou o vencedor de uma
 partida anterior (`feeder_*`); a rodada de pontos não tem jogadores próprios.
 

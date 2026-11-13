@@ -10,6 +10,7 @@ import { PlayerProfileModal } from '@/components/PlayerProfileModal'
 import { useAuth } from '@/features/auth/AuthContext'
 import { FirstLoginTutorial } from '@/features/tutorial/FirstLoginTutorial'
 import { PodiumCelebration } from '@/features/seasons/PodiumCelebration'
+import { PendingLeagueInvite } from '@/features/leagues/PendingLeagueInvite'
 import { AppIcons, Glyph, type Icon } from '@/lib/icons'
 
 interface NavItem {
@@ -320,6 +321,7 @@ export function AppShell({ children }: { children?: ReactNode }) {
       {/* Mounted only in the shell, so it never covers quiz play or the auth pages. */}
       <FirstLoginTutorial />
       <PodiumCelebration />
+      <PendingLeagueInvite />
       <PlayerProfileModal
         userId={profileOpen && user ? user.id : null}
         preview={profilePreview}

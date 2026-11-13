@@ -2,13 +2,14 @@
 
 import uuid
 
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, HTTPException, Request, status
 from sqlalchemy import select
 
 from app.api.v1.social import _require_public
 from app.core.deps import CurrentUser, DbDep
+from app.core.ratelimit import limiter
 from app.models import Category, League, LeagueMatch, User
-from app.models.enums import Difficulty, LeagueFormat, LeagueMemberStatus
+from app.models.enums import Difficulty, LeagueFormat, LeagueMemberStatus, LeagueStatus
 from app.schemas.league import (
     LeagueCategoryOut,
     LeagueCreate,
@@ -16,6 +17,8 @@ from app.schemas.league import (
     LeagueCupRoundOut,
     LeagueDetailOut,
     LeagueInviteIn,
+    LeagueInvitePreviewOut,
+    LeagueInviteRedeemOut,
     LeagueListOut,
     LeagueMemberOut,
     LeagueOut,
@@ -60,6 +63,12 @@ def _league_out(league: League, me: User) -> LeagueOut:
         max_members=league_service.MAX_MEMBERS,
         champion=_require_public(league.champion) if league.champion else None,
         my_match_id=mine.id if mine else None,
+        my_match_deadline_at=mine.deadline_at if mine else None,
+        invite_code=(
+            league.invite_code
+            if league.owner_id == me.id and league.status == LeagueStatus.RECRUITING
+            else None
+        ),
     )
 
 
@@ -104,9 +113,11 @@ def _bracket_out(league: League) -> list[LeagueCupRoundOut]:
     ) -> LeagueSideOut:
         user = users.get(player_id) if player_id else None
         entry = next((e for e in match.entries if e.user_id == player_id), None)
+        feeder = by_id.get(feeder_id) if feeder_id else None
         return LeagueSideOut(
             user=_require_public(user) if user else None,
             from_match=number[feeder_id] if user is None and feeder_id in number else None,
+            vacant=user is None and feeder is not None and feeder.resolved_at is not None,
             played=entry is not None and entry.finished_at is not None,
             # Scores stay hidden until both have played: nobody chases a target.
             score=_score(entry) if entry and match.resolved_at is not None else None,
@@ -130,6 +141,7 @@ def _bracket_out(league: League) -> list[LeagueCupRoundOut]:
                         LeagueSideOut(
                             user=_require_public(user) if user else None,
                             from_match=number[feeder.id] if user is None else None,
+                            vacant=user is None and feeder.resolved_at is not None,
                             played=False,
                             score=None,
                         )
@@ -146,6 +158,7 @@ def _bracket_out(league: League) -> list[LeagueCupRoundOut]:
                         b=side(m, m.player_b_id, m.feeder_b_id),
                         winner_id=m.winner_id,
                         decided_by=m.decided_by,  # type: ignore[arg-type]
+                        deadline_at=m.deadline_at,
                     )
                     for m in here
                 ],
@@ -181,8 +194,8 @@ def _detail_out(db: DbDep, league: League, me: User) -> LeagueDetailOut:
             LeagueCategoryOut(id=c.id, slug=c.slug, name=c.name, icon=c.icon) for c in categories
         ],
         difficulties=[Difficulty(value) for value in league.difficulties],
-        question_count=league_service.QUESTION_COUNT,
-        timer_seconds=league_service.TIMER_SECONDS,
+        question_count=league.question_count,
+        timer_seconds=league.timer_seconds,
         members=[
             LeagueMemberOut(
                 user=_require_public(m.user),
@@ -239,11 +252,51 @@ def create_league(body: LeagueCreate, user: CurrentUser, db: DbDep) -> LeagueDet
             difficulties=body.difficulties,
             rounds=body.rounds,
             ends_on=body.ends_on,
+            question_count=body.question_count,
+            timer_seconds=body.timer_seconds,
         )
     except LeagueError as error:
         raise _fail(error) from error
     db.commit()
     return _detail_out(db, _mine(db, user, league.id), user)
+
+
+@router.get("/invite/{code}", response_model=LeagueInvitePreviewOut)
+@limiter.limit("60/minute")
+def invite_preview(request: Request, code: str, db: DbDep) -> LeagueInvitePreviewOut:
+    """Public on purpose: the link is opened before the guest has an account.
+    It shows the league and nothing about its players but the admin's name."""
+    try:
+        league = league_service.invite_preview(db, code)
+    except LeagueError as error:
+        raise _fail(error) from error
+    db.commit()
+    return LeagueInvitePreviewOut(
+        name=league.name,
+        format=league.format,
+        status=league.status,
+        rounds=league.rounds,
+        ends_on=league_service.ends_on_of(league),
+        admin_name=league.owner.name,
+        admin_username=league.owner.username,
+        member_count=len(league_service.active_members(league)),
+        max_members=league_service.MAX_MEMBERS,
+        question_count=league.question_count,
+        timer_seconds=league.timer_seconds,
+        open=(league.status == LeagueStatus.RECRUITING and league_service.seats_left(league) > 0),
+    )
+
+
+@router.post("/invite/{code}/redeem", response_model=LeagueInviteRedeemOut)
+def redeem_invite(code: str, user: CurrentUser, db: DbDep) -> LeagueInviteRedeemOut:
+    """Turns the link into an invitation for the caller and says where it is."""
+    enforce_user_limit(db, user.id, "league_redeem", limit=30, window_seconds=3600)
+    try:
+        league = league_service.redeem_invite(db, user, code)
+    except LeagueError as error:
+        raise _fail(error) from error
+    db.commit()
+    return LeagueInviteRedeemOut(league_id=league.id)
 
 
 @router.get("/{league_id}", response_model=LeagueDetailOut)

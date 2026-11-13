@@ -19,6 +19,9 @@ const MIN_CATEGORIES = 7
 const DIFFICULTIES: Difficulty[] = ['easy', 'medium', 'hard', 'expert']
 const MIN_ROUNDS = 1
 const MAX_ROUNDS = 30
+const MIN_QUESTIONS = 5
+const MAX_QUESTIONS = 20
+const TIMER_CHOICES = [10, 15, 20, 30, 45, 60]
 
 const FORMATS: { value: LeagueFormat; title: string; text: string }[] = [
   {
@@ -56,6 +59,8 @@ export function LeagueCreatePage() {
   const [endsOn, setEndsOn] = useState(isoDay(30))
   const [categoryIds, setCategoryIds] = useState<number[]>([])
   const [difficulties, setDifficulties] = useState<Difficulty[]>(['easy', 'medium', 'hard'])
+  const [questionCount, setQuestionCount] = useState(10)
+  const [timerSeconds, setTimerSeconds] = useState(20)
 
   const create = useMutation({
     mutationFn: () =>
@@ -66,6 +71,8 @@ export function LeagueCreatePage() {
         difficulties,
         rounds: format === 'points' ? rounds : null,
         ends_on: endsOn,
+        question_count: questionCount,
+        timer_seconds: timerSeconds,
       }),
     onSuccess: (league) => {
       void queryClient.invalidateQueries({ queryKey: ['leagues'] })
@@ -94,12 +101,14 @@ export function LeagueCreatePage() {
   const categoriesOk = categoryIds.length >= MIN_CATEGORIES
   const difficultiesOk = difficulties.length >= 1
   const roundsOk = format === 'cup' || (rounds >= MIN_ROUNDS && rounds <= MAX_ROUNDS)
-  const valid = nameOk && categoriesOk && difficultiesOk && roundsOk && endsOn !== ''
+  const questionsOk = questionCount >= MIN_QUESTIONS && questionCount <= MAX_QUESTIONS
+  const valid = nameOk && categoriesOk && difficultiesOk && roundsOk && questionsOk && endsOn !== ''
   // What still blocks the button, in the order the form asks for it.
   const missing = [
     !nameOk && `um nome com pelo menos ${MIN_NAME} letras`,
     endsOn === '' && 'a data de encerramento',
     !roundsOk && `de ${MIN_ROUNDS} a ${MAX_ROUNDS} rodadas`,
+    !questionsOk && `de ${MIN_QUESTIONS} a ${MAX_QUESTIONS} perguntas por partida`,
     !categoriesOk &&
       (categoryIds.length === 0
         ? `${MIN_CATEGORIES} temas`
@@ -213,10 +222,54 @@ export function LeagueCreatePage() {
               onChange={(event) => setRounds(event.target.valueAsNumber)}
               error={roundsOk ? undefined : `De ${MIN_ROUNDS} a ${MAX_ROUNDS} rodadas`}
             />
-            <p className="mt-1.5 text-xs font-semibold text-sand-500">
-              Cada rodada tem 10 perguntas, as mesmas para todos, com 20 segundos cada.
-            </p>
           </div>
+        )}
+      </Card>
+
+      <Card className="space-y-4">
+        <CardTitle>Regras das partidas</CardTitle>
+        <div>
+          <Input
+            label="Perguntas por partida"
+            type="number"
+            inputMode="numeric"
+            min={MIN_QUESTIONS}
+            max={MAX_QUESTIONS}
+            value={Number.isNaN(questionCount) ? '' : questionCount}
+            onChange={(event) => setQuestionCount(event.target.valueAsNumber)}
+            error={questionsOk ? undefined : `De ${MIN_QUESTIONS} a ${MAX_QUESTIONS} perguntas`}
+          />
+          <p className="mt-1.5 text-xs font-semibold text-sand-500">
+            De {MIN_QUESTIONS} a {MAX_QUESTIONS}. Em cada partida, todos respondem às mesmas
+            perguntas.
+          </p>
+        </div>
+        <div>
+          <p className="mb-2 text-sm font-bold text-sand-700">Tempo por pergunta</p>
+          <div role="radiogroup" aria-label="Tempo por pergunta" className="flex flex-wrap gap-2">
+            {TIMER_CHOICES.map((seconds) => (
+              <button
+                key={seconds}
+                type="button"
+                role="radio"
+                aria-checked={timerSeconds === seconds}
+                onClick={() => setTimerSeconds(seconds)}
+                className={`rounded-2xl px-3.5 py-2 text-sm font-extrabold shadow-card transition-colors ${
+                  timerSeconds === seconds
+                    ? 'bg-leaf-500 text-white'
+                    : 'bg-white text-sand-600 hover:bg-sand-50'
+                }`}
+              >
+                {seconds} s
+              </button>
+            ))}
+          </div>
+        </div>
+        {format === 'cup' && (
+          <p className="text-xs font-semibold text-sand-500">
+            Na copa, cada duelo tem 24 horas para ser jogado. Quem não jogar no prazo perde por W.O.
+            e a chave segue.
+          </p>
         )}
       </Card>
 
