@@ -174,6 +174,57 @@ ACHIEVEMENTS: list[tuple[str, str, str, str, dict[str, Any], int]] = [
         {"type": "seasons_played", "value": 12},
         0,
     ),
+    # --- Leagues (private competitions) ---
+    # No XP, like the season badges: only supporters can play leagues, and XP
+    # feeds the global ranking.
+    (
+        "league_round_1",
+        "Chamado para a batalha",
+        "🛡️",
+        "Jogue a sua primeira partida de liga",
+        {"type": "league_rounds_played", "value": 1},
+        0,
+    ),
+    (
+        "league_perfect_1",
+        "Sem tropeçar",
+        "✨",
+        "Acerte todas as perguntas de uma partida de liga",
+        {"type": "league_perfect_rounds", "value": 1},
+        0,
+    ),
+    (
+        "league_win_1",
+        "Vencedor da corrida",
+        "🏅",
+        "Seja campeão de uma liga",
+        {"type": "league_wins", "value": 1},
+        0,
+    ),
+    (
+        "league_cup_win_1",
+        "Taça transbordante",
+        "🏆",
+        "Vença uma liga no formato copa",
+        {"type": "league_cup_wins", "value": 1},
+        0,
+    ),
+    (
+        "leagues_completed_3",
+        "Companheiro de jugo",
+        "🤝",
+        "Jogue 3 ligas até o fim",
+        {"type": "leagues_completed", "value": 3},
+        0,
+    ),
+    (
+        "league_win_3",
+        "Mais que vencedor",
+        "👑",
+        "Seja campeão de 3 ligas",
+        {"type": "league_wins", "value": 3},
+        0,
+    ),
     # --- Duels ---
     (
         "duel_win_1",

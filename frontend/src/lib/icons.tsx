@@ -44,6 +44,7 @@ import {
   Prohibit,
   RocketLaunch,
   Scroll,
+  ShieldStar,
   Shield,
   SignOut,
   SmileySad,
@@ -125,6 +126,7 @@ export const AppIcons = {
   info: Info,
   season: CalendarBlank,
   bell: Bell,
+  league: ShieldStar,
   heart: Heart,
   rocket: RocketLaunch,
   wrench: Wrench,
@@ -229,6 +231,12 @@ const ACHIEVEMENT_ICONS: Record<string, Icon> = {
   season_podium_3: Columns,
   season_win_3: Trophy,
   seasons_played_12: Scroll,
+  league_round_1: ShieldStar,
+  league_perfect_1: Sparkle,
+  league_win_1: Medal,
+  league_cup_win_1: Trophy,
+  leagues_completed_3: Handshake,
+  league_win_3: Crown,
 }
 
 export function AchievementGlyph({

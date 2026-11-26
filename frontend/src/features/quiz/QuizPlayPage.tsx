@@ -131,6 +131,12 @@ export function QuizPlayPage() {
     },
   })
 
+  function leaveForLeague(leagueId: string) {
+    queryClient.invalidateQueries({ queryKey: ['league', leagueId] })
+    queryClient.invalidateQueries({ queryKey: ['leagues'] })
+    navigate(`/leagues/${leagueId}/games`, { replace: true })
+  }
+
   const completeQuiz = useMutation({
     mutationFn: () => api.post<QuizComplete>(`/quizzes/${sessionId}/complete`),
     onSuccess: (summary) => {
@@ -141,6 +147,11 @@ export function QuizPlayPage() {
         // Duel rounds end on the head-to-head scoreboard, not the solo summary.
         queryClient.invalidateQueries({ queryKey: ['duels'] })
         navigate(`/duels/${session.duel_id}`, { replace: true })
+        return
+      }
+      if (session?.league_id) {
+        // League rounds end on the league: the table or the bracket is the result.
+        leaveForLeague(session.league_id)
         return
       }
       navigate(`/quiz/${sessionId}/summary`, { state: summary, replace: true })
@@ -157,6 +168,10 @@ export function QuizPlayPage() {
       if (session?.duel_id) {
         queryClient.invalidateQueries({ queryKey: ['duels'] })
         navigate(`/duels/${session.duel_id}`, { replace: true })
+        return
+      }
+      if (session?.league_id) {
+        leaveForLeague(session.league_id)
         return
       }
       navigate('/')
@@ -612,9 +627,19 @@ export function QuizPlayPage() {
                   />
                 </span>
                 <p className="font-extrabold">
-                  {session?.duel_id ? 'Desistir do duelo?' : 'Sair sem terminar?'}
+                  {session?.duel_id
+                    ? 'Desistir do duelo?'
+                    : session?.league_id
+                      ? 'Sair da partida da liga?'
+                      : 'Sair sem terminar?'}
                 </p>
-                {session?.duel_id ? (
+                {session?.league_id ? (
+                  <p className="text-sm font-semibold text-sand-600">
+                    Sair agora <strong>encerra a sua partida</strong> com o que você já respondeu:
+                    as perguntas que faltam contam como erro e o tempo conta cheio. Não dá para
+                    jogar de novo.
+                  </p>
+                ) : session?.duel_id ? (
                   <p className="text-sm font-semibold text-sand-600">
                     Sair agora <strong>cancela o duelo</strong>: conta como{' '}
                     <strong className="text-red-600">derrota (−25 XP)</strong> e a vitória vai para

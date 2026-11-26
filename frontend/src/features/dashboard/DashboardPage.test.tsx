@@ -101,3 +101,27 @@ describe('DashboardPage categories', () => {
     expect(listedCategories()[0]).toBe('Reis')
   })
 })
+
+describe('DashboardPage shortcuts', () => {
+  beforeEach(() => {
+    localStorage.clear()
+  })
+
+  it('offers Revisar, Duelar and Ligas', async () => {
+    get.mockReset().mockResolvedValue(dashboard())
+    renderPage()
+    const leagues = await screen.findByRole('button', { name: /Ligas/ })
+    expect(leagues).toHaveTextContent('Jogue com a turma')
+    expect(screen.getByRole('button', { name: /Revisar/ })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /Duelar/ })).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: /Troféus/ })).not.toBeInTheDocument()
+  })
+
+  it('counts league invites and turns waiting', async () => {
+    get.mockReset().mockResolvedValue({ ...dashboard(), leagues_pending: 2 })
+    renderPage()
+    const leagues = await screen.findByRole('button', { name: /Ligas/ })
+    // The count shows once, on the badge; the hint doesn't repeat it.
+    expect(leagues).toHaveTextContent('2LigasEsperando você')
+  })
+})

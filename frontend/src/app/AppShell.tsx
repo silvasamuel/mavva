@@ -10,6 +10,7 @@ import { PlayerProfileModal } from '@/components/PlayerProfileModal'
 import { useAuth } from '@/features/auth/AuthContext'
 import { FirstLoginTutorial } from '@/features/tutorial/FirstLoginTutorial'
 import { PodiumCelebration } from '@/features/seasons/PodiumCelebration'
+import { PendingLeagueInvite } from '@/features/leagues/PendingLeagueInvite'
 import { AppIcons, Glyph, type Icon } from '@/lib/icons'
 
 interface NavItem {
@@ -25,6 +26,7 @@ const NAV_ITEMS: NavItem[] = [
   { to: '/review', label: 'Revisar', icon: AppIcons.review },
   { to: '/friends', label: 'Amigos', icon: AppIcons.friends },
   { to: '/ranking', label: 'Ranking', icon: AppIcons.ranking },
+  { to: '/leagues', label: 'Ligas', icon: AppIcons.league },
   { to: '/achievements', label: 'Conquistas', icon: AppIcons.achievements },
   { to: '/suggest', label: 'Sugerir', icon: AppIcons.suggest },
   { to: '/notifications', label: 'Novidades', icon: AppIcons.bell },
@@ -37,12 +39,13 @@ const MOBILE_TABS: NavItem[] = [
   { to: '/duels', label: 'Duelos', icon: AppIcons.duels },
 ]
 
-const BADGE_PATHS = ['/duels', '/review', '/friends', '/notifications']
+const BADGE_PATHS = ['/duels', '/review', '/friends', '/leagues', '/notifications']
 
 const MORE_ITEMS: NavItem[] = [
   { to: '/review', label: 'Revisar', icon: AppIcons.review },
   { to: '/friends', label: 'Amigos', icon: AppIcons.friends },
   { to: '/ranking', label: 'Ranking', icon: AppIcons.ranking },
+  { to: '/leagues', label: 'Ligas', icon: AppIcons.league },
   { to: '/achievements', label: 'Conquistas', icon: AppIcons.achievements },
   { to: '/suggest', label: 'Sugerir', icon: AppIcons.suggest },
   { to: '/notifications', label: 'Novidades', icon: AppIcons.bell },
@@ -91,7 +94,9 @@ export function AppShell({ children }: { children?: ReactNode }) {
     (item) => location.pathname === item.to || location.pathname.startsWith(`${item.to}/`)
   )
   const notificationsUnread = data?.notifications_unread ?? 0
-  const moreCount = (data?.reviews_due ?? 0) + friendRequests + notificationsUnread
+  // League invites waiting plus leagues where it's the player's turn.
+  const leaguesPending = data?.leagues_pending ?? 0
+  const moreCount = (data?.reviews_due ?? 0) + friendRequests + notificationsUnread + leaguesPending
   // What the HUD already knows about the player, shown while the card loads.
   const profilePreview =
     user && data
@@ -124,6 +129,7 @@ export function AppShell({ children }: { children?: ReactNode }) {
     if (to === '/duels') return data?.duels?.awaiting_me ?? 0
     if (to === '/review') return data?.reviews_due ?? 0
     if (to === '/friends') return friendRequests
+    if (to === '/leagues') return leaguesPending
     if (to === '/notifications') return notificationsUnread
     return 0
   }
@@ -315,6 +321,7 @@ export function AppShell({ children }: { children?: ReactNode }) {
       {/* Mounted only in the shell, so it never covers quiz play or the auth pages. */}
       <FirstLoginTutorial />
       <PodiumCelebration />
+      <PendingLeagueInvite />
       <PlayerProfileModal
         userId={profileOpen && user ? user.id : null}
         preview={profilePreview}

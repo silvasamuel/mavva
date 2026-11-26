@@ -5,6 +5,7 @@ from app.models.gamification import (
     ReviewItem,
     UserAchievement,
 )
+from app.models.league import League, LeagueEntry, LeagueMatch, LeagueMember
 from app.models.moderation import AppSuggestion, QuestionFlag, QuestionProposal
 from app.models.question import Category, Question, QuestionOption
 from app.models.quiz import QuizAnswer, QuizSession, QuizSessionQuestion
@@ -29,6 +30,10 @@ __all__ = [
     "Duel",
     "EmailVerificationToken",
     "Friendship",
+    "League",
+    "LeagueEntry",
+    "LeagueMatch",
+    "LeagueMember",
     "PasswordResetToken",
     "Question",
     "QuestionFlag",

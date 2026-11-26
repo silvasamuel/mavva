@@ -7,6 +7,7 @@ from app.api.v1 import (
     catalog,
     cron,
     dashboard,
+    leagues,
     moderation,
     notifications,
     quizzes,
@@ -27,6 +28,7 @@ api_router.include_router(social.friends_router)
 api_router.include_router(social.duels_router)
 api_router.include_router(social.players_router)
 api_router.include_router(ranking.router)
+api_router.include_router(leagues.router)
 api_router.include_router(moderation.router)
 api_router.include_router(notifications.router)
 api_router.include_router(support.router)

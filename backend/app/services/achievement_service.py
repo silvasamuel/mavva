@@ -9,6 +9,10 @@ from app.models import (
     Achievement,
     Category,
     Duel,
+    League,
+    LeagueEntry,
+    LeagueMatch,
+    LeagueMember,
     Question,
     QuizAnswer,
     QuizSession,
@@ -17,6 +21,7 @@ from app.models import (
     UserAchievement,
     UserStats,
 )
+from app.models.enums import LeagueFormat, LeagueMemberStatus, LeagueStatus
 from app.services.gamification import level_from_total_xp, today_for_user, upsert_daily_activity
 
 
@@ -62,6 +67,54 @@ def _season_finishes(db: Session, user_id: uuid.UUID, max_position: int | None) 
     return db.scalar(query) or 0
 
 
+def _league_titles(db: Session, user_id: uuid.UUID, cup_only: bool = False) -> int:
+    query = (
+        select(func.count())
+        .select_from(League)
+        .where(League.champion_id == user_id, League.status == LeagueStatus.FINISHED)
+    )
+    if cup_only:
+        query = query.where(League.format == LeagueFormat.CUP)
+    return db.scalar(query) or 0
+
+
+def _league_rounds(db: Session, user_id: uuid.UUID, perfect_only: bool = False) -> int:
+    """League fixtures the player finished; `perfect_only`: with every answer right."""
+    query = (
+        select(func.count())
+        .select_from(LeagueEntry)
+        .join(LeagueMatch, LeagueMatch.id == LeagueEntry.match_id)
+        .join(League, League.id == LeagueMatch.league_id)
+        .where(LeagueEntry.user_id == user_id, LeagueEntry.finished_at.is_not(None))
+    )
+    if perfect_only:
+        query = query.where(LeagueEntry.correct == League.question_count)
+    return db.scalar(query) or 0
+
+
+def _leagues_seen_through(db: Session, user_id: uuid.UUID) -> int:
+    """Leagues that ended with a champion in which the player took part."""
+    played = (
+        select(LeagueMatch.league_id)
+        .join(LeagueEntry, LeagueEntry.match_id == LeagueMatch.id)
+        .where(LeagueEntry.user_id == user_id, LeagueEntry.finished_at.is_not(None))
+    )
+    return (
+        db.scalar(
+            select(func.count())
+            .select_from(League)
+            .join(LeagueMember, LeagueMember.league_id == League.id)
+            .where(
+                LeagueMember.user_id == user_id,
+                LeagueMember.status == LeagueMemberStatus.ACTIVE,
+                League.status == LeagueStatus.FINISHED,
+                League.id.in_(played),
+            )
+        )
+        or 0
+    )
+
+
 def current_value(db: Session, user: User, stats: UserStats, criteria: dict[str, Any]) -> int:
     kind = criteria.get("type")
     match kind:
@@ -95,6 +148,16 @@ def current_value(db: Session, user: User, stats: UserStats, criteria: dict[str,
             return _season_finishes(db, user.id, max_position=10)
         case "seasons_played":
             return _season_finishes(db, user.id, max_position=None)
+        case "league_rounds_played":
+            return _league_rounds(db, user.id)
+        case "league_perfect_rounds":
+            return _league_rounds(db, user.id, perfect_only=True)
+        case "league_wins":
+            return _league_titles(db, user.id)
+        case "league_cup_wins":
+            return _league_titles(db, user.id, cup_only=True)
+        case "leagues_completed":
+            return _leagues_seen_through(db, user.id)
         case _:
             return 0
 

@@ -59,6 +59,8 @@ export function DashboardPage() {
   const { stats, daily_goal, categories, recent_sessions, reviews_due } = data
   const firstName = user?.name.split(' ')[0] ?? 'você'
   const remaining = Math.max(0, daily_goal.target - daily_goal.earned_today)
+  // League invites waiting plus leagues where it is the player's turn.
+  const leaguesPending = data.leagues_pending ?? 0
   // Ties break toward the most-played category, whichever end is shown.
   const practiced = categories
     .filter((category) => category.answered > 0)
@@ -202,12 +204,14 @@ export function DashboardPage() {
           onClick={() => navigate('/duels')}
         />
         <ModeTile
-          icon={AppIcons.achievements}
-          label="Troféus"
-          hint={`${stats.perfect_sessions} perfeitos`}
-          tone="sand"
-          action="trophy"
-          onClick={() => navigate('/achievements')}
+          icon={AppIcons.league}
+          label="Ligas"
+          // The badge already carries the count; the hint only says what it is.
+          hint={leaguesPending > 0 ? 'Esperando você' : 'Jogue com a turma'}
+          badge={leaguesPending}
+          tone={leaguesPending > 0 ? 'gold' : 'sand'}
+          action="league"
+          onClick={() => navigate('/leagues')}
         />
       </motion.div>
 
@@ -346,11 +350,12 @@ export function DashboardPage() {
           <ul className="divide-y divide-sand-100">
             {recent_sessions.slice(0, 4).map((session) => {
               const pendingDuel = session.mode === 'duel' && session.xp_earned === 0
-              const xpClass = pendingDuel
-                ? 'bg-sand-100 text-sand-600'
-                : session.xp_earned < 0
-                  ? 'bg-red-50 text-red-600'
-                  : 'bg-grain-100 text-grain-800'
+              const xpClass =
+                pendingDuel || session.mode === 'league'
+                  ? 'bg-sand-100 text-sand-600'
+                  : session.xp_earned < 0
+                    ? 'bg-red-50 text-red-600'
+                    : 'bg-grain-100 text-grain-800'
               return (
                 <li key={session.id} className="flex items-center justify-between py-3">
                   <div className="flex items-center gap-3">
@@ -362,9 +367,11 @@ export function DashboardPage() {
                         as={
                           session.mode === 'duel'
                             ? AppIcons.duels
-                            : session.mode === 'review'
-                              ? AppIcons.review
-                              : AppIcons.study
+                            : session.mode === 'league'
+                              ? AppIcons.league
+                              : session.mode === 'review'
+                                ? AppIcons.review
+                                : AppIcons.study
                         }
                         className="h-5 w-5"
                       />
@@ -374,19 +381,25 @@ export function DashboardPage() {
                         {session.correct_count}/{session.question_count} acertos
                       </p>
                       <p className="text-xs font-bold text-sand-500">
-                        {session.mode === 'duel' ? 'Duelo · ' : ''}
+                        {session.mode === 'duel'
+                          ? 'Duelo · '
+                          : session.mode === 'league'
+                            ? 'Liga · '
+                            : ''}
                         {session.completed_at ? formatRelativeDate(session.completed_at) : ''}
                       </p>
                     </div>
                   </div>
                   <span className={`rounded-full px-2.5 py-1 text-xs font-extrabold ${xpClass}`}>
-                    {pendingDuel
-                      ? 'aguardando'
-                      : session.xp_earned > 0
-                        ? `+${session.xp_earned} XP`
-                        : session.xp_earned < 0
-                          ? `${session.xp_earned} XP`
-                          : '0 XP'}
+                    {session.mode === 'league'
+                      ? 'sem XP'
+                      : pendingDuel
+                        ? 'aguardando'
+                        : session.xp_earned > 0
+                          ? `+${session.xp_earned} XP`
+                          : session.xp_earned < 0
+                            ? `${session.xp_earned} XP`
+                            : '0 XP'}
                   </span>
                 </li>
               )
@@ -430,7 +443,7 @@ function ModeTile({
   hint: string
   badge?: number
   tone: 'leaf' | 'gold' | 'sand'
-  action: 'review' | 'duel' | 'trophy'
+  action: 'review' | 'duel' | 'league'
   onClick: () => void
 }) {
   const tones = {
@@ -447,12 +460,15 @@ function ModeTile({
       tone === 'gold'
         ? 'hover:border-grain-700 hover:bg-grain-300'
         : 'hover:border-red-300 hover:bg-red-50 hover:text-red-700',
-    trophy: 'hover:border-grain-400 hover:bg-grain-100 hover:text-grain-900',
+    league:
+      tone === 'gold'
+        ? 'hover:border-grain-700 hover:bg-grain-300'
+        : 'hover:border-grain-400 hover:bg-grain-100 hover:text-grain-900',
   }
   const iconMotion = {
     review: 'group-hover:animate-icon-spin',
     duel: 'group-hover:animate-icon-slash',
-    trophy: 'group-hover:animate-icon-shine',
+    league: 'group-hover:animate-icon-shine',
   }
 
   return (
@@ -470,9 +486,9 @@ function ModeTile({
           {badge}
         </span>
       )}
-      <span className={`relative inline-flex ${action === 'trophy' ? 'overflow-hidden' : ''}`}>
+      <span className={`relative inline-flex ${action === 'league' ? 'overflow-hidden' : ''}`}>
         <Glyph as={icon} className={`h-7 w-7 sm:h-8 sm:w-8 ${iconMotion[action]}`} />
-        {action === 'trophy' && (
+        {action === 'league' && (
           <span
             aria-hidden
             className="pointer-events-none absolute inset-y-0 left-0 w-1/2 -skew-x-12 bg-gradient-to-r from-transparent via-white/80 to-transparent opacity-0 group-hover:animate-shine-sweep"

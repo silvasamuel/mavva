@@ -201,6 +201,12 @@ def ensure_current_timer(db: Session, session: QuizSession) -> None:
         present_question(db, session, current.question_id)
 
 
+# Rounds whose outcome is the match, not the answers: no XP per answer, no
+# completion bonus. Duels settle a stake afterwards; league rounds pay no XP
+# at all (only supporters can play them, and XP feeds the global ranking).
+NO_ANSWER_XP_MODES = frozenset({QuizMode.DUEL, QuizMode.LEAGUE})
+
+
 @dataclass
 class AnswerResult:
     is_correct: bool
@@ -284,7 +290,7 @@ def submit_answer(
     # In duels the whole XP swing is the result (win/draw/loss), so individual
     # answers pay nothing — otherwise a good loser would still out-earn a winner.
     # The combo is still counted there; it just pays no bonus.
-    if session.mode == QuizMode.DUEL:
+    if session.mode in NO_ANSWER_XP_MODES:
         combo_bonus = 0
         xp = 0
     else:
@@ -375,7 +381,7 @@ def complete_session(db: Session, user: User, session_id: uuid.UUID) -> Complete
     elapsed = int((now - round_started_at(session)).total_seconds())
     session.duration_seconds = max(0, min(elapsed, MAX_SESSION_DURATION_SECONDS))
 
-    is_duel = session.mode == QuizMode.DUEL
+    is_duel = session.mode in NO_ANSWER_XP_MODES
     bonus = (
         0
         if is_duel
@@ -470,7 +476,7 @@ def abandon_session(db: Session, user: User, session_id: uuid.UUID) -> AbandonRe
     # applied when the duel itself is cancelled.
     penalty = (
         0
-        if session.mode == QuizMode.DUEL
+        if session.mode in NO_ANSWER_XP_MODES
         else sum(
             xp_for_answer(questions_by_id[a.question_id].difficulty, False) for a in wrong_answers
         )
@@ -524,7 +530,7 @@ def list_xp(session: QuizSession) -> int:
     Duels: session.xp_earned is 0 until settled; the dashboard overlays the
     win/draw/loss stake so the pill never shows per-answer XP.
     """
-    if session.mode == QuizMode.DUEL:
+    if session.mode in NO_ANSWER_XP_MODES:
         return session.xp_earned
     gains = 0
     losses = 0

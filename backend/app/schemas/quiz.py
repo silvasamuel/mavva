@@ -53,6 +53,7 @@ class QuizSessionOut(BaseModel):
     completed: bool
     timer_seconds: int | None
     duel_id: uuid.UUID | None = None  # set when this round belongs to a duel
+    league_id: uuid.UUID | None = None  # set when it is a league round or cup match
     combo: int  # hits in a row so far, so a reload keeps the badge
     filters: dict[str, Any]
     questions: list[QuestionOut]
